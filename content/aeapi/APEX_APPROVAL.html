@@ -1,0 +1,171 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="APEX_APPROVAL (Deprecated)">
+      <meta name="DC.subject" content="APEX_APPROVAL (deprecated)">
+      <meta name="keywords" content="APEX_APPROVAL (deprecated)">
+      <meta name="DC.Relation" scheme="URI" content="APEX_APPROVAL.Constants-and-Data-Types.html#GUID-536A42B1-5099-467F-908F-A1C3C209D77B">
+      <meta name="DC.Relation" scheme="URI" content="ADD_TASK_COMMENT-Procedure.html#GUID-A69F74B7-AC57-4615-B709-C77850BF7B7A">
+      <meta name="DC.Relation" scheme="URI" content="ADD_TASK_POTENTIAL_OWNER-Procedure.html#GUID-CCD5B305-BB5E-4C22-A414-5AB1A210DA49">
+      <meta name="DC.Relation" scheme="URI" content="ADD_TO_HISTORY-Procedure.html#GUID-9B21340D-5897-468B-B8A6-2CC48721C7A9">
+      <meta name="DC.Relation" scheme="URI" content="APPROVE_TASK-Procedure.html#GUID-1EC3B9FF-B925-4BFB-BE54-4D208E6B0F71">
+      <meta name="DC.Relation" scheme="URI" content="CANCEL_TASK-Procedure.html#GUID-A470EEE9-CFA3-494C-928C-4C6517177FD9">
+      <meta name="DC.Relation" scheme="URI" content="CLAIM_TASK-Procedure.html#GUID-9FBB4450-E6A3-484B-BCA5-DF2F96009A3F">
+      <meta name="DC.Relation" scheme="URI" content="COMPLETE_TASK-Procedure.html#GUID-E2879695-2496-44F9-AC0A-2B2E947A1D17">
+      <meta name="DC.Relation" scheme="URI" content="CREATE_TASK-Function.html#GUID-12261F10-5D8D-42A6-ADD9-FD323DC44156">
+      <meta name="DC.Relation" scheme="URI" content="DELEGATE_TASK-Procedure.html#GUID-BE9387C9-5406-4C5F-A69D-4C183F094F5F">
+      <meta name="DC.Relation" scheme="URI" content="GET_LOV_PRIORITY-Function.html#GUID-4F10A434-D3B9-4DDE-A095-25C7E69434F1">
+      <meta name="DC.Relation" scheme="URI" content="GET_LOV_STATE-Function.html#GUID-E681CE57-1CB1-48CB-872C-79A6229AAB09">
+      <meta name="DC.Relation" scheme="URI" content="APEX_APPROVAL.GET_NEXT_PURGE_TIMESTAMP-Function.html#GUID-3B2794D9-4735-476A-870A-08581C40333E">
+      <meta name="DC.Relation" scheme="URI" content="GET_TASK_DELEGATES-Function.html#GUID-5711AEF9-45D6-4FCC-9A40-85C5AC726144">
+      <meta name="DC.Relation" scheme="URI" content="GET_TASK_HISTORY-Function.html#GUID-4D1838F7-3222-471F-ADF5-BD5EF919F125">
+      <meta name="DC.Relation" scheme="URI" content="GET_TASK_PARAMETER_OLD_VALUE-Function.html#GUID-6391B97D-C26D-4A41-999D-02BDADE14D40">
+      <meta name="DC.Relation" scheme="URI" content="GET_TASK_PARAMETER_VALUE-Function.html#GUID-ACCCB320-9E6E-4C5A-8E06-5BFF77B272CE">
+      <meta name="DC.Relation" scheme="URI" content="GET_TASK_PRIORITIES-Function.html#GUID-977C6E3B-8F10-42AA-A052-FAE9F92CC506">
+      <meta name="DC.Relation" scheme="URI" content="GET_TASKS-Function.html#GUID-D20D814B-29CD-40B8-BD8A-2D0976ADC1A8">
+      <meta name="DC.Relation" scheme="URI" content="HANDLE_TASK_DEADLINES-Procedure.html#GUID-E0FD697C-977E-4C69-8004-FB0CF21E4A8F">
+      <meta name="DC.Relation" scheme="URI" content="HAS_TASK_PARAM_CHANGED-Function.html#GUID-2A5B6EA2-0BDF-474F-BA92-1E6F70FF3C45">
+      <meta name="DC.Relation" scheme="URI" content="IS_ALLOWED-Function.html#GUID-D1732D81-A3DD-4910-8753-465EDB058248">
+      <meta name="DC.Relation" scheme="URI" content="IS_BUSINESS_ADMIN-Function.html#GUID-B193C8C6-A5C1-4360-BDA3-87A90EF26742">
+      <meta name="DC.Relation" scheme="URI" content="IS_OF_PARTICIPANT_TYPE-Function.html#GUID-9736830F-C3CB-4FD5-81AA-8C1D4DE5E4BB">
+      <meta name="DC.Relation" scheme="URI" content="REJECT_TASK-Procedure.html#GUID-83D225BB-D838-4F09-AB6D-000B59238506">
+      <meta name="DC.Relation" scheme="URI" content="RELEASE_TASK-Procedure.html#GUID-1F5801D8-6284-4A03-B7ED-B703363ED46E">
+      <meta name="DC.Relation" scheme="URI" content="REMOVE_POTENTIAL_OWNER-Procedure.html#GUID-4A688074-5BEF-4A66-AE30-091FB069BAE5">
+      <meta name="DC.Relation" scheme="URI" content="RENEW_TASK-Function.html#GUID-30276716-D04A-465F-99AC-36CDA949A7B5">
+      <meta name="DC.Relation" scheme="URI" content="REQUEST_MORE_INFORMATION-Procedure.html#GUID-3A0AE94D-5C0C-417E-B651-3A7E4497B84D">
+      <meta name="DC.Relation" scheme="URI" content="SET_INITIATOR_CAN_COMPLETE-Procedure.html#GUID-EAA186C8-D743-412F-844A-C4E908294E43">
+      <meta name="DC.Relation" scheme="URI" content="SET_TASK_DUE-Procedure.html#GUID-951A567E-CF0D-4B0B-9189-CE46EF4C1CF4">
+      <meta name="DC.Relation" scheme="URI" content="SET_TASK_PARAMETER_VALUES-Procedure.html#GUID-7270BA5A-127A-4A7A-9E7D-0EF1BA0583D0">
+      <meta name="DC.Relation" scheme="URI" content="SET_TASK_PRIORITY-Procedure.html#GUID-11B98BBF-0305-4896-AD45-A4E5ED621ED4">
+      <meta name="DC.Relation" scheme="URI" content="SUBMIT_INFORMATION-Procedure.html#GUID-30A21FB0-6C5E-447C-BF8E-16C8C2CCCC4E">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-CC1036F7-0705-4750-9AEB-2E899E2AC7E4">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>APEX_APPROVAL (Deprecated)</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="SUSPEND_BACKGROUND_EXECS-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_APPROVAL.Constants-and-Data-Types.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"APEX_APPROVAL (Deprecated)","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="SUSPEND_BACKGROUND_EXECS-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_APPROVAL.Constants-and-Data-Types.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-CC1036F7-0705-4750-9AEB-2E899E2AC7E4" name="GUID-CC1036F7-0705-4750-9AEB-2E899E2AC7E4"></a>
+         
+         <h2 id="AEAPI-GUID-CC1036F7-0705-4750-9AEB-2E899E2AC7E4" class="sect2"><span class="enumeration_chapter">9 </span>APEX_APPROVAL (Deprecated)
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="infobox-caution" id="GUID-CC1036F7-0705-4750-9AEB-2E899E2AC7E4__GUID-105F49B9-06E2-4243-91B5-8F443CBB7D46">
+                  <p class="notep1">Caution:</p>
+                  <p>This API is deprecated and will be
+                                        removed in a future release.</p>
+                  <p>Use <a href="APEX_HUMAN_TASK.html#GUID-8F8F6295-F45E-4801-A8A4-D4C298A178B4">APEX_HUMAN_TASK</a> instead.
+                  </p>
+               </div>
+               <p>The APEX_APPROVAL package provides APIs for the management of approvals and Human Tasks. This package includes functionality to create new Human Tasks for a user to approve as well as operations dealing with the lifecycle management and state handling of Human Tasks. This package is part of the <span>Oracle APEX</span> Workflow functionality.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="APEX_APPROVAL.Constants-and-Data-Types.html#GUID-536A42B1-5099-467F-908F-A1C3C209D77B">Constants and Data Types</a><br></li>
+                  <li class="ulchildlink"><a href="ADD_TASK_COMMENT-Procedure.html#GUID-A69F74B7-AC57-4615-B709-C77850BF7B7A">ADD_TASK_COMMENT Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="ADD_TASK_POTENTIAL_OWNER-Procedure.html#GUID-CCD5B305-BB5E-4C22-A414-5AB1A210DA49">ADD_TASK_POTENTIAL_OWNER Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="ADD_TO_HISTORY-Procedure.html#GUID-9B21340D-5897-468B-B8A6-2CC48721C7A9">ADD_TO_HISTORY Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="APPROVE_TASK-Procedure.html#GUID-1EC3B9FF-B925-4BFB-BE54-4D208E6B0F71">APPROVE_TASK Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="CANCEL_TASK-Procedure.html#GUID-A470EEE9-CFA3-494C-928C-4C6517177FD9">CANCEL_TASK Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="CLAIM_TASK-Procedure.html#GUID-9FBB4450-E6A3-484B-BCA5-DF2F96009A3F">CLAIM_TASK Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="COMPLETE_TASK-Procedure.html#GUID-E2879695-2496-44F9-AC0A-2B2E947A1D17">COMPLETE_TASK Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="CREATE_TASK-Function.html#GUID-12261F10-5D8D-42A6-ADD9-FD323DC44156">CREATE_TASK Function</a><br></li>
+                  <li class="ulchildlink"><a href="DELEGATE_TASK-Procedure.html#GUID-BE9387C9-5406-4C5F-A69D-4C183F094F5F">DELEGATE_TASK Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="GET_LOV_PRIORITY-Function.html#GUID-4F10A434-D3B9-4DDE-A095-25C7E69434F1">GET_LOV_PRIORITY Function</a><br></li>
+                  <li class="ulchildlink"><a href="GET_LOV_STATE-Function.html#GUID-E681CE57-1CB1-48CB-872C-79A6229AAB09">GET_LOV_STATE Function</a><br></li>
+                  <li class="ulchildlink"><a href="APEX_APPROVAL.GET_NEXT_PURGE_TIMESTAMP-Function.html#GUID-3B2794D9-4735-476A-870A-08581C40333E">GET_NEXT_PURGE_TIMESTAMP Function</a><br></li>
+                  <li class="ulchildlink"><a href="GET_TASK_DELEGATES-Function.html#GUID-5711AEF9-45D6-4FCC-9A40-85C5AC726144">GET_TASK_DELEGATES Function</a><br></li>
+                  <li class="ulchildlink"><a href="GET_TASK_HISTORY-Function.html#GUID-4D1838F7-3222-471F-ADF5-BD5EF919F125">GET_TASK_HISTORY Function</a><br></li>
+                  <li class="ulchildlink"><a href="GET_TASK_PARAMETER_OLD_VALUE-Function.html#GUID-6391B97D-C26D-4A41-999D-02BDADE14D40">GET_TASK_PARAMETER_OLD_VALUE Function</a><br></li>
+                  <li class="ulchildlink"><a href="GET_TASK_PARAMETER_VALUE-Function.html#GUID-ACCCB320-9E6E-4C5A-8E06-5BFF77B272CE">GET_TASK_PARAMETER_VALUE Function</a><br></li>
+                  <li class="ulchildlink"><a href="GET_TASK_PRIORITIES-Function.html#GUID-977C6E3B-8F10-42AA-A052-FAE9F92CC506">GET_TASK_PRIORITIES Function</a><br></li>
+                  <li class="ulchildlink"><a href="GET_TASKS-Function.html#GUID-D20D814B-29CD-40B8-BD8A-2D0976ADC1A8">GET_TASKS Function</a><br></li>
+                  <li class="ulchildlink"><a href="HANDLE_TASK_DEADLINES-Procedure.html#GUID-E0FD697C-977E-4C69-8004-FB0CF21E4A8F">HANDLE_TASK_DEADLINES Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="HAS_TASK_PARAM_CHANGED-Function.html#GUID-2A5B6EA2-0BDF-474F-BA92-1E6F70FF3C45">HAS_TASK_PARAM_CHANGED Function</a><br></li>
+                  <li class="ulchildlink"><a href="IS_ALLOWED-Function.html#GUID-D1732D81-A3DD-4910-8753-465EDB058248">IS_ALLOWED Function</a><br></li>
+                  <li class="ulchildlink"><a href="IS_BUSINESS_ADMIN-Function.html#GUID-B193C8C6-A5C1-4360-BDA3-87A90EF26742">IS_BUSINESS_ADMIN Function</a><br></li>
+                  <li class="ulchildlink"><a href="IS_OF_PARTICIPANT_TYPE-Function.html#GUID-9736830F-C3CB-4FD5-81AA-8C1D4DE5E4BB">IS_OF_PARTICIPANT_TYPE Function</a><br></li>
+                  <li class="ulchildlink"><a href="REJECT_TASK-Procedure.html#GUID-83D225BB-D838-4F09-AB6D-000B59238506">REJECT_TASK Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="RELEASE_TASK-Procedure.html#GUID-1F5801D8-6284-4A03-B7ED-B703363ED46E">RELEASE_TASK Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="REMOVE_POTENTIAL_OWNER-Procedure.html#GUID-4A688074-5BEF-4A66-AE30-091FB069BAE5">REMOVE_POTENTIAL_OWNER Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="RENEW_TASK-Function.html#GUID-30276716-D04A-465F-99AC-36CDA949A7B5">RENEW_TASK Function</a><br></li>
+                  <li class="ulchildlink"><a href="REQUEST_MORE_INFORMATION-Procedure.html#GUID-3A0AE94D-5C0C-417E-B651-3A7E4497B84D">REQUEST_MORE_INFORMATION Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="SET_INITIATOR_CAN_COMPLETE-Procedure.html#GUID-EAA186C8-D743-412F-844A-C4E908294E43">SET_INITIATOR_CAN_COMPLETE Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="SET_TASK_DUE-Procedure.html#GUID-951A567E-CF0D-4B0B-9189-CE46EF4C1CF4">SET_TASK_DUE Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="SET_TASK_PARAMETER_VALUES-Procedure.html#GUID-7270BA5A-127A-4A7A-9E7D-0EF1BA0583D0">SET_TASK_PARAMETER_VALUES Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="SET_TASK_PRIORITY-Procedure.html#GUID-11B98BBF-0305-4896-AD45-A4E5ED621ED4">SET_TASK_PRIORITY Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="SUBMIT_INFORMATION-Procedure.html#GUID-30A21FB0-6C5E-447C-BF8E-16C8C2CCCC4E">SUBMIT_INFORMATION Procedure</a><br></li>
+               </ul>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

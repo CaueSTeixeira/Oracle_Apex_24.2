@@ -1,0 +1,982 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Understanding Page Types, Features, and Settings">
+      <meta name="abstract" content="Learn about the supported page types, features, and configurable settings available in the Create Application Wizard.">
+      <meta name="description" content="Learn about the supported page types, features, and configurable settings available in the Create Application Wizard.">
+      <meta name="DC.subject" content="Create Application Wizard, page types, Settings, features, removing">
+      <meta name="keywords" content="Create Application Wizard, page types, Settings, features, removing">
+      <meta name="DC.Relation" scheme="URI" content="using-the-full-create-application-wizard.html#GUID-905FB463-2BE3-4B8C-BE5A-472477830E88">
+      <meta name="DC.Relation" scheme="URI" content="page-types-features-settings.html#GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78">
+      <meta name="DC.Relation" scheme="URI" content="page-types-features-settings.html#GUID-668FAB1D-729E-49A9-AC44-0A729674E0FB">
+      <meta name="DC.Relation" scheme="URI" content="page-types-features-settings.html#GUID-832AD15E-FD36-49D6-A2AC-4FA693F2818E">
+      <meta name="DC.Relation" scheme="URI" content="page-types-features-settings.html#GUID-37BA23DE-2206-4E3E-9000-516A7FF92498">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-22A203E5-96CC-4A11-8DA3-97E1375203E5">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about the supported page types, features, and configurable settings available in the Create Application Wizard.">
+      <meta name="description" content="Learn about the supported page types, features, and configurable settings available in the Create Application Wizard.">
+      <title>Understanding Page Types, Features, and Settings</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Learn about the supported page types, features, and configurable settings available in the Create Application Wizard.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="running-the-create-app-wizard.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-an-app-using-generative-ai.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Understanding Page Types, Features, and Settings","description":"Learn about the supported page types, features, and configurable settings available in the Create Application Wizard.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="running-the-create-app-wizard.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-an-app-using-generative-ai.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-22A203E5-96CC-4A11-8DA3-97E1375203E5" name="GUID-22A203E5-96CC-4A11-8DA3-97E1375203E5"></a><a id="HTMDB29488"></a>
+         
+         <h2 id="HTMDB-GUID-22A203E5-96CC-4A11-8DA3-97E1375203E5" class="sect2"><span class="enumeration_section">5.3.3 </span>Understanding Page Types, Features, and Settings
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Learn about the supported page types, features, and configurable settings
+                available in the Create Application Wizard.</p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="page-types-features-settings.html#GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78">Available Page Types in the Create Application Wizard</a><br>Learn about available page types when running the Create Application Wizard.
+                  </li>
+                  <li class="ulchildlink"><a href="page-types-features-settings.html#GUID-668FAB1D-729E-49A9-AC44-0A729674E0FB">Available Features in the Create Application Wizard</a><br>Learn about available features when running the Create Application Wizard. Features provide application-level functionality and can only be added once per application.
+                  </li>
+                  <li class="ulchildlink"><a href="page-types-features-settings.html#GUID-832AD15E-FD36-49D6-A2AC-4FA693F2818E">Available Settings in the Create Application Wizard</a><br>Learn about Settings available when running the Create Application Wizard. Settings are used in the generation of the application and include the application ID, the database schema, Advanced Settings (such as the application definition, security, and globalization attributes), and application authentication.
+                  </li>
+                  <li class="ulchildlink"><a href="page-types-features-settings.html#GUID-37BA23DE-2206-4E3E-9000-516A7FF92498">About Removing Features Created with the Create Application Wizard</a><br>Remove features created with a wizard using build options.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-22A203E5-96CC-4A11-8DA3-97E1375203E5__GUID-E9830C25-D48C-4915-A3FE-3F74E55C4598">
+                  <p class="notep1">See Also:</p>
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        <p><a href="running-the-create-app-wizard.html#GUID-8EE3A07B-452F-4C55-8B50-36691813AD97" title="Run the full Create Application Wizard to create an application containing multiple pages based on the tables you select, or by providing valid SQL queries.">Running the Full Create Application Wizard</a></p>
+                     </li>
+                     <li>
+                        <p><a href="creating-applications-for-mobile-devices.html#GUID-D36D47CE-37A1-4B2B-A647-DF1005EE9FB9" title="Build applications for mobile devices with mobile-specific design patterns that can provide an optimal user experience for small screens.">Creating Applications for Mobile Devices</a></p>
+                     </li>
+                  </ul>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="using-the-full-create-application-wizard.html#GUID-905FB463-2BE3-4B8C-BE5A-472477830E88" title="Run the full Create Application Wizard to create an application with multiple pages and advanced options.">Using the Full Create Application Wizard</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78" name="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78"></a><h3 id="HTMDB-GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78" class="sect3"><span class="enumeration_section">5.3.3.1 </span>Available Page Types in the Create Application Wizard
+               </h3>
+               <div>
+                  <p>Learn about available page types when running the Create Application Wizard.</p>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__GUID-CC50CAAC-8F60-4FC9-A60B-D97D6730ED86">Available Page Types</p>
+                     <div class="tblformalwide" id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__BABBEICF">
+                        <table cellpadding="4" cellspacing="0" class="FormalWide" title summary="Available page types in the Create Application Wizard." width="100%" frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="17%" id="d53052e239">Page Type</th>
+                                 <th align="left" valign="bottom" width="52%" id="d53052e242">Description</th>
+                                 <th align="left" valign="bottom" width="31%" id="d53052e245">To Learn More</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d53052e250" headers="d53052e239 ">
+                                    <p>Blank</p><a id="d53052e253" class="indexterm-anchor"></a><a id="d53052e257" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="52%" headers="d53052e250 d53052e242 ">Creates a page with no built-in
+                                functionality. Once you create the application, you can create
+                                regions on the page in Page Designer.</td>
+                                 <td align="left" valign="top" width="31%" headers="d53052e250 d53052e245 ">See online Help when creating this
+                                page.</td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d53052e266" headers="d53052e239 ">
+                                    <p>Calendar</p><a id="d53052e269" class="indexterm-anchor"></a><a id="d53052e273" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="52%" headers="d53052e266 d53052e242 ">
+                                    <p>Generates a calendar with monthly, weekly, and daily views. </p>
+                                 </td>
+                                 <td align="left" valign="top" width="31%" headers="d53052e266 d53052e245 ">See <a href="creating-calendars.html#GUID-28A524DC-1CE0-4FCA-A9C6-1D3C3E3BDDA2" title="App Builder includes support for creating a calendar with monthly, weekly, daily, and list views. Once you specify the table on which the calendar is based, you can create drill-down links to information stored in specific columns and enable drag and drop capability.">Creating Calendars</a></td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d53052e290" headers="d53052e239 ">
+                                    <p>Cards</p><a id="d53052e293" class="indexterm-anchor"></a><a id="d53052e297" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="52%" headers="d53052e290 d53052e242 ">
+                                    
+                                    
+                                    <p><span id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__CARDS_RPT_DESC">A <strong class="term">cards</strong> page features an orderly layout of
+                                        information tiles. Developers choose between three layouts:
+                                        Grid, Float, or Horizontal (Row).</span></p>
+                                    
+                                    <p>Features:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__CARDS_RPT_FEATURES">
+                                       <li>Customize every aspect of a cards region's UI
+                                        (including layout, appearance, icon, badge, and media).</li>
+                                       <li>Declaratively create links from a cards page by
+                                        adding actions. Action types include Button, Full Card,
+                                        Title, Subtitle, or Media. </li>
+                                       <li>Supports advanced HTML expressions including
+                                        template directives for client-side conditional
+                                        formatting.</li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="31%" headers="d53052e290 d53052e245 ">
+                                    
+                                    <p>See: <a href="managing-cards.html#GUID-4B524AC4-9507-45EB-B4EA-A4D33F469B2D" title="A cards page features an orderly layout of information tiles. Developers choose between three layouts: Grid, Float, or Horizontal (Row).">Managing Cards</a></p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d53052e333" headers="d53052e239 ">
+                                    <p>Chart</p><a id="d53052e336" class="indexterm-anchor"></a><a id="d53052e340" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="52%" headers="d53052e333 d53052e242 ">Creates a new page containing a chart.
+                                Supported chart types include area, bar, box plot, bubble,
+                                combination, status meter gauge, donut, funnel, gantt, line, line
+                                with area, pie, polar, pyramid, radar, scatter, and stock
+                                charts.</td>
+                                 <td align="left" valign="top" width="31%" headers="d53052e333 d53052e245 ">See <a href="creating-charts.html#GUID-50985225-4C89-489B-B019-E2D91E61428A" title="Create charts in App Builder by running a built-in wizard or by creating them manually in Page Designer.">Creating Charts</a></td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d53052e357" headers="d53052e239 ">
+                                    <p>Dashboard</p><a id="d53052e360" class="indexterm-anchor"></a><a id="d53052e364" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="52%" headers="d53052e357 d53052e242 ">Creates a dashboard page. Choose from four
+                                different chart layouts which you can easily customize in Page
+                                Designer. Available chart layouts include <span class="uicontrol bold">Primary and 2
+                                    secondary charts</span>, <span class="uicontrol bold">Grid of 4
+                                    charts</span>, <span class="uicontrol bold">Primary and 3 secondary
+                                    charts</span>, and <span class="uicontrol bold">Grid of 6
+                                charts</span>.
+                                 </td>
+                                 <td align="left" valign="top" width="31%" headers="d53052e357 d53052e245 ">See online Help when creating this
+                                page.</td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d53052e385" headers="d53052e239 ">
+                                    <p>Faceted
+                                    Search</p><a id="d53052e388" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="52%" headers="d53052e385 d53052e242 ">
+                                    
+                                    
+                                    <p><span id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__FACETED_SRCH_DESC"> A <strong class="term">faceted search</strong> page displays and filters data
+                                        using an intuitive experience users recognize from ecommerce
+                                        sites (a left Search region and report region). Displays
+                                        search results as cards or a classic report.</span></p>
+                                    
+                                    <p>Features:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__FACETED_SRCH_FEATURES">
+                                       <li>Select options from facets in the left Search
+                                        region to narrow down search results.</li>
+                                       <li>Set filters using facets that show possible
+                                        values together with the occurrence count within the result
+                                        set.</li>
+                                       <li>Built-in search capability.</li>
+                                       <li>Optionally include a chart for any facet.</li>
+                                       <li>Toggle between a bar chart (which is the
+                                        default) and pie chart type.</li>
+                                       <li>Create facet groups for data models having
+                                        multiple flag columns. </li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="31%" headers="d53052e385 d53052e245 ">
+                                    
+                                    <p>See: <a href="managing-faceted-search.html#GUID-1A586583-3DAB-4F49-A5B4-A09AD93F015F" title="A faceted search page displays and filters data using an intuitive experience users recognize from ecommerce sites (a left Search region and report region). The report region displays search results as cards or a classic report.">Managing Faceted Search</a></p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d53052e430" headers="d53052e239 ">
+                                    <p>Smart
+                                    Filters</p><a id="d53052e433" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="52%" headers="d53052e430 d53052e242 ">
+                                    
+                                    
+                                    <p><span id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__SMART_FILTERS_DESC">A <strong class="term">smart filters</strong> page features single search field
+                                        at the top of the page and a search results report (classic
+                                        report, cards, map, or calendar). While a Smart Filter
+                                        behaves similarly to faceted search, it features a more
+                                        space efficient layout.</span></p>
+                                    
+                                    <p>Features:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__SMART_FILTERS_FEATURES">
+                                       <li>Includes a search field at the top of the page
+                                        with filters that display as suggestion chip.</li>
+                                       <li>The Search Results can display as a classic
+                                        report, cards, map, or calendar.</li>
+                                       <li>Clicking a filter name displays a list of
+                                        values. </li>
+                                       <li>Clicking to right of a suggestion chip changes
+                                        it to an applied filter chip and moves to the Applied
+                                        Filters Area. Clicking the applied filter chip again
+                                        displays a list. </li>
+                                       <li>Built-in search capability.</li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="31%" headers="d53052e430 d53052e245 ">
+                                    
+                                    <p>See: <a href="managing-smart-filters.html#GUID-C8C68618-6D42-41F6-BC36-C9CC19C03AD6" title="A smart filters page features a single search field at the top of the page and a search results report (classic report, cards, map, or calendar). While a smart filter behaves similarly to faceted search, it features a more space efficient layout.">Managing Smart Filters</a></p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d53052e474" headers="d53052e239 ">
+                                    <p>Form</p><a id="d53052e477" class="indexterm-anchor"></a><a id="d53052e481" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="52%" headers="d53052e474 d53052e242 ">
+                                    <p>Create a page containing a form which enables end users to maintain data. Select the table on which to build the form and specify whether or not to include a report.</p>
+                                 </td>
+                                 <td align="left" valign="top" width="31%" headers="d53052e474 d53052e245 ">See: <a href="creating-a-form.html#GUID-BA645F6E-B988-4346-92EB-25C7F3614691" title="Developers can create forms using the Create Application Wizard and Create Page Wizard.">Creating a Form</a></td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d53052e496" headers="d53052e239 ">
+                                    <p>Interactive Grid</p><a id="d53052e499" class="indexterm-anchor"></a><a id="d53052e503" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="52%" headers="d53052e496 d53052e242 ">
+                                    
+                                    
+                                    <p><span id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__IG_DESC">An <strong class="term">interactive
+                                            grid</strong> presents data in a searchable, customizable
+                                        report. Includes similar customization capabilities
+                                        available in interactive reports plus the ability to
+                                        rearrange the report interactively using the mouse or
+                                        keyboard.</span></p>
+                                    
+                                    <p>Features:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__IG_FEATURES">
+                                       <li>Extensive customization capabilities using
+                                        menus or inline editing.</li>
+                                       <li>Turn editing on or off using the region
+                                        Attribute, Edit, Enabled.</li>
+                                       <li>Built-in search capability.</li>
+                                       <li>For both editable and non-editable reports,
+                                        users can change the report layout and create private
+                                            reports:
+                                          <ul style="list-style-type: disc;" id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__UL_T2J_NWJ_5TB">
+                                             <li>Column Heading menu - Change the report
+                                                layout with Control Break, Aggregations, Freeze,
+                                                Hide, and Filter.</li>
+                                             <li>Actions menu:
+                                                <ul style="list-style-type: disc;" id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__UL_MJP_PWJ_5TB">
+                                                   <li>Columns - Configure the columns to
+                                                  show or hide.</li>
+                                                   <li>Filters - Create filters to alter
+                                                  the display.</li>
+                                                   <li>Data - Sort, Aggregate, Refresh,
+                                                  Flashback.</li>
+                                                   <li>Format - Control Break,
+                                                  Highlight, Stretch Column Widths.</li>
+                                                   <li>Selection - Cell Selection, Copy
+                                                  to Clipboard, Refresh Rows.</li>
+                                                   <li>Chart - Create chart.</li>
+                                                   <li>Report - Create, edit, and manage
+                                                  saved Private or Alternative reports.</li>
+                                                   <li>Download - Download or email the
+                                                  report as a CSV, HTML, PDF, or Excel file</li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li>
+                                          
+                                          <p>If editable, users can edit the data
+                                            directly:</p>
+                                          
+                                          <ul style="list-style-type: disc;" id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__UL_MRM_BXJ_5TB">
+                                             <li>Row Actions menu - Single Row View, Add
+                                                Row, Duplicate Row, Delete Row, Refresh Row, Revert
+                                                Changes.</li>
+                                             <li>Add Rows - Add new rows by clicking the
+                                                  <span class="uicontrol bold">Add Row </span>button.
+                                             </li>
+                                             <li>Edit Rows - Edit a row by selecting or
+                                                double-clicking a cell with the mouse, editing the
+                                                content, and clicking the
+                                                  <span class="uicontrol bold">Save</span> button.
+                                             </li>
+                                          </ul>
+                                          
+                                       </li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="31%" headers="d53052e496 d53052e245 ">
+                                    
+                                    <p>See: <a href="managing-interactive-grids.html#GUID-82BA760D-2142-4FED-99D7-0DE98B852079" title="An interactive grid presents data in a searchable, customizable report. Includes similar customization capabilities available in interactive reports plus the ability to rearrange the report interactively using the mouse or keyboard.">Managing Interactive Grids</a></p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d53052e582" headers="d53052e239 ">
+                                    <p>Interactive
+                                    Report</p><a id="d53052e585" class="indexterm-anchor"></a><a id="d53052e589" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="52%" headers="d53052e582 d53052e242 ">
+                                    
+                                    
+                                    <p><span id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__IR_DESC">An <strong class="term">interactive
+                                            report</strong> page features a searchable, easily
+                                        customizable report.</span></p>
+                                    
+                                    <p>Features:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__IR_FEATURES">
+                                       <li>Report can display as a standard application
+                                        page or as a modal dialog.</li>
+                                       <li>Enable the <span class="uicontrol bold">Include Form</span>
+                                        option to create a report and update form combination.
+                                       </li>
+                                       <li>Built-in search capability.</li>
+                                       <li>Change the report layout and create private
+                                        reports using menus:
+                                          <ul style="list-style-type: disc;" id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__UL_L5X_GBK_5TB">
+                                             <li>Column Heading menu: Change the report
+                                                layout with Sort Ascending, Sort Descending, Hide
+                                                Column, Control Break, and Filter.</li>
+                                             <li>Actions menu:
+                                                <ul style="list-style-type: disc;" id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__UL_WKV_KBK_5TB">
+                                                   <li>Columns - Configure the columns to
+                                                  show or hide.</li>
+                                                   <li>Filters - Create filters to alter
+                                                  the display.</li>
+                                                   <li>Data - Sort, Aggregate, Compute,
+                                                  Flashback.</li>
+                                                   <li>Format - Control Break,
+                                                  Highlight, Rows Per Page.</li>
+                                                   <li>Chart - Create a chart.</li>
+                                                   <li>Group By - Group sets of results
+                                                  by one or more columns with Group By.</li>
+                                                   <li>Pivot - Pivot reports transpose
+                                                  rows into columns to generate results in a cross
+                                                  tab format.</li>
+                                                   <li>Report - Create, edit, and manage
+                                                  saved Named reports.</li>
+                                                   <li>Download - Download or email the
+                                                  report as a CSV, HTML, Excel, or PDF.</li>
+                                                   <li>Subscription - Subscribe to report
+                                                  updates in CSV, HTML, Excel, or PDF format.</li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="31%" headers="d53052e582 d53052e245 ">
+                                    
+                                    <p>See: <a href="managing-interactive-reports.html#GUID-24C05873-1362-4CC5-A9E5-0252C388CC67" title="An interactive report page features a searchable, easily customizable report.">Managing Interactive Reports</a></p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d53052e656" headers="d53052e239 ">
+                                    
+                                    <p>Map <a id="d53052e660" class="indexterm-anchor"></a><a id="d53052e664" class="indexterm-anchor"></a></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="52%" headers="d53052e656 d53052e242 ">
+                                    
+                                    <p>The map component consists of a background map and
+                                    spatial geometry objects (or layers) sourced from data in a
+                                    local table. Supported spatial geometry objects (or layers)
+                                    include: Points, Lines, Polygons, Heat Map, or Extruded
+                                    Polygons. Spatial geometry objects can be either:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__UL_AVZ_RNC_DPB">
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Geometry Column</span> -
+                                            Supported datatypes include
+                                                <code class="codeph">SDO_GEOMETRY</code>,
+                                                <code class="codeph">VARCHAR2</code>, or <code class="codeph">CLOB</code>.
+                                                <code class="codeph">VARCHAR2</code> and <code class="codeph">CLOB</code>
+                                            columns must contain geometry information in GeoJSON
+                                            format.
+                                          </p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Two Numeric Columns</span> -
+                                            These columns must contain longitude and latitude
+                                            values. This option only applies to Point and Heat Map
+                                            layers.
+                                          </p>
+                                          
+                                       </li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="31%" headers="d53052e656 d53052e245 ">
+                                    
+                                    <p>See <a href="creating-maps.html#GUID-ACA5ED1C-7031-42BF-90B1-98938FB6DC17" title="Create maps that visualize location data (real coordinates) based on data in a table.">Creating Maps</a></p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d53052e717" headers="d53052e239 ">
+                                    <p>Master Detail <a id="d53052e720" class="indexterm-anchor"></a><a id="d53052e724" class="indexterm-anchor"></a></p>
+                                 </td>
+                                 <td align="left" valign="top" width="52%" headers="d53052e717 d53052e242 ">
+                                    <p>A master detail reflects a one-to-many relationship between two tables in a
+                                    database. Master detail forms enable users to insert, update,
+                                    and delete values from two tables or views. Master Detail
+                                    options include:</p>
+                                    <ul style="list-style-type: disc;">
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Stacked</span> - Creates a
+                                            single page master detail with editable interactive
+                                            grids. Users select a row in the master grid to update
+                                            the detail grids. 
+                                          </p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Side by Side</span> - Create
+                                            a single page master detail utilizing side by side
+                                            layout and report regions with modal edit windows. The
+                                            left side contains a master list to navigate to the
+                                            master record. The right side contains the selected
+                                            master record and the associated detail report.
+                                          </p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Drill Down</span> - Creates a two page
+                                            (or Drill Down) master detail. The first page contains
+                                            an interactive report for the master table. The second
+                                            page features a standard form for the master and
+                                            interactive grids for the detail.
+                                          </p>
+                                          
+                                       </li>
+                                    </ul>
+                                 </td>
+                                 <td align="left" valign="top" width="31%" headers="d53052e717 d53052e245 ">
+                                    
+                                    <p>See <a href="managing-master-detail-forms.html#GUID-6143A5AE-FCAB-4D7F-8B8C-7EFBE39359FB" title="Developers can create a master detail form with either the Create Application Wizard or the Create Page Wizard.">Creating Master Detail Forms</a></p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d53052e764" headers="d53052e239 ">
+                                    <p>Additional Pages, Classic
+                                    Report</p><a id="d53052e767" class="indexterm-anchor"></a><a id="d53052e771" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="52%" headers="d53052e764 d53052e242 ">
+                                    
+                                    
+                                    <p>Expand the <span class="uicontrol bold">Additional Pages</span>
+                                    region to view this option.
+                                    </p>
+                                    
+                                    <p><span id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__CLASSIC_RPT_DESC">A <strong class="term">classic report</strong> features a simple report page
+                                        based on the formatted result of a SQL query.</span></p>
+                                    
+                                    <p>Features:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-C39822B5-5A78-4385-8D89-9EDD7C0ECD78__CLASSIC_RPT_FEATURES">
+                                       <li>
+                                          
+                                          <p>Report can display as a standard application
+                                            page or as a modal dialog.</p>
+                                          
+                                       </li>
+                                       <li>Enable the <span class="uicontrol bold">Include Form</span>
+                                        option to create a report and update form combination.
+                                       </li>
+                                       <li>Enable column sorting in Page Designer by
+                                        selecting a column and configuring Column, Sorting
+                                        attributes.</li>
+                                       <li>The most versatile report as it is
+                                        template-driven. Choose from the predefined report
+                                        templates, including Media List, Comments, Timeline, Badge
+                                        List, Value Attributes Pairs, and so on. Or, create your own
+                                        template to customize and visualize data.</li>
+                                       <li>Download the report as a CSV, HTML, Excel, or
+                                        PDF.</li>
+                                       <li>Supports Report Layouts to format PDF
+                                        exports.</li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="31%" headers="d53052e764 d53052e245 ">
+                                    
+                                    <p>See: <a href="managing-classic-reports.html#GUID-6C9E3F69-691B-4501-8020-097C92508561" title="A classic report features a simple report page based on the formatted result of a SQL query.">Managing Classic Reports</a></p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d53052e825" headers="d53052e239 ">
+                                    <p>Additional Pages, Multiple
+                                    Reports</p><a id="d53052e828" class="indexterm-anchor"></a><a id="d53052e832" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="52%" headers="d53052e825 d53052e242 ">
+                                    
+                                    <p>Creates multiple report pages containing an
+                                    interactive report with form. For each page, you choose a table
+                                    on which to build the interactive report with form. Click
+                                        <span class="uicontrol bold">Edit</span> to change the default options
+                                    (such as providing a custom <span class="uicontrol bold">SQL Query</span>),
+                                    specifying another report type (such as,
+                                        selecting<span class="uicontrol bold">Classic Report</span> instead of
+                                        <span class="uicontrol bold">Interactive Report</span>). 
+                                    </p>
+                                    
+                                    <p>Select <span class="uicontrol bold">Include Form</span> to include
+                                    a form page for creating or updating records.
+                                    </p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="31%" headers="d53052e825 d53052e245 ">
+                                    
+                                    <p>See: <a href="managing-interactive-reports.html#GUID-24C05873-1362-4CC5-A9E5-0252C388CC67" title="An interactive report page features a searchable, easily customizable report.">Managing Interactive Reports</a></p>
+                                    
+                                    <p>See online Help when creating this page.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d53052e874" headers="d53052e239 ">
+                                    <p>Additional Pages,
+                                    Timeline</p><a id="d53052e877" class="indexterm-anchor"></a><a id="d53052e881" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="52%" headers="d53052e874 d53052e242 ">
+                                    
+                                    <p>Expand the <span class="uicontrol bold">Additional Pages</span>
+                                    region to view this option.
+                                    </p>
+                                    
+                                    <p>Create a page which displays a timeline. Especially
+                                    useful for displaying updates.</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="31%" headers="d53052e874 d53052e245 ">
+                                    
+                                    <p>See online Help when creating this page.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d53052e902" headers="d53052e239 ">
+                                    <p>Additional Pages,
+                                    Wizard</p><a id="d53052e905" class="indexterm-anchor"></a><a id="d53052e909" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="52%" headers="d53052e902 d53052e242 ">
+                                    
+                                    <p>Create a collection of pages to be used as a wizard.
+                                    Generally wizards are used for entering data across multiple
+                                    steps.</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="31%" headers="d53052e902 d53052e245 ">
+                                    
+                                    <p>See online Help when creating this page.</p>
+                                    
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="page-types-features-settings.html#GUID-22A203E5-96CC-4A11-8DA3-97E1375203E5" title="Learn about the supported page types, features, and configurable settings available in the Create Application Wizard.">Understanding Page Types, Features, and Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-668FAB1D-729E-49A9-AC44-0A729674E0FB" name="GUID-668FAB1D-729E-49A9-AC44-0A729674E0FB"></a><h3 id="HTMDB-GUID-668FAB1D-729E-49A9-AC44-0A729674E0FB" class="sect3"><span class="enumeration_section">5.3.3.2 </span>Available Features in the Create Application Wizard
+               </h3>
+               <div>
+                  <p>Learn about available features when running the Create Application Wizard. Features provide application-level functionality and can only be added once per application.</p>
+                  <div class="section">
+                     <p>This table lists available&nbsp;Features when running the Create Application Wizard.</p>
+                     <div class="tblformalwide" id="GUID-668FAB1D-729E-49A9-AC44-0A729674E0FB__CREATEAPPLICATIONWIZARDFEATURES-5ACAD241">
+                        <table cellpadding="4" cellspacing="0" class="FormalWide" title summary="Available Features when running the Create Application Wizard." width="100%" frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="27%" id="d53052e1028">Page Type</th>
+                                 <th align="left" valign="bottom" width="46%" id="d53052e1030">Description</th>
+                                 <th align="left" valign="bottom" width="27%" id="d53052e1032">To Learn More</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="27%" id="d53052e1036" headers="d53052e1028 ">Install Progressive Web App<a id="d53052e1038" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="46%" headers="d53052e1036 d53052e1030 ">Progressive Web Applications (PWA) are designed to be capable, reliable, and installable. A Progressive Web App feels like a platform-specific application. Enabling this option:
+                                    <ul style="list-style-type: disc;" id="GUID-668FAB1D-729E-49A9-AC44-0A729674E0FB__UL_Z2T_FLS_XQB">
+                                       <li>Adds a new navigation bar entry, <code class="codeph">Install App</code>.
+                                       </li>
+                                       <li>Enables users to install the app on devices.</li>
+                                    </ul>
+                                 </td>
+                                 <td align="left" valign="top" width="27%" headers="d53052e1036 d53052e1032 ">See <a href="creating-a-progressive-web-app.html#GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" title="Learn about Progressive Web App (PWA) features and requirements.">Creating a Progressive Web App (PWA)</a></td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="27%" id="d53052e1064" headers="d53052e1028 ">Push Notifications<a id="d53052e1066" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="46%" headers="d53052e1064 d53052e1030 ">Web push notifications enable web apps to send notifications to a
+                                user's device even when the user is not currently on the website.
+                                Notifications can be sent to a user's desktop or mobile device and
+                                can be used to alert the user to new content or events on the
+                                website, or to re-engage the user with the website.
+                                    <p>Enabling this option:</p>
+                                    <ul style="list-style-type: disc;" id="GUID-668FAB1D-729E-49A9-AC44-0A729674E0FB__UL_BRC_P5Y_MWB">
+                                       <li>Add a new navigation bar entry, <code class="codeph">User
+                                            Settings</code>.
+                                       </li>
+                                       <li>Enables users to subscribe and unsubscribe to
+                                        push notifications. </li>
+                                       <li>When subscribed, users can receive push
+                                        notifications from the <span>APEX</span> app.
+                                       </li>
+                                    </ul>
+                                 </td>
+                                 <td align="left" valign="top" width="27%" headers="d53052e1064 d53052e1032 ">See <a href="creating-a-progressive-web-app.html#GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" title="Learn about Progressive Web App (PWA) features and requirements.">Creating a Progressive Web App (PWA)</a> and <a href="creating-a-progressive-web-app.html#GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47" title="Configure Progressive Web App attributes for both new and existing Progressive Web App applications.">Configuring Attributes for a Progressive Web App</a></td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="27%" id="d53052e1105" headers="d53052e1028 ">About Page<a id="d53052e1107" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="46%" headers="d53052e1105 d53052e1030 ">Include an About page in the application
+                                which displays the application description.</td>
+                                 <td align="left" valign="top" width="27%" headers="d53052e1105 d53052e1032 ">See online Help when creating
+                                feature.</td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="27%" id="d53052e1120" headers="d53052e1028 ">Access Control<a id="d53052e1122" class="indexterm-anchor"></a><a id="d53052e1126" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="46%" headers="d53052e1120 d53052e1030 ">Incorporate role-based user authentication within your application. Users can be defined as Administrators, Contributors, or Readers. You can then readily define different access to different roles for various components throughout your application, such as pages, menu entries, regions, columns, items, buttons and so forth.</td>
+                                 <td align="left" valign="top" width="27%" headers="d53052e1120 d53052e1032 ">See <a href="controlling-access-to-applications-pages-and-page-components.html#GUID-E700B9CA-34BB-4A8B-9765-1CB6B7D0993B" title="Control access to an application, individual pages, or page components by creating an access control list.">Controlling Access to Applications, Pages, and Page Components</a></td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="27%" id="d53052e1140" headers="d53052e1028 ">Activity Reporting<a id="d53052e1142" class="indexterm-anchor"></a><a id="d53052e1146" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="46%" headers="d53052e1140 d53052e1030 ">Include numerous reports on user activity for your application such as the most active users, the most used pages, the performance of pages, and errors raised. Includes the following:
+                                    <ul style="list-style-type: disc;">
+                                       <li>Top Users report</li>
+                                       <li>Application Error Log report</li>
+                                       <li>Page Performance, activity and performance by page</li>
+                                       <li>Application activity by page report</li>
+                                       <li>Page Views detail report</li>
+                                       <li>Automations Log (if the application contains automations)</li>
+                                    </ul>
+                                 </td>
+                                 <td align="left" valign="top" width="27%" headers="d53052e1140 d53052e1032 ">Not applicable.</td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="27%" id="d53052e1168" headers="d53052e1028 ">Configuration Options<a id="d53052e1170" class="indexterm-anchor"></a><a id="d53052e1174" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="46%" headers="d53052e1168 d53052e1030 ">Enables application administrators to enable or disable specific functionality within the application. This feature is useful if you select features that need additional development effort before they can be used by end users. This feature can also be expanded to application-specific features. If developers define additional build options and associate them with specific functionality throughout the application, then they can be added to the configuration settings for administrators. For example, within the <span class="italic">Customer Tracker</span> productivity app, administrators can turn on or off such features as Contacts, Data Loading, Geography, and more.
+                                 </td>
+                                 <td align="left" valign="top" width="27%" headers="d53052e1168 d53052e1032 ">Not applicable.</td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="27%" id="d53052e1186" headers="d53052e1028 ">Feedback<a id="d53052e1188" class="indexterm-anchor"></a><a id="d53052e1192" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="46%" headers="d53052e1186 d53052e1030 ">
+                                    <p>Feedback provides a mechanism for end users to post general comments for application administrators and developers. The posts include useful session state information to help developers determine where the end user sent the feedback from. </p>
+                                    <p>Creating Feedback:</p>
+                                    <ul style="list-style-type: disc;">
+                                       <li>Creates a Navigation bar icon which users can click to leave feedback.</li>
+                                       <li>Creates a report for viewing and updating feedback.</li>
+                                       <li>Captures the application and page ID, feedback comments, date and time, and user information.</li>
+                                    </ul>
+                                 </td>
+                                 <td align="left" valign="top" width="27%" headers="d53052e1186 d53052e1032 ">See <a href="managing-feedback.html#GUID-67337450-52D3-4341-B550-21C81605BC6D" title="Feedback provides a mechanism for end users to post general comments for application administrators and developers.">Managing Feedback</a></td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="27%" id="d53052e1216" headers="d53052e1028 ">Theme Style Selection<a id="d53052e1218" class="indexterm-anchor"></a><a id="d53052e1222" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="46%" headers="d53052e1216 d53052e1030 ">
+                                    <p>Enables administrators to select a default color scheme (theme style) for the application. Administrators determine whether end users can choose their own theme style by enabling and disabling <span class="uicontrol bold">Allow End Users to choose Theme Style is enabled</span>.
+                                    </p>
+                                    <p>If enabled, end users simply click on the <span class="uicontrol bold">Customize</span> link at the bottom of the home page and select from the available theme styles. For example, users with visual impairment may prefer to utilize the Vita theme style which has a much higher color contrast
+                                    </p>
+                                 </td>
+                                 <td align="left" valign="top" width="27%" headers="d53052e1216 d53052e1032 ">Not applicable.</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-668FAB1D-729E-49A9-AC44-0A729674E0FB__NOTE-1313-606B59A6">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="page-types-features-settings.html#GUID-37BA23DE-2206-4E3E-9000-516A7FF92498" title="Remove features created with a wizard using build options.">About Removing Features Created with the Create Application Wizard</a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="page-types-features-settings.html#GUID-22A203E5-96CC-4A11-8DA3-97E1375203E5" title="Learn about the supported page types, features, and configurable settings available in the Create Application Wizard.">Understanding Page Types, Features, and Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-832AD15E-FD36-49D6-A2AC-4FA693F2818E" name="GUID-832AD15E-FD36-49D6-A2AC-4FA693F2818E"></a><h3 id="HTMDB-GUID-832AD15E-FD36-49D6-A2AC-4FA693F2818E" class="sect3"><span class="enumeration_section">5.3.3.3 </span>Available Settings in the Create Application Wizard
+               </h3>
+               <div>
+                  <p>Learn about Settings available when running the Create Application Wizard. Settings are used in the generation of the application and include the application ID, the database schema, Advanced Settings (such as the application definition, security, and globalization attributes), and application authentication.</p>
+                  <div class="section">
+                     <p>This table lists available Settings when running the Create Application Wizard.</p>
+                     <div class="tblformalwide" id="GUID-832AD15E-FD36-49D6-A2AC-4FA693F2818E__CREATEAPPLICATIONWIZARDFEATURES-5ACB29A0">
+                        <table cellpadding="4" cellspacing="0" class="FormalWide" title summary="Settings when running the Create Application Wizard." width="100%" frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="27%" id="d53052e1356">Page Type</th>
+                                 <th align="left" valign="bottom" width="46%" id="d53052e1358">Description</th>
+                                 <th align="left" valign="bottom" width="27%" id="d53052e1360">To Learn More</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="27%" id="d53052e1364" headers="d53052e1356 ">Application ID<a id="d53052e1366" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="46%" headers="d53052e1364 d53052e1358 ">Unique, numeric identifier for your application. This field contains an automatically generated identifier by default.</td>
+                                 <td align="left" valign="top" width="27%" headers="d53052e1364 d53052e1360 ">Not applicable.</td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="27%" id="d53052e1375" headers="d53052e1356 ">Schema<a id="d53052e1377" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="46%" headers="d53052e1375 d53052e1358 ">Select the database schema which stores the database objects you want to use in this application.</td>
+                                 <td align="left" valign="top" width="27%" headers="d53052e1375 d53052e1360 ">Not applicable.</td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="27%" id="d53052e1386" headers="d53052e1356 ">Authentication<a id="d53052e1388" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="46%" headers="d53052e1386 d53052e1358 ">Select how you want users to authenticate
+                                into your application.</td>
+                                 <td align="left" valign="top" width="27%" headers="d53052e1386 d53052e1360 ">See <a href="establishing-user-identity-through-authentication.html#GUID-45C4B1CD-4231-4FE9-8B5B-C90611F5F57B" title="Use authentication to establish a user's identity to control access to an application. Authentication may require a user identify a user name and password or could involve the use of digital certificates or a secure key.">Establishing User Identity Through Authentication</a></td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="27%" id="d53052e1402" headers="d53052e1356 ">Language<a id="d53052e1404" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="46%" headers="d53052e1402 d53052e1358 ">Select the primary language for this
+                                application.</td>
+                                 <td align="left" valign="top" width="27%" headers="d53052e1402 d53052e1360 ">Not applicable.</td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="27%" id="d53052e1413" headers="d53052e1356 ">Advanced Settings<a id="d53052e1415" class="indexterm-anchor"></a><a id="d53052e1419" class="indexterm-anchor"></a><a id="d53052e1423" class="indexterm-anchor"></a><a id="d53052e1427" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="46%" headers="d53052e1413 d53052e1358 ">
+                                    <p>Set additional definition, security, and globalization settings. These settings can be applied when creating the application and can be edited post application creation. </p>
+                                    <p><span class="uicontrol bold">Tip</span>: To learn more about these attributes, see field-level Help.
+                                    </p>
+                                    <p><span class="uicontrol bold">User Interface Attributes</span>:
+                                    </p>
+                                    <ul style="list-style-type: disc;">
+                                       <li><span class="uicontrol bold">Apply UI Defaults</span> - Select <span class="uicontrol bold">On</span> to have
+                                        attribute defaults based on existing UI Defaults defined
+                                        within this workspace.
+                                       </li>
+                                       <li><span class="uicontrol bold">Copy from Existing Apps</span> - Select <span class="uicontrol bold">On</span> to have attribute defaults to be based on existing Form pages, based on the same table, in current applications defined within this workspace.
+                                       </li>
+                                       <li><span class="uicontrol bold">Table Prefixes</span> - Enter table prefixes currently used by existing database tables on which pages are based. These prefixes may be different from the framework table prefix (for database objects created by this application when generated).
+                                       </li>
+                                    </ul>
+                                    <p><span class="uicontrol bold">Description</span>:
+                                    </p>
+                                    <ul style="list-style-type: disc;">
+                                       <li><span class="uicontrol bold">Short Description</span> - Enter text to be displayed as a subtitle, under the application name on the home page.
+                                       </li>
+                                       <li> <span class="uicontrol bold">Description</span> - Enter text to be displayed on the About This Application page, accessed from the help icon in the navigation bar.
+                                       </li>
+                                    </ul>
+                                    <p><span class="uicontrol bold">Settings</span>:
+                                    </p>
+                                    <ul style="list-style-type: disc;">
+                                       <li><span class="uicontrol bold">Add "Built with APEX" to Footer</span> - When set to <span class="uicontrol bold">On</span>, <span>Oracle APEX</span> adds the text "Built with Love using <span>Oracle APEX</span>" to the footer of every page.
+                                       </li>
+                                       <li><span class="uicontrol bold">Version</span> - Enter the application version. The version is displayed by default on the bottom of each page.
+                                       </li>
+                                       <li>
+                                          <p><span class="uicontrol bold">Logging</span> - Determines whether or not user activity is recorded
+                                            in the activity log. When set to
+                                                <span class="uicontrol bold">On</span>, every page view is
+                                            logged, enabling an administrator to monitor user
+                                            activity for each application.
+                                          </p>
+                                          
+                                          <p>Disabling logging may be advisable for high volume
+                                            applications..</p>
+                                          
+                                          <p><span class="uicontrol bold">Note</span>: You can only modify this attribute if the feature configuration <span class="uicontrol bold">Application Activity Logging</span> in <span>Oracle APEX</span> Internal Administration is set to <span class="uicontrol bold">Use Application Setting</span>.
+                                          </p>
+                                       </li>
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Debugging</span> -
+                                            Determines whether debug mode can be enabled using the
+                                            browser.
+                                          </p>
+                                          
+                                          <p><span class="uicontrol bold">On</span> enables the application to
+                                            enable debug mode using the browser at runtime.
+                                                <span class="uicontrol bold">Off</span> disables the application
+                                            from enabling in debug from the browser.
+                                          </p>
+                                          
+                                          <p>Debug can be enabled programmatically regardless of this debug setting. If the application is run from the <span>APEX</span> development environment, debugging can always be enabled.
+                                          </p>
+                                          
+                                       </li>
+                                    </ul>
+                                    <p><span class="uicontrol bold">Security</span>:
+                                    </p>
+                                    <ul style="list-style-type: disc;">
+                                       <li>
+                                          <p> <span class="uicontrol bold">Deep Linking</span> - Enables or prevents deep linking to an application.
+                                          </p>
+                                          
+                                          <p>If <span class="uicontrol bold">On</span>, the URL to a
+                                            specific page ultimately redirects there, possibly after
+                                            the user has to logged in. If
+                                            <span class="uicontrol bold">Off</span>, the URL does not contain a
+                                            valid session ID, <span>APEX</span> redirects to the application's home page.
+                                          </p>
+                                       </li>
+                                       <li> <span class="uicontrol bold">Maximum session length in seconds</span> - Defines how long (in seconds) sessions can exist and be used by this application.
+                                       </li>
+                                       <li><span class="uicontrol bold">Maximum session idle time in seconds</span> - Defines the time between the last page request and the next page request. 
+                                       </li>
+                                    </ul>
+                                    <p><span class="uicontrol bold">Globalization</span>:
+                                    </p>
+                                    <ul style="list-style-type: disc;">
+                                       <li><span class="uicontrol bold">Document Direction</span> - Set document direction left-to-right or right-to-left.
+                                       </li>
+                                       <li><span class="uicontrol bold">Date Format</span> - Determines the date format to be used in the application.
+                                       </li>
+                                       <li><span class="uicontrol bold">Date Time Format</span> - Specify the date time format to be used in the application.
+                                       </li>
+                                       <li><span class="uicontrol bold">Timestamp Format</span> - Determines the timestamp format to be used in the application.
+                                       </li>
+                                       <li><span class="uicontrol bold">Timestamp with Timezone Format</span> - Determines the timestamp with time zone format to be used in the application.
+                                       </li>
+                                    </ul>
+                                 </td>
+                                 <td align="left" valign="top" width="27%" headers="d53052e1413 d53052e1360 ">Not applicable.</td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="27%" id="d53052e1604" headers="d53052e1356 ">UI Defaults<a id="d53052e1606" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="46%" headers="d53052e1604 d53052e1358 ">Edit UI Defaults.</td>
+                                 <td align="left" valign="top" width="27%" headers="d53052e1604 d53052e1360 ">See <a href="../aeutl/managing-ui-defaults.html#AEUTL-GUID-320D73C0-F50E-4167-AA2E-89D2809AC416" target="_blank">Managing UI
+                                    Defaults</a> in <span><cite>Oracle APEX SQL Workshop
+                                        Guide</cite></span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="page-types-features-settings.html#GUID-22A203E5-96CC-4A11-8DA3-97E1375203E5" title="Learn about the supported page types, features, and configurable settings available in the Create Application Wizard.">Understanding Page Types, Features, and Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-37BA23DE-2206-4E3E-9000-516A7FF92498" name="GUID-37BA23DE-2206-4E3E-9000-516A7FF92498"></a><h3 id="HTMDB-GUID-37BA23DE-2206-4E3E-9000-516A7FF92498" class="sect3"><span class="enumeration_section">5.3.3.4 </span>About Removing Features Created with the Create Application Wizard
+               </h3>
+               <div>
+                  <p>Remove features created with a wizard using build options.</p>
+                  <p>When you add a feature using a wizard, the wizard creates one or more pages and other components and processes to seamlessly integrate it into your application. Each feature is associated with a build option which contains one or more components. You use the associated build option to enable, disable, or permanently remove features.</p>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-37BA23DE-2206-4E3E-9000-516A7FF92498__GUID-BFD10675-A6A6-4FB7-B6AE-1D766068FFEB">Using Build Options to Include or Exclude Features</p>
+                     <p>Build options have two possible values: <span class="uicontrol bold">Include</span> and <span class="uicontrol bold">Exclude</span>. If you select the build option status of <span class="uicontrol bold">Include</span>, then the <span>Oracle APEX</span> engine considers the associated components (in this case features) as part of the application definition at runtime. Conversely, if you specify the build options status as <span class="uicontrol bold">Exclude</span>, then the <span>APEX</span> engine treats it and any associated components as if it did not exist.
+                     </p>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-37BA23DE-2206-4E3E-9000-516A7FF92498__GUID-97D0266D-9748-4B4D-87D3-3908623D95F9">Removing Features Permanently</p>
+                     <p>You remove features by first removing the components associated with the build option and then deleting the build option.</p>
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-37BA23DE-2206-4E3E-9000-516A7FF92498__GUID-79A700D6-C971-4DD3-AE6E-35C33A9E276E">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="including-excluding-build-options.html#GUID-39EE3794-6B6B-4676-A3DE-5CCFDED2602B" title="Specify Include to enable a component and include it with the application. Specify Exclude to disable a component and exclude it from the application.">Including or Excluding Build Options</a></li>
+                        <li><a href="deleting-build-options-associated-components.html#GUID-18425C54-2511-46BD-87FD-AC022139E917" title="Delete a build option by first removing the associated components and then deleting the build option.">Deleting Build Options and Associated Components</a></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="page-types-features-settings.html#GUID-22A203E5-96CC-4A11-8DA3-97E1375203E5" title="Learn about the supported page types, features, and configurable settings available in the Create Application Wizard.">Understanding Page Types, Features, and Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

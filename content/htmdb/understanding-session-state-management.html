@@ -1,0 +1,218 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Understanding Session State Management">
+      <meta name="abstract" content="Oracle APEX transparently maintains session state and provides developers with the ability to get and set session state values from any page in the application.">
+      <meta name="description" content="Oracle APEX transparently maintains session state and provides developers with the ability to get and set session state values from any page in the application.">
+      <meta name="DC.subject" content="session state, management, session ID">
+      <meta name="keywords" content="session state, management, session ID">
+      <meta name="DC.Relation" scheme="URI" content="application-builder-concepts.html#GUID-6D22E307-6D48-49BC-9FDC-A7D8B037E46A">
+      <meta name="DC.Relation" scheme="URI" content="understanding-session-state-management.html#GUID-CE2E9C4B-2779-4D0A-808C-B462E382CE1C">
+      <meta name="DC.Relation" scheme="URI" content="understanding-session-state-management.html#GUID-9806B1C3-ECC0-46AF-9823-EFE2CC2C474A">
+      <meta name="DC.Relation" scheme="URI" content="understanding-session-state-management.html#GUID-5A3E558A-61BB-4495-ABB5-6611A6D04F46">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-CE2A38B5-75B7-4C43-ACB0-685E16C6ACF9">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Oracle APEX transparently maintains session state and provides developers with the ability to get and set session state values from any page in the application.">
+      <meta name="description" content="Oracle APEX transparently maintains session state and provides developers with the ability to get and set session state values from any page in the application.">
+      <title>Understanding Session State Management</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Oracle APEX transparently maintains session state and provides developers with the ability to get and set session state values from any page in the application.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="template-directives.html" title="Previous" type="text/html">
+      <link rel="next" href="managing-session-state.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Understanding Session State Management","description":"Oracle APEX transparently maintains session state and provides developers with the ability to get and set session state values from any page in the application.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="template-directives.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="managing-session-state.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-CE2A38B5-75B7-4C43-ACB0-685E16C6ACF9" name="GUID-CE2A38B5-75B7-4C43-ACB0-685E16C6ACF9"></a><a id="HTMDB03007"></a>
+         
+         <h2 id="HTMDB-GUID-CE2A38B5-75B7-4C43-ACB0-685E16C6ACF9" class="sect2"><span class="enumeration_section">3.6 </span>Understanding Session State Management
+         </h2>
+         <div class="ind">
+            <p><span>Oracle APEX</span> transparently maintains session state and provides developers with the ability to get and set session state values from any page in the application.
+            </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="understanding-session-state-management.html#GUID-CE2E9C4B-2779-4D0A-808C-B462E382CE1C">What is Session State?</a><br>Session state&nbsp;enables developers to store and retrieve values for a user as         the user navigates between different application pages.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-session-state-management.html#GUID-9806B1C3-ECC0-46AF-9823-EFE2CC2C474A">About Session IDs</a><br>A&nbsp;session ID&nbsp;is a unique number assigned a specific user for the duration of         that user's visit (or session).
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-session-state-management.html#GUID-5A3E558A-61BB-4495-ABB5-6611A6D04F46">What Is a Session?</a><br>A session is a logical construct that establishes persistence (or stateful         behavior) across page views. 
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="application-builder-concepts.html#GUID-6D22E307-6D48-49BC-9FDC-A7D8B037E46A" title="To efficiently use App Builder, developers must understand some key concepts including managing user interface design, viewing rendered application pages, understanding page processing and rendering, managing session state, understanding URL syntax, managing session state values, and using built-in substitution strings.">App Builder Concepts</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB29186"></a><div class="props_rev_3"><a id="GUID-CE2E9C4B-2779-4D0A-808C-B462E382CE1C" name="GUID-CE2E9C4B-2779-4D0A-808C-B462E382CE1C"></a><h3 id="HTMDB-GUID-CE2E9C4B-2779-4D0A-808C-B462E382CE1C" class="sect3"><span class="enumeration_section">3.6.1 </span>What is Session State?
+               </h3>
+               <div>
+                  <p>Session state&nbsp;enables developers to store and retrieve values for a user as
+        the user navigates between different application pages.</p>
+                  <div class="section">
+                     <p>Hypertext Transfer Protocol (HTTP), the protocol over which HTML pages are most often delivered, is a stateless protocol. A web browser is only connected to the server for as long as it takes to download a complete page. Each page request is treated by the server as an independent event, unrelated to any page requests that happened previously or that may occur in the future. To access form values entered on one page on a subsequent page, the values must be stored as session state. <span>Oracle APEX</span> transparently maintains session state and provides developers with the ability to get and set session state values from any page in the application.
+                     </p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-session-state-management.html#GUID-CE2A38B5-75B7-4C43-ACB0-685E16C6ACF9" title="Oracle APEX transparently maintains session state and provides developers with the ability to get and set session state values from any page in the application.">Understanding Session State Management</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB03009"></a><div class="props_rev_3"><a id="GUID-9806B1C3-ECC0-46AF-9823-EFE2CC2C474A" name="GUID-9806B1C3-ECC0-46AF-9823-EFE2CC2C474A"></a><h3 id="HTMDB-GUID-9806B1C3-ECC0-46AF-9823-EFE2CC2C474A" class="sect3"><span class="enumeration_section">3.6.2 </span>About Session IDs
+               </h3>
+               <div>
+                  <p>A&nbsp;session ID&nbsp;is a unique number assigned a specific user for the duration of
+        that user's visit (or session).</p>
+                  <p>The <span>Oracle APEX</span> engine establishes the identity of the user for each page request and the session ID
+            to fetch session state from the database. The most visible location of the session ID is
+            in the URL for a page request:
+                  </p>
+                  <ul style="list-style-type: disc;" id="GUID-9806B1C3-ECC0-46AF-9823-EFE2CC2C474A__UL_QNZ_ZLN_VKB">
+                     <li>
+                        
+                        <p>The third parameter in the f?p URL Syntax:</p>
+                        <pre class="pre codeblock"><code>https://apex.example.com/ords/f?p=392:3:13766599855150</code></pre>
+                        </li>
+                     <li>The <code class="codeph">session</code> parameter in the Friendly URL
+                Syntax::<pre class="pre codeblock"><code>https://apex.example.com/ords/mycompany/r/hr-app/update-employees?session=13766599855150</code></pre></li>
+                  </ul>
+                  <p>In both examples, the session ID is <code class="codeph">13766599855150</code>. 
+                  </p>
+                  <p>Another visible location is in the page's HTML POST data and indirectly in the contents of a session cookie. This cookie is sent by the <span>APEX</span> engine during authentication and is maintained for the life of the application (or browser) session.
+                  </p>
+                  <p><span>APEX</span> assigns new session IDs during authentication processing, records the authenticated user's identity with the session ID, and continually checks the session ID in each page request's URL or POST data with the session cookie and the session record in the database. These checks provide users with flexibility and security.
+                  </p>
+                  <p>While the session ID is the key to session state, the session cookie and the session record safeguard the integrity of the session ID and the authentication status of the user.</p>
+                  <div class="section">
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-9806B1C3-ECC0-46AF-9823-EFE2CC2C474A__GUID-901F215B-96C1-4FFA-B176-8E1B388CFAB8">
+                     <p class="notep1">See Also:</p>
+                     
+                     <p><a href="understanding-url-syntax.html#GUID-F9B81EAF-D33F-401D-8349-3952DEDA5460" title="Oracle APEX applications support two types of URL syntax: Friendly URL Syntax and f?p Syntax.">Understanding URL Syntax</a></p>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-session-state-management.html#GUID-CE2A38B5-75B7-4C43-ACB0-685E16C6ACF9" title="Oracle APEX transparently maintains session state and provides developers with the ability to get and set session state values from any page in the application.">Understanding Session State Management</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB03008"></a><div class="props_rev_3"><a id="GUID-5A3E558A-61BB-4495-ABB5-6611A6D04F46" name="GUID-5A3E558A-61BB-4495-ABB5-6611A6D04F46"></a><h3 id="HTMDB-GUID-5A3E558A-61BB-4495-ABB5-6611A6D04F46" class="sect3"><span class="enumeration_section">3.6.3 </span>What Is a Session?
+               </h3>
+               <div>
+                  <p>A session is a logical construct that establishes persistence (or stateful
+        behavior) across page views. </p>
+                  <p>Each session is assigned a unique identifier. The <span>Oracle APEX</span> engine uses this identifier (or session ID) to store and retrieve an application's
+            working set of data (or session state) before and after each page view. Because sessions
+            are entirely independent of one another, any number of sessions can exist in the
+            database at the same time. A user can also run multiple instances of an application
+            simultaneously in different browser programs.
+                  </p>
+                  <p>Sessions are logically and physically distinct from Oracle database sessions used to service page requests. A user runs an application in a single <span>APEX</span> session from sign in to sign out with a typical duration measured in minutes or hours. Each page requested during that session results in the <span>APEX</span> engine creating or reusing an Oracle database session to access database resources. Often these database sessions last just a fraction of a second.
+                  </p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-5A3E558A-61BB-4495-ABB5-6611A6D04F46__GUID-AAAC5B13-92D9-468C-A231-98384572FBB9">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="../aeadm/monitoring-activity-within-a-workspace.html#AEADM164" target="_blank">Viewing Active Sessions</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-session-state-management.html#GUID-CE2A38B5-75B7-4C43-ACB0-685E16C6ACF9" title="Oracle APEX transparently maintains session state and provides developers with the ability to get and set session state values from any page in the application.">Understanding Session State Management</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

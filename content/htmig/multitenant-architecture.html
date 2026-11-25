@@ -1,0 +1,108 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Utilizing Multitenant Architecture">
+      <meta name="abstract" content="Learn about installation choices and different scenarios associated with copying and moving pluggable databases introduced by the multitenant architecture with respect to Oracle APEX.">
+      <meta name="description" content="Learn about installation choices and different scenarios associated with copying and moving pluggable databases introduced by the multitenant architecture with respect to Oracle APEX.">
+      <meta name="DC.subject" content="Multitenant Architecture">
+      <meta name="keywords" content="Multitenant Architecture">
+      <meta name="DC.Relation" scheme="URI" content="understanding-installation-choices.html#GUID-A805FD4D-6049-429D-9DD2-717C75D96E62">
+      <meta name="DC.Relation" scheme="URI" content="installing-apex-into-application-container.html#GUID-46CD6A47-05A5-4DA2-8204-F80FFB48371D">
+      <meta name="DC.Relation" scheme="URI" content="installing-apex-into-different-pdbs.html#GUID-91809585-A1BA-44B5-8AD5-8FB44FB61A3F">
+      <meta name="DC.Relation" scheme="URI" content="plugging-in-pdb-when-apex-installed-in-root-container.html#GUID-F1D9485F-F21F-4194-A995-0F17547A664D">
+      <meta name="DC.Relation" scheme="URI" content="plugging-in-pdb-when-apex-is-not-in-root-container-of-target-cdb.html#GUID-E22E8E7A-9197-4E42-9267-773253D6BEB0">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="David Bliss">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Salim Hlayel">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vlad Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-972D1EC3-84AD-4C36-A4B1-167C3610BE7F">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about installation choices and different scenarios associated with copying and moving pluggable databases introduced by the multitenant architecture with respect to Oracle APEX.">
+      <meta name="description" content="Learn about installation choices and different scenarios associated with copying and moving pluggable databases introduced by the multitenant architecture with respect to Oracle APEX.">
+      <title>Utilizing Multitenant Architecture</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Installation Guide ">
+      <meta property="og:description" content="Learn about installation choices and different scenarios associated with copying and moving pluggable databases introduced by the multitenant architecture with respect to Oracle APEX.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Installation Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-installation-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:41:45-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12910-03">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="upgrading-from-previous-apex-release.html" title="Previous" type="text/html">
+      <link rel="next" href="understanding-installation-choices.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Installation Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="HTMIG">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Utilizing Multitenant Architecture","description":"Learn about installation choices and different scenarios associated with copying and moving pluggable databases introduced by the multitenant architecture with respect to Oracle APEX.","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="upgrading-from-previous-apex-release.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="understanding-installation-choices.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-972D1EC3-84AD-4C36-A4B1-167C3610BE7F" name="GUID-972D1EC3-84AD-4C36-A4B1-167C3610BE7F"></a>
+         
+         <h2 id="HTMIG-GUID-972D1EC3-84AD-4C36-A4B1-167C3610BE7F" class="sect2"><span class="enumeration_chapter">5 </span>Utilizing Multitenant Architecture
+         </h2>
+         <div class="ind">
+            <p>Learn about installation choices and different scenarios associated with copying and moving pluggable databases introduced by the multitenant architecture with respect to <span>Oracle APEX</span>.
+            </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="understanding-installation-choices.html#GUID-A805FD4D-6049-429D-9DD2-717C75D96E62">Understanding the Installation Choices</a><br>Learn about the installation choices in <span>Oracle APEX</span>.
+                  </li>
+                  <li class="ulchildlink"><a href="installing-apex-into-application-container.html#GUID-46CD6A47-05A5-4DA2-8204-F80FFB48371D">Installing APEX into an Application Container</a><br>Learn about the Application Container that stores data and metadata for <span>Oracle APEX</span> application back ends.
+                  </li>
+                  <li class="ulchildlink"><a href="installing-apex-into-different-pdbs.html#GUID-91809585-A1BA-44B5-8AD5-8FB44FB61A3F">Installing APEX into Different PDBs</a><br>You can install different versions of <span>Oracle APEX</span> into different PDBs.
+                  </li>
+                  <li class="ulchildlink"><a href="plugging-in-pdb-when-apex-installed-in-root-container.html#GUID-F1D9485F-F21F-4194-A995-0F17547A664D">Plugging in a PDB When APEX Is Installed in the Root Container</a><br>Learn about scenarios in which the target database has <span>Oracle APEX</span> installed into the root container, <code class="codeph">CDB$ROOT</code> - the default installation         option.
+                  </li>
+                  <li class="ulchildlink"><a href="plugging-in-pdb-when-apex-is-not-in-root-container-of-target-cdb.html#GUID-E22E8E7A-9197-4E42-9267-773253D6BEB0">Plugging in a PDB When APEX Is Not in the Root Container of the Target CDB</a><br>The scenarios in this section describe when <span>Oracle APEX</span> is not installed in the root container, <code class="codeph">CDB$ROOT</code>, by explicitly removing it as described in <span class="q">"Uninstalling <span>APEX</span> from a CDB."</span></li>
+               </ul>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

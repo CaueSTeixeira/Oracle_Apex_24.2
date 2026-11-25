@@ -1,0 +1,168 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Exporting and Importing Using SQLcl">
+      <meta name="abstract" content="Export workspaces, applications, and related files from a command line using Oracle SQL Developer Command Line (SQLcl) release 22.1 and later.">
+      <meta name="description" content="Export workspaces, applications, and related files from a command line using Oracle SQL Developer Command Line (SQLcl) release 22.1 and later.">
+      <meta name="DC.subject" content="SQLcl, exporting, importing, installing app, applications, exporting from command line, workspace, exporting from command line, installing app, SQLcl, exporting from command line, importing from command line">
+      <meta name="keywords" content="SQLcl, exporting, importing, installing app, applications, exporting from command line, workspace, exporting from command line, installing app, SQLcl, exporting from command line, importing from command line">
+      <meta name="DC.Relation" scheme="URI" content="exporting-and-importing-from-a-command-line.html#GUID-2B31CB5D-D450-47C8-A796-0F44B57CE669">
+      <meta name="DC.Relation" scheme="URI" content="downloading-and-installing-sqlcl.html#GUID-83763988-03D8-48AB-BE0E-824D84DBBF69">
+      <meta name="DC.Relation" scheme="URI" content="starting-sqlcl-and-connecting-to-the-database.html#GUID-BFA3CA7F-1DFE-4260-ACAB-27BACFF6BEAE">
+      <meta name="DC.Relation" scheme="URI" content="exiting-sqlLcl.html#GUID-895B267C-5007-410D-92D3-A667AE2B8EF1">
+      <meta name="DC.Relation" scheme="URI" content="listing-applications.html#GUID-0ED1136B-205A-4C2D-81FA-AE3654D94A80">
+      <meta name="DC.Relation" scheme="URI" content="listing-components-in-an-application.html#GUID-CA2DB2B3-7916-4F43-B26B-94676265BD32">
+      <meta name="DC.Relation" scheme="URI" content="exporting-one-or-more-applications.html#GUID-644620C3-4E8C-467D-82FB-093908B68D2D">
+      <meta name="DC.Relation" scheme="URI" content="exporting-a-workspace.html#GUID-35899A2C-1B87-4204-A636-995C1D141AE5">
+      <meta name="DC.Relation" scheme="URI" content="exporting-workspace-static-files.html#GUID-31A3E99A-C1CB-4EDE-ACF5-9AEE8A5686D8">
+      <meta name="DC.Relation" scheme="URI" content="installing-an-application.html#GUID-6166E294-A938-41BC-BC8B-1700275048AE">
+      <meta name="DC.Relation" scheme="URI" content="importing-a-workspace.html#GUID-618E977E-CFD0-4656-A4E8-F2693F03588A">
+      <meta name="DC.Relation" scheme="URI" content="importing-workspace-static-files.html#GUID-E5D7210E-3D81-45B3-AC4F-16D5BA267AE3">
+      <meta name="DC.Relation" scheme="URI" content="synchronizing-feedback-among-environments.html#GUID-259C5235-3B17-404C-B366-45636395ADA9">
+      <meta name="DC.Relation" scheme="URI" content="displaying-application-usage.html#GUID-8B46ACA6-D899-496F-868E-64907992AA89">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-54ED6670-EAEA-45CF-BB0B-F2CB81EB8CFF">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Export workspaces, applications, and related files from a command line using Oracle SQL Developer Command Line (SQLcl) release 22.1 and later.">
+      <meta name="description" content="Export workspaces, applications, and related files from a command line using Oracle SQL Developer Command Line (SQLcl) release 22.1 and later.">
+      <title>Exporting and Importing Using SQLcl</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Export workspaces, applications, and related files from a command line using Oracle SQL Developer Command Line (SQLcl) release 22.1 and later.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="exporting-and-importing-from-a-command-line.html" title="Previous" type="text/html">
+      <link rel="next" href="downloading-and-installing-sqlcl.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Exporting and Importing Using SQLcl","description":"Export workspaces, applications, and related files from a command line using Oracle SQL Developer Command Line (SQLcl) release 22.1 and later.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="exporting-and-importing-from-a-command-line.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="downloading-and-installing-sqlcl.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-54ED6670-EAEA-45CF-BB0B-F2CB81EB8CFF" name="GUID-54ED6670-EAEA-45CF-BB0B-F2CB81EB8CFF"></a>
+         
+         <h2 id="AEADM-GUID-54ED6670-EAEA-45CF-BB0B-F2CB81EB8CFF" class="sect2"><span class="enumeration_section">3.12.11.1 </span>Exporting and Importing Using SQLcl
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Export workspaces, applications, and related files from a command line
+        using <span>Oracle SQL Developer Command Line</span> (<span>SQLcl</span>) release 22.1 and later.
+               </p>
+               <p><span>SQLcl</span> is a free Java-based command-line interface for Oracle Database. Use <span>SQLcl</span> to execute SQL and PL/SQL statements interactively or as as a batch file. <span>SQLcl</span> provides inline editing, statement completion, command recall, and also supports
+            existing SQL*Plus scripts.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="downloading-and-installing-sqlcl.html#GUID-83763988-03D8-48AB-BE0E-824D84DBBF69">Downloading and Installing SQLcl</a><br>Download and install <span>Oracle SQL Developer Command Line</span> (<span>SQLcl</span>) for free. 
+                  </li>
+                  <li class="ulchildlink"><a href="starting-sqlcl-and-connecting-to-the-database.html#GUID-BFA3CA7F-1DFE-4260-ACAB-27BACFF6BEAE">Starting SQLcl and Connecting to the Database</a><br>Learn how to start <span>SQLcl</span> and connect to the database.
+                  </li>
+                  <li class="ulchildlink"><a href="exiting-sqlLcl.html#GUID-895B267C-5007-410D-92D3-A667AE2B8EF1">Exiting SQLcl</a><br>Learn how to exit <span>SQLcl</span>.
+                  </li>
+                  <li class="ulchildlink"><a href="listing-applications.html#GUID-0ED1136B-205A-4C2D-81FA-AE3654D94A80">Listing Applications</a><br>Use <span>SQLcl</span> to list all or selected <span>APEX</span> applications in a workspace. 
+                  </li>
+                  <li class="ulchildlink"><a href="listing-components-in-an-application.html#GUID-CA2DB2B3-7916-4F43-B26B-94676265BD32">Listing Components in an Application</a><br>Use <span>SQLcl</span> to list all or selected components in an <span>APEX</span> application.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-one-or-more-applications.html#GUID-644620C3-4E8C-467D-82FB-093908B68D2D">Exporting One or More Applications</a><br>Use <span>SQLcl</span> to export a single <span>APEX</span> application or all applications in a workspace.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-a-workspace.html#GUID-35899A2C-1B87-4204-A636-995C1D141AE5">Exporting a Workspace</a><br>Export a workspace using the <code class="codeph">apex export</code> command with         the <code class="codeph">-expWorkspace</code> option.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-workspace-static-files.html#GUID-31A3E99A-C1CB-4EDE-ACF5-9AEE8A5686D8">Exporting Workspace Static Files</a><br>Export a workspace static files using the <code class="codeph">apex export</code>         command and <code class="codeph">-expFiles</code> option.
+                  </li>
+                  <li class="ulchildlink"><a href="installing-an-application.html#GUID-6166E294-A938-41BC-BC8B-1700275048AE">Installing an Application</a><br>Install an <span>APEX</span> application into a target environment by running a SQL script.
+                  </li>
+                  <li class="ulchildlink"><a href="importing-a-workspace.html#GUID-618E977E-CFD0-4656-A4E8-F2693F03588A">Importing a Workspace</a><br>Import an <span>APEX</span> workspace into a target environment.
+                  </li>
+                  <li class="ulchildlink"><a href="importing-workspace-static-files.html#GUID-E5D7210E-3D81-45B3-AC4F-16D5BA267AE3">Importing Workspace Static Files</a><br>Import <span>APEX</span> workspace static files into a target environment.
+                  </li>
+                  <li class="ulchildlink"><a href="synchronizing-feedback-among-environments.html#GUID-259C5235-3B17-404C-B366-45636395ADA9">Synchronizing Feedback Among Environments</a><br>Learn about best practices for synchronizing feedback from development,                 test, and production environments.
+                  </li>
+                  <li class="ulchildlink"><a href="displaying-application-usage.html#GUID-8B46ACA6-D899-496F-868E-64907992AA89">Displaying Application Usage</a><br>View a summary of  <span>APEX</span> application usage.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-54ED6670-EAEA-45CF-BB0B-F2CB81EB8CFF__GUID-76931DD0-3C49-42C2-893A-330A6B293560">
+                  <p class="notep1">See Also:</p>
+                  
+                  <ul style="list-style-type: disc;" id="GUID-54ED6670-EAEA-45CF-BB0B-F2CB81EB8CFF__UL_T4X_XXK_BTB">
+                     <li>
+                        
+                        <p><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeadm&id=SQCUG-GUID-1343FA2B-BDB4-4645-B4D4-CD7C3E200AC9" target="_blank">Working with SQLcl</a> in <span><cite>Oracle SQLcl User’s
+                                        Guide</cite></span></p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p><a href="../htmdb/deploying-an-application.html#HTMDB-GUID-3EE94790-D67B-4CE0-8A8E-85B05305DEDD" target="_blank">Deploying an
+                            Application</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></p>
+                        
+                     </li>
+                  </ul>
+                  
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="exporting-and-importing-from-a-command-line.html#GUID-2B31CB5D-D450-47C8-A796-0F44B57CE669" title="Export and import workspaces, applications, and related files from a command line.">Exporting and Importing from a Command Line</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

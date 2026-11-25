@@ -1,0 +1,232 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="EXPORT Function">
+      <meta name="DC.subject" content="EXPORT function, APEX_DATA_EXPORT">
+      <meta name="keywords" content="EXPORT function, APEX_DATA_EXPORT">
+      <meta name="DC.Relation" scheme="URI" content="APEX_DATA_EXPORT.html#GUID-F195C61B-30DA-4462-93A3-465BCA6FCB78">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-6109A537-50C4-4FB2-8414-7A554B19EC8E">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>EXPORT Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_DATA_EXPORT-DOWNLOAD-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_DATA_EXPORT-GET_PRINT_CONFIG-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"EXPORT Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_DATA_EXPORT-DOWNLOAD-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_DATA_EXPORT-GET_PRINT_CONFIG-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-6109A537-50C4-4FB2-8414-7A554B19EC8E" name="GUID-6109A537-50C4-4FB2-8414-7A554B19EC8E"></a>
+         
+         <h2 id="AEAPI-GUID-6109A537-50C4-4FB2-8414-7A554B19EC8E" class="sect2"><span class="enumeration_section">20.8 </span>EXPORT Function
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function exports the query context in the specified format.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-6109A537-50C4-4FB2-8414-7A554B19EC8E__GUID-B4006FA1-303A-4676-89C1-DEA50926C383">Syntax</p><pre class="pre codeblock"><code>FUNCTION EXPORT (
+  p_context                 IN apex_exec.t_context,
+  p_format                  IN t_format,
+  p_as_clob                 IN BOOLEAN          DEFAULT false,
+  p_columns                 IN t_columns        DEFAULT c_empty_columns,
+  p_column_groups           IN t_column_groups  DEFAULT c_empty_column_groups,
+  p_aggregates              IN t_aggregates     DEFAULT c_empty_aggregates,
+  p_highlights              IN t_highlights     DEFAULT c_empty_highlights,
+  --          
+  p_file_name               IN VARCHAR2         DEFAULT NULL,
+  p_print_config            IN t_print_config   DEFAULT c_empty_print_config,
+  p_page_header             IN VARCHAR2         DEFAULT NULL,
+  p_page_footer             IN VARCHAR2         DEFAULT NULL,
+  p_supplemental_text       IN VARCHAR2         DEFAULT NULL,
+  --          
+  p_csv_enclosed_by         IN VARCHAR2         DEFAULT NULL,
+  p_csv_separator           IN VARCHAR2         DEFAULT NULL,
+  --          
+  p_pdf_accessible          IN BOOLEAN          DEFAULT NULL,
+  --
+  p_xml_include_declaration IN BOOLEAN          DEFAULT false ) 
+  RETURN t_export
+</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-6109A537-50C4-4FB2-8414-7A554B19EC8E__GUID-18C9C112-F6ED-4180-AA76-3CF9ECC09D27">Parameters</p>
+                  <div class="tblformal" id="GUID-6109A537-50C4-4FB2-8414-7A554B19EC8E__GUID-E787FEC2-7192-485A-9C9F-DEEEABEE9D0F">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameter descriptions for the APEX_DATA_EXPORT.EXPORT function." frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" id="d75932e69">Parameter</th>
+                              <th align="left" valign="bottom" id="d75932e71">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d75932e75" headers="d75932e69 "><code class="codeph">p_context</code></td>
+                              <td align="left" valign="top" headers="d75932e75 d75932e71 ">Context object from the EXEC infrastructure. </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d75932e81" headers="d75932e69 "><code class="codeph">p_format</code></td>
+                              <td align="left" valign="top" headers="d75932e81 d75932e71 ">Export format. Valid values are: XLSX, PDF, HTML, CSV, XML and JSON. </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d75932e87" headers="d75932e69 "><code class="codeph">p_as_clob</code></td>
+                              <td align="left" valign="top" headers="d75932e87 d75932e71 ">Exports as a CLOB instead of BLOB (default FALSE). </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d75932e93" headers="d75932e69 "><code class="codeph">p_columns</code></td>
+                              <td align="left" valign="top" headers="d75932e93 d75932e71 ">Collection of column attributes beginning with column breaks, then in the order of display.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d75932e99" headers="d75932e69 "><code class="codeph">p_column_groups</code></td>
+                              <td align="left" valign="top" headers="d75932e99 d75932e71 ">Collection of column group attributes in the order of levels and display.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d75932e105" headers="d75932e69 "><code class="codeph">p_aggregates</code></td>
+                              <td align="left" valign="top" headers="d75932e105 d75932e71 ">Collection of report aggregates.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d75932e111" headers="d75932e69 "><code class="codeph">p_highlights</code></td>
+                              <td align="left" valign="top" headers="d75932e111 d75932e71 ">Collection of report highlights.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d75932e117" headers="d75932e69 "><code class="codeph">p_file_name</code></td>
+                              <td align="left" valign="top" headers="d75932e117 d75932e71 ">Defines the filename of the export.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d75932e123" headers="d75932e69 "><code class="codeph">p_print_config</code></td>
+                              <td align="left" valign="top" headers="d75932e123 d75932e71 ">Used for EXCEL and PDF to set the print attributes. </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d75932e129" headers="d75932e69 "><code class="codeph">p_page_header</code></td>
+                              <td align="left" valign="top" headers="d75932e129 d75932e71 ">Text to appear in the header section of the document. Overrides the page header from <code class="codeph">p_print_config</code>. 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d75932e138" headers="d75932e69 "><code class="codeph">p_page_footer</code></td>
+                              <td align="left" valign="top" headers="d75932e138 d75932e71 ">Text to appear in the footer section of the document. Overrides the page footer from <code class="codeph">p_print_config</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d75932e148" headers="d75932e69 "><code class="codeph">p_supplemental_text</code></td>
+                              <td align="left" valign="top" headers="d75932e148 d75932e71 ">Text at the top of all download formats.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d75932e154" headers="d75932e69 "><code class="codeph">p_csv_enclosed_by</code></td>
+                              <td align="left" valign="top" headers="d75932e154 d75932e71 ">Used for CSV to enclose the output.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d75932e160" headers="d75932e69 "><code class="codeph">p_csv_separator</code></td>
+                              <td align="left" valign="top" headers="d75932e160 d75932e71 ">Used for CSV to separate the column values. </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d75932e166" headers="d75932e69 "><code class="codeph">p_pdf_accessible</code></td>
+                              <td align="left" valign="top" headers="d75932e166 d75932e71 ">Used for PDF to create an accessible PDF.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d75932e172" headers="d75932e69 "><code class="codeph">p_xml_include_declaration</code></td>
+                              <td align="left" valign="top" headers="d75932e172 d75932e71 ">Used for XML to generate the XML declaration as the first line.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-6109A537-50C4-4FB2-8414-7A554B19EC8E__GUID-389318FC-1788-4FEF-BA83-3890B3DC2AC8">Returns</p>
+                  <p>This function returns: the export file as object which includes the contents, MIME type, and file name.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-6109A537-50C4-4FB2-8414-7A554B19EC8E__GUID-069128FD-34C1-44AF-8251-A82FF2B03E38">Examples</p><pre class="pre codeblock"><code>DECLARE
+    l_context apex_exec.t_context; 
+    l_export  apex_data_export.t_export;
+BEGIN
+    l_context := apex_exec.open_query_context(
+        p_location    =&gt; apex_exec.c_location_local_db,
+        p_sql_query   =&gt; 'select * from emp' );
+
+    l_export := apex_data_export.export (
+                        p_context   =&gt; l_context,
+                        p_format    =&gt; apex_data_export.c_format_pdf );
+
+    apex_exec.close( l_context );
+
+    apex_data_export.download( p_export =&gt; l_export );
+
+EXCEPTION
+    when others THEN
+        apex_exec.close( l_context );
+        raise;
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_DATA_EXPORT.html#GUID-F195C61B-30DA-4462-93A3-465BCA6FCB78">APEX_DATA_EXPORT</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

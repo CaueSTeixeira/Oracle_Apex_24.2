@@ -1,0 +1,345 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="OPEN_LOCAL_DML_CONTEXT Function">
+      <meta name="DC.subject" content="OPEN_LOCAL_DML_CONTEXT function, APEX_EXEC">
+      <meta name="keywords" content="OPEN_LOCAL_DML_CONTEXT function, APEX_EXEC">
+      <meta name="DC.Relation" scheme="URI" content="APEX_EXEC.html#GUID-3CF1D2DD-AEA4-4982-9857-548567AB7169">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-D3CAB370-8CA4-4371-A5EE-72FDA4AFE30C">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>OPEN_LOCAL_DML_CONTEXT Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_EXEC.OPEN_JSON_SOURCE_DML_CONTEXT-Function.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_EXEC.OPEN_QUERY_CONTEXT-Function-1.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"OPEN_LOCAL_DML_CONTEXT Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_EXEC.OPEN_JSON_SOURCE_DML_CONTEXT-Function.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_EXEC.OPEN_QUERY_CONTEXT-Function-1.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-D3CAB370-8CA4-4371-A5EE-72FDA4AFE30C" name="GUID-D3CAB370-8CA4-4371-A5EE-72FDA4AFE30C"></a>
+         
+         <h2 id="AEAPI-GUID-D3CAB370-8CA4-4371-A5EE-72FDA4AFE30C" class="sect2"><span class="enumeration_section">27.51 </span>OPEN_LOCAL_DML_CONTEXT Function 
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function opens a DML-context-based local database.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-D3CAB370-8CA4-4371-A5EE-72FDA4AFE30C__TITLE-1321-F94BDADF">Syntax</p><pre class="pre codeblock"><code>FUNCTION OPEN_LOCAL_DML_CONTEXT (
+    p_columns                 IN t_columns               DEFAULT c_empty_columns,
+    p_query_type              IN t_query_type,
+    --     
+    p_table_owner             IN VARCHAR2                DEFAULT NULL,
+    p_table_name              IN VARCHAR2                DEFAULT NULL,
+    p_where_clause            IN VARCHAR2                DEFAULT NULL,
+    --
+    p_sql_query               IN VARCHAR2                DEFAULT NULL,
+    p_function_body           IN VARCHAR2                DEFAULT NULL,
+    p_function_body_language  IN t_language              DEFAULT c_lang_plsql,
+    p_plsql_function_body     IN VARCHAR2                DEFAULT NULL,
+    --
+    p_with_check_option       IN BOOLEAN                 DEFAULT TRUE,
+    p_optimizer_hint          IN VARCHAR2                DEFAULT NULL,
+    --
+    p_dml_table_owner         IN VARCHAR2                DEFAULT NULL,
+    p_dml_table_name          IN VARCHAR2                DEFAULT NULL,
+    p_dml_plsql_code          IN VARCHAR2                DEFAULT NULL,
+    --
+    p_lost_update_detection   IN t_lost_update_detection DEFAULT NULL,
+    p_lock_rows               IN t_lock_rows             DEFAULT NULL,
+    p_lock_plsql_code         IN VARCHAR2                DEFAULT NULL,
+    --
+    p_sql_parameters          IN t_parameters            DEFAULT c_empty_parameters )
+    RETURN t_context;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-D3CAB370-8CA4-4371-A5EE-72FDA4AFE30C__TITLE-1341-F94C107A">Parameters</p>
+                  <div class="tblformal" id="GUID-D3CAB370-8CA4-4371-A5EE-72FDA4AFE30C__WRITEPROCEDUREPARAMETERS-F94C1E2F">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="34%" id="d121368e69">Parameter</th>
+                              <th align="left" valign="bottom" width="66%" id="d121368e71">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d121368e75" headers="d121368e69 "><code class="codeph">p_columns</code></td>
+                              <td align="left" valign="top" width="66%" headers="d121368e75 d121368e71 ">DML columns to pass to the data source.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d121368e81" headers="d121368e69 "><code class="codeph">p_query_type</code></td>
+                              <td align="left" valign="top" width="66%" headers="d121368e81 d121368e71 ">
+                                 <div class="p">Indicates the type of the data source: possible values are:
+                                    <ul style="list-style-type: disc;" id="GUID-D3CAB370-8CA4-4371-A5EE-72FDA4AFE30C__UL_WJD_BHC_MGB">
+                                       <li><code class="codeph">c_query_type_table</code>: Use a plain Table as the data source.
+                                       </li>
+                                       <li><code class="codeph">c_query_type_sql_query</code>: Use a SQL query as the data source.
+                                       </li>
+                                       <li><code class="codeph">c_query_type_func_return_sql</code>: Use the SQL query returned by the PL/SQL function.
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d121368e101" headers="d121368e69 "><code class="codeph">p_table_owner</code></td>
+                              <td align="left" valign="top" width="66%" headers="d121368e101 d121368e71 ">For query type TABLE: Table owner</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d121368e107" headers="d121368e69 "><code class="codeph">p_table_name</code></td>
+                              <td align="left" valign="top" width="66%" headers="d121368e107 d121368e71 ">For query type TABLE: Table name</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d121368e113" headers="d121368e69 "><code class="codeph">p_where_clause</code></td>
+                              <td align="left" valign="top" width="66%" headers="d121368e113 d121368e71 ">For query type TABLE: where clause</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d121368e119" headers="d121368e69 "><code class="codeph">p_sql_query</code></td>
+                              <td align="left" valign="top" width="66%" headers="d121368e119 d121368e71 ">For query type SQL QUERY: the query</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d121368e125" headers="d121368e69 "><code class="codeph">p_function_body</code></td>
+                              <td align="left" valign="top" width="66%" headers="d121368e125 d121368e71 ">Function body which returns the SQL query. Note that the SQL query must produce an updatable result for the DML to succeed.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d121368e131" headers="d121368e69 "><code class="codeph">p_function_body_language</code></td>
+                              <td align="left" valign="top" width="66%" headers="d121368e131 d121368e71 ">Programming language used for <code class="codeph">p_function_body</code>. Use <code class="codeph">c_lang_*</code> constants.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d121368e143" headers="d121368e69 "><code class="codeph">p_plsql_function_body</code></td>
+                              <td align="left" valign="top" width="66%" headers="d121368e143 d121368e71 ">For query type PLSQL: the PL/SQL function which returns the SQL query</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d121368e149" headers="d121368e69 "><code class="codeph">p_with_check_option</code></td>
+                              <td align="left" valign="top" width="66%" headers="d121368e149 d121368e71 ">Specify whether the <span class="q">"WITH CHECK"</span> option should be added to the data source. If <code class="codeph">TRUE</code> (default), INSERTED or UPDATED rows cannot violate the where clause.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d121368e161" headers="d121368e69 "><code class="codeph">p_optimizer_hint</code></td>
+                              <td align="left" valign="top" width="66%" headers="d121368e161 d121368e71 ">Optimizer hints to be added to the DML clause</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d121368e168" headers="d121368e69 "><code class="codeph">p_dml_table_owner</code></td>
+                              <td align="left" valign="top" width="66%" headers="d121368e168 d121368e71 ">When set, DML statements will be executed against this table </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d121368e174" headers="d121368e69 "><code class="codeph">p_dml_table_name</code></td>
+                              <td align="left" valign="top" width="66%" headers="d121368e174 d121368e71 ">When set, DML statements will be executed against this table </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d121368e180" headers="d121368e69 "><code class="codeph">p_dml_plsql_code</code></td>
+                              <td align="left" valign="top" width="66%" headers="d121368e180 d121368e71 ">Custom PL/SQL code to be executed instead of DML statements</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d121368e186" headers="d121368e69 "><code class="codeph">p_lost_update_detection</code></td>
+                              <td align="left" valign="top" width="66%" headers="d121368e186 d121368e71 ">
+                                 <div class="p">Lost-update detection type. Possible values are:
+                                    <ul style="list-style-type: disc;" id="GUID-D3CAB370-8CA4-4371-A5EE-72FDA4AFE30C__UL_GTG_DKC_MGB">
+                                       <li><code class="codeph">c_lost_update_implicit</code>: APEX calculates a checksum from the row values
+                                       </li>
+                                       <li><code class="codeph">c_lost_update_explicit</code>: One of the <code class="codeph">p_columns</code> has the "<code class="codeph">is_checksum</code>" attribute set
+                                       </li>
+                                       <li><code class="codeph">c_lost_update_none</code>: No lost update detection
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d121368e212" headers="d121368e69 "><code class="codeph">p_lock_rows</code></td>
+                              <td align="left" valign="top" width="66%" headers="d121368e212 d121368e71 ">
+                                 <div class="p">Specify whether to lock the rows for the (short) time frame between the lost update detection and the actual DML statement. Possible values are:
+                                    <ul style="list-style-type: disc;" id="GUID-D3CAB370-8CA4-4371-A5EE-72FDA4AFE30C__UL_WDX_LKC_MGB">
+                                       <li><code class="codeph">c_lock_rows_automatic</code>: use a SELECT .. FOR UPDATE
+                                       </li>
+                                       <li><code class="codeph">c_lock_rows_plsql</code>: use custom PL/SQL code to lock the rows
+                                       </li>
+                                       <li><code class="codeph">c_lock_rows_none</code>: do not lock rows
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d121368e232" headers="d121368e69 "><code class="codeph">p_dml_plsql_code</code></td>
+                              <td align="left" valign="top" width="66%" headers="d121368e232 d121368e71 ">Custom PL/SQL code to be used to lock the rows.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d121368e238" headers="d121368e69 "><code class="codeph">p_sql_parameters</code></td>
+                              <td align="left" valign="top" width="66%" headers="d121368e238 d121368e71 ">Bind variables to be used.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-D3CAB370-8CA4-4371-A5EE-72FDA4AFE30C__GUID-8CE6BC29-C75B-4177-8BE8-300D18B04212">Returns</p>
+                  <p>The context object representing the DML handle.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-D3CAB370-8CA4-4371-A5EE-72FDA4AFE30C__GUID-CC5B91D6-03E1-4903-8864-8EB4A26F9C7A">Example</p>
+                  <p>The following inserts one row into the EMP table on a REST Enabled SQL Service.</p><pre class="pre codeblock"><code>DECLARE
+    l_columns        apex_exec.t_columns;
+    l_context        apex_exec.t_context;
+BEGIN
+    -- I. Define DML columns
+    apex_exec.add_column(
+       p_columns        =&gt; l_columns,
+       p_column_name    =&gt; 'EMPNO',
+       p_data_type      =&gt; apex_exec.c_data_type_number,
+       p_is_primary_key =&gt; true );
+    apex_exec.add_column(
+       p_columns        =&gt; l_columns,
+       p_column_name    =&gt; 'ENAME',
+       p_data_type      =&gt; apex_exec.c_data_type_varchar2 );
+    apex_exec.add_column(
+       p_columns        =&gt; l_columns,
+       p_column_name    =&gt; 'JOB',
+       p_data_type      =&gt; apex_exec.c_data_type_varchar2 );
+    apex_exec.add_column(
+       p_columns        =&gt; l_columns,
+       p_column_name    =&gt; 'HIREDATE',
+       p_data_type      =&gt; apex_exec.c_data_type_date );
+    apex_exec.add_column(
+       p_columns        =&gt; l_columns,
+       p_column_name    =&gt; 'MGR',
+       p_data_type      =&gt; apex_exec.c_data_type_number );
+    apex_exec.add_column(
+       p_columns        =&gt; l_columns,
+       p_column_name    =&gt; 'SAL',
+       p_data_type      =&gt; apex_exec.c_data_type_number );
+    apex_exec.add_column(
+       p_columns        =&gt; l_columns,
+       p_column_name    =&gt; 'COMM',
+       p_data_type      =&gt; apex_exec.c_data_type_number );
+    apex_exec.add_column(
+       p_columns        =&gt; l_columns,
+       p_column_name    =&gt; 'DEPTNO',
+       p_data_type      =&gt; apex_exec.c_data_type_number );
+
+    -- II. Open the context object
+    l_context := apex_exec.open_local_dml_context(
+       p_columns               =&gt; l_columns,
+       p_query_type            =&gt; apex_exec.c_query_type_sql_query,
+       p_sql_query             =&gt; 'select * from emp where deptno = 10',
+       p_lost_update_detection =&gt; apex_exec.c_lost_update_none );
+
+    -- III. Provide DML data
+
+    apex_exec.add_dml_row(
+       p_context   =&gt; l_context,
+       p_operation =&gt; apex_exec.c_dml_operation_insert );
+
+    apex_exec.set_value(
+       p_context         =&gt; l_context,
+       p_column_position =&gt; 1,
+       p_value           =&gt; 4711 );
+    apex_exec.set_value(
+       p_context         =&gt; l_context,
+       p_column_position =&gt; 2,
+       p_value           =&gt; 'DOE' );
+    apex_exec.set_value(
+       p_context         =&gt; l_context,
+       p_column_position =&gt; 3,
+       p_value           =&gt; 'DEVELOPR' );
+    apex_exec.set_value(
+       p_context         =&gt; l_context,
+       p_column_position =&gt; 4,
+       p_value           =&gt; sysdate );
+    apex_exec.set_value(
+       p_column_position =&gt; 6,
+       p_value           =&gt; 1000 );
+    apex_exec.set_value(
+       p_context         =&gt; l_context,
+       p_column_position =&gt; 8,
+       p_value           =&gt; 10 );
+
+    -- IV: Execute the DML statement
+
+    apex_exec.execute_dml(
+       p_context           =&gt; l_context,
+       p_continue_on_error =&gt; false);
+
+     apex_exec.close( l_context );
+EXCEPTION
+    WHEN others THEN
+        apex_exec.close( l_context );
+        RAISE;
+
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_EXEC.html#GUID-3CF1D2DD-AEA4-4982-9857-548567AB7169">APEX_EXEC</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

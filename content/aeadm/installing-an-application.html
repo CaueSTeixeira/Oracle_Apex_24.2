@@ -1,0 +1,279 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Installing an Application">
+      <meta name="abstract" content="Install an APEX application into a target environment by running a SQL script.">
+      <meta name="description" content="Install an APEX application into a target environment by running a SQL script.">
+      <meta name="DC.subject" content="SQLcl, , installing">
+      <meta name="keywords" content="SQLcl, , installing">
+      <meta name="DC.Relation" scheme="URI" content="exporting-and-importing-using-sqlcl.html#GUID-54ED6670-EAEA-45CF-BB0B-F2CB81EB8CFF">
+      <meta name="DC.Relation" scheme="URI" content="installing-an-application.html#GUID-3C25C477-A356-44C0-ACBE-770A458486F1">
+      <meta name="DC.Relation" scheme="URI" content="installing-an-application.html#GUID-261BE192-215B-42E3-8DFA-6D2A4EB3CE70">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-6166E294-A938-41BC-BC8B-1700275048AE">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Install an APEX application into a target environment by running a SQL script.">
+      <meta name="description" content="Install an APEX application into a target environment by running a SQL script.">
+      <title>Installing an Application</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Install an APEX application into a target environment by running a SQL script.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="exporting-workspace-static-files.html" title="Previous" type="text/html">
+      <link rel="next" href="importing-a-workspace.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Installing an Application","description":"Install an APEX application into a target environment by running a SQL script.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="exporting-workspace-static-files.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="importing-a-workspace.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-6166E294-A938-41BC-BC8B-1700275048AE" name="GUID-6166E294-A938-41BC-BC8B-1700275048AE"></a>
+         
+         <h2 id="AEADM-GUID-6166E294-A938-41BC-BC8B-1700275048AE" class="sect2"><span class="enumeration_section">3.12.11.1.9 </span>Installing an Application
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Install an <span>APEX</span> application into a target environment by running a SQL script.
+               </p>
+               <p>Note that you can handle special cases by first configuring installation context
+            information and then running the SQL script. This topic explains both scenarios.</p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="installing-an-application.html#GUID-3C25C477-A356-44C0-ACBE-770A458486F1">Installing an Application When Target Environment Mirrors the Source</a><br>Learn about installing an application when the target environment mirrors         the source.
+                  </li>
+                  <li class="ulchildlink"><a href="installing-an-application.html#GUID-261BE192-215B-42E3-8DFA-6D2A4EB3CE70">Installing an Application When Target Environment Differs From Source</a><br>Learn about installing an application when the target environment differs         from the source.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="exporting-and-importing-using-sqlcl.html#GUID-54ED6670-EAEA-45CF-BB0B-F2CB81EB8CFF" title="Export workspaces, applications, and related files from a command line using Oracle SQL Developer Command Line (SQLcl) release 22.1 and later.">Exporting and Importing Using SQLcl</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-3C25C477-A356-44C0-ACBE-770A458486F1" name="GUID-3C25C477-A356-44C0-ACBE-770A458486F1"></a><h3 id="AEADM-GUID-3C25C477-A356-44C0-ACBE-770A458486F1" class="sect3"><span class="enumeration_section">3.12.11.1.9.1 </span>Installing an Application When Target Environment Mirrors the Source
+               </h3>
+               <div>
+                  <p>Learn about installing an application when the target environment mirrors
+        the source.</p>
+                  <div class="section">
+                     
+                     <p>You export an <span>APEX</span> application from a source environment as a single SQL file or a set of individual
+                SQL files split into subdirectories. To install the export into a target environment
+                that uses the same workspace name, workspace ID, workspace schema name, and
+                application Alias, simply run the SQL script created by the export procedure.
+                     </p>
+                     
+                     <p>The application being installed overwrites the application of the same
+                ID in the target environment. If the application export was a partial export
+                containing only selected components, then only those components are overwritten in
+                the target environment.</p>
+                     
+                     <p>If the export was a single SQL file, such as <code class="codeph">f1234.sql</code>,
+                then run that script to install the application. If instead the export used the
+                    <code class="codeph">-split</code> option to create a directory, such as
+                    <code class="codeph">f1234</code> which containing individual component SQL files organized
+                into subdirectories, then run the <code class="codeph">./f1234/install.sql</code> script to
+                install the application. If you used the <code class="codeph">-split</code> option to export a
+                partial set of components, then run the
+                    <code class="codeph">./f1234/install_component.sql</code> script.
+                     </p>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="installing-an-application.html#GUID-6166E294-A938-41BC-BC8B-1700275048AE" title="Install an APEX application into a target environment by running a SQL script.">Installing an Application</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-261BE192-215B-42E3-8DFA-6D2A4EB3CE70" name="GUID-261BE192-215B-42E3-8DFA-6D2A4EB3CE70"></a><h3 id="AEADM-GUID-261BE192-215B-42E3-8DFA-6D2A4EB3CE70" class="sect3"><span class="enumeration_section">3.12.11.1.9.2 </span>Installing an Application When Target Environment Differs From Source
+               </h3>
+               <div>
+                  <p>Learn about installing an application when the target environment differs
+        from the source.</p>
+                  <div class="section">
+                     
+                     <p>If the target environment into which you need to import does not use the
+                same workspace name, workspace ID, workspace schema name, and application Alias,
+                then installing the application requires a SQL script that performs the following
+                additional steps as shown in the following example:</p>
+                     <pre class="pre codeblock"><code>REM First setup the installation context in the target environment
+begin
+    -- Add necessary calls to apex_application_install package procedures here
+end;
+/
+REM Then install the application by running its exported SQL script
+REM For "split" export run @f1234/install.sql 
+REM or @f1234/install_component.sql instead
+@f1234.sql</code></pre>
+                     </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-261BE192-215B-42E3-8DFA-6D2A4EB3CE70__GUID-A421EED5-0FA8-469B-93C3-C4F1DE5672BA">Setting Up the Installation Context</p>
+                     
+                     
+                     <p>The installation context includes:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-261BE192-215B-42E3-8DFA-6D2A4EB3CE70__UL_ELK_LXY_BTB">
+                        <li>
+                           
+                           <p>Workspace name (for example, <code class="codeph">TARGET_WORKSPACE</code>)
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>Application ID (for example, <code class="codeph">5678</code>)
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>Workspace schema (for example, <code class="codeph">HRAPP_PROD</code>)
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>Application alias (for example, <code class="codeph">hrapp</code>, used in friendly
+                        URLs)
+                           </p>
+                           
+                        </li>
+                     </ul>
+                     
+                     <p>If the name or ID of the target workspace is different than the workspace
+                from which the application was exported, then you need to add a call to the
+                    <code class="codeph">set_workspace()</code> procedure to the anonymous block in your
+                installation script:
+                     </p>
+                     <pre class="pre codeblock"><code>apex_application_install.set_workspace('TARGET_WORKSPACE');</code></pre>
+                     <p>Similarly, other calls to <code class="codeph">apex_application_install</code> package
+                procedures are only required when their value in the target environment differs from
+                the corresponding value in the source environment from which the application was
+                exported.
+                     </p>
+                     
+                     <p>To set a specific application ID in the target environment, add a call to
+                    <code class="codeph">set_application_id()</code> as shown below, along with the additional
+                call to<code class="codeph"> generate_offset()</code>.
+                     </p>
+                     <pre class="pre codeblock"><code>apex_application_install.set_application_id(5678);
+apex_application_install.generate_offset();</code></pre>
+                     <p>To generate an available application ID instead of supplying a specific
+                one, add a call to <code class="codeph">generate_application_id</code> instead of
+                    <code class="codeph">calling set_application_id</code>.
+                     </p>
+                     <pre class="pre codeblock"><code>apex_application_install.generate_application_id;
+apex_application_install.generate_offset;</code></pre>
+                     <p>To set the name of the workspace schema for the application to be installed, add a
+                call to <code class="codeph">set_schema()</code> as shown here:
+                     </p>
+                     <pre class="pre codeblock"><code>apex_application_install.set_schema('HRAPP_PROD');</code></pre>
+                     <p>To set the application alias (used in friendly URLs), add a call to
+                    <code class="codeph">set_application_alias()</code> procedure as shown here:
+                     </p>
+                     <pre class="pre codeblock"><code>apex_application_install.set_application_alias('hrapp');
+</code></pre>
+                     </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-261BE192-215B-42E3-8DFA-6D2A4EB3CE70__GUID-74BC9731-A26A-4BFC-9A03-CF06D8AF75BB">Running the SQL Script to Install an Application</p>
+                     
+                     
+                     <p>This section includes a complete example of an installation script for
+                single-file and <span class="q">"split"</span> exports.
+                     </p>
+                     
+                     <p>This example assumes you have previously exported an application with ID
+                1234 to a single file named <code class="codeph">f1234.sql</code>. This example also shows the
+                SQL script you would run using SQLcl to install the <span>APEX</span> application into a target environment with workspace <code class="codeph">HRAPP_PROD</code>,
+                using application ID 5678, workspace schema <code class="codeph">HRAPP_PROD</code>, and
+                application alias <code class="codeph">hrapp</code>.
+                     </p>
+                     <pre class="pre codeblock"><code>REM First setup the installation context in the target environment
+begin
+    apex_application_install.set_workspace('TARGET_WORKSPACE');
+    apex_application_install.set_application_id(5678);
+    apex_application_install.generate_offset();
+    apex_application_install.set_schema('HRAPP_PROD');
+    apex_application_install.set_application_alias('hrapp');
+end;
+/
+REM Then install the application by running its exported SQL script
+REM For "split" export run @f1234/install.sql 
+REM or @f1234/install_component.sql instead
+@f1234.sql</code></pre>
+                     </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="installing-an-application.html#GUID-6166E294-A938-41BC-BC8B-1700275048AE" title="Install an APEX application into a target environment by running a SQL script.">Installing an Application</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

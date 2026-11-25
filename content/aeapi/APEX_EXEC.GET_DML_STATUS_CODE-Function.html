@@ -1,0 +1,131 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="GET_DML_STATUS_CODE Function">
+      <meta name="DC.subject" content="GET_DML_STATUS_CODE function, APEX_EXEC">
+      <meta name="keywords" content="GET_DML_STATUS_CODE function, APEX_EXEC">
+      <meta name="DC.Relation" scheme="URI" content="APEX_EXEC.html#GUID-3CF1D2DD-AEA4-4982-9857-548567AB7169">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-7FA74357-5178-4192-A74B-EF10F615D62C">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>GET_DML_STATUS_CODE Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_EXEC.GET_DATA_TYPE-Function.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_EXEC.GET_DML_STATUS_MESSAGE-Function.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"GET_DML_STATUS_CODE Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_EXEC.GET_DATA_TYPE-Function.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_EXEC.GET_DML_STATUS_MESSAGE-Function.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-7FA74357-5178-4192-A74B-EF10F615D62C" name="GUID-7FA74357-5178-4192-A74B-EF10F615D62C"></a>
+         
+         <h2 id="AEAPI-GUID-7FA74357-5178-4192-A74B-EF10F615D62C" class="sect2"><span class="enumeration_section">27.35 </span>GET_DML_STATUS_CODE Function 
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function returns the SQL status code of the last context execution, for the current row. For local or remote SQL contexts, the ORA error code will be returned in case of an error, <code class="codeph">NULL</code> in case of success.
+                  </p>
+                  <p>For REST Data Source contexts, the function returns the HTTP status code.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-7FA74357-5178-4192-A74B-EF10F615D62C__TITLE-1321-F94BDADF">Syntax</p><pre class="pre codeblock"><code>APEX_EXEC.GET_DML_STATUS_CODE (
+    p_context               IN t_context )
+RETURN NUMBER;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-7FA74357-5178-4192-A74B-EF10F615D62C__TITLE-1341-F94C107A">Parameters</p>
+                  <div class="tblformal" id="GUID-7FA74357-5178-4192-A74B-EF10F615D62C__WRITEPROCEDUREPARAMETERS-F94C1E2F">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="34%" id="d118534e74">Parameter</th>
+                              <th align="left" valign="bottom" width="66%" id="d118534e76">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d118534e80" headers="d118534e74 "><code class="codeph">p_context</code></td>
+                              <td align="left" valign="top" width="66%" headers="d118534e80 d118534e76 ">Context object obtained with one of the <code class="codeph">OPEN_</code> functions.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-7FA74357-5178-4192-A74B-EF10F615D62C__GUID-8CE6BC29-C75B-4177-8BE8-300D18B04212">Returns</p>
+                  <p>The DML status code of the current row.</p>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_EXEC.html#GUID-3CF1D2DD-AEA4-4982-9857-548567AB7169">APEX_EXEC</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

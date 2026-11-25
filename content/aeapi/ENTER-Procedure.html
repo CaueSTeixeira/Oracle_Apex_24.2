@@ -1,0 +1,178 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="ENTER Procedure">
+      <meta name="DC.subject" content="ENTER procedure, APEX_DEBUG">
+      <meta name="keywords" content="ENTER procedure, APEX_DEBUG">
+      <meta name="DC.Relation" scheme="URI" content="APEX_DEBUG.html#GUID-8E80E46E-CCEF-4CCC-8D00-8EC3A5C36FDE">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-56D49575-92E8-4BD9-8469-30E3F66D7682">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>ENTER Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_DEBUG-ENABLE-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="ENABLE_DBMS_OUTPUT-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"ENTER Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_DEBUG-ENABLE-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="ENABLE_DBMS_OUTPUT-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-56D49575-92E8-4BD9-8469-30E3F66D7682" name="GUID-56D49575-92E8-4BD9-8469-30E3F66D7682"></a>
+         
+         <h2 id="AEAPI-GUID-56D49575-92E8-4BD9-8469-30E3F66D7682" class="sect2"><span class="enumeration_section">23.5 </span>ENTER Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This procedure logs messages at level <code class="codeph">c_log_level_app_enter</code>. Use <code class="codeph">APEX_DEBUG.ENTER()</code> to log the routine name and its arguments at the beginning of a procedure or function.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-56D49575-92E8-4BD9-8469-30E3F66D7682__GUID-DD6CA12A-5E1C-4333-A891-B7E183C12B79">Syntax</p><pre class="pre codeblock"><code>APEX_DEBUG.ENTER (
+    p_routine_name      IN VARCHAR2,
+    p_name01            IN VARCHAR2     DEFAULT NULL,
+    p_value01           IN VARCHAR2     DEFAULT NULL,
+    p_name02            IN VARCHAR2     DEFAULT NULL,
+    p_value02           IN VARCHAR2     DEFAULT NULL,
+    p_name03            IN VARCHAR2     DEFAULT NULL,
+    p_value03           IN VARCHAR2     DEFAULT NULL,
+    p_name04            IN VARCHAR2     DEFAULT NULL,
+    p_value04           IN VARCHAR2     DEFAULT NULL,
+    p_name05            IN VARCHAR2     DEFAULT NULL,
+    p_value05           IN VARCHAR2     DEFAULT NULL,
+    p_name06            IN VARCHAR2     DEFAULT NULL,
+    p_value06           IN VARCHAR2     DEFAULT NULL,
+    p_name07            IN VARCHAR2     DEFAULT NULL,
+    p_value07           IN VARCHAR2     DEFAULT NULL,
+    p_name08            IN VARCHAR2     DEFAULT NULL,
+    p_value08           IN VARCHAR2     DEFAULT NULL,
+    p_name09            IN VARCHAR2     DEFAULT NULL,
+    p_value09           IN VARCHAR2     DEFAULT NULL,
+    p_name10            IN VARCHAR2     DEFAULT NULL,
+    p_value10           IN VARCHAR2     DEFAULT NULL,
+    p_value_max_length  IN PLS_INTEGER  DEFAULT 1000 )</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-56D49575-92E8-4BD9-8469-30E3F66D7682__GUID-D113855A-7EE2-4554-A83A-C729235BC65D">Parameters</p>
+                  <div class="tblformal" id="GUID-56D49575-92E8-4BD9-8469-30E3F66D7682__BCGFJCGA">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="31%" id="d82064e75">Parameter</th>
+                              <th align="left" valign="bottom" width="69%" id="d82064e77">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d82064e81" headers="d82064e75 "><code class="codeph">p_routine_name</code></td>
+                              <td align="left" valign="top" width="69%" headers="d82064e81 d82064e77 ">The name of the procedure or function.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d82064e87" headers="d82064e75 "><code class="codeph">p_namexx</code>/<code class="codeph">p_valuexx</code></td>
+                              <td align="left" valign="top" width="69%" headers="d82064e87 d82064e77 ">The procedure or function parameter name and value.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d82064e96" headers="d82064e75 "><code class="codeph">p_value_max_length</code></td>
+                              <td align="left" valign="top" width="69%" headers="d82064e96 d82064e77 ">The <code class="codeph">p_valuexx</code> values is truncated to this length. The tilde (<code class="codeph">~</code>) character is appended to indicate that the original value exceeded this length.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-56D49575-92E8-4BD9-8469-30E3F66D7682__GUID-382B575C-3C40-4263-B773-49AC17A78626">Example</p>
+                  <p>This example adds a debug message at the beginning of a procedure.</p><pre class="pre codeblock"><code>procedure foo ( 
+    p_widget_id in number, 
+    p_additional_data in varchar2, 
+    p_emp_rec in emp%rowtype ) 
+is 
+begin 
+    apex_debug.enter('foo', 
+        'p_widget_id' , p_widget_id, 
+        'p_additional_data', p_additional_data, 
+        'p_emp_rec.id' , p_emp_rec.id ); 
+....do something.... 
+end foo;</code></pre><div class="infoboxnotealso" id="GUID-56D49575-92E8-4BD9-8469-30E3F66D7682__GUID-26ADD871-1F9E-41BD-9FDD-094C021C4684">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-56D49575-92E8-4BD9-8469-30E3F66D7682__UL_VPX_CQH_LCC">
+                        <li><a href="MESSAGE-Procedure.html#GUID-2503CA63-2C6F-429C-A767-611CFEE6FE73">MESSAGE Procedure</a></li>
+                        <li><a href="ERROR-Procedure.html#GUID-9CAFF9DD-A2FB-46DC-A4CB-EEB6D61CE0D5">ERROR Procedure</a></li>
+                        <li><a href="WARN-Procedure.html#GUID-97BA4A04-A342-45DE-8524-893AF3AD49AA">WARN Procedure</a></li>
+                        <li><a href="TRACE-Procedure.html#GUID-B2EC13C4-C3EF-4941-AD75-EBBB202190B5">TRACE Procedure</a></li>
+                        <li><a href="INFO-Procedure.html#GUID-C8E6E25E-8211-49F8-9110-33F074E68927">INFO Procedure</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_DEBUG.html#GUID-8E80E46E-CCEF-4CCC-8D00-8EC3A5C36FDE">APEX_DEBUG</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

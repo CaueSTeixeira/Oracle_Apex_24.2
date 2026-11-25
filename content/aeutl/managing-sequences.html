@@ -1,0 +1,262 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Sequences">
+      <meta name="abstract" content="A sequence generates a serial list of unique numbers for numeric columns of a database table. Use Object Browser to create, view, or drop a sequence.">
+      <meta name="description" content="A sequence generates a serial list of unique numbers for numeric columns of a database table. Use Object Browser to create, view, or drop a sequence.">
+      <meta name="DC.subject" content="Object Browser, managing sequences, sequence, creating, browsing, grants associated with, dependent objects, dropping">
+      <meta name="keywords" content="Object Browser, managing sequences, sequence, creating, browsing, grants associated with, dependent objects, dropping">
+      <meta name="DC.Relation" scheme="URI" content="managing-db-objects-with-object-browser.html#GUID-04321951-FD96-4930-8F44-0D8441E8B731">
+      <meta name="DC.Relation" scheme="URI" content="managing-sequences.html#GUID-34C9C823-22F2-47C3-A138-053CFF8472D5">
+      <meta name="DC.Relation" scheme="URI" content="managing-sequences.html#GUID-B725EA5A-331C-474F-BCB5-ECF8FD8AA867">
+      <meta name="DC.Relation" scheme="URI" content="managing-sequences.html#GUID-95F0A78F-3C04-42C8-B7D5-02480485FA84">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Neil Fernandez">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Synders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="January2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-E177ACD2-7FCD-4536-974B-62D7E84576C3">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="A sequence generates a serial list of unique numbers for numeric columns of a database table. Use Object Browser to create, view, or drop a sequence.">
+      <meta name="description" content="A sequence generates a serial list of unique numbers for numeric columns of a database table. Use Object Browser to create, view, or drop a sequence.">
+      <title>Managing Sequences</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="SQL Workshop Guide">
+      <meta property="og:description" content="A sequence generates a serial list of unique numbers for numeric columns of a database table. Use Object Browser to create, view, or drop a sequence.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="SQL Workshop Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-sql-workshop-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-01-14T12:14:06-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2008, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12911-01">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-indexes.html" title="Previous" type="text/html">
+      <link rel="next" href="managing-types.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX SQL Workshop Guide">
+    <meta name="dcterms.isVersionOf" content="AEUTL">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","name":"Managing Sequences","description":"A sequence generates a serial list of unique numbers for numeric columns of a database table. Use Object Browser to create, view, or drop a sequence.","datePublished":"2025-01-14 CST","dateModified":"2025-01-14 CST"} </script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-indexes.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="managing-types.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article>
+         <header>
+            <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Workshop Guide</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="managing-db-objects-with-object-browser.html" property="item" typeof="WebPage"><span property="name"> Managing Database Objects with Object Browser </span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">Managing Sequences</li>
+            </ol>
+            <a id="GUID-E177ACD2-7FCD-4536-974B-62D7E84576C3" name="GUID-E177ACD2-7FCD-4536-974B-62D7E84576C3"></a>
+            
+            <h2 id="AEUTL-GUID-E177ACD2-7FCD-4536-974B-62D7E84576C3" class="sect2"><span class="enumeration_section">3.6 </span>Managing Sequences
+            </h2>
+         </header>
+         <div class="ind">
+            <div>
+               <p>A sequence generates a serial list of unique numbers for numeric columns of a database table. Use <span>Object Browser</span> to create, view, or drop a sequence.
+               </p>
+               <p> Database sequences are generally used to populate table
+            primary keys.</p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="managing-sequences.html#GUID-34C9C823-22F2-47C3-A138-053CFF8472D5">Creating a Sequence</a><br>Create a sequence using <span>Object Browser</span>.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-sequences.html#GUID-B725EA5A-331C-474F-BCB5-ECF8FD8AA867">Browsing a Sequence</a><br>Select a sequence from the Object Tree and access tabs in the Object Detail         View.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-sequences.html#GUID-95F0A78F-3C04-42C8-B7D5-02480485FA84">Dropping a Sequence</a><br>Select a sequence from the Object Tree pane and click Drop on the Object         Details tab.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-db-objects-with-object-browser.html#GUID-04321951-FD96-4930-8F44-0D8441E8B731" title="Object Browser enables developers to browse, create, and edit objects in the Oracle Database.">Managing Database Objects with Object Browser</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-34C9C823-22F2-47C3-A138-053CFF8472D5" name="GUID-34C9C823-22F2-47C3-A138-053CFF8472D5"></a><h3 id="AEUTL-GUID-34C9C823-22F2-47C3-A138-053CFF8472D5" class="sect3"><span class="enumeration_section">3.6.1 </span>Creating a Sequence
+               </h3>
+               <div>
+                  <p>Create a sequence using <span>Object Browser</span>.
+                  </p>
+                  <div class="section">
+                     
+                     <p>To create a sequence:</p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, click the <span class="uicontrol bold">Create Database Objects</span> menu and select
+                        <span class="uicontrol bold">Sequence</span>.</span><div>
+                           
+                           <div class="infobox-tip" id="GUID-34C9C823-22F2-47C3-A138-053CFF8472D5__GUID-4B61BEDB-E3C7-494C-8F9D-9B12327CEBB3">
+                              <p class="notep1">Tip:</p>To create new objects from the Object
+                                Tree, right-click the object and select the
+                                        <span class="uicontrol bold">Create</span> option.
+                           </div>
+                           
+                           <p>The Create Sequence Wizard appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>On Create Sequence:</span><ol type="a" id="GUID-34C9C823-22F2-47C3-A138-053CFF8472D5__SUBSTEPS_Q5P_ZQL_GXB">
+                           <li class="substepexpand"><span>Sequence Name - Enter the name of the sequence. The name must conform to Oracle naming conventions and cannot contain spaces, or start with a number or underscore.</span></li>
+                           <li class="substepexpand"><span>Start With - Specify the first sequence number to be generated. This value must be a valid integer.</span><div>
+                                 <p>Use this field to start an ascending sequence at a value greater than its minimum or to start a descending sequence at a value less than its maximum. For ascending sequences, the default value is the minimum value of the sequence. For descending sequences, the default value is the maximum value of the sequence. </p>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Increment By - Specify the interval between sequence numbers. This integer value can be any positive or negative integer, but it cannot be 0. </span><div>
+                                 <p>The absolute of this value must be less than the difference of <span class="uicontrol bold">Maximum Value</span> and <span class="uicontrol bold">Minimum Value</span>. If this value is negative, then the sequence descends. If the value is positive, then the sequence ascends.
+                                 </p>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Number to Cache - Enter a cache size. This value must be a valid positive integer greater than 1. </span><div>
+                                 <p>The value is used to preallocate a set of sequence numbers and keep them in memory so that sequence numbers can be accessed faster. When the last of the sequence numbers in the cache has been used, the database reads another set of numbers into the cache.</p>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Minimum Value - Specify the minimum value of the sequence. This value must be a valid integer and must be less than or equal to <span class="uicontrol bold">Start With</span> and must be less than <span class="uicontrol bold">Maximum Value</span>. If no minimum value is specified, Oracle uses minimum value of 1 for an ascending sequence or -(1027 -1) for a descending sequence. </span></li>
+                           <li class="substepexpand"><span>Maximum Value - Specify the maximum value the sequence can generate. This value must be a valid integer and equal to or greater than <span class="uicontrol bold">Start With</span> and than <span class="uicontrol bold">Minimum Value</span>. If no maximum value is specified, Oracle uses maximum value of <code class="codeph">1027 -1</code> for an ascending sequence or <code class="codeph">-1</code> for a descending sequence..</span></li>
+                           <li class="substepexpand"><span>Cycle - Select this option to indicate that the sequence continues to generate values after reaching either its maximum or minimum value. After an ascending sequence reaches its maximum value, it generates its minimum value. After a descending sequence reaches its minimum, it generates its maximum value.</span><div>
+                                 <p>Deselect this option to indicate that the sequence cannot generate more values after reaching its maximum or minimum value. This is the default.</p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Sequence</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-sequences.html#GUID-E177ACD2-7FCD-4536-974B-62D7E84576C3" title="A sequence generates a serial list of unique numbers for numeric columns of a database table. Use Object Browser to create, view, or drop a sequence.">Managing Sequences</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-B725EA5A-331C-474F-BCB5-ECF8FD8AA867" name="GUID-B725EA5A-331C-474F-BCB5-ECF8FD8AA867"></a><h3 id="AEUTL-GUID-B725EA5A-331C-474F-BCB5-ECF8FD8AA867" class="sect3"><span class="enumeration_section">3.6.2 </span>Browsing a Sequence
+               </h3>
+               <div>
+                  <p>Select a sequence from the Object Tree and access tabs in the Object Detail
+        View.</p>
+                  <div class="section">
+                     
+                     <p>To browse a sequence:</p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Sequences</span> and select a sequence.</span></li>
+                     <li><span>The Object Detail View appears and displays four tabs:</span><ul id="GUID-B725EA5A-331C-474F-BCB5-ECF8FD8AA867__CHOICES_J5P_PTL_GXB">
+                           <li><span class="uicontrol bold">Object Details</span> - Displays details
+                        about the selected type. Available actions include:
+                              <ul style="list-style-type: disc;" id="GUID-B725EA5A-331C-474F-BCB5-ECF8FD8AA867__UL_Z3M_J5L_GXB">
+                                 <li><span class="uicontrol bold">Alter</span></li>
+                                 <li><span class="uicontrol bold">Drop</span></li>
+                                 <li><span class="uicontrol bold">Refresh</span></li>
+                              </ul>
+                           </li>
+                           <li><span class="uicontrol bold">Grants</span> - Displays a list of grants
+                        associated with the sequence. Available actions include:
+                              <ul style="list-style-type: disc;" id="GUID-B725EA5A-331C-474F-BCB5-ECF8FD8AA867__UL_OXM_M5L_GXB">
+                                 <li><span class="uicontrol bold">Grant</span></li>
+                                 <li><span class="uicontrol bold">Revoke</span></li>
+                                 <li><span class="uicontrol bold">Refresh</span></li>
+                              </ul>
+                           </li>
+                           <li><span class="uicontrol bold">Dependencies</span> - Displays a list of objects that use (or depend) upon this sequence. Available actions include: <span class="uicontrol bold">Refresh</span>.
+                           </li>
+                           <li><span class="uicontrol bold">DDL</span> - Displays the DDL necessary to re-create this sequence. Available actions include:
+                              <ul style="list-style-type: disc;" id="GUID-B725EA5A-331C-474F-BCB5-ECF8FD8AA867__UL_D1R_R5L_GXB">
+                                 <li><span class="uicontrol bold">Download</span>.
+                                 </li>
+                                 <li><span class="uicontrol bold">Refresh</span></li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-sequences.html#GUID-E177ACD2-7FCD-4536-974B-62D7E84576C3" title="A sequence generates a serial list of unique numbers for numeric columns of a database table. Use Object Browser to create, view, or drop a sequence.">Managing Sequences</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-95F0A78F-3C04-42C8-B7D5-02480485FA84" name="GUID-95F0A78F-3C04-42C8-B7D5-02480485FA84"></a><h3 id="AEUTL-GUID-95F0A78F-3C04-42C8-B7D5-02480485FA84" class="sect3"><span class="enumeration_section">3.6.3 </span>Dropping a Sequence
+               </h3>
+               <div>
+                  <p>Select a sequence from the Object Tree pane and click Drop on the Object
+        Details tab.</p>
+                  <div class="section">
+                     
+                     <p>To drop a sequence:</p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Sequences</span> and select a sequence.</span><div>
+                           <p>The Object Detail View appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>On the <span class="uicontrol bold">Object Details</span> tab, click <span class="uicontrol bold">Drop</span>.</span><ol type="a" id="GUID-95F0A78F-3C04-42C8-B7D5-02480485FA84__SUBSTEPS_UKZ_2XL_GXB">
+                           <li><span>Drop - Review the details.</span></li>
+                           <li><span>SQL - Displays the SQL generated to drop the sequence. To copy the displayed SQL, click the <span class="uicontrol bold">Copy</span> icon.</span></li>
+                           <li><span>To confirm your selection, click <span class="uicontrol bold">Drop</span> again.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-sequences.html#GUID-E177ACD2-7FCD-4536-974B-62D7E84576C3" title="A sequence generates a serial list of unique numbers for numeric columns of a database table. Use Object Browser to create, view, or drop a sequence.">Managing Sequences</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

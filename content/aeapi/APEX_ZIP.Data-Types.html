@@ -1,0 +1,142 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="Data Types">
+      <meta name="DC.subject" content="data types, APEX_ZIP, t_files, t_dir_entry, t_dir_entries">
+      <meta name="keywords" content="data types, APEX_ZIP, t_files, t_dir_entry, t_dir_entries">
+      <meta name="DC.Relation" scheme="URI" content="APEX_ZIP.html#GUID-270BFF3A-5FB1-4089-894E-978608F9BD87">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-30834CEE-92B3-4A75-BCED-E219B54796E6">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Data Types</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_ZIP.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_ZIP.ADD_FILE-Procedure-2.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Data Types","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_ZIP.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_ZIP.ADD_FILE-Procedure-2.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-30834CEE-92B3-4A75-BCED-E219B54796E6" name="GUID-30834CEE-92B3-4A75-BCED-E219B54796E6"></a>
+         
+         <h2 id="AEAPI-GUID-30834CEE-92B3-4A75-BCED-E219B54796E6" class="sect2"><span class="enumeration_section">62.1 </span>Data Types
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>The <code class="codeph">APEX_ZIP</code> package uses the following data types.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-30834CEE-92B3-4A75-BCED-E219B54796E6__GUID-317E10A8-F369-4EA2-9551-583C7A8B6F69">t_dir_entries</p>
+                  <p>An easily accessible directory of all the files in the archive that is indexed by the full name of the file including its path.</p><pre class="pre codeblock"><code>type t_dir_entries is table of t_dir_entry index by VARCHAR2(32767);</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-30834CEE-92B3-4A75-BCED-E219B54796E6__GUID-11E6AD4C-862B-4466-9C8F-40D679B730EC">t_dir_entry</p>
+                  <p>A file in the archive with precomputed metadata.</p><pre class="pre codeblock"><code>type t_dir_entry is record (
+    file_name           VARCHAR2(32767),
+    uncompressed_length NUMBER,
+    is_directory        BOOLEAN );</code></pre><div class="tblformal" id="GUID-30834CEE-92B3-4A75-BCED-E219B54796E6__TABLE_A3R_MNK_TBC">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Attributes of data type." frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="0%" id="d307571e90">Attribute</th>
+                              <th align="left" valign="bottom" width="0%" id="d307571e92">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d307571e96" headers="d307571e90 "><code class="codeph">file_name</code></td>
+                              <td align="left" valign="top" width="0%" headers="d307571e96 d307571e92 ">Name of the compressed file including the directory path.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d307571e102" headers="d307571e90 "><code class="codeph">uncompressed_length</code></td>
+                              <td align="left" valign="top" width="0%" headers="d307571e102 d307571e92 ">The size of the decompressed file in bytes.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d307571e108" headers="d307571e90 "><code class="codeph">is_directory</code></td>
+                              <td align="left" valign="top" width="0%" headers="d307571e108 d307571e92 "><code class="codeph">TRUE</code> if the entry represents a file system directory.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-30834CEE-92B3-4A75-BCED-E219B54796E6__GUID-E0C161A6-3981-4F14-BD6E-E45E5B352CFA">t_files</p>
+                  <div class="infobox-caution" id="GUID-30834CEE-92B3-4A75-BCED-E219B54796E6__GUID-7529C09D-4814-490D-B9CB-991D4222C9C2">
+                     <p class="notep1">Caution:</p>This data type is deprecated. It will be removed in a future release. Use <code class="codeph">t_dir_entries</code> instead.
+                  </div>
+                  <p>Collection of file names and paths.</p><pre class="pre codeblock"><code>type t_files is table of varchar2(32767) index by binary_integer;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_ZIP.html#GUID-270BFF3A-5FB1-4089-894E-978608F9BD87">APEX_ZIP</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

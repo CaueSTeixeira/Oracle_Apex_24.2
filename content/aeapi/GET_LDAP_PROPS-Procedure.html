@@ -1,0 +1,174 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="GET_LDAP_PROPS Procedure">
+      <meta name="DC.subject" content="GET_LDAP_PROPS procedure, APEX_CUSTOM_AUTH, LDAP attributes, obtaining">
+      <meta name="keywords" content="GET_LDAP_PROPS procedure, APEX_CUSTOM_AUTH, LDAP attributes, obtaining">
+      <meta name="DC.Relation" scheme="URI" content="APEX_CUSTOM_AUTH.html#GUID-44772E73-B910-400C-869C-8CA23D3C88E0">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-D9070BB8-009F-4BCE-914A-3D6C8FAECFCA">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>GET_LDAP_PROPS Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="GET_COOKIE_PROPS-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="GET_NEXT_SESSION_ID-Function.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"GET_LDAP_PROPS Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="GET_COOKIE_PROPS-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="GET_NEXT_SESSION_ID-Function.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-D9070BB8-009F-4BCE-914A-3D6C8FAECFCA" name="GUID-D9070BB8-009F-4BCE-914A-3D6C8FAECFCA"></a><a id="AEAPI871"></a><a id="AEAPI872"></a><a id="AEAPI873"></a><a id="AEAPI874"></a><a id="AEAPI223"></a>
+         
+         <h2 id="AEAPI-GUID-D9070BB8-009F-4BCE-914A-3D6C8FAECFCA" class="sect2"><span class="enumeration_section">18.5 </span>GET_LDAP_PROPS Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This procedure obtains the LDAP attributes of the current authentication scheme for the current application. These properties can be viewed directly in <span>App Builder</span> by viewing the authentication scheme attributes.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-D9070BB8-009F-4BCE-914A-3D6C8FAECFCA__GUID-AFE2537E-E1C4-486B-BCA3-8C21DCD187BC">Syntax</p><pre class="pre codeblock"><code>APEX_CUSTOM_AUTH.GET_LDAP_PROPS (
+    p_ldap_host                OUT VARCHAR2,
+    p_ldap_port                OUT INTEGER,
+    p_use_ssl                  OUT VARCHAR2,
+    p_use_exact_dn             OUT VARCHAR2,
+    p_ldap_dn                  OUT VARCHAR2,
+    p_search_filter            OUT VARCHAR2,
+    p_ldap_edit_function       OUT VARCHAR2 )</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-D9070BB8-009F-4BCE-914A-3D6C8FAECFCA__GUID-BA0E1FBC-D723-4FA7-B471-145FE10F759C">Parameters</p>
+                  <div class="tblformal" id="GUID-D9070BB8-009F-4BCE-914A-3D6C8FAECFCA__BABFDCFA">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="31%" id="d70790e81">Parameter</th>
+                              <th align="left" valign="bottom" width="69%" id="d70790e83">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d70790e87" headers="d70790e81 "><code class="codeph">p_ldap_host</code></td>
+                              <td align="left" valign="top" width="69%" headers="d70790e87 d70790e83 ">LDAP host name.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d70790e93" headers="d70790e81 "><code class="codeph">p_ldap_port</code></td>
+                              <td align="left" valign="top" width="69%" headers="d70790e93 d70790e83 ">LDAP port number.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d70790e99" headers="d70790e81 "><code class="codeph">p_use_ssl</code></td>
+                              <td align="left" valign="top" width="69%" headers="d70790e99 d70790e83 ">Whether SSL is used.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d70790e105" headers="d70790e81 "><code class="codeph">p_use_exact_dn</code></td>
+                              <td align="left" valign="top" width="69%" headers="d70790e105 d70790e83 ">Whether exact distinguished names are used.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d70790e111" headers="d70790e81 "><code class="codeph">p_search_filter</code></td>
+                              <td align="left" valign="top" width="69%" headers="d70790e111 d70790e83 ">The search filter used if exact DN is not used.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d70790e117" headers="d70790e81 "><code class="codeph">p_ldap_dn</code></td>
+                              <td align="left" valign="top" width="69%" headers="d70790e117 d70790e83 ">LDAP DN string.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d70790e123" headers="d70790e81 "><code class="codeph">p_ldap_edit_function</code></td>
+                              <td align="left" valign="top" width="69%" headers="d70790e123 d70790e83 ">LDAP edit function name.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-D9070BB8-009F-4BCE-914A-3D6C8FAECFCA__GUID-1B8B1EC2-905A-4078-9CA5-2E30FD7E55F9">Example</p>
+                  <p>The following example retrieves the LDAP attributes associated with the current application.</p><pre class="pre codeblock"><code>DECLARE
+    l_ldap_host          VARCHAR2(256);
+    l_ldap_port          INTEGER;
+    l_use_ssl            VARCHAR2(1);
+    l_use_exact_dn       VARCHAR2(1);
+    l_search_filter      VARCHAR2(256);
+    l_ldap_dn            VARCHAR2(256);
+    l_ldap_edit_function VARCHAR2(256);
+BEGIN
+APEX_CUSTOM_AUTH.GET_LDAP_PROPS (
+    p_ldap_host       =&gt; l_ldap_host,
+    p_ldap_port       =&gt; l_ldap_port,
+    p_use_ssl         =&gt; l_use_ssl,
+    p_use_exact_dn    =&gt; l_use_exact_dn,
+    p_search_filter   =&gt; l_search_filter,
+    p_ldap_dn         =&gt; l_ldap_dn,
+    p_ldap_edit_function =&gt; l_ldap_edit_function);
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_CUSTOM_AUTH.html#GUID-44772E73-B910-400C-869C-8CA23D3C88E0">APEX_CUSTOM_AUTH</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

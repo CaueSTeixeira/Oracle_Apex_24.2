@@ -1,0 +1,243 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="EXPORT_DATA Function">
+      <meta name="DC.subject" content="EXPORT_DATA function, APEX_REGION">
+      <meta name="keywords" content="EXPORT_DATA function, APEX_REGION">
+      <meta name="DC.Relation" scheme="URI" content="APEX_REGION.html#GUID-63EFEB48-D5B9-42F6-9313-85C3984D42B8">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-BB045B2B-AFB9-4060-9E21-5AA6365C3C94">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>EXPORT_DATA Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="CLEAR-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_REGION.GET_ID-Function-Signature-1.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"EXPORT_DATA Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="CLEAR-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_REGION.GET_ID-Function-Signature-1.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-BB045B2B-AFB9-4060-9E21-5AA6365C3C94" name="GUID-BB045B2B-AFB9-4060-9E21-5AA6365C3C94"></a>
+         
+         <h2 id="AEAPI-GUID-BB045B2B-AFB9-4060-9E21-5AA6365C3C94" class="sect2"><span class="enumeration_section">48.2 </span>EXPORT_DATA Function
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function exports current region data.</p>
+                  <div class="infoboxnote" id="GUID-BB045B2B-AFB9-4060-9E21-5AA6365C3C94__GUID-28E76D4E-3C2D-4730-AC37-EE978961A109">
+                     <p class="notep1">Note:</p>The <code class="codeph">APEX_REGION.EXPORT_DATA</code> function only supports native regions at this time.
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-BB045B2B-AFB9-4060-9E21-5AA6365C3C94__GUID-796BFF9D-CCD9-4F45-94D4-BF783B70EA9B">Syntax</p><pre class="pre codeblock"><code>APEX_REGION.EXPORT_DATA (
+    p_format                    IN apex_data_export.t_format,
+    --
+    p_page_id                   IN NUMBER,
+    p_region_id                 IN NUMBER,
+    p_component_id              IN NUMBER                           DEFAULT NULL,
+    p_view_mode                 IN VARCHAR2                         DEFAULT NULL,
+    --
+    p_additional_filters        IN apex_exec.t_filters              DEFAULT apex_exec.c_empty_filters,
+    --
+    p_max_rows                  IN NUMBER                           DEFAULT NULL,
+    p_parent_column_values      IN apex_exec.t_parameters           DEFAULT apex_exec.c_empty_parameters,
+    --
+    p_as_clob                   IN BOOLEAN                          DEFAULT FALSE,
+    --
+    p_file_name                 IN VARCHAR2                         DEFAULT NULL,
+    p_page_size                 IN apex_data_export.t_size          DEFAULT apex_data_export.c_size_letter,
+    p_orientation               IN apex_data_export.t_orientation   DEFAULT apex_data_export.c_orientation_portrait,
+    p_data_only                 IN BOOLEAN                          DEFAULT FALSE,
+    --
+    p_pdf_accessible            IN BOOLEAN                          DEFAULT FALSE,
+    --
+    p_xml_include_declaration   IN BOOLEAN                          DEFAULT TRUE ) 
+    RETURN apex_data_export.t_export;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-BB045B2B-AFB9-4060-9E21-5AA6365C3C94__GUID-68030136-8C2C-4FD9-A395-D74624474A2B">Parameters</p>
+                  <div class="tblformal" id="GUID-BB045B2B-AFB9-4060-9E21-5AA6365C3C94__GUID-B56EB4EE-ADC3-4EE5-A502-75942B943BCC">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" id="d227441e74">Parameter</th>
+                              <th align="left" valign="bottom" id="d227441e76">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d227441e80" headers="d227441e74 "><code class="codeph">p_format</code></td>
+                              <td align="left" valign="top" headers="d227441e80 d227441e76 ">Export format. Use constants <code class="codeph">apex_data_export.c_format_*</code></td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d227441e88" headers="d227441e74 "><code class="codeph">p_page_id</code></td>
+                              <td align="left" valign="top" headers="d227441e88 d227441e76 ">ID of the page where the region is on.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d227441e94" headers="d227441e74 "><code class="codeph">p_region_id</code></td>
+                              <td align="left" valign="top" headers="d227441e94 d227441e76 ">Open the query context for this specific region ID.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d227441e100" headers="d227441e74 "><code class="codeph">p_component_id</code></td>
+                              <td align="left" valign="top" headers="d227441e100 d227441e76 ">
+                                 <p>Region component ID to use.</p>
+                                 <p>For Interactive Reports and Interactive Grids, this is the saved report ID within the current application page. For JET charts, use the chart series ID.</p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d227441e109" headers="d227441e74 "><code class="codeph">p_view_mode</code></td>
+                              <td align="left" valign="top" headers="d227441e109 d227441e76 ">
+                                 <p>The view type available for the report. The values can be:</p>
+                                 <ul style="list-style-type: disc;" id="GUID-BB045B2B-AFB9-4060-9E21-5AA6365C3C94__UL_FR4_4H5_LNB">
+                                    <li><code class="codeph">APEX_IR.C_VIEW_REPORT</code></li>
+                                    <li><code class="codeph">APEX_IR.C_VIEW_GROUPBY</code></li>
+                                    <li><code class="codeph">APEX_IR.C_VIEW_PIVOT</code></li>
+                                 </ul>
+                                 <p>If p_view is <code class="codeph">null</code>, it gets the view currently used by the report. If p_view passed which doesn't exist for the current report, an error raises.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d227441e131" headers="d227441e74 "><code class="codeph">p_additional_filters</code></td>
+                              <td align="left" valign="top" headers="d227441e131 d227441e76 ">Additional filters to apply to the context.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d227441e137" headers="d227441e74 "><code class="codeph">p_max_rows</code></td>
+                              <td align="left" valign="top" headers="d227441e137 d227441e76 ">Maximum amount of rows to get. Default unlimited.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d227441e143" headers="d227441e74 "><code class="codeph">p_parent_column_values</code></td>
+                              <td align="left" valign="top" headers="d227441e143 d227441e76 ">For the detail grid in an Interactive Grid Master-Detail relationship. Use this parameter to pass in values for the master-detail parent column(s).</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d227441e149" headers="d227441e74 "><code class="codeph">p_as_clob</code></td>
+                              <td align="left" valign="top" headers="d227441e149 d227441e76 ">Returns the export contents as a CLOB. Does not work with binary export formats such as PDF and XLSX. Default to <code class="codeph">false</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d227441e158" headers="d227441e74 "><code class="codeph">p_file_name</code></td>
+                              <td align="left" valign="top" headers="d227441e158 d227441e76 ">Defines the filename of the export.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d227441e164" headers="d227441e74 "><code class="codeph">p_page_size</code></td>
+                              <td align="left" valign="top" headers="d227441e164 d227441e76 ">Page size of the report. Use constants <code class="codeph">apex_data_export.c_size_*</code></td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d227441e173" headers="d227441e74 "><code class="codeph">p_orientation</code></td>
+                              <td align="left" valign="top" headers="d227441e173 d227441e76 ">Orientation of the report page. Use constants <code class="codeph">apex_data_export.c_orientation_*</code></td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d227441e181" headers="d227441e74 "><code class="codeph">p_data_only</code></td>
+                              <td align="left" valign="top" headers="d227441e181 d227441e76 ">Whether to include column groups, control breaks, aggregates, and highlights.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d227441e187" headers="d227441e74 "><code class="codeph">p_pdf_accessible</code></td>
+                              <td align="left" valign="top" headers="d227441e187 d227441e76 ">Whether to include accessibility tags in the PDF. Defaults to <code class="codeph">false</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d227441e196" headers="d227441e74 "><code class="codeph">p_xml_include_declaration</code></td>
+                              <td align="left" valign="top" headers="d227441e196 d227441e76 ">Whether to include the XML declaration. Defaults to <code class="codeph">true</code>.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-BB045B2B-AFB9-4060-9E21-5AA6365C3C94__GUID-DC3EFBAA-550A-4FD9-9281-70DED69F62CC">Returns</p>
+                  <p>The export file contents, mime_type, and optionally the report layout.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-BB045B2B-AFB9-4060-9E21-5AA6365C3C94__GUID-ADFC38A6-F5D3-4DB7-9129-F4E96B25D078">Examples</p>
+                  <p>Get the export result for a given saved interactive report on page 3 and download as HTML. </p><pre class="pre codeblock"><code>DECLARE
+    l_export       apex_data_export.t_export;
+    l_region_id    number;
+BEGIN
+
+   SELECT region_id into l_region_id
+     FROM apex_application_page_regions
+    WHERE application_id = 100
+      and page_id = 3
+      and static_id = 'classic_report';
+
+    l_export := apex_region.export_data (
+         p_format       =&gt; apex_data_export.c_format_html,
+         p_page_id      =&gt; 3,
+         p_region_id    =&gt; l_region_id );
+
+    apex_data_export.download( l_export );
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_REGION.html#GUID-63EFEB48-D5B9-42F6-9313-85C3984D42B8">APEX_REGION</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

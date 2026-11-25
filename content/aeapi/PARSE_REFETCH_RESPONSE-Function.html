@@ -1,0 +1,238 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="PARSE_REFETCH_RESPONSE Function">
+      <meta name="DC.subject" content="PARSE_REFETCH_RESPONSE function, APEX_PLUGIN_UTIL">
+      <meta name="keywords" content="PARSE_REFETCH_RESPONSE function, APEX_PLUGIN_UTIL">
+      <meta name="DC.Relation" scheme="URI" content="APEX_PLUGIN_UTIL.html#GUID-E1FE05BA-E290-4446-82DC-5271B75FDD4C">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-1B262696-038E-4D5E-B482-DAC842FEDF87">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>PARSE_REFETCH_RESPONSE Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="PAGE_ITEM_NAMES_TO_JQUERY-Function.html" title="Previous" type="text/html">
+      <link rel="next" href="PRINT_DISPLAY_ONLY-Procedure-Signature-1.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"PARSE_REFETCH_RESPONSE Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="PAGE_ITEM_NAMES_TO_JQUERY-Function.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="PRINT_DISPLAY_ONLY-Procedure-Signature-1.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-1B262696-038E-4D5E-B482-DAC842FEDF87" name="GUID-1B262696-038E-4D5E-B482-DAC842FEDF87"></a>
+         
+         <h2 id="AEAPI-GUID-1B262696-038E-4D5E-B482-DAC842FEDF87" class="sect2"><span class="enumeration_section">45.39 </span>PARSE_REFETCH_RESPONSE Function
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function parses the response from a <span class="q">"DML row refetch."</span> A <span class="q">"row refetch"</span> is used for lost update detection in order to verify that nobody else changed the row.
+                  </p>
+                  <p>To use this function, the REST Data Source must have a <span class="q">"Fetch Single Row"</span> database operation defined.
+                  </p>
+                  <p>This procedure always parses JSON at the root level; an array column cannot be passed in. Array column contents can be accessed in the values context using <a href="APEX_EXEC.OPEN_ARRAY-Procedure-Signature-1.html#GUID-D1CB527B-C92B-4994-BFF4-E224979A4702">OPEN_ARRAY Procedure Signature 1</a> and <a href="APEX_EXEC.CLOSE_ARRAY-Procedure.html#GUID-E933C2AC-C2F3-4F1F-B67A-F98023DDD8D6">CLOSE_ARRAY Procedure</a> in <code class="codeph">APEX_EXEC</code>.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-1B262696-038E-4D5E-B482-DAC842FEDF87__GUID-4BACA0A5-CA13-4765-914C-C9A5F5275A82">Syntax</p>
+                  <pre class="pre codeblock"><code>APEX_PLUGIN_UTIL.PARSE_REFETCH_RESPONSE (
+    p_web_source_operation IN apex_plugin.t_web_source_operation,
+    p_web_source           IN apex_plugin.t_web_source,
+    p_values_context       IN apex_exec.t_context,
+    --
+    p_response             IN CLOB )
+RETURN apex_exec.t_context;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-1B262696-038E-4D5E-B482-DAC842FEDF87__GUID-019B35F9-798F-4EE5-BAF3-B0B94AAE7287">Parameters</p>
+                  <div class="tblformal" id="GUID-1B262696-038E-4D5E-B482-DAC842FEDF87__TABLE_Q35_G22_L4B">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="42%" id="d219830e92">Parameter</th>
+                              <th align="left" valign="bottom" width="58%" id="d219830e94">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d219830e98" headers="d219830e92 "><code class="codeph">p_web_source_operation</code></td>
+                              <td align="left" valign="top" width="58%" headers="d219830e98 d219830e94 ">REST Data Source operation (Plug-In) meta data.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d219830e104" headers="d219830e92 "><code class="codeph">p_web_source</code></td>
+                              <td align="left" valign="top" width="58%" headers="d219830e104 d219830e94 ">REST Data Source (Plug-In) meta data.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d219830e110" headers="d219830e92 "><code class="codeph">p_response</code></td>
+                              <td align="left" valign="top" width="58%" headers="d219830e110 d219830e94 ">REST response to parse.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d219830e116" headers="d219830e92 "><code class="codeph">p_values_context</code></td>
+                              <td align="left" valign="top" width="58%" headers="d219830e116 d219830e94 ">Values context, needed for DML column definitions.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-1B262696-038E-4D5E-B482-DAC842FEDF87__GUID-D07B62EE-00A3-4A12-A8B9-FC35693006EB">Returns</p>
+                  <div class="tblformal" id="GUID-1B262696-038E-4D5E-B482-DAC842FEDF87__TABLE_VKV_G22_L4B">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Returns for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="42%" id="d219830e132">Parameter</th>
+                              <th align="left" valign="bottom" width="58%" id="d219830e134">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d219830e138" headers="d219830e132 "><code class="codeph">*</code></td>
+                              <td align="left" valign="top" width="58%" headers="d219830e138 d219830e134 "><code class="codeph">APEX_EXEC</code> <span class="q">"Values"</span> context object for the plug-in developer to retrieve the checksum or column values.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-1B262696-038E-4D5E-B482-DAC842FEDF87__GUID-BD217647-FAFB-4D84-A2E1-4DCBBD38D3C9">Example</p>
+                  
+                  <p>The following example demonstrates how to perform a <span class="q">"refetch"</span> operation within the Plug-In DML function for a given row to be updated and compare checksums in order to detect lost updates.
+                  </p><pre class="pre codeblock"><code>procedure plugin_dml(
+  p_plugin     in            apex_plugin.t_plugin,
+  p_web_source in            apex_plugin.t_web_source,
+  p_params     in            apex_plugin.t_web_source_dml_params,
+  p_result     in out nocopy apex_plugin.t_web_source_dml_result )
+IS
+  l_web_source_operation apex_plugin.t_web_source_operation;
+  l_request_body         clob;
+  l_response             clob;
+
+  l_refetch_context      apex_exec.t_context;
+  l_checksum             varchar2(32767);
+  l_refetched_checksum   varchar2(32767);
+
+BEGIN
+  p_result.update_values_context := p_params.update_values_context;
+
+  --
+  -- this code performs a "refetch" operation for a row, in order to perform
+  -- lost update detection. This happens before the actual DML.
+  --
+  IF p_web_source.operations.exists( apex_plugin.c_db_operation_fetch_row ) THEN
+
+    l_web_source_operation := apex_plugin_util.get_web_source_operation(
+      p_web_source       =&gt; p_web_source,
+      p_db_operation     =&gt; apex_plugin.c_db_operation_fetch_row,
+      p_preserve_headers =&gt; false,
+      p_perform_init     =&gt; true );
+
+    -- add some logic to add primary key values to the URL or as HTTP headers here
+    -- PK values can be obtained from "p_params.update_values_context"
+
+    apex_plugin_util.make_rest_request(
+      p_web_source_operation =&gt; l_web_source_operation,
+      p_request_body         =&gt; l_request_body,
+      p_response             =&gt; l_response,
+      p_response_parameters  =&gt; p_result.out_parameters );
+
+    l_refetch_context := apex_plugin_util.parse_refetch_response(
+      p_web_source_operation =&gt; l_web_source_operation,
+      p_web_source           =&gt; p_web_source,
+      p_response             =&gt; l_response,
+      p_values_context       =&gt; p_params.update_values_context );
+
+    IF apex_exec.next_row( p_context =&gt; l_refetch_context ) THEN
+
+      l_checksum           := apex_exec.get_row_version_checksum( p_context =&gt; p_params.update_values_context );
+      l_refetched_checksum := apex_exec.get_row_version_checksum( p_context =&gt; l_refetch_context );
+
+      IF l_checksum != l_refetched_checksum THEN
+        apex_exec.set_row_status(
+          p_context  =&gt; p_result.update_values_context,
+          p_sqlcode  =&gt; -20987,
+          p_sqlerrm  =&gt; 'APEX.DATA_HAS_CHANGED' );
+      END IF;
+    END IF;
+  END IF;
+
+  -- continue with DML logic here ...
+
+END plugin_dml;</code></pre><div class="infoboxnotealso" id="GUID-1B262696-038E-4D5E-B482-DAC842FEDF87__GUID-5EC87935-72D9-4397-AE90-0AA1ADFB7C3C">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="APEX_EXEC.CLOSE_ARRAY-Procedure.html#GUID-E933C2AC-C2F3-4F1F-B67A-F98023DDD8D6">CLOSE_ARRAY Procedure</a></li>
+                        <li><a href="APEX_EXEC.OPEN_ARRAY-Procedure-Signature-1.html#GUID-D1CB527B-C92B-4994-BFF4-E224979A4702">OPEN_ARRAY Procedure Signature 1</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_PLUGIN_UTIL.html#GUID-E1FE05BA-E290-4446-82DC-5271B75FDD4C">APEX_PLUGIN_UTIL</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

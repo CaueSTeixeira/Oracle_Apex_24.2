@@ -1,0 +1,195 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="SEND Procedure Signature 2">
+      <meta name="DC.subject" content="SEND procedure signature 2, APEX_MAIL">
+      <meta name="keywords" content="SEND procedure signature 2, APEX_MAIL">
+      <meta name="DC.Relation" scheme="URI" content="APEX_MAIL.html#GUID-14F51C6D-CB82-4B38-AB6E-61C46E75596F">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-579D3770-3164-42C9-8EDD-69A61CB3207C">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>SEND Procedure Signature 2</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="SEND-Procedure-Signature-1.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_MARKDOWN.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"SEND Procedure Signature 2","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="SEND-Procedure-Signature-1.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_MARKDOWN.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-579D3770-3164-42C9-8EDD-69A61CB3207C" name="GUID-579D3770-3164-42C9-8EDD-69A61CB3207C"></a>
+         
+         <h2 id="AEAPI-GUID-579D3770-3164-42C9-8EDD-69A61CB3207C" class="sect2"><span class="enumeration_section">41.11 </span>SEND Procedure Signature 2
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This procedure adds a mail to the mail queue of <span>Oracle APEX</span>. The mail is based on an email template where the placeholder values specified as JSON string are substituted.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-579D3770-3164-42C9-8EDD-69A61CB3207C__GUID-516F48FC-3082-4F3F-8D2C-72C28C56F0B8">Syntax</p><pre class="pre codeblock"><code>APEX_MAIL.SEND (
+    p_template_static_id IN VARCHAR2,    
+    p_placeholders       IN CLOB,
+    p_to                 IN VARCHAR2,
+    p_cc                 IN VARCHAR2 DEFAULT NULL,
+    p_bcc                IN VARCHAR2 DEFAULT NULL,
+    p_from               IN VARCHAR2 DEFAULT NULL,
+    p_replyto            IN VARCHAR2 DEFAULT NULL,
+    p_application_id     IN NUMBER   DEFAULT apex_application.g_flow_id );</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-579D3770-3164-42C9-8EDD-69A61CB3207C__GUID-263E31C0-9508-45EB-BED2-7EE59F3D2234">Parameters</p>
+                  <div class="tblformal" id="GUID-579D3770-3164-42C9-8EDD-69A61CB3207C__CHDIIAFI">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="31%" id="d203418e72">Parameter</th>
+                              <th align="left" valign="bottom" width="69%" id="d203418e74">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d203418e78" headers="d203418e72 "><code class="codeph">p_template_static_id</code></td>
+                              <td align="left" valign="top" width="69%" headers="d203418e78 d203418e74 ">Static identifier string, used to identify the shared component email template.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d203418e84" headers="d203418e72 "><code class="codeph">p_placeholders</code></td>
+                              <td align="left" valign="top" width="69%" headers="d203418e84 d203418e74 ">JSON string representing the placeholder names along with the values, to be substituted.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d203418e90" headers="d203418e72 "><code class="codeph">p_to</code></td>
+                              <td align="left" valign="top" width="69%" headers="d203418e90 d203418e74 ">(Required) Valid email address to which the email is sent. For multiple email addresses, use a comma-separated list.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d203418e96" headers="d203418e72 "><code class="codeph">p_cc</code></td>
+                              <td align="left" valign="top" width="69%" headers="d203418e96 d203418e74 ">Valid email addresses to which the email is copied. For multiple email addresses, use a comma-separated list.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d203418e102" headers="d203418e72 "><code class="codeph">p_bcc</code></td>
+                              <td align="left" valign="top" width="69%" headers="d203418e102 d203418e74 ">Valid email addresses to which the email is blind copied. For multiple email addresses, use a comma-separated list.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d203418e108" headers="d203418e72 "><code class="codeph">p_from</code></td>
+                              <td align="left" valign="top" width="69%" headers="d203418e108 d203418e74 ">
+                                 <p>This must be a valid email address from which the email is sent.</p>
+                                 <p>If <code class="codeph">p_from</code> is <span class="bold">not</span> provided:
+                                 </p>
+                                 <ul style="list-style-type: disc;" id="GUID-579D3770-3164-42C9-8EDD-69A61CB3207C__UL_PWD_ZRT_KDC">
+                                    <li>the <span class="q">"Application Email From Address"</span> is used (if provided under Application Definition)
+                                    </li>
+                                    <li>otherwise, <code class="codeph">p_replyto</code> is used (if provided)
+                                    </li>
+                                    <li>else, <code class="codeph">p_to</code> is used
+                                    </li>
+                                 </ul>
+                                 <p>If <code class="codeph">p_to</code> or <code class="codeph">p_replyto</code> contain multiple email addresses, <code class="codeph">p_from</code> is required.
+                                 </p>
+                                 <p>If an instance administrator has already defined a <span class="q">"Default Email From Address"</span> on the instance level, this address is <span class="bold">always</span> used as the <span class="q">"from"</span> address, regardless of whether <code class="codeph">p_from</code> is provided.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d203418e164" headers="d203418e72 "><code class="codeph">p_replyto</code></td>
+                              <td align="left" valign="top" width="69%" headers="d203418e164 d203418e74 ">
+                                 <p>Specify a valid email address to instruct recipient's email client to send human-generated replies to this address rather than the address specified in <code class="codeph">p_from</code>. You can use this parameter as follows:
+                                 </p>
+                                 <ul style="list-style-type: disc;" id="GUID-579D3770-3164-42C9-8EDD-69A61CB3207C__UL_WD1_GT2_3TB">
+                                    <li>If you omit the <code class="codeph">p_replyto</code> parameter, the Reply-To mail header is set to the value specified in the <code class="codeph">p_from</code> parameter
+                                    </li>
+                                    <li>If you include the <code class="codeph">p_replyto</code> parameter, but provide a NULL value, the Reply-To mail header is set to NULL. This disables automatic email replies.
+                                    </li>
+                                    <li>If you include p_replyto parameter, but provide a non-null value (for example, a valid email address), you send these messages, but the automatic replies go to the value specified (for example, the email address)</li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d203418e190" headers="d203418e72 "><code class="codeph">p_application_id</code></td>
+                              <td align="left" valign="top" width="69%" headers="d203418e190 d203418e74 ">Application ID where the email template is defined. Defaults to the current application (if called from within an application).</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="infoboxnote" id="GUID-579D3770-3164-42C9-8EDD-69A61CB3207C__GUID-11236FCC-2BF5-4E5E-B337-4771DC1A35DC">
+                     <p class="notep1">Note:</p>When calling the <code class="codeph">SEND</code> procedure from outside the context of an <span>APEX</span> application (such as from a Database Scheduler job), you must specify the <code class="codeph">p_application_id</code> parameter.
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-579D3770-3164-42C9-8EDD-69A61CB3207C__GUID-3BE6ED4F-C26B-4338-829B-7A818236CB17">Examples</p><pre class="pre codeblock"><code>begin
+    apex_mail.send (
+        p_template_static_id =&gt; 'ORDER',
+        p_placeholders       =&gt; '{ "ORDER_NUMBER": 5321, "ORDER_DATE": "01-Feb-2018", "ORDER_TOTAL": "$12,000" }',
+        p_to                 =&gt; 'some_user@example.com' );
+end;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_MAIL.html#GUID-14F51C6D-CB82-4B38-AB6E-61C46E75596F">APEX_MAIL</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="UPD_TABLE Procedure">
+      <meta name="DC.subject" content="UPD_TABLE procedure, APEX_UI_DEFAULT_UPDATE">
+      <meta name="keywords" content="UPD_TABLE procedure, APEX_UI_DEFAULT_UPDATE">
+      <meta name="DC.Relation" scheme="URI" content="APEX_UI_DEFAULT_UPDATE.html#GUID-90E0D15A-4EBB-4C12-B66E-8FA76A4F31F5">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-F4F1DAC7-1D8A-4C7E-8265-D402167A6564">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>UPD_TABLE Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="UPD_REPORT_REGION_TITLE-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_UTIL.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"UPD_TABLE Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="UPD_REPORT_REGION_TITLE-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_UTIL.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-F4F1DAC7-1D8A-4C7E-8265-D402167A6564" name="GUID-F4F1DAC7-1D8A-4C7E-8265-D402167A6564"></a>
+         
+         <h2 id="AEAPI-GUID-F4F1DAC7-1D8A-4C7E-8265-D402167A6564" class="sect2"><span class="enumeration_section">58.24 </span>UPD_TABLE Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>If the provided table exists within the user's schema's table based User Interface Defaults, the form region title and report region title are updated to match those provided. If 'null%' is passed in for p_form_region_title or p_report_region_title, the value is set to null.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-F4F1DAC7-1D8A-4C7E-8265-D402167A6564__GUID-CBA8E5CB-FC4F-4E05-86F0-F42603872993">Syntax</p><pre class="pre codeblock"><code>APEX_UI_DEFAULT_UPDATE.UPD_TABLE (
+    p_table_name            IN VARCHAR2,
+    p_form_region_title     IN VARCHAR2 DEFAULT NULL,
+    p_report_region_title   IN VARCHAR2 DEFAULT NULL );</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-F4F1DAC7-1D8A-4C7E-8265-D402167A6564__GUID-355D7084-555D-42BE-9424-045E55A9F508">Parameters</p>
+                  <div class="tblformal" id="GUID-F4F1DAC7-1D8A-4C7E-8265-D402167A6564__CHDGDGFB">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="31%" id="d257000e69">Parameter</th>
+                              <th align="left" valign="bottom" width="69%" id="d257000e71">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d257000e75" headers="d257000e69 "><code class="codeph">p_table_name</code></td>
+                              <td align="left" valign="top" width="69%" headers="d257000e75 d257000e71 ">Name of table being updated.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d257000e81" headers="d257000e69 "><code class="codeph">p_form_region_title</code></td>
+                              <td align="left" valign="top" width="69%" headers="d257000e81 d257000e71 ">Region title used for forms.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d257000e87" headers="d257000e69 "><code class="codeph">p_report_region_title</code></td>
+                              <td align="left" valign="top" width="69%" headers="d257000e87 d257000e71 ">Region title used for reports and tabular forms. </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="infoboxnote" id="GUID-F4F1DAC7-1D8A-4C7E-8265-D402167A6564__GUID-43C085CF-02FD-4E57-B6F1-A34C1BA3C417">
+                     <p class="notep1">Note:</p>If <code class="codeph">null%</code> is passed in for <code class="codeph">p_form_region_title</code> or <code class="codeph">p_report_region_title</code>, the value is set to <code class="codeph">null</code>. If no value is passed in, that column is not updated.
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-F4F1DAC7-1D8A-4C7E-8265-D402167A6564__GUID-47E49F8C-43D6-4503-936C-FC0F97F6F7AC">Example</p>
+                  <p>The following example updates the EMP table definition within the UI Defaults Table Dictionary within the current schema.</p><pre class="pre codeblock"><code>begin
+    apex_ui_default_update.upd_table (
+       p_table_name          =&gt; 'EMP',
+       p_form_region_title   =&gt; 'Employee Details',
+       p_report_region_title =&gt; 'Employees' );
+end;
+/</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_UI_DEFAULT_UPDATE.html#GUID-90E0D15A-4EBB-4C12-B66E-8FA76A4F31F5">APEX_UI_DEFAULT_UPDATE</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

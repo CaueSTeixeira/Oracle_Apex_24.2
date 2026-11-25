@@ -1,0 +1,246 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Listing Applications">
+      <meta name="abstract" content="Use SQLcl to list all or selected APEX applications in a workspace.">
+      <meta name="description" content="Use SQLcl to list all or selected APEX applications in a workspace.">
+      <meta name="DC.subject" content="SQLcl, , listing all apps, listing apps by changed date and time, list apps changed on or after date, list apps changed by user">
+      <meta name="keywords" content="SQLcl, , listing all apps, listing apps by changed date and time, list apps changed on or after date, list apps changed by user">
+      <meta name="DC.Relation" scheme="URI" content="exporting-and-importing-using-sqlcl.html#GUID-54ED6670-EAEA-45CF-BB0B-F2CB81EB8CFF">
+      <meta name="DC.Relation" scheme="URI" content="listing-applications.html#GUID-2D6FF42E-C4B0-4DFF-ABBA-BFC8FADBEE68">
+      <meta name="DC.Relation" scheme="URI" content="listing-applications.html#GUID-E232A6D6-D526-4D7D-9480-7E1143FEBEF6">
+      <meta name="DC.Relation" scheme="URI" content="listing-applications.html#GUID-C4DBA437-6DAA-40EE-98BD-A534317F3F73">
+      <meta name="DC.Relation" scheme="URI" content="listing-applications.html#GUID-52A0FF55-7507-4961-9DB7-80EEFDAF683C">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-0ED1136B-205A-4C2D-81FA-AE3654D94A80">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Use SQLcl to list all or selected APEX applications in a workspace.">
+      <meta name="description" content="Use SQLcl to list all or selected APEX applications in a workspace.">
+      <title>Listing Applications</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Use SQLcl to list all or selected APEX applications in a workspace.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="exiting-sqlLcl.html" title="Previous" type="text/html">
+      <link rel="next" href="listing-components-in-an-application.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Listing Applications","description":"Use SQLcl to list all or selected APEX applications in a workspace.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="exiting-sqlLcl.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="listing-components-in-an-application.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-0ED1136B-205A-4C2D-81FA-AE3654D94A80" name="GUID-0ED1136B-205A-4C2D-81FA-AE3654D94A80"></a>
+         
+         <h2 id="AEADM-GUID-0ED1136B-205A-4C2D-81FA-AE3654D94A80" class="sect2"><span class="enumeration_section">3.12.11.1.4 </span>Listing Applications
+         </h2>
+         <div class="ind">
+            <p>Use <span>SQLcl</span> to list all or selected <span>APEX</span> applications in a workspace. 
+            </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="listing-applications.html#GUID-2D6FF42E-C4B0-4DFF-ABBA-BFC8FADBEE68">Listing All Applications</a><br>List all installed <span>APEX</span> applications in a workspace.
+                  </li>
+                  <li class="ulchildlink"><a href="listing-applications.html#GUID-E232A6D6-D526-4D7D-9480-7E1143FEBEF6">Listing Applications in a Workspace To See Last Changed Date and Time</a><br>List all <span>APEX</span> applications in a workspace along with the date and time they last changed.
+                  </li>
+                  <li class="ulchildlink"><a href="listing-applications.html#GUID-C4DBA437-6DAA-40EE-98BD-A534317F3F73">Listing Only Applications in a Workspace Changed On or After a Given Date</a><br>List all <span>APEX</span> applications in a workspace along with the date and time they were last changed on or         after a given date.
+                  </li>
+                  <li class="ulchildlink"><a href="listing-applications.html#GUID-52A0FF55-7507-4961-9DB7-80EEFDAF683C">Listing Only Applications in a Workspace Changed by a Given User</a><br>List all <span>APEX</span> applications in a workspace along with the date and time they were last changed by a         particular user.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="exporting-and-importing-using-sqlcl.html#GUID-54ED6670-EAEA-45CF-BB0B-F2CB81EB8CFF" title="Export workspaces, applications, and related files from a command line using Oracle SQL Developer Command Line (SQLcl) release 22.1 and later.">Exporting and Importing Using SQLcl</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-2D6FF42E-C4B0-4DFF-ABBA-BFC8FADBEE68" name="GUID-2D6FF42E-C4B0-4DFF-ABBA-BFC8FADBEE68"></a><h3 id="AEADM-GUID-2D6FF42E-C4B0-4DFF-ABBA-BFC8FADBEE68" class="sect3"><span class="enumeration_section">3.12.11.1.4.1 </span>Listing All Applications
+               </h3>
+               <div>
+                  <p>List all installed <span>APEX</span> applications in a workspace.
+                  </p>
+                  <div class="section">
+                     
+                     <p>To list all installed applications to which the logged-in use has access,
+                use the command <code class="codeph">apex list</code>.
+                     </p>
+                     
+                     <p>For example:</p>
+                     <pre class="pre codeblock"><code>SQL&gt; apex list
+
+WORKSPACE_ID     WORKSPACE APPLICATION_ID APPLICATION_NAME         BUILD_STATUS    LAST_UPDATED_ON
+1908816359534887 EXAMPLES  106            Sample Interactive Grids Run and Develop 24-SEP-21
+1908816359534887 EXAMPLES  113            List Examples            Run and Develop 17-JAN-22
+1908816359534887 EXAMPLES  110            Books with Tags          Run and Develop 04-JAN-22</code></pre>
+                     </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="listing-applications.html#GUID-0ED1136B-205A-4C2D-81FA-AE3654D94A80" title="Use SQLcl to list all or selected APEX applications in a workspace.">Listing Applications</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-E232A6D6-D526-4D7D-9480-7E1143FEBEF6" name="GUID-E232A6D6-D526-4D7D-9480-7E1143FEBEF6"></a><h3 id="AEADM-GUID-E232A6D6-D526-4D7D-9480-7E1143FEBEF6" class="sect3"><span class="enumeration_section">3.12.11.1.4.2 </span>Listing Applications in a Workspace To See Last Changed Date and Time
+               </h3>
+               <div>
+                  <p>List all <span>APEX</span> applications in a workspace along with the date and time they last changed.
+                  </p>
+                  <div class="section">
+                     
+                     <p>To list all applications in a workspace along with the date and time they
+                were last changed, use the command <code class="codeph">apex</code> with the
+                    <code class="codeph">list</code> option and provide the workspace ID.
+                     </p>
+                     
+                     <div class="p">For
+                example:<pre class="pre codeblock"><code>LAST_UPDATED_ON APPLICATION_ID APPLICATION_NAME
+SQL&gt; apex list -workspaceid 1908816359534887
+
+LAST_UPDATED_ON  APPLICATION_ID   APPLICATION_NAME
+2021-09-24 09:19 106              Sample Interactive Grids
+2022-01-04 15:53 110              Books with Tags
+2022-01-17 13:50 113              List Examples</code></pre></div>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="listing-applications.html#GUID-0ED1136B-205A-4C2D-81FA-AE3654D94A80" title="Use SQLcl to list all or selected APEX applications in a workspace.">Listing Applications</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-C4DBA437-6DAA-40EE-98BD-A534317F3F73" name="GUID-C4DBA437-6DAA-40EE-98BD-A534317F3F73"></a><h3 id="AEADM-GUID-C4DBA437-6DAA-40EE-98BD-A534317F3F73" class="sect3"><span class="enumeration_section">3.12.11.1.4.3 </span>Listing Only Applications in a Workspace Changed On or After a Given Date
+               </h3>
+               <div>
+                  <p>List all <span>APEX</span> applications in a workspace along with the date and time they were last changed on or
+        after a given date.
+                  </p>
+                  <div class="section">
+                     
+                     <p>To list only applications in a workspace that were changed on or after a
+                given date, use the command <code class="codeph"> export</code> with the <code class="codeph">list</code>
+                option and provide the workspace ID and date in the <code class="codeph">YYYY-MM-DD</code>
+                format.
+                     </p>
+                     
+                     <p>For example:</p>
+                     <pre class="pre codeblock"><code>SQL&gt; apex list -workspaceid 1908816359534887 -changesSince 2022-01-15
+
+LAST_UPDATED_ON  APPLICATION_ID   APPLICATION_NAME
+2022-01-17 13:50 113              List Examples</code></pre>
+                     </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="listing-applications.html#GUID-0ED1136B-205A-4C2D-81FA-AE3654D94A80" title="Use SQLcl to list all or selected APEX applications in a workspace.">Listing Applications</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-52A0FF55-7507-4961-9DB7-80EEFDAF683C" name="GUID-52A0FF55-7507-4961-9DB7-80EEFDAF683C"></a><h3 id="AEADM-GUID-52A0FF55-7507-4961-9DB7-80EEFDAF683C" class="sect3"><span class="enumeration_section">3.12.11.1.4.4 </span>Listing Only Applications in a Workspace
+        Changed by a Given User
+               </h3>
+               <div>
+                  <p>List all <span>APEX</span> applications in a workspace along with the date and time they were last changed by a
+        particular user.
+                  </p>
+                  <div class="section">
+                     
+                     <p>To list all applications in a workspace that were last changed by a
+                particular user, use the command <code class="codeph">apex</code> with the
+                    <code class="codeph">list</code> option with the workspace ID and a username.
+                     </p>
+                     
+                     <p>The following example shows applications last changed in workspace
+                    <code class="codeph">1908816359534887</code> by user <code class="codeph">jane.green</code>:
+                     </p>
+                     <pre class="pre codeblock"><code>SQL&gt; apex list -workspaceid 1908816359534887 -changesBy jane.green 
+
+LAST_UPDATED_ON  APPLICATION_ID   APPLICATION_NAME
+2021-09-24 09:19 106              Sample Interactive Grids
+2022-01-17 13:50 113              List Examples</code></pre>
+                     <p>You can also combine the date-based and user-based filters.</p>
+                     
+                     <p>For example:</p>
+                     <pre class="pre codeblock"><code>SQL&gt; apex list -workspaceid 1908816359534887 -changesBy jane.green -changesSince 2022-01-15
+
+LAST_UPDATED_ON  APPLICATION_ID   APPLICATION_NAME
+2022-01-17 13:50 113              List Examples</code></pre>
+                     </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="listing-applications.html#GUID-0ED1136B-205A-4C2D-81FA-AE3654D94A80" title="Use SQLcl to list all or selected APEX applications in a workspace.">Listing Applications</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

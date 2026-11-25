@@ -1,0 +1,663 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Creating a Standard Search">
+      <meta name="abstract" content="Learn how to create a Standard search.">
+      <meta name="description" content="Learn how to create a Standard search.">
+      <meta name="DC.subject" content="standard search, creating, search type, standard, application search, Standard, create search configuration, editing search configuration, search configuration, editing Link attributes, editing, creating search page, search page, creating, search, creating Standard search page">
+      <meta name="keywords" content="standard search, creating, search type, standard, application search, Standard, create search configuration, editing search configuration, search configuration, editing Link attributes, editing, creating search page, search page, creating, search, creating Standard search page">
+      <meta name="DC.Relation" scheme="URI" content="adding-search-to-an-application.html#GUID-505C95D2-4F04-48FA-8BBD-95D87AAD51EF">
+      <meta name="DC.Relation" scheme="URI" content="creating-a-standard-search.html#GUID-325CC5EB-6065-481E-9F9A-AFC76F8459CF">
+      <meta name="DC.Relation" scheme="URI" content="creating-a-standard-search.html#GUID-9999ED49-65BF-443D-A428-38294E943143">
+      <meta name="DC.Relation" scheme="URI" content="creating-a-standard-search.html#GUID-1A5697E2-079C-4616-9644-15FBC9BCBEB4">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Topic">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-14FB9AE8-58B9-42EE-8006-90FE898FAA59">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn how to create a Standard search.">
+      <meta name="description" content="Learn how to create a Standard search.">
+      <title>Creating a Standard Search</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Learn how to create a Standard search.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="about-creating-application-searches.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-an-oracle-text-search.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Creating a Standard Search","description":"Learn how to create a Standard search.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="about-creating-application-searches.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-an-oracle-text-search.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-14FB9AE8-58B9-42EE-8006-90FE898FAA59" name="GUID-14FB9AE8-58B9-42EE-8006-90FE898FAA59"></a>
+         
+         <h2 id="HTMDB-GUID-14FB9AE8-58B9-42EE-8006-90FE898FAA59" class="sect2"><span class="enumeration_section">16.9.3 </span>Creating a Standard Search
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Learn how to create a Standard search.</p>
+               <p>You can create Standard search on a searchable data source which can be a table, a SQL
+            query, or REST Data Source.</p>
+               <p>This topic demonstrates how to create a search page on two different tables
+            available in the sample dataset, Project Data. This example assumes you have already
+            created an application and two interactive reports built on
+                <code class="codeph">EBA_PROJECTS</code> and <code class="codeph">EBA_PROJECT_TASKS</code> tables.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="creating-a-standard-search.html#GUID-325CC5EB-6065-481E-9F9A-AFC76F8459CF">Creating Standard Search Configurations</a><br>Create two Standard search configurations based on two separate         tables.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-a-standard-search.html#GUID-9999ED49-65BF-443D-A428-38294E943143">Editing Search Configurations to Include Links</a><br>Learn how to edit search configurations to include links to existing         pages.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-a-standard-search.html#GUID-1A5697E2-079C-4616-9644-15FBC9BCBEB4">Creating a Standard Search Page</a><br>Create a Search page by running the Create Page Wizard.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-14FB9AE8-58B9-42EE-8006-90FE898FAA59__GUID-D91A81F9-F757-4F6F-A0DA-AA9CD593BF55">
+                  <p class="notep1">See Also:</p><a href="../aeutl/using-sample-datasets.html#AEUTL-GUID-FCBF7637-0FF9-4135-98FB-EC7155334EB4" target="_blank">Using Sample Datasets</a> in <span><cite>Oracle APEX SQL Workshop
+                                        Guide</cite></span></div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="adding-search-to-an-application.html#GUID-505C95D2-4F04-48FA-8BBD-95D87AAD51EF" title="Add declarative searches to an application by creating a search configuration and then a search page that displays the search results.">Adding Search to an Application</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-325CC5EB-6065-481E-9F9A-AFC76F8459CF" name="GUID-325CC5EB-6065-481E-9F9A-AFC76F8459CF"></a><h3 id="HTMDB-GUID-325CC5EB-6065-481E-9F9A-AFC76F8459CF" class="sect3"><span class="enumeration_section">16.9.3.1 </span>Creating Standard Search
+        Configurations
+               </h3>
+               <div>
+                  <p>Create two Standard search configurations based on two separate
+        tables.</p>
+                  <div class="section">
+                     
+                     <p>A <strong class="term">search configuration</strong> contains information
+                about a searchable data source. In this task, you create two search configurations
+                and then a search page using the Create Page Wizard. The first search configuration
+                maps to the <code class="codeph">EBA_PROJECTS</code> table. The second search configuration
+                maps to the <code class="codeph">EBA_PROJECT_TASKS</code> table. Both tables are available in
+                the Project Data sample dataset.
+                     </p>
+                     
+                  </div>
+                  <div class="p">
+                     
+                     <div class="infoboxnote" id="GUID-325CC5EB-6065-481E-9F9A-AFC76F8459CF__GUID-6484E1F5-5AAD-4F66-89FC-5C3B17969304">
+                        <p class="notep1">Note:</p>This task assumes you have already
+                created an application and two interactive reports built on
+                    <code class="codeph">EBA_PROJECTS</code> and <code class="codeph">EBA_PROJECT_TASKS</code> tables
+                available in the sample dataset, Project Data.
+                     </div>
+                     
+                  </div>
+                  <p>To create two Standard search configurations:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Create an application.</span></li>
+                     <li class="stepexpand"><span>Access the Search Configurations page:</span><ol type="a" id="GUID-325CC5EB-6065-481E-9F9A-AFC76F8459CF__SUBSTEPS_LFC_DJZ_N5B">
+                           <li class="substepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span></li>
+                           <li class="substepexpand"><span>Under Navigation and Search, click <span class="uicontrol bold">Search
+                                Configurations</span>.</span><div>The Search Configurations page appears.</div>
+                           </li>
+                        </ol>
+                     </li>
+                  </ol>
+                  <p>Create the first search configuration that maps to the
+                    <code class="codeph">EBA_PROJECTS</code> table:
+                  </p>
+                  <ol start="3">
+                     <li class="stepexpand"><span>On the Search Configurations page, click <span class="uicontrol bold">Create</span>.</span><div>The Create Search Configuration Wizard appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Detail:</span><ol type="a" id="GUID-325CC5EB-6065-481E-9F9A-AFC76F8459CF__SUBSTEPS_TNJ_YQP_45B">
+                           <li class="substepexpand"><span>Name - Enter a name for the search configuration (for example,
+                                <code class="codeph">Search Projects</code>).</span></li>
+                           <li class="substepexpand"><span>Search Type - Select a type of search. Options include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-325CC5EB-6065-481E-9F9A-AFC76F8459CF__UL_KWN_ZQP_45B">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Standard</span> - Defines a
+                                        searchable data source such as a table, SQL Query, or REST
+                                        Data Source. Searches is executed by a SQL Query using
+                                            <code class="codeph">LIKE</code> expressions.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Oracle TEXT</span> - Define a
+                                        searchable table or SQL Query which already has an Oracle
+                                        TEXT index created. Search is executed by using Oracle TEXT
+                                        functionality, which provides linguistic and fuzzy search
+                                        capabilities.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Oracle Ubiquitous Search</span>
+                                        - Search using an Oracle ubiquitous search index (requires
+                                        Oracle Database <span>23ai</span> or later). The index must be located in the parsing
+                                        schema of the application.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">List</span> - Search within a
+                                        selected List from Shared Components.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                                 <p>For this example, select
+                                <span class="uicontrol bold">Standard</span>. 
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Source:</span><ol type="a" id="GUID-325CC5EB-6065-481E-9F9A-AFC76F8459CF__SUBSTEPS_JPT_PDP_45B">
+                           <li class="substepexpand"><span>Data Source - Select the Data Source for the search configuration.
+                            Options include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-325CC5EB-6065-481E-9F9A-AFC76F8459CF__UL_QXK_SDP_45B">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Local Database</span> - Data is sourced from a local
+        database.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">REST Enabled SQL</span> -
+        Data is sourced from a remote database, where the connection is defined using REST Enabled
+        SQL. To create or maintain REST Enabled SQL references, navigate to <span class="uicontrol bold">Shared
+          Components</span>, <span class="uicontrol bold">REST Enabled SQL Databases</span>.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">REST Source</span> - Data is sourced from
+        a RESTful web service defined using REST Data Sources. To create or maintain REST Data
+        Sources, navigate to <span class="uicontrol bold">Shared Components</span>, <span class="uicontrol bold">REST Data
+          Sources</span>.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Duality View</span> - Data is sourced from a Duality
+        View Source defined using <span class="uicontrol bold">Duality Views</span> within Shared Components.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">JSON Source</span> - Data is sourced from a JSON Source
+        defined using <span class="uicontrol bold">JSON Sources</span> within Shared Components. JSON Sources
+        include tables with JSON columns or JSON Collection Tables.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                                 <p>The UI changes depending upon the Data Source you
+                                select. For this example, select <span class="uicontrol bold">Local
+                                    Database</span>.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Source Type - Specify the source type. UI changes depending on selected
+                            Source Type. For this example, select
+                            <span class="uicontrol bold">Table</span>.</span></li>
+                           <li class="substepexpand"><span>Table / View Owner - Select the owner of the table on which you are
+                            building the search configuration.</span></li>
+                           <li class="substepexpand"><span>Table / View Name - Select the table or view on which the search
+                            configuration is based (for example, select
+                                <code class="codeph">EBA_PROJECTS)</code>.</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Column Mapping:</span><ol type="a" id="GUID-325CC5EB-6065-481E-9F9A-AFC76F8459CF__SUBSTEPS_JV1_L4Z_N5B">
+                           <li class="substepexpand"><span>Primary Key Column - Select the primary key column for the search
+                            configuration data source (for example,
+                            <span class="uicontrol bold">ID</span>).</span></li>
+                           <li class="substepexpand"><span>Title Column - Select the column to be used as title (for example,
+                                <span class="uicontrol bold">NAME</span>).</span></li>
+                           <li class="substepexpand"><span>Description Column - Select the column to be used as the description
+                            (for example, <span class="uicontrol bold">DESCRIPTION</span>).</span></li>
+                           <li class="substepexpand"><span>Icon Source - Configure the icon that displays in the header of the
+                            search result. Options include: </span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-325CC5EB-6065-481E-9F9A-AFC76F8459CF__UL_BYF_LRZ_N5B">
+                                    <li><span class="uicontrol bold">Initials</span> - Use the Title
+                                    column to display the icon as initials.
+                                    </li>
+                                    <li><span class="uicontrol bold">CSS Classes</span> - Use the entered
+                                    CSS classes to display the icon.
+                                    </li>
+                                    <li><span class="uicontrol bold">Class Column</span> - Use the
+                                    selected column containing the icon CSS class to display the
+                                    icon.
+                                    </li>
+                                 </ul>
+                                 
+                                 <p>For this example, accept the default,
+                                    <span class="uicontrol bold">Initials</span>.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Search Configuration</span>.</span><div>
+                           
+                           <p>The search configuration is created and the Search Configuration,
+                        Edit page appears and displays the message <code class="codeph">Search configuration
+                            created</code>.
+                           </p>
+                           
+                        </div>
+                     </li>
+                  </ol>
+                  <p>Create a second search configuration that maps to the
+                    <code class="codeph">EBA_PROJECT_TASKS</code> table:
+                  </p>
+                  <ol start="8">
+                     <li class="stepexpand"><span>Click the <span class="uicontrol bold">Search Configurations</span> breadcrumb to return to
+                    the Search Configurations page.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create</span> on the Search Configurations page.</span><div>The Create Search Configuration Wizard appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Detail:</span><ol type="a" id="GUID-325CC5EB-6065-481E-9F9A-AFC76F8459CF__SUBSTEPS_NYP_KRP_45B">
+                           <li class="substepexpand"><span>Name - Enter a name for the search configuration (for example,
+                                <code class="codeph">Search Project Tasks</code>). This name displays in the
+                            search result.</span></li>
+                           <li class="substepexpand"><span>Search Type - Select a type of search.</span><div>
+                                 
+                                 <p>Since this example is built on a table, select
+                                    <span class="uicontrol bold">Standard</span>. 
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Source:</span><ol type="a" id="GUID-325CC5EB-6065-481E-9F9A-AFC76F8459CF__SUBSTEPS_AJS_JKW_45B">
+                           <li class="substepexpand"><span>Data Source - Select a Data Source for the search configuration. </span><div>
+                                 
+                                 <p>The UI changes depending upon the Data Source you
+                                select. For this example, select <span class="uicontrol bold">Local
+                                    Database</span>.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Source Type - Specify the source type. UI changes depending on selected
+                            Source Type. For this example, select
+                            <span class="uicontrol bold">Table</span>.</span></li>
+                           <li class="substepexpand"><span>Table / View Owner - Select the owner of the table on which you are
+                            building a search configuration.</span></li>
+                           <li class="substepexpand"><span>Table / View Name - Select the table or view on which the search
+                            configuration is based. For this example, select the
+                                <code class="codeph">EBA_PROJECT_TASKS</code> table.</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Column Mapping:</span><ol type="a" id="GUID-325CC5EB-6065-481E-9F9A-AFC76F8459CF__SUBSTEPS_RTM_3SP_45B">
+                           <li class="substepexpand"><span>Primary Key Column - Select the primary key column for the search
+                            configuration Data Source (for example,
+                            <span class="uicontrol bold">ID</span>).</span></li>
+                           <li class="substepexpand"><span>Title Column - Select the column to be used as title (for example,
+                                <span class="uicontrol bold">NAME</span>).</span></li>
+                           <li class="substepexpand"><span>Description Column - Select the column to be used as the description
+                            (for example, <span class="uicontrol bold">DESCRIPTION</span>).</span></li>
+                           <li class="substepexpand"><span>Icon Source - Select the type for the icon that is displayed in the
+                            header of the search result. </span><div>
+                                 
+                                 <p>For this example, accept the default,
+                                    <span class="uicontrol bold">Initials</span>.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Search Configuration</span>.</span><div>
+                           
+                           <p>The search configuration is created and the Search Configuration,
+                        Edit page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click the <span class="uicontrol bold">Search Configurations</span> breadcrumb to return to
+                    the Search Configurations page.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-a-standard-search.html#GUID-14FB9AE8-58B9-42EE-8006-90FE898FAA59" title="Learn how to create a Standard search.">Creating a Standard Search</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-9999ED49-65BF-443D-A428-38294E943143" name="GUID-9999ED49-65BF-443D-A428-38294E943143"></a><h3 id="HTMDB-GUID-9999ED49-65BF-443D-A428-38294E943143" class="sect3"><span class="enumeration_section">16.9.3.2 </span>Editing Search Configurations to Include
+        Links
+               </h3>
+               <div>
+                  <p>Learn how to edit search configurations to include links to existing
+        pages.</p>
+                  <div class="p">
+                     
+                     <div class="infoboxnote" id="GUID-9999ED49-65BF-443D-A428-38294E943143__GUID-C8B2330E-7E06-46B4-8CD5-FC0354E83938">
+                        <p class="notep1">Note:</p>This example assumes
+                you have previously created the search configurations described in <a href="creating-a-standard-search.html#GUID-325CC5EB-6065-481E-9F9A-AFC76F8459CF" title="Create two Standard search configurations based on two separate tables.">Creating Standard Search Configurations</a>.
+                     </div>
+                     
+                  </div>
+                  <p>To edit search configurations to include links:</p>
+                  <ol>
+                     <li><span>Access the Search Configurations page:</span><ol type="a" id="GUID-9999ED49-65BF-443D-A428-38294E943143__SUBSTEPS_PWK_PPP_45B">
+                           <li class="substepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span></li>
+                           <li class="substepexpand"><span>Under Navigation and Search, click <span class="uicontrol bold">Search
+                                Configuration</span>.</span><div>The Search Configurations page appears.</div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Edit the Search Projects search configuration to link to a report on another
+                    page:</span><ol type="a" id="GUID-9999ED49-65BF-443D-A428-38294E943143__SUBSTEPS_JZW_RX5_45B">
+                           <li class="substepexpand"><span>Select the search configuration (for example, <span class="uicontrol bold">Search
+                                Projects</span>).</span></li>
+                           <li class="substepexpand"><span>Link - Select the type of link. The UI changes depending upon the
+                                <span class="uicontrol bold">Link Type</span> you select. </span><div>For this example, select <span class="uicontrol bold">Redirect to Page
+                                in this Application</span>.
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Page - Select or enter the page to redirect to (for example,
+                                <span class="uicontrol bold">2</span>).</span><div>
+                                 
+                                 <div class="figure" id="GUID-9999ED49-65BF-443D-A428-38294E943143__FIG_A2T_1LL_DZB"><br><div class="imageleft"><img class="imageleft" id="GUID-9999ED49-65BF-443D-A428-38294E943143__IMAGE_B2T_1LL_DZB" height="517" width="1042" src="img/standard_search_link.png" alt="Description of standard_search_link.png follows" title="Description of standard_search_link.png follows" longdesc="img_text/standard_search_link.html"><br><a href="img_text/standard_search_link.html">Description of the illustration standard_search_link.png</a></div><br></div>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Configure the remaining attributes as needed. For example, you can use
+                                <span class="uicontrol bold">Set these items</span> in conjunction with
+                                <span class="uicontrol bold">With these values</span> to pass values from the
+                            search page to the target page.</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-9999ED49-65BF-443D-A428-38294E943143__UL_ULS_CVL_2VB">
+                                    <li>reset pagination for this page - Select this option to reset the
+                                    pagination that is linked to.</li>
+                                    <li>Request - Enter text that you would like to set the built-in
+                                    application item <code class="codeph">REQUEST</code>. This is also the item
+                                    that is set with the name of a button that was clicked.
+                                    </li>
+                                    <li>Clear Cache - Enter the page numbers, separated by commas, for
+                                    which you would like the user's session state to be cleared (for
+                                    example: <code class="codeph">10,11,12</code>). You can also reset a
+                                    collection by passing including a collection name.
+                                    </li>
+                                    <li>Set these items - Enter the list of application item names,
+                                    separated by a comma, for which you would like to set the
+                                    session state.</li>
+                                    <li>With these values - Enter a comma delimited list of
+                                    values for the items specified in Set these items. You can
+                                    specify static values or substitution syntax. Consider the
+                                    following examples: 
+                                       <ul style="list-style-type: disc;" id="GUID-9999ED49-65BF-443D-A428-38294E943143__UL_MB5_W3G_JXB">
+                                          <li><code class="codeph">&amp;APP_ITEM_NAME.</code></li>
+                                          <li><code class="codeph">&amp;COL_NAME.</code></li>
+                                          <li><code class="codeph">&amp;COL1_NAME.,&amp;COL2_NAME.</code></li>
+                                       </ul>
+                                       <p>Item values passed to <code class="codeph">f?p=
+                                        </code>in the URL must never contain a colon (:). Item
+                                        values may also not contain commas unless you enclose the
+                                        entire value in backslash characters. This is useful when
+                                        decimal values must be passed where the NLS decimal
+                                        separator character is a comma. For
+                                        example:
+                                       </p><code class="codeph">\1234,56\</code></li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span><div>The Search Configurations page appears with the
+                            message <code class="codeph">Search Configuration updated</code>.
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Edit the <span class="uicontrol bold">Search Project Tasks</span> search configuration to
+                    link to a report on another page:</span><ol type="a" id="GUID-9999ED49-65BF-443D-A428-38294E943143__SUBSTEPS_N1J_NZW_45B">
+                           <li class="substepexpand"><span>Select the search configuration (for example, <span class="uicontrol bold">Search Project
+                                Tasks</span>).</span></li>
+                           <li class="substepexpand"><span>Link - Select the type of link. The UI changes depending upon the
+                                <span class="uicontrol bold">Link Type</span> you select. </span><div>For this example, select <span class="uicontrol bold">Redirect to Page in this
+                                Application</span>.
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Page - Select or enter the page to redirect to (for example,
+                                <span class="uicontrol bold">4</span>).</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span><div>
+                                 
+                                 <p>The Search Configurations page appears with the message
+                                    <code class="codeph">Search Configuration updated</code>.
+                                 </p>
+                                 
+                                 <div class="figure" id="GUID-9999ED49-65BF-443D-A428-38294E943143__FIG_QFK_QSK_W5B"><img id="GUID-9999ED49-65BF-443D-A428-38294E943143__IMAGE_RFK_QSK_W5B" height="492" width="917" src="img/standard_search_config_updated.png" alt="Description of standard_search_config_updated.png follows" title="Description of standard_search_config_updated.png follows" longdesc="img_text/standard_search_config_updated.html"><br><a href="img_text/standard_search_config_updated.html">Description of the illustration standard_search_config_updated.png</a></div>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Click the <span class="uicontrol bold">Application ID</span> breadcrumb to return to the
+                    Application home page.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-a-standard-search.html#GUID-14FB9AE8-58B9-42EE-8006-90FE898FAA59" title="Learn how to create a Standard search.">Creating a Standard Search</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-1A5697E2-079C-4616-9644-15FBC9BCBEB4" name="GUID-1A5697E2-079C-4616-9644-15FBC9BCBEB4"></a><h3 id="HTMDB-GUID-1A5697E2-079C-4616-9644-15FBC9BCBEB4" class="sect3"><span class="enumeration_section">16.9.3.3 </span>Creating a Standard Search Page
+               </h3>
+               <div>
+                  <p>Create a Search page by running the Create Page Wizard.</p>
+                  <div class="section">
+                     
+                     <p>Whether you are creating a Standard search or Oracle TEXT search, creating a search
+                page by running the Create Page Wizard involves the same steps. The Create Page
+                Wizard creates a Search field for you and prompts you to select search
+                configurations. Note that you can also add additional search configurations later in
+                Page Designer.</p>
+                     
+                     <p>A Search page features a Search field and a Search Results region. In
+                Page Designer, the Search Results region contains  <strong class="term">Search
+                    Sources</strong> which map to the search configurations defined in Shared
+                Components.
+                     </p>
+                     
+                  </div>
+                  <p>To create a search page by running the Create Page Wizard: </p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Application home page:</span><ol type="a" id="GUID-1A5697E2-079C-4616-9644-15FBC9BCBEB4__SUBSTEPS_OFZ_D2X_45B">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select the application. </span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On the Application home page, click <span class="uicontrol bold">Create Page</span>.</span><div><span class="uicontrol bold">Create a Page</span> appears and features three
+                    tabs: <span class="uicontrol bold">Component</span>, <span class="uicontrol bold">Feature</span>, and
+                        <span class="uicontrol bold">Legacy Pages</span>.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under Component, select <span class="uicontrol bold">Search Page</span>.</span></li>
+                     <li class="stepexpand"><span>Page Definition:</span><ol type="a" id="GUID-1A5697E2-079C-4616-9644-15FBC9BCBEB4__SUBSTEPS_AC3_GJ1_45B">
+                           <li class="substepexpand"><span>Page Number - The page number is an integer value that identifies a
+                            page within an application. </span></li>
+                           <li class="substepexpand"><span>Name - Specify a text name for this page (for example, <code class="codeph">Search
+                                Projects - Standard</code>).</span><div>
+                                 
+                                 <p>This text is also used for page
+                                    <span class="uicontrol bold">Title</span>. After page creation, you can
+                                modify the <span class="uicontrol bold">Title</span> in Page Designer.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Page Mode - Identify the page mode. Accept the default,
+                                <span class="uicontrol bold">Normal</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Search Configurations - Select the search configurations to be used by this
+                    page (for example, <span class="uicontrol bold">Search Project Tasks</span> and
+                        <span class="uicontrol bold">Search Projects</span>).</span><div>
+                           
+                           <div class="figure" id="GUID-1A5697E2-079C-4616-9644-15FBC9BCBEB4__FIG_G4Y_F5K_W5B"><img id="GUID-1A5697E2-079C-4616-9644-15FBC9BCBEB4__IMAGE_H4Y_F5K_W5B" height="537" width="800" src="img/standard_create_search_page.png" alt="Description of standard_create_search_page.png follows" title="Description of standard_create_search_page.png follows" longdesc="img_text/standard_create_search_page.html"><br><a href="img_text/standard_create_search_page.html">Description of the illustration standard_create_search_page.png</a></div>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Navigation - Accept the default and enable <span class="uicontrol bold">Use
+                        Breadcrumb</span> and <span class="uicontrol bold">Use Navigation</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Page</span>.</span><div>
+                           
+                           <p>Page Designer appears with the message, <code class="codeph">Search Page page
+                            created</code></p>
+                           
+                           <div class="figure" id="GUID-1A5697E2-079C-4616-9644-15FBC9BCBEB4__FIG_C3T_FVK_W5B"><img id="GUID-1A5697E2-079C-4616-9644-15FBC9BCBEB4__IMAGE_D3T_FVK_W5B" height="562" width="1091" src="img/standard_search_page_created.png" alt="Description of standard_search_page_created.png follows" title="Description of standard_search_page_created.png follows" longdesc="img_text/standard_search_page_created.html"><br><a href="img_text/standard_search_page_created.html">Description of the illustration standard_search_page_created.png</a></div>
+                           
+                           <p>In the Rendering tab, notice the page item,
+                            <span class="uicontrol bold">P6_SEARCH</span> and the <span class="uicontrol bold">Search
+                            Results</span> region. <span class="uicontrol bold">P6_SEARCH</span> is the
+                        search field which enables users to submit search terms. The
+                            <span class="uicontrol bold">Search Results</span> region contains both the search
+                        results and two Search Sources which map to search configurations maintained
+                        in Shared Components. You can further refine and control the search display
+                        and behavior by editing attributes in the Property Editor.
+                           </p>
+                           
+                           <p>Also notice that if you select a search source, Search Source
+                        attributes display in the Property Editor.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Run and test the page:</span><ol type="a" id="GUID-1A5697E2-079C-4616-9644-15FBC9BCBEB4__SUBSTEPS_TRL_YLW_45B">
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Save and Run Page</span>.</span><div>The Search Projects page appears.</div>
+                           </li>
+                           <li class="substepexpand"><span>In the search field, enter a search (for example, <code class="codeph">web
+                                development</code>) and press <span class="uicontrol bold">Enter</span>.</span></li>
+                        </ol>
+                        <div>
+                           
+                           <p>The search results appear.</p>
+                           
+                           <div class="figure" id="GUID-1A5697E2-079C-4616-9644-15FBC9BCBEB4__FIG_BTD_M1L_W5B"><img id="GUID-1A5697E2-079C-4616-9644-15FBC9BCBEB4__IMAGE_CTD_M1L_W5B" height="524" width="1046" src="img/standard_search_runtime.png" alt="Description of standard_search_runtime.png follows" title="Description of standard_search_runtime.png follows" longdesc="img_text/standard_search_runtime.html"><br><a href="img_text/standard_search_runtime.html">Description of the illustration standard_search_runtime.png</a></div>
+                           
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-a-standard-search.html#GUID-14FB9AE8-58B9-42EE-8006-90FE898FAA59" title="Learn how to create a Standard search.">Creating a Standard Search</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

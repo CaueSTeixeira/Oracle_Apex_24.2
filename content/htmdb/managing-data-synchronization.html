@@ -1,0 +1,656 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Data Synchronization">
+      <meta name="abstract" content="Enable Data Synchronization to keep the contents of a local table automatically in sync with the data from a REST service.">
+      <meta name="description" content="Enable Data Synchronization to keep the contents of a local table automatically in sync with the data from a REST service.">
+      <meta name="DC.subject" content="REST Data Sources, data synchronization, REST synchronization, managing, about, importing, exporting, REST synchronization, configuring, executing, viewing existing in app, REST Data synchronization settings, , clearing, Synchronize Usage report, viewing report, REST Synchronization log, about, log">
+      <meta name="keywords" content="REST Data Sources, data synchronization, REST synchronization, managing, about, importing, exporting, REST synchronization, configuring, executing, viewing existing in app, REST Data synchronization settings, , clearing, Synchronize Usage report, viewing report, REST Synchronization log, about, log">
+      <meta name="DC.Relation" scheme="URI" content="managing-REST-data-sources.html#GUID-93D7A596-03A9-48AF-9FC9-6538BCC25DED">
+      <meta name="DC.Relation" scheme="URI" content="managing-data-synchronization.html#GUID-8F432D1A-B3DC-43E0-A964-55B830AFCBFB">
+      <meta name="DC.Relation" scheme="URI" content="managing-data-synchronization.html#GUID-380EF5B0-1836-4887-83F1-9F7126872A42">
+      <meta name="DC.Relation" scheme="URI" content="managing-data-synchronization.html#GUID-A6E59B18-A41A-4604-9C15-5426C8732E18">
+      <meta name="DC.Relation" scheme="URI" content="managing-data-synchronization.html#GUID-20948BC7-56F3-4F86-AA61-64EDC75CCFFF">
+      <meta name="DC.Relation" scheme="URI" content="managing-data-synchronization.html#GUID-277C0ED2-2611-4EB4-8E6A-6839C26ED9E0">
+      <meta name="DC.Relation" scheme="URI" content="managing-data-synchronization.html#GUID-654DA5FD-0A30-4A4E-B417-8F7BC3F05AF4">
+      <meta name="DC.Relation" scheme="URI" content="managing-data-synchronization.html#GUID-BC31C387-C1CC-4118-9488-71FCEA5F572C">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-107C7CB8-F3DF-4C82-89E5-F4BFE6750096">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Enable Data Synchronization to keep the contents of a local table automatically in sync with the data from a REST service.">
+      <meta name="description" content="Enable Data Synchronization to keep the contents of a local table automatically in sync with the data from a REST service.">
+      <title>Managing Data Synchronization</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Enable Data Synchronization to keep the contents of a local table automatically in sync with the data from a REST service.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-REST-source-catalogs.html" title="Previous" type="text/html">
+      <link rel="next" href="viewing-REST-data-source-utilization.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Managing Data Synchronization","description":"Enable Data Synchronization to keep the contents of a local table automatically in sync with the data from a REST service.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-REST-source-catalogs.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="viewing-REST-data-source-utilization.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-107C7CB8-F3DF-4C82-89E5-F4BFE6750096" name="GUID-107C7CB8-F3DF-4C82-89E5-F4BFE6750096"></a><a id="4000:1951"></a><a id="4000:1955"></a>
+         
+         <h2 id="HTMDB-GUID-107C7CB8-F3DF-4C82-89E5-F4BFE6750096" class="sect2"><span class="enumeration_section">18.4.10 </span>Managing Data Synchronization
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Enable Data Synchronization to keep the contents of a local table automatically in sync with the data from a REST service. </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="managing-data-synchronization.html#GUID-8F432D1A-B3DC-43E0-A964-55B830AFCBFB">About Data Synchronization</a><br>Data Synchronization enables developers to automatically sync the contents         of a local table with the data from a REST service.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-data-synchronization.html#GUID-380EF5B0-1836-4887-83F1-9F7126872A42">About Importing and Exporting REST Source Synchronizations</a><br>After importing an application, REST Source Synchronizations are disabled.         Learn how to enable synchronization after importing.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-data-synchronization.html#GUID-A6E59B18-A41A-4604-9C15-5426C8732E18">Configuring REST Synchronization</a><br>Configure REST synchronization to automatically sync a local table with data         from a REST service.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-data-synchronization.html#GUID-20948BC7-56F3-4F86-AA61-64EDC75CCFFF">Viewing REST Synchronizations Defined in an App</a><br>View REST Synchronizations defined in the current application.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-data-synchronization.html#GUID-277C0ED2-2611-4EB4-8E6A-6839C26ED9E0">Clearing Synchronization Settings</a><br>Clear synchronization settings to stop synchronization processing and reset         all REST Data Source attributes related to synchronizations. 
+                  </li>
+                  <li class="ulchildlink"><a href="managing-data-synchronization.html#GUID-654DA5FD-0A30-4A4E-B417-8F7BC3F05AF4">Viewing Synchronize Usage</a><br>View a report of application components currently using the local         synchronization table as their data source.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-data-synchronization.html#GUID-BC31C387-C1CC-4118-9488-71FCEA5F572C">Managing the REST Synchronization Log</a><br>Learn about the REST Synchronization log.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-107C7CB8-F3DF-4C82-89E5-F4BFE6750096__GUID-9BA2F254-3852-4694-9C63-315E285A701A">
+                  <p class="notep1">See Also:</p>
+                  
+                  <p><a href="../aeadm/configuring-background-jobs.html#AEADM-GUID-E0AEDBAC-108B-4BA2-A02D-16472C3C9ADE" target="_blank">Configuring Background Jobs</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                  
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-REST-data-sources.html#GUID-93D7A596-03A9-48AF-9FC9-6538BCC25DED" title="Oracle APEX REST Data Sources enable developers to access to REST services or generic JSON data feeds in applications.">Managing REST Data Sources</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-8F432D1A-B3DC-43E0-A964-55B830AFCBFB" name="GUID-8F432D1A-B3DC-43E0-A964-55B830AFCBFB"></a><h3 id="HTMDB-GUID-8F432D1A-B3DC-43E0-A964-55B830AFCBFB" class="sect3"><span class="enumeration_section">18.4.10.1 </span>About Data Synchronization
+               </h3>
+               <div>
+                  <p>Data Synchronization enables developers to automatically sync the contents
+        of a local table with the data from a REST service.</p>
+                  <p>You can trigger <strong class="term">Data Synchronization</strong> manually or on a
+            regular schedule, using a scheduler job. Note that the <code class="codeph">CREATE JOB</code>
+            privilege must be granted to the application's parsing schema in order to execute REST
+            source synchronizations on schedule.
+                  </p>
+                  <p><span>Oracle APEX</span> can create the local table based on the visible columns in the REST Data Source <strong class="term">Data Profile</strong>. Since the table is a visible object in the database schema, developers can add indexes, change physical properties, or even add more columns.
+                  </p>
+                  <p>If the table is not in sync with the Data Profile, Data Synchronization continues to work for columns present in both the table and the Data Profile (other columns are ignored). However, <span>APEX</span> generates SQL DDL statements to sync table columns back to the Data Profile. These statements can be added to the application as supporting objects.
+                  </p>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-8F432D1A-B3DC-43E0-A964-55B830AFCBFB__GUID-F3EA967D-7B7E-468F-AA2E-F5BDD10049C2">Data Synchronization  Uses Cases</p>
+                     
+                     
+                     <p>Common use cases using REST Data Source Data Synchronization include:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-8F432D1A-B3DC-43E0-A964-55B830AFCBFB__UL_YTQ_W5V_3MB">
+                        <li>
+                           
+                           <p><span class="bold">Provide efficient reporting on large data sets coming from a REST
+                            service</span></p>
+                           
+                           <p>Some REST Services can return large amounts of result data that
+                        includes pagination. If a reporting requirement needs larger data sets, this
+                        could result to multiple HTTP requests and poorer response times. Also no
+                        indexes or other database features can be used to speed up reporting
+                        queries. In this case, Oracle recommends enabling Data Synchronization to
+                        sync the remote data to a local tables and have any reports based on local
+                        tables.</p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="bold">Collect data from REST Services for consumption by PL/SQL packages or
+                            other logic</span></p>
+                           
+                           <p>Having data from the REST service replicated in a local table
+                        enables developers to perform all sorts of processing and create a wider
+                        variety of reports on local tables.</p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="bold">Collect data from a REST API over a longer period of time</span></p>
+                           
+                           <p>Some REST APIs only provide data for a recent time frame. For
+                        reporting on a larger time frame, Data Synchronization enables developers to
+                        fetch REST data and store it in a local table. Note that this use case also
+                        requires a "merge by primary key" capability since two subsequent REST
+                        requests will return an overlapping data set.</p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="bold">Utilize Intelligent caching for <span>APEX</span> components</span></p>
+                           
+                           <p>REST Data Sources already provide a caching mechanism: <span>APEX</span> caches the JSON response (or responses) as CLOBs in a caching table. If an <span>APEX</span> component uses the REST Data Source and the cache is not stale, the HTTP request is saved and the cached JSON is used. However, JSON still needs to be parsed (that is, large data sets lead to a lot of JSON parsing overhead). Also, indexes or other database technology cannot be used to speed up queries. Caching within a named local table creates a better level of caching since JSON is no longer parsed and the table can be optimized to support reporting queries.
+                           </p>
+                           
+                        </li>
+                     </ul>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-data-synchronization.html#GUID-107C7CB8-F3DF-4C82-89E5-F4BFE6750096" title="Enable Data Synchronization to keep the contents of a local table automatically in sync with the data from a REST service.">Managing Data Synchronization</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-380EF5B0-1836-4887-83F1-9F7126872A42" name="GUID-380EF5B0-1836-4887-83F1-9F7126872A42"></a><h3 id="HTMDB-GUID-380EF5B0-1836-4887-83F1-9F7126872A42" class="sect3"><span class="enumeration_section">18.4.10.2 </span>About Importing and Exporting REST Source
+        Synchronizations
+               </h3>
+               <div>
+                  <p>After importing an application, REST Source Synchronizations are disabled.
+        Learn how to enable synchronization after importing.</p>
+                  <div class="section">
+                     
+                     <p>Developers often import applications into a workspace multiple times, for versioning
+                or other purposes. If synchronizations were enabled during these imports, this would
+                lead to multiple instances of the synchronization running simultaneously which is
+                not the desired result. Therefore, <span>Oracle APEX</span> disables synchronizations after you import an application.
+                     </p>
+                     
+                     <p>You can activate synchronization directly in Shared Components, REST
+                Data Sources, Manage Synchronizations, or in Runtime Only environment by using the
+                following PL/SQL block as shown in the following examples:</p>
+                  </div>
+                  <div class="example" id="GUID-380EF5B0-1836-4887-83F1-9F7126872A42__GUID-6540043B-03DC-43BC-802A-6C22D3107ACB">
+                     <p class="titleinexample">Example 18-1 Enable synchronization and start execution schedule immediately</p>
+                     
+                     <pre class="pre codeblock"><code>declare
+    l_app_id number := {new application ID};
+begin
+    apex_session.create_session(
+        p_app_id =&gt; l_app_id,
+        p_page_id =&gt; {one of the application pages},
+        p_username =&gt; '{workspace user}');
+
+    apex_rest_source_sync.enable(
+        p_application_id =&gt; l_app_id,
+        p_module_static_id =&gt; '{REST Source static ID}');
+end;</code></pre>
+                     </div>
+                  <div class="example" id="GUID-380EF5B0-1836-4887-83F1-9F7126872A42__GUID-C8928A3E-697C-4957-883D-0021008F61B0">
+                     <p class="titleinexample">Example 18-2 Enable synchronization and set next execution
+                timestamp explicitly</p><pre class="pre codeblock"><code>declare
+    l_app_id number := {new application ID};
+begin
+    apex_session.create_session(
+        p_app_id =&gt; l_app_id,
+        p_page_id =&gt; {one of the application pages},
+        p_username =&gt; '{workspace user}');
+
+    apex_rest_source_sync.reschedule(
+        p_application_id =&gt; l_app_id,
+        p_module_static_id =&gt; '{REST Source static ID}');
+        p_next_run_at =&gt; trunc( sysdate + 1 ), -- next midnight
+end;</code></pre></div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-data-synchronization.html#GUID-107C7CB8-F3DF-4C82-89E5-F4BFE6750096" title="Enable Data Synchronization to keep the contents of a local table automatically in sync with the data from a REST service.">Managing Data Synchronization</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-A6E59B18-A41A-4604-9C15-5426C8732E18" name="GUID-A6E59B18-A41A-4604-9C15-5426C8732E18"></a><h3 id="HTMDB-GUID-A6E59B18-A41A-4604-9C15-5426C8732E18" class="sect3"><span class="enumeration_section">18.4.10.3 </span>Configuring REST Synchronization
+               </h3>
+               <div>
+                  <p>Configure REST synchronization to automatically sync a local table with data
+        from a REST service.</p>
+                  <div class="section">
+                     
+                     <p>To create a new REST Synchronization, first create a new REST Data Source and then
+                click <span class="uicontrol bold">Manage Synchronization</span> to configure the details.
+                     </p>
+                     
+                  </div>
+                  <p>To configure data synchronization:</p>
+                  <ol id="GUID-A6E59B18-A41A-4604-9C15-5426C8732E18__STEPS_C54_DMQ_3MB">
+                     <li class="stepexpand"><span>Navigate to Shared Components:</span><ol type="a" id="GUID-A6E59B18-A41A-4604-9C15-5426C8732E18__SUBSTEPS_Z21_SWZ_RCC">
+                           <li><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span></li>
+                        </ol>
+                        <div>
+                           
+                           <p>The Shared Components page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>View the REST Data Source:</span><ol type="a" id="GUID-A6E59B18-A41A-4604-9C15-5426C8732E18__SUBSTEPS_HRY_G11_SCC">
+                           <li><span>On the Shared Components page, find Data Sources and select
+                                <span class="uicontrol bold">REST Data Sources</span>. </span></li>
+                           <li><span>On the REST Data Sources page, select the REST Source Name.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Synchronization</span> .</span><div>The REST Synchronization page appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Under Details:</span><ol type="a" id="GUID-A6E59B18-A41A-4604-9C15-5426C8732E18__SUBSTEPS_QZY_WJY_3MB">
+                           <li class="substepexpand"><span>Local Table Owner - Select the schema of the local table to synchronize
+                            data to. By default, the application Parsing Schema is used.</span></li>
+                           <li class="substepexpand"><span>Synchronize to - Select either <span class="uicontrol bold">New Table</span> or
+                                <span class="uicontrol bold">Existing Table</span>.</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-A6E59B18-A41A-4604-9C15-5426C8732E18__UL_J4R_YK1_SCC">
+                                    <li>If Existing Table:
+                                       <ul style="list-style-type: disc;" id="GUID-A6E59B18-A41A-4604-9C15-5426C8732E18__UL_VNC_CL1_SCC">
+                                          <li>Table Name - Select an existing table name.</li>
+                                          <li>Nested Rows - Select to synchronize data to the local
+                                            table.</li>
+                                          <li>Click <span class="uicontrol bold">Save</span>.
+                                          </li>
+                                       </ul>
+                                    </li>
+                                    <li>If <span class="uicontrol bold">New Table</span>:
+                                       <ul style="list-style-type: disc;" id="GUID-A6E59B18-A41A-4604-9C15-5426C8732E18__UL_XTH_ZK1_SCC">
+                                          <li>Table Name - Enter the name of a new table.</li>
+                                          <li>Nested Rows - Select Nested Rows to synchronize data to
+                                            the local table.
+                                             <p>If creating a new table,
+                                                the message <code class="codeph">Table does not exist</code>
+                                                appears. Click <span class="uicontrol bold">Create
+                                                Table</span>.
+                                             </p>
+                                          </li>
+                                          <li>Click <span class="uicontrol bold">Save</span>.
+                                          </li>
+                                       </ul>
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                              <div></div>
+                           </li>
+                           <li class="substepexpand"><span>Table Name - </span></li>
+                           <li class="substepexpand"><span>Synchronization Type - Select a synchronization type:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-A6E59B18-A41A-4604-9C15-5426C8732E18__UL_BCD_ZKY_3MB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Append</span> - Append rows to
+                                        the local table. This is typically used when no primary key
+                                        has been defined in the data profile.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Merge</span> - Merge rows into
+                                        the local table. To use this option, the data profile must
+                                        have a Primary Key defined. If a row for the given Primary
+                                        Key value exists, the row is updated.. Otherwise the row is
+                                        created.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Replace</span> - Empty the local
+                                        table before loading new data.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Synchronization Schedule - Use the Database <strong class="term">Scheduler
+                                Calendaring syntax</strong> to define repeating synchronization
+                            schedules, such as<code class="codeph"> every Tuesday and Friday at 4:00
+                                p.m.</code> or <code class="codeph">the second Wednesday of every
+                                month</code>. </span><div>
+                                 
+                                 <p>You can enter calendaring syntax manually or declaratively by using
+                                the Interval Builder to build simple expressions. To use the
+                                Interval Builder, click the <span class="uicontrol bold">Wrench</span> icon. 
+                                 </p>
+                                 
+                                 <p>For more complex execution schedules, review details about the
+                                Scheduler Calendaring Syntax in DBMS_SCHEDULER PL/SQL package, and
+                                provide your expression manually.</p>
+                                 
+                                 <div class="infoboxnote" id="GUID-A6E59B18-A41A-4604-9C15-5426C8732E18__GUID-DD911C87-B1A9-489E-A3D6-8FF63CEB92AF">
+                                    <p class="notep1">Note:</p>
+                                    
+                                    <p>To learn more about scheduler calendaring syntax,
+                                    see <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmdb&id=ARPLS-GUID-73622B78-EFF4-4D06-92F5-E358AB2D58F3" target="_blank">DBMS_SCHEDULER
+                                        Operational Notes</a> in <span><cite>Oracle Database PL/SQL
+                                        Packages and Types Reference</cite></span></p>
+                                    
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Steps - Click <span class="uicontrol bold">Add Step</span> to pass parameter values or
+                    specific external filters to the REST Service. </span><div>If no step is defined, the REST Data Source will be invoked
+                    once, with default parameters. If steps are defined, <span>APEX</span> will invoke the REST Data Source once for each step, and pass the configured
+                    parameters.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under Advanced Settings:</span><ol type="a" id="GUID-A6E59B18-A41A-4604-9C15-5426C8732E18__SUBSTEPS_JJF_V1Z_3MB">
+                           <li class="substepexpand"><span>Commit Interval - Specify the commit interval to use during data synchronization. If not specified, the whole synchronization will be one transaction, with a commit after the last row. If an interval is specified, <span>APEX</span> will commit each time after the specified amount of rows have been processed.</span></li>
+                           <li class="substepexpand"><span>HTTP Request Limit - If required, provide a maximum number of HTTP
+                            requests to make for each synchronization step. If this limit is
+                            exceeded, synchronization will stop and logged as
+                                <code class="codeph">Incomplete</code>.</span><div>Note that due to the actual execution method,
+                            synchronization will exceed this limit by one request. For example, if
+                            you provide a limit of 10, synchronization will stop after the 11th
+                            request has been made.</div>
+                           </li>
+                           <li class="substepexpand"><span>Enable Simple Rate Limiting - When enabled, <span>APEX</span> ensures that only a limited amount of HTTP requests is executed within the given time frame. This rate limiting is purely based on the number of HTTP requests being executed within a time frame. It does not look into HTTP response headers returned by the REST service.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>To save your changes, click <span class="uicontrol bold">Save</span>.</span></li>
+                     <li class="stepexpand"><span>To execute REST Synchronization, click <span class="uicontrol bold">Save and
+                    Run</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-data-synchronization.html#GUID-107C7CB8-F3DF-4C82-89E5-F4BFE6750096" title="Enable Data Synchronization to keep the contents of a local table automatically in sync with the data from a REST service.">Managing Data Synchronization</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-20948BC7-56F3-4F86-AA61-64EDC75CCFFF" name="GUID-20948BC7-56F3-4F86-AA61-64EDC75CCFFF"></a><h3 id="HTMDB-GUID-20948BC7-56F3-4F86-AA61-64EDC75CCFFF" class="sect3"><span class="enumeration_section">18.4.10.4 </span>Viewing REST Synchronizations Defined in an
+        App
+               </h3>
+               <div>
+                  <p>View REST Synchronizations defined in the current application.</p>
+                  <p>To view REST Synchronizations defined for the current
+                application:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Select the application and navigate to Shared Components:</span><ol type="a" id="GUID-20948BC7-56F3-4F86-AA61-64EDC75CCFFF__SUBSTEPS_FJX_FVZ_RCC">
+                           <li><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span></li>
+                        </ol>
+                        <div>
+                           
+                           <p>The Shared Components page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under Tasks, click <span class="uicontrol bold">REST Synchronizations</span>.</span><div>The Synchronization page appears displaying REST
+                    synchronizations defined in the current application.</div>
+                     </li>
+                  </ol>
+                  <div class="section">
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-20948BC7-56F3-4F86-AA61-64EDC75CCFFF__GUID-66D62CDC-3C93-4F82-81DC-81C71835E61A">
+                     <p class="notep1">See Also:</p><a href="managing-data-synchronization.html#GUID-A6E59B18-A41A-4604-9C15-5426C8732E18" title="Configure REST synchronization to automatically sync a local table with data from a REST service.">Configuring REST Synchronization</a></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-data-synchronization.html#GUID-107C7CB8-F3DF-4C82-89E5-F4BFE6750096" title="Enable Data Synchronization to keep the contents of a local table automatically in sync with the data from a REST service.">Managing Data Synchronization</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-277C0ED2-2611-4EB4-8E6A-6839C26ED9E0" name="GUID-277C0ED2-2611-4EB4-8E6A-6839C26ED9E0"></a><h3 id="HTMDB-GUID-277C0ED2-2611-4EB4-8E6A-6839C26ED9E0" class="sect3"><span class="enumeration_section">18.4.10.5 </span>Clearing Synchronization Settings
+               </h3>
+               <div>
+                  <p>Clear synchronization settings to stop synchronization processing and reset
+        all REST Data Source attributes related to synchronizations. </p>
+                  <div class="section">
+                     
+                     <p>If <span>APEX</span> components are using the local synchronization table, they will be reset to use
+                the REST Service directly.
+                     </p>
+                     
+                  </div>
+                  <p>To clear synchronization settings:</p>
+                  <ol id="GUID-277C0ED2-2611-4EB4-8E6A-6839C26ED9E0__STEPS_ZQ3_BBV_KMB">
+                     <li><span>Select the application and navigate to Shared Components:</span><ol type="a" id="GUID-277C0ED2-2611-4EB4-8E6A-6839C26ED9E0__SUBSTEPS_G51_VW1_SCC">
+                           <li><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span></span></li>
+                        </ol>
+                     </li>
+                     <li><span>On the The Shared Components page,  select <span class="uicontrol bold">REST
+                        Synchronizations</span> from the Tasks list.</span></li>
+                     <li><span>Select the REST Synchronization.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Clear Settings</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-data-synchronization.html#GUID-107C7CB8-F3DF-4C82-89E5-F4BFE6750096" title="Enable Data Synchronization to keep the contents of a local table automatically in sync with the data from a REST service.">Managing Data Synchronization</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-654DA5FD-0A30-4A4E-B417-8F7BC3F05AF4" name="GUID-654DA5FD-0A30-4A4E-B417-8F7BC3F05AF4"></a><h3 id="HTMDB-GUID-654DA5FD-0A30-4A4E-B417-8F7BC3F05AF4" class="sect3"><span class="enumeration_section">18.4.10.6 </span>Viewing Synchronize Usage
+               </h3>
+               <div>
+                  <p>View a report of application components currently using the local
+        synchronization table as their data source.</p>
+                  <p>View the Synchronize Usage report:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Select the application and navigate to Shared Components:</span><ol type="a" id="GUID-654DA5FD-0A30-4A4E-B417-8F7BC3F05AF4__SUBSTEPS_HP1_PBB_SCC">
+                           <li><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span></span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On the The Shared Components page,  select <span class="uicontrol bold">REST
+                        Synchronizations</span> from the Tasks list.</span></li>
+                     <li class="stepexpand"><span>Select the REST Synchronization.</span></li>
+                     <li class="stepexpand"><span>Under Details, click <span class="uicontrol bold">Synchronize Usage</span>.</span><div>A report appears showing application components currently
+                    using the local synchronization table as their data source.</div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-data-synchronization.html#GUID-107C7CB8-F3DF-4C82-89E5-F4BFE6750096" title="Enable Data Synchronization to keep the contents of a local table automatically in sync with the data from a REST service.">Managing Data Synchronization</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-BC31C387-C1CC-4118-9488-71FCEA5F572C" name="GUID-BC31C387-C1CC-4118-9488-71FCEA5F572C"></a><h3 id="HTMDB-GUID-BC31C387-C1CC-4118-9488-71FCEA5F572C" class="sect3"><span class="enumeration_section">18.4.10.7 </span>Managing the REST Synchronization Log
+               </h3>
+               <div>
+                  <p>Learn about the REST Synchronization log.</p>
+               </div>
+               <div>
+                  <ul class="ullinks">
+                     <li class="ulchildlink"><a href="managing-data-synchronization.html#GUID-9FF6B829-1469-441E-BE49-E49F23CDA0AD">About the REST Synchronization Log</a><br>The REST Synchronization log records details of previously executed         synchronizations.
+                     </li>
+                     <li class="ulchildlink"><a href="managing-data-synchronization.html#GUID-6FF51727-B177-44E6-9399-CE09AD3D566A">Purging the Synchronization Log</a><br>Purge the REST Synchronization log.
+                     </li>
+                  </ul>
+                  <div class="infoboxnotealso" id="GUID-BC31C387-C1CC-4118-9488-71FCEA5F572C__GUID-B810BBE5-C8BA-44FD-81EE-CAC96B97632E">
+                     <p class="notep1">See Also:</p>
+                     
+                     <p><a href="../aeadm/configuring-and-deleting-logs-and-log-entries.html#AEADM-GUID-F4926193-2E58-49D0-A088-6446A17795F9" target="_blank">Deleting REST Synchronization
+                                        Log Entries</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-data-synchronization.html#GUID-107C7CB8-F3DF-4C82-89E5-F4BFE6750096" title="Enable Data Synchronization to keep the contents of a local table automatically in sync with the data from a REST service.">Managing Data Synchronization</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="sect3"><a id="GUID-9FF6B829-1469-441E-BE49-E49F23CDA0AD" name="GUID-9FF6B829-1469-441E-BE49-E49F23CDA0AD"></a><h4 id="HTMDB-GUID-9FF6B829-1469-441E-BE49-E49F23CDA0AD" class="sect4"><span class="enumeration_section">18.4.10.7.1 </span>About the REST Synchronization
+        Log
+                  </h4>
+                  <div>
+                     <p>The REST Synchronization log records details of previously executed
+        synchronizations.</p>
+                     <div class="section">
+                        
+                        <p>Once you have successfully executed a synchronization, the REST
+                Synchronization log displays under <span class="uicontrol bold">Log</span> on the Synchronization
+                page.
+                        </p>
+                        
+                        <p>The REST Synchronization log contains details about previously executed
+                synchronizations such as the status (that is, Success or Failure), the amount of
+                processed rows, and the amount of HTTP requests being made. You can drill down from
+                the Synchronization log to the Web Services log to review each individual HTTP
+                request which was made for this synchronization.</p>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="managing-data-synchronization.html#GUID-BC31C387-C1CC-4118-9488-71FCEA5F572C" title="Learn about the REST Synchronization log.">Managing the REST Synchronization Log</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="sect3"><a id="GUID-6FF51727-B177-44E6-9399-CE09AD3D566A" name="GUID-6FF51727-B177-44E6-9399-CE09AD3D566A"></a><h4 id="HTMDB-GUID-6FF51727-B177-44E6-9399-CE09AD3D566A" class="sect4"><span class="enumeration_section">18.4.10.7.2 </span>Purging the Synchronization Log
+                  </h4>
+                  <div>
+                     <p>Purge the REST Synchronization log.</p>
+                     <p>To purge the REST Synchronization log:</p>
+                     <ol>
+                        <li class="stepexpand"><span>Select the application and navigate to Shared Components:</span><ol type="a" id="GUID-6FF51727-B177-44E6-9399-CE09AD3D566A__SUBSTEPS_JGN_BCB_SCC">
+                              <li><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                              <li><span>Select an application.</span></li>
+                              <li><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span></span></li>
+                           </ol>
+                        </li>
+                        <li class="stepexpand"><span>On the The Shared Components page,  select <span class="uicontrol bold">REST
+                        Synchronizations</span> from the Tasks list.</span></li>
+                        <li class="stepexpand"><span>Select the REST Synchronization.</span><div>
+                              
+                              <p>The Synchronization page appears. </p>
+                              
+                              <p>The REST Data Source Synchronization log displays under
+                            <span class="uicontrol bold">Log</span> at the bottom of the page.
+                              </p>
+                              
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Under Log, click <span class="uicontrol bold">Purge Log</span>.</span></li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="managing-data-synchronization.html#GUID-BC31C387-C1CC-4118-9488-71FCEA5F572C" title="Learn about the REST Synchronization log.">Managing the REST Synchronization Log</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

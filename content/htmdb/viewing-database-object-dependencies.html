@@ -1,0 +1,536 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Viewing Database Object Dependencies">
+      <meta name="abstract" content="View the Database Object Dependencies report to review database objects referenced by the currently selected application.">
+      <meta name="description" content="View the Database Object Dependencies report to review database objects referenced by the currently selected application.">
+      <meta name="DC.subject" content="Database Object Dependencies, viewing, application, viewing object dependencies, object dependencies, viewing for application, about, generating, understanding, using tree, viewing reports, rescan application, clear dependency records">
+      <meta name="keywords" content="Database Object Dependencies, viewing, application, viewing object dependencies, object dependencies, viewing for application, about, generating, understanding, using tree, viewing reports, rescan application, clear dependency records">
+      <meta name="DC.Relation" scheme="URI" content="using-application-utilities.html#GUID-4837875D-F077-47C5-A4B3-BB60BC7DD140">
+      <meta name="DC.Relation" scheme="URI" content="viewing-database-object-dependencies.html#GUID-F2941903-B093-488C-8EC3-80321ED93F7E">
+      <meta name="DC.Relation" scheme="URI" content="viewing-database-object-dependencies.html#GUID-CA993A00-7139-4352-8E37-AB6A8A25E5E6">
+      <meta name="DC.Relation" scheme="URI" content="viewing-database-object-dependencies.html#GUID-376C4C74-0BAD-45A1-86FB-B25BDBD3A439">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Topic">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-FD36E177-B467-41E3-A56A-0EE76E781D9A">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="View the Database Object Dependencies report to review database objects referenced by the currently selected application.">
+      <meta name="description" content="View the Database Object Dependencies report to review database objects referenced by the currently selected application.">
+      <title>Viewing Database Object Dependencies</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="View the Database Object Dependencies report to review database objects referenced by the currently selected application.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="viewing-change-history-report.html" title="Previous" type="text/html">
+      <link rel="next" href="accessing-apex-views.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Viewing Database Object Dependencies","description":"View the Database Object Dependencies report to review database objects referenced by the currently selected application.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="viewing-change-history-report.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="accessing-apex-views.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-FD36E177-B467-41E3-A56A-0EE76E781D9A" name="GUID-FD36E177-B467-41E3-A56A-0EE76E781D9A"></a><a id="4000:8115"></a><a id="4000:8116"></a>
+         
+         <h2 id="HTMDB-GUID-FD36E177-B467-41E3-A56A-0EE76E781D9A" class="sect2"><span class="enumeration_section">5.19.6 </span>Viewing Database Object Dependencies
+         </h2>
+         <div class="ind">
+            <p>View the Database Object Dependencies report to review database objects
+        referenced by the currently selected application. </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="viewing-database-object-dependencies.html#GUID-F2941903-B093-488C-8EC3-80321ED93F7E">About the Database Object Dependencies Page</a><br>Learn about the Database Object Dependencies page.
+                  </li>
+                  <li class="ulchildlink"><a href="viewing-database-object-dependencies.html#GUID-CA993A00-7139-4352-8E37-AB6A8A25E5E6">Generating the Database Object Dependencies Report</a><br>Generate the Database Object Dependencies Report from the application         Utilities page.
+                  </li>
+                  <li class="ulchildlink"><a href="viewing-database-object-dependencies.html#GUID-376C4C74-0BAD-45A1-86FB-B25BDBD3A439">Understanding the Database Object Dependencies Report</a><br>Learn about the Database Object Dependencies report.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="using-application-utilities.html#GUID-4837875D-F077-47C5-A4B3-BB60BC7DD140" title="Learn about the application summaries and reports available from Utilities page.">Using Application Utilities</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-F2941903-B093-488C-8EC3-80321ED93F7E" name="GUID-F2941903-B093-488C-8EC3-80321ED93F7E"></a><h3 id="HTMDB-GUID-F2941903-B093-488C-8EC3-80321ED93F7E" class="sect3"><span class="enumeration_section">5.19.6.1 </span>About the Database Object
+        Dependencies Page
+               </h3>
+               <div>
+                  <p>Learn about the Database Object Dependencies page.</p>
+                  <p>Applications must to be scanned to generate the Database Object Dependencies
+            report. Scanning the application identifies database object dependencies including the
+            following:</p>
+                  <ul style="list-style-type: disc;" id="GUID-F2941903-B093-488C-8EC3-80321ED93F7E__UL_RPC_G5Y_HDC">
+                     <li><span class="bold">Tables, Views and Columns</span> - Identify the tables, views and
+                columns referenced by components including interactive reports, classic reports, and
+                lists of values.
+                     </li>
+                     <li><span class="bold">Packages, Procedures and Functions</span> Identify packages, procedures
+                and functions referenced by processes, computations and validations.
+                     </li>
+                     <li><span class="bold">System Dependencies</span> - Identify dependencies on Database Objects
+                owned by system users include <code class="codeph">SYS</code>, <code class="codeph">SYSTEM,PUBLIC</code>
+                and the APEX Schema Owner.
+                     </li>
+                     <li><span class="bold">Errors</span> - Identify references to database objects that result in
+                errors.
+                     </li>
+                  </ul>
+                  <p>The left pane on the Database Object Dependencies page features a
+            hierarchical tree control that enables you to visualize all the tables, views, packages,
+            and procedures the application references as well as their components such as table
+            columns, package procedures, and functions. To view specific objects, expand the object
+            type. In the following example, <span class="uicontrol bold">Tables</span> is selected.
+                  </p><br><div class="imageleft"><img class="imageleft" id="GUID-F2941903-B093-488C-8EC3-80321ED93F7E__IMAGE_ZLV_1JV_3DC" height="637" width="1178" src="img/db_object_dependencies.png" alt="Description of db_object_dependencies.png follows" title="Description of db_object_dependencies.png follows" longdesc="img_text/db_object_dependencies.html"><br><a href="img_text/db_object_dependencies.html">Description of the illustration db_object_dependencies.png</a></div><br></div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="viewing-database-object-dependencies.html#GUID-FD36E177-B467-41E3-A56A-0EE76E781D9A" title="View the Database Object Dependencies report to review database objects referenced by the currently selected application.">Viewing Database Object Dependencies</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-CA993A00-7139-4352-8E37-AB6A8A25E5E6" name="GUID-CA993A00-7139-4352-8E37-AB6A8A25E5E6"></a><h3 id="HTMDB-GUID-CA993A00-7139-4352-8E37-AB6A8A25E5E6" class="sect3"><span class="enumeration_section">5.19.6.2 </span>Generating the Database Object Dependencies
+        Report
+               </h3>
+               <div>
+                  <p>Generate the Database Object Dependencies Report from the application
+        Utilities page.</p>
+                  <div class="section">
+                     
+                     <div class="infobox-tip" id="GUID-CA993A00-7139-4352-8E37-AB6A8A25E5E6__GUID-BE353892-EC9B-4A3B-9F3E-87EEADFC9274">
+                        <p class="notep1">Tip:</p>To ensure up-to-date
+                results, Oracle recommends refreshing the Database Object Dependencies report after
+                an application or its database schema have been modified. See <a href="viewing-database-object-dependencies.html#GUID-C77D3EE7-C646-42FE-B2EF-C7F4BAB3A3E0" title="Refresh the dependencies on the Database Object Dependencies page by rescanning the application.">Rescanning the Application</a>.
+                     </div>
+                     
+                  </div>
+                  <p>To generate the Database Object Dependencies
+                report:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Workspace home page.</span></li>
+                     <li class="stepexpand"><span>Click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Select an application.</span><div>
+                           
+                           <p>The Application home page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Utilities</span>.</span></li>
+                     <li class="stepexpand"><span>On the Utilities page, click <span class="uicontrol bold">Database Object
+                        Dependencies</span>. </span><div>
+                           
+                           <p>The Database Object Dependencies page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Scan Application</span>.</span><div>
+                           
+                           <p>The Scan Application dialog appears.</p>
+                           <br><div class="imageleft"><img class="imageleft" id="GUID-CA993A00-7139-4352-8E37-AB6A8A25E5E6__IMAGE_LKN_5KV_3DC" height="573" width="950" src="img/scan_appilcation_dialog.png" alt="Description of scan_appilcation_dialog.png follows" title="Description of scan_appilcation_dialog.png follows" longdesc="img_text/scan_appilcation_dialog.html"><br><a href="img_text/scan_appilcation_dialog.html">Description of the illustration scan_appilcation_dialog.png</a></div><br>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>On Scan Application, configure the options:</span><ol type="a" id="GUID-CA993A00-7139-4352-8E37-AB6A8A25E5E6__SUBSTEPS_Z3X_XSZ_HDC">
+                           <li class="substepexpand"><span>Scan Type - Select an option:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-CA993A00-7139-4352-8E37-AB6A8A25E5E6__UL_QXW_ZSZ_HDC">
+                                    <li><span class="uicontrol bold">Full Scan</span> - Scan all sources for
+                                    dependencies including errors.
+                                    </li>
+                                    <li><span class="uicontrol bold">Errors Only</span> - Create a report on code
+                                    errors only.
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Scope - Select an option:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-CA993A00-7139-4352-8E37-AB6A8A25E5E6__UL_N1W_FTZ_HDC">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Application</span> - Scan the entire
+                                        application including all pages and shared components.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Page</span> - Restrict the scan to a single
+                                        page only. 
+                                       </p>
+                                       
+                                       <p>If you select a page, select a page from the
+                                            <span class="uicontrol bold">Page</span> list.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Scan</span>.</span></li>
+                        </ol>
+                        <div>
+                           
+                           <p>The Database Object Dependencies page appears. </p>
+                           
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="viewing-database-object-dependencies.html#GUID-FD36E177-B467-41E3-A56A-0EE76E781D9A" title="View the Database Object Dependencies report to review database objects referenced by the currently selected application.">Viewing Database Object Dependencies</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-376C4C74-0BAD-45A1-86FB-B25BDBD3A439" name="GUID-376C4C74-0BAD-45A1-86FB-B25BDBD3A439"></a><h3 id="HTMDB-GUID-376C4C74-0BAD-45A1-86FB-B25BDBD3A439" class="sect3"><span class="enumeration_section">5.19.6.3 </span>Understanding the Database Object Dependencies
+        Report
+               </h3>
+               <p>Learn about the Database Object Dependencies report.</p>
+               <div>
+                  <ul class="ullinks">
+                     <li class="ulchildlink"><a href="viewing-database-object-dependencies.html#GUID-1D89A7DE-6D13-497B-8756-4D3DCD3EFB87">Using the Database Object Dependencies Page</a><br>Learn about using Database Object Dependencies page.
+                     </li>
+                     <li class="ulchildlink"><a href="viewing-database-object-dependencies.html#GUID-D2619716-4E75-4791-9A7D-4D7438FF5F3E">Viewing Errors</a><br>Learn about viewing errors on Database Object Dependencies page.
+                     </li>
+                     <li class="ulchildlink"><a href="viewing-database-object-dependencies.html#GUID-C77D3EE7-C646-42FE-B2EF-C7F4BAB3A3E0">Rescanning the Application</a><br>Refresh the dependencies on the Database Object Dependencies page by         rescanning the application.
+                     </li>
+                     <li class="ulchildlink"><a href="viewing-database-object-dependencies.html#GUID-C72C3B94-8F5E-48CC-B86F-AB5ED129F287">Clearing Object Dependencies</a><br>Remove dependency records from the Database Object Dependencies page by         clicking Clear Dependencies.
+                     </li>
+                  </ul>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="viewing-database-object-dependencies.html#GUID-FD36E177-B467-41E3-A56A-0EE76E781D9A" title="View the Database Object Dependencies report to review database objects referenced by the currently selected application.">Viewing Database Object Dependencies</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="sect3"><a id="GUID-1D89A7DE-6D13-497B-8756-4D3DCD3EFB87" name="GUID-1D89A7DE-6D13-497B-8756-4D3DCD3EFB87"></a><h4 id="HTMDB-GUID-1D89A7DE-6D13-497B-8756-4D3DCD3EFB87" class="sect4"><span class="enumeration_section">5.19.6.3.1 </span>Using the Database Object
+        Dependencies Page
+                  </h4>
+                  <div>
+                     <p>Learn about using Database Object Dependencies page.</p>
+                     <p>The Database Object Dependencies page features two panes:</p>
+                     <ul style="list-style-type: disc;" id="GUID-1D89A7DE-6D13-497B-8756-4D3DCD3EFB87__UL_QCG_PRG_3DC">
+                        <li><span class="uicontrol bold">Tree</span> - The left pane displays as a tree of
+                database object types, such as Tables, Packages, Procedures, Schemas, and System
+                Dependencies. To view specific objects, expand the object type. For example,
+                expanding the Tables node displays a list of tables. Expanding a table displays
+                specific columns.
+                        </li>
+                        <li><span class="uicontrol bold">Report</span> - The right pane displays a report based
+                on the selected node in the tree. In the following example
+                    <span class="uicontrol bold">Tables</span> is selected. The report displays four columns:
+                    <span class="uicontrol bold">Owner</span>, <span class="uicontrol bold">Name</span>, <span class="uicontrol bold">Component
+                    Property</span>, and <span class="uicontrol bold">Code</span>. The <span class="uicontrol bold">Component
+                    Property</span> column displays as link. Click the link to navigate to the
+                component.
+                        </li>
+                     </ul><br><div class="imageleft"><img class="imageleft" id="GUID-1D89A7DE-6D13-497B-8756-4D3DCD3EFB87__IMAGE_ZLV_1JV_3DC" height="637" width="1178" src="img/db_object_dependencies.png" alt="Description of db_object_dependencies.png follows" title="Description of db_object_dependencies.png follows" longdesc="img_text/db_object_dependencies.html"><br><a href="img_text/db_object_dependencies.html">Description of the illustration db_object_dependencies.png</a></div><br><div class="section">
+                        <p class="subhead3" id="GUID-1D89A7DE-6D13-497B-8756-4D3DCD3EFB87__GUID-05A50016-F48C-485B-86E8-31D04813C449">Filtering Objects</p>
+                        
+                        
+                        <p>Filter objects by entering a search term in the filter that displays above the tree.
+                In the following example, the search term <code class="codeph">EBA_DEMO_IR_EMP</code> displays
+                in the filter and the report displays the <code class="codeph">EBA_DEMO_IR_EMP</code> table.
+                Filters you create are persistent and are preserved within the <span>APEX</span> session.
+                        </p>
+                        <br><div class="imageleft"><img class="imageleft" id="GUID-1D89A7DE-6D13-497B-8756-4D3DCD3EFB87__IMAGE_OHF_LJV_3DC" height="663" width="1098" src="img/db_object_dependencies_filter.png" alt="Description of db_object_dependencies_filter.png follows" title="Description of db_object_dependencies_filter.png follows" longdesc="img_text/db_object_dependencies_filter.html"><br><a href="img_text/db_object_dependencies_filter.html">Description of the illustration db_object_dependencies_filter.png</a></div><br>
+                        
+                     </div>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="viewing-database-object-dependencies.html#GUID-376C4C74-0BAD-45A1-86FB-B25BDBD3A439" title="Learn about the Database Object Dependencies report.">Understanding the Database Object Dependencies Report</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="sect3"><a id="GUID-D2619716-4E75-4791-9A7D-4D7438FF5F3E" name="GUID-D2619716-4E75-4791-9A7D-4D7438FF5F3E"></a><h4 id="HTMDB-GUID-D2619716-4E75-4791-9A7D-4D7438FF5F3E" class="sect4"><span class="enumeration_section">5.19.6.3.2 </span>Viewing Errors
+                  </h4>
+                  <div>
+                     <p>Learn about viewing errors on Database Object Dependencies page.</p>
+                     <p>If an application contains code or object references that cause
+                        errors, an <span class="uicontrol bold">Errors</span> node displays in the tree. The
+                        following example shows an application with five errors. The report in the
+                        right pane displays three columns: <span class="uicontrol bold">Component
+                        Property</span>, <span class="uicontrol bold">Error Message</span>, and
+                                <span class="uicontrol bold">Code</span>. <span class="uicontrol bold">Component
+                                Property</span> displays as link. Click the link to navigate to
+                        the component. 
+                     </p><br><div class="imageleft"><img class="imageleft" id="GUID-D2619716-4E75-4791-9A7D-4D7438FF5F3E__IMAGE_DB1_HMV_3DC" height="637" width="1174" src="img/db_object_dependencies_error.png" alt="Description of db_object_dependencies_error.png follows" title="Description of db_object_dependencies_error.png follows" longdesc="img_text/db_object_dependencies_error.html"><br><a href="img_text/db_object_dependencies_error.html">Description of the illustration db_object_dependencies_error.png</a></div><br></div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="viewing-database-object-dependencies.html#GUID-376C4C74-0BAD-45A1-86FB-B25BDBD3A439" title="Learn about the Database Object Dependencies report.">Understanding the Database Object Dependencies Report</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="sect3"><a id="GUID-C77D3EE7-C646-42FE-B2EF-C7F4BAB3A3E0" name="GUID-C77D3EE7-C646-42FE-B2EF-C7F4BAB3A3E0"></a><h4 id="HTMDB-GUID-C77D3EE7-C646-42FE-B2EF-C7F4BAB3A3E0" class="sect4"><span class="enumeration_section">5.19.6.3.3 </span>Rescanning the Application
+                  </h4>
+                  <div>
+                     <p>Refresh the dependencies on the Database Object Dependencies page by
+        rescanning the application.</p>
+                     <div class="section">
+                        
+                        <p>If the application or database has been modified, click <span class="uicontrol bold">Scan
+                    Application</span> on the Data Object Dependencies page to scan the
+                application again and refresh the dependencies.
+                        </p>
+                        
+                     </div>
+                     <p>To rescan an application:</p>
+                     <ol>
+                        <li class="stepexpand"><span>View an existing Data Object Dependencies page: </span><ol type="a" id="GUID-C77D3EE7-C646-42FE-B2EF-C7F4BAB3A3E0__SUBSTEPS_GVZ_G2H_3DC">
+                              <li><span>Navigate to the Workspace home page.</span></li>
+                              <li><span>Select the application.</span></li>
+                              <li><span>Click <span class="uicontrol bold">Utilities</span>.</span></li>
+                              <li><span>On the Utilities page, click <span class="uicontrol bold">Database Object
+                                Dependencies</span>. </span></li>
+                           </ol>
+                        </li>
+                        <li class="stepexpand"><span>On the Database Object Dependencies page, click <span class="uicontrol bold">Scan
+                        Application</span>. </span><div>
+                              
+                              <p>The Scan Application dialog appears.</p>
+                              <br><div class="imageleft"><img class="imageleft" id="GUID-C77D3EE7-C646-42FE-B2EF-C7F4BAB3A3E0__IMAGE_LKN_5KV_3DC" height="573" width="950" src="img/scan_appilcation_dialog.png" alt="Description of scan_appilcation_dialog.png follows" title="Description of scan_appilcation_dialog.png follows" longdesc="img_text/scan_appilcation_dialog.html"><br><a href="img_text/scan_appilcation_dialog.html">Description of the illustration scan_appilcation_dialog.png</a></div><br>
+                              
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>On Scan Application, configure the options:</span><ol type="a" id="GUID-C77D3EE7-C646-42FE-B2EF-C7F4BAB3A3E0__SUBSTEPS_Z3X_XSZ_HDC">
+                              <li class="substepexpand"><span>Scan Type:</span><div>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-C77D3EE7-C646-42FE-B2EF-C7F4BAB3A3E0__UL_QXW_ZSZ_HDC">
+                                       <li><span class="uicontrol bold">Full Scan</span> - Scan all sources
+                                    for dependencies including errors.
+                                       </li>
+                                       <li><span class="uicontrol bold">Errors Only</span> - Create a
+                                    report on code errors only.
+                                       </li>
+                                    </ul>
+                                    
+                                 </div>
+                              </li>
+                              <li class="substepexpand"><span>Scope:</span><div>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-C77D3EE7-C646-42FE-B2EF-C7F4BAB3A3E0__UL_N1W_FTZ_HDC">
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Application</span> - Scan the
+                                        entire application including all pages and shared
+                                        components.
+                                          </p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Page</span> - Restrict the scan
+                                        to a single page only. 
+                                          </p>
+                                          
+                                          <p>If you select a page, select a page from the
+                                            <span class="uicontrol bold">Page</span> list.
+                                          </p>
+                                          
+                                       </li>
+                                    </ul>
+                                    
+                                 </div>
+                              </li>
+                              <li class="substepexpand"><span>Click <span class="uicontrol bold">Scan</span>.</span></li>
+                           </ol>
+                           <div>
+                              
+                              <p>The Database Object Dependencies page is refreshed. </p>
+                              
+                           </div>
+                        </li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="viewing-database-object-dependencies.html#GUID-376C4C74-0BAD-45A1-86FB-B25BDBD3A439" title="Learn about the Database Object Dependencies report.">Understanding the Database Object Dependencies Report</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="sect3"><a id="GUID-C72C3B94-8F5E-48CC-B86F-AB5ED129F287" name="GUID-C72C3B94-8F5E-48CC-B86F-AB5ED129F287"></a><h4 id="HTMDB-GUID-C72C3B94-8F5E-48CC-B86F-AB5ED129F287" class="sect4"><span class="enumeration_section">5.19.6.3.4 </span>Clearing Object Dependencies
+                  </h4>
+                  <div>
+                     <p>Remove dependency records from the Database Object Dependencies page by
+        clicking Clear Dependencies.</p>
+                     <p>To clear dependency records:</p>
+                     <ol>
+                        <li class="stepexpand"><span>View an existing Data Object Dependencies page: </span><ol type="a" id="GUID-C72C3B94-8F5E-48CC-B86F-AB5ED129F287__SUBSTEPS_N2B_TFH_3DC">
+                              <li><span>Navigate to the Workspace home page.</span></li>
+                              <li><span>Select the application.</span></li>
+                              <li><span>Click <span class="uicontrol bold">Utilities</span>.</span></li>
+                              <li><span>On the Utilities page, click <span class="uicontrol bold">Database Object
+                                Dependencies</span></span></li>
+                           </ol>
+                        </li>
+                        <li class="stepexpand"><span>On the Database Object Dependencies page, click <span class="uicontrol bold">Clear
+                        Dependencies</span>. </span><div>
+                              <br><div class="imageleft"><img class="imageleft" id="GUID-C72C3B94-8F5E-48CC-B86F-AB5ED129F287__IMAGE_YMQ_2NV_3DC" height="637" width="1178" src="img/db_object_depend_clear.png" alt="Description of db_object_depend_clear.png follows" title="Description of db_object_depend_clear.png follows" longdesc="img_text/db_object_depend_clear.html"><br><a href="img_text/db_object_depend_clear.html">Description of the illustration db_object_depend_clear.png</a></div><br>
+                              
+                              
+                              <p>A dialog appears confirming your request.</p>
+                              
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Clear Dependences</span> again..</span><div>
+                              
+                              <p>The Application home page appears.</p>
+                              
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>On Scan Application, configure the options:</span><ol type="a" id="GUID-C72C3B94-8F5E-48CC-B86F-AB5ED129F287__SUBSTEPS_Z3X_XSZ_HDC">
+                              <li class="substepexpand"><span>Scan Type - Select an option:</span><div>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-C72C3B94-8F5E-48CC-B86F-AB5ED129F287__UL_QXW_ZSZ_HDC">
+                                       <li><span class="uicontrol bold">Full Scan</span> - Scan all sources
+                                    for dependencies including errors.
+                                       </li>
+                                       <li><span class="uicontrol bold">Errors Only</span> - Create a
+                                    report on code errors only.
+                                       </li>
+                                    </ul>
+                                    
+                                 </div>
+                              </li>
+                              <li class="substepexpand"><span>Scope - Select an option:</span><div>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-C72C3B94-8F5E-48CC-B86F-AB5ED129F287__UL_N1W_FTZ_HDC">
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Application</span> - Scan the
+                                        entire application including all pages and shared
+                                        components.
+                                          </p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Page</span> - Restrict the scan
+                                        to a single page only. 
+                                          </p>
+                                          
+                                          <p>If you select a page, select a page from the
+                                            <span class="uicontrol bold">Page</span> list.
+                                          </p>
+                                          
+                                       </li>
+                                    </ul>
+                                    
+                                 </div>
+                              </li>
+                              <li class="substepexpand"><span>Click <span class="uicontrol bold">Scan</span>.</span></li>
+                           </ol>
+                           <div>
+                              
+                              <p>The Database Object Dependencies page appears. </p>
+                              
+                           </div>
+                        </li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="viewing-database-object-dependencies.html#GUID-376C4C74-0BAD-45A1-86FB-B25BDBD3A439" title="Learn about the Database Object Dependencies report.">Understanding the Database Object Dependencies Report</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

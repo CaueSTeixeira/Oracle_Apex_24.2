@@ -1,0 +1,434 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Loading Data">
+      <meta name="abstract" content="Use the Load Data Wizard to copy and paste or upload data.">
+      <meta name="description" content="Use the Load Data Wizard to copy and paste or upload data.">
+      <meta name="DC.subject" content="data, loading into database, copy and paste CSV data, loading, sample data set, loading, XML document, loading, JSON file, XLSX file">
+      <meta name="keywords" content="data, loading into database, copy and paste CSV data, loading, sample data set, loading, XML document, loading, JSON file, XLSX file">
+      <meta name="DC.Relation" scheme="URI" content="using-data-workshop.html#GUID-C35417B6-D1D0-4098-BBE1-35F7BA1A2423">
+      <meta name="DC.Relation" scheme="URI" content="loading-data.html#GUID-55B8360A-7C08-466F-B555-6A1F81AD7186">
+      <meta name="DC.Relation" scheme="URI" content="loading-data.html#GUID-839E995E-58F6-4006-9BE7-895D050446FA">
+      <meta name="DC.Relation" scheme="URI" content="loading-data.html#GUID-F86A2EDB-DDE4-4AF0-910D-24638E034D69">
+      <meta name="DC.Relation" scheme="URI" content="loading-data.html#GUID-4E2CDB7A-24AE-4D8D-8763-E1175A8A5B48">
+      <meta name="DC.Relation" scheme="URI" content="loading-data.html#GUID-5B932032-7641-46EA-ABC4-314D33DECE95">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-8E0CFF4A-6AC6-4559-B6C0-92B6A5F73AC7">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Use the Load Data Wizard to copy and paste or upload data.">
+      <meta name="description" content="Use the Load Data Wizard to copy and paste or upload data.">
+      <title>Loading Data</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="SQL Workshop Guide">
+      <meta property="og:description" content="Use the Load Data Wizard to copy and paste or upload data.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="SQL Workshop Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-sql-workshop-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-01-14T12:14:06-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2008, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12911-01">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="accessing-load-data-and-unload-data-wizards.html" title="Previous" type="text/html">
+      <link rel="next" href="unloading-data.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX SQL Workshop Guide">
+    <meta name="dcterms.isVersionOf" content="AEUTL">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","name":"Loading Data","description":"Use the Load Data Wizard to copy and paste or upload data.","datePublished":"2025-01-14 CST","dateModified":"2025-01-14 CST"} </script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="accessing-load-data-and-unload-data-wizards.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="unloading-data.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article>
+         <header>
+            <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Workshop Guide</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-sql-workshop-utilities.html" property="item" typeof="WebPage"><span property="name"> Using SQL Workshop Utilities</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-data-workshop.html" property="item" typeof="WebPage"><span property="name">Using Data Workshop</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">Loading Data</li>
+            </ol>
+            <a id="GUID-8E0CFF4A-6AC6-4559-B6C0-92B6A5F73AC7" name="GUID-8E0CFF4A-6AC6-4559-B6C0-92B6A5F73AC7"></a>
+            
+            <h2 id="AEUTL-GUID-8E0CFF4A-6AC6-4559-B6C0-92B6A5F73AC7" class="sect2"><span class="enumeration_section">5.1.5 </span>Loading Data
+            </h2>
+         </header>
+         <div class="ind">
+            <div>
+               <p>Use the Load Data Wizard to copy and paste or upload data.</p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="loading-data.html#GUID-55B8360A-7C08-466F-B555-6A1F81AD7186">About Loading Data</a><br>Load data into the <span>Oracle APEX</span> by copying and pasting CSV data, selecting a sample data set, or uploading a file.
+                  </li>
+                  <li class="ulchildlink"><a href="loading-data.html#GUID-839E995E-58F6-4006-9BE7-895D050446FA">Copying and Pasting CSV data or Selecting a Sample Data Set</a><br>You can copy and paste CSV data, or select a sample data set sample into the Load Data Wizard.
+                  </li>
+                  <li class="ulchildlink"><a href="loading-data.html#GUID-F86A2EDB-DDE4-4AF0-910D-24638E034D69">Loading an XML Document</a><br>Load an XML document using Load Data Wizard.
+                  </li>
+                  <li class="ulchildlink"><a href="loading-data.html#GUID-4E2CDB7A-24AE-4D8D-8763-E1175A8A5B48">Loading a JSON File</a><br>Load a JSON file using Load Data Wizard.
+                  </li>
+                  <li class="ulchildlink"><a href="loading-data.html#GUID-5B932032-7641-46EA-ABC4-314D33DECE95">Loading a XLSX File</a><br>Load a XLSX file using Load Data Wizard.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-8E0CFF4A-6AC6-4559-B6C0-92B6A5F73AC7__GUID-92F21330-9A48-4A8F-A154-1A7149867EB2">
+                  <p class="notep1">See Also:</p>
+                  <p><a href="import-export-load-and-unload-options.html#GUID-654F74E2-2611-45F2-BE5F-C61D3B75707F" title="The Oracle Database and Oracle APEX provide several powerful options for importing, exporting, loading, and unloading data.">Import, Export, Load, and Unload Options</a></p>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="using-data-workshop.html#GUID-C35417B6-D1D0-4098-BBE1-35F7BA1A2423" title="Use Data Workshop to load and unload data to the database.">Using Data Workshop</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-55B8360A-7C08-466F-B555-6A1F81AD7186" name="GUID-55B8360A-7C08-466F-B555-6A1F81AD7186"></a><h3 id="AEUTL-GUID-55B8360A-7C08-466F-B555-6A1F81AD7186" class="sect3"><span class="enumeration_section">5.1.5.1 </span>About Loading Data
+               </h3>
+               <div>
+                  <p>Load data into the <span>Oracle APEX</span> by copying and pasting CSV data, selecting a sample data set, or uploading a file.
+                  </p>
+                  <p>Key capabilities when loading data into the <span>APEX</span> include:
+                  </p>
+                  <ul style="list-style-type: disc;" id="GUID-55B8360A-7C08-466F-B555-6A1F81AD7186__UL_IGR_ZD3_TSB">
+                     <li>Copy and paste CSV data, or select a sample data set. </li>
+                     <li>Upload a file (supports CSV, XLSX, TXT, XML or JSON files).
+                        <div class="infoboxnote" id="GUID-55B8360A-7C08-466F-B555-6A1F81AD7186__GUID-5845D9B1-3A21-4987-914C-532B9D1088A1">
+                           <p class="notep1">Note:</p>
+                           <p>Configure load settings such as column headers, file encoding, column delimiter / enclosed by (for CSV or TXT), and Select Sheet (for XLSX with multiple worksheets). </p>
+                        </div>
+                     </li>
+                     <li> View full preview and change more settings by clicking <span class="uicontrol bold">Configure</span> button. Configure dialog displays maximum of 100 columns and 100 rows. You can configure same setting as settings in the main dialog plus maximum Rows to Sample and columns to load/unload. 
+                     </li>
+                     <li>In Configure dialog, under <span class="uicontrol bold">Columns to Load</span> tab, you can enter case insensitive value that will be treated as <code class="codeph">NULL</code>. For example, <code class="codeph">"tbd"</code>, <code class="codeph">"n/a"</code>, <code class="codeph">"unknown"</code>, <code class="codeph">"-"</code>.
+                     </li>
+                     <li>Post loading, if any rows fail, up to 10 rejected rows display. To view more rows which have error, click <span class="uicontrol bold">Open in Object Browser</span> button. You can optionally click <span class="uicontrol bold">Drop</span> Table and <span class="uicontrol bold">Reload</span> button to try the data load again.
+                     </li>
+                     <li>Settings change will change preview both in main and configure dialogs. They also affect data load result.</li>
+                     <li>Select table owner, enter table name and error table name
+                        <div class="infoboxnote" id="GUID-55B8360A-7C08-466F-B555-6A1F81AD7186__GUID-A99A973E-8B33-4C28-9AED-6BD2A7CD3330">
+                           <p class="notep1">Note:</p>By default, all table names are converted to upper case. If data load succeeds without any error, the error table is dropped automatically.
+                        </div>
+                     </li>
+                     <li>Post loading, a <span class="uicontrol bold">View Table</span> button and <span class="uicontrol bold">Continue to Create Application Wizard</span> button display if there are no failed rows. The load is successful if ta table is created and displayed.
+                     </li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="loading-data.html#GUID-8E0CFF4A-6AC6-4559-B6C0-92B6A5F73AC7" title="Use the Load Data Wizard to copy and paste or upload data.">Loading Data</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-839E995E-58F6-4006-9BE7-895D050446FA" name="GUID-839E995E-58F6-4006-9BE7-895D050446FA"></a><h3 id="AEUTL-GUID-839E995E-58F6-4006-9BE7-895D050446FA" class="sect3"><span class="enumeration_section">5.1.5.2 </span>Copying and Pasting CSV data or Selecting a Sample Data Set
+               </h3>
+               <div>
+                  <p>You can copy and paste CSV data, or select a sample data set sample into the Load Data Wizard.</p>
+                  <div class="section">
+                     <p>To load data by copying and pasting CSV data or selecting a sample data set: </p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span class="uicontrol bold">SQL Workshop</span> icon.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Utilities</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Data Workshop</span>.</span></li>
+                     <li class="stepexpand"><span>Under Get Started, click <span class="uicontrol bold">Load Data</span>.</span><div>The Load Data Wizard appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Copy and Paste</span>.</span><div>Under Copy and Paste, you can either copy and paste CSV
+                    data or select a sample data set from the drop down menu.</div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                     <li class="stepexpand"><span>Under <span class="uicontrol bold">Load to Table</span>, edit the following:</span><ol type="a" id="GUID-839E995E-58F6-4006-9BE7-895D050446FA__SUBSTEPS_BHH_KLC_YGB">
+                           <li class="substepexpand"><span><span class="uicontrol bold">Table Owner</span> - Select the database schema you
+                            would like to create and load data into.</span></li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Table Name</span> - Identify the table name you would
+                            like to create. By default, all table names are converted to upper
+                            case.</span></li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Error Table Name</span> - Identify the error table name
+                            you would like to save errors during data load.</span><div>
+                                 
+                                 <div class="infoboxnote" id="GUID-839E995E-58F6-4006-9BE7-895D050446FA__GUID-16E10AFC-E458-4B4E-B256-9457F0105780">
+                                    <p class="notep1">Note:</p>By default, all table names are converted to upper case. If data
+                                load succeeds without any error, this error table is dropped
+                                automatically.
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Primary Keys</span> - Select how to set the primary key
+                            (Oracle Database 12c or later). Primary keys can be set using
+                                <span class="uicontrol bold">SYS_GUID</span> or <span class="uicontrol bold">Identity
+                                Column</span>.</span><div>
+                                 <span class="uicontrol bold">SYS_GUID</span> generates and returns a globally unique
+                            identifier. On most platforms, this generated identifier is based on a
+                            host identifier, a process or thread identifier of the process or thread
+                            invoking the function, and a non-repeating value (sequence of bytes).
+                                <span class="uicontrol bold">SYS_GUID</span> consumes more space, but is
+                            unpredictable. <span class="uicontrol bold">Identity Column</span> is compact, but
+                            can be predictable
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Use Column Data Types</span> - Select to use the column
+                            types parsed from the file. If not selected, the table columns will be
+                            created as <code class="codeph">VARCHAR2(4000)</code>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>To view the full preview, configure data load settings, and set which columns
+                    to load, Click <span class="uicontrol bold">Configure</span>.</span><div>Make the appropriate changes and click <span class="uicontrol bold">Save
+                        Changes</span>.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Load Data</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="loading-data.html#GUID-8E0CFF4A-6AC6-4559-B6C0-92B6A5F73AC7" title="Use the Load Data Wizard to copy and paste or upload data.">Loading Data</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-F86A2EDB-DDE4-4AF0-910D-24638E034D69" name="GUID-F86A2EDB-DDE4-4AF0-910D-24638E034D69"></a><h3 id="AEUTL-GUID-F86A2EDB-DDE4-4AF0-910D-24638E034D69" class="sect3"><span class="enumeration_section">5.1.5.3 </span>Loading an XML Document
+               </h3>
+               <div>
+                  <p>Load an XML document using Load Data Wizard.</p>
+                  <div class="section">
+                     <p>XML files can also be uploaded to <span>Oracle APEX</span>. However, <span>APEX</span> only supports flat XML structures which can easily be mapped to a table and columns. XML structures with multiple levels of nesting cannot be loaded by the Data Loading wizard.
+                     </p>
+                  </div>
+                  <!-- class="section" -->
+                  <p>To load an XML document: </p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span class="uicontrol bold">SQL Workshop</span> icon.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Utilities</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Data Workshop</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Load Data</span>.</span></li>
+                     <li class="stepexpand"><span>Under Upload a File, Click <span class="uicontrol bold">Choose File</span>.</span></li>
+                     <li class="stepexpand"><span>Select the appropriate <code class="codeph">xml</code> file.</span><div>
+                           <div class="infoboxnote" id="GUID-F86A2EDB-DDE4-4AF0-910D-24638E034D69__GUID-58458A01-7982-4E71-BCB4-04C7A9B661A9">
+                              <p class="notep1">Note:</p>There are no delimiter or enclosing characters to choose for XML file load. Also the column names are derived from the XML tag names, so there is no <span class="uicontrol bold">First lines contains headers</span> checkbox. XML files are limited to 10MB each.
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under <span class="uicontrol bold">Load to Table</span>, do the following:</span><ol type="a" id="GUID-F86A2EDB-DDE4-4AF0-910D-24638E034D69__SUBSTEPS_BHH_KLC_YGB">
+                           <li><span><span class="uicontrol bold">Table Owner</span> - Select the table owner.</span></li>
+                           <li><span><span class="uicontrol bold">Table Name</span> - Enter the table name.</span></li>
+                           <li><span><span class="uicontrol bold">Error Table Name</span> - Enter the error table name to save errors during data load.</span></li>
+                        </ol>
+                        <div>
+                           <div class="infoboxnote" id="GUID-F86A2EDB-DDE4-4AF0-910D-24638E034D69__GUID-E4B87ABA-5399-45EA-83B0-8BEB26D1A751">
+                              <p class="notep1">Note:</p>By default, all table names are converted to upper case. If data load succeeds without any error, the error table is dropped automatically.
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>(Optional) To view the full preview, configure data load settings, and set which columns to load, click <span class="uicontrol bold">Configure</span>.</span></li>
+                     <li class="stepexpand"><span>(Optional) Make appropriate changes and click <span class="uicontrol bold">Save Changes</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Load Data</span>.</span></li>
+                  </ol>
+                  <div class="section">Once Data Loading is finished, a success message is displayed. If some rows cannot be loaded to the target table, they will be stored to the error table and error table is displayed.</div>
+                  <!-- class="section" -->
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="loading-data.html#GUID-8E0CFF4A-6AC6-4559-B6C0-92B6A5F73AC7" title="Use the Load Data Wizard to copy and paste or upload data.">Loading Data</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-4E2CDB7A-24AE-4D8D-8763-E1175A8A5B48" name="GUID-4E2CDB7A-24AE-4D8D-8763-E1175A8A5B48"></a><h3 id="AEUTL-GUID-4E2CDB7A-24AE-4D8D-8763-E1175A8A5B48" class="sect3"><span class="enumeration_section">5.1.5.4 </span>Loading a JSON File
+               </h3>
+               <div>
+                  <p>Load a JSON file using Load Data Wizard.</p>
+                  <div class="section">
+                     <p>Loading JSON files works similar to loading XML files.</p>
+                     <div class="infoboxnote" id="GUID-4E2CDB7A-24AE-4D8D-8763-E1175A8A5B48__GUID-BEA3858C-4AE1-410D-8190-4AB3984F95FD">
+                        <p class="notep1">Note:</p>
+                        <p>Only flat structures are supported - deeply nested JSON structures cannot be loaded.</p>
+                     </div>
+                     <p>To load a JSON file: </p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol id="GUID-4E2CDB7A-24AE-4D8D-8763-E1175A8A5B48__STEPS_CCG_4RC_YGB">
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span class="uicontrol bold">SQL Workshop</span> icon.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Utilities</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Data Workshop</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Load Data</span>. </span></li>
+                     <li class="stepexpand"><span>Under Upload a File, Click <span class="uicontrol bold">Choose File</span>.</span></li>
+                     <li class="stepexpand"><span>Select the appropriate <code class="codeph">JSON</code> file .</span><div>
+                           <div class="infoboxnote" id="GUID-4E2CDB7A-24AE-4D8D-8763-E1175A8A5B48__GUID-3526C8D6-B6A7-4238-BB1D-2A4ACB86E435">
+                              <p class="notep1">Note:</p>
+                              <p>JSON files are limited to 20MB on 11g and 12.1 databases. For Oracle Database 12.2 or higher, there is no size limit for JSON files.</p> 
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under <span class="uicontrol bold">Load to Table</span>, edit the following:</span><ol type="a" id="GUID-4E2CDB7A-24AE-4D8D-8763-E1175A8A5B48__SUBSTEPS_BHH_KLC_YGB">
+                           <li class="substepexpand"><span><span class="uicontrol bold">Table Owner</span> - Select the database schema you
+                            would like to create and load data into.</span></li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Table Name</span> - Identify the table name you would
+                            like to create. By default, all table names are converted to upper
+                            case.</span></li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Error Table Name</span> - Identify the error table name
+                            you would like to save errors during data load.</span><div>
+                                 
+                                 <div class="infoboxnote" id="GUID-4E2CDB7A-24AE-4D8D-8763-E1175A8A5B48__GUID-78795F05-2D0C-41AB-A8D0-F10E99677624">
+                                    <p class="notep1">Note:</p>By default, all table names are converted to upper case. If data
+                                load succeeds without any error, this error table is dropped
+                                automatically.
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Primary Keys</span> - Select how to set the primary key
+                            (Oracle Database 12c or later). Primary keys can be set using
+                                <span class="uicontrol bold">SYS_GUID</span> or <span class="uicontrol bold">Identity
+                                Column</span>.</span><div>
+                                 <span class="uicontrol bold">SYS_GUID</span> generates and returns a globally unique
+                            identifier. On most platforms, this generated identifier is based on a
+                            host identifier, a process or thread identifier of the process or thread
+                            invoking the function, and a non-repeating value (sequence of bytes).
+                                <span class="uicontrol bold">SYS_GUID</span> consumes more space, but is
+                            unpredictable. <span class="uicontrol bold">Identity Column</span> is compact, but
+                            can be predictable
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Use Column Data Types</span> - Select to use the column
+                            types parsed from the file. If not selected, the table columns will be
+                            created as <code class="codeph">VARCHAR2(4000)</code>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>To view the full preview, configure data load settings, and set which columns
+                    to load, Click <span class="uicontrol bold">Configure</span>.</span><div>Make the appropriate changes and click <span class="uicontrol bold">Save
+                        Changes</span>.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Load Data</span>.</span><div>
+                           <p>Once Data Loading is finished, a success message displays. If some rows cannot be
+                        loaded to the target table, they will be stored to the error table and error
+                        table is displayed.</p>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="loading-data.html#GUID-8E0CFF4A-6AC6-4559-B6C0-92B6A5F73AC7" title="Use the Load Data Wizard to copy and paste or upload data.">Loading Data</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-5B932032-7641-46EA-ABC4-314D33DECE95" name="GUID-5B932032-7641-46EA-ABC4-314D33DECE95"></a><h3 id="AEUTL-GUID-5B932032-7641-46EA-ABC4-314D33DECE95" class="sect3"><span class="enumeration_section">5.1.5.5 </span>Loading a XLSX File
+               </h3>
+               <div>
+                  <p>Load a XLSX file using Load Data Wizard.</p>
+                  <div class="section">
+                     <p>Loading XLSX files is similar to loading CSV files. There is no need to detect or to choose delimiter or enclosing characters.</p>
+                     <p>To load a XLSX file: </p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span class="uicontrol bold">SQL Workshop</span> icon.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Utilities</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Data Workshop</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Load Data</span>. </span></li>
+                     <li class="stepexpand"><span>Under Upload a File, Click <span class="uicontrol bold">Choose File</span>.</span></li>
+                     <li class="stepexpand"><span>Select the appropriate <code class="codeph">XLSX</code> file .</span><div>
+                           <div class="infoboxnote" id="GUID-5B932032-7641-46EA-ABC4-314D33DECE95__GUID-3526C8D6-B6A7-4238-BB1D-2A4ACB86E435">
+                              <p class="notep1">Note:</p> If the uploaded XLSX file contains multiple worksheets, <span class="uicontrol bold">Load Data</span> wizard picks the first sheet by default. To load another sheet, pick it from the <span class="uicontrol bold">Select Sheet</span> select list. The <span class="uicontrol bold">First lines contains headers</span> checkbox works similar to CSV files. The same is true for the <span class="uicontrol bold">Configure</span> dialog, the behavior is the same as it is for CSV files. Uploading XLSX files is limited to 20MB for each file.
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under <span class="uicontrol bold">Load to Table</span>, edit the following:</span><ol type="a">
+                           <li class="substepexpand"><span><span class="uicontrol bold">Table Owner</span> - Select the database schema you
+                            would like to create and load data into.</span></li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Table Name</span> - Identify the table name you would
+                            like to create. By default, all table names are converted to upper
+                            case.</span></li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Error Table Name</span> - Identify the error table name
+                            you would like to save errors during data load. </span><div>
+                                 
+                                 <div class="infoboxnote" id="GUID-5B932032-7641-46EA-ABC4-314D33DECE95__GUID-9002B13B-035F-409A-898A-B706B74309A4">
+                                    <p class="notep1">Note:</p>By default, all table names are converted to upper case. If data
+                                load succeeds without any error, this error table is dropped
+                                automatically.
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Primary Keys</span> - Select how to set the primary key
+                            (Oracle Database 12c or later). Primary keys can be set using
+                                <span class="uicontrol bold">SYS_GUID</span> or <span class="uicontrol bold">Identity
+                                Column</span>.</span><div>
+                                 <span class="uicontrol bold">SYS_GUID</span> generates and returns a globally unique
+                            identifier. On most platforms, this generated identifier is based on a
+                            host identifier, a process or thread identifier of the process or thread
+                            invoking the function, and a non-repeating value (sequence of bytes).
+                                <span class="uicontrol bold">SYS_GUID</span> consumes more space, but is
+                            unpredictable. <span class="uicontrol bold">Identity Column</span> is compact, but
+                            can be predictable
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Use Column Data Types</span> - Select to use the column
+                            types parsed from the file. If not selected, the table columns will be
+                            created as <code class="codeph">VARCHAR2(4000)</code>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>To view the full preview, configure data load settings, and set which columns
+                    to load, Click <span class="uicontrol bold">Configure</span>.</span><div>Make appropriate changes and click <span class="uicontrol bold">Save
+                    Changes</span>.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Load Data</span>.</span><div>
+                           <p>Once Data Loading is finished, a success message is displayed. If some rows cannot be loaded to the target table, they will be stored to the error table and error table is displayed.</p>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="loading-data.html#GUID-8E0CFF4A-6AC6-4559-B6C0-92B6A5F73AC7" title="Use the Load Data Wizard to copy and paste or upload data.">Loading Data</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

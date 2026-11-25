@@ -1,0 +1,629 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Trees">
+      <meta name="abstract" content="Trees to display hierarchical information in a clear, easy-to-use format. You can create a tree control using a SQL query.">
+      <meta name="description" content="Trees to display hierarchical information in a clear, easy-to-use format. You can create a tree control using a SQL query.">
+      <meta name="DC.subject" content="trees, managing, about, creating on new page, creating, editing attributes">
+      <meta name="keywords" content="trees, managing, about, creating on new page, creating, editing attributes">
+      <meta name="DC.Relation" scheme="URI" content="managing-application-controls.html#GUID-1356B4CC-6BF0-4D72-94AD-017382BBCA49">
+      <meta name="DC.Relation" scheme="URI" content="creating-trees.html#GUID-D883425F-6338-4D7B-98DB-4F21F0286AB3">
+      <meta name="DC.Relation" scheme="URI" content="creating-trees.html#GUID-7C68A6E5-0041-459F-A487-96D3052F1C73">
+      <meta name="DC.Relation" scheme="URI" content="creating-trees.html#GUID-4E3E2A8E-1052-427F-9AD8-6EC356A735FD">
+      <meta name="DC.Relation" scheme="URI" content="creating-trees.html#GUID-72DB4AF0-7336-4796-B877-ED39FCA677E1">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-58660D6C-B887-4E44-B552-EEFD7A402745">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Trees to display hierarchical information in a clear, easy-to-use format. You can create a tree control using a SQL query.">
+      <meta name="description" content="Trees to display hierarchical information in a clear, easy-to-use format. You can create a tree control using a SQL query.">
+      <title>Managing Trees</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Trees to display hierarchical information in a clear, easy-to-use format. You can create a tree control using a SQL query.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="creating-buttons.html" title="Previous" type="text/html">
+      <link rel="next" href="about-incorporating-javascript-into-an-application.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Managing Trees","description":"Trees to display hierarchical information in a clear, easy-to-use format. You can create a tree control using a SQL query.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="creating-buttons.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="about-incorporating-javascript-into-an-application.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-58660D6C-B887-4E44-B552-EEFD7A402745" name="GUID-58660D6C-B887-4E44-B552-EEFD7A402745"></a><a id="HTMDB28440"></a><a id="4000:27"></a><a id="4000:28"></a><a id="4000:45"></a><a id="4000:202"></a><a id="4000:2512"></a>
+         
+         <h2 id="HTMDB-GUID-58660D6C-B887-4E44-B552-EEFD7A402745" class="sect2"><span class="enumeration_section">13.4 </span>Managing Trees
+         </h2>
+         <div class="ind">
+            <p>Trees to display hierarchical information in a clear, easy-to-use format. You can create a tree control using a SQL query.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="creating-trees.html#GUID-D883425F-6338-4D7B-98DB-4F21F0286AB3">About Trees</a><br>Tree controls in <span>Oracle APEX</span> use APEX Tree.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-trees.html#GUID-7C68A6E5-0041-459F-A487-96D3052F1C73">Creating a Tree Using the Create Page Wizard</a><br>Create a tree on a new page by running the Create Page Wizard.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-trees.html#GUID-4E3E2A8E-1052-427F-9AD8-6EC356A735FD">Creating a Tree in Page Designer</a><br>Create a tree control by providing a SQL query that specifies a hierarchical relationship by identifying an ID and parent ID column in a table or view.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-trees.html#GUID-72DB4AF0-7336-4796-B877-ED39FCA677E1">Editing Tree Attributes</a><br>Control tree behavior by editing region attributes and report         Attributes.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-application-controls.html#GUID-1356B4CC-6BF0-4D72-94AD-017382BBCA49" title="Developers can create and manage a variety of application page controls, including page items, dynamic actions, buttons, and trees.">Managing Application Controls</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB29332"></a><div class="props_rev_3"><a id="GUID-D883425F-6338-4D7B-98DB-4F21F0286AB3" name="GUID-D883425F-6338-4D7B-98DB-4F21F0286AB3"></a><h3 id="HTMDB-GUID-D883425F-6338-4D7B-98DB-4F21F0286AB3" class="sect3"><span class="enumeration_section">13.4.1 </span>About Trees
+               </h3>
+               <div>
+                  <p>Tree controls in <span>Oracle APEX</span> use APEX Tree.
+                  </p>
+                  <p>App Builder includes a built-in wizard for generating a tree hierarchical navigation mechanism. Trees are implemented using a single hierarchical query that identifies the row to be used as the start of your query and the relationship between parent rows and child rows of the hierarchy. Trees use the APEX Tree implementation. This is a JavaScript-based, cross browser tree component that features optional keyboard navigation, and optional state saving.</p>
+                  <p>When you implement a tree control, the SQL query specifies a hierarchical relationship by identifying an ID and parent ID column in a table or view. The tree query must utilizes a <code class="codeph">START WITH .. CONNECT BY</code> clause to generate the hierarchical query.
+                  </p>
+                  <div class="infobox-tip" id="GUID-D883425F-6338-4D7B-98DB-4F21F0286AB3__GUID-29E791A0-2967-414E-9BED-B97B5A47FE75">
+                     <p class="notep1">Tip:</p>
+                     <p>The creation of APEX Tree regions is only supported on pages using a Desktop user interface.</p>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-D883425F-6338-4D7B-98DB-4F21F0286AB3__GUID-998A68E6-6D14-44A2-945A-18EB340C273F">About Desupported jsTrees</p>
+                     <p>Prior to release 5.2, <span>APEX</span> supported the rendering of jsTree tree regions. <span>APEX</span> no longer supports jsTree tree regions. <span>APEX</span> now supports the generation of an APEX Tree tree region. APEX Tree is a JavaScript based, cross browser tree component. jsTree regions are automatically upgraded to APEX Tree regions when upgrading from a previous release or when importing to release 18.1.
+                     </p>
+                     
+                     <div class="infobox-tip" id="GUID-D883425F-6338-4D7B-98DB-4F21F0286AB3__GUID-985D39F1-0EA2-4420-A296-3AED3216491E">
+                        <p class="notep1">Tip:</p>
+                        
+                        <p>To view tree examples, install the sample app, <span class="italic">Sample Trees</span>. To learn more, see <a href="using-the-app-gallery.html#GUID-BA858DEB-1828-4FCE-8955-D14CC3D1F29C" title="Install Sample and Starter Apps directly from the Gallery by clicking Install.">Installing Apps from the Gallery</a>.
+                        </p>
+                        
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-trees.html#GUID-58660D6C-B887-4E44-B552-EEFD7A402745" title="Trees to display hierarchical information in a clear, easy-to-use format. You can create a tree control using a SQL query.">Managing Trees</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29749"></a><div class="props_rev_3"><a id="GUID-7C68A6E5-0041-459F-A487-96D3052F1C73" name="GUID-7C68A6E5-0041-459F-A487-96D3052F1C73"></a><h3 id="HTMDB-GUID-7C68A6E5-0041-459F-A487-96D3052F1C73" class="sect3"><span class="enumeration_section">13.4.2 </span>Creating a Tree Using the Create Page
+        Wizard
+               </h3>
+               <div>
+                  <p>Create a tree on a new page by running the Create Page Wizard.</p>
+                  <div class="p">A tree is based on a query and returns data that can be represented in a hierarchy. When you create a tree using the Create Page Wizard, the wizard generates the hierarchical query for you based on the options you select.</div>
+                  <div class="section">
+                     <p>To create a tree on a new page:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Select an application. </span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Page</span>.</span><div>
+                           
+                           <p><span class="uicontrol bold">Create a Page</span> appears and features three
+                        tabs: <span class="uicontrol bold">Component</span>, <span class="uicontrol bold">Feature</span>, and
+                            <span class="uicontrol bold">Legacy Pages</span>.
+                           </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under Component, select <span class="uicontrol bold">Tree</span>.</span></li>
+                     <li class="stepexpand"><span>Page Definition:</span><ol type="a">
+                           <li class="substepexpand"><span>Page Number - The page number is an integer value that identifies a
+                            page within an application. </span></li>
+                           <li class="substepexpand"><span>Name - Specify a text name for this page.</span><div>
+                                 
+                                 <div class="infobox-tip" id="GUID-7C68A6E5-0041-459F-A487-96D3052F1C73__GUID-6ADBBF2B-0E4E-426F-85A7-1D9A1D80E8CA">
+                                    <p class="notep1">Tip:</p>
+                                    
+                                    <p>This text is also used for page
+                                        <span class="uicontrol bold">Title</span>. After page creation, you can
+                                    modify the <span class="uicontrol bold">Title</span> in Page Designer.
+                                    </p>
+                                    
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Page Mode - Identify the page mode. To learn more, see field-level Help.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Data Source - Select a Data Source for the page:</span><ol type="a" id="GUID-7C68A6E5-0041-459F-A487-96D3052F1C73__SUBSTEPS_UV5_WGX_WSB">
+                           <li><span>Table/View Owner - Select the owner of the table on which you are
+                            building the page.</span></li>
+                           <li><span>Table/View Name - Select the table or view on which the page will be
+                            based. When entering manually, note that the table name is case
+                            sensitive.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span id="GUID-7C68A6E5-0041-459F-A487-96D3052F1C73__d4145e159">Navigation - Expand the region and enable or disable navigation. If either flag is enabled, additional attributes appear. To learn more about an attribute, see field-level Help.</span><ol type="a" id="GUID-7C68A6E5-0041-459F-A487-96D3052F1C73__d4145e161">
+                           <li id="GUID-7C68A6E5-0041-459F-A487-96D3052F1C73__d4145e162"><span>Use Breadcrumb - Enable to create a breadcrumb entry for this page. By default, the page name is used as breadcrumb entry name.</span></li>
+                           <li id="GUID-7C68A6E5-0041-459F-A487-96D3052F1C73__d4145e165"><span>Use Navigation - Enable to create a navigation menu entry for this page. By default, the page name is used as navigation menu name.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                     <li class="stepexpand"><span>Tree Attributes:</span><div>
+                           
+                           <p>A tree is based on a query and returns data that can be represented in a
+                        hierarchy. A start <code class="codeph">with .. connect by</code> clause will be used
+                        to generate the hierarchical query for your tree. Use this page to identify
+                        the column you want to use as the ID, the Parent ID, and text that should
+                        appear on the nodes. The <span class="uicontrol bold">Start With</span> column will be
+                        used to specify the root of the hierarchical query, and its value can be
+                        based on an existing item, static value or SQL query returning a single
+                        value.
+                           </p>
+                           
+                           
+                        </div>
+                        <ol type="a">
+                           <li class="substepexpand"><span>ID - Select the column to use as the ID. For example, select the
+                                <span class="uicontrol bold">EMPNO</span> column for the <code class="codeph">EMP</code>
+                            table.</span></li>
+                           <li class="substepexpand"><span>Parent ID - Select the column to use as the parent ID. For example,
+                            select the <span class="uicontrol bold">MGR</span> column for the
+                                <code class="codeph">EMP</code> table.</span></li>
+                           <li class="substepexpand"><span>Node Text - Select the text to appear on the tree nodes.  For example,
+                            select the  <span class="uicontrol bold">ENAME</span> column for the
+                                <code class="codeph">EMP</code> table.</span></li>
+                           <li class="substepexpand"><span>Start With - Select the column to be used to specify the root of the
+                            hierarchical tree query.  For example, select the
+                                <span class="uicontrol bold">MGR</span> column for the <code class="codeph">EMP</code>
+                            table.</span></li>
+                           <li class="substepexpand"><span>Start Tree - Choose how to start your query. Options include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Based on Existing Item</span> -
+                                        Select an existing application or page item.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Based on a SQL Query</span> -
+                                        Enter a SQL query that returns a single row or single
+                                        column.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Based on a Static Value</span> -
+                                        Enter a static value.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Value is NULL</span>.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                           <li class="substepexpand"><span>Include Buttons - Select the buttons to include.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Page</span>.</span></li>
+                     <li class="stepexpand"><span>To view page, click <span class="uicontrol bold">Save and Run Page</span>.</span><div>The rendered page appears.</div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-trees.html#GUID-58660D6C-B887-4E44-B552-EEFD7A402745" title="Trees to display hierarchical information in a clear, easy-to-use format. You can create a tree control using a SQL query.">Managing Trees</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29748"></a><div class="props_rev_3"><a id="GUID-4E3E2A8E-1052-427F-9AD8-6EC356A735FD" name="GUID-4E3E2A8E-1052-427F-9AD8-6EC356A735FD"></a><h3 id="HTMDB-GUID-4E3E2A8E-1052-427F-9AD8-6EC356A735FD" class="sect3"><span class="enumeration_section">13.4.3 </span>Creating a Tree in Page Designer
+               </h3>
+               <div>
+                  <p>Create a tree control by providing a SQL query that specifies a hierarchical relationship by identifying an ID and parent ID column in a table or view.</p>
+                  <div class="p">The tree query you provide must utilizes a <code class="codeph">START WITH .. CONNECT BY</code> clause to generate the hierarchical query.
+                  </div>
+                  <div class="section">
+                     <p>To create a tree in Page Designer</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears. </div>
+                     </li>
+                     <li class="stepexpand"><span>Click the <span class="uicontrol bold">Layout</span> tab in the central pane.</span></li>
+                     <li class="stepexpand"><span>In the Gallery, click the <span class="uicontrol bold">Regions</span> tab. Right-click
+                        <span class="uicontrol bold">Tree</span> and select <span class="uicontrol bold">Add To</span>, and
+                    select the appropriate location. </span><div>
+                           
+                           <div class="infobox-tip" id="GUID-4E3E2A8E-1052-427F-9AD8-6EC356A735FD__GUID-A0AF1A6F-ECD6-44D5-A8F8-DD4ADC9282BF">
+                              <p class="notep1">Tip:</p>
+                              
+                              <p>You can also select the Tree region in the Gallery and drag
+                            it to the appropriate location in the Layout tab.</p>
+                              
+                           </div>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Page Designer indicates what to do next. If there are errors, the
+                        <span class="uicontrol bold">Show Messages</span> icon displays in the Page Developer
+                    toolbar.</span><ol type="a" id="GUID-4E3E2A8E-1052-427F-9AD8-6EC356A735FD__SUBSTEPS_L54_FCN_QMB">
+                           <li class="substepexpand"><span>Click the <span class="uicontrol bold">Show Messages</span> icon on the Page
+                            Designer toolbar.</span><div>The Messages dialog displays errors that must be
+                            addressed.</div>
+                           </li>
+                           <li class="substepexpand"><span>Select an error to highlight the associated attribute in the Property
+                            Editor.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Edit the <span class="uicontrol bold">Region</span> attributes:</span><ol type="a" id="GUID-4E3E2A8E-1052-427F-9AD8-6EC356A735FD__SUBSTEPS_BHG_WLS_SMB">
+                           <li class="substepexpand"><span>In the Property Editor, select the <span class="uicontrol bold">Region</span> tab
+                            (if not already selected).</span><div>
+                                 
+                                 <p>To learn more about an attribute, select the attribute in
+                                the Property Editor and click the <span class="uicontrol bold">Help</span> tab in
+                                the central pane.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Identification</span>, <span class="uicontrol bold">Title</span> -
+                            Enter a region title. The region title only displays when it is defined
+                            in the region template.</span></li>
+                           <li class="substepexpand"><span>Under <span class="uicontrol bold">Source</span> -</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-4E3E2A8E-1052-427F-9AD8-6EC356A735FD__UL_XNB_1MS_SMB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Location</span> - Select the location of the
+                                        data.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Type</span> - Select how the data is
+                                        queried.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Table Name</span> - Enter the case-sensitive
+                                        table or view name. You can type in the name or pick from
+                                        the list.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                                 <p>Depending upon your selections, additional attributes may appear.</p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Under <span class="uicontrol bold">Layout</span> - </span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-4E3E2A8E-1052-427F-9AD8-6EC356A735FD__UL_BQD_RPS_SMB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Sequence</span> - Enter the
+                                        display sequence for this item. The sequence and other
+                                        layout settings determine where this item is displayed in
+                                        relation to other items within the region.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Parent Region</span> - Select
+                                        the parent region to which this region belongs. If a parent
+                                        region is selected then this region is rendered completely
+                                        inside the parent region.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Position</span> - Select the
+                                        template position used to display this region. The
+                                        selections available are derived from the appropriate
+                                        template positions defined within the current theme, for the
+                                        page's user interface.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Appearance</span>, <span class="uicontrol bold">Template</span> -
+                            Specify the template. Select a region template to define the appearance
+                            and layout of this region.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Edit the tree <span class="uicontrol bold">Attributes</span>:</span><ol type="a" id="GUID-4E3E2A8E-1052-427F-9AD8-6EC356A735FD__SUBSTEPS_TCD_RQS_SMB">
+                           <li class="substepexpand"><span>In the Rendering tab, select the region and click
+                                <span class="uicontrol bold">Attributes</span> tab.</span><div>
+                                 
+                                 <p>Tree Attributes display in the Property Editor.</p>
+                                 
+                                 <p>To learn more about an attribute, select the attribute in
+                                the Property Editor and click the <span class="uicontrol bold">Help</span> tab in
+                                the central pane.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Under <span class="uicontrol bold">Settings</span>:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-4E3E2A8E-1052-427F-9AD8-6EC356A735FD__UL_UC3_1RS_SMB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Node Label Column</span> - Select
+                                        the data source column containing the value for the node
+                                        label. The value cannot contain markup.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Node Value Column</span> -
+                                        Select the data source column containing the value for the
+                                        node value. This value is not displayed but added to the
+                                        tree adapter node id property that can be accessed using
+                                        JavaScript.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Hierarchy</span> - Indicate whether <span>APEX</span> should compute the tree hierarchy from the data or whether the data already contains all hierarchy information. The user interface changes depending upon your selection.
+                                       </p>
+                                       
+                                       <ul style="list-style-type: disc;" id="GUID-4E3E2A8E-1052-427F-9AD8-6EC356A735FD__UL_VC3_1RS_SMB">
+                                          <li>
+                                             
+                                             <p><span class="uicontrol bold">Computed With
+                                                SQL</span>:
+                                             </p>
+                                             
+                                             <ul style="list-style-type: disc;" id="GUID-4E3E2A8E-1052-427F-9AD8-6EC356A735FD__UL_WC3_1RS_SMB">
+                                                <li>
+                                                   
+                                                   <p><span class="uicontrol bold">Node ID Column</span> &#x2013; Select the data source column containing the ID for a node. This is required when the hierarchy is being computed by <span>APEX</span>. Typically, a primary key column is chosen here.
+                                                   </p>
+                                                   
+                                                </li>
+                                                <li>
+                                                   
+                                                   <p><span class="uicontrol bold">Parent Key Column</span> &#x2013; Select the data source column containing the value for the parent key of a node. Required when <span>APEX</span> computes the hierarchy.
+                                                   </p>
+                                                   
+                                                </li>
+                                             </ul>
+                                             
+                                          </li>
+                                          <li>
+                                             
+                                             <p><span class="uicontrol bold">Not Computed</span>:
+                                             </p>
+                                             
+                                             <ul style="list-style-type: disc;" id="GUID-4E3E2A8E-1052-427F-9AD8-6EC356A735FD__UL_XC3_1RS_SMB">
+                                                <li>
+                                                   
+                                                   <p><span class="uicontrol bold">Node Status
+                                                  Column</span> &#x2013; Select the data source column
+                                                  containing the value for the node status. Required
+                                                  when the <span class="bold">Hierarchy</span> attribute is set to
+                                                  <span class="bold">Not Computed</span>. The column must contain
+                                                  <span class="bold">0</span> for leaf nodes and <span class="bold">1</span> for nodes
+                                                  with children.
+                                                   </p>
+                                                   
+                                                </li>
+                                                <li>
+                                                   
+                                                   <p><span class="uicontrol bold">Hierarchy Level
+                                                  Column</span> &#x2013; Select the data source column
+                                                  containing the value for the hierarchy level of
+                                                  the node. Required when the <span class="bold">Hierarchy</span>
+                                                  attribute is set to <span class="bold">Not Computed</span>.
+                                                   </p>
+                                                   
+                                                </li>
+                                             </ul>
+                                             
+                                          </li>
+                                       </ul>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Tooltip</span> - Select whether
+                                        tooltips are displayed, and the source for the tooltip.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Link</span> - Specify the link to
+                                        be executed when a node is clicked.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Link Column</span> - Select the
+                                        data source column containing the value for the link to be
+                                        executed when a node is clicked.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Icon CSS Class Column</span> -
+                                        Select the data source column containing the value for the
+                                        icon CSS class to be applied to the node.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-trees.html#GUID-58660D6C-B887-4E44-B552-EEFD7A402745" title="Trees to display hierarchical information in a clear, easy-to-use format. You can create a tree control using a SQL query.">Managing Trees</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29751"></a><div class="props_rev_3"><a id="GUID-72DB4AF0-7336-4796-B877-ED39FCA677E1" name="GUID-72DB4AF0-7336-4796-B877-ED39FCA677E1"></a><h3 id="HTMDB-GUID-72DB4AF0-7336-4796-B877-ED39FCA677E1" class="sect3"><span class="enumeration_section">13.4.4 </span>Editing Tree Attributes
+               </h3>
+               <div>
+                  <p>Control tree behavior by editing region attributes and report
+        Attributes.</p>
+                  <div class="section">
+                     
+                     <p>By default, a tree does not have focus and node links are activated with
+                a single click action.</p>
+                     
+                  </div>
+                  <p>To access the Tree attributes:</p>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears. </div>
+                     </li>
+                     <li class="stepexpand"><span>Select the tree region in the Rendering tab or the Layout tab.</span><div>
+                           
+                           <p>The Property Editor displays attributes in the right pane.
+                        Attributes are organized in groups.</p>
+                           
+                           <p>To learn more about an attribute, select the attribute in the Property Editor
+                        and click the <span class="uicontrol bold">Help</span> tab in the central pane.
+                           </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Edit Region attributes:</span><ol type="a" id="GUID-72DB4AF0-7336-4796-B877-ED39FCA677E1__SUBSTEPS_CMT_B2D_QMB">
+                           <li><span>In the Property Editor (right pane), select the
+                                <span class="uicontrol bold">Region</span> tab.</span></li>
+                           <li><span>Edit attributes as needed.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Edit tree Attributes</span><ol type="a" id="GUID-72DB4AF0-7336-4796-B877-ED39FCA677E1__SUBSTEPS_TX5_NZC_QMB">
+                           <li><span>In the Property Editor (right pane), select the
+                                <span class="uicontrol bold">Attributes</span> tab.</span></li>
+                           <li><span>Edit attributes as needed.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-trees.html#GUID-58660D6C-B887-4E44-B552-EEFD7A402745" title="Trees to display hierarchical information in a clear, easy-to-use format. You can create a tree control using a SQL query.">Managing Trees</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

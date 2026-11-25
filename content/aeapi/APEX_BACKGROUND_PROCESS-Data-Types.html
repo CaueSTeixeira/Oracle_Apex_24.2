@@ -1,0 +1,161 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="Data Types">
+      <meta name="DC.subject" content="data types, APEX_BACKGROUND_PROCESS">
+      <meta name="keywords" content="data types, APEX_BACKGROUND_PROCESS">
+      <meta name="DC.Relation" scheme="URI" content="apex_background_process.html">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-FF0174C9-EFF7-4DC8-A2AB-06BCA95F3E30">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Data Types</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_BACKGROUND_PROCESS-Constants.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_BACKGROUND_PROCESS.ABORT-Procedure-Signature-1.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Data Types","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_BACKGROUND_PROCESS-Constants.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_BACKGROUND_PROCESS.ABORT-Procedure-Signature-1.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-FF0174C9-EFF7-4DC8-A2AB-06BCA95F3E30" name="GUID-FF0174C9-EFF7-4DC8-A2AB-06BCA95F3E30"></a>
+         
+         <h2 id="AEAPI-GUID-FF0174C9-EFF7-4DC8-A2AB-06BCA95F3E30" class="sect2"><span class="enumeration_section">13.2 </span>Data Types
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>The APEX_BACKGROUND_PROCESS package uses the following data types.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-FF0174C9-EFF7-4DC8-A2AB-06BCA95F3E30__GUID-16419CB7-D4B2-42D8-87D0-76C43C99D7F0">Record describing an execution running in the background</p><pre class="pre codeblock"><code>type t_execution is record (
+    id                        NUMBER,
+    state                     t_execution_state,
+    --
+    current_exec_process_id   NUMBER,
+    --
+    last_status_message       VARCHAR2(32767),
+    sofar                     NUMBER,
+    totalwork                 NUMBER );</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-FF0174C9-EFF7-4DC8-A2AB-06BCA95F3E30__GUID-7FBB3A95-4A3E-48DF-B128-45CA9BF3469B">Attributes</p>
+                  <div class="tblformal" id="GUID-FF0174C9-EFF7-4DC8-A2AB-06BCA95F3E30__TABLE_TG4_4DM_2XB">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Attributes of data type." frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="0%" id="d51621e69">Attribute</th>
+                              <th align="left" valign="bottom" width="0%" id="d51621e71">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d51621e75" headers="d51621e69 "><code class="codeph">execution_id</code></td>
+                              <td align="left" valign="top" width="0%" headers="d51621e75 d51621e71 ">ID of the execution.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d51621e81" headers="d51621e69 "><code class="codeph">state</code></td>
+                              <td align="left" valign="top" width="0%" headers="d51621e81 d51621e71 ">State of the execution, see <code class="codeph">t_execution_state</code> constants.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d51621e90" headers="d51621e69 "><code class="codeph">current_exec_process_id</code></td>
+                              <td align="left" valign="top" width="0%" headers="d51621e90 d51621e71 ">ID of the currently executing child process.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d51621e96" headers="d51621e69 "><code class="codeph">context_value</code></td>
+                              <td align="left" valign="top" width="0%" headers="d51621e96 d51621e71 ">Context value passed when the execution was submitted.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d51621e102" headers="d51621e69 "><code class="codeph">last_status_message</code></td>
+                              <td align="left" valign="top" width="0%" headers="d51621e102 d51621e71 ">Last status message set by the developer.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d51621e108" headers="d51621e69 "><code class="codeph">sofar</code></td>
+                              <td align="left" valign="top" width="0%" headers="d51621e108 d51621e71 ">Units of work already processed by the page process.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d51621e114" headers="d51621e69 "><code class="codeph">totalwork</code></td>
+                              <td align="left" valign="top" width="0%" headers="d51621e114 d51621e71 ">Total units of work to process by the page process.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="infoboxnotealso" id="GUID-FF0174C9-EFF7-4DC8-A2AB-06BCA95F3E30__GUID-27478DB3-7F4C-4ABB-900C-6AB51247C434">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-FF0174C9-EFF7-4DC8-A2AB-06BCA95F3E30__UL_TFG_LFM_2XB">
+                        <li><a href="APEX_BACKGROUND_PROCESS-Constants.html#GUID-F8B2006B-AEF3-4F50-96A2-8DE5349C2A94">Constants</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="apex_background_process.html">APEX_BACKGROUND_PROCESS</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

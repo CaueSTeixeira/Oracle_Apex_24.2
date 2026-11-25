@@ -1,0 +1,179 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Invoking a SOAP-style Web Service">
+      <meta name="DC.subject" content="SOAP web service">
+      <meta name="keywords" content="SOAP web service">
+      <meta name="DC.Relation" scheme="URI" content="About-the-APEX_WEB_SERVICE-API.html#GUID-ECC9CC44-D10B-4502-B832-A171B370F3B4">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-172535D9-552E-4403-BE79-2EE92DB4AFCE">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Invoking a SOAP-style Web Service</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="About-the-APEX_WEB_SERVICE-API.html" title="Previous" type="text/html">
+      <link rel="next" href="Invoking-a-RESTful-Style-Web-Service.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Invoking a SOAP-style Web Service","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="About-the-APEX_WEB_SERVICE-API.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="Invoking-a-RESTful-Style-Web-Service.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-172535D9-552E-4403-BE79-2EE92DB4AFCE" name="GUID-172535D9-552E-4403-BE79-2EE92DB4AFCE"></a><a id="AEAPI1931"></a>
+         
+         <h2 id="AEAPI-GUID-172535D9-552E-4403-BE79-2EE92DB4AFCE" class="sect2"><span class="enumeration_section">60.1.1 </span>Invoking a SOAP-style Web Service
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>There is a procedure and a function to invoke a SOAP-style Web service.</p>
+                  <p>The procedure stores the response in the collection specified by the parameter <code class="codeph">p_collection_name</code>. 
+                  </p>
+                  <p>The function returns the results as an <code class="codeph">XMLTYPE</code>.
+                  </p>
+                  <p>To retrieve a specific value from the response, you use either the <code class="codeph">PARSE_RESPONSE</code> function if the result is stored in a collection or the <code class="codeph">PARSE_XML</code> function if the response is returned as an <code class="codeph">XMLTYPE</code>.
+                  </p>
+                  <p>To pass a binary parameter to the Web service as <code class="codeph">base64</code> encoded character data, use the function <code class="codeph">BLOB2CLOBBASE64</code>. Conversely, to transform a response that contains a binary parameter that is <code class="codeph">base64</code> encoded use the function <code class="codeph">CLOBBASE642BLOB</code>.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-172535D9-552E-4403-BE79-2EE92DB4AFCE__GUID-12419219-EFC2-4563-9846-238CAB8C3CC9">Example</p>
+                  <p>The following is an example of using the <code class="codeph">BLOB2CLOBBASE64</code> function to encode a parameter, the <code class="codeph">MAKE_REQUEST</code> procedure to call a Web service, and the <code class="codeph">PARSE_RESPONSE</code> function to extract a specific value from the response.
+                  </p><pre class="pre codeblock"><code>DECLARE
+ l_filename varchar2(255);
+ l_BLOB BLOB;
+ l_CLOB CLOB;
+ l_envelope CLOB;
+ l_response_msg varchar2(32767);
+BEGIN
+  IF :P1_FILE IS NOT NULL THEN
+     SELECT filename, BLOB_CONTENT
+       INTO l_filename, l_BLOB
+       FROM APEX_APPLICATION_FILES
+       WHERE name = :P1_FILE;
+
+    l_CLOB := apex_web_service.blob2clobbase64(l_BLOB);
+
+    l_envelope := q'!&lt;?xml version='1.0' encoding='UTF-8'?&gt;!';
+    l_envelope := l_envelope|| '&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:chec="http://www.stellent.com/CheckIn/"&gt;
+  &lt;soapenv:Header/&gt;
+  &lt;soapenv:Body&gt;
+    &lt;chec:CheckInUniversal&gt;
+        &lt;chec:dDocName&gt;'||l_filename||'&lt;/chec:dDocName&gt;
+        &lt;chec:dDocTitle&gt;'||l_filename||'&lt;/chec:dDocTitle&gt;
+        &lt;chec:dDocType&gt;Document&lt;/chec:dDocType&gt;
+        &lt;chec:dDocAuthor&gt;GM&lt;/chec:dDocAuthor&gt;
+        &lt;chec:dSecurityGroup&gt;Public&lt;/chec:dSecurityGroup&gt;
+        &lt;chec:dDocAccount&gt;&lt;/chec:dDocAccount&gt;
+        &lt;chec:CustomDocMetaData&gt;
+            &lt;chec:property&gt;
+              &lt;chec:name&gt;&lt;/chec:name&gt;
+              &lt;chec:value&gt;&lt;/chec:value&gt;
+            &lt;/chec:property&gt;
+        &lt;/chec:CustomDocMetaData&gt;
+        &lt;chec:primaryFile&gt;
+           &lt;chec:fileName&gt;'||l_filename'||&lt;/chec:fileName&gt;
+           &lt;chec:fileContent&gt;'||l_CLOB||'&lt;/chec:fileContent&gt;
+        &lt;/chec:primaryFile&gt;
+        &lt;chec:alternateFile&gt;
+           &lt;chec:fileName&gt;&lt;/chec:fileName&gt;
+           &lt;chec:fileContent&gt;&lt;/chec:fileContent&gt;
+        &lt;/chec:alternateFile&gt;
+        &lt;chec:extraProps&gt;
+           &lt;chec:property&gt;
+              &lt;chec:name&gt;&lt;/chec:name&gt;
+              &lt;chec:value&gt;&lt;/chec:value&gt;
+           &lt;/chec:property&gt;
+        &lt;/chec:extraProps&gt;
+     &lt;/chec:CheckInUniversal&gt;
+  &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;';
+
+apex_web_service.make_request(
+   p_url               =&gt; 'http://192.0.2.1/idc/idcplg',
+   p_action            =&gt; 'http://192.0.2.1/CheckIn/',
+   p_collection_name   =&gt; 'STELLENT_CHECKIN',
+   p_envelope          =&gt; l_envelope,
+   p_username          =&gt; 'sysadmin',
+   p_password          =&gt; 'password' );
+
+ l_response_msg := apex_web_service.parse_response(
+    p_collection_name=&gt;'STELLENT_CHECKIN',
+p_xpath=&gt;'//idc:CheckInUniversalResponse/idc:CheckInUniversalResult/idc:StatusInfo/idc:statusMessage/text()',
+    p_ns=&gt;'xmlns:idc="http://www.stellent.com/CheckIn/"');
+
+  :P1_RES_MSG := l_response_msg;
+
+  END IF;
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="About-the-APEX_WEB_SERVICE-API.html#GUID-ECC9CC44-D10B-4502-B832-A171B370F3B4">About the APEX_WEB_SERVICE API</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

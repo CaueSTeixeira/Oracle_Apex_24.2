@@ -1,0 +1,292 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="GET_APPLICATION Function">
+      <meta name="DC.subject" content="GET_APPLICATION function, APEX_EXPORT">
+      <meta name="keywords" content="GET_APPLICATION function, APEX_EXPORT">
+      <meta name="DC.Relation" scheme="URI" content="APEX_EXPORT.html#GUID-6A4628A6-9F86-4394-9938-87A7FFFC7BC8">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-A8E626D6-D7DE-4E59-8F90-3666A7A41A87">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>GET_APPLICATION Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_EXPORT.html" title="Previous" type="text/html">
+      <link rel="next" href="GET_WORKSPACE.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"GET_APPLICATION Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_EXPORT.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="GET_WORKSPACE.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-A8E626D6-D7DE-4E59-8F90-3666A7A41A87" name="GUID-A8E626D6-D7DE-4E59-8F90-3666A7A41A87"></a>
+         
+         <h2 id="AEAPI-GUID-A8E626D6-D7DE-4E59-8F90-3666A7A41A87" class="sect2"><span class="enumeration_section">28.1 </span>GET_APPLICATION Function
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function exports the given application and optionally splits the application definition into multiple files. The optional <code class="codeph">p_with_% parameters</code> can be used to include additional information in the export.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-A8E626D6-D7DE-4E59-8F90-3666A7A41A87__GUID-C4BE340F-B782-40E1-96F0-7C80B4462DA5">Syntax</p><pre class="pre codeblock"><code>APEX_EXPORT.GET_APPLICATION (
+    p_application_id            IN NUMBER,
+    p_type                      IN t_export_type    DEFAULT c_type_application_source,
+    p_split                     IN BOOLEAN          DEFAULT FALSE,
+    p_with_date                 IN BOOLEAN          DEFAULT FALSE,
+    p_with_ir_public_reports    IN BOOLEAN          DEFAULT FALSE,
+    p_with_ir_private_reports   IN BOOLEAN          DEFAULT FALSE,
+    p_with_ir_notifications     IN BOOLEAN          DEFAULT FALSE,
+    p_with_translations         IN BOOLEAN          DEFAULT FALSE,
+    p_with_pkg_app_mapping      IN BOOLEAN          DEFAULT FALSE,
+    p_with_original_ids         IN BOOLEAN          DEFAULT FALSE,
+    p_with_no_subscriptions     IN BOOLEAN          DEFAULT FALSE,
+    p_with_comments             IN BOOLEAN          DEFAULT FALSE,
+    p_with_supporting_objects   IN VARCHAR2         DEFAULT NULL,
+    p_with_acl_assignments      IN BOOLEAN          DEFAULT FALSE,  
+    p_components                IN apex_t_varchar2  DEFAULT NULL,
+    p_with_audit_info           IN t_audit_type     DEFAULT NULL,
+    p_with_runtime_instances    IN apex_t_varchar2  DEFAULT NULL )
+    RETURN apex_t_export_files;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-A8E626D6-D7DE-4E59-8F90-3666A7A41A87__GUID-151E7762-8A36-42A4-9EF2-5BFE5BEA5B59">Parameters</p>
+                  <div class="tblformal" id="GUID-A8E626D6-D7DE-4E59-8F90-3666A7A41A87__BGBHJEAI">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="40%" id="d130070e72">Parameters</th>
+                              <th align="left" valign="bottom" width="60%" id="d130070e74">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="40%" id="d130070e78" headers="d130070e72 "><code class="codeph">p_application_id</code></td>
+                              <td align="left" valign="top" width="60%" headers="d130070e78 d130070e74 ">The application ID.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="40%" id="d130070e84" headers="d130070e72 "><code class="codeph">p_split</code></td>
+                              <td align="left" valign="top" width="60%" headers="d130070e84 d130070e74 ">If <code class="codeph">TRUE</code>, splits the definition into discrete elements that can be stored in separate files. If <code class="codeph">FALSE</code>, the result is a single file.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="40%" id="d130070e96" headers="d130070e72 "><code class="codeph">p_type</code></td>
+                              <td align="left" valign="top" width="60%" headers="d130070e96 d130070e74 ">
+                                 <p>Comma-delimited list of export types to perform:</p>
+                                 <ul style="list-style-type: disc;">
+                                    <li>APPLICATION_SOURCE - export an <span>APEX</span> application using other parameters passed.
+                                    </li>
+                                    <li>EMBEDDED_CODE - export code such as SQL, PL/SQL and JavaScript. <span>APEX</span> ignores all other options when EMBEDDED_CODE is selected.
+                                    </li>
+                                    <li>CHECKSUM-SH1 - export a SHA1 checksum that is independent of IDs and can be compared across instances and workspaces.</li>
+                                    <li>CHECKSUM-SH256 - export a SHA-256 checksum that is independent of IDs and can be compared across instances and workspaces.</li>
+                                    <li>READABLE_YAML - export a readable version of the application metadata in YAML format.</li>
+                                 </ul>
+                                 <p>When the parameter <code class="codeph">p_type</code> contains <code class="codeph">APPLICATION_SOURCE</code> and either <code class="codeph">CHECKSUM-SH1</code> or <code class="codeph">CHECKSUM-SH256</code>, <span>APEX</span> adds an additional line with a comment containing an overall checksum at the end of the application source file or, in case of a split export, the top-level <code class="codeph">install.sql</code> file.
+                                 </p> 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="40%" id="d130070e142" headers="d130070e72 "><code class="codeph">p_with_date</code></td>
+                              <td align="left" valign="top" width="60%" headers="d130070e142 d130070e74 ">If <code class="codeph">TRUE</code>, includes export date and time in the result.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="40%" id="d130070e151" headers="d130070e72 "><code class="codeph">p_with_ir_public_reports</code></td>
+                              <td align="left" valign="top" width="60%" headers="d130070e151 d130070e74 ">If <code class="codeph">TRUE</code>, includes public reports that a user saved.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="40%" id="d130070e160" headers="d130070e72 "><code class="codeph">p_with_ir_private_reports</code></td>
+                              <td align="left" valign="top" width="60%" headers="d130070e160 d130070e74 ">If <code class="codeph">TRUE</code>, includes private reports that a user saved.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="40%" id="d130070e169" headers="d130070e72 "><code class="codeph">p_with_ir_notifications</code></td>
+                              <td align="left" valign="top" width="60%" headers="d130070e169 d130070e74 ">If <code class="codeph">TRUE</code>, includes report notifications.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="40%" id="d130070e178" headers="d130070e72 "><code class="codeph">p_with_translations</code></td>
+                              <td align="left" valign="top" width="60%" headers="d130070e178 d130070e74 ">If <code class="codeph">TRUE</code>, includes application translation mappings and all text from the translation repository.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="40%" id="d130070e187" headers="d130070e72 "><code class="codeph">p_with_pkg_app_mapping</code></td>
+                              <td align="left" valign="top" width="60%" headers="d130070e187 d130070e74 ">
+                                 <p><span class="bold">Note:</span> This parameter is obsolete.
+                                 </p>
+                                 <p>If <code class="codeph">TRUE</code>, exports installed packaged applications&nbsp;with references to the packaged application definition. If <code class="codeph">FALSE</code>, exports them as normal applications.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="40%" id="d130070e204" headers="d130070e72 "><code class="codeph">p_with_original_ids</code></td>
+                              <td align="left" valign="top" width="60%" headers="d130070e204 d130070e74 ">If <code class="codeph">TRUE</code>, exports with the IDs as they were when the application was imported.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="40%" id="d130070e213" headers="d130070e72 "><code class="codeph">p_with_no_subscriptions</code></td>
+                              <td align="left" valign="top" width="60%" headers="d130070e213 d130070e74 ">If <code class="codeph">FALSE</code>, components contain subscription references.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="40%" id="d130070e223" headers="d130070e72 "><code class="codeph">p_with_comments</code></td>
+                              <td align="left" valign="top" width="60%" headers="d130070e223 d130070e74 ">If <code class="codeph">TRUE</code>, includes developer comments.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="40%" id="d130070e232" headers="d130070e72 "><code class="codeph">p_with_supporting_objects</code></td>
+                              <td align="left" valign="top" width="60%" headers="d130070e232 d130070e74 ">
+                                 <p>If <code class="codeph">Y</code>, exports supporting objects.
+                                 </p>
+                                 <p>If <code class="codeph">I</code>, installs on import automatically.
+                                 </p>
+                                 <p>If <code class="codeph">N</code>, does not export supporting objects.
+                                 </p>
+                                 <p>If <code class="codeph">NULL</code>, uses the application's include in export deployment value.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="40%" id="d130070e257" headers="d130070e72 "><code class="codeph">p_with_acl_assignments</code></td>
+                              <td align="left" valign="top" width="60%" headers="d130070e257 d130070e74 ">If <code class="codeph">TRUE</code>, exports ACL user role assignments.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="40%" id="d130070e266" headers="d130070e72 "><code class="codeph">p_components</code></td>
+                              <td align="left" valign="top" width="60%" headers="d130070e266 d130070e74 ">If not <code class="codeph">NULL</code>, exports only given components (array elements should be of form <code class="codeph"><span class="codeinlineitalic">type</span>:<span class="codeinlineitalic">name</span></code>, for example, <code class="codeph">PAGE:42</code> or <code class="codeph">MESSAGE:12345</code>). 
+                                 <p>See view <code class="codeph">APEX_APPL_EXPORT_COMPS</code> for components that can be exported.
+                                 </p>
+                                 <p>Use <code class="codeph">%</code> to indicate that all components of the given type should be exported. For example: <code class="codeph">LOV:%</code> exports all Lists Of Values contained in the application.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="40%" id="d130070e301" headers="d130070e72 "><code class="codeph">p_with_audit_info</code></td>
+                              <td align="left" valign="top" width="60%" headers="d130070e301 d130070e74 ">
+                                 <p>Specifies the detail of audit information to include:</p>
+                                 <ul style="list-style-type: disc;" id="GUID-A8E626D6-D7DE-4E59-8F90-3666A7A41A87__UL_SYJ_SFK_SBC">
+                                    <li><code class="codeph">NULL</code>: export excludes all audit information.
+                                    </li>
+                                    <li><code class="codeph">NAMES_AND_DATES</code>: export includes Created On, Created By, Updated On, Updated By values if they exist.
+                                    </li>
+                                    <li><code class="codeph">DATES_ONLY</code>: export includes Created On and Updated On values if they exist. User names are excluded.
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="40%" id="d130070e321" headers="d130070e72 "><code class="codeph">p_with_runtime_instances</code></td>
+                              <td align="left" valign="top" width="60%" headers="d130070e321 d130070e74 ">An array with components for which to export runtime instance data. For example, specify <code class="codeph">WORKFLOW</code> to export all Workflow Instances together with the application.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-A8E626D6-D7DE-4E59-8F90-3666A7A41A87__GUID-66E02C73-6BA2-4F8A-8AF7-15F00A261E80">Returns</p>
+                  <p>A table of <code class="codeph">apex_t_export_file</code>. Unless the caller passes <code class="codeph">p_split=&gt;true</code> to the function, the result is a single file.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-A8E626D6-D7DE-4E59-8F90-3666A7A41A87__GUID-5150EC21-5AC3-485E-A925-6BAFE886C0A3">Example 1</p>
+                  <p>This <span>SQLcl</span> code fragment spools the definition of application <code class="codeph">100</code> into file <code class="codeph">f100.sql</code>.
+                  </p><pre class="pre codeblock"><code>variable name varchar2(255)
+variable contents clob
+DECLARE
+   l_files apex_t_export_files;
+BEGIN
+   l_files := apex_export.get_application(p_application_id =&gt; 100);
+   :name := l_files(1).name;
+   :contents := l_files(1).contents;
+END;
+/
+set feed off echo off head off flush off termout off trimspool on
+set long 100000000 longchunksize 32767
+col name new_val name
+select :name name from sys.dual;
+spool &amp;name.
+print contents
+spool off</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-A8E626D6-D7DE-4E59-8F90-3666A7A41A87__GUID-903C2ACE-7CFD-4D9A-8924-5EB2D1FDB000">Example 2</p>
+                  <p>The following example shows an <code class="codeph">install.sql</code> file that was exported with <code class="codeph">p_type =&gt; 'APPLICATION_SOURCE,CHECKSUM-SH1'</code></p><pre class="pre codeblock"><code>prompt --install
+@@application/set_environment.sql
+@@application/delete_application.sql
+...snip...
+@@application/deployment/buildoptions.sql
+@@application/end_environment.sql
+-- Application Checksum SH1:jpcliMUZZDVVBI1MKpyyAfPBDww=</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_EXPORT.html#GUID-6A4628A6-9F86-4394-9938-87A7FFFC7BC8">APEX_EXPORT</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

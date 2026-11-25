@@ -1,0 +1,113 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="INCREMENT_CALENDAR Procedure (Deprecated)">
+      <meta name="DC.Relation" scheme="URI" content="APEX_UTIL.html#GUID-5ECE5C10-1A88-4D37-8A7D-C51925ADB2B9">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-66E26416-17E6-4C2C-A3C8-76748D30E536">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>INCREMENT_CALENDAR Procedure (Deprecated)</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="HTML_PCT_GRAPH_MASK-Function.html" title="Previous" type="text/html">
+      <link rel="next" href="IR_CLEAR-Procedure-DEPRECATED.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"INCREMENT_CALENDAR Procedure (Deprecated)","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="HTML_PCT_GRAPH_MASK-Function.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="IR_CLEAR-Procedure-DEPRECATED.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-66E26416-17E6-4C2C-A3C8-76748D30E536" name="GUID-66E26416-17E6-4C2C-A3C8-76748D30E536"></a><a id="AEAPI1716"></a><a id="AEAPI1717"></a><a id="AEAPI1718"></a><a id="AEAPI1715"></a>
+         
+         <h2 id="AEAPI-GUID-66E26416-17E6-4C2C-A3C8-76748D30E536" class="sect2"><span class="enumeration_section">59.82 </span>INCREMENT_CALENDAR Procedure (Deprecated)
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <div class="infoboxnote" id="GUID-66E26416-17E6-4C2C-A3C8-76748D30E536__GUID-88C720D5-DC97-4591-9CC7-621A401717FD">
+                     <p class="notep1">Note:</p>
+                     <p>This API is deprecated and will be
+                                        removed in a future release.</p>
+                  </div>
+                  <p>Use this procedure to navigate to the next set of days in the calendar. Depending on what the calendar view is, this procedure  navigates to the next month, week or day. If it is a Custom Calendar the total number of days between the start date and end date are navigated.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-66E26416-17E6-4C2C-A3C8-76748D30E536__GUID-FC6483C7-BF74-4E21-9852-14D3088A33EE">Syntax</p><pre class="pre codeblock"><code>APEX_UTIL.INCREMENT_CALENDAR;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-66E26416-17E6-4C2C-A3C8-76748D30E536__GUID-0172E6E1-1BF5-4E8A-A8DE-220D15202FDA">Parameters</p>
+                  <p>None.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-66E26416-17E6-4C2C-A3C8-76748D30E536__GUID-56C5C0A6-BC60-4799-8875-ED40A8A769FB">Example</p>
+                  <p>In this example, if you create a button called NEXT in the Calendar page and a process that fires when the create button is clicked, the following code navigates the calendar.</p><pre class="pre codeblock"><code>APEX_UTIL.INCREMENT_CALENDAR</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_UTIL.html#GUID-5ECE5C10-1A88-4D37-8A7D-C51925ADB2B9">APEX_UTIL</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

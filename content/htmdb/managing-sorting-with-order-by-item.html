@@ -1,0 +1,435 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Sorting with Order By Item">
+      <meta name="abstract" content="Create an inline static LOV by configuring region-level Order By Item attributes.">
+      <meta name="description" content="Create an inline static LOV by configuring region-level Order By Item attributes.">
+      <meta name="DC.subject" content="Order By Item, example, configuring">
+      <meta name="keywords" content="Order By Item, example, configuring">
+      <meta name="DC.Relation" scheme="URI" content="developing-reports.html#GUID-A63ECD33-D759-4725-9666-A02719FB35B8">
+      <meta name="DC.Relation" scheme="URI" content="managing-sorting-with-order-by-item.html#GUID-843DACE9-7316-4193-ABB2-21AEE95FD591">
+      <meta name="DC.Relation" scheme="URI" content="managing-sorting-with-order-by-item.html#GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-48FBEAC0-82C3-486E-A87C-5C7F98341F53">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Create an inline static LOV by configuring region-level Order By Item attributes.">
+      <meta name="description" content="Create an inline static LOV by configuring region-level Order By Item attributes.">
+      <title>Managing Sorting with Order By Item</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Create an inline static LOV by configuring region-level Order By Item attributes.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-classic-report-column-attributes.html" title="Previous" type="text/html">
+      <link rel="next" href="printing-report-regions.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Managing Sorting with Order By Item","description":"Create an inline static LOV by configuring region-level Order By Item attributes.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-classic-report-column-attributes.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="printing-report-regions.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-48FBEAC0-82C3-486E-A87C-5C7F98341F53" name="GUID-48FBEAC0-82C3-486E-A87C-5C7F98341F53"></a>
+         
+         <h2 id="HTMDB-GUID-48FBEAC0-82C3-486E-A87C-5C7F98341F53" class="sect2"><span class="enumeration_section">8.11 </span>Managing Sorting with Order By Item
+         </h2>
+         <div class="ind">
+            <p>Create an inline static LOV by configuring region-level Order By Item
+                attributes.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="managing-sorting-with-order-by-item.html#GUID-843DACE9-7316-4193-ABB2-21AEE95FD591">Order By Item Sort Example</a><br>View an Order By Item sort example.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-sorting-with-order-by-item.html#GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5">Configuring Sorting with Order By Item</a><br>Configure region Order By attributes to create an inline static         LOV.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="developing-reports.html#GUID-A63ECD33-D759-4725-9666-A02719FB35B8" title="In Oracle APEX, a report is the formatted result of a SQL query. You can generate the SQL query by selecting a table or view in a wizard or by defining the SQL query manually.">Developing Reports</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-843DACE9-7316-4193-ABB2-21AEE95FD591" name="GUID-843DACE9-7316-4193-ABB2-21AEE95FD591"></a><h3 id="HTMDB-GUID-843DACE9-7316-4193-ABB2-21AEE95FD591" class="sect3"><span class="enumeration_section">8.11.1 </span>Order By Item Sort Example
+               </h3>
+               <div>
+                  <p>View an Order By Item sort example.</p>
+                  <div class="section">
+                     <p>Configuring an Order By Item enables end users to choose
+                region ordering from a set of predefined options. Including an Order by Item is
+                particularly useful for region types which do not support ordering on their own,
+                such as a Cards region. Order By Item is supported by all region types except map
+                regions, tree regions, interactive reports, and interactive grids.</p>
+                     <p>An Order By Item configuration consists of predefined order by clauses which are
+                maintained at the region level and a page item which is available to end users at
+                runtime. While the default page item is a Select List, other item types, such as
+                radio groups, plug-in based types or even hidden items, are also supported.</p>
+                     <p>The following example shows a cards region. An <span class="uicontrol bold">Order By
+                </span> select list displays above the cards and contains the options: Salary
+                descending, Salary ascending, Department and Salary, and Employee Name.
+                     </p><img id="GUID-843DACE9-7316-4193-ABB2-21AEE95FD591__IMAGE_MXD_ZF2_BTB" height="564" width="906" src="img/sort_order_by_item_example2.png" alt="Description of sort_order_by_item_example2.png follows" title="Description of sort_order_by_item_example2.png follows" longdesc="img_text/sort_order_by_item_example2.html"><br><a href="img_text/sort_order_by_item_example2.html">Description of the illustration sort_order_by_item_example2.png</a></div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-sorting-with-order-by-item.html#GUID-48FBEAC0-82C3-486E-A87C-5C7F98341F53" title="Create an inline static LOV by configuring region-level Order By Item attributes.">Managing Sorting with Order By Item</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5" name="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5"></a><h3 id="HTMDB-GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5" class="sect3"><span class="enumeration_section">8.11.2 </span>Configuring Sorting with Order By Item
+               </h3>
+               <div>
+                  <p>Configure region Order By attributes to create an inline static
+        LOV.</p>
+                  <div class="section">
+                     
+                     <p>The following example configures an Order By Item for a Cards region
+                built on the <code class="codeph">EMP</code> table. The <code class="codeph">EMP</code> table is available
+                in the sample dataset, EMP / DEPT. 
+                     </p>
+                     
+                     <div class="infobox-tip" id="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5__GUID-713F2891-A6AE-4256-BA27-CB6EBA6A04B7">
+                        <p class="notep1">Tip:</p>In the following task,
+                steps 1 to 5 creates a cards region. If you already have a cards region, skip to
+                step 6.
+                     </div>
+                     
+                  </div>
+                  <div class="section">To configure an order by item for a cards region:</div>
+                  <p>Create a cards region:</p>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a" id="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5__SUBSTEPS_DQR_VPD_BTB">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears. </div>
+                     </li>
+                     <li class="stepexpand"><span>Create a new cards region:</span><ol type="a" id="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5__SUBSTEPS_UCR_NQD_BTB">
+                           <li class="substepexpand"><span>Click the <span class="uicontrol bold">Layout</span> tab in the central pane.</span></li>
+                           <li class="substepexpand"><span>In the Gallery, click the <span class="uicontrol bold">Regions</span> tab.
+                            Right-click <span class="uicontrol bold">Cards</span> and select <span class="uicontrol bold">Add
+                                To</span>, and select the appropriate location. </span><div>
+                                 
+                                 <div class="infobox-tip" id="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5__GUID-81707719-DF2B-451F-8F49-5CAE18C207C8">
+                                    <p class="notep1">Tip:</p>You can also select the Cards region in the Gallery and
+                                drag it to the appropriate location in the Layout tab.
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Page Designer indicates what to do next. If there are errors, the
+                                <span class="uicontrol bold">Show Messages</span> icon displays in the Page
+                            Developer toolbar.</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5__UL_CPW_2MM_2TB">
+                                    <li>
+                                       
+                                       <p>Click the <span class="uicontrol bold">Show Messages</span> icon on the
+                                        Page Designer toolbar.
+                                       </p>
+                                       
+                                       <p>The Messages dialog displays errors that must be
+                                        addressed.</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Select an error to highlight the associated attribute in the
+                                        Property Editor.</p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Edit the <span class="uicontrol bold">Region</span> attributes:</span><ol type="a" id="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5__SUBSTEPS_E3S_TQD_BTB">
+                           <li class="substepexpand"><span>In the Property Editor, select the <span class="uicontrol bold">Region</span> tab
+                            (if not already selected).</span></li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Identification</span>, <span class="uicontrol bold">Title</span> -
+                            Enter a region title. For example, enter
+                            <code class="codeph">Employees</code>.</span></li>
+                           <li class="substepexpand"><span>Under <span class="uicontrol bold">Source</span>:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5__UL_U1W_BRD_BTB">
+                                    <li>
+                                       
+                                       <p>Location - Accept the default value,
+                                            <span class="uicontrol bold">Local Database</span>.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Type - Accept the default value,
+                                            <span class="uicontrol bold">Table/View</span>.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Table Name - Enter <code class="codeph">EMP</code>. You can
+                                        also type in the name or pick from the list.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Edit the cards region Attributes:</span><ol type="a" id="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5__SUBSTEPS_HK3_BKC_BTB">
+                           <li class="substepexpand"><span>In the Property Editor, click the <span class="uicontrol bold">Attributes</span>
+                            tab.</span></li>
+                           <li class="substepexpand"><span>Edit the following cards region Attributes:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5__UL_RTG_4JC_BTB">
+                                    <li>
+                                       
+                                       <p>Title - Select the column to be used as title.
+                                        Select <span class="uicontrol bold">ENAME</span></p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Subtitle - Select the column to be used as
+                                        subtitle. Select <span class="uicontrol bold">SAL</span></p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Body - Select the column to be used as body.
+                                        Enter Select <span class="uicontrol bold">JOB</span></p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Icon and Badge:</p>
+                                       
+                                       <ul style="list-style-type: disc;" id="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5__UL_PYL_VJC_BTB">
+                                          <li>
+                                             
+                                             <p>Icon Source - Select
+                                                  <span class="uicontrol bold">Initials</span></p>
+                                             
+                                          </li>
+                                          <li>
+                                             
+                                             <p>Icon Column - Select
+                                                  <span class="uicontrol bold">DEPTNO</span></p>
+                                             
+                                          </li>
+                                          <li>
+                                             
+                                             <p>Icon Position - Select
+                                                  <span class="uicontrol bold">End</span></p>
+                                             
+                                          </li>
+                                       </ul>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Preview the page.</span><ol type="a" id="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5__SUBSTEPS_MCQ_STD_BTB">
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Save or Save and Run Page</span>.</span><div>
+                                 <p>The cards page loads, displaying a cards
+                                for each employee. Each card includes the employee name, salary, job
+                                title, and an icon with the department number.</p><img id="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5__IMAGE_JGF_TF2_BTB" height="507" width="904" src="img/sort_order_by_item_example1.png" alt="Description of sort_order_by_item_example1.png follows" title="Description of sort_order_by_item_example1.png follows" longdesc="img_text/sort_order_by_item_example1.html"><br><a href="img_text/sort_order_by_item_example1.html">Description of the illustration sort_order_by_item_example1.png</a></div>
+                           </li>
+                           <li class="substepexpand"><span>Return to Page Designer. Click Page <span class="italic">XX</span> on the Runtime Developer
+                            toolbar where <span class="italic">XX</span> is the page number.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+                  <p>Configure the Order By Item:</p>
+                  <ol start="6">
+                     <li class="stepexpand"><span>Enable Order By Items to create an inline static LOV:</span><ol type="a" id="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5__SUBSTEPS_HC4_ZKC_BTB">
+                           <li><span>In the Rendering tab, verify that cards region,
+                                <span class="uicontrol bold">Employees</span>, is selected.</span></li>
+                           <li><span>In the Property Editor, click the <span class="uicontrol bold">Region</span> tab
+                            find <span class="uicontrol bold">Order By</span>.</span></li>
+                           <li><span>Order By, Type - Select <span class="uicontrol bold">Item</span>.</span></li>
+                           <li><span>Order By, Iten - Click the <span class="uicontrol bold">No Order By Item</span>
+                            button.</span></li>
+                        </ol>
+                        <div>The Order by Item dialog appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>In the Order By Item dialog:</span><ol type="a" id="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5__SUBSTEPS_ZWY_P4C_BTB">
+                           <li class="substepexpand"><span>Order By Clauses - Enter multiple Order By Clauses from which users can
+                            select at runtime. Each can contain one or more comma-separated column
+                            names, including directives, to define the order in which records are
+                            retrieved. See Page Designer Help for more details on directives and
+                            examples.</span><div>
+                                 
+                                 <p>The following creates a LOV named Order By which contains
+                                the options: Salary descending, Salary ascending, Department and
+                                Salary, and Employee Name.</p>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5__UL_P5G_LNC_BTB">
+                                    <li>
+                                       
+                                       <p>Row 1</p>
+                                       
+                                       <p>Clause - Enter <code class="codeph">SAL DESC</code></p>
+                                       
+                                       <p>Key - Enter <code class="codeph">SAL1</code></p>
+                                       
+                                       <p>Display - Enter <code class="codeph">Salary
+                                            descending</code></p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Row 2</p>
+                                       
+                                       <p>Clause - Enter <code class="codeph">SAL ASC</code></p>
+                                       
+                                       <p>Key - Enter <code class="codeph">SAL2</code></p>
+                                       
+                                       <p>Display - Enter <code class="codeph">Salary
+                                            ascending</code></p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Row 3</p>
+                                       
+                                       <p>Clause - Enter <code class="codeph">DEPTNO ASC, SAL
+                                            DESC</code></p>
+                                       
+                                       <p>Key - Enter <code class="codeph">DEPT1</code></p>
+                                       
+                                       <p>Display - Enter <code class="codeph">Department and
+                                            Salary</code></p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Row 4</p>
+                                       
+                                       <p>Clause - Enter <code class="codeph">ENAME ASC</code></p>
+                                       
+                                       <p>Key - Enter <code class="codeph">ENAME</code></p>
+                                       
+                                       <p>Display - Enter <code class="codeph">Employee
+                                        Name</code></p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Item - Displays the page item to be built based on the Key and Display
+                            values defined under Order By Clauses. You can accept the Item Name or
+                            to make a new selection by clicking the <span class="uicontrol bold">List of Values:
+                                Name</span> icon.</span><div><img id="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5__IMAGE_AKK_BH2_BTB" height="365" width="646" src="img/order_by_item_dialog.png" alt="Description of order_by_item_dialog.png follows" title="Description of order_by_item_dialog.png follows" longdesc="img_text/order_by_item_dialog.html"><br><a href="img_text/order_by_item_dialog.html">Description of the illustration order_by_item_dialog.png</a></div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">OK</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save or Save and Run Page</span>.</span><div>
+                           <p>The following example shows the revised cards
+                        region. An <span class="uicontrol bold">Order By </span> select list now displays above
+                        the cards. Note, however, you can position the item anywhere on the page in
+                        Page Designer.
+                           </p><img id="GUID-D4A49BCC-1E3C-4892-9A86-68C350A534E5__IMAGE_MXD_ZF2_BTB" height="564" width="906" src="img/sort_order_by_item_example2.png" alt="Description of sort_order_by_item_example2.png follows" title="Description of sort_order_by_item_example2.png follows" longdesc="img_text/sort_order_by_item_example2.html"><br><a href="img_text/sort_order_by_item_example2.html">Description of the illustration sort_order_by_item_example2.png</a><p>Select options from the <span class="uicontrol bold">Order By</span>
+                        select list to alter the sort order.
+                           </p>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-sorting-with-order-by-item.html#GUID-48FBEAC0-82C3-486E-A87C-5C7F98341F53" title="Create an inline static LOV by configuring region-level Order By Item attributes.">Managing Sorting with Order By Item</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

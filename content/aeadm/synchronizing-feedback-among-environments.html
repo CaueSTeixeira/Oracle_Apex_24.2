@@ -1,0 +1,395 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Synchronizing Feedback Among Environments">
+      <meta name="abstract" content="Learn about best practices for synchronizing feedback from development, test, and production environments.">
+      <meta name="description" content="Learn about best practices for synchronizing feedback from development, test, and production environments.">
+      <meta name="DC.subject" content="feedback export, among environments, DEV environment, TEST environment, PROD environment, exporting from, syncing environments, incremental">
+      <meta name="keywords" content="feedback export, among environments, DEV environment, TEST environment, PROD environment, exporting from, syncing environments, incremental">
+      <meta name="DC.Relation" scheme="URI" content="exporting-and-importing-using-sqlcl.html#GUID-54ED6670-EAEA-45CF-BB0B-F2CB81EB8CFF">
+      <meta name="DC.Relation" scheme="URI" content="synchronizing-feedback-among-environments.html#GUID-C787E3D5-64B5-40CF-9D03-02A7436B24F5">
+      <meta name="DC.Relation" scheme="URI" content="synchronizing-feedback-among-environments.html#GUID-0A879197-F5D5-4109-80B1-DB02E4ABC7E9">
+      <meta name="DC.Relation" scheme="URI" content="synchronizing-feedback-among-environments.html#GUID-8CE20A99-F36C-4D7E-9AE5-FC7A67519D25">
+      <meta name="DC.Relation" scheme="URI" content="synchronizing-feedback-among-environments.html#GUID-531B77C0-06E7-48D8-B6C7-C008A921C3B5">
+      <meta name="DC.Relation" scheme="URI" content="synchronizing-feedback-among-environments.html#GUID-C0AE9963-791F-411F-867E-9F24F204893F">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-259C5235-3B17-404C-B366-45636395ADA9">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about best practices for synchronizing feedback from development, test, and production environments.">
+      <meta name="description" content="Learn about best practices for synchronizing feedback from development, test, and production environments.">
+      <title>Synchronizing Feedback Among Environments</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Learn about best practices for synchronizing feedback from development, test, and production environments.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="importing-workspace-static-files.html" title="Previous" type="text/html">
+      <link rel="next" href="displaying-application-usage.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Synchronizing Feedback Among Environments","description":"Learn about best practices for synchronizing feedback from development, test, and production environments.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="importing-workspace-static-files.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="displaying-application-usage.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-259C5235-3B17-404C-B366-45636395ADA9" name="GUID-259C5235-3B17-404C-B366-45636395ADA9"></a>
+         
+         <h2 id="AEADM-GUID-259C5235-3B17-404C-B366-45636395ADA9" class="sect2"><span class="enumeration_section">3.12.11.1.12 </span>Synchronizing Feedback Among
+        Environments
+         </h2>
+         <div class="ind">
+            <p>Learn about best practices for synchronizing feedback from development,
+                test, and production environments.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="synchronizing-feedback-among-environments.html#GUID-C787E3D5-64B5-40CF-9D03-02A7436B24F5">About Synchronizing Feedback Among Environments</a><br></li>
+                  <li class="ulchildlink"><a href="synchronizing-feedback-among-environments.html#GUID-0A879197-F5D5-4109-80B1-DB02E4ABC7E9">Distinguishing Between DEV, TEST, and PROD Environments</a><br></li>
+                  <li class="ulchildlink"><a href="synchronizing-feedback-among-environments.html#GUID-8CE20A99-F36C-4D7E-9AE5-FC7A67519D25">Exporting Feedback from Testing or Production</a><br></li>
+                  <li class="ulchildlink"><a href="synchronizing-feedback-among-environments.html#GUID-531B77C0-06E7-48D8-B6C7-C008A921C3B5">Exporting Feedback from Development to Sync Back to Testing or Production</a><br></li>
+                  <li class="ulchildlink"><a href="synchronizing-feedback-among-environments.html#GUID-C0AE9963-791F-411F-867E-9F24F204893F">Performing Incremental Feedback Export</a><br></li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="exporting-and-importing-using-sqlcl.html#GUID-54ED6670-EAEA-45CF-BB0B-F2CB81EB8CFF" title="Export workspaces, applications, and related files from a command line using Oracle SQL Developer Command Line (SQLcl) release 22.1 and later.">Exporting and Importing Using SQLcl</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-C787E3D5-64B5-40CF-9D03-02A7436B24F5" name="GUID-C787E3D5-64B5-40CF-9D03-02A7436B24F5"></a><h3 id="AEADM-GUID-C787E3D5-64B5-40CF-9D03-02A7436B24F5" class="sect3"><span class="enumeration_section">3.12.11.1.12.1 </span>About Synchronizing Feedback Among
+        Environments
+               </h3>
+               <div>
+                  <div class="section">
+                     
+                     <p><span>APEX</span> applications application enable end users to report feedback that can be useful
+                input to the development process. You can use SQLcl to export the feedback from your
+                testing or production environments and import it into your development environment.
+                After responding to and addressing the feedback as appropriate in development, you
+                can later use SQLcl again in the development environment to separately export:
+                     </p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-C787E3D5-64B5-40CF-9D03-02A7436B24F5__UL_ZYV_Y4Z_BTB">
+                        <li>
+                           
+                           <p>Feedback that originated from the testing environment</p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>Feedback that originated from the production environment</p>
+                           
+                        </li>
+                     </ul>
+                     
+                     <p>This approach enables you to then import the appropriate feedback back
+                into its originating environment, keeping that environment's feedback information in
+                sync so testers and end users can appreciate the impact their feedback has had on
+                the evolution of your application.</p>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="synchronizing-feedback-among-environments.html#GUID-259C5235-3B17-404C-B366-45636395ADA9" title="Learn about best practices for synchronizing feedback from development, test, and production environments.">Synchronizing Feedback Among Environments</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-0A879197-F5D5-4109-80B1-DB02E4ABC7E9" name="GUID-0A879197-F5D5-4109-80B1-DB02E4ABC7E9"></a><h3 id="AEADM-GUID-0A879197-F5D5-4109-80B1-DB02E4ABC7E9" class="sect3"><span class="enumeration_section">3.12.11.1.12.2 </span>Distinguishing Between DEV, TEST, and PROD
+        Environments
+               </h3>
+               <div>
+                  <div class="section">
+                     
+                     <p>Distinguish between active development (<code class="codeph">DEV</code>), testing
+                    (<code class="codeph">TEST</code>), and production (<code class="codeph">PROD</code>) environments by
+                specifying a <code class="codeph">Feedback Synchronization Source Identifier</code> and a
+                workspace environment banner.
+                     </p>
+                     
+                     <p>
+                        <span>APEX</span> development teams typically provision three environments that share the same
+                workspace name and workspace ID. One is used for active development, another for
+                testing purposes, and the third environment contains the production application and
+                data used by end-users.
+                     </p>
+                     
+                     <p>Since all three environments share the same workspace ID, you can easily
+                distinguish them by configuring each workspace instance to have:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-0A879197-F5D5-4109-80B1-DB02E4ABC7E9__UL_ZYV_Y4Z_BTB">
+                        <li>
+                           
+                           <p>A distinct value of the <code class="codeph">Feedback Synchronization Source
+                            Identifier</code> to use for synchronizing feedback.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>A workspace environment banner to visually distinguish them while
+                        working in the <span>App Builder</span>.
+                           </p>
+                           
+                        </li>
+                     </ul>
+                     
+                     <p>For example, suppose you have a workspace named
+                    <code class="codeph">TEAMWORK</code> in each of the three environments. Since all three
+                workspace environments have the same workspace name ( <code class="codeph">TEAMWORK</code>) and
+                workspace ID (<code class="codeph">1908816359534887</code>), you could use the values shown in
+                the following table to distinguish them from one another.
+                     </p>
+                     
+                     <div class="tblformal" id="GUID-0A879197-F5D5-4109-80B1-DB02E4ABC7E9__TABLE_ZDH_TQZ_BTB">
+                        <table cellpadding="4" cellspacing="0" class="Formal" title summary="This table shows possible values for distrinuishing three&#xA;                    workspace environments with the same workspace  namd and workspace ID." frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="0%" id="d52815e298">
+                                Message Name
+                            </th>
+                                 <th align="left" valign="bottom" width="0%" id="d52815e303">
+                                English Text
+                            </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d52815e310" headers="d52815e298 ">
+                                    
+                                    <p>DEV</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d52815e310 d52815e303 ">
+                                    
+                                    <p>Development</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d52815e321" headers="d52815e298 ">
+                                    
+                                    <p>TEST</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d52815e321 d52815e303 ">
+                                    
+                                    <p>Testing</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d52815e332" headers="d52815e298 ">
+                                    
+                                    <p>PROD</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d52815e332 d52815e303 ">
+                                    
+                                    <p>Production</p>
+                                    
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-0A879197-F5D5-4109-80B1-DB02E4ABC7E9__GUID-7042B5DA-AD16-403A-8DD8-2B90C68A1308">
+                     <p class="notep1">See Also:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-0A879197-F5D5-4109-80B1-DB02E4ABC7E9__UL_GW4_VRG_CTB">
+                        <li>
+                           
+                           <p><a href="configuring-environment-banner-for-workspace.html#GUID-329C96A4-6439-47AF-A284-20A6022E5E6A" title="Configure a environment banner for a workspace on the Workspace Administration page.">Configuring an Environment Banner for a Workspace</a></p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><a href="configuring-environment-banner-in-administration-services.html#GUID-717A4521-E345-48CA-89F8-E34FDB499DEC" title="Configure a environment banner for an instance in Administration Services.">Configuring an Environment Banner in Administration Services</a></p>
+                           
+                        </li>
+                     </ul>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="synchronizing-feedback-among-environments.html#GUID-259C5235-3B17-404C-B366-45636395ADA9" title="Learn about best practices for synchronizing feedback from development, test, and production environments.">Synchronizing Feedback Among Environments</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-8CE20A99-F36C-4D7E-9AE5-FC7A67519D25" name="GUID-8CE20A99-F36C-4D7E-9AE5-FC7A67519D25"></a><h3 id="AEADM-GUID-8CE20A99-F36C-4D7E-9AE5-FC7A67519D25" class="sect3"><span class="enumeration_section">3.12.11.1.12.3 </span>Exporting Feedback from Testing or Production
+               </h3>
+               <div>
+                  <div class="section">
+                     
+                     <p>To export feedback from the testing or production environment, connect
+                to the appropriate database user with SQLcl and use <code class="codeph">apex export</code>
+                with the <code class="codeph">-expFeedback </code>option and provide the workspace ID.
+                     </p>
+                     <pre class="pre codeblock"><code>SQL&gt; apex export -expFeedback -workspaceid 1908816359534887
+Exporting Feedback for Workspace 1908816359534887:'TEAMWORK'</code></pre>
+                     <p>The previous example produces a file named
+                    <code class="codeph">fb1908816359534887.sql</code> in the current directory. This file
+                contains a line that reflects the PROD value of the <code class="codeph">Feedback Synchronization
+                    Source Identifier</code> of the production environment, for example:
+                     </p>
+                     <pre class="pre codeblock"><code>:
+wwv_flow_api.set_feedback_origin('PROD', 'DEVELOPMENT');
+:</code></pre>
+                     <p>If this example been done in the Testing environment, this value would
+                have been <code class="codeph">TEST</code> in the exported SQL file.
+                     </p>
+                     
+                     <p>To import the feedback into the development environment, run this SQL script when
+                connected to the workspace schema user of the development environment's
+                database.</p>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="synchronizing-feedback-among-environments.html#GUID-259C5235-3B17-404C-B366-45636395ADA9" title="Learn about best practices for synchronizing feedback from development, test, and production environments.">Synchronizing Feedback Among Environments</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-531B77C0-06E7-48D8-B6C7-C008A921C3B5" name="GUID-531B77C0-06E7-48D8-B6C7-C008A921C3B5"></a><h3 id="AEADM-GUID-531B77C0-06E7-48D8-B6C7-C008A921C3B5" class="sect3"><span class="enumeration_section">3.12.11.1.12.4 </span>Exporting Feedback from Development to
+        Sync Back to Testing or Production
+               </h3>
+               <div>
+                  <div class="section">
+                     
+                     <p>Once your development team has processed any imported feedback entries in the
+                Development environment, you can export the feedback entries specific to a
+                particular target environment by using the <code class="codeph">-deploymentSystem</code>
+                option. For example, to export the feedback from Development that originated from
+                the PROD environment, the feedback export command would look similar to the
+                following:
+                     </p>
+                     <pre class="pre codeblock"><code>SQL&gt; apex export -expFeedback -workspaceid 1908816359534887 -deploymentSystem PROD
+Exporting Feedback for Workspace 1908816359534887:'TEAMWORK'</code></pre>
+                     <p>This example would produce a <code class="codeph">fb1908816359534887.sql</code> file in the
+                current directory. This file would contain only the feedback entries that are
+                appropriate to import back into the Production environment to update it with the
+                latest status of the feedback for the items that originated there. To import the
+                feedback into the production environment, run this script when connected to the
+                workspace schema user of the production environment's database.
+                     </p>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="synchronizing-feedback-among-environments.html#GUID-259C5235-3B17-404C-B366-45636395ADA9" title="Learn about best practices for synchronizing feedback from development, test, and production environments.">Synchronizing Feedback Among Environments</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-C0AE9963-791F-411F-867E-9F24F204893F" name="GUID-C0AE9963-791F-411F-867E-9F24F204893F"></a><h3 id="AEADM-GUID-C0AE9963-791F-411F-867E-9F24F204893F" class="sect3"><span class="enumeration_section">3.12.11.1.12.5 </span>Performing Incremental Feedback
+        Export
+               </h3>
+               <div>
+                  <div class="section">
+                     
+                     <p>When working with a lot of feedback entries, you consider exporting only
+                feedback entries created or changed on or after a particular date. To perform this
+                incremental feedback export, add the <code class="codeph">-expFeedbackSince</code> option to
+                your <code class="codeph">apex export -expFeedback</code> command line, indicating the date is
+                the format <code class="codeph">YYYYMMDD</code>. 
+                     </p>
+                     
+                     <p>For example, to export feedback entries from production made on or after
+                January 22, 2022, the command becomes:</p>
+                     <pre class="pre codeblock"><code>SQL&gt; apex export -expFeedback -workspaceid 1908816359534887 -expFeedbackSince 20220122
+</code></pre>
+                     <p>To perform an incremental export of updated feedback entries in the
+                Development environment that originated from the Production environment for the
+                purposes of synchronizing the changes back to Production, then add the
+                    <code class="codeph">-expFeedbackSince</code> option.
+                     </p>
+                     
+                     <p> For example, to export feedback entries from development that originated
+                in the production environment that were updated on or after March 21, 2022, the
+                command becomes:</p>
+                     <pre class="pre codeblock"><code>SQL&gt; apex export -expFeedback -workspaceid 1908816359534887 -deploymentSystem PROD -expFeedbackSince 20220321
+</code></pre>
+                     </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="synchronizing-feedback-among-environments.html#GUID-259C5235-3B17-404C-B366-45636395ADA9" title="Learn about best practices for synchronizing feedback from development, test, and production environments.">Synchronizing Feedback Among Environments</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="Data Types">
+      <meta name="DC.subject" content="data types, APEX_DATA_EXPORT">
+      <meta name="keywords" content="data types, APEX_DATA_EXPORT">
+      <meta name="DC.Relation" scheme="URI" content="APEX_DATA_EXPORT.html#GUID-F195C61B-30DA-4462-93A3-465BCA6FCB78">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-89148B14-CBD1-48F9-9E83-898EEE765E39">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Data Types</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_DATA_EXPORT-Global-Constants.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_DATA_EXPORT-ADD_AGGREGATE-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Data Types","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_DATA_EXPORT-Global-Constants.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_DATA_EXPORT-ADD_AGGREGATE-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-89148B14-CBD1-48F9-9E83-898EEE765E39" name="GUID-89148B14-CBD1-48F9-9E83-898EEE765E39"></a>
+         
+         <h2 id="AEAPI-GUID-89148B14-CBD1-48F9-9E83-898EEE765E39" class="sect2"><span class="enumeration_section">20.2 </span>Data Types
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>The APEX_DATA_EXPORT package uses the following data types.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-89148B14-CBD1-48F9-9E83-898EEE765E39__GUID-609B4A33-8FBD-45E6-87EA-05B703914F6F">Generic</p><pre class="pre codeblock"><code>subtype t_alignment             is varchar2(255);
+subtype t_label                 is varchar2(255);
+subtype t_color                 is varchar2(4000);
+subtype t_format                is varchar2(20);
+subtype t_content_disposition   is varchar2(30);
+subtype t_unit                  is varchar2(4000);
+subtype t_size                  is varchar2(4000);
+subtype t_width_unit            is varchar2(255);
+subtype t_orientation           is varchar2(4000);
+subtype t_font_family           is varchar2(4000);
+subtype t_font_weight           is varchar2(4000);</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-89148B14-CBD1-48F9-9E83-898EEE765E39__GUID-D470E5D8-4720-4D82-BE85-F877AC56F6E7">Resulting Object of an Export</p><pre class="pre codeblock"><code>type t_export is record (
+    file_name               varchar2(32767),
+    format                  t_format,
+    mime_type               varchar2(32767),
+    as_clob                 boolean,
+    content_blob            blob,
+    content_clob            clob );</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-89148B14-CBD1-48F9-9E83-898EEE765E39__GUID-FEEE983A-3E57-42A8-A512-ACF355AB7255">Column Groups</p><pre class="pre codeblock"><code>type t_column_group is record (
+    name                    varchar2(255),
+    alignment               t_alignment,
+    parent_group_idx        pls_integer );
+
+type t_column_groups        is table of t_column_group  index by pls_integer;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-89148B14-CBD1-48F9-9E83-898EEE765E39__GUID-C519D334-25E4-4256-803A-A179FCEC8F69">Columns</p><pre class="pre codeblock"><code>type t_column is record (
+    name                    apex_exec.t_column_name,
+    heading                 varchar2(255),
+    format_mask             varchar2(4000),
+    heading_alignment       t_alignment,
+    value_alignment         t_alignment,
+    width                   number,
+    is_column_break         boolean,
+    is_frozen               boolean,
+    column_group_idx        pls_integer );
+
+type t_columns              is table of t_column        index by pls_integer;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-89148B14-CBD1-48F9-9E83-898EEE765E39__GUID-76ACB930-33CF-40A7-8A9B-308E125DF237">Highlights</p><pre class="pre codeblock"><code>type t_highlight is record (
+    id                      number,
+    name                    varchar2(4000),
+    value_column            apex_exec.t_column_name,
+    display_column          apex_exec.t_column_name,
+    text_color              t_color,
+    background_color        t_color );
+
+type t_highlights           is table of t_highlight     index by pls_integer;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-89148B14-CBD1-48F9-9E83-898EEE765E39__GUID-1AAFA913-38FD-4BF8-9516-A2F7AAF90764">Aggregates</p><pre class="pre codeblock"><code>type t_aggregate is record (
+    label                   t_label,
+    format_mask             varchar2(4000),
+    display_column          apex_exec.t_column_name,
+    value_column            apex_exec.t_column_name,
+    overall_label           t_label,
+    overall_value_column    apex_exec.t_column_name );
+
+type t_aggregates           is table of t_aggregate     index by pls_integer;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-89148B14-CBD1-48F9-9E83-898EEE765E39__GUID-DABD05B9-2AFA-4BE1-8AE5-A092CEBA55DD">Print Config</p><pre class="pre codeblock"><code>type t_print_config is record (
+    units                       t_unit,
+    paper_size                  t_size,
+    width_units                 t_width_unit,
+    width                       number,
+    height                      number,
+    orientation                 t_orientation,
+    page_header                 varchar2(4000),
+    page_header_font_color      t_color,
+    page_header_font_family     t_font_family,
+    page_header_font_weight     t_font_weight,
+    page_header_font_size       varchar2(4000),
+    page_header_alignment       t_alignment,
+    page_footer                 varchar2(4000),
+    page_footer_font_color      t_color,
+    page_footer_font_family     t_font_family,
+    page_footer_font_weight     t_font_weight,
+    page_footer_font_size       varchar2(4000),
+    page_footer_alignment       t_alignment,
+    header_bg_color             t_color,
+    header_font_color           t_color,
+    header_font_family          t_font_family,
+    header_font_weight          t_font_weight,
+    header_font_size            varchar2(4000),
+    body_bg_color               t_color,
+    body_font_color             t_color,
+    body_font_family            t_font_family,
+    body_font_weight            t_font_weight,
+    body_font_size              varchar2(4000),
+    border_width                number,
+    border_color                t_color );</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_DATA_EXPORT.html#GUID-F195C61B-30DA-4462-93A3-465BCA6FCB78">APEX_DATA_EXPORT</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

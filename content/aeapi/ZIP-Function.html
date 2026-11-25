@@ -1,0 +1,167 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="ZIP Function">
+      <meta name="DC.subject" content="ZIP function, APEX_EXPORT">
+      <meta name="keywords" content="ZIP function, APEX_EXPORT">
+      <meta name="DC.Relation" scheme="URI" content="APEX_EXPORT.html#GUID-6A4628A6-9F86-4394-9938-87A7FFFC7BC8">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-B7A390FC-ED71-4605-9C0A-8503E4DED82A">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>ZIP Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="UNZIP-Function.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_EXTENSION.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"ZIP Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="UNZIP-Function.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_EXTENSION.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-B7A390FC-ED71-4605-9C0A-8503E4DED82A" name="GUID-B7A390FC-ED71-4605-9C0A-8503E4DED82A"></a>
+         
+         <h2 id="AEAPI-GUID-B7A390FC-ED71-4605-9C0A-8503E4DED82A" class="sect2"><span class="enumeration_section">28.6 </span>ZIP Function
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function compresses a list of files (usually obtained from one of the <code class="codeph">APEX_EXPORT</code> routines) into a single BLOB containing a <code class="codeph">.zip</code> archive. All text content in the resultant <code class="codeph">.zip</code> file is encoded as UTF-8.
+                  </p>
+                  <p>All file names within the archive must be unique to prevent the accidental overwriting of files in the application export (an exception raises otherwise).</p>
+                  <p>Additional files (<code class="codeph">p_extra_files</code>) may also be added to the resultant archive, such as a simple <code class="codeph">README.txt</code> file or licensing information.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B7A390FC-ED71-4605-9C0A-8503E4DED82A__GUID-4BACA0A5-CA13-4765-914C-C9A5F5275A82">Syntax</p>
+                  <pre class="pre codeblock"><code>APEX_EXPORT.ZIP (
+    p_source_files  apex_t_export_files,
+    p_extra_files   apex_t_export_files DEFAULT apex_t_export_files() )
+    RETURN BLOB;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B7A390FC-ED71-4605-9C0A-8503E4DED82A__GUID-2118C338-643E-4828-B981-F63B51FF8CA0">Parameters</p>
+                  <div class="tblformal" id="GUID-B7A390FC-ED71-4605-9C0A-8503E4DED82A__GUID-AFEF5317-38DA-4552-89F3-FCB6A18A7292">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="42%" id="d131908e89">Parameter</th>
+                              <th align="left" valign="bottom" width="58%" id="d131908e91">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d131908e95" headers="d131908e89 "><code class="codeph">p_source_files</code></td>
+                              <td align="left" valign="top" width="58%" headers="d131908e95 d131908e91 ">A table of files. For example, from <code class="codeph">apex_export.get_application</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d131908e104" headers="d131908e89 "><code class="codeph">p_extra_files</code></td>
+                              <td align="left" valign="top" width="58%" headers="d131908e104 d131908e91 ">Optional additional files to add to the resultant <code class="codeph">.zip</code> archive.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B7A390FC-ED71-4605-9C0A-8503E4DED82A__GUID-FD04CC7F-B94E-4F7A-A04F-9FB92E7ED3D3">Returns</p>
+                  <p>This function returns a BLOB containing the compressed application files and any extra files, in ZIP format.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B7A390FC-ED71-4605-9C0A-8503E4DED82A__GUID-BD217647-FAFB-4D84-A2E1-4DCBBD38D3C9">Example</p>
+                  <pre class="pre codeblock"><code>DECLARE
+  l_source_files apex_t_export_files;
+  l_extra_files apex_t_export_files;
+  l_zip blob;
+BEGIN
+  l_source_files := apex_export.get_application(
+    p_application_id =&gt; 100,
+    p_split =&gt; true );
+
+  l_extra_files := apex_t_export_files(
+    apex_t_export_file(
+      name =&gt; 'README.md',
+      contents =&gt; 'An example exported application.' ),
+    apex_t_export_file(
+      name =&gt; 'LICENSE.txt',
+      contents =&gt; 'The Universal Permissive License (UPL), Version 1.0' ) );
+
+  l_zip := apex_export.zip(
+    p_source_files =&gt; l_source_files,
+    p_extra_files =&gt; l_extra_files );
+
+    sys.dbms_output.put_line(
+      'Compressed application export to zip of size; '
+      || sys.dbms_lob.getLength( l_zip ) );
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_EXPORT.html#GUID-6A4628A6-9F86-4394-9938-87A7FFFC7BC8">APEX_EXPORT</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

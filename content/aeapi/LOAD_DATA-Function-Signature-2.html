@@ -1,0 +1,154 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="LOAD_DATA Function Signature 2">
+      <meta name="DC.subject" content="LOAD_DATA function, APEX_DATA_LOADING">
+      <meta name="keywords" content="LOAD_DATA function, APEX_DATA_LOADING">
+      <meta name="DC.Relation" scheme="URI" content="APEX_DATA_LOADING.html#GUID-D45764A0-5A56-422C-9D51-FC1FE26E52A7">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-E254169A-FA3D-4169-B77A-A573DB3962F4">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>LOAD_DATA Function Signature 2</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="LOAD_DATA-Function-Signature-1.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_DATA_EXPORT.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"LOAD_DATA Function Signature 2","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="LOAD_DATA-Function-Signature-1.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_DATA_EXPORT.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-E254169A-FA3D-4169-B77A-A573DB3962F4" name="GUID-E254169A-FA3D-4169-B77A-A573DB3962F4"></a>
+         
+         <h2 id="AEAPI-GUID-E254169A-FA3D-4169-B77A-A573DB3962F4" class="sect2"><span class="enumeration_section">19.4 </span>LOAD_DATA Function Signature 2
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function loads CLOB data and returns loading status information containing processed rows and error rows.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-E254169A-FA3D-4169-B77A-A573DB3962F4__GUID-4BACA0A5-CA13-4765-914C-C9A5F5275A82">Syntax</p>
+                  <pre class="pre codeblock"><code>APEX_DATA_LOADING.LOAD_DATA (
+    p_application_id   IN NUMBER      DEFAULT apex_application.g_flow_id,
+    p_static_id        IN VARCHAR2,
+    p_data_to_load     IN CLOB,
+    p_xlsx_sheet_name  IN VARCHAR2    DEFAULT NULL )
+    RETURN t_data_load_result;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-E254169A-FA3D-4169-B77A-A573DB3962F4__GUID-2118C338-643E-4828-B981-F63B51FF8CA0">Parameters</p>
+                  <div class="tblformal" id="GUID-E254169A-FA3D-4169-B77A-A573DB3962F4__GUID-AFEF5317-38DA-4552-89F3-FCB6A18A7292">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="42%" id="d73567e70">Parameter</th>
+                              <th align="left" valign="bottom" width="58%" id="d73567e72">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d73567e76" headers="d73567e70 "><code class="codeph">p_application_id</code></td>
+                              <td align="left" valign="top" width="58%" headers="d73567e76 d73567e72 ">ID of the application which contains the data load definition.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d73567e82" headers="d73567e70 "><code class="codeph">p_static_id</code></td>
+                              <td align="left" valign="top" width="58%" headers="d73567e82 d73567e72 ">Static ID of the data loading definition to execute.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d73567e88" headers="d73567e70 "><code class="codeph">p_data_to_load</code></td>
+                              <td align="left" valign="top" width="58%" headers="d73567e88 d73567e72 ">CLOB data to be loaded.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d73567e94" headers="d73567e70 "><code class="codeph">p_xlsx_sheet_name</code></td>
+                              <td align="left" valign="top" width="58%" headers="d73567e94 d73567e72 ">For XLSX files, the worksheet to extract.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-E254169A-FA3D-4169-B77A-A573DB3962F4__GUID-BD217647-FAFB-4D84-A2E1-4DCBBD38D3C9">Example</p>
+                  
+                  <p>This example gets data (copy and pasted into the <code class="codeph">PX_DATA</code> textarea) and executes the <code class="codeph">my-load-definition</code> data loading definition.
+                  </p><pre class="pre codeblock"><code>DECLARE
+    l_load_result apex_data_loading.t_data_load_result;
+BEGIN
+    apex_session.create_session( 100, 1, 'ADMIN' );
+ 
+    l_load_result := apex_data_loading.load_data (
+                         p_static_id    =&gt; 'my-load-definition',
+                         p_data_to_load =&gt; :PX_DATA );
+    dbms_output.put_line( 'Processed ' || l_load_result.processed_rows || ' rows.');
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_DATA_LOADING.html#GUID-D45764A0-5A56-422C-9D51-FC1FE26E52A7">APEX_DATA_LOADING</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

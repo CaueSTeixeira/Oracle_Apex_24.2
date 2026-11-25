@@ -1,0 +1,515 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Application Icons">
+      <meta name="abstract" content="Add and update the icon that displays as the Favicon, the PWA icon, the Apple touch icon, and the App Builder icon in Oracle APEX applications.">
+      <meta name="description" content="Add and update the icon that displays as the Favicon, the PWA icon, the Apple touch icon, and the App Builder icon in Oracle APEX applications.">
+      <meta name="DC.subject" content="app icons, managing, icons, about, User Interface attributes, icons, managing in User Interface attributes, adding, updating, Edit App Icon, using, Runtime Developer toolbar, Edit App Icon">
+      <meta name="keywords" content="app icons, managing, icons, about, User Interface attributes, icons, managing in User Interface attributes, adding, updating, Edit App Icon, using, Runtime Developer toolbar, Edit App Icon">
+      <meta name="DC.Relation" scheme="URI" content="creating-applications.html#GUID-F09AF2EB-F452-4CC1-A3B7-8B0DA9FF94B0">
+      <meta name="DC.Relation" scheme="URI" content="managing-app-icons.html#GUID-AF37A563-7E0E-4A00-A2C1-FD1B4A73A83E">
+      <meta name="DC.Relation" scheme="URI" content="managing-app-icons.html#GUID-16EBB6B3-37EE-41C7-A21D-5636E6A9111E">
+      <meta name="DC.Relation" scheme="URI" content="managing-app-icons.html#GUID-6FEE3BEC-CFE4-4EEF-8D09-D002CA5C768A">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-4BD9863E-C957-4D2D-A5BB-B629F0EE3F56">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Add and update the icon that displays as the Favicon, the PWA icon, the Apple touch icon, and the App Builder icon in Oracle APEX applications.">
+      <meta name="description" content="Add and update the icon that displays as the Favicon, the PWA icon, the Apple touch icon, and the App Builder icon in Oracle APEX applications.">
+      <title>Managing Application Icons</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Add and update the icon that displays as the Favicon, the PWA icon, the Apple touch icon, and the App Builder icon in Oracle APEX applications.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-an-app-logo.html" title="Previous" type="text/html">
+      <link rel="next" href="adding-developer-comments.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Managing Application Icons","description":"Add and update the icon that displays as the Favicon, the PWA icon, the Apple touch icon, and the App Builder icon in Oracle APEX applications.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-an-app-logo.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="adding-developer-comments.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-4BD9863E-C957-4D2D-A5BB-B629F0EE3F56" name="GUID-4BD9863E-C957-4D2D-A5BB-B629F0EE3F56"></a><a id="4000:31"></a><a id="4000:192"></a><a id="4000:198"></a><a id="4020:120"></a>
+         
+         <h2 id="HTMDB-GUID-4BD9863E-C957-4D2D-A5BB-B629F0EE3F56" class="sect2"><span class="enumeration_section">5.14 </span>Managing Application Icons
+         </h2>
+         <div class="ind">
+            <p>Add and update the icon that displays as the Favicon, the PWA icon, the Apple touch icon, and the App Builder icon in <span>Oracle APEX</span> applications.
+            </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="managing-app-icons.html#GUID-AF37A563-7E0E-4A00-A2C1-FD1B4A73A83E">About Application Icons</a><br>Learn about managing application icons in your <span>APEX</span> application.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-app-icons.html#GUID-16EBB6B3-37EE-41C7-A21D-5636E6A9111E">Managing Icons in User Interface Attributes</a><br>Edit or upload application icons from the Icon region on the User Interface         page.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-app-icons.html#GUID-6FEE3BEC-CFE4-4EEF-8D09-D002CA5C768A">Using Edit App Icon on the Runtime Developer Toolbar</a><br>Edit icons in runtime using the Use Edit App Icon option on on the         Runtime Developer toolbar, Customize menu.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="creating-applications.html#GUID-F09AF2EB-F452-4CC1-A3B7-8B0DA9FF94B0" title="An application is a collection of pages linked together using navigation menus, tabs, buttons, or hypertext links. Application pages share a common session state and authentication.">Creating Applications</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-AF37A563-7E0E-4A00-A2C1-FD1B4A73A83E" name="GUID-AF37A563-7E0E-4A00-A2C1-FD1B4A73A83E"></a><h3 id="HTMDB-GUID-AF37A563-7E0E-4A00-A2C1-FD1B4A73A83E" class="sect3"><span class="enumeration_section">5.14.1 </span>About Application Icons
+               </h3>
+               <div>
+                  <p>Learn about managing application icons in your <span>APEX</span> application.
+                  </p>
+                  <div class="section">
+                     
+                     <div class="p">When you add an icon to an application it is propagated to the following
+                places in your application: 
+                        <ul style="list-style-type: disc;" id="GUID-AF37A563-7E0E-4A00-A2C1-FD1B4A73A83E__UL_EKG_SVY_NSB">
+                           <li>
+                              
+                              <p>the Favicon (browser tab icon)</p>
+                              
+                           </li>
+                           <li>
+                              
+                              <p>the PWA icon</p>
+                              
+                           </li>
+                           <li>
+                              
+                              <p>Apple touch icon (when adding a PWA app to iOS)</p>
+                              
+                           </li>
+                           <li>
+                              
+                              <p><span>App Builder</span> icon (which displays on the application home page)
+                              </p>
+                              
+                           </li>
+                           <li>
+                              
+                              <p>Sign In page</p>
+                              
+                           </li>
+                           <li>
+                              
+                              <p>Home page breadcrumb region</p>
+                              
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <div class="p">Application icons are stored in <span class="uicontrol bold">Shared Components</span>,
+                    <span class="uicontrol bold">Static Application Files</span> in five sizes:
+                        <ul style="list-style-type: disc;" id="GUID-AF37A563-7E0E-4A00-A2C1-FD1B4A73A83E__UL_RCX_QNN_LWB">
+                           <li>32x32 - Mini square icon</li>
+                           <li>144x144 - Small rounded icon</li>
+                           <li>192x192 - Small square icon</li>
+                           <li>256x256 - Large rounded icon</li>
+                           <li>512x512 - Large square icon</li>
+                        </ul>
+                     </div>
+                     
+                     <p>When editing an individual icon, you take ownership of the icon. Be sure to upload an
+                icon that matches the right size (that is 32x32, 144x144, 192x192, 256x256, or
+                512x512).</p>
+                     
+                     <div class="infobox-tip" id="GUID-AF37A563-7E0E-4A00-A2C1-FD1B4A73A83E__GUID-0D5F6390-AC53-4410-9E7D-D8A0FD0991A5">
+                        <p class="notep1">Tip:</p>The two rounded icons (144x144 and
+                256x256) are used in places like the macOS dock, where design guidelines encourage
+                the use of rounded icons. The exact specifications for the rounded icons is to have
+                10% padding on each side and 20% border radius.
+                     </div>
+                     
+                     <p>You can edit or upload app icons in the following ways:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-AF37A563-7E0E-4A00-A2C1-FD1B4A73A83E__UL_BDP_QF5_NSB">
+                        <li>
+                           
+                           <p><span class="bold">When Creating a New App</span> - When creating a new
+                        application, click <span class="uicontrol bold">Set Icon</span> on the Create an
+                        Application page in the Create Application Wizard. See <a href="running-the-create-app-wizard.html#GUID-8EE3A07B-452F-4C55-8B50-36691813AD97" title="Run the full Create Application Wizard to create an application containing multiple pages based on the tables you select, or by providing valid SQL queries.">Running the Full Create Application Wizard</a>.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="bold">By Editing User Interface Attributes</span> - By editing the
+                        attributes under <span class="uicontrol bold">Icon</span> on the User Interface page. See
+                            <a href="managing-app-icons.html#GUID-16EBB6B3-37EE-41C7-A21D-5636E6A9111E" title="Edit or upload application icons from the Icon region on the User Interface page.">Managing Icons in User Interface Attributes</a>.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="bold">By Editing the Icon in Runtime</span> - In runtime, click
+                            <span class="uicontrol bold">Customize</span>, <span class="uicontrol bold">Edit App Icon</span>
+                        on the Runtime Developer Toolbar. See <a href="managing-app-icons.html#GUID-6FEE3BEC-CFE4-4EEF-8D09-D002CA5C768A" title="Edit icons in runtime using the Use Edit App Icon option on on the Runtime Developer toolbar, Customize menu.">Using Edit App Icon on the Runtime Developer Toolbar</a></p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="bold">By Uploading Icons to Static Application Files</span> -
+                        Application icons are stored in Shared Components, Static Application Files
+                        in five sizes: 32x32, 144x144, 192x192, 256x256, or 512x512. 
+                           </p>
+                           
+                           <p>To control the upload for all icon sizes, upload your icons to
+                        the Shared Components, Static Application Files and use the following file
+                        paths:</p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-AF37A563-7E0E-4A00-A2C1-FD1B4A73A83E__UL_CWP_TBV_NSB">
+                              <li>
+                                 
+                                 <p><code class="codeph">#APP_FILES#icons/app-icon-32.png</code></p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><code class="codeph">#APP_FILES#icons/app-icon-144-rounded.png</code></p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><code class="codeph">#APP_FILES#icons/app-icon-192.png</code></p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><code class="codeph">#APP_FILES#icons/app-icon-256-rounded.png</code></p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><code class="codeph">#APP_FILES#icons/app-icon-512.png</code></p>
+                                 
+                              </li>
+                           </ul>
+                           
+                        </li>
+                     </ul>
+                     
+                  </div>
+                  <div class="section">
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-AF37A563-7E0E-4A00-A2C1-FD1B4A73A83E__GUID-6B433FA0-DCEE-4560-A207-9ECE0C6BE4CA">
+                     <p class="notep1">See Also:</p><a href="managing-static-application-files.html#GUID-A580AAF3-D89A-440F-B75D-5A68DCB6BBF5" title="Manage static application files in the Oracle database on the Shared Components, Static Application Files page or in remote storage solution such as OCI Object Storage.">Managing Static Application Files</a></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-app-icons.html#GUID-4BD9863E-C957-4D2D-A5BB-B629F0EE3F56" title="Add and update the icon that displays as the Favicon, the PWA icon, the Apple touch icon, and the App Builder icon in Oracle APEX applications.">Managing Application Icons</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-16EBB6B3-37EE-41C7-A21D-5636E6A9111E" name="GUID-16EBB6B3-37EE-41C7-A21D-5636E6A9111E"></a><h3 id="HTMDB-GUID-16EBB6B3-37EE-41C7-A21D-5636E6A9111E" class="sect3"><span class="enumeration_section">5.14.2 </span>Managing Icons in User Interface
+        Attributes
+               </h3>
+               <div>
+                  <p>Edit or upload application icons from the Icon region on the User Interface
+        page.</p>
+                  <div class="p">
+                     
+                     <div class="infobox-tip" id="GUID-16EBB6B3-37EE-41C7-A21D-5636E6A9111E__GUID-ECA80A18-DEE7-4A1F-8553-13F8191F6FB4">
+                        <p class="notep1">Tip:</p>If an application uses legacy icons, a note displays at top of the Icon
+                region. Oracle recommends replacing legacy icons by clicking <span class="uicontrol bold">Change
+                    Icon</span> button.
+                     </div>
+                     
+                  </div>
+                  <p>To manage application icons by editing User Interface
+                attributes:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Select an application. </span><div>
+                           
+                           <p>The Application home page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>From the Application home page, you can access the User Interface page in two
+                    ways:</span><ul id="GUID-16EBB6B3-37EE-41C7-A21D-5636E6A9111E__CHOICES_N2D_LR5_NSB">
+                           <li>Edit Application Definition button:
+                              <ol type="a" id="GUID-16EBB6B3-37EE-41C7-A21D-5636E6A9111E__OL_FW3_XRX_MSB">
+                                 <li>
+                                    
+                                    <p>Click <span class="uicontrol bold">Edit Application
+                                        Definition</span> to the right of the application
+                                    name.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Click the <span class="uicontrol bold">User Interface</span>
+                                    tab.
+                                    </p>
+                                    
+                                 </li>
+                              </ol>
+                           </li>
+                           <li>From Shared Components:
+                              <ol type="a" id="GUID-16EBB6B3-37EE-41C7-A21D-5636E6A9111E__OL_O2D_LR5_NSB">
+                                 <li>
+                                    
+                                    <p>Click <span class="uicontrol bold">Shared Components</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Under User Interface, click <span class="uicontrol bold">User
+                                        Interface Attributes</span>.
+                                    </p>
+                                    
+                                 </li>
+                              </ol>
+                           </li>
+                        </ul>
+                        <div>
+                           
+                           <p>The User Interfaces page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Find <span class="uicontrol bold">Icon</span>.</span><div>Existing icons display in a table.</div>
+                     </li>
+                     <li class="stepexpand"><span>To edit or update an icon, click <span class="uicontrol bold">Edit</span>. </span><ol type="a" id="GUID-16EBB6B3-37EE-41C7-A21D-5636E6A9111E__SUBSTEPS_RY1_P55_NSB">
+                           <li class="substepexpand"><span>In the Edit Application Icon dialog you can either:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-16EBB6B3-37EE-41C7-A21D-5636E6A9111E__UL_TBF_Q55_NSB">
+                                    <li>
+                                       
+                                       <p>Click <span class="uicontrol bold">Choose File</span>to navigate to the
+                                        new icon.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Drag and drop a new file to the region provided.</p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Close</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>To choose a new icon from the library, click <span class="uicontrol bold">Change
+                    Icon</span>.</span><ol type="a" id="GUID-16EBB6B3-37EE-41C7-A21D-5636E6A9111E__SUBSTEPS_OP2_X55_NSB">
+                           <li class="substepexpand"><span>In the Edit Application Icon dialog, you can either:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-16EBB6B3-37EE-41C7-A21D-5636E6A9111E__UL_HJY_Z55_NSB">
+                                    <li>
+                                       
+                                       <p><span class="bold">Upload an icon</span>. Click the plus (+) sign and navigate
+                                        to the icon, or drag and drop the icon to the
+                                            <span class="uicontrol bold">Upload your own icon</span> region.
+                                       </p>
+                                       
+                                       <p>If you upload a custom icon, it is resized to a number of
+                                        sizes and will be propagated to the appropriate places at
+                                        runtime.</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="bold">Select an icon from the library</span>. Select the icon color
+                                        and then the icon.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Close</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span> to save your changes.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-app-icons.html#GUID-4BD9863E-C957-4D2D-A5BB-B629F0EE3F56" title="Add and update the icon that displays as the Favicon, the PWA icon, the Apple touch icon, and the App Builder icon in Oracle APEX applications.">Managing Application Icons</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-6FEE3BEC-CFE4-4EEF-8D09-D002CA5C768A" name="GUID-6FEE3BEC-CFE4-4EEF-8D09-D002CA5C768A"></a><h3 id="HTMDB-GUID-6FEE3BEC-CFE4-4EEF-8D09-D002CA5C768A" class="sect3"><span class="enumeration_section">5.14.3 </span>Using Edit App Icon on the Runtime Developer
+        Toolbar
+               </h3>
+               <div>
+                  <p>Edit icons in runtime using the Use Edit App Icon option on on the
+        Runtime Developer toolbar, Customize menu.</p>
+                  <p>To use Edit App Icon:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Preview the page by running it.</span><div>
+                           <p>The Runtime Developer toolbar displays at the bottom of any editable running
+                        page.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>On the Runtime Developer toolbar. click <span class="uicontrol bold">Customize</span> and
+                    then select <span class="uicontrol bold">Edit App Icon</span>.</span><div>
+                           
+                           <p>The Edit Applicatioin Icon dialog appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>In the Edit Application Icon dialog, you can either:</span><ul id="GUID-6FEE3BEC-CFE4-4EEF-8D09-D002CA5C768A__CHOICES_R3K_FCZ_NSB">
+                           <li>Drag and drop the file to the <span class="uicontrol bold">Upload a new
+                            icon</span> region.
+                           </li>
+                           <li>Click the <span class="uicontrol bold">Upload a new icon</span> region and navigate
+                        to the file.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>When the new icon appears, use the Zoom slider to reposition it within the
+                    frame.</span><div>
+                           
+                           
+                           <p>When focused on the icon cropper, the following keyboard
+                        shortcuts are also available: </p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-6FEE3BEC-CFE4-4EEF-8D09-D002CA5C768A__UL_GGS_N2V_NSB">
+                              <li>
+                                 
+                                 <p>Left Arrow - Move the  image left</p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>Up Arrow - Move the image up</p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>Right Arrow - Move the image right</p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>Down Arrow - Move the image down</p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>I - Zoom in</p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>O - Zoom out</p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>L - Rotate left</p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>R - Rotate right</p>
+                                 
+                              </li>
+                           </ul>
+                           
+                           <p>Press Shift to move faster.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>To save your changes, click <span class="uicontrol bold">Save</span>.</span></li>
+                     <li class="stepexpand"><span>To exit the dialog without saving, click <span class="uicontrol bold">Cancel</span></span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-app-icons.html#GUID-4BD9863E-C957-4D2D-A5BB-B629F0EE3F56" title="Add and update the icon that displays as the Favicon, the PWA icon, the Apple touch icon, and the App Builder icon in Oracle APEX applications.">Managing Application Icons</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

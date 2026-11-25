@@ -1,0 +1,1081 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="Available Parameter Values">
+      <meta name="DC.subject" content="parameter values, APEX_INSTANCE_ADMIN">
+      <meta name="keywords" content="parameter values, APEX_INSTANCE_ADMIN">
+      <meta name="DC.Relation" scheme="URI" content="APEX_INSTANCE_ADMIN.html#GUID-1A894D25-A884-466B-9B88-B10888B2FFEA">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Available Parameter Values</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_INSTANCE_ADMIN.html" title="Previous" type="text/html">
+      <link rel="next" href="ADD_AUTO_PROV_RESTRICTIONS-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Available Parameter Values","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_INSTANCE_ADMIN.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="ADD_AUTO_PROV_RESTRICTIONS-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A" name="GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A"></a>
+         
+         <h2 id="AEAPI-GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A" class="sect2"><span class="enumeration_section">32.1 </span>Available Parameter Values
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>The following table lists all the available parameter values you can set within the <code class="codeph">APEX_INSTANCE_ADMIN</code> package, including parameters for email, wallet, and reporting printing.
+                  </p>
+                  <p>You can query the <code class="codeph">APEX_INSTANCE_PARAMETERS</code> dictionary view to determine the current values of these parameters unless the parameter contains a password.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A__GUID-F9093086-11F1-4D07-9872-0C58047AF198">Instance Parameters</p>
+                  <p>The following parameters can be configured <span class="bold">only</span> at the Instance level (using <code class="codeph">APEX_INSTANCE_ADMIN.SET_PARAMETER</code>).
+                  </p>
+                  <div class="tblformal" id="GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A__CHDFEICJ">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Instance-level parameters for API." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="38%" id="d141413e80">Parameter Name</th>
+                              <th align="left" valign="bottom" width="62%" id="d141413e82">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e86" headers="d141413e80 "><code class="codeph">ADMIN_DIGEST_DEFAULT_REPORTING_PERIOD</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e86 d141413e82 ">Default reporting period in days for APEX Administrator Digest.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e92" headers="d141413e80 "><code class="codeph">ADMIN_DIGEST_MAX_REPORTING_PERIOD</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e92 d141413e82 ">Maximum reporting period in days for APEX Administrator Digest. Older data is removed from the metrics tables.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e98" headers="d141413e80 "><code class="codeph">AI_BUILDER_PROXY</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e98 d141413e82 ">The proxy server for all outbound HTTP(s) traffic to Generative AI Services from <span>APEX</span> <span>App Builder</span>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e110" headers="d141413e80 "><code class="codeph">ALLOW_DB_MONITOR</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e110 d141413e82 ">If set to <code class="codeph">N</code> (default), database monitoring within SQL Workshop is disabled. If <code class="codeph">Y</code>, it is enabled.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e122" headers="d141413e80 "><code class="codeph">ALLOW_HASH_FUNCTIONS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e122 d141413e82 ">Comma-separated list of supported hash algorithms (default is <code class="codeph">SH256,SH384,SH512</code>). SH1 is also supported by default in <span>Oracle
+                                        Database</span> 11g.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e134" headers="d141413e80 "><code class="codeph">ALLOW_PUBLIC_FILE_UPLOAD</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e134 d141413e82 ">If set to <code class="codeph">Y</code>, enables file uploads without user authentication. If set to <code class="codeph">N</code>, the default, they are disabled.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e146" headers="d141413e80 "><code class="codeph">ALLOW_RAS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e146 d141413e82 ">
+                                 <p>This parameter is only supported if running <span>Oracle
+                                        Database</span> 12<span class="italic">c</span>. 
+                                 </p>
+                                 <p>If <code class="codeph">Y</code>, enables Real Application Security support for applications. If set to <code class="codeph">N</code> (default), Real Application Security cannot be used.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e167" headers="d141413e80 "><code class="codeph">APEX_BUILDER_AUTHENTICATION</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e167 d141413e82 ">
+                                 <p>Controls the authentication scheme for Oracle APEX Administration Services and the development environment. Valid parameter values include:</p>
+                                 <ul style="list-style-type: disc;" id="GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A__UL_LXG_X1V_KMB">
+                                    <li><code class="codeph">APEX</code> - <span>Oracle APEX</span> workspace accounts authentication (default)
+                                    </li>
+                                    <li><code class="codeph">DB</code> - Database accounts authentication
+                                    </li>
+                                    <li><code class="codeph">HEADER</code> - HTTP header variable based authentication
+                                    </li>
+                                    <li><code class="codeph">SSO</code> - <span>Oracle</span> Application Server Single Sign-On authentication (OracleAS PL/SQL SSO SDK)
+                                    </li>
+                                    <li>
+                                       <p><code class="codeph">LDAP</code> - LDAP authentication
+                                       </p>
+                                    </li>
+                                    <li><code class="codeph">SAML</code> - SAML Sign-In authentication
+                                    </li>
+                                    <li><code class="codeph">SOCIAL</code> - Social Sign-In authentication
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e210" headers="d141413e80 "><code class="codeph">APEX_REST_PATH_PREFIX</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e210 d141413e82 ">Controls the URI path prefix used to access built-in RESTful Services exposed by <span>APEX</span>. For example, built-in RESTful Service for referencing static application files using <code class="codeph">#APP_IMAGES#</code> token. If the default prefix (r) conflicts with RESTful Services defined by users, adjust this preference to avoid the conflict.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e222" headers="d141413e80 "><code class="codeph">APPLICATION_ACTIVITY_LOGGING</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e222 d141413e82 ">Controls setting of application activity log for entire instance. Options are: 
+                                 <ul style="list-style-type: disc;" id="GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A__UL_TWF_VZP_CCC">
+                                    <li><code class="codeph">A</code> (Always)
+                                    </li>
+                                    <li><code class="codeph">N</code> (Never)
+                                    </li>
+                                    <li><code class="codeph">U</code> (Use application settings)
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e241" headers="d141413e80 "><code class="codeph">APPLICATION_ID_MAX</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e241 d141413e82 ">The largest possible ID for a websheet or database application.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e248" headers="d141413e80 "><code class="codeph">APPLICATION_ID_MIN</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e248 d141413e82 ">The smallest possible ID for a websheet or database application.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e254" headers="d141413e80 "><code class="codeph">AUTHENTICATION_SUBSTITUTIONS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e254 d141413e82 ">
+                                 <p>Enables you to specify which substitutions are visible to all authentication schemes in the <span>APEX</span> instance. The parameter value is a JSON format with a flat structure. Substitutions can be used for all authentication scheme attributes with <code class="codeph">#SUBSTITUTION_NAME#</code>.
+                                 </p>
+                                 <p>For example:</p><pre class="pre codeblock"><code>{    
+     "SUBST_NAME":   "SOME_VALUE",
+     "SUBST_NAME_2": "VALUE_2"
+} </code></pre></td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e271" headers="d141413e80 "><code class="codeph">AUTOEXTEND_TABLESPACES</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e271 d141413e82 ">If set to <code class="codeph">Y</code> (default), provisioned tablespaces are autoextended up to a maximum size. If set to <code class="codeph">N</code>, tablespaces are not autoextended.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e283" headers="d141413e80 "><code class="codeph">BIGFILE_TABLESPACES_ENABLED</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e283 d141413e82 ">If set to <code class="codeph">Y</code>, the tablespaces provisioned through <span>APEX</span> are created as bigfile tablespaces. If set to <code class="codeph">N</code>, the tablespaces are created as smallfile tablespaces.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e298" headers="d141413e80 "><code class="codeph">CHECK_FOR_UPDATES</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e298 d141413e82 ">If set to <code class="codeph">N</code>, the check for <span>APEX</span> and Oracle REST Data Services product updates is disabled for the entire instance, regardless of preferences specified by individual developers. The default is <code class="codeph">Y</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e313" headers="d141413e80 "><code class="codeph">CHECKSUM_HASH_FUNCTION</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e313 d141413e82 ">Defines the algorithm that is used to create one way hashes for URL checksums.Valid values are MD5 (deprecated), SH1 (SHA-1), SH256 (SHA-2, 256 bit), SH384 (SHA-2, 384 bit), SH512 (SHA-2, 512 bit) and n. The SHA-2 algorithms are only available on <span>Oracle
+                                        Database</span> 12<span class="italic">g</span> and later. A null value evaluates to the most secure algorithm available and is the default.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e325" headers="d141413e80 "><code class="codeph">CLONE_SESSION_ENABLED</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e325 d141413e82 ">If set to <code class="codeph">Y</code>, the default, users can create multiple sessions in the browser.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e334" headers="d141413e80 "><code class="codeph">DB_SIGNATURE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e334 d141413e82 ">Set to the database host/service name on install. If it differs, for example, on cloned databases, sending emails will fail. A value of null (the default) disables any checks.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e340" headers="d141413e80 "><code class="codeph">DEBUG_MESSAGE_PAGE_VIEW_LIMIT</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e340 d141413e82 ">Maximum number of debug messages for a single page view. Default is <code class="codeph">50000</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e349" headers="d141413e80 "><code class="codeph">DELETE_UPLOADED_FILES_AFTER_DAYS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e349 d141413e82 ">Uploaded files like application export files, websheet export files, spreadsheet data load files are automatically deleted after this number of days. Default is <code class="codeph">14</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e358" headers="d141413e80 "><code class="codeph">DISABLE_APPS_LOGIN</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e358 d141413e82 ">
+                                 <p>If set to <code class="codeph">N</code> (default), the login to customer-created apps is enabled.
+                                 </p>
+                                 <p>If set to <code class="codeph">Y</code>, the login to all customer-created apps is disabled.
+                                 </p>
+                                 <p>If set to a comma-separated list of application IDs, only the login to those applications is disabled.</p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e376" headers="d141413e80 "><code class="codeph">DISABLE_ADMIN_LOGIN</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e376 d141413e82 ">If set to <code class="codeph">Y</code>, <span>Oracle APEX</span> administration services are disabled. If set to <code class="codeph">N</code> (default), they are not disabled.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e391" headers="d141413e80 "><code class="codeph">DISABLE_WORKSPACE_LOGIN</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e391 d141413e82 ">If set to <code class="codeph">Y</code>, the workspace login is disabled. If set to <code class="codeph">N</code>, the default, the login is not disabled.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e403" headers="d141413e80 "><code class="codeph">DISABLE_WS_PROV</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e403 d141413e82 ">If set to <code class="codeph">Y</code>, the workspace creation is disabled for requests sent out by using e-mail notification. If set to <code class="codeph">N</code>, the default, they are not disabled.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e415" headers="d141413e80 "><code class="codeph">DOCGEN_CREDENTIAL</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e415 d141413e82 ">The cloud credential name to use for Oracle Object Storage bucket management and use of the Oracle Document Generator Pre-built function.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e421" headers="d141413e80 "><code class="codeph">DOCGEN_FUNCTION_OCID</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e421 d141413e82 ">Specifies the Oracle Cloud Identity (OCID) of the Oracle Document Generator Pre-Built function.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e427" headers="d141413e80 "><code class="codeph">DOCGEN_INVOKE_ENDPOINT</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e427 d141413e82 ">Specifies the base URL endpoint of the Oracle Document Generator Pre-Built function.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e433" headers="d141413e80 "><code class="codeph">DOCGEN_OS_BUCKET_COMPARTMENT_OCID</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e433 d141413e82 ">Specifies the Oracle Cloud Identifier (OCID) of the compartment where the Oracle Document Generator Pre-built Function is located.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e439" headers="d141413e80 "><code class="codeph">DOCGEN_OS_ENDPOINT</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e439 d141413e82 ">Specifies the base URL endpoint for the Oracle Object Storage bucket.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e445" headers="d141413e80 "><code class="codeph">DOCGEN_OS_NAMESPACE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e445 d141413e82 ">The Object Storage namespace serves as the top-level container for all buckets and objects.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e451" headers="d141413e80 "><code class="codeph">EMAIL_ATTACHMENT_MAX_SIZE_MB</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e451 d141413e82 ">Specifies the maximum size in megabytes of a single email attachment sent using <code class="codeph">APEX_MAIL</code> or the Send E-Mail process.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e460" headers="d141413e80 "><code class="codeph">EMAIL_IMAGES_URL</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e460 d141413e82 ">
+                                 <p>Specifies the full URL to the images directory of <span>APEX</span> instance, including the trailing slash after the images directory. For example: <code class="codeph">http://your_server/i/</code></p>
+                                 <p>This setting is used for <span>APEX</span> system-generated emails.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e478" headers="d141413e80 "><code class="codeph">EMAIL_INSTANCE_URL</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e478 d141413e82 ">
+                                 <p>Specifies the URL to <span>APEX</span> instance, including the trailing slash after the Database Access Descriptor. For example: <code class="codeph">http://your_server/pls/apex/</code></p>
+                                 <p>This setting is used for <span>APEX</span> system-generated emails.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e495" headers="d141413e80 "><code class="codeph">ENABLE_LEGACY_WEB_ENTRY_POINTS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e495 d141413e82 ">If set to <code class="codeph">Y</code> (default is <code class="codeph">N</code>), procedures used in older <span>APEX</span> versions can be called in the URL (such as <code class="codeph">HTMLDB_UTIL.%</code>).
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e513" headers="d141413e80 "><code class="codeph">ENABLE_TRANSACTIONAL_SQL</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e513 d141413e82 ">If set to <code class="codeph">Y</code>, transactional SQL commands are enabled on this instance. If set to <code class="codeph">N</code>, the default, they are not enabled.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e525" headers="d141413e80 "><code class="codeph">ENCRYPTED_TABLESPACES_ENABLED</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e525 d141413e82 ">If set to <code class="codeph">Y</code>, the tablespaces provisioned through <span>APEX</span> are created as encrypted tablespaces. If set to <code class="codeph">N</code>, the tablespaces are not encyrpted.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e540" headers="d141413e80 "><code class="codeph">HEADER_AUTH_CALLBACK</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e540 d141413e82 ">Callback procedure name for HTTP header based authentication, defaults to <code class="codeph">apex_authentication.callback</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e549" headers="d141413e80 "><code class="codeph">HTTP_ERROR_STATUS_ON_ERROR_PAGE_ENABLED</code> 
+                              </td>
+                              <td align="left" valign="top" width="62%" headers="d141413e549 d141413e82 ">
+                                 <p>Used in conjunction with the <code class="codeph">APEX_INSTANCE_ADMIN.SET_PARAMETER</code> procedure.
+                                 </p>
+                                 <p>If set to <code class="codeph">N</code>, the default, <span>APEX</span> presents an error page to the end user for all unhanded errors. If set to <code class="codeph">Y</code>, returns an <code class="codeph">HTTP 400</code> status to the end user's client browser when the <span>APEX</span> engine encounters an unhandled error.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e577" headers="d141413e80 "><code class="codeph">HTTP_RESPONSE_HEADERS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e577 d141413e82 ">List of http response headers, separated by newline (chr(10)). <span>APEX</span> writes these headers on each request, before rendering the page. The substitution string <code class="codeph">#CDN# </code>within the headers is replaced with the content delivery networks that are known to <span>APEX</span>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e592" headers="d141413e80 "><code class="codeph">HTTP_STS_MAX_AGE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e592 d141413e82 "><code class="codeph">REQUIRE_HTTPS</code> must be set to <code class="codeph">A</code> for this parameter to be relevant. <span>APEX</span> emits a Strict-Transport-Security header, with max-age=&lt;value&gt;, on HTTPS requests if <code class="codeph">HTTP_STS_MAX_AGE</code> has a value greater than 0. If the request protocol is HTTP, instead of processing the request, <span>APEX</span> redirects to a HTTPS URL.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e612" headers="d141413e80 "><code class="codeph">HTTP_TRUSTED_ORIGINS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e612 d141413e82 ">List of remote HTTP origins that can access resources, separated by newline. Set this parameter in combination with the ORDS parameter <code class="codeph">security.externalSessionTrustedOrigins</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e621" headers="d141413e80 "><code class="codeph">IGNORED_FRIENDLY_URL_PARAMETERS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e621 d141413e82 ">
+                                 <p>Comma-separated list of parameter names which are ignored when parsing friendly URLs. Default:</p><pre class="pre codeblock"><code>utm_campaign,utm_source,utm_medium,utm_term,utm_content</code></pre></td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e630" headers="d141413e80 "><code class="codeph">INBOUND_PROXIES</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e630 d141413e82 ">Comma-separated list of IP addresses for proxy servers through which requests come in. </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e637" headers="d141413e80 "><code class="codeph">INSTANCE_DBMS_CREDENTIAL_ENABLED</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e637 d141413e82 ">If set to <code class="codeph">Y</code>, database credentials that are accessible to the <span>APEX</span> engine (<code class="codeph">APEX_NNNNNN</code> schema), can be used in all workspaces on this instance.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e652" headers="d141413e80 "><code class="codeph">INSTANCE_NO_PROXY_DOMAINS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e652 d141413e82 ">Comma-separated list of domain names for which the instance proxy is not to be used.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e658" headers="d141413e80 "><code class="codeph">INSTANCE_PROXY</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e658 d141413e82 ">The proxy server for all outbound HTTP(s) traffic. If <code class="codeph">INSTANCE_PROXY</code> is set, it overrides any application specific proxy server definition.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e667" headers="d141413e80 "><code class="codeph">INSTANCE_TABLESPACE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e667 d141413e82 ">If specified, the tablespace to use for the database user for all new workspaces.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e673" headers="d141413e80 "><code class="codeph">KEEP_SESSIONS_ON_UPGRADE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e673 d141413e82 ">This flag affects application upgrades. If set to <code class="codeph">N</code>, the default, delete sessions associated with the application. If set to <code class="codeph">Y</code>, leave sessions unaffected.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e685" headers="d141413e80 "><code class="codeph">LOGIN_MESSAGE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e685 d141413e82 ">The text to be displayed on the login page. This text can include HTML. </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e691" headers="d141413e80 "><code class="codeph">LOGIN_THROTTLE_DELAY</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e691 d141413e82 ">The flag which determines the time increase in seconds after failed logins.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e697" headers="d141413e80 "><code class="codeph">LOGIN_THROTTLE_METHODS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e697 d141413e82 ">The methods to count failed logins. Colon-separated list of <code class="codeph">USERNAME_IP</code>, <code class="codeph">USERNAME, IP</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e709" headers="d141413e80 "><code class="codeph">MAX_APPLICATION_BACKUPS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e709 d141413e82 ">The maximum number of backups kept for each application. Default is 25. Maxium is 30. Zero (0) disables automated backups.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e715" headers="d141413e80 "><code class="codeph">MAX_DATA_EXPORT_IMAGES</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e715 d141413e82 ">The maximum number of unique images to be included in a data export / report download.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e721" headers="d141413e80 "><code class="codeph">MAX_MAIL_QUEUE_ROWS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e721 d141413e82 ">Defines the number of email messages that are processed from the queue per workspace during each invocation of the ORACLE_APEX_MAIL_QUEUE scheduler job.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e728" headers="d141413e80 "><code class="codeph">PASSWORD_ALPHA_CHARACTERS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e728 d141413e82 ">
+                                 <p>The alphabetic characters used for password complexity rules. Default list of alphabetic characters include the following:</p><pre class="pre codeblock"><code>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</code></pre></td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e737" headers="d141413e80 "><code class="codeph">PASSWORD_HASH_FUNCTION</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e737 d141413e82 ">Defines the algorithm that is used to create one way hashes for workspace user passwords. Valid values are MD5 (deprecated), SH1 (SHA-1), SH256 (SHA-2, 256 bit), SH384 (SHA-2, 384 bit), SH512 (SHA-2, 512 bit) and null. The SHA-2 algorithms are only available on Oracle Database Release 12<span class="italic">g</span> and later. A null value evaluates to the most secure algorithm available and is the default.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e746" headers="d141413e80 "><code class="codeph">PASSWORD_HASH_ITERATIONS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e746 d141413e82 ">Defines the number of iterations for the <code class="codeph">PASSWORD_HASH_FUNCTION</code> (default 10000).
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e755" headers="d141413e80 "><code class="codeph">PASSWORD_HISTORY_DAYS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e755 d141413e82 ">Defines the number of days a previously used password cannot be used again as a new password by the same user.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e761" headers="d141413e80 "><code class="codeph">PASSWORD_NOT_LIKE_USERNAME</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e761 d141413e82 ">If <code class="codeph">Y</code> (the default is <code class="codeph">N</code>), prevent workspace administrator, developer, and end user account passwords from containing the username.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e773" headers="d141413e80 "><code class="codeph">PASSWORD_NOT_LIKE_WORDS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e773 d141413e82 ">Enter words, separated by colons, that workspace administrator, developer, and end user account passwords must not contain. These words may not appear in the password in any combination of upper- or lowercase.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e779" headers="d141413e80 "><code class="codeph">PASSWORD_NOT_LIKE_WS_NAME</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e779 d141413e82 ">Set to <code class="codeph">Y</code> to prevent workspace administrator, developer, and end user account passwords from ontaining the workspace name.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e788" headers="d141413e80 "><code class="codeph">PASSWORD_ONE_ALPHA</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e788 d141413e82 ">Set to <code class="codeph">Y</code> to require that workspace administrator, developer, and end user account passwords contain at least one alphabetic character as specified in <code class="codeph">PASSWORD_ALPHA_CHARACTERS</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e800" headers="d141413e80 "><code class="codeph">PASSWORD_ONE_LOWER_CASE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e800 d141413e82 ">Set to <code class="codeph">Y</code> to require that workspace administrator, developer, and end user account passwords contain at least one lowercase alphabetic character.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e809" headers="d141413e80 "><code class="codeph">PASSWORD_ONE_NUMERIC</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e809 d141413e82 ">Set to <code class="codeph">Y</code> to require that workspace administrator, developer, and end user account passwords contain at least one Arabic numeric character (0-9).
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e818" headers="d141413e80 "><code class="codeph">PASSWORD_ONE_PUNCTUATION</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e818 d141413e82 ">Set to <code class="codeph">Y</code> to require that workspace administrator, developer, and end user account passwords contain at least one punctuation character as specified in <code class="codeph">PASSWORD_PUNCTUATION_CHARACTERS</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e831" headers="d141413e80 "><code class="codeph">PASSWORD_ONE_UPPER_CASE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e831 d141413e82 ">Set to <code class="codeph">Y</code> to require that workspace administrator, developer, and end user account passwords contain at least one uppercase alphabetic character. 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e840" headers="d141413e80 "><code class="codeph">PASSWORD_PUNCTUATION_CHARACTERS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e840 d141413e82 ">The punctuation characters used for password complexity rules. Default list of punctuation characters include the following: !"#$%&amp;()``*+,-/:;&lt;=&gt;?_</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e846" headers="d141413e80 "><code class="codeph">PLSQL_EDITING</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e846 d141413e82 ">If set to <code class="codeph">Y</code>, the default, the SQL Workshop Object Browser is enabled to permit users to edit and compile PL/SQL. If set to <code class="codeph">N</code>, users are not permitted.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e858" headers="d141413e80 "><code class="codeph">PRINT_BIB_LICENSED</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e858 d141413e82 ">
+                                 <p>Specify either standard support or advanced support. Advanced support requires an Oracle BI Publisher license. Valid values include:</p>
+                                 <ul style="list-style-type: disc;" id="GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A__UL_MXG_X1V_KMB">
+                                    <li><code class="codeph">STANDARD</code> - requires Apache FOP.
+                                    </li>
+                                    <li><code class="codeph">DOCUMENT_GENERATOR</code> - requires Oracle Document Generator Pre-built Function.
+                                    </li>
+                                    <li><code class="codeph">ADVANCED</code> - requires Oracle BI Publisher.
+                                    </li>
+                                    <li><code class="codeph">AOP</code> - requires APEX Office Print.
+                                    </li>
+                                    <li><code class="codeph">NONE</code> - native <span>APEX</span> printing.
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e889" headers="d141413e80 "><code class="codeph">PRINT_SVR_HOST</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e889 d141413e82 ">Specifies the host address of the print server converting engine, for example, <code class="codeph">localhost</code>. Enter the appropriate host address if the print server is installed at another location.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e898" headers="d141413e80 "><code class="codeph">PRINT_SVR_PORT</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e898 d141413e82 ">Defines the port of the print server engine, for example <code class="codeph">8888</code>. Value must be a positive integer.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e907" headers="d141413e80 "><code class="codeph">PRINT_SVR_PROTOCOL</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e907 d141413e82 ">
+                                 <p>Valid values include:</p>
+                                 <ul style="list-style-type: disc;" id="GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A__UL_NXG_X1V_KMB">
+                                    <li>
+                                       <p><code class="codeph">http</code></p>
+                                    </li>
+                                    <li>
+                                       <p><code class="codeph">https</code></p>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e923" headers="d141413e80 "><code class="codeph">PRINT_SVR_SCRIPT</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e923 d141413e82 ">Defines the script that is the print server engine, for example:<pre class="pre codeblock"><code>/xmlpserver/convert</code></pre></td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e931" headers="d141413e80 "><code class="codeph">REJOIN_EXISTING_SESSIONS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e931 d141413e82 ">
+                                 <p>If <code class="codeph">P</code> (default), session rejoining is supported for non-authenticated users and public pages.
+                                 </p>
+                                 <p>If <code class="codeph">Y</code>, session rejoining is also supported for authenticated users and protected pages.
+                                 </p>
+                                 <p>If <code class="codeph">N</code>, session rejoining is disabled for the whole instance.
+                                 </p>
+                                 <p>Session rejoining must be set to enabled at application or page level. A more restrictive setting at instance level with this instance parameter overrides application and page settings.</p>
+                                 <p>Unconditionally enabling session rejoining has serious security implications. Attackers could take over sessions via XSS or if they have development access to a workspace.</p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e955" headers="d141413e80 "><code class="codeph">REQ_NEW_SCHEMA</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e955 d141413e82 ">If set to <code class="codeph">Y</code>, the option for new schema for new workspace requests is enabled. If set to <code class="codeph">N</code>, the default, the option is disabled.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e967" headers="d141413e80 "><code class="codeph">REQUIRE_HTTPS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e967 d141413e82 ">
+                                 <p>If set to <code class="codeph">A</code>, enforces HTTPS for the entire <span>APEX</span> instance.
+                                 </p>
+                                 <p>If <code class="codeph">I</code>, enforces HTTPS within the <span>APEX</span> development and administration applications.
+                                 </p>
+                                 <p>If <code class="codeph">N</code>, permits all applications to be used when the protocol is either HTTP or HTTPS.
+                                 </p>
+                                 <div class="infoboxnote" id="GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A__GUID-A9B80662-376D-40A3-B7D2-09AE485E9415">
+                                    <p class="notep1">Note:</p>Note developers can also enforce HTTPS at the application level, by setting the Secure attribute of an application scheme's cookie.
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e996" headers="d141413e80 "><code class="codeph">RESTFUL_SERVICES_ENABLED</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e996 d141413e82 ">If set to <code class="codeph">Y</code>, the default, RESTful services development is enabled. If set to <code class="codeph">N</code>, RESTful services are not enabled.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1008" headers="d141413e80 "><code class="codeph">RESTRICT_DEV_HEADER</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1008 d141413e82 ">Controls access to the <span>APEX</span> development environment and Administration Services using an HTTP request header. Specify the name of the header, for example <code class="codeph">Public-Access</code>. If this header exists in the request, access is blocked. Normally an external load balancer or a web server adds this header. The value of the header is ignored.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1020" headers="d141413e80 "><code class="codeph">RESTRICT_APPS_HEADER</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1020 d141413e82 ">
+                                 <p>To restrict access to a specific list of applications, enter a HTTP request header name.</p>
+                                 <p>If the header exists, logging into the application is only allowed if the application ID is contained in the comma-delimited list of applications in the header.</p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1029" headers="d141413e80 "><code class="codeph">RESTRICT_IP_RANGE </code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1029 d141413e82 ">To restrict access to the <span>APEX</span> development environment and Administration Services to a specific range of IP addresses, enter a comma-delimited list of IP addresses. If necessary, you can use an asterisk (<code class="codeph">*</code>) as a wildcard, but do not include additional numeric values after wildcard characters. For example, <code class="codeph">138.*.41.2</code> is not a valid value.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1044" headers="d141413e80 "><code class="codeph">RESTRICT_RESPONSE_HEADERS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1044 d141413e82 ">If <code class="codeph">Y</code> or <code class="codeph">null</code> (default), show <code class="codeph">HTTP 500</code> when a page contains unsupported HTTP response headers. These include status codes 301, 308 and 410, and cache headers for POST requests.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1059" headers="d141413e80 "><code class="codeph">SAMESITE_COOKIE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1059 d141413e82 ">Default value of the cookie attribute <span class="q">"samesite."</span></td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1067" headers="d141413e80 "><code class="codeph">SAML_APEX_CALLBACK_URLS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1067 d141413e82 ">SAML authentication: Supported URLs for <code class="codeph">apex_authentication.saml_callback</code>, separated by newlines. If set, <span>APEX</span> verifies that the domain in the browser is part of this list and sends its index (starting at 0) in authentication requests as <code class="codeph">AssertionConsumerServiceIndex</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1082" headers="d141413e80 "><code class="codeph">SAML_APEX_CERTIFICATE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1082 d141413e82 ">SAML authentication: The primary certificate of the <span>APEX</span> side.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1091" headers="d141413e80 "><code class="codeph">SAML_APEX_CERTIFICATE2</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1091 d141413e82 ">(Optional) SAML authentication: The alternative certificate of the <span>APEX</span> side.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1100" headers="d141413e80 "><code class="codeph">SAML_APEX_PRIVATE_KEY</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1100 d141413e82 ">SAML authentication: The private key of the <span>APEX</span> side.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1109" headers="d141413e80 "><code class="codeph">SAML_APEX_PRIVATE_KEY2</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1109 d141413e82 ">(Optional) SAML authentication: The alternative private key of the <span>APEX</span> side.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1119" headers="d141413e80 "><code class="codeph">SAML_ENABLED</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1119 d141413e82 ">SAML authentication: <code class="codeph">Y</code> if workspace applications should be able to use SAML authentication.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1128" headers="d141413e80 "><code class="codeph">SAML_IP_ISSUER</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1128 d141413e82 ">SAML authentication: Issuer attribute from the identity provider's metadata.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1134" headers="d141413e80 "><code class="codeph">SAML_IP_SIGNING_CERTIFICATE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1134 d141413e82 ">SAML authentication: The certificate from the identity provider's metadata.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1140" headers="d141413e80 "><code class="codeph">SAML_IP_SIGNING_CERTIFICATE2</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1140 d141413e82 ">(Optional) SAML authentication: An alternative certificate from the identity provider's metadata.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1146" headers="d141413e80 "><code class="codeph">SAML_NAMEID_FORMAT</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1146 d141413e82 ">SAML authentication: The NameID format that <span>APEX</span> expects. Defaults to <code class="codeph">urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</code> when null.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1158" headers="d141413e80 "><code class="codeph">SAML_SIGN_IN_URL</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1158 d141413e82 ">SAML authentication: The identity provider's sign in URL.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1164" headers="d141413e80 "><code class="codeph">SAML_SIGN_OUT_URL</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1164 d141413e82 ">(Optional) SAML authentication: The identity provider's sign out URL.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1170" headers="d141413e80 "><code class="codeph">SAML_SP_ISSUER</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1170 d141413e82 ">SAML authentication: The <span class="q">"issuer"</span> attribute that <span>APEX</span> sends (defaults to the callback URL).
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1182" headers="d141413e80 "><code class="codeph">SAML_USERNAME_ATTRIBUTE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1182 d141413e82 ">SAML authentication: Responses can contain additional attributes about the user. If set, <span>APEX</span> uses that attribute's value as the username (defaults to the assertion subject's <code class="codeph">NameID</code> attribute).
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1194" headers="d141413e80 "><code class="codeph">SERVICE_ADMIN_PASSWORD_MIN_LENGTH</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1194 d141413e82 ">A positive integer or <code class="codeph">0</code> which specifies the minimum character length for passwords for instance administrators, workspace administrators, developers, and end user <span>APEX</span> accounts, when the strong password rules are enabled (see <code class="codeph">STRONG_SITE_ADMIN_PASSWORD</code>).
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1209" headers="d141413e80 "><code class="codeph">SERVICE_ADMIN_PASSWORD_NEW_DIFFERS_BY</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1209 d141413e82 ">A positive integer or <code class="codeph">0</code> which specifies the number of differences required between old and new passwords. The passwords are compared character by character, and each difference that occurs in any position counts toward the required minimum difference. This setting applies to accounts for instance administrators, workspace administrators, developers, and end user <span>APEX</span> accounts, when the strong password rules are enabled (see <code class="codeph">STRONG_SITE_ADMIN_PASSWORD</code>).
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1225" headers="d141413e80 "><code class="codeph">SERVICE_ADMIN_PASSWORD_ONE_ALPHA</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1225 d141413e82 ">Set to <code class="codeph">Y</code> to require that workspace administrator, developer, and end user account passwords contain at least one alphabetic character as specified in <code class="codeph">PASSWORD_ALPHA_CHARACTERS</code>, when the strong password rules are enabled (see <code class="codeph">STRONG_SITE_ADMIN_PASSWORD</code>).
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1240" headers="d141413e80 "><code class="codeph">SERVICE_ADMIN_PASSWORD_ONE_NUMERIC</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1240 d141413e82 ">Set to <code class="codeph">Y</code> to require that workspace administrator, developer, and end user account passwords contain at least one Arabic numeric character (<code class="codeph">0-9</code>), when the strong password rules are enabled (see <code class="codeph">STRONG_SITE_ADMIN_PASSWORD</code>).
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1255" headers="d141413e80 "><code class="codeph">SERVICE_ADMIN_PASSWORD_ONE_PUNCTUATION</code> 
+                              </td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1255 d141413e82 ">Set to <code class="codeph">Y</code> to require that workspace administrator, developer, and end user account passwords contain at least one punctuation character as specified in <code class="codeph">PASSWORD_PUNCTUATION_CHARACTERS</code>, the strong password rules are enabled (see <code class="codeph">STRONG_SITE_ADMIN_PASSWORD</code>).
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1271" headers="d141413e80 "><code class="codeph">SERVICE_ADMIN_PASSWORD_ONE_LOWER_CASE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1271 d141413e82 ">Set to <code class="codeph">Y</code> to require that workspace administrator, developer, and end user account passwords contain at least one lowercase alphabetic character, when the strong password rules are enabled (see <code class="codeph">STRONG_SITE_ADMIN_PASSWORD</code>).
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1283" headers="d141413e80 "><code class="codeph">SERVICE_ADMIN_PASSWORD_ONE_UPPER_CASE</code> 
+                              </td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1283 d141413e82 ">Set to <code class="codeph">Y</code> to require that workspace administrator, developer, and end user account passwords contain at least one uppercase alphabetic character, when the strong password rules are enabled (see <code class="codeph">STRONG_SITE_ADMIN_PASSWORD</code>).
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1296" headers="d141413e80 "><code class="codeph">SERVICE_ADMIN_PASSWORD_NOT_LIKE_USERNAME</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1296 d141413e82 "> If <code class="codeph">Y</code>, prevent workspace administrator, developer, and end user account passwords from containing the username, when the strong password rules are enabled (see <code class="codeph">STRONG_SITE_ADMIN_PASSWORD</code>).
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1308" headers="d141413e80 "><code class="codeph">SERVICE_ADMIN_PASSWORD_NOT_LIKE_WORDS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1308 d141413e82 "> Enter words, separated by colons, that workspace administrator, developer, and end user account passwords must not contain, when the strong password rules are enabled (see <code class="codeph">STRONG_SITE_ADMIN_PASSWORD</code>). These words may not appear in the password in any combination of upper- or lowercase.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1317" headers="d141413e80 "><code class="codeph">SERVICE_ADMIN_PASSWORD_NOT_LIKE_WS_NAME</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1317 d141413e82 "> Set to <code class="codeph">Y</code> to prevent workspace administrator, developer, and end user account passwords from containing the workspace name, when the strong password rules are enabled (see <code class="codeph">STRONG_SITE_ADMIN_PASSWORD</code>).
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1329" headers="d141413e80 "><code class="codeph">SERVICE_REQUEST_FLOW</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1329 d141413e82 ">
+                                 <p>Determines default provisioning mode. Options are:</p>
+                                 <ul style="list-style-type: disc;" id="GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A__UL_X2F_CKG_B2C">
+                                    <li><code class="codeph">MANUAL</code> - (Default) An administrator must manually create each workspace.
+                                    </li>
+                                    <li><code class="codeph">EMAIL</code> - Link displayed on login page. Requests require administrator approval.
+                                    </li>
+                                    <li><code class="codeph">AUTO</code> - Link displayed on login page. Requests are automatically approved.
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1349" headers="d141413e80 "><code class="codeph">SERVICE_REQUESTS_ENABLED</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1349 d141413e82 ">If set to <code class="codeph">Y</code>, the default, workspace service requests for schemas, storage, and termination is enabled. If set to <code class="codeph">N</code>, these requests are disabled.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1361" headers="d141413e80 "><code class="codeph">SMTP_FROM</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1361 d141413e82 ">
+                                 <p>Defines the <span class="q">"From"</span> address for administrative tasks that generate email, such as approving a provision request or resetting a password.
+                                 </p>
+                                 <p>Enter a valid email address, for example:</p><pre class="pre codeblock"><code>admin@example.com</code></pre></td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1376" headers="d141413e80 "><code class="codeph">SMTP_HOST_ADDRESS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1376 d141413e82 ">
+                                 <p>Defines the server address of the SMTP server. If you are using another server as an SMTP relay, change this parameter to that server's address. </p>
+                                 <p>Default setting: <code class="codeph">localhost</code></p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1387" headers="d141413e80 "><code class="codeph">SMTP_HOST_PORT</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1387 d141413e82 ">
+                                 <p>Defines the port the SMTP server listens to for mail requests. </p>
+                                 <p>Default setting: <code class="codeph">25</code></p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1398" headers="d141413e80 "><code class="codeph">SMTP_PASSWORD</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1398 d141413e82 ">Defines the password <span>APEX</span> takes to authenticate itself against the SMTP server, with the parameter <code class="codeph">SMTP_USERNAME</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1410" headers="d141413e80 "><code class="codeph">SMTP_TLS_MODE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1410 d141413e82 ">
+                                 <p>Defines whether <span>APEX</span> opens an encrypted connection to the SMTP server. Encryption is only supported on database versions 11.2.0.2 and later. On earlier database versions, the connection is not encrypted.
+                                 </p>
+                                 <p>If set to <code class="codeph">N</code>, the connection is unencrypted (default).
+                                 </p>
+                                 <p>If set to <code class="codeph">Y</code>, the connection is encrypted before data is sent.
+                                 </p>
+                                 <p>If <code class="codeph">STARTTLS</code>, <span>APEX</span> sends the SMTP commands <code class="codeph">EHLO &lt;SMTP_HOST_ADDRESS&gt;</code> and <code class="codeph">STARTTLS</code> before encrypting the connection.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1444" headers="d141413e80 "><code class="codeph">SMTP_USERNAME</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1444 d141413e82 ">Defines the username <span>APEX</span> takes to authenticate itself against the SMTP server (default is null). Starting with database version 11.2.0.2, <span>APEX</span> uses <code class="codeph">UTL_MAIL</code>'s <code class="codeph">AUTH</code> procedure for authentication. This procedure negotiates an authentication mode with the SMTP server. With earlier database versions, the authentication mode is always <code class="codeph">AUTH</code> <code class="codeph">LOGIN</code>. If <code class="codeph">SMTP_USERNAME</code> is null, no authentication is used.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1472" headers="d141413e80 "><code class="codeph">SOCIAL_AUTH_CALLBACK</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1472 d141413e82 ">Callback procedure name for Social Sign-In, defaults to <code class="codeph">apex_authentication.callback</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1481" headers="d141413e80 "><code class="codeph">SQL_SCRIPT_MAX_OUTPUT_SIZE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1481 d141413e82 ">Sets the maximum size for an individual script result. Default is <code class="codeph">200000</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1490" headers="d141413e80 "><code class="codeph">SSO_LOGOUT_URL</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1490 d141413e82 ">
+                                 <p>Defines the URL <span>APEX</span> redirects to in order to trigger a logout from the Single Sign-On server. <span>APEX</span> automatically appends <code class="codeph">?p_done_url=...login url...</code></p>
+                                 <p>Example: <code class="codeph">https://login.example.com/pls/orasso/orasso.wwsso_app_admin.ls_logout</code></p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1509" headers="d141413e80 "><code class="codeph">STRONG_SITE_ADMIN_PASSWORD</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1509 d141413e82 ">If set to <code class="codeph">Y</code>, the default, the <code class="codeph">apex_admin</code> password must conform to the default set of strong complexity rules. If set to <code class="codeph">N</code>, the password is not required to follow the strong complexity rules. 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1524" headers="d141413e80 "><code class="codeph">SYSTEM_DEBUG_LEVEL</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1524 d141413e82 ">Defines a default debug level for all incoming requests (null, 1-9) The <span>SQLcl</span> script <code class="codeph">utilities/debug/d0.sql</code> can be used to switch between NULL (disabled) and level 9.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1536" headers="d141413e80 "><code class="codeph">SYSTEM_HELP_URL</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1536 d141413e82 ">Location of the help and documentation accessed from the Help link within the development environment. Default is <code class="codeph">http://apex.oracle.com/doc41</code></td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1545" headers="d141413e80 "><code class="codeph">SYSTEM_MESSAGE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1545 d141413e82 ">The text to be displayed on the development environment home page. This text can include HTML.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1551" headers="d141413e80 "><code class="codeph">TRACE_HEADER_NAME</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1551 d141413e82 ">This parameter contains a HTTP request header name and defaults to <code class="codeph">ECID-CONTEXT</code>. The name must be in upper case. <span>APEX</span> writes the HTTP header value to the activity log's ECID column.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1563" headers="d141413e80 "><code class="codeph">TRACING_ENABLED</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1563 d141413e82 ">
+                                 <p>If set to <code class="codeph">Y</code> (the default), an application with Debug enabled can also generate server side db trace files using <code class="codeph">&amp;p_trace=YES</code> on the URL.
+                                 </p>
+                                 <p>If set to <code class="codeph">N</code>, the request to create a trace file is ignored.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1581" headers="d141413e80 "><code class="codeph">UPGRADE_DATE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1581 d141413e82 ">
+                                 <p>This read-only parameter contains the date when the next scheduled <span>APEX</span> upgrade will automatically apply to your database or <code class="codeph">NULL</code> when no upgrade is scheduled. The date follows the ISO 8601 format in the UTC time zone.
+                                 </p>
+                                 <p>This parameter only applies to <span>APEX</span> on <span>Autonomous Database</span>.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1602" headers="d141413e80 "><code class="codeph">UPGRADE_DEFERRED</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1602 d141413e82 ">
+                                 <p>When <code class="codeph">N</code> (default), future <span>APEX</span> upgrades are scheduled within the default upgrade window.When <code class="codeph">Y</code>, future <span>APEX</span> upgrades are scheduled within the extended upgrade window.
+                                 </p>
+                                 <p>If the next <span>APEX</span> upgrade is already scheduled in this database, changing this parameter also reschedules this upgrade (for example, from the default upgrade window to the extended upgrade window).
+                                 </p>
+                                 <p>This parameter only applies to <span>APEX</span> on <span>Oracle</span> <span>Autonomous Database</span>.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1637" headers="d141413e80 "><code class="codeph">UPGRADE_STATUS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1637 d141413e82 ">
+                                 <p>This parameter contains the status of the next scheduled <span>APEX</span> upgrade if available. The possible values are: <code class="codeph">UP-TO-DATE</code>, <code class="codeph">SCHEDULED</code>, <code class="codeph">RUNNING</code>. Set this parameter to <code class="codeph">RUN</code> to initiate the upgrade.
+                                 </p>
+                                 <p>This parameter only applies to <span>APEX</span> on <span>Autonomous Database</span>.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1667" headers="d141413e80 "><code class="codeph">UPGRADE_VERSION</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1667 d141413e82 ">
+                                 <p>This read-only parameter contains the <span>APEX</span> version to be installed with the next scheduled upgrade or <code class="codeph">NULL</code> when no upgrade is scheduled. 
+                                 </p>
+                                 <p>This parameter only applies to <span>APEX</span> on <span>Autonomous Database</span>.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1688" headers="d141413e80 "><code class="codeph">USERNAME_VALIDATION</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1688 d141413e82 ">
+                                 <p>The case-sensitive regular expression used to validate a username when creating or modifying developer and workspace administrator accounts. Default is <code class="codeph">*</code> (asterisk) (validation is disabled).
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1698" headers="d141413e80 "><code class="codeph">WALLET_PATH</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1698 d141413e82 ">
+                                 <p>The path to the wallet on the file system, for example:</p><pre class="pre codeblock"><code>file:/home/&lt;<span class="italic">username</span>&gt;/wallets</code></pre></td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1710" headers="d141413e80 "><code class="codeph">WALLET_PWD</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1710 d141413e82 ">The password associated with the wallet. Use an empty/null value for auto-login wallets.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1716" headers="d141413e80 "><code class="codeph">WORKSPACE_FREE_SPACE_LIMIT</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1716 d141413e82 ">Sets percentage limit for free space in a workspace. If available space is lower that the value set here, a report lists them for the APEX Administrator Digest.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1723" headers="d141413e80 "><code class="codeph">WORKSPACE_MAX_OUTPUT_SIZE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1723 d141413e82 ">The maximum space allocated for script results. Default is <code class="codeph">2000000</code></td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1731" headers="d141413e80 "><code class="codeph">WORKSPACE_NAME_USER_COOKIE</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1731 d141413e82 ">If set to <code class="codeph">Y</code> or null (the default), <span>APEX</span> sends persistent cookies for workspace name and username during login, as well as for language selection. If <code class="codeph">N</code>, the cookies are not sent.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1746" headers="d141413e80 "><code class="codeph">WORKSPACE_PROVISION_DEMO_OBJECTS</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1746 d141413e82 ">If set to <code class="codeph">Y</code> (default), demonstration applications and database objects are created in new workspaces. If set to <code class="codeph">N</code>, they are not created in new workspaces.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1758" headers="d141413e80 "><code class="codeph">WORKSPACE_TEAM_DEV_FILES_YN</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1758 d141413e82 ">If set to <code class="codeph">Y</code>, the default, new workspaces enable file uploads into Team Development. If set to <code class="codeph">N</code>, new workspaces disable file uploads into Team Development, disabling the ability to upload <code class="codeph">feature</code>, <code class="codeph">bug</code>, and <code class="codeph">feedback</code> attachments.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1779" headers="d141413e80 "><code class="codeph">WORKSPACE_TEAM_DEV_FS_LIMIT</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1779 d141413e82 ">The maximum per upload file size of a Team Development file (feature, bug, and feedback attachments). Default value is <code class="codeph">15728640</code> (15 MB). All possible options are listed below:<pre class="pre codeblock"><code>5 MB - 5242880 | 10 MB - 10485760 | 15 MB - 15728640 | 20 MB - 20971520 | 25 MB - 26214400</code></pre></td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1790" headers="d141413e80 "><code class="codeph">ZIP_FILE_MAX_EXPANSION_FACTOR</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1790 d141413e82 ">The maximum factor by which a compressed file can expand after decompression. Default value is <code class="codeph">200</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="38%" id="d141413e1799" headers="d141413e80 "><code class="codeph">ZIP_FILE_MAX_UNCOMPRESSED_SIZE_MB</code></td>
+                              <td align="left" valign="top" width="62%" headers="d141413e1799 d141413e82 ">The maximum size to unzip a file. Default value is <code class="codeph">4096</code> MB.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A__GUID-963D6D01-0CA4-415F-821E-0E8F87166952">Instance and Workspace Parameters</p>
+                  <p>The following parameters can be configured at both the Instance level (using <code class="codeph">APEX_INSTANCE_ADMIN.SET_PARAMETER</code>) and the Workspace level (using <code class="codeph">APEX_INSTANCE_ADMIN.SET_WORKSPACE_PARAMETER</code>).
+                  </p>
+                  <div class="tblformal" id="GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A__TABLE_N1N_WDF_42C">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Instance and workspace parameters for API." frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="0%" id="d141413e1826">Parameter</th>
+                              <th align="left" valign="bottom" width="0%" id="d141413e1828">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1832" headers="d141413e1826 "><code class="codeph">ACCOUNT_LIFETIME_DAYS</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1832 d141413e1828 ">The maximum number of days an end-user account password may be used before the account is expired.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1838" headers="d141413e1826 "><code class="codeph">AI_IS_ENABLED</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1838 d141413e1828 ">If set to `Y` (default), then AI Services can be enabled and configured for workspaces. If set to `N`, AI functionality is disabled for all workspaces.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1844" headers="d141413e1826 "><code class="codeph">ALLOW_HOSTING_EXTENSIONS</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1844 d141413e1828 ">Default `N`. If `Y`, the workspace is enabled to publish Builder Extension apps through the Extension Menu.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1850" headers="d141413e1826 "><code class="codeph">ALLOW_HOSTNAMES</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1850 d141413e1828 ">If set, users can only navigate to an application if the URL's hostname part contains this value. Instance administrators can configure more specific values at workspace level.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1856" headers="d141413e1826 "><code class="codeph">CONTENT_CACHE_MAX_FILE_SIZE</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1856 d141413e1828 ">The individual file entry size limit for the content cache, per workspace.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1862" headers="d141413e1826 "><code class="codeph">CONTENT_CACHE_SIZE_TARGET</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1862 d141413e1828 ">The target size for the content cache, per workspace.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1868" headers="d141413e1826 "><code class="codeph">ENV_BANNER_COLOR</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1868 d141413e1828 ">Defines the color class name for the environment banner color. Use `accent-1`, `accent-2`, `accent-3` (and so on). Maximum of 16 color classes.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1874" headers="d141413e1826 "><code class="codeph">ENV_BANNER_ENABLE</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1874 d141413e1828 ">If set to `Y` (default is `N`), the environment banner displays in the APEX development environment to visually flag the environment.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1880" headers="d141413e1826 "><code class="codeph">ENV_BANNER_LABEL</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1880 d141413e1828 ">Defines the label for the environment banner.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1886" headers="d141413e1826 "><code class="codeph">ENV_BANNER_POS</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1886 d141413e1828 ">Defines the display position for the environment banner. Options: `LEFT` or `TOP`.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1892" headers="d141413e1826 "><code class="codeph">EXPIRE_FND_USER_ACCOUNTS</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1892 d141413e1828 ">If set to `Y`, expiration of APEX accounts is enabled. If set to `N`, they are not enabled.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1899" headers="d141413e1826 "><code class="codeph">MAX_LOGIN_FAILURES</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1899 d141413e1828 ">The maximum number of consecutive unsuccessful authentication attempts allowed before a developer or administrator account is locked.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1905" headers="d141413e1826 "><code class="codeph">MAX_SESSION_IDLE_SEC</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1905 d141413e1828 ">The number of seconds an internal application may be idle.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1911" headers="d141413e1826 "><code class="codeph">MAX_SESSION_LENGTH_SEC</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1911 d141413e1828 ">The number of seconds an internal application session may exist.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1917" headers="d141413e1826 "><code class="codeph">MAX_WEBSERVICE_REQUESTS</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1917 d141413e1828 ">The maximum number of outbound web service requests allowed for each workspace in a rolling 24-hour period. Default is 1000.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1923" headers="d141413e1826 "><code class="codeph">QOS_MAX_SESSION_KILL_TIMEOUT</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1923 d141413e1828 ">Number of seconds that an active old session can live, when `QOS_MAX_SESSION_REQUESTS` has been reached. The oldest DB session with `LAST_CALL_ET` greater than `QOS_MAX_SESSION_KILL_TIMEOUT` will be killed.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1929" headers="d141413e1826 "><code class="codeph">QOS_MAX_WORKSPACE_REQUESTS</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1929 d141413e1828 ">Number of allowed concurrent requests to sessions in this workspace.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1935" headers="d141413e1826 "><code class="codeph">QOS_MAX_SESSION_REQUESTS</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1935 d141413e1828 ">Number of allowed concurrent requests to one session associated with this workspace.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1941" headers="d141413e1826 "><code class="codeph">RM_CONSUMER_GROUP</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1941 d141413e1828 ">If set, this is the resource manager consumer group to be used for all page events. A more specific group can be configured at workspace level.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1947" headers="d141413e1826 "><code class="codeph">SESSION_TIMEOUT_WARNING_SEC</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1947 d141413e1828 ">The number of seconds before session timeout that a warning is displayed, for internal applications.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1953" headers="d141413e1826 "><code class="codeph">WEBSERVICE_LOGGING</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1953 d141413e1828 ">Controls instance wide setting of web service activity log: [`A`]lways, [`N`]ever, [`U`]se workspace settings.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1959" headers="d141413e1826 "><code class="codeph">WORKSPACE_EMAIL_MAXIMUM</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1959 d141413e1828 ">Maximum number of emails allowed to be sent via `APEX_MAIL` per workspace in a 24 hour period. Default is 1000.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1966" headers="d141413e1826 "><code class="codeph">WORKSPACE_MAX_FILE_BYTES</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1966 d141413e1828 ">The maximum number of bytes for uploaded files for a workspace. A setting at workspace level overrides the instance level setting.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A__GUID-944DD1AF-3C7C-424E-90FD-B65C4A0D326C">Workspace Parameters</p>
+                  <p>The following parameters can be configured <span class="bold">only</span> at the Workspace level (using <code class="codeph">APEX_INSTANCE_ADMIN.SET_WORKSPACE_PARAMETER</code>).
+                  </p>
+                  <div class="tblformal" id="GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A__TABLE_TXV_HZ2_42C">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Workspace-level parameters for API." frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="0%" id="d141413e1990">Parameter</th>
+                              <th align="left" valign="bottom" width="0%" id="d141413e1992">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e1996" headers="d141413e1990 "><code class="codeph">OPENTELEMETRY_CLS_URL</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e1996 d141413e1992 ">The external Client Logging Service (CLS) URL that is obtained during telemetry provisioning.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e2002" headers="d141413e1990 "><code class="codeph">OPENTELEMETRY_TOKEN_RELAY_URL</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e2002 d141413e1992 ">The REST service that obtains an access token for the currently logged in user. The token is used for authentication when calling the CLS.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d141413e2008" headers="d141413e1990 "><code class="codeph">PATH_PREFIX</code></td>
+                              <td align="left" valign="top" width="0%" headers="d141413e2008 d141413e1992 ">The unique URI path prefix used to access RESTful Services in a workspace. The default path prefix value is the name of the workspace. Note that this is a workspace parameter, it can not be set at instance level.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <div class="infoboxnotealso" id="GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A__GUID-7363ACA7-98B5-4DB3-8355-7B1F71503EA3">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A__UL_OXG_X1V_KMB">
+                        <li><a href="../aeadm/configuring-email.html#AEADM-GUID-466A0174-DC1F-4092-AC49-99E818FD7899" target="_blank">Configuring Email in a Runtime Environment</a> in the <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                        <li><a href="../aeadm/configuring-wallet-information.html#AEADM-GUID-BBE43F61-DA0B-4517-AC5E-D06C4C69D526" target="_blank">Configuring Wallet Information</a> in the <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                        <li><a href="../aeadm/configuring-report-printing-for-an-instance.html#AEADM-GUID-966A876E-6534-4CE2-B44E-EB6527326DCC" target="_blank">Configuring Report Printing for an Instance</a> in the <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                        <li><a href="../aeadm/workspace-and-application-administration.html#AEADM-GUID-853F40E1-F360-4CE9-8DC1-FC111A825D14" target="_blank">Workspace and Application Administration</a> in the <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_INSTANCE_ADMIN.html#GUID-1A894D25-A884-466B-9B88-B10888B2FFEA">APEX_INSTANCE_ADMIN</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Downloading and Installing Oracle REST Data Services (ORDS)">
+      <meta name="abstract" content="Learn about downloading and installing Oracle REST Data Services (ORDS).">
+      <meta name="description" content="Learn about downloading and installing Oracle REST Data Services (ORDS).">
+      <meta name="DC.subject" content="Oracle REST Data Services, downloading, installing, installation, downloading Oracle REST Data Services, ords.version.number.zip, configuring behind reverse proxy, configuring behind load balancer, Web Server HTTP POST Request Limits">
+      <meta name="keywords" content="Oracle REST Data Services, downloading, installing, installation, downloading Oracle REST Data Services, ords.version.number.zip, configuring behind reverse proxy, configuring behind load balancer, Web Server HTTP POST Request Limits">
+      <meta name="DC.Relation" scheme="URI" content="installing-and-configuring-apex-and-ords.html#GUID-8EE981AD-B1F9-46C2-BB5A-C9FE60CCD4AA">
+      <meta name="DC.Relation" scheme="URI" content="downloading-installing-ords.html#GUID-A39B8770-8FE9-41DA-AC2C-5E3723BF0C19">
+      <meta name="DC.Relation" scheme="URI" content="downloading-installing-ords.html#GUID-8FFD8668-D1DC-40C5-8E1E-3983FBF24C28">
+      <meta name="DC.Relation" scheme="URI" content="downloading-installing-ords.html#GUID-8B1CC607-D33E-41C1-AA7C-11688EC3D70F">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="David Bliss">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Salim Hlayel">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vlad Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-1F0064FB-7F00-4ACE-85BD-E9B2AF73A233">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about downloading and installing Oracle REST Data Services (ORDS).">
+      <meta name="description" content="Learn about downloading and installing Oracle REST Data Services (ORDS).">
+      <title>Downloading and Installing Oracle REST Data Services (ORDS)</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Installation Guide ">
+      <meta property="og:description" content="Learn about downloading and installing Oracle REST Data Services (ORDS).">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Installation Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-installation-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:41:45-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12910-03">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="downloading-installing-apex.html" title="Previous" type="text/html">
+      <link rel="next" href="configuring-ords.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Installation Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="HTMIG">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Downloading and Installing Oracle REST Data Services (ORDS)","description":"Learn about downloading and installing Oracle REST Data Services (ORDS).","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="downloading-installing-apex.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="configuring-ords.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-1F0064FB-7F00-4ACE-85BD-E9B2AF73A233" name="GUID-1F0064FB-7F00-4ACE-85BD-E9B2AF73A233"></a><a id="HTMIG29333"></a>
+         
+         <h2 id="HTMIG-GUID-1F0064FB-7F00-4ACE-85BD-E9B2AF73A233" class="sect2"><span class="enumeration_section">6.4 </span>Downloading and Installing <span>Oracle REST Data
+                                        Services</span> (ORDS)
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Learn about downloading and installing <span>Oracle REST Data
+                                        Services</span> (ORDS).
+               </p>
+               <p>The <span>Oracle APEX</span> architecture requires a web server to proxy requests between a web browser and the <span>APEX</span> engine. <span>Oracle REST Data
+                                        Services</span> meets the requirement but its use goes beyond that of <span>APEX</span>. <span>Oracle REST Data
+                                        Services</span> simplifies the deployment process because there is no <span>Oracle</span> home required, as connectivity is provided using an embedded JDBC driver.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="downloading-installing-ords.html#GUID-A39B8770-8FE9-41DA-AC2C-5E3723BF0C19">Downloading Oracle REST Data Services</a><br>Learn how to download <span>Oracle REST Data                                         Services</span>.
+                  </li>
+                  <li class="ulchildlink"><a href="downloading-installing-ords.html#GUID-8FFD8668-D1DC-40C5-8E1E-3983FBF24C28">About Configuring Oracle REST Data Services Behind a Reverse Proxy or Load Balancer</a><br>When <span>Oracle APEX</span> is running behind a reverse proxy or load balancer, it is important to                         communicate the original HTTP hostname and protocol as seen by the user's                         browser to the <span>Oracle APEX</span> engine.
+                  </li>
+                  <li class="ulchildlink"><a href="downloading-installing-ords.html#GUID-8B1CC607-D33E-41C1-AA7C-11688EC3D70F">Web Server HTTP POST Request Limits</a><br>Learn about Web Server HTTP POST request limits.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-1F0064FB-7F00-4ACE-85BD-E9B2AF73A233__GUID-7CEA44E7-389A-480C-BFFA-496DA89BE5B3">
+                  <p class="notep1">See Also:</p>
+                  <ul style="list-style-type: disc;" id="GUID-1F0064FB-7F00-4ACE-85BD-E9B2AF73A233__UL_QDK_VYC_NTB">
+                     <li><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmig&id=ORDGG-GUID-A16BCCA2-8081-4062-A635-9F7C36FC394F" target="_blank">Introduction to Oracle REST Data Services</a> in <span><cite>Oracle REST Data Services Developer's
+                                Guide</cite></span></li>
+                     <li><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmig&id=ORDIG-GUID-B6661F35-3EE3-4CB3-9379-40D0B8E24635" target="_blank">Installing and Configuring Oracle REST Data Services</a> in <span><cite>Oracle REST Data Services Installation and
+                                        Configuration Guide</cite></span></li>
+                  </ul>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="installing-and-configuring-apex-and-ords.html#GUID-8EE981AD-B1F9-46C2-BB5A-C9FE60CCD4AA" title="Install or upgrade Oracle APEX by downloading a ZIP file from the APEX download page and then downloading and installing Oracle REST Data Services (ORDS). These instructions apply to both new and upgrade installations.">Installing and Configuring APEX and Oracle REST Data Services</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMIG29156"></a><div class="props_rev_3"><a id="GUID-A39B8770-8FE9-41DA-AC2C-5E3723BF0C19" name="GUID-A39B8770-8FE9-41DA-AC2C-5E3723BF0C19"></a><h3 id="HTMIG-GUID-A39B8770-8FE9-41DA-AC2C-5E3723BF0C19" class="sect3"><span class="enumeration_section">6.4.1 </span>Downloading Oracle REST Data Services
+               </h3>
+               <div>
+                  <p>Learn how to download <span>Oracle REST Data
+                                        Services</span>.
+                  </p>
+                  <div class="section">
+                     <div class="infobox-tip" id="GUID-A39B8770-8FE9-41DA-AC2C-5E3723BF0C19__GUID-9D70AB75-383A-4E46-8AB1-2E44594EE45B">
+                        <p class="notep1">Tip:</p>
+                        <p>By default, the context root for accessing <span>Oracle APEX</span> through <span>Oracle REST Data
+                                        Services</span> is <code class="codeph">/ords</code>. If you wish to have a context root of
+                        <code class="codeph">/apex</code> for accessing <span>Oracle APEX</span>, rename the <code class="codeph">ords.war</code> file to <code class="codeph">apex.war</code>
+                    before installing <span>Oracle REST Data
+                                        Services</span>. See <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmig&id=ORDIG-GUID-6791F5DF-AC67-4885-BFFA-B80964C17EC9" target="_blank">Deploying and Monitoring Oracle REST Data
+                        Services</a> in <span><cite>Oracle REST Data Services Installation and
+                                        Configuration Guide</cite></span>.
+                        </p>
+                     </div>
+                     <p>To download <span>Oracle REST Data
+                                        Services</span>:
+                     </p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Download the latest release of <span>Oracle REST Data
+                                        Services</span> from the <a href="https://www.oracle.com/database/technologies/appdev/rest-data-services-downloads.html" target="_blank">Oracle REST Data Services download
+                        page</a>.</span></li>
+                     <li class="stepexpand"><span>Unzip the downloaded zip file into a directory (or folder) of your choice:</span><div>
+                           <ul style="list-style-type: disc;">
+                              <li>UNIX and Linux: unzip <code class="codeph">ords.</code><span class="italic"><code class="codeph">version.number</code></span><code class="codeph">.zip</code></li>
+                           </ul>
+                           <ul style="list-style-type: disc;">
+                              <li>Windows: Double-click the file <code class="codeph">ords.</code><span class="italic"><code class="codeph">version.number</code></span><code class="codeph">.zip</code> in Windows Explorer
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Copy the images directory, <code class="codeph">apex/images</code>, from the <span>APEX</span> software ZIP to a location on the file system where <span>Oracle REST Data
+                                        Services</span> is installed.</span><div>
+                           <div class="infoboxnote" id="GUID-A39B8770-8FE9-41DA-AC2C-5E3723BF0C19__GUID-36481809-D4E4-41E4-9FB3-6ED2AB3BCF8F">
+                              <p class="notep1">Note:</p>This step is optional if you use the <span>APEX</span> static resource of the CDN. See <a href="configuring-ords.html#GUID-D688F4D6-FCAB-4C4D-BA6D-9A3506B3E05F" title="Manage images and static resources used by an Oracle APEX installation.">Managing Static Resources (Images)</a>.
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Follow and complete all installation and configuration steps described in <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmig&id=ORDIG-GUID-B6661F35-3EE3-4CB3-9379-40D0B8E24635" target="_blank">Installing and Configuring Oracle REST Data Services</a>
+                    in <span><cite>Oracle REST Data Services Installation and
+                                        Configuration Guide</cite></span>.</span></li>
+                     <li class="stepexpand"><span>For <span>Oracle
+                                        Database</span> multitenant architecture, ensure that you configure the connection using the service name of the specific pluggable database (PDB) you want to access. Do not use the service name of the <code class="codeph">CDB$ROOT</code> unless you are configuring <span>Oracle REST Data
+                                        Services</span> to address PDBs through the URL. See <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmig&id=ORDIG-GUID-C9DF5393-6AD2-4564-AB12-66544F4016D9" target="_blank">Using the Multitenant Architecture with Oracle REST Data Services</a> in <span><cite>Oracle REST Data Services Installation and
+                                        Configuration Guide</cite></span> for more information.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="downloading-installing-ords.html#GUID-1F0064FB-7F00-4ACE-85BD-E9B2AF73A233" title="Learn about downloading and installing Oracle REST Data Services (ORDS).">Downloading and Installing Oracle REST Data Services (ORDS)</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMIG29334"></a><div class="props_rev_3"><a id="GUID-8FFD8668-D1DC-40C5-8E1E-3983FBF24C28" name="GUID-8FFD8668-D1DC-40C5-8E1E-3983FBF24C28"></a><h3 id="HTMIG-GUID-8FFD8668-D1DC-40C5-8E1E-3983FBF24C28" class="sect3"><span class="enumeration_section">6.4.2 </span>About Configuring Oracle REST Data Services Behind a Reverse Proxy or Load Balancer
+               </h3>
+               <div>
+                  <p>When <span>Oracle APEX</span> is running behind a reverse proxy or load balancer, it is important to
+                        communicate the original HTTP hostname and protocol as seen by the user's
+                        browser to the <span>Oracle APEX</span> engine.
+                  </p>
+                  <p> The <span>Oracle APEX</span> engine uses this information to generate valid URLs in HTML
+                                    responses and HTTP redirects that the user's browser can
+                                    successfully follow. The exact configuration steps depend on
+                                    your Java EE application server. For example, for Oracle
+                                    WebLogic Server, this is accomplished using Oracle WebLogic
+                                    Server Proxy Plug-Ins. To learn more, see your Java EE
+                                    application server documentation.
+                  </p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="downloading-installing-ords.html#GUID-1F0064FB-7F00-4ACE-85BD-E9B2AF73A233" title="Learn about downloading and installing Oracle REST Data Services (ORDS).">Downloading and Installing Oracle REST Data Services (ORDS)</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-8B1CC607-D33E-41C1-AA7C-11688EC3D70F" name="GUID-8B1CC607-D33E-41C1-AA7C-11688EC3D70F"></a><h3 id="HTMIG-GUID-8B1CC607-D33E-41C1-AA7C-11688EC3D70F" class="sect3"><span class="enumeration_section">6.4.3 </span>Web Server HTTP POST Request Limits
+               </h3>
+               <div>
+                  <p>Learn about Web Server HTTP POST request limits.</p>
+                  <p>When running Oracle REST Data Services (ORDS) in standalone mode or within a Tomcat
+                        Java Container, size limits are being imposed on POST requests which are
+                                <span class="bold">not</span> file uploads. <span>Oracle APEX</span> users will encounter these limits when uploading data in SQL Workshop
+                        using copy and paste or when using copy and paste while building an
+                        application from spreadsheet.
+                  </p>
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        <p>When running Oracle REST Data Services in <span class="bold">Standalone Mode</span>, the default limit
+                    is 200 KB for ORDS 19.4.6 and earlier. It is recommended to increase the limit
+                    as follows:
+                        </p>
+                        <p> Set the Java System property <code class="codeph">&nbsp;org.eclipse.jetty.server.Request.maxFormContentSize</code> to a higher value in bytes. You can set this property upon startup of Oracle REST Data Services. For example: <code class="codeph">java -Dorg.eclipse.jetty.server.Request.maxFormContentSize=3000000 -jar ords.war</code></p>
+                     </li>
+                     <li>
+                        <div class="p">When running on Apache Tomcat, the default limit is 2 megabytes. Adjust Apache Tomcat's <code class="codeph">maxPostSize</code> parameter to change that limit. 
+                           <div class="infoboxnotealso" id="GUID-8B1CC607-D33E-41C1-AA7C-11688EC3D70F__GUID-B95927C2-CF3D-4940-9B12-023286F5DB17">
+                              <p class="notep1">See Also:</p>
+                              <p><span><a href="http://tomcat.apache.org/" target="_blank">http://tomcat.apache.org/</a></span> for more information.
+                              </p>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="downloading-installing-ords.html#GUID-1F0064FB-7F00-4ACE-85BD-E9B2AF73A233" title="Learn about downloading and installing Oracle REST Data Services (ORDS).">Downloading and Installing Oracle REST Data Services (ORDS)</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

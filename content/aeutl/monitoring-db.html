@@ -1,0 +1,137 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Monitoring the Database">
+      <meta name="abstract" content="The reports available on the Database Monitor page provide a database-wide view of the database sessions, system statistics, SQL statements, and longer operations.">
+      <meta name="description" content="The reports available on the Database Monitor page provide a database-wide view of the database sessions, system statistics, SQL statements, and longer operations.">
+      <meta name="DC.subject" content="database, monitoring">
+      <meta name="keywords" content="database, monitoring">
+      <meta name="DC.Relation" scheme="URI" content="using-sql-workshop-utilities.html#GUID-DC79742E-1BCE-43EF-B4E2-F2EC3D4376F5">
+      <meta name="DC.Relation" scheme="URI" content="about-database-monitor-access-requirements.html#GUID-04652D4A-9177-4A32-A5A9-2DA0E3E2659F">
+      <meta name="DC.Relation" scheme="URI" content="accessing-session-page-reports.html#GUID-F88A5ABD-BDAB-40AB-B473-CD76BB9A997E">
+      <meta name="DC.Relation" scheme="URI" content="system-statistics.html#GUID-73BDE346-5F03-4EF1-9C43-5E0D596D1357">
+      <meta name="DC.Relation" scheme="URI" content="viewing-system-statistics.html#GUID-14A4DEDE-9E22-4E0B-9B9E-BA294B5C613D">
+      <meta name="DC.Relation" scheme="URI" content="about-top-sql-page.html#GUID-2E25022D-3A26-4EB0-A067-DDF95397C157">
+      <meta name="DC.Relation" scheme="URI" content="viewing-top-sql-page.html#GUID-9B9C6BBB-3F41-49FE-82B4-9873D8F81773">
+      <meta name="DC.Relation" scheme="URI" content="about-long-operations-page.html#GUID-5FCC34EE-DF96-41A5-95B5-444A899141C6">
+      <meta name="DC.Relation" scheme="URI" content="viewing-the-long-operations-page.html#GUID-96AD4A90-7E2F-479B-BAA5-1C6075920F97">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Neil Fernandez">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Synders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="January2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-4894E6E8-F2BA-4675-AEE5-E200EB1E154F">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="The reports available on the Database Monitor page provide a database-wide view of the database sessions, system statistics, SQL statements, and longer operations.">
+      <meta name="description" content="The reports available on the Database Monitor page provide a database-wide view of the database sessions, system statistics, SQL statements, and longer operations.">
+      <title>Monitoring the Database</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="SQL Workshop Guide">
+      <meta property="og:description" content="The reports available on the Database Monitor page provide a database-wide view of the database sessions, system statistics, SQL statements, and longer operations.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="SQL Workshop Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-sql-workshop-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-01-14T12:14:06-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2008, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12911-01">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="viewing-db-details.html" title="Previous" type="text/html">
+      <link rel="next" href="about-database-monitor-access-requirements.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX SQL Workshop Guide">
+    <meta name="dcterms.isVersionOf" content="AEUTL">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","name":"Monitoring the Database","description":"The reports available on the Database Monitor page provide a database-wide view of the database sessions, system statistics, SQL statements, and longer operations.","datePublished":"2025-01-14 CST","dateModified":"2025-01-14 CST"} </script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="viewing-db-details.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="about-database-monitor-access-requirements.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article>
+         <header>
+            <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Workshop Guide</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-sql-workshop-utilities.html" property="item" typeof="WebPage"><span property="name"> Using SQL Workshop Utilities</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">Monitoring the Database</li>
+            </ol>
+            <a id="GUID-4894E6E8-F2BA-4675-AEE5-E200EB1E154F" name="GUID-4894E6E8-F2BA-4675-AEE5-E200EB1E154F"></a>
+            
+            <h2 id="AEUTL-GUID-4894E6E8-F2BA-4675-AEE5-E200EB1E154F" class="sect2"><span class="enumeration_section">5.15 </span>Monitoring the Database
+            </h2>
+         </header>
+         <div class="ind">
+            <div>
+               <p>The reports available on the Database Monitor page provide a database-wide view of the database sessions, system statistics, SQL statements, and longer operations.</p>
+               <p>You can use these reports to identify poorly performing SQL and to better understand the workload of the database.</p>
+               <div class="infobox-tip" id="GUID-4894E6E8-F2BA-4675-AEE5-E200EB1E154F__GUID-A71394CD-36F0-46BA-BC28-3416B2B248BC">
+                  <p class="notep1">Tip:</p>
+                  <p>To access any of the icons on the Database Monitor page, you must have a database account that has been granted a database administrator (DBA) role.</p>
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="about-database-monitor-access-requirements.html#GUID-04652D4A-9177-4A32-A5A9-2DA0E3E2659F">About Database Monitor Access Requirements</a><br>Ensure that your account has the database administrator (DBA) role, Database Monitoring is enabled in the instance, and your user name is uppercase at sign-in.
+                  </li>
+                  <li class="ulchildlink"><a href="accessing-session-page-reports.html#GUID-F88A5ABD-BDAB-40AB-B473-CD76BB9A997E">Accessing Session Page Reports</a><br>A session is the connection of a user to an Oracle database instance. 
+                  </li>
+                  <li class="ulchildlink"><a href="system-statistics.html#GUID-73BDE346-5F03-4EF1-9C43-5E0D596D1357">System Statistics</a><br>Displays the System Statistics page statistics.
+                  </li>
+                  <li class="ulchildlink"><a href="viewing-system-statistics.html#GUID-14A4DEDE-9E22-4E0B-9B9E-BA294B5C613D">Viewing System Statistics</a><br>Learn how to view the System Statistics page.
+                  </li>
+                  <li class="ulchildlink"><a href="about-top-sql-page.html#GUID-2E25022D-3A26-4EB0-A067-DDF95397C157">About Top SQL Page</a><br>The top SQL statements represent the SQL statements that are executed most often, that use more system resources than other SQL statements, or that use system resources more frequently than other SQL statements. 
+                  </li>
+                  <li class="ulchildlink"><a href="viewing-top-sql-page.html#GUID-9B9C6BBB-3F41-49FE-82B4-9873D8F81773">Viewing Top SQL Page</a><br>Use the Top SQL page to identify poorly performing SQL.
+                  </li>
+                  <li class="ulchildlink"><a href="about-long-operations-page.html#GUID-5FCC34EE-DF96-41A5-95B5-444A899141C6">About Long Operations Page</a><br>The Long Operations page displays the status of various operations that run for longer than 6 seconds (in absolute time).
+                  </li>
+                  <li class="ulchildlink"><a href="viewing-the-long-operations-page.html#GUID-96AD4A90-7E2F-479B-BAA5-1C6075920F97">Viewing the Long Operations Page</a><br>Learn how to view the Long Operations page.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="using-sql-workshop-utilities.html#GUID-DC79742E-1BCE-43EF-B4E2-F2EC3D4376F5" title="SQL Workshop provides utilities to build SQL queries, load and unload data from an Oracle database, generate DDL, view object reports, manage UI Defaults, restore dropped database objects, compare schemas, monitor the database, and view database details.">Using SQL Workshop Utilities</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

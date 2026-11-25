@@ -1,0 +1,222 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Generating SQL with SQL Shorthand Syntax">
+      <meta name="abstract" content="Generate a SQL script for simple tables and views by entering SQL shorthand syntax in the the left Quick SQL pane.">
+      <meta name="description" content="Generate a SQL script for simple tables and views by entering SQL shorthand syntax in the the left Quick SQL pane.">
+      <meta name="DC.subject" content="Quick SQL, generating script, using shorthand syntax">
+      <meta name="keywords" content="Quick SQL, generating script, using shorthand syntax">
+      <meta name="DC.Relation" scheme="URI" content="using-quick-sql.html#GUID-21EE36C2-F814-48C0-90EA-7D464E9014FD">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Neil Fernandez">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Synders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="January2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-A1308899-AA1D-42EA-8CAE-B128366538FE">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Generate a SQL script for simple tables and views by entering SQL shorthand syntax in the the left Quick SQL pane.">
+      <meta name="description" content="Generate a SQL script for simple tables and views by entering SQL shorthand syntax in the the left Quick SQL pane.">
+      <title>Generating SQL with SQL Shorthand Syntax</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="SQL Workshop Guide">
+      <meta property="og:description" content="Generate a SQL script for simple tables and views by entering SQL shorthand syntax in the the left Quick SQL pane.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="SQL Workshop Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-sql-workshop-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-01-14T12:14:06-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2008, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12911-01">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="loading-quick-sql-sample-models.html" title="Previous" type="text/html">
+      <link rel="next" href="managing-quick-sql-models-and-scripts.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX SQL Workshop Guide">
+    <meta name="dcterms.isVersionOf" content="AEUTL">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","name":"Generating SQL with SQL Shorthand Syntax","description":"Generate a SQL script for simple tables and views by entering SQL shorthand syntax in the the left Quick SQL pane.","datePublished":"2025-01-14 CST","dateModified":"2025-01-14 CST"} </script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="loading-quick-sql-sample-models.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="managing-quick-sql-models-and-scripts.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article>
+         <header>
+            <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Workshop Guide</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-sql-workshop-utilities.html" property="item" typeof="WebPage"><span property="name"> Using SQL Workshop Utilities</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-quick-sql.html" property="item" typeof="WebPage"><span property="name">Using Quick SQL</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">Generating SQL with SQL Shorthand
+        Syntax</li>
+            </ol>
+            <a id="GUID-A1308899-AA1D-42EA-8CAE-B128366538FE" name="GUID-A1308899-AA1D-42EA-8CAE-B128366538FE"></a>
+            
+            <h2 id="AEUTL-GUID-A1308899-AA1D-42EA-8CAE-B128366538FE" class="sect2"><span class="enumeration_section">5.4.6 </span>Generating SQL with SQL Shorthand
+        Syntax
+            </h2>
+         </header>
+         <div class="ind">
+            <div>
+               <p>Generate a SQL script for simple tables and views by entering SQL shorthand
+        syntax in the the left Quick SQL pane.</p>
+               <div class="section">
+                  
+                  <div class="infobox-tip" id="GUID-A1308899-AA1D-42EA-8CAE-B128366538FE__GUID-9DB95166-E6E5-4D2C-864C-214012E385C1">
+                     <p class="notep1">Tip:</p>Viewing samples is a
+                great way to learn about Quick SQL shorthand syntax. To learn more, see <a href="loading-quick-sql-sample-models.html#GUID-98AB9049-A59D-43A3-B65B-FDE1AD747300" title="Learn about Quick SQL shorthand syntax by loading Quick SQL sample models.">Loading Quick SQL Sample Models</a>.
+                  </div>
+                  
+               </div>
+               <!-- class="section" -->
+               <div class="section">
+                  <p>To generate a SQL script with SQL shorthand syntax:</p>
+               </div>
+               <!-- class="section" -->
+               <ol>
+                  <li class="stepexpand"><span>Navigate to the Quick SQL page:</span><ol type="a" id="GUID-A1308899-AA1D-42EA-8CAE-B128366538FE__SUBSTEPS_FFK_FWM_PHB">
+                        <li><span>On the Workspace home page, click the <span class="uicontrol bold">SQL
+                                Workshop</span> icon.</span></li>
+                        <li><span>Click <span class="uicontrol bold">Utilities</span>.</span></li>
+                        <li><span>Click <span class="uicontrol bold">Quick SQL</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>In the left pane, enter SQL shorthand syntax.</span><div>
+                        
+                        <p>The generated SQL displays in the right pane under the
+                            <span class="uicontrol bold">SQL</span> tab.
+                        </p>
+                        
+                        <div class="figure" id="GUID-A1308899-AA1D-42EA-8CAE-B128366538FE__FIG-132431-6A07F3F8"><img height="528" width="1161" src="img/shorthand_syntax.png" alt="Description of shorthand_syntax.png follows" title="Description of shorthand_syntax.png follows" longdesc="img_text/shorthand_syntax.html"><br><a href="img_text/shorthand_syntax.html">Description of the illustration shorthand_syntax.png</a></div>
+                        <!-- class="figure" -->
+                        
+                        <p>You can save the generated script, or review and run the
+                        script.</p>
+                        
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>To save the generated SQL script:</span><ol type="a" id="GUID-A1308899-AA1D-42EA-8CAE-B128366538FE__SUBSTEPS_D4K_PMJ_NMB">
+                        <li class="substepexpand"><span>In the right pane, click the <span class="uicontrol bold">SQL Actions</span> menu
+                            (three vertical dots) and select <span class="uicontrol bold">Save SQL
+                            Script</span>.</span><div>
+                              
+                              <div class="figure" id="GUID-A1308899-AA1D-42EA-8CAE-B128366538FE__FIG_MFC_5DL_RZB"><img id="GUID-A1308899-AA1D-42EA-8CAE-B128366538FE__IMAGE_NFC_5DL_RZB" height="533" width="1167" src="img/save_sql_script.png" alt="Description of save_sql_script.png follows" title="Description of save_sql_script.png follows" longdesc="img_text/save_sql_script.html"><br><a href="img_text/save_sql_script.html">Description of the illustration save_sql_script.png</a></div>
+                              <!-- class="figure" -->
+                              
+                           </div>
+                           <div>The Save Script dialog appears.</div>
+                        </li>
+                        <li class="substepexpand"><span>In the Save Script dialog:</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-A1308899-AA1D-42EA-8CAE-B128366538FE__UL_UCV_5MJ_NMB">
+                                 <li>
+                                    
+                                    <p>Script Name - Enter a name.</p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Click <span class="uicontrol bold">Save Script</span>.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                              <p>The script is saved in SQL Scripts.</p>
+                              
+                           </div>
+                        </li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>To run the SQL script, click <span class="uicontrol bold">Review and Run</span> above the
+                    right pane.</span><div>SQL Scripts appears. To learn more, see <a href="using-sql-scripts.html#GUID-7288B4B4-E00C-4DC4-89EA-5FA52623A1EF" title="Use SQL scripts to create, edit, view, run, and delete script files.">Using SQL Scripts</a>.
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>To reset Quick SQL and remove any entered text:</span><div>
+                        
+                        <ul style="list-style-type: disc;" id="GUID-A1308899-AA1D-42EA-8CAE-B128366538FE__UL_FR1_2GR_TZB">
+                           <li>
+                              
+                              <p>In the left pane, click the <span class="uicontrol bold">Quick SQL Actions</span>
+                                menu (three vertical dots) and select
+                                <span class="uicontrol bold">Reset</span>.
+                              </p>
+                              
+                              <p>Any previously entered text and corresponding SQL disappears.</p>
+                              
+                           </li>
+                        </ul>
+                        
+                     </div>
+                  </li>
+               </ol>
+               <div class="section">
+                  
+                  <div class="infoboxnotealso" id="GUID-A1308899-AA1D-42EA-8CAE-B128366538FE__GUID-85C0899A-421B-44F5-A938-2CDF2C80DB9D">
+                     <p class="notep1">See Also:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-A1308899-AA1D-42EA-8CAE-B128366538FE__UL_HBK_PYJ_NMB">
+                        <li>
+                           
+                           <p><a href="managing-quick-sql-models-and-scripts.html#GUID-6E4A8B72-D439-428A-9C99-A3C545D86220" title="Save generated SQL as a script in SQL Scripts.">Saving a Generated SQL Script</a></p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><a href="configuring-quick-sql-settings.html#GUID-9D2D0ECB-CFD5-474D-A712-DA2F7E5809B2" title="Configure settings inline to explicitly set SQL syntax generation options, or click the Settings button at the top of the right pane to declaratively set the generation options.">Configuring Quick SQL Settings</a></p>
+                           
+                        </li>
+                     </ul>
+                     
+                  </div>
+                  
+               </div>
+               <!-- class="section" -->
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="using-quick-sql.html#GUID-21EE36C2-F814-48C0-90EA-7D464E9014FD" title="Rapidly design and prototype data models using a markdown-like shorthand syntax that expands to standards-based Oracle SQL.">Using Quick SQL</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

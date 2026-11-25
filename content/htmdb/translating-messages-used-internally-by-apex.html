@@ -1,0 +1,158 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Translating Messages Used Internally by APEX">
+      <meta name="abstract" content="If your application uses a language that is not among the standard languages into which APEX is translated, you must translate messages displayed by the APEX runtime engine.">
+      <meta name="description" content="If your application uses a language that is not among the standard languages into which APEX is translated, you must translate messages displayed by the APEX runtime engine.">
+      <meta name="DC.subject" content="messages, translating internal, text strings, translating, components, translating messages, in reports, translating, messages in reports">
+      <meta name="keywords" content="messages, translating internal, text strings, translating, components, translating messages, in reports, translating, messages in reports">
+      <meta name="DC.Relation" scheme="URI" content="translating-messages.html#GUID-3557FD3D-EC89-4F18-91B7-E8E304459266">
+      <meta name="DC.Relation" scheme="URI" content="internal-messages-requiring-translation.html#GUID-52E139BF-73E1-46AB-8A4E-E046865CEA2E">
+      <meta name="DC.Relation" scheme="URI" content="interactive-grid-messages-requiring-translation.html#GUID-66338F4A-ADA1-4DC4-8642-889BA29391A0">
+      <meta name="DC.Relation" scheme="URI" content="interactive-report-messages-requiring-translation.html#GUID-ED453806-E775-445C-A73C-6CAFD2359A93">
+      <meta name="DC.Relation" scheme="URI" content="progressive-web-app-messages-requiring-translation.html#GUID-0402E337-BFE0-4231-83C7-9D38B51E6CAB">
+      <meta name="DC.Relation" scheme="URI" content="search-and-smart-filters-messages-requiring-translation.html#GUID-8AE0C5AD-9F9D-46C7-9A73-8386385B70FF">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-B9604D2B-7366-4F1A-BB67-E4F4D66630B9">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="If your application uses a language that is not among the standard languages into which APEX is translated, you must translate messages displayed by the APEX runtime engine.">
+      <meta name="description" content="If your application uses a language that is not among the standard languages into which APEX is translated, you must translate messages displayed by the APEX runtime engine.">
+      <title>Translating Messages Used Internally by APEX</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="If your application uses a language that is not among the standard languages into which APEX is translated, you must translate messages displayed by the APEX runtime engine.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="about-translating-messages-used-in-pl-sql-procedures.html" title="Previous" type="text/html">
+      <link rel="next" href="internal-messages-requiring-translation.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Translating Messages Used Internally by APEX","description":"If your application uses a language that is not among the standard languages into which APEX is translated, you must translate messages displayed by the APEX runtime engine.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="about-translating-messages-used-in-pl-sql-procedures.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="internal-messages-requiring-translation.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-B9604D2B-7366-4F1A-BB67-E4F4D66630B9" name="GUID-B9604D2B-7366-4F1A-BB67-E4F4D66630B9"></a><a id="HTMDB25939"></a>
+         
+         <h2 id="HTMDB-GUID-B9604D2B-7366-4F1A-BB67-E4F4D66630B9" class="sect2"><span class="enumeration_section">22.7.3 </span>Translating Messages Used Internally by <span>APEX</span></h2>
+         <div class="ind">
+            <div>
+               <p>If your application uses a language that is not among the standard languages into which <span>APEX</span> is translated, you must translate messages displayed by the <span>APEX</span> runtime engine.
+               </p>
+               <p>The <span>APEX</span> runtime engine which is used by developers to create applications is available in the
+            following languages: Arabic, Brazilian Portuguese, Croatian, Czech, Danish, Dutch,
+            Finnish, French, French - Canada, German, Greek, Hebrew, Hungarian, Italian, Japanese,
+            Korean, Norwegian, Polish, Portuguese (Portugal) (pt), Romanian, Russian, Serbian -
+            Cyrillic, Serbian - Latin, Simplified Chinese, Slovak, Slovenian, Spanish, Swedish,
+            Thai, Traditional Chinese, Turkish, Ukrainian, and Vietnamese.
+               </p>
+               <p>To support additional languages not covered in the above list, developers
+            must provide their own translations. For example, if you develop a Bulgarian application
+            and want to include report messages, such as pagination, in Bulgarian, you must
+            translate the strings used in messages displayed in reports. </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="internal-messages-requiring-translation.html#GUID-52E139BF-73E1-46AB-8A4E-E046865CEA2E">Internal Messages Requiring Translation</a><br>Lists internal messages that require translation.
+                  </li>
+                  <li class="ulchildlink"><a href="interactive-grid-messages-requiring-translation.html#GUID-66338F4A-ADA1-4DC4-8642-889BA29391A0">Interactive Grid Messages Requiring Translation</a><br>Lists the interactive grid messages that require translation.
+                  </li>
+                  <li class="ulchildlink"><a href="interactive-report-messages-requiring-translation.html#GUID-ED453806-E775-445C-A73C-6CAFD2359A93">Interactive Report Messages Requiring Translation</a><br>Lists interactive reports messages that require translation.
+                  </li>
+                  <li class="ulchildlink"><a href="progressive-web-app-messages-requiring-translation.html#GUID-0402E337-BFE0-4231-83C7-9D38B51E6CAB">Progressive Web App (PWA) Messages Requiring Translation</a><br>Lists Progressive Web Application (PWA) messages that require         translation.
+                  </li>
+                  <li class="ulchildlink"><a href="search-and-smart-filters-messages-requiring-translation.html#GUID-8AE0C5AD-9F9D-46C7-9A73-8386385B70FF">Search and Smart Filters Messages Requiring Translation</a><br>Lists faceted search and smart filter messages that require         translation.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-B9604D2B-7366-4F1A-BB67-E4F4D66630B9__GUID-5BEC4103-83D5-44E5-91F4-F957D7640D2F">
+                  <p class="notep1">See Also:</p>
+                  
+                  <ul style="list-style-type: disc;" id="GUID-B9604D2B-7366-4F1A-BB67-E4F4D66630B9__UL_SMV_MK2_V1C">
+                     <li><a href="../htmig/installing-translated-versions-of-apex.html#HTMIG-GUID-D14592D7-CB4C-411B-B1AB-724FCEE22BEF" target="_blank">About Installing Translated Versions of Oracle
+                        APEX</a> in <span><cite>Oracle APEX Installation
+                                        Guide</cite></span></li>
+                     <li><a href="managing-text-messages.html#GUID-4F7813C2-7BBB-4131-9085-8DFDA3BA44C5" title="Create, edit, copy, or subscribe to text messages by selecting the application and navigating to Shared Components, Globalization, Text Messages.">Managing Text Messages</a></li>
+                  </ul>
+                  
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="translating-messages.html#GUID-3557FD3D-EC89-4F18-91B7-E8E304459266" title="Learn when and how to translate messages in an Oracle APEX application.">Translating Messages</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

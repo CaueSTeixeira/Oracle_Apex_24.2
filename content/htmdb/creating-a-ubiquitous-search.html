@@ -1,0 +1,482 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Creating a Ubiquitous Search">
+      <meta name="abstract" content="Search across multiple objects within an entire schema by creating a ubiquitous database search.">
+      <meta name="description" content="Search across multiple objects within an entire schema by creating a ubiquitous database search.">
+      <meta name="DC.subject" content="ubiquitous database search, creating, search type, ubiquitous database search, application search, ubiquitous, ubiquitous database, creating ubiquitous search index, creating index, ubiquitous search index, creating, search configuration, ubiquitous database, ubiquitous search configuration, creating, ubiquitous search, creating search page, search page, search, creating ubiquitous search page">
+      <meta name="keywords" content="ubiquitous database search, creating, search type, ubiquitous database search, application search, ubiquitous, ubiquitous database, creating ubiquitous search index, creating index, ubiquitous search index, creating, search configuration, ubiquitous database, ubiquitous search configuration, creating, ubiquitous search, creating search page, search page, search, creating ubiquitous search page">
+      <meta name="DC.Relation" scheme="URI" content="adding-search-to-an-application.html#GUID-505C95D2-4F04-48FA-8BBD-95D87AAD51EF">
+      <meta name="DC.Relation" scheme="URI" content="creating-a-ubiquitous-search.html#GUID-E9A52F34-0174-4F21-A344-93E68A1283B8">
+      <meta name="DC.Relation" scheme="URI" content="creating-a-ubiquitous-search.html#GUID-B8D2961B-7076-41F3-9D65-3BD4A0BC9D0E">
+      <meta name="DC.Relation" scheme="URI" content="creating-a-ubiquitous-search.html#GUID-7804FAFD-4373-42BC-A999-82B29A81B390">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Topic">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-6C40F484-16CD-4569-A749-68A630AEDA64">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Search across multiple objects within an entire schema by creating a ubiquitous database search.">
+      <meta name="description" content="Search across multiple objects within an entire schema by creating a ubiquitous database search.">
+      <title>Creating a Ubiquitous Search</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Search across multiple objects within an entire schema by creating a ubiquitous database search.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="creating-a-list-search.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-an-oracle-vector-search.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Creating a Ubiquitous Search","description":"Search across multiple objects within an entire schema by creating a ubiquitous database search.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="creating-a-list-search.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-an-oracle-vector-search.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-6C40F484-16CD-4569-A749-68A630AEDA64" name="GUID-6C40F484-16CD-4569-A749-68A630AEDA64"></a>
+         
+         <h2 id="HTMDB-GUID-6C40F484-16CD-4569-A749-68A630AEDA64" class="sect2"><span class="enumeration_section">16.9.6 </span>Creating a Ubiquitous Search
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Search across multiple objects within an entire schema by creating a
+        ubiquitous database search.</p>
+               <div class="infoboxnote" id="GUID-6C40F484-16CD-4569-A749-68A630AEDA64__GUID-BEFB6B7C-78B0-46B0-A4AC-2957B08CF585">
+                  <p class="notep1">Note:</p>Searching using an Oracle ubiquitous
+            search index requires Oracle Database <span>23ai</span> or later. Also, the index must be located in the parsing schema of the
+            application.
+               </div>
+               <p>This topic demonstrates how to create a search page on multiple tables that
+            have a ubiquitous search index. In this topic, you create a simple ubiquitous search
+            index, a search configuration using that ubiquitous search index, and then a search page
+            using the Create Page Wizard. </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="creating-a-ubiquitous-search.html#GUID-E9A52F34-0174-4F21-A344-93E68A1283B8">Creating a Ubiquitous Search Index</a><br>Learn how to create a ubiquitous search index on multiple         tables.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-a-ubiquitous-search.html#GUID-B8D2961B-7076-41F3-9D65-3BD4A0BC9D0E">Creating a Ubiquitous Search Configuration</a><br>Create a search configuration on an existing ubiquitous search         index.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-a-ubiquitous-search.html#GUID-7804FAFD-4373-42BC-A999-82B29A81B390">Creating a Ubiquitous Search Page</a><br>Create a Search page by running the Create Page Wizard.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="adding-search-to-an-application.html#GUID-505C95D2-4F04-48FA-8BBD-95D87AAD51EF" title="Add declarative searches to an application by creating a search configuration and then a search page that displays the search results.">Adding Search to an Application</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-E9A52F34-0174-4F21-A344-93E68A1283B8" name="GUID-E9A52F34-0174-4F21-A344-93E68A1283B8"></a><h3 id="HTMDB-GUID-E9A52F34-0174-4F21-A344-93E68A1283B8" class="sect3"><span class="enumeration_section">16.9.6.1 </span>Creating a Ubiquitous Search Index
+               </h3>
+               <div>
+                  <p>Learn how to create a ubiquitous search index on multiple
+        tables.</p>
+                  <div class="p">
+                     
+                     <div class="infoboxnote" id="GUID-E9A52F34-0174-4F21-A344-93E68A1283B8__GUID-50AF3216-760B-4EF2-89D8-6AE5C7ED8D9C">
+                        <p class="notep1">Note:</p>Searching using an Oracle
+                ubiquitous search index requires Oracle Database <span>23ai</span> or later. Also, the index must be located in the parsing schema of the
+                application.
+                     </div>
+                     
+                  </div>
+                  <div class="section">
+                     
+                     <p>Starting with Oracle Database <span>23ai</span>, you can use the <code class="codeph">DBMS_SEARCH PL/SQL</code> package for indexing of
+                multiple schema objects in a single index. To learn more, see <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmdb&id=CCAPP-GUID-777D9EAF-1D59-495D-A844-F2A65E21BA92" target="_blank">Performing Ubiquitous Search with DBMS_SEARCH
+                    APIs</a> in <span><cite>Oracle Text Application
+                                        Developer's Guide</cite></span>.
+                     </p>
+                     
+                     <p>A ubiquitous search index (or <code class="codeph">DBMS_SEARCH</code> index) is a JSON search
+                index with predefined set of preferences and settings enabled for performing full
+                text search on multiple columns, tables, or views. You use the <code class="codeph">DBMS_SEARCH
+                    PL/SQL</code> package to create, manage, and query these indexes.
+                     </p>
+                     
+                  </div>
+                  <div class="p">
+                     
+                     <p>This topic describes how to create a very simple ubiquitous search index on the
+                    <code class="codeph">EBA_PROJECT_TASKS</code> table available in the sample dataset,
+                Project Data.
+                     </p>
+                     
+                  </div>
+                  <p>To create a ubiquitous search index:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">SQL Commands</span>.</span><div>
+                           
+                           <p>The SQL Commands home page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Enter the following SQL command in the command editor:</span><div>
+                           <pre class="pre codeblock"><code>BEGIN
+    DBMS_SEARCH.CREATE_INDEX( 'MY_SEARCH_INDEX' );
+    DBMS_SEARCH.ADD_SOURCE ( 'MY_SEARCH_INDEX', 'EBA_PROJECT_TASKS' );
+END;
+/</code></pre>
+                           </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Run</span> (<span class="uicontrol bold">Ctrl+Enter</span>) to execute
+                    the command.</span><div>
+                           
+                           <p>The results appear in the Results pane.</p>
+                           
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-a-ubiquitous-search.html#GUID-6C40F484-16CD-4569-A749-68A630AEDA64" title="Search across multiple objects within an entire schema by creating a ubiquitous database search.">Creating a Ubiquitous Search</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-B8D2961B-7076-41F3-9D65-3BD4A0BC9D0E" name="GUID-B8D2961B-7076-41F3-9D65-3BD4A0BC9D0E"></a><h3 id="HTMDB-GUID-B8D2961B-7076-41F3-9D65-3BD4A0BC9D0E" class="sect3"><span class="enumeration_section">16.9.6.2 </span>Creating a Ubiquitous Search
+        Configuration
+               </h3>
+               <div>
+                  <p>Create a search configuration on an existing ubiquitous search
+        index.</p>
+                  <div class="section">
+                     
+                     <p>A <strong class="term">search configuration</strong> contains information
+                about searchable data source. This task creates a search configuration using an
+                existing ubiquitous search index created on the <code class="codeph">EBA_PROJECT_TASKS</code>
+                tables.
+                     </p>
+                     
+                  </div>
+                  <div class="p">
+                     
+                     <div class="infoboxnote" id="GUID-B8D2961B-7076-41F3-9D65-3BD4A0BC9D0E__GUID-1DC6BCB7-BD41-42E5-942A-1DABD1C89E87">
+                        <p class="notep1">Note:</p>This task assumes you have already created an application and an interactive
+                report built on the <code class="codeph">EBA_PROJECT_TASKS</code> table  available in the
+                sample dataset, Project Data.
+                     </div>
+                     
+                  </div>
+                  <p>To create a ubiquitous search configuration:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Access the Search Configurations page:</span><ol type="a" id="GUID-B8D2961B-7076-41F3-9D65-3BD4A0BC9D0E__SUBSTEPS_O4T_V15_ZYB">
+                           <li class="substepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span></li>
+                           <li class="substepexpand"><span>Under Navigation and Search, click <span class="uicontrol bold">Search
+                                Configurations</span>.</span><div>The Search Configurations page appears.</div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On the Search Configurations page, click <span class="uicontrol bold">Create</span>.</span><ol type="a" id="GUID-B8D2961B-7076-41F3-9D65-3BD4A0BC9D0E__SUBSTEPS_YMT_X15_ZYB">
+                           <li class="substepexpand"><span>Name - Enter a name for the search configuration (for example,
+                                <code class="codeph">Projects Tasks - Ubiquitous</code>).</span></li>
+                           <li class="substepexpand"><span>Search Type - Select a type of search. Options include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-B8D2961B-7076-41F3-9D65-3BD4A0BC9D0E__UL_ADN_PGR_P5B">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Standard</span> - Defines a searchable data
+                                        source such as a table, SQL Query, or REST Data Source.
+                                        Searches is executed by a SQL Query using
+                                            <code class="codeph">LIKE</code> expressions.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Oracle TEXT</span> - Define a searchable
+                                        table or SQL Query which already has an Oracle TEXT index
+                                        created. Search is executed by using Oracle TEXT
+                                        functionality, which provides linguistic and fuzzy search
+                                        capabilities.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Oracle Ubiquitous Search</span>
+                                        - Search using an Oracle ubiquitous search index (requires
+                                        Oracle Database <span>23ai</span> or later). The index must be located in the parsing
+                                        schema of the application.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">List</span> - Search within a selected List
+                                        from Shared Components.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                                 <p>For this example, select <span class="uicontrol bold">Oracle Ubiquitous
+                                    Search</span> and click <span class="uicontrol bold">Next</span>. 
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Source: </span><ol type="a" id="GUID-B8D2961B-7076-41F3-9D65-3BD4A0BC9D0E__SUBSTEPS_M2V_B4D_P5B">
+                           <li class="substepexpand"><span>Search Index Name - Select an Oracle ubiquitous search index, this
+                            index must already exist in your parsing schema.</span><div>
+                                 
+                                 <p>For this example, select
+                                    <span class="uicontrol bold">MY_SEARCH_INDEX</span>.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Search Source Name - Choose an Oracle Ubiquitous Search index source
+                            from your parsing schema which is part of your selected Oracle
+                            Ubiquitous Search index. For this example, select
+                                <code class="codeph">EBA_PROJECT_TASKS</code>.</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Column Mapping:</span><ol type="a" id="GUID-B8D2961B-7076-41F3-9D65-3BD4A0BC9D0E__SUBSTEPS_AMX_F4D_P5B">
+                           <li class="substepexpand"><span>Primary Key Column - Select the primary key column for the Search
+                            Configuration Data Source (for example,
+                            <span class="uicontrol bold">ID</span>).</span></li>
+                           <li class="substepexpand"><span>Description Column - Select the column to be used as description.</span></li>
+                           <li class="substepexpand"><span>Oracle Ubiquitous Index Column - Select the Oracle Ubiquitous enabled
+                            column (for example, <span class="uicontrol bold">NAME</span>).</span></li>
+                           <li class="substepexpand"><span>Description Column - Select the column to be used as the description
+                            (for example, <span class="uicontrol bold">DESCRIPTION</span>).</span></li>
+                           <li class="substepexpand"><span>Icon Source - Configure the icon that displays in the header of the
+                            search result. Options include: </span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-B8D2961B-7076-41F3-9D65-3BD4A0BC9D0E__UL_G15_G4D_P5B">
+                                    <li><span class="uicontrol bold">Initials</span> - Use the Title
+                                    column to display the icon as initials.
+                                    </li>
+                                    <li><span class="uicontrol bold">CSS Classes</span> - Use the entered
+                                    CSS classes to display the icon.
+                                    </li>
+                                    <li><span class="uicontrol bold">Class Column</span> - Use the
+                                    selected column containing the icon CSS class to display the
+                                    icon.
+                                    </li>
+                                 </ul>
+                                 
+                                 <p>For this example, accept the default,
+                                    <span class="uicontrol bold">Initials</span>.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Search Configuration</span>.</span><div>
+                           
+                           <p>The search configuration is created. The Search Configuration,
+                        Edit page appears and displays the message <code class="codeph">Search configuration
+                            created</code>.
+                           </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Edit the search configuration to link to a report:</span><ol type="a" id="GUID-B8D2961B-7076-41F3-9D65-3BD4A0BC9D0E__SUBSTEPS_H5J_422_P5B">
+                           <li class="substepexpand"><span>Link, Link Type - Select the type of link (for example,
+                                <span class="uicontrol bold">Redirect to Page in this Application</span>).</span></li>
+                           <li class="substepexpand"><span>Page - Select or enter the page to redirect to (for example,
+                                <span class="uicontrol bold">2</span>).</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span><div>The Search Configurations page appears with the
+                            message <code class="codeph">Search Configuration updated</code>.
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click the <span class="uicontrol bold">Application ID</span> breadcrumb to return to the
+                    Application home page.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-a-ubiquitous-search.html#GUID-6C40F484-16CD-4569-A749-68A630AEDA64" title="Search across multiple objects within an entire schema by creating a ubiquitous database search.">Creating a Ubiquitous Search</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-7804FAFD-4373-42BC-A999-82B29A81B390" name="GUID-7804FAFD-4373-42BC-A999-82B29A81B390"></a><h3 id="HTMDB-GUID-7804FAFD-4373-42BC-A999-82B29A81B390" class="sect3"><span class="enumeration_section">16.9.6.3 </span>Creating a Ubiquitous Search Page
+               </h3>
+               <div>
+                  <p>Create a Search page by running the Create Page Wizard.</p>
+                  <div class="section">
+                     
+                     <p>Whether you are creating a <strong class="term">Standard</strong> search or
+                    <strong class="term">Oracle Ubiquitous</strong> search, creating a search page by
+                running the Create Page Wizard involves the same steps. The Create Page Wizard
+                creates a Search field for you and prompts you to select search configurations. Note
+                that you can also add additional search configurations later in Page Designer.
+                     </p>
+                     
+                     <p>A Search page features a Search field and a Search Results region. In
+                Page Designer, the Search Results region contains <strong class="term">Search
+                    Sources</strong> which map to the search configurations defined in Shared
+                Components.
+                     </p>
+                     
+                  </div>
+                  <p>To create a search page by running the Create Page Wizard: </p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Application home page:</span><ol type="a" id="GUID-7804FAFD-4373-42BC-A999-82B29A81B390__SUBSTEPS_D3G_255_ZYB">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select the application. </span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On the Application home page, click <span class="uicontrol bold">Create Page</span>.</span><div><span class="uicontrol bold">Create a Page</span> appears and features three
+                    tabs: <span class="uicontrol bold">Component</span>, <span class="uicontrol bold">Feature</span>, and
+                        <span class="uicontrol bold">Legacy Pages</span>.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under Component, select <span class="uicontrol bold">Search Page</span>.</span></li>
+                     <li class="stepexpand"><span>Page Definition:</span><ol type="a">
+                           <li class="substepexpand"><span>Page Number - The page number is an integer value that identifies a
+                            page within an application. </span></li>
+                           <li class="substepexpand"><span>Name - Specify a text name for this page (for example, <code class="codeph">Search
+                                Projects - Ubiquitous</code>).</span><div>
+                                 
+                                 <p>This text is also used for page
+                                    <span class="uicontrol bold">Title</span>. After page creation, you can
+                                modify the <span class="uicontrol bold">Title</span> in Page Designer.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Page Mode - Identify the page mode. Accept the default,
+                                <span class="uicontrol bold">Normal</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Search Configurations - Select the search configuration to be used by this page
+                    (for example, select <span class="uicontrol bold">Projects Tasks - Ubiquitous</span>).</span><div>
+                           <br><div class="imageleft"><img class="imageleft" id="GUID-7804FAFD-4373-42BC-A999-82B29A81B390__IMAGE_MHV_QJL_DZB" height="712" width="954" src="img/ubiquitous_create_seach_page.png" alt="Description of ubiquitous_create_seach_page.png follows" title="Description of ubiquitous_create_seach_page.png follows" longdesc="img_text/ubiquitous_create_seach_page.html"><br><a href="img_text/ubiquitous_create_seach_page.html">Description of the illustration ubiquitous_create_seach_page.png</a></div><br>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Navigation - Accept the default and enable <span class="uicontrol bold">Use
+                        Breadcrumb</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Page</span>.</span><div>
+                           
+                           <p>Page Designer appears.</p>
+                           
+                           <p>In the Rendering tab, notice the page item,
+                            <code class="codeph">P<span class="codeinlineitalic">X</span>_SEARCH</code> (where <span class="italic">X</span> is the page number)
+                        and the Search Results region. <code class="codeph">P<span class="codeinlineitalic">X</span>_SEARCH</code> is the
+                        search field which enables users to submit search terms. The Search Results
+                        region contains both the search results and the Search Source which maps to
+                        search configurations maintained in Shared Components. You can further
+                        refine and control the search display and behavior by editing attributes in
+                        the Property Editor.
+                           </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Run and test the page:</span><ol type="a" id="GUID-7804FAFD-4373-42BC-A999-82B29A81B390__SUBSTEPS_QBX_W55_ZYB">
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Save and Run Page</span>.</span><div>The search page appears.</div>
+                           </li>
+                           <li class="substepexpand"><span>In the search field, enter a search (for example, <code class="codeph">bug</code>)
+                            and press <span class="uicontrol bold">Enter</span>.</span></li>
+                        </ol>
+                        <div>
+                           
+                           <p>The search results appear.</p>
+                           <br><div class="imageleft"><img class="imageleft" id="GUID-7804FAFD-4373-42BC-A999-82B29A81B390__IMAGE_CHD_VJL_DZB" height="791" width="1038" src="img/ubiquitous_run_page.png" alt="Description of ubiquitous_run_page.png follows" title="Description of ubiquitous_run_page.png follows" longdesc="img_text/ubiquitous_run_page.html"><br><a href="img_text/ubiquitous_run_page.html">Description of the illustration ubiquitous_run_page.png</a></div><br>
+                           
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-a-ubiquitous-search.html#GUID-6C40F484-16CD-4569-A749-68A630AEDA64" title="Search across multiple objects within an entire schema by creating a ubiquitous database search.">Creating a Ubiquitous Search</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

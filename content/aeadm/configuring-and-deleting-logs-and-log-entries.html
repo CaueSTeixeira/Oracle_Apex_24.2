@@ -1,0 +1,612 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Configuring and Deleting Logs and Log Entries">
+      <meta name="abstract" content="Configure log intervals and delete logs and log entries.">
+      <meta name="description" content="Configure log intervals and delete logs and log entries.">
+      <meta name="DC.subject" content="administrator, Oracle APEX, deleting log entries, log entries, deleting, logs, deleting, log intervals, configuring, logs, managing intervals, Activity log, archiving, SQL Workshop, log entries, SQL statements, deleting, SQL Commands, deleting history, Page View Activity logs, deleting, Developer Activity Log, retention, Developer Activity Log, deleting entries, External Click Counting log, deleting entries, Login Access log, deleting entries, Web Service Activity log, deleting entries, REST Synchronization log, deleting entries, Automation log, deleting entries">
+      <meta name="keywords" content="administrator, Oracle APEX, deleting log entries, log entries, deleting, logs, deleting, log intervals, configuring, logs, managing intervals, Activity log, archiving, SQL Workshop, log entries, SQL statements, deleting, SQL Commands, deleting history, Page View Activity logs, deleting, Developer Activity Log, retention, Developer Activity Log, deleting entries, External Click Counting log, deleting entries, Login Access log, deleting entries, Web Service Activity log, deleting entries, REST Synchronization log, deleting entries, Automation log, deleting entries">
+      <meta name="DC.Relation" scheme="URI" content="oracle-apex-administration-services.html#GUID-3E40D63B-D9C4-42B9-87D7-88A015762392">
+      <meta name="DC.Relation" scheme="URI" content="configuring-and-deleting-logs-and-log-entries.html#GUID-5EC816A3-6CD1-4186-9126-AA2D7528F4EF">
+      <meta name="DC.Relation" scheme="URI" content="configuring-and-deleting-logs-and-log-entries.html#GUID-D42E60B0-7422-4813-85D2-8919C211F2A8">
+      <meta name="DC.Relation" scheme="URI" content="configuring-and-deleting-logs-and-log-entries.html#GUID-7C56EA2E-25E9-46BC-A5E0-D6C252327F00">
+      <meta name="DC.Relation" scheme="URI" content="configuring-and-deleting-logs-and-log-entries.html#GUID-BCAC0624-7507-40CC-ABA9-146C9FA7AC8B">
+      <meta name="DC.Relation" scheme="URI" content="configuring-and-deleting-logs-and-log-entries.html#GUID-E5F74EA8-63C3-470E-B219-F9CDEE8CCEB1">
+      <meta name="DC.Relation" scheme="URI" content="configuring-and-deleting-logs-and-log-entries.html#GUID-CB34689B-E05D-4514-A73A-7607575A1132">
+      <meta name="DC.Relation" scheme="URI" content="configuring-and-deleting-logs-and-log-entries.html#GUID-649EC5F2-9C01-4F2C-BBF7-6F994B6A8812">
+      <meta name="DC.Relation" scheme="URI" content="configuring-and-deleting-logs-and-log-entries.html#GUID-962A0304-5E17-4F0E-AD40-A1D60A0B8D51">
+      <meta name="DC.Relation" scheme="URI" content="configuring-and-deleting-logs-and-log-entries.html#GUID-F4926193-2E58-49D0-A088-6446A17795F9">
+      <meta name="DC.Relation" scheme="URI" content="configuring-and-deleting-logs-and-log-entries.html#GUID-FAD74DA3-B34A-4E69-B18B-48E6023B1F3D">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-70E4334C-2368-4797-BE73-5DEBBEC479D2">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Configure log intervals and delete logs and log entries.">
+      <meta name="description" content="Configure log intervals and delete logs and log entries.">
+      <title>Configuring and Deleting Logs and Log Entries</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Configure log intervals and delete logs and log entries.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="monitoring-activity-across-an-instance.html" title="Previous" type="text/html">
+      <link rel="next" href="dbms_scheduler-jobs.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Configuring and Deleting Logs and Log Entries","description":"Configure log intervals and delete logs and log entries.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="monitoring-activity-across-an-instance.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="dbms_scheduler-jobs.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-70E4334C-2368-4797-BE73-5DEBBEC479D2" name="GUID-70E4334C-2368-4797-BE73-5DEBBEC479D2"></a><a id="AEADM29194"></a><a id="4050:119"></a><a id="4050:46"></a><a id="4050:75"></a><a id="4050:61"></a><a id="4050:19"></a><a id="4050:85"></a><a id="4050:31"></a><a id="4050:162"></a><a id="4050:182"></a>
+         
+         <h2 id="AEADM-GUID-70E4334C-2368-4797-BE73-5DEBBEC479D2" class="sect2"><span class="enumeration_section">3.15 </span>Configuring and Deleting Logs and Log
+        Entries
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Configure log intervals and delete logs and log entries.</p>
+               <div class="infoboxnote" id="GUID-70E4334C-2368-4797-BE73-5DEBBEC479D2__GUID-9CB56AFD-6A06-46DB-95C1-0C86C7B5A867">
+                  <p class="notep1">Note:</p>To ensure the security and performance
+                                of your development environment, some administration functionality
+                                is not available in Oracle APEX instances running in Oracle
+                                Cloud.
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="configuring-and-deleting-logs-and-log-entries.html#GUID-5EC816A3-6CD1-4186-9126-AA2D7528F4EF">Managing Log Intervals</a><br>Use the Manage Log Interval page to set the minimum number of days to retain log information for log files.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-and-deleting-logs-and-log-entries.html#GUID-D42E60B0-7422-4813-85D2-8919C211F2A8">Archiving the Activity Log</a><br>Archiving the Activity log takes the <span>Oracle APEX</span> Activity log, summarizes it, and writes the results to an archived activity         log.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-and-deleting-logs-and-log-entries.html#GUID-7C56EA2E-25E9-46BC-A5E0-D6C252327F00">Deleting SQL Workshop Log Entries</a><br>Delete SQL Workshop log entries. 
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-and-deleting-logs-and-log-entries.html#GUID-BCAC0624-7507-40CC-ABA9-146C9FA7AC8B">Deleting Page View Activity Log Entries</a><br>Delete Page View Activity log entries. Page View Activity Logs track         user activity for an application.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-and-deleting-logs-and-log-entries.html#GUID-E5F74EA8-63C3-470E-B219-F9CDEE8CCEB1">Managing the Developer Activity Log</a><br>Manage the Developer Activity Log by deleting log entries and         configuring the number of days to retain log entries.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-and-deleting-logs-and-log-entries.html#GUID-CB34689B-E05D-4514-A73A-7607575A1132">Deleting Click Counting Log Entries</a><br>Delete External Clicks Counting Log entries.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-and-deleting-logs-and-log-entries.html#GUID-649EC5F2-9C01-4F2C-BBF7-6F994B6A8812">Deleting the Login Access Log</a><br>Delete Login Access Log entries.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-and-deleting-logs-and-log-entries.html#GUID-962A0304-5E17-4F0E-AD40-A1D60A0B8D51">Deleting Web Service Activity Log Entries</a><br>Delete Web Service Activity log entries.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-and-deleting-logs-and-log-entries.html#GUID-F4926193-2E58-49D0-A088-6446A17795F9">Deleting REST Synchronization Log Entries</a><br>Delete REST Synchronization log entries.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-and-deleting-logs-and-log-entries.html#GUID-FAD74DA3-B34A-4E69-B18B-48E6023B1F3D">Deleting Automation Log Entries</a><br>Delete the Automation log entries.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-70E4334C-2368-4797-BE73-5DEBBEC479D2__GUID-F28C3E2A-5919-4A38-8C43-5DFF56EFC044">
+                  <p class="notep1">See Also:</p><a href="purging-the-developer-activity-and-click-count-log-files.html#GUID-599F0055-DB88-4BE8-BD2D-D58FEF06EDD3" title="Manually purge developer logs and the External Count Clicks log on the Log files page. Log entries older than one month are automatically deleted.">Purging the Developer Activity and Click Count Log Files</a></div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="oracle-apex-administration-services.html#GUID-3E40D63B-D9C4-42B9-87D7-88A015762392" title="Instance administrators manage an entire APEX hosted instance using the Oracle APEX Administration Services (Administration Services) application.">Oracle APEX Administration Services</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="AEADM29201"></a><div class="props_rev_3"><a id="GUID-5EC816A3-6CD1-4186-9126-AA2D7528F4EF" name="GUID-5EC816A3-6CD1-4186-9126-AA2D7528F4EF"></a><h3 id="AEADM-GUID-5EC816A3-6CD1-4186-9126-AA2D7528F4EF" class="sect3"><span class="enumeration_section">3.15.1 </span>Managing Log Intervals
+               </h3>
+               <div>
+                  <p>Use the Manage Log Interval page to set the minimum number of days to retain log information for log files.</p>
+                  <div class="section">
+                     <p>To manage the log interval:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Manage Logs and Files, click <span class="uicontrol bold">Manage Log Interval</span>.</span><div>
+                           <p>The Manage Log Interval page appears displaying the following logs: </p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-5EC816A3-6CD1-4186-9126-AA2D7528F4EF__UL_AGC_NSQ_HCC">
+                              <li><span class="uicontrol bold">Access Log</span> - Records authentication
+                            events by developers and administrators accessing the <span>APEX</span> environment and by end users of <span>APEX</span> applications that use the built-in login APIs available to
+                            developers.
+                              </li>
+                              <li><span class="uicontrol bold">Activity Log</span> - Records application
+                            page views including page submit actions and partial page refreshes.
+                            Application logging must be enabled.
+                              </li>
+                              <li><span class="uicontrol bold">Automation</span> - Records execution of automations
+                            defined in applications.
+                              </li>
+                              <li><span class="uicontrol bold">Debug Messages Records</span> - Debug
+                            messages emitted by applications while debugging is enabled.
+                              </li>
+                              <li><span class="uicontrol bold">Events</span> - Records operational events
+                            performed by instance administrators. You can view these events in the
+                            Administrator Digest or by querying <code class="codeph">APEX_EVENTS_LOG</code>
+                            dictionary view. 
+                              </li>
+                              <li><span class="uicontrol bold">External Click Count Log</span> - Counts
+                            clicks from an application to an external site. You can implement this
+                            functionality using the <code class="codeph">APEX_UTIL.COUNT_CLICK</code>
+                            procedure.
+                              </li>
+                              <li><span class="uicontrol bold">REST Synchronization</span> - Records
+                            details of previously executed REST synchronizations.
+                              </li>
+                              <li><span class="uicontrol bold">Web Service</span> - Records all web service requests
+                            initiated from the <span>APEX</span> instance if web service activity logging is enabled. 
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>For each log, enter the duration of the interval in days. </span><div>
+                           
+                           <p>The maximum value that can be specified is 180 days, with a
+                        default value of 14 days. Keeping log information for longer periods can
+                        degrade runtime performance.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-5EC816A3-6CD1-4186-9126-AA2D7528F4EF__GUID-0C646B80-78A0-48F3-838D-3F9E2880DE17">
+                     <p class="notep1">See Also:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-5EC816A3-6CD1-4186-9126-AA2D7528F4EF__UL_AJK_XLP_JCC">
+                        <li><a href="configuring-features.html#GUID-7DD54DF5-A482-4642-8E82-0535B6B4C9E7" title="Configure application activity logging for all applications on the instance.">Enabling Application Activity Logging</a></li>
+                        <li><a href="monitoring-activity-across-an-instance.html#GUID-EBC28EFA-B7A7-4993-9235-C9B91ECA6BE4" title="Access the Administrator Digest dashboard to view the key instance activity metrics and how these metrics change over time.">Viewing the Administrator Digest</a></li>
+                        <li><a href="configuring-features.html#GUID-BB4F8AA6-A683-418D-A9AF-9349F46892E6" title="Configure web service activity logging for all workspaces on the instance.">Enabling Web Service Activity Logging</a></li>
+                        <li><a href="../aeapi/SET_LOG_SWITCH_INTERVAL-Procedure.html#AEAPI29322" target="_blank">SET_LOG_SWITCH_INTERVAL Procedure</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></li>
+                     </ul>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-and-deleting-logs-and-log-entries.html#GUID-70E4334C-2368-4797-BE73-5DEBBEC479D2" title="Configure log intervals and delete logs and log entries.">Configuring and Deleting Logs and Log Entries</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29264"></a><div class="props_rev_3"><a id="GUID-D42E60B0-7422-4813-85D2-8919C211F2A8" name="GUID-D42E60B0-7422-4813-85D2-8919C211F2A8"></a><h3 id="AEADM-GUID-D42E60B0-7422-4813-85D2-8919C211F2A8" class="sect3"><span class="enumeration_section">3.15.2 </span>Archiving the Activity Log
+               </h3>
+               <div>
+                  <p>Archiving the Activity log takes the <span>Oracle APEX</span> Activity log, summarizes it, and writes the results to an archived activity
+        log.
+                  </p>
+                  <p>To archive the <span>Oracle APEX</span> log:
+                  </p>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to <span>Oracle APEX</span> Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Manage Logs and Files, click <span class="uicontrol bold">Archive Activity Log</span>. </span><div>
+                           <p>The Archive Activity Log page appears listing the <span class="uicontrol bold">Date of Last
+                            Archive</span>, <span class="uicontrol bold">Archive Day Count</span>, and
+                            <span class="uicontrol bold">Workspace Count</span>. 
+                           </p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Archive Activity Summary</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-and-deleting-logs-and-log-entries.html#GUID-70E4334C-2368-4797-BE73-5DEBBEC479D2" title="Configure log intervals and delete logs and log entries.">Configuring and Deleting Logs and Log Entries</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29196"></a><div class="props_rev_3"><a id="GUID-7C56EA2E-25E9-46BC-A5E0-D6C252327F00" name="GUID-7C56EA2E-25E9-46BC-A5E0-D6C252327F00"></a><h3 id="AEADM-GUID-7C56EA2E-25E9-46BC-A5E0-D6C252327F00" class="sect3"><span class="enumeration_section">3.15.3 </span>Deleting SQL Workshop Log Entries
+               </h3>
+               <div>
+                  <p>Delete SQL Workshop log entries. </p>
+                  <div class="section">
+                     
+                     <p>The SQL Workshop log maintains a history of SQL statements. This history is available
+                in SQL Commands by clicking the History tab. This table can be truncated to reduce
+                space utilization.</p>
+                     
+                  </div>
+                  <div class="section">
+                     <p>To delete SQL Workshop log entries:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to <span>Oracle APEX</span> Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Manage Logs and Files, click <span class="uicontrol bold">SQL Workshop Log</span>.</span></li>
+                     <li class="stepexpand"><span>On the SQL Workshop Logs page, click one of the following:</span><div>
+                           <ul style="list-style-type: disc;">
+                              <li>
+                                 <p><span class="uicontrol bold">Script File executions log entries</span></p>
+                              </li>
+                              <li>
+                                 <p><span class="uicontrol bold">SQL Command Processor history entries</span></p>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>On the Clean up Logs page, click one of the following:</span><ol type="a">
+                           <li class="substepexpand"><span>Delete entries this number of days and older - Select the number of
+                            days.</span></li>
+                           <li class="substepexpand"><span>Click one of the following:</span><div>
+                                 <ul style="list-style-type: disc;">
+                                    <li>
+                                       <p><span class="uicontrol bold">Truncate Log</span> - Deletes all entries.
+                                       </p>
+                                    </li>
+                                    <li>
+                                       <p><span class="uicontrol bold">Delete Entries</span> - Deletes entries by age, specify the age of
+                                        the entries to be deleted.
+                                       </p>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-7C56EA2E-25E9-46BC-A5E0-D6C252327F00__GUID-F4FF7990-90F9-4E79-B071-59C063BFC6FC">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="../aeutl/sql-command-history.html#AEUTL-GUID-9C1B01D7-5F5C-41CE-A2B8-121903A48F6D" target="_blank">Using SQL Command History</a> in <span><cite>Oracle APEX SQL Workshop
+                                        Guide</cite></span></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-and-deleting-logs-and-log-entries.html#GUID-70E4334C-2368-4797-BE73-5DEBBEC479D2" title="Configure log intervals and delete logs and log entries.">Configuring and Deleting Logs and Log Entries</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29213"></a><div class="props_rev_3"><a id="GUID-BCAC0624-7507-40CC-ABA9-146C9FA7AC8B" name="GUID-BCAC0624-7507-40CC-ABA9-146C9FA7AC8B"></a><h3 id="AEADM-GUID-BCAC0624-7507-40CC-ABA9-146C9FA7AC8B" class="sect3"><span class="enumeration_section">3.15.4 </span>Deleting Page View Activity Log
+        Entries
+               </h3>
+               <div>
+                  <p>Delete Page View Activity log entries. Page View Activity Logs track
+        user activity for an application.</p>
+                  <div class="section">
+                     
+                     <p>The <span>APEX</span> engine uses two logs to track user activity. At any given time, one log is
+                designated as current. For each rendered page view, the <span>APEX</span> engine inserts one row into the log file. A log switch occurs at the interval
+                listed on the Page View Activity Logs page. At that point, the <span>APEX</span> engine removes all entries in the noncurrent log and designates it as current. 
+                     </p>
+                     
+                     <div class="infobox-tip" id="GUID-BCAC0624-7507-40CC-ABA9-146C9FA7AC8B__GUID-A69C8D11-50B1-4060-8686-361A2405104E">
+                        <p class="notep1">Tip:</p>Developers enable
+                logging within their application using the Logging attribute on the Edit Application
+                Definition page. See <a href="../htmdb/editing-application-attributes.html#HTMDB-GUID-8B6DF456-41CC-40E3-877E-A0038677AADE" target="_blank">Editing the Application Definition</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span>.
+                     </div>
+                     
+                  </div>
+                  <p>To delete Page View Activity log entries:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Manage Logs and Files, click <span class="uicontrol bold">Page View Activity Log</span>.</span><div>
+                           <p>The Page View Activity Logs page appears. </p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Truncate Logs</span>.</span></li>
+                     <li class="stepexpand"><span>Click either <span class="uicontrol bold">Truncate Log 1</span> or <span class="uicontrol bold">Truncate Log 2</span>.</span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-BCAC0624-7507-40CC-ABA9-146C9FA7AC8B__GUID-42A522C6-0EFA-44BA-ABB6-5EFA5F32CEA4">
+                     <p class="notep1">See Also:</p><a href="viewing-workspace-dashboards.html#GUID-E68D639F-60F2-495E-B74A-99B5E4EA9251" title="Use the Dashboard page to view details about the current workspace and monitor overall workspace activity.">Viewing Workspace Dashboards</a></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-and-deleting-logs-and-log-entries.html#GUID-70E4334C-2368-4797-BE73-5DEBBEC479D2" title="Configure log intervals and delete logs and log entries.">Configuring and Deleting Logs and Log Entries</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29198"></a><div class="props_rev_3"><a id="GUID-E5F74EA8-63C3-470E-B219-F9CDEE8CCEB1" name="GUID-E5F74EA8-63C3-470E-B219-F9CDEE8CCEB1"></a><h3 id="AEADM-GUID-E5F74EA8-63C3-470E-B219-F9CDEE8CCEB1" class="sect3"><span class="enumeration_section">3.15.5 </span>Managing the Developer Activity Log
+               </h3>
+               <div>
+                  <p>Manage the Developer Activity Log by deleting log entries and
+        configuring the number of days to retain log entries.</p>
+                  <div class="section">The Developer Activity log tracks changes to applications within an
+            individual workspace. You can specify the number of days to retain log
+            entries.</div>
+                  <div class="section">
+                     
+                     <p>To delete log entries manually or configure log entry retention:</p>
+                     
+                  </div>
+                  <ol id="GUID-E5F74EA8-63C3-470E-B219-F9CDEE8CCEB1__STEPS_DQC_Y5S_HCC">
+                     <li class="stepexpand"><span>Sign in to Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Manage Logs and Files, click <span class="uicontrol bold">Developer Activity
+                        Log</span>.</span><div>
+                           
+                           <p>The Developer Activity Log page appears displaying the number
+                        log entries. </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>To delete log entries:</span><ol type="a" id="GUID-E5F74EA8-63C3-470E-B219-F9CDEE8CCEB1__SUBSTEPS_ZN5_35S_HCC">
+                           <li><span>Delete entries this number of days and older - Specify the age of the
+                            entries to be deleted.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Delete Entries</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>To specify the number of days to retain log entries:</span><ol type="a" id="GUID-E5F74EA8-63C3-470E-B219-F9CDEE8CCEB1__SUBSTEPS_BVW_J5S_HCC">
+                           <li><span>Developer Log Retention Days - Enter the number of days to retain
+                            developer log entries. Entries older than this setting are deleted
+                            during daily maintenance.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Save Retention Setting</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-E5F74EA8-63C3-470E-B219-F9CDEE8CCEB1__GUID-953127F6-0688-4AB2-9E5D-4A6D09E4D3F0">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="viewing-workspace-dashboards.html#GUID-EF747B87-4E1C-4575-B6CC-007F0A7B0D4C" title="View a summary of developer application and page changes for the selected time frame.">Developer Activity Dashboard</a> for information about the Developer Activity Log 
+                     </p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-and-deleting-logs-and-log-entries.html#GUID-70E4334C-2368-4797-BE73-5DEBBEC479D2" title="Configure log intervals and delete logs and log entries.">Configuring and Deleting Logs and Log Entries</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29199"></a><div class="props_rev_3"><a id="GUID-CB34689B-E05D-4514-A73A-7607575A1132" name="GUID-CB34689B-E05D-4514-A73A-7607575A1132"></a><h3 id="AEADM-GUID-CB34689B-E05D-4514-A73A-7607575A1132" class="sect3"><span class="enumeration_section">3.15.6 </span>Deleting Click Counting Log Entries
+               </h3>
+               <div>
+                  <p>Delete External Clicks Counting Log entries.</p>
+                  <div class="section">The External Clicks Counting log counts clicks from an <span>APEX</span> application to an external site. You can implement this functionality using the <code class="codeph">APEX_UTIL.COUNT_CLICK</code> procedure.
+                  </div>
+                  <div class="section">
+                     <p>To delete External Clicks Counting log entries:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Manage Logs and Files, click <span class="uicontrol bold">External Click Counting Log</span>.</span><div>
+                           
+                           <p>The External Click Counting Log page appears displaying the
+                        number of log entries. </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>On the External Click Counting Log page:</span><ol type="a" id="GUID-CB34689B-E05D-4514-A73A-7607575A1132__SUBSTEPS_OYN_MKS_HCC">
+                           <li><span>Delete entries this number of days and older - Specify the age of the
+                            entries to be deleted.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Delete Entries</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-CB34689B-E05D-4514-A73A-7607575A1132__GUID-E10FF99D-286F-4BE2-851F-DD1ECCA2E5A8">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="../aeapi/COUNT_CLICK-Procedure.html#AEAPI112" target="_blank">COUNT_CLICK Procedure</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-and-deleting-logs-and-log-entries.html#GUID-70E4334C-2368-4797-BE73-5DEBBEC479D2" title="Configure log intervals and delete logs and log entries.">Configuring and Deleting Logs and Log Entries</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29200"></a><div class="props_rev_3"><a id="GUID-649EC5F2-9C01-4F2C-BBF7-6F994B6A8812" name="GUID-649EC5F2-9C01-4F2C-BBF7-6F994B6A8812"></a><h3 id="AEADM-GUID-649EC5F2-9C01-4F2C-BBF7-6F994B6A8812" class="sect3"><span class="enumeration_section">3.15.7 </span>Deleting the Login Access Log
+               </h3>
+               <div>
+                  <p>Delete Login Access Log entries.</p>
+                  <div class="section">The Login Access log records authentication events by developers and administrators accessing the <span>APEX</span> environment and by end users of <span>APEX</span> applications that use the built-in login APIs available to developers. Log entries are aged out of the log tables and purged periodically.
+                  </div>
+                  <div class="section">
+                     <p>To delete Login Access Log entries:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Manage Logs and Files, click <span class="uicontrol bold">Login Access Log</span>.</span><div>
+                           <p>The Login Access Log page appears displaying the number of log entries. </p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>On the Login Access Log Entries page:</span><ol type="a" id="GUID-649EC5F2-9C01-4F2C-BBF7-6F994B6A8812__SUBSTEPS_JGC_VXW_HCC">
+                           <li><span>Delete entries this number of days and older - Specify the age of the
+                            entries to be deleted.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Delete Entries</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-and-deleting-logs-and-log-entries.html#GUID-70E4334C-2368-4797-BE73-5DEBBEC479D2" title="Configure log intervals and delete logs and log entries.">Configuring and Deleting Logs and Log Entries</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-962A0304-5E17-4F0E-AD40-A1D60A0B8D51" name="GUID-962A0304-5E17-4F0E-AD40-A1D60A0B8D51"></a><h3 id="AEADM-GUID-962A0304-5E17-4F0E-AD40-A1D60A0B8D51" class="sect3"><span class="enumeration_section">3.15.8 </span>Deleting Web Service Activity Log
+        Entries
+               </h3>
+               <div>
+                  <p>Delete Web Service Activity log entries.</p>
+                  <div class="section">The Web Service Activity log records all web service requests initiated from
+            the <span>APEX</span> instance.
+                  </div>
+                  <div class="section">
+                     <p>To delete Web Service Activity log entries:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Manage Logs and Files, click <span class="uicontrol bold">Web Service Activity Log</span>.</span><div>
+                           <p>The Web Service Activity Log page appears displaying the number of log entries.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>On the Web Service Activity Log page:</span><ol type="a" id="GUID-962A0304-5E17-4F0E-AD40-A1D60A0B8D51__SUBSTEPS_HK5_SYW_HCC">
+                           <li><span>Delete entries this number of days and older - Specify the age of the
+                            entries to be deleted.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Delete Entries</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-and-deleting-logs-and-log-entries.html#GUID-70E4334C-2368-4797-BE73-5DEBBEC479D2" title="Configure log intervals and delete logs and log entries.">Configuring and Deleting Logs and Log Entries</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-F4926193-2E58-49D0-A088-6446A17795F9" name="GUID-F4926193-2E58-49D0-A088-6446A17795F9"></a><h3 id="AEADM-GUID-F4926193-2E58-49D0-A088-6446A17795F9" class="sect3"><span class="enumeration_section">3.15.9 </span>Deleting REST Synchronization Log
+        Entries
+               </h3>
+               <div>
+                  <p>Delete REST Synchronization log entries.</p>
+                  <div class="section">
+                     
+                     <p>The REST Synchronization log contains details about previously executed
+                synchronizations such as the status (that is, Success or Failure), the amount of
+                processed rows, and the amount of HTTP requests being made. You can drill down from
+                the Synchronization log to the Web Services log to review each individual HTTP
+                request which was made for this synchronization.</p>
+                     
+                  </div>
+                  <div class="section">
+                     
+                     <p>To delete REST Synchronization log entries:</p>
+                     
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Manage Logs and Files, click <span class="uicontrol bold">REST Synchronization
+                        Log</span>.</span><div>The REST Synchronization Log page appears displaying the
+                    current number of log entries.</div>
+                     </li>
+                     <li class="stepexpand"><span>On the REST Synchronization Log page:</span><ol type="a" id="GUID-F4926193-2E58-49D0-A088-6446A17795F9__SUBSTEPS_WLT_4QX_HCC">
+                           <li><span>Delete entries this number of days and older - Enter the number of days
+                            after which the log is purged.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Delete Entries</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+                  <div class="section">
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-F4926193-2E58-49D0-A088-6446A17795F9__GUID-02372860-4360-44D3-AE97-3CE26BAA820C">
+                     <p class="notep1">See Also:</p><a href="../htmdb/managing-data-synchronization.html#HTMDB-GUID-107C7CB8-F3DF-4C82-89E5-F4BFE6750096" target="_blank">Managing Data Synchronization</a>
+                and <a href="../htmdb/managing-data-synchronization.html#HTMDB-GUID-BC31C387-C1CC-4118-9488-71FCEA5F572C" target="_blank">Managing the REST Data Source Synchronization
+                    Log</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-and-deleting-logs-and-log-entries.html#GUID-70E4334C-2368-4797-BE73-5DEBBEC479D2" title="Configure log intervals and delete logs and log entries.">Configuring and Deleting Logs and Log Entries</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-FAD74DA3-B34A-4E69-B18B-48E6023B1F3D" name="GUID-FAD74DA3-B34A-4E69-B18B-48E6023B1F3D"></a><h3 id="AEADM-GUID-FAD74DA3-B34A-4E69-B18B-48E6023B1F3D" class="sect3"><span class="enumeration_section">3.15.10 </span>Deleting Automation Log Entries
+               </h3>
+               <div>
+                  <p>Delete the Automation log entries.</p>
+                  <div class="section">
+                     
+                     <p>To delete the Automation log entries:</p>
+                     
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Manage Logs and Files, click <span class="uicontrol bold">Automation Log</span>.</span><div>The Automation Log page appears displaying the current
+                    number of log entries.</div>
+                     </li>
+                     <li class="stepexpand"><span>Delete entries this number of days and older - Enter the number of days after
+                    which the log is purged.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Delete Entries</span>.</span></li>
+                  </ol>
+                  <div class="section">
+                     
+                     <div class="infoboxnote" id="GUID-FAD74DA3-B34A-4E69-B18B-48E6023B1F3D__GUID-34073901-1803-486F-8111-197B0E92D771">
+                        <p class="notep1">Note:</p>
+                        
+                        <p><a href="../htmdb/managing-automations.html#HTMDB-GUID-EC3FF1D8-6CEF-4C8A-B200-11C3F02A6B92" target="_blank">Managing Automations</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></p>
+                        
+                     </div>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-and-deleting-logs-and-log-entries.html#GUID-70E4334C-2368-4797-BE73-5DEBBEC479D2" title="Configure log intervals and delete logs and log entries.">Configuring and Deleting Logs and Log Entries</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

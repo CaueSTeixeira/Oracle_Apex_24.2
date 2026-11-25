@@ -1,0 +1,190 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="ADD_MEMBER Procedure">
+      <meta name="DC.subject" content="ADD_MEMBER procedure, APEX_COLLECTION">
+      <meta name="keywords" content="ADD_MEMBER procedure, APEX_COLLECTION">
+      <meta name="DC.Relation" scheme="URI" content="APEX_COLLECTION.html#GUID-859B488C-2628-44D7-969F-50872C685B76">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-C4A6C36B-F241-423A-9E3F-F7D89CB1E616">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>ADD_MEMBER Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="Clearing-Collection-Session-State.html" title="Previous" type="text/html">
+      <link rel="next" href="ADD_MEMBER-Function.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"ADD_MEMBER Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="Clearing-Collection-Session-State.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="ADD_MEMBER-Function.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-C4A6C36B-F241-423A-9E3F-F7D89CB1E616" name="GUID-C4A6C36B-F241-423A-9E3F-F7D89CB1E616"></a><a id="AEAPI681"></a><a id="AEAPI682"></a><a id="AEAPI683"></a><a id="AEAPI684"></a><a id="AEAPI680"></a>
+         
+         <h2 id="AEAPI-GUID-C4A6C36B-F241-423A-9E3F-F7D89CB1E616" class="sect2"><span class="enumeration_section">15.2 </span>ADD_MEMBER Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>Adds a new member to an existing collection. An error occurs if the specified collection does not exist for the current user in the same session for the current application ID.</p>
+                  <p>Gaps are not used when adding a new member, so an existing collection with members of sequence IDs (1,2,5,8) adds the new member with a sequence ID of 9.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-C4A6C36B-F241-423A-9E3F-F7D89CB1E616__GUID-DFBDF7C6-3784-4734-90F7-7EFF78334568">Syntax</p><pre class="pre codeblock"><code>APEX_COLLECTION.ADD_MEMBER (
+    p_collection_name   IN VARCHAR2,
+    p_c001              IN VARCHAR2 DEFAULT NULL,
+    ...
+    p_c050              IN VARCHAR2 DEFAULT NULL,
+    p_n001              IN NUMBER   DEFAULT NULL,
+    p_n002              IN NUMBER   DEFAULT NULL,
+    p_n003              IN NUMBER   DEFAULT NULL,
+    p_n004              IN NUMBER   DEFAULT NULL,
+    p_n005              IN NUMBER   DEFAULT NULL,
+    p_d001              IN DATE     DEFAULT NULL,
+    p_d002              IN DATE     DEFAULT NULL,
+    p_d003              IN DATE     DEFAULT NULL,
+    p_d004              IN DATE     DEFAULT NULL,
+    p_d005              IN DATE     DEFAULT NULL,
+    p_clob001           IN CLOB     DEFAULT empty_clob(),
+    p_blob001           IN BLOB     DEFAULT empty_blob(),
+    p_xmltype001        IN XMLTYPE  DEFAULT NULL,
+    p_generate_md5      IN VARCHAR2 DEFAULT 'NO' )</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-C4A6C36B-F241-423A-9E3F-F7D89CB1E616__GUID-C0AFE02E-A771-4EB7-B05E-922C204E971A">Parameters</p>
+                  <div class="infoboxnote" id="GUID-C4A6C36B-F241-423A-9E3F-F7D89CB1E616__GUID-438A1C0D-F411-4AA2-99D1-6388D9D1AED7">
+                     <p class="notep1">Note:</p>
+                     <p>Any character attribute exceeding 4,000 characters is truncated to 4,000 characters.</p>
+                  </div>
+               </div>
+               <div class="tblformal" id="GUID-C4A6C36B-F241-423A-9E3F-F7D89CB1E616__CJAIDFDF">
+                  <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                     <thead>
+                        <tr align="left" valign="top">
+                           <th align="left" valign="bottom" width="31%" id="d55930e79">Parameter</th>
+                           <th align="left" valign="bottom" width="69%" id="d55930e81">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr align="left" valign="top">
+                           <td align="left" valign="top" width="31%" id="d55930e85" headers="d55930e79 "><code class="codeph">p_collection_name</code></td>
+                           <td align="left" valign="top" width="69%" headers="d55930e85 d55930e81 ">The name of an existing collection. Maximum length is 255 bytes. Collection names are not case-sensitive and are converted to upper case.</td>
+                        </tr>
+                        <tr align="left" valign="top">
+                           <td align="left" valign="top" width="31%" id="d55930e91" headers="d55930e79 "><code class="codeph">p_c001 through p_c050</code></td>
+                           <td align="left" valign="top" width="69%" headers="d55930e91 d55930e81 ">Attribute value of the member to be added. Maximum length is 4,000 bytes. Any character attribute exceeding 4,000 characters is truncated to 4,000 characters. </td>
+                        </tr>
+                        <tr align="left" valign="top">
+                           <td align="left" valign="top" width="31%" id="d55930e97" headers="d55930e79 "><code class="codeph">p_n001 through p_n005</code></td>
+                           <td align="left" valign="top" width="69%" headers="d55930e97 d55930e81 ">Attribute value of the numeric attributes to be added.</td>
+                        </tr>
+                        <tr align="left" valign="top">
+                           <td align="left" valign="top" width="31%" id="d55930e103" headers="d55930e79 "><code class="codeph">p_d001</code> through <code class="codeph">p_d005</code></td>
+                           <td align="left" valign="top" width="69%" headers="d55930e103 d55930e81 ">Attribute value of the date attribute.</td>
+                        </tr>
+                        <tr align="left" valign="top">
+                           <td align="left" valign="top" width="31%" id="d55930e112" headers="d55930e79 "><code class="codeph">p_clob001</code></td>
+                           <td align="left" valign="top" width="69%" headers="d55930e112 d55930e81 ">Use for collection member attributes that exceed 4,000 characters.</td>
+                        </tr>
+                        <tr align="left" valign="top">
+                           <td align="left" valign="top" width="31%" id="d55930e118" headers="d55930e79 "><code class="codeph">p_blob001</code></td>
+                           <td align="left" valign="top" width="69%" headers="d55930e118 d55930e81 ">Use for binary collection member attributes.</td>
+                        </tr>
+                        <tr align="left" valign="top">
+                           <td align="left" valign="top" width="31%" id="d55930e124" headers="d55930e79 "><code class="codeph">p_xmltype001</code></td>
+                           <td align="left" valign="top" width="69%" headers="d55930e124 d55930e81 ">Use to store well-formed XML.</td>
+                        </tr>
+                        <tr align="left" valign="top">
+                           <td align="left" valign="top" width="31%" id="d55930e130" headers="d55930e79 "><code class="codeph">p_generate_md5</code></td>
+                           <td align="left" valign="top" width="69%" headers="d55930e130 d55930e81 ">Valid values include <code class="codeph">YES</code> and <code class="codeph">NO</code>. <code class="codeph">YES</code> to specify if the message digest of the data of the collection member should be computed. Use this parameter to compare the MD5 of the collection member with another member or to see if that member has changed.
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-C4A6C36B-F241-423A-9E3F-F7D89CB1E616__GUID-30303FDC-A220-44B2-8C26-1F4577C1CE62">Example</p><pre class="pre codeblock"><code>APEX_COLLECTION.ADD_MEMBER(
+        p_collection_name =&gt; 'GROCERIES'
+        p_c001            =&gt; 'Grapes',
+        p_c002            =&gt; 'Imported',
+        p_n001            =&gt; 125,
+        p_d001            =&gt; sysdate );
+END;</code></pre></div>
+               <div class="section">
+                  <div class="infoboxnotealso" id="GUID-C4A6C36B-F241-423A-9E3F-F7D89CB1E616__GUID-C9B90324-7D98-4082-AB93-7DDDCBFD40FF">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-C4A6C36B-F241-423A-9E3F-F7D89CB1E616__UL_PZM_CXX_HCC">
+                        <li><a href="GET_MEMBER_MD5-Function.html#GUID-A456F18D-10D5-48F6-B75F-FD9534FD91FD">GET_MEMBER_MD5 Function</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_COLLECTION.html#GUID-859B488C-2628-44D7-969F-50872C685B76">APEX_COLLECTION</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

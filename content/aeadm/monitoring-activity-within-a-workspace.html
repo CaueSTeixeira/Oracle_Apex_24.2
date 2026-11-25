@@ -1,0 +1,545 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Monitoring Activity Within a Workspace">
+      <meta name="abstract" content="Monitor developer activity and changes within a workspace by accessing the Monitor Activity page.">
+      <meta name="description" content="Monitor developer activity and changes within a workspace by accessing the Monitor Activity page.">
+      <meta name="DC.subject" content="application reports, reports, monitor activity, monitor workspace, Page Views, Developer Activity, Sessions, Page View Analysis, Environment, Login Attempts, Application Errors, Workspace Schema Reports, Application Changes by Developer, Page Views By Developer, Application Changes by Application, Active Sessions, active session, expired session, Debug mode, configuring for current session, Debug Level, configuring, Trace Mode, Workspace administrator, viewing schema reports, schema, schema, reports, workspace schema reports, Schema Tablespace Utilization, Database Privileges by Schema, Workspace Schemas, Report Tablespace Utilization (popup)">
+      <meta name="keywords" content="application reports, reports, monitor activity, monitor workspace, Page Views, Developer Activity, Sessions, Page View Analysis, Environment, Login Attempts, Application Errors, Workspace Schema Reports, Application Changes by Developer, Page Views By Developer, Application Changes by Application, Active Sessions, active session, expired session, Debug mode, configuring for current session, Debug Level, configuring, Trace Mode, Workspace administrator, viewing schema reports, schema, schema, reports, workspace schema reports, Schema Tablespace Utilization, Database Privileges by Schema, Workspace Schemas, Report Tablespace Utilization (popup)">
+      <meta name="DC.Relation" scheme="URI" content="workspace-and-application-administration.html#GUID-853F40E1-F360-4CE9-8DC1-FC111A825D14">
+      <meta name="DC.Relation" scheme="URI" content="monitoring-activity-within-a-workspace.html#GUID-9BE276ED-FF4C-40C6-B03F-2EB8258DE3BE">
+      <meta name="DC.Relation" scheme="URI" content="monitoring-activity-within-a-workspace.html#GUID-E34ED468-EA32-40F1-9B45-353E554E2131">
+      <meta name="DC.Relation" scheme="URI" content="monitoring-activity-within-a-workspace.html#GUID-CAD8A387-5E55-4078-8DD9-AE680EDC44A4">
+      <meta name="DC.Relation" scheme="URI" content="monitoring-activity-within-a-workspace.html#GUID-884AFEF6-BFE2-41C5-92EE-126CF8A40D0D">
+      <meta name="DC.Relation" scheme="URI" content="monitoring-activity-within-a-workspace.html#GUID-2341DA70-B7CB-4473-BC3A-41B492896497">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-2DF3D389-30BA-43A9-AD9A-01F583D1B508">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Monitor developer activity and changes within a workspace by accessing the Monitor Activity page.">
+      <meta name="description" content="Monitor developer activity and changes within a workspace by accessing the Monitor Activity page.">
+      <title>Monitoring Activity Within a Workspace</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Monitor developer activity and changes within a workspace by accessing the Monitor Activity page.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="file-utilization.html" title="Previous" type="text/html">
+      <link rel="next" href="viewing-workspace-dashboards.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Monitoring Activity Within a Workspace","description":"Monitor developer activity and changes within a workspace by accessing the Monitor Activity page.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="file-utilization.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="viewing-workspace-dashboards.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-2DF3D389-30BA-43A9-AD9A-01F583D1B508" name="GUID-2DF3D389-30BA-43A9-AD9A-01F583D1B508"></a><a id="AEADM160"></a><a id="4350:7"></a><a id="4350:8"></a><a id="4350:18"></a><a id="4350:19"></a><a id="4350:22"></a>
+         
+         <h2 id="AEADM-GUID-2DF3D389-30BA-43A9-AD9A-01F583D1B508" class="sect2"><span class="enumeration_section">2.16 </span>Monitoring Activity Within a Workspace
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Monitor developer activity and changes within a workspace by accessing the Monitor Activity page.</p>
+               <p>The Monitor Activity page features links to numerous reports that track page views,
+            developer activity, active sessions and also view page view analysis reports,
+            environment reports such as browser usage and click counts, and login reports. This
+            section only describes a few reports in detail.</p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="monitoring-activity-within-a-workspace.html#GUID-9BE276ED-FF4C-40C6-B03F-2EB8258DE3BE">Accessing the Monitor Activity Page in Workspace Administration</a><br>Use the Monitor Activity page in Workspace Administration to view developer         activity and application change information.
+                  </li>
+                  <li class="ulchildlink"><a href="monitoring-activity-within-a-workspace.html#GUID-E34ED468-EA32-40F1-9B45-353E554E2131">Viewing Application Changes by Developer</a><br>Access the Application Changes by Developer report displays the number of pages changed by each developer and offers a graphical representation of the information in either a bar chart or pie chart format.
+                  </li>
+                  <li class="ulchildlink"><a href="monitoring-activity-within-a-workspace.html#GUID-CAD8A387-5E55-4078-8DD9-AE680EDC44A4">Viewing Application Changes by Day</a><br>Access the Application Changes by Day report displays a summary of the number of application changes by day. You have the option to view this information by month, as a line chart, or by developer.
+                  </li>
+                  <li class="ulchildlink"><a href="monitoring-activity-within-a-workspace.html#GUID-884AFEF6-BFE2-41C5-92EE-126CF8A40D0D">Viewing Active Sessions</a><br>A session is a logical construct that establishes persistence (or stateful behavior) across page views. Use the Active Sessions report to view active sessions in the current workspace.
+                  </li>
+                  <li class="ulchildlink"><a href="monitoring-activity-within-a-workspace.html#GUID-2341DA70-B7CB-4473-BC3A-41B492896497">Viewing Schema Reports and Other Reports</a><br>View reports that summarize of schema tablespace utilization including         Schema Tablespace Utilization, Database Privileges by Schema, Workspace Schemas, Report         Tablespace Utilization, and Web Service Activity Log.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-2DF3D389-30BA-43A9-AD9A-01F583D1B508__GUID-271A3DF3-AFB1-4513-88F6-9A7C116D97EF">
+                  <p class="notep1">See Also:</p>
+                  <ul style="list-style-type: disc;" id="GUID-2DF3D389-30BA-43A9-AD9A-01F583D1B508__UL_QT1_PBB_PQB">
+                     <li><a href="monitoring-activity-across-an-instance.html#GUID-57123911-C427-4C9E-96A7-A91D54A2B9C6" title="Use the links on the Monitor Activity page to access various reports on application, developer, and session activity in all workspaces.">Monitoring Activity Across an Instance</a></li>
+                     <li><a href="viewing-workspace-dashboards.html#GUID-E68D639F-60F2-495E-B74A-99B5E4EA9251" title="Use the Dashboard page to view details about the current workspace and monitor overall workspace activity.">Viewing Workspace Dashboards</a></li>
+                     <li><a href="../htmdb/creating-custom-activity-reports-using-apex_activity_log.html#HTMDB-GUID-DA196DB7-CD10-484F-B034-FF94909AD3F1" target="_blank">Creating Custom Activity Reports Using APEX_ACTIVITY_LOG</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></li>
+                  </ul>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="workspace-and-application-administration.html#GUID-853F40E1-F360-4CE9-8DC1-FC111A825D14" title="In an Oracle APEX development environment, users sign in to a shared work area called a workspace. Workspace administrators monitor and administer a shared work area called a workspace.">Workspace and Application Administration</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="AEADM29135"></a><div class="props_rev_3"><a id="GUID-9BE276ED-FF4C-40C6-B03F-2EB8258DE3BE" name="GUID-9BE276ED-FF4C-40C6-B03F-2EB8258DE3BE"></a><h3 id="AEADM-GUID-9BE276ED-FF4C-40C6-B03F-2EB8258DE3BE" class="sect3"><span class="enumeration_section">2.16.1 </span>Accessing the Monitor Activity Page in
+        Workspace Administration
+               </h3>
+               <div>
+                  <p>Use the Monitor Activity page in Workspace Administration to view developer
+        activity and application change information.</p>
+                  <div class="section">
+                     <p>To access the Monitor Activity page in Workspace Administration:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Workspace Administration page:</span><ol type="a">
+                           <li><span>Sign in to <span>APEX</span>.</span></li>
+                           <li><span>At the top of the Workspace home page, click the <span class="uicontrol bold">Administration</span> menu and select <span class="uicontrol bold">Administration</span>.</span></li>
+                        </ol>
+                        <div>
+                           <p>The Workspace Administration home page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Monitor Activity</span>.</span><div>
+                           <p>The Monitor Activity page appears and is divided into the following sections:</p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-9BE276ED-FF4C-40C6-B03F-2EB8258DE3BE__UL_Q3V_5FV_V4B">
+                              <li>
+                                 
+                                 <p><span class="bold">Page Views</span> - Contains reports of page views
+                                including: By View, By User, By User and Hour, By Application, By
+                                Application and Page, By Day, and By Hour.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="bold">Developer Activity</span> - Offers reports of developer
+                                activity including: By Developer, By Developer Bar Chart, By
+                                Developer by Hour, By Day, By Application, Application Changes
+                                (detailed), By Day (Monthly View), and Component Utilitzation
+                                Chart.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="bold">Sessions</span> - Lists active sessions with the current
+                                workspace such as Active Sessions and Bar Chart of Active Session by
+                                Hour.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="bold">Page View Analysis</span> - Contains reports analyzing
+                                page views, such as Most Viewed Pages over All Applications, Monthly
+                                Calendar of Page Views by Day, Line Chart of Usage by Day, and By
+                                Weighted Page Performance.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="bold">Environment</span> - Contains reports of environments
+                                including By User Agent, By Browser, By External Click, and By
+                                Operating System.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="bold">Login Attempts</span> - Offers reports listing login
+                                attempts such as Login Attempts, Login Attempts by Authentication
+                                Result, and Developer Login Summary.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="bold">Application Errors</span> - Links to the Application
+                                Errors report.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="bold">Workspace Schema Reports and Other Reports</span> - Includes the following reports: Schema Tablespace Utilization, Database Privileges by Schema, Workspace Schemas, Report Tablespace Utilization, Web Service Activity Log, and Archive of Purged Task Files.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="bold">Archived Activity Report </span> - Includes the
+                                following reports: By Application by Month, By Application by Day,
+                                Application Hash by Day, By Application, and Chart of Workspace
+                                Activity by Day.
+                                 </p>
+                                 
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Select a report to review.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="monitoring-activity-within-a-workspace.html#GUID-2DF3D389-30BA-43A9-AD9A-01F583D1B508" title="Monitor developer activity and changes within a workspace by accessing the Monitor Activity page.">Monitoring Activity Within a Workspace</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM162"></a><div class="props_rev_3"><a id="GUID-E34ED468-EA32-40F1-9B45-353E554E2131" name="GUID-E34ED468-EA32-40F1-9B45-353E554E2131"></a><h3 id="AEADM-GUID-E34ED468-EA32-40F1-9B45-353E554E2131" class="sect3"><span class="enumeration_section">2.16.2 </span>Viewing Application Changes by Developer
+               </h3>
+               <div>
+                  <p>Access the Application Changes by Developer report displays the number of pages changed by each developer and offers a graphical representation of the information in either a bar chart or pie chart format.</p>
+                  <div class="section">
+                     <p>To view application changes by developer:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Workspace Administration page:</span><ol type="a">
+                           <li><span>Sign in to <span>APEX</span>.</span></li>
+                           <li><span>At the top of the Workspace home page, click the <span class="uicontrol bold">Administration</span> menu and select <span class="uicontrol bold">Administration</span>.</span></li>
+                        </ol>
+                        <div>
+                           <p>The Workspace Administration home page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Monitor Activity</span>.</span></li>
+                     <li class="stepexpand"><span>Under Developer Activity, select <span class="uicontrol bold">By Developer</span>.</span></li>
+                     <li class="stepexpand"><span>Make a time selection from the Since list, an application (if applicable), and click <span class="bold">Set</span>.</span><div>
+                           <p>You can customize the appearance of the page using the Search bar at the top of the page.</p>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="monitoring-activity-within-a-workspace.html#GUID-2DF3D389-30BA-43A9-AD9A-01F583D1B508" title="Monitor developer activity and changes within a workspace by accessing the Monitor Activity page.">Monitoring Activity Within a Workspace</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM163"></a><div class="props_rev_3"><a id="GUID-CAD8A387-5E55-4078-8DD9-AE680EDC44A4" name="GUID-CAD8A387-5E55-4078-8DD9-AE680EDC44A4"></a><h3 id="AEADM-GUID-CAD8A387-5E55-4078-8DD9-AE680EDC44A4" class="sect3"><span class="enumeration_section">2.16.3 </span>Viewing Application Changes by Day
+               </h3>
+               <div>
+                  <p>Access the Application Changes by Day report displays a summary of the number of application changes by day. You have the option to view this information by month, as a line chart, or by developer.</p>
+                  <div class="section">
+                     <p>To view application changes by day:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Workspace Administration page:</span><ol type="a">
+                           <li><span>Sign in to <span>APEX</span>.</span></li>
+                           <li><span>At the top of the Workspace home page, click the <span class="uicontrol bold">Administration</span> menu and select <span class="uicontrol bold">Administration</span>.</span></li>
+                        </ol>
+                        <div>
+                           <p>The Workspace Administration home page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Monitor Activity</span>.</span></li>
+                     <li class="stepexpand"><span>Under <a id="d17235e536" class="indexterm-anchor"></a>Developer Activity, click <span class="uicontrol bold">By Day</span>.</span><div>
+                           <p>The Application Changes by Day page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Make a time selection from the Since list, an application (if applicable), and click <span class="bold">Set</span>.</span><div>
+                           <p>You can customize the appearance of the page using the Search bar at the top of the page. </p>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="monitoring-activity-within-a-workspace.html#GUID-2DF3D389-30BA-43A9-AD9A-01F583D1B508" title="Monitor developer activity and changes within a workspace by accessing the Monitor Activity page.">Monitoring Activity Within a Workspace</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM164"></a><div class="props_rev_3"><a id="GUID-884AFEF6-BFE2-41C5-92EE-126CF8A40D0D" name="GUID-884AFEF6-BFE2-41C5-92EE-126CF8A40D0D"></a><h3 id="AEADM-GUID-884AFEF6-BFE2-41C5-92EE-126CF8A40D0D" class="sect3"><span class="enumeration_section">2.16.4 </span>Viewing Active Sessions
+               </h3>
+               <div>
+                  <p>A session is a logical construct that establishes persistence (or stateful behavior) across page views. Use the Active Sessions report to view active sessions in the current workspace.</p>
+               </div>
+               <div>
+                  <ul class="ullinks">
+                     <li class="ulchildlink"><a href="monitoring-activity-within-a-workspace.html#GUID-247C7E25-5A04-46AC-BACF-57202B1F966C">What is an Active Session?</a><br>An&nbsp;active session&nbsp;is a session that has not yet been purged from the sessions table.
+                     </li>
+                     <li class="ulchildlink"><a href="monitoring-activity-within-a-workspace.html#GUID-AF838B2A-88EE-47B6-9351-736DA34007B2">Viewing the Active Sessions Report</a><br>View the Session Detail report to review session information and         configure Debug Level and Trace Mode for the an active session.
+                     </li>
+                  </ul>
+                  <div class="infoboxnotealso" id="GUID-884AFEF6-BFE2-41C5-92EE-126CF8A40D0D__GUID-D799FB85-2306-4094-A3D5-FD009BE7FCAE">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="../htmdb/understanding-session-state-management.html#HTMDB-GUID-CE2A38B5-75B7-4C43-ACB0-685E16C6ACF9" target="_blank">Understanding Session State Management</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="monitoring-activity-within-a-workspace.html#GUID-2DF3D389-30BA-43A9-AD9A-01F583D1B508" title="Monitor developer activity and changes within a workspace by accessing the Monitor Activity page.">Monitoring Activity Within a Workspace</a></p>
+                     </div>
+                  </div>
+               </div>
+               <a id="AEADM29136"></a><div class="props_rev_3"><a id="GUID-247C7E25-5A04-46AC-BACF-57202B1F966C" name="GUID-247C7E25-5A04-46AC-BACF-57202B1F966C"></a><h4 id="AEADM-GUID-247C7E25-5A04-46AC-BACF-57202B1F966C" class="sect4"><span class="enumeration_section">2.16.4.1 </span>What is an Active Session?
+                  </h4>
+                  <div>
+                     <p>An&nbsp;active session&nbsp;is a session that has not yet been purged from the sessions table.</p>
+                     <p>Whenever an application is run, the <span>APEX</span> engine maintains a record in a database table in the <span>APEX</span> schema. This table records a numeric identifier (or session ID), the authenticated (or public) user identifier, the creation date, and other information. The session is the key record that enables session state, or persistence, across page requests. By viewing the Active Sessions report, a developer or administrator can see who has been using applications in a workspace. An <span class="bold">active session</span> is a session that has not yet been purged from the sessions table. An <span class="bold">expired session</span> is a session which has been existing longer than its maximum lifetime or which has not been used for longer than its maximum idle time. A DBMS job runs every hour and purges expired sessions.
+                     </p>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="monitoring-activity-within-a-workspace.html#GUID-884AFEF6-BFE2-41C5-92EE-126CF8A40D0D" title="A session is a logical construct that establishes persistence (or stateful behavior) across page views. Use the Active Sessions report to view active sessions in the current workspace.">Viewing Active Sessions</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div><a id="AEADM29137"></a><div class="props_rev_3"><a id="GUID-AF838B2A-88EE-47B6-9351-736DA34007B2" name="GUID-AF838B2A-88EE-47B6-9351-736DA34007B2"></a><h4 id="AEADM-GUID-AF838B2A-88EE-47B6-9351-736DA34007B2" class="sect4"><span class="enumeration_section">2.16.4.2 </span>Viewing the Active Sessions Report
+                  </h4>
+                  <div>
+                     <p>View the Session Detail report to review session information and
+        configure Debug Level and Trace Mode for the an active session.</p>
+                     <p>To view the Session Detail report:</p>
+                     <ol>
+                        <li class="stepexpand"><span>Navigate to the Workspace Administration page:</span><ol type="a">
+                              <li><span>Sign in to <span>APEX</span>.</span></li>
+                              <li><span>At the top of the Workspace home page, click the <span class="uicontrol bold">Administration</span> menu and select <span class="uicontrol bold">Administration</span>.</span></li>
+                           </ol>
+                           <div>
+                              <p>The Workspace Administration home page appears.</p>
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Monitor Activity</span>.</span></li>
+                        <li class="stepexpand"><span>Under Sessions, select <span class="uicontrol bold">Active Sessions</span>.</span><div>
+                              <p>You can customize the appearance of the page using the Search bar at the top of the page.</p>
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Click a session ID to view the Session Details page.</span><div>Use the Session Detail page to inspect session information and
+                    control and configure Debug mode.</div>
+                        </li>
+                        <li class="stepexpand"><span>Session Attributes - View active session attributes. Configurable attributes
+                    include:</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-AF838B2A-88EE-47B6-9351-736DA34007B2__UL_HQP_LWM_D2C">
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Enable Debug</span> - Enable and disable
+                                Debug mode. Options include: 
+                                    </p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-AF838B2A-88EE-47B6-9351-736DA34007B2__UL_FHG_TXQ_PSB">
+                                       <li><span class="uicontrol bold">Disabled</span>  - Disables Debug
+                                    mode.
+                                       </li>
+                                       <li><span class="uicontrol bold">Error</span> (LEVEL1) - Logs error
+                                    messages.
+                                       </li>
+                                       <li><span class="uicontrol bold">Warn</span> (LEVEL2)  - Logs warning
+                                    messages.
+                                       </li>
+                                       <li><span class="uicontrol bold">Info</span> (LEVEL4) - Logs
+                                    informational messages. This is the default level when debugging
+                                    is enabled but not set to a specific level.
+                                       </li>
+                                       <li><span class="uicontrol bold">Application Enter</span> (LEVEL5) -
+                                    Logs messages when entering (starting) and leaving (finishing)
+                                    specific methods and operations specific to the
+                                    application.
+                                       </li>
+                                       <li><span class="uicontrol bold">Application Trace</span> (LEVEL6) -
+                                    Logs detailed information about methods and operations specific
+                                    to the application.
+                                       </li>
+                                       <li><span class="uicontrol bold">APEX Enter</span> (LEVEL8) - Logs
+                                    messages when entering (starting) and leaving (finishing)
+                                    specific methods and operations from the <span>APEX</span> engine.
+                                       </li>
+                                       <li><span class="uicontrol bold">APEX Trace</span> (LEVEL9) - Logs
+                                    detailed information about methods and operations from the <span>APEX</span> engine.
+                                          <div class="infoboxnote" id="GUID-AF838B2A-88EE-47B6-9351-736DA34007B2__GUID-2FB03997-F036-4193-8302-F7A6374FA766">
+                                             <p class="notep1">Note:</p><span>APEX</span> engine will generate a substantial amount of messages at
+                                        higher debug levels, which will impact application
+                                        performance and require more time to review and analyze.
+                                        Oracle recommends debugging applications at the
+                                            <span class="bold">Application Trace (LEVEL6)</span> level or lower unless
+                                        directed by Oracle Support.
+                                          </div>
+                                       </li>
+                                    </ul>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Trace Mode - Options include:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-AF838B2A-88EE-47B6-9351-736DA34007B2__UL_LJB_GZM_D2C">
+                                       <li><span class="bold">Disabled</span> - Disables Trace mode.
+                                       </li>
+                                       <li><span class="uicontrol bold">SQL Trace</span> - Creates a
+                                    temporary file you can then analyze using the TKPROF
+                                        utility.
+                                       </li>
+                                    </ul>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span> to update the session.</span></li>
+                        <li class="stepexpand"><span>The Session Details report includes the following additional session
+                    information:</span><div>
+                              
+                              
+                              <ul style="list-style-type: disc;" id="GUID-AF838B2A-88EE-47B6-9351-736DA34007B2__UL_JMW_VPN_D2C">
+                                 <li>Page Views</li>
+                                 <li>Background Processing</li>
+                                 <li>Session State Item Values</li>
+                                 <li>Browser Information</li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="monitoring-activity-within-a-workspace.html#GUID-884AFEF6-BFE2-41C5-92EE-126CF8A40D0D" title="A session is a logical construct that establishes persistence (or stateful behavior) across page views. Use the Active Sessions report to view active sessions in the current workspace.">Viewing Active Sessions</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div><a id="AEADM145"></a><div class="props_rev_3"><a id="GUID-2341DA70-B7CB-4473-BC3A-41B492896497" name="GUID-2341DA70-B7CB-4473-BC3A-41B492896497"></a><h3 id="AEADM-GUID-2341DA70-B7CB-4473-BC3A-41B492896497" class="sect3"><span class="enumeration_section">2.16.5 </span>Viewing Schema Reports and Other
+        Reports
+               </h3>
+               <div>
+                  <p>View reports that summarize of schema tablespace utilization including
+        Schema Tablespace Utilization, Database Privileges by Schema, Workspace Schemas, Report
+        Tablespace Utilization, and Web Service Activity Log.</p>
+                  <div class="section">
+                     <p>To view Schema Reports:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Workspace Administration page:</span><ol type="a">
+                           <li><span>Sign in to <span>APEX</span>.</span></li>
+                           <li><span>At the top of the Workspace home page, click the <span class="uicontrol bold">Administration</span> menu and select <span class="uicontrol bold">Administration</span>.</span></li>
+                        </ol>
+                        <div>
+                           <p>The Workspace Administration home page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Monitor Activity</span>.</span></li>
+                     <li class="stepexpand"><span>Under Workspace Schema &amp; Other Reports, click one of the following
+                    reports:</span><div>
+                           
+                           <ul style="list-style-type: disc;">
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Schema Tablespace Utilization</span></p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Database Privileges by Schema</span></p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Workspace Schemas</span></p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Report Tablespace Utilization</span>
+                                (popup)
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Web Service Activity Log</span></p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Archive of Purged Task Files</span></p>
+                                 
+                              </li>
+                           </ul>
+                           
+                        </div>
+                        <div>
+                           
+                           <div class="infoboxnote" id="GUID-2341DA70-B7CB-4473-BC3A-41B492896497__GUID-F1F0D52C-044E-4364-AD33-37CC7C8F0695">
+                              <p class="notep1">Note:</p>
+                              
+                              <p>With the exception of Report Tablespace Utilization, you can
+                            search or customize the reports using the Search bar and Actions menu at
+                            the top of the page.</p>
+                              
+                           </div>
+                           
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="monitoring-activity-within-a-workspace.html#GUID-2DF3D389-30BA-43A9-AD9A-01F583D1B508" title="Monitor developer activity and changes within a workspace by accessing the Monitor Activity page.">Monitoring Activity Within a Workspace</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

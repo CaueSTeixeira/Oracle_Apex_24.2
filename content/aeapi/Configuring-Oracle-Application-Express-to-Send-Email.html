@@ -1,0 +1,114 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Configuring Oracle APEX to Send Email">
+      <meta name="DC.Relation" scheme="URI" content="APEX_MAIL.html#GUID-14F51C6D-CB82-4B38-AB6E-61C46E75596F">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-596E11FE-9289-4238-A3CA-D33F508E40F7">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Configuring Oracle APEX to Send Email</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_MAIL.html" title="Previous" type="text/html">
+      <link rel="next" href="ADD_ATTACHMENT-Procedure-Signature-1.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Configuring Oracle APEX to Send Email","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_MAIL.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="ADD_ATTACHMENT-Procedure-Signature-1.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-596E11FE-9289-4238-A3CA-D33F508E40F7" name="GUID-596E11FE-9289-4238-A3CA-D33F508E40F7"></a><a id="AEAPI1190"></a>
+         
+         <h2 id="AEAPI-GUID-596E11FE-9289-4238-A3CA-D33F508E40F7" class="sect2"><span class="enumeration_section">41.1 </span>Configuring <span>Oracle APEX</span> to Send Email
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>Before you can send email from an <span>App Builder</span> application, you must:
+                  </p>
+               </div>
+               <ol id="GUID-596E11FE-9289-4238-A3CA-D33F508E40F7__STEPS_M1Q_PMB_BNB">
+                  <li class="stepexpand"><span>Log in to <span>APEX</span> Administration Services and configure the email settings on the Instance Settings page. See <a href="../aeadm/configuring-email.html#AEADM-GUID-FEC98D5E-3C89-423E-9603-4CD2E553BA34" target="_blank">Configuring Email</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span>.</span></li>
+                  <li class="stepexpand"><span>Enable network services that are disabled by default in Oracle Database 11<span class="italic">g</span> release 2 (11.2) and newer. See Enabling Network Service in Oracle Database 11<span class="italic">g</span> in <a href="../htmdb/enabling-network-services.html#HTMDB-GUID-8D125731-989A-4A51-AFFE-00181729F87F" target="_blank">Enabling Network Services in Oracle Database 11g or Later</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span>.</span><div>
+                        <div class="infobox-tip" id="GUID-596E11FE-9289-4238-A3CA-D33F508E40F7__GUID-EEE20CD9-3C07-422D-83FF-CA931756FCF3">
+                           <p class="notep1">Tip:</p>
+                           <p>You can configure  <span>APEX</span> to automatically email users their login credentials when a new workspace request has been approved. To learn more, see <a href="../aeadm/creating-workspaces.html#AEADM-GUID-529BB1CB-E6A6-46B2-BCCB-E28062DE1039" target="_blank">Selecting a Provisioning Mode</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span>.
+                           </p>
+                        </div>
+                     </div>
+                  </li>
+               </ol>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_MAIL.html#GUID-14F51C6D-CB82-4B38-AB6E-61C46E75596F">APEX_MAIL</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

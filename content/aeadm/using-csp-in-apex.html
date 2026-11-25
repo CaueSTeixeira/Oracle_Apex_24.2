@@ -1,0 +1,305 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Using Content Security Policy (CSP) in APEX">
+      <meta name="abstract" content="Learn how to configure CSP for an application.">
+      <meta name="description" content="Learn how to configure CSP for an application.">
+      <meta name="DC.subject" content="security settings, using Content Security Policy (CSP), Content Security Policy (CSP), using, enabling Content Security Policy (CSP), enabling for app, CSP header, Content-Security-Policy, Content-Security-Policy-Report-Only, supported substitution strings">
+      <meta name="keywords" content="security settings, using Content Security Policy (CSP), Content Security Policy (CSP), using, enabling Content Security Policy (CSP), enabling for app, CSP header, Content-Security-Policy, Content-Security-Policy-Report-Only, supported substitution strings">
+      <meta name="DC.Relation" scheme="URI" content="configuring-content-security-policy-csp.html#GUID-B82B66C4-84AF-40DF-ABF1-F0910F35E6E1">
+      <meta name="DC.Relation" scheme="URI" content="using-csp-in-apex.html#GUID-33F108FA-4759-4D1B-B7CD-C71BE1740B44">
+      <meta name="DC.Relation" scheme="URI" content="using-csp-in-apex.html#GUID-6FBFE2EE-F421-4708-AD10-96F4816ABC71">
+      <meta name="DC.Relation" scheme="URI" content="using-csp-in-apex.html#GUID-3FC15932-F504-4CC5-A38C-EF82138BD84A">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="template" content="Topic">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-FE0C8DA2-B654-423D-ABCE-D164BD3F0C20">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn how to configure CSP for an application.">
+      <meta name="description" content="Learn how to configure CSP for an application.">
+      <title>Using Content Security Policy (CSP) in APEX</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Learn how to configure CSP for an application.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="what-is-a-nonce.html" title="Previous" type="text/html">
+      <link rel="next" href="understanding-the-csp-header.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Using Content Security Policy (CSP) in APEX","description":"Learn how to configure CSP for an application.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="what-is-a-nonce.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="understanding-the-csp-header.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-FE0C8DA2-B654-423D-ABCE-D164BD3F0C20" name="GUID-FE0C8DA2-B654-423D-ABCE-D164BD3F0C20"></a>
+         
+         <h2 id="AEADM-GUID-FE0C8DA2-B654-423D-ABCE-D164BD3F0C20" class="sect2"><span class="enumeration_section">3.4.3.4 </span>Using Content Security Policy (CSP) in <span>APEX</span></h2>
+         <div class="ind">
+            <div>
+               <p>Learn how to configure CSP for an application.</p>
+               <p><span>APEX</span> supports CSP through the use of HTTP response headers. Enabling CSP at the
+            application-level ensures that your entire application adheres to strict resource
+            loading rules, helping you build more secure and robust applications.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="using-csp-in-apex.html#GUID-33F108FA-4759-4D1B-B7CD-C71BE1740B44">Enabling CSP in an Application</a><br>Enable CSP for an application by editing Security Attributes.
+                  </li>
+                  <li class="ulchildlink"><a href="using-csp-in-apex.html#GUID-6FBFE2EE-F421-4708-AD10-96F4816ABC71">About Content Security Policy (CSP) Headers</a><br>Learn about <code class="codeph">Content-Security-Policy</code> and                         <code class="codeph">Content-Security-Policy-Report-Only</code> headers.
+                  </li>
+                  <li class="ulchildlink"><a href="using-csp-in-apex.html#GUID-3FC15932-F504-4CC5-A38C-EF82138BD84A">Supported Substitution Strings</a><br>Learn about supported substitution strings for CSP headers.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="configuring-content-security-policy-csp.html#GUID-B82B66C4-84AF-40DF-ABF1-F0910F35E6E1" title="Learn about how Content Security Policy (CSP) can help prevent or minimize the risk of certain types of security threats.">Configuring Content Security Policy (CSP)</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-33F108FA-4759-4D1B-B7CD-C71BE1740B44" name="GUID-33F108FA-4759-4D1B-B7CD-C71BE1740B44"></a><h3 id="AEADM-GUID-33F108FA-4759-4D1B-B7CD-C71BE1740B44" class="sect3"><span class="enumeration_section">3.4.3.4.1 </span>Enabling CSP in an Application 
+               </h3>
+               <div>
+                  <p>Enable CSP for an application by editing Security Attributes.</p>
+                  <div class="section">
+                     
+                     <p><span>Oracle APEX</span> supports CSP through the use of HTTP response headers. Enabling CSP at the
+                application-level ensures that your entire application adheres to strict resource
+                loading rules, helping you build more secure and robust applications. 
+                     </p>
+                     
+                  </div>
+                  <p>To enable CSP in an <span>APEX</span> application:
+                  </p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Select an application.</span><div>The Application home page appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>From the Application home page, you can access the Security page in two
+                    ways:</span><ul id="GUID-33F108FA-4759-4D1B-B7CD-C71BE1740B44__CHOICES_R24_YLT_DFC">
+                           <li><span class="uicontrol bold">Edit Application Definition</span>
+                            button:
+                              <ol type="a" id="GUID-33F108FA-4759-4D1B-B7CD-C71BE1740B44__OL_XN4_4QX_MSB">
+                                 <li>
+                                    
+                                    <p>Click <span class="uicontrol bold">Edit Application
+                                        Definition</span> to the right of the application
+                                    name.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Click the <span class="uicontrol bold">Security</span> tab.
+                                    </p>
+                                    
+                                 </li>
+                              </ol>
+                           </li>
+                           <li>From Shared Components:
+                              <ol type="a" id="GUID-33F108FA-4759-4D1B-B7CD-C71BE1740B44__OL_CQF_ZLT_DFC">
+                                 <li>
+                                    
+                                    <p>Click <span class="uicontrol bold">Shared Components</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Under Security, click <span class="uicontrol bold">Security
+                                        Attributes</span>.
+                                    </p>
+                                    
+                                 </li>
+                              </ol>
+                           </li>
+                        </ul>
+                        <div>
+                           
+                           <p>The Edit Security Attributes page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Browser Security, HTTP Response Headers - Enter additional application specific
+                    HTTP headers that <span>APEX</span> should send on each response and that it does not support in another way.
+                    Choose between one of the following:</span><div>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-33F108FA-4759-4D1B-B7CD-C71BE1740B44__UL_RWN_DNT_DFC">
+                              <li>
+                                 
+                                 <p><code class="codeph">Content-Security-Policy</code> - Enforces the security
+                                policy and blocks any resources or actions that do not comply with
+                                the rules. Violations will result in blocked content, ensuring the
+                                application follows security best practices.
+                                 </p>
+                                 <pre class="pre codeblock"><code>Content-Security-Policy: default-src 'self' #APEX_CSP_NONCE# 'unsafe-hashes' #APEX_CSP_HASHES#; object-src 'none'; img-src 'self' data:;</code></pre>
+                                 </li>
+                              <li>
+                                 
+                                 <p><code class="codeph">Content-Security-Policy-Report-Only</code> - Allows you to
+                                test your CSP settings without enforcing them. Instead of blocking
+                                violations, reports are generated, allowing you to monitor issues
+                                without disrupting the application. This header is ideal for testing
+                                and refining your policy before enforcing it in production.
+                                 </p>
+                                 <pre class="pre codeblock"><code>Content-Security-Policy-Report-Only: default-src 'self' #APEX_CSP_NONCE# 'unsafe-hashes' #APEX_CSP_HASHES#; object-src 'none'; img-src 'self' data:;</code></pre>
+                                 </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="using-csp-in-apex.html#GUID-FE0C8DA2-B654-423D-ABCE-D164BD3F0C20" title="Learn how to configure CSP for an application.">Using Content Security Policy (CSP) in APEX</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-6FBFE2EE-F421-4708-AD10-96F4816ABC71" name="GUID-6FBFE2EE-F421-4708-AD10-96F4816ABC71"></a><h3 id="AEADM-GUID-6FBFE2EE-F421-4708-AD10-96F4816ABC71" class="sect3"><span class="enumeration_section">3.4.3.4.2 </span>About Content Security Policy (CSP)
+                Headers
+               </h3>
+               <div>
+                  <p>Learn about <code class="codeph">Content-Security-Policy</code> and
+                        <code class="codeph">Content-Security-Policy-Report-Only</code> headers.
+                  </p>
+                  <p>When implementing Content Security Policy (CSP) header, you can
+                        choose between <code class="codeph">Content-Security-Policy</code> and
+                                <code class="codeph">Content-Security-Policy-Report-Only</code> headers.
+                  </p>
+                  <p>Once you add a CSP header:</p>
+                  <ul style="list-style-type: disc;" id="GUID-6FBFE2EE-F421-4708-AD10-96F4816ABC71__UL_JQN_GNT_DFC">
+                     <li>
+                        
+                        <p>CSP is applied globally across your application.</p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>Only resources that match the specified policy are allowed to
+                                        load.</p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>Any scripts or resources that are not explicitly permitted (for
+                                        example, inline scripts without the proper nonce/hash) are
+                                        blocked by the browser.</p>
+                        
+                        <div class="infobox-tip" id="GUID-6FBFE2EE-F421-4708-AD10-96F4816ABC71__GUID-DF76138C-2416-40FC-B8DC-6883C5750CB3">
+                           <p class="notep1">Tip:</p>This may initially cause certain features (or
+                                        plug-ins) to break if they are not CSP-compliant, so testing
+                                        and adaptation may be required.
+                        </div>
+                        
+                     </li>
+                  </ul>
+                  <p>By enabling CSP, you are taking an important step toward hardening
+                        your application against client-side attacks. It enforces best practices and
+                        ensures that your codebase remains clean, secure, and trustworthy. </p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="using-csp-in-apex.html#GUID-FE0C8DA2-B654-423D-ABCE-D164BD3F0C20" title="Learn how to configure CSP for an application.">Using Content Security Policy (CSP) in APEX</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-3FC15932-F504-4CC5-A38C-EF82138BD84A" name="GUID-3FC15932-F504-4CC5-A38C-EF82138BD84A"></a><h3 id="AEADM-GUID-3FC15932-F504-4CC5-A38C-EF82138BD84A" class="sect3"><span class="enumeration_section">3.4.3.4.3 </span>Supported Substitution Strings 
+               </h3>
+               <div>
+                  <p>Learn about supported substitution strings for CSP headers.</p>
+                  <p>Available substitution strings for CSP header include:</p>
+                  <ul style="list-style-type: disc;" id="GUID-3FC15932-F504-4CC5-A38C-EF82138BD84A__UL_BTQ_QH3_2FC">
+                     <li><code class="codeph">#APEX_CSP_NONCE#</code> - Used for the HTTP header and
+                resolves to the current page request nonce value (for example,
+                    <code class="codeph">'nonce-random123'</code>. Used for allowing inline scripts and styles
+                with a nonce.
+                     </li>
+                     <li><code class="codeph">#APEX_CSP_HASHES#</code> - Resolves to the hashes of approved
+                inline scripts or styles. 
+                     </li>
+                     <li><code class="codeph">#APEX_DISPLAY_NONE#</code> - Resolves to <code class="codeph">display: none</code> to
+                hide elements dynamically. Commonly used to manage visibility before content is
+                fully loaded.
+                     </li>
+                     <li><code class="codeph">#APEX_CSP_NONCE_ATTRIBUTE#</code> - The html attribute containing the
+                nonce value (for example, <code class="codeph">nonce="random123"</code>.
+                     </li>
+                     <li><code class="codeph">#APEX_CSP_NONCE_VALUE#</code> - The exact nonce value.
+                     </li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="using-csp-in-apex.html#GUID-FE0C8DA2-B654-423D-ABCE-D164BD3F0C20" title="Learn how to configure CSP for an application.">Using Content Security Policy (CSP) in APEX</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

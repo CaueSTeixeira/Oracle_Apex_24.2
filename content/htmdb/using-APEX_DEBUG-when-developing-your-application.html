@@ -1,0 +1,274 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Using APEX_DEBUG When Developing Your Application">
+      <meta name="abstract" content="Learn about APIs in the APEX_DEBUG package.">
+      <meta name="description" content="Learn about APIs in the APEX_DEBUG package.">
+      <meta name="DC.subject" content="debug messages, APEX_DEBUG API, debugging, enabling, disabling, APEX_DEBUG, ENABLE, DISABLE, enabling for a session, disabling for a session, SET_DEBUG, sever-side logging, client-side logging">
+      <meta name="keywords" content="debug messages, APEX_DEBUG API, debugging, enabling, disabling, APEX_DEBUG, ENABLE, DISABLE, enabling for a session, disabling for a session, SET_DEBUG, sever-side logging, client-side logging">
+      <meta name="DC.Relation" scheme="URI" content="utilizing-debug-mode.html#GUID-65F66F2B-ADCB-41B2-8EEE-3B7D7603F50C">
+      <meta name="DC.Relation" scheme="URI" content="using-APEX_DEBUG-when-developing-your-application.html#GUID-5AB37473-A08E-495C-8ED0-93F5CE5DB813">
+      <meta name="DC.Relation" scheme="URI" content="using-APEX_DEBUG-when-developing-your-application.html#GUID-C632F5B7-C43B-4D27-A99D-6742163D0486">
+      <meta name="DC.Relation" scheme="URI" content="using-APEX_DEBUG-when-developing-your-application.html#GUID-35A187D7-6355-4961-9257-D6BA0DECBCFE">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Topic">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-5EC1F202-EC12-4FD1-B004-C56A3C490CCD">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about APIs in the APEX_DEBUG package.">
+      <meta name="description" content="Learn about APIs in the APEX_DEBUG package.">
+      <title>Using APEX_DEBUG When Developing Your Application</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Learn about APIs in the APEX_DEBUG package.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="viewing-debug-messages.html" title="Previous" type="text/html">
+      <link rel="next" href="removing-controls-and-components-to-isolate-a-problem.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Using APEX_DEBUG When Developing Your Application","description":"Learn about APIs in the APEX_DEBUG package.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="viewing-debug-messages.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="removing-controls-and-components-to-isolate-a-problem.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-5EC1F202-EC12-4FD1-B004-C56A3C490CCD" name="GUID-5EC1F202-EC12-4FD1-B004-C56A3C490CCD"></a>
+         
+         <h2 id="HTMDB-GUID-5EC1F202-EC12-4FD1-B004-C56A3C490CCD" class="sect2"><span class="enumeration_section">24.2.9 </span>Using APEX_DEBUG When Developing Your
+        Application
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Learn about APIs in the <code class="codeph">APEX_DEBUG</code> package.
+               </p>
+               <p>The <code class="codeph">APEX_DEBUG</code> package contains APIs that you can utilize
+            when developing your application and add application-specific debug messages to the <span>APEX</span> Debug Log. Custom application debug messages will be recorded alongside messages
+            emitted by the <span>APEX</span> engine.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="using-APEX_DEBUG-when-developing-your-application.html#GUID-5AB37473-A08E-495C-8ED0-93F5CE5DB813">Programmatically Enabling or Disabling Debugging for a Call</a><br>Learn about enabling or disabling debugging for a call.
+                  </li>
+                  <li class="ulchildlink"><a href="using-APEX_DEBUG-when-developing-your-application.html#GUID-C632F5B7-C43B-4D27-A99D-6742163D0486">Programmatically Enabling or Disabling Debugging for a Specific Session</a><br>Learn about enabling or disabling debugging on a specific session. 
+                  </li>
+                  <li class="ulchildlink"><a href="using-APEX_DEBUG-when-developing-your-application.html#GUID-35A187D7-6355-4961-9257-D6BA0DECBCFE">Logging Messages</a><br>Learn about sever-side and client-side logging.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="utilizing-debug-mode.html#GUID-65F66F2B-ADCB-41B2-8EEE-3B7D7603F50C" title="Use Debug mode to track down unexpected application behavior.">Utilizing Debug Mode</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-5AB37473-A08E-495C-8ED0-93F5CE5DB813" name="GUID-5AB37473-A08E-495C-8ED0-93F5CE5DB813"></a><h3 id="HTMDB-GUID-5AB37473-A08E-495C-8ED0-93F5CE5DB813" class="sect3"><span class="enumeration_section">24.2.9.1 </span>Programmatically Enabling or Disabling
+        Debugging for a Call
+               </h3>
+               <div>
+                  <p>Learn about enabling or disabling debugging for a call.</p>
+                  <div class="section">
+                     <p>You can use the following methods to enable or disable debugging:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-5AB37473-A08E-495C-8ED0-93F5CE5DB813__UL_CBL_CBX_22C">
+                        <li><code class="codeph">APEX_DEBUG.ENABLE</code> - This procedure enables debug
+                    messaging. You can specify the types of debug messages that are logged by level
+                    of importance.
+                        </li>
+                        <li><code class="codeph">APEX_DEBUG.DISABLE</code> - This procedure disables debug
+                    messaging.
+                        </li>
+                     </ul>
+                     
+                     <p>Note you only need to call <code class="codeph">APEX_DEBUG.ENABLE</code> once to
+                enable debugging for the duration of the <span>APEX</span> request.
+                     </p>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-5AB37473-A08E-495C-8ED0-93F5CE5DB813__GUID-3A3D1578-3CF9-4F8B-8B36-214E288975F3">
+                     <p class="notep1">See Also:</p><a href="../aeapi/APEX_DEBUG-ENABLE-Procedure.html#AEAPI-GUID-EFBF6BEB-2BE4-4AC2-9C89-B4CD4867394A" target="_blank">ENABLE Procedure</a> and <a href="../aeapi/DISABLE-Procedure.html#AEAPI-GUID-761FDBC4-3140-430B-AA83-C24D219E769B" target="_blank">DISABLE Procedure</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span>.
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="using-APEX_DEBUG-when-developing-your-application.html#GUID-5EC1F202-EC12-4FD1-B004-C56A3C490CCD" title="Learn about APIs in the APEX_DEBUG package.">Using APEX_DEBUG When Developing Your Application</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-C632F5B7-C43B-4D27-A99D-6742163D0486" name="GUID-C632F5B7-C43B-4D27-A99D-6742163D0486"></a><h3 id="HTMDB-GUID-C632F5B7-C43B-4D27-A99D-6742163D0486" class="sect3"><span class="enumeration_section">24.2.9.2 </span>Programmatically Enabling or Disabling Debugging for a Specific Session
+               </h3>
+               <div>
+                  <p>Learn about enabling or disabling debugging on a specific session. </p>
+                  <div class="section">
+                     
+                     <p>You can use <code class="codeph">APEX_SESSION.SET_DEBUG</code> to enable or disable debugging on
+                a specific session. This is useful when debugging issues only reproducible for other
+                users. Note that the higher the debug level, the more resources pages will consume
+                to be rendered and pages will noticeable slow down.
+                     </p>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-C632F5B7-C43B-4D27-A99D-6742163D0486__GUID-221946ED-733C-451B-89D4-7073041B762D">
+                     <p class="notep1">See Also:</p><a href="../aeapi/SET_DEBUG-Procedure.html#AEAPI-GUID-9E5FC479-1B37-4B77-B992-E82720CB95FE" target="_blank">SET_DEBUG Procedure</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span>.
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="using-APEX_DEBUG-when-developing-your-application.html#GUID-5EC1F202-EC12-4FD1-B004-C56A3C490CCD" title="Learn about APIs in the APEX_DEBUG package.">Using APEX_DEBUG When Developing Your Application</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-35A187D7-6355-4961-9257-D6BA0DECBCFE" name="GUID-35A187D7-6355-4961-9257-D6BA0DECBCFE"></a><h3 id="HTMDB-GUID-35A187D7-6355-4961-9257-D6BA0DECBCFE" class="sect3"><span class="enumeration_section">24.2.9.3 </span>Logging Messages
+               </h3>
+               <div>
+                  <p>Learn about sever-side and client-side logging.</p>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-35A187D7-6355-4961-9257-D6BA0DECBCFE__GUID-72E722CD-14D1-47C7-9F46-E521F43C7FE5">Server-side Logging</p>
+                     
+                     
+                     <p>You can use the following APIs to aid with debugging your application.
+                You can use these APIs in application components such as processes and dynamic
+                content regions as well as in your PL/SQL packages. These APIs will record debug
+                information only when debugging is enabled for given APEX session or at the APEX
+                instance level.</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-35A187D7-6355-4961-9257-D6BA0DECBCFE__UL_QTB_4JX_22C">
+                        <li><code class="codeph">APEX_DEBUG.ERROR</code> - Logs messages on LEVEL1. It can be used to
+                    log unrecoverable application error messages to the debug log.
+                        </li>
+                        <li><code class="codeph">APEX_DEBUG.WARN</code> - Logs messages on LEVEL2. It can
+                    be used to log recoverable application error messages to the debug log.
+                        </li>
+                        <li><code class="codeph">APEX_DEBUG.INFO</code> - Logs messages on LEVEL4. It can be used to
+                    log messages about the status of a process or operation to the debug log.
+                        </li>
+                        <li><code class="codeph">APEX_DEBUG.ENTER</code> - Logs messages on LEVEL5. It is used to log
+                    the names and parameters of methods that are "entered" and is tyìcally found to
+                    be the first statement in a procedure's or function's begin block
+                        </li>
+                        <li><code class="codeph">APEX_DEBUG.TRACE</code> - Logs messages on LEVEL6. It is used to log
+                    very detailed information about a process or operation to the debug log.
+                        </li>
+                     </ul>
+                     
+                     <p>If you want to log a debug message at a debug level that is not known until runtime,
+                use the general <code class="codeph">APEX_DEBUG.MESSAGE</code> procedure. If you want to log a
+                message that is longer than 4,000 characters, use
+                    <code class="codeph">APEX_DEBUG.LOG_LONG_MESSAGE</code> procedure.
+                     </p>
+                     
+                     <p>To view or query the collected custom debug messages, see <a href="viewing-debug-messages.html#GUID-C0E175E6-12CD-4C34-9FE5-65E89BF50288" title="Learn about viewing debug messages.">Viewing Debug Messages</a>.
+                     </p>
+                     
+                     <div class="infoboxnotealso" id="GUID-35A187D7-6355-4961-9257-D6BA0DECBCFE__GUID-0DD584DE-0012-48E5-A6F1-11F38E074ABB">
+                        <p class="notep1">See Also:</p><a href="../aeapi/APEX_DEBUG.html#AEAPI-GUID-8E80E46E-CCEF-4CCC-8D00-8EC3A5C36FDE" target="_blank">APEX_DEBUG</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></div>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-35A187D7-6355-4961-9257-D6BA0DECBCFE__GUID-AB90CD2C-456B-4CAB-8333-51BEDF28B646">Client-side Logging</p>
+                     
+                     
+                     <p>You can also use the <code class="codeph">apex.debug</code> JavaScript API to instrument your
+                JavaScript code so that messages can show in the browser developer console only when
+                the appropriate debug level is set. For example, you can incorporate
+                    <cite>apex.debug</cite> calls in your JavaScript code that is executed from
+                Dynamic Actions.See apex.debug in the APEX JavaScript APIs Documentation (Link)
+                     </p>
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-35A187D7-6355-4961-9257-D6BA0DECBCFE__GUID-4057B424-4B4A-4776-940A-219904D710A5">
+                     <p class="notep1">See Also:</p><a href="../aexjs/apex.debug.html" target="_blank">apex.debug</a> in the <span><cite>Oracle APEX JavaScript
+                                        API Reference</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="using-APEX_DEBUG-when-developing-your-application.html#GUID-5EC1F202-EC12-4FD1-B004-C56A3C490CCD" title="Learn about APIs in the APEX_DEBUG package.">Using APEX_DEBUG When Developing Your Application</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

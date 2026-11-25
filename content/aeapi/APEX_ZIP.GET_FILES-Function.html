@@ -1,0 +1,191 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="GET_FILES Function (Deprecated)">
+      <meta name="DC.subject" content="GET_FILES function, APEX_ZIP">
+      <meta name="keywords" content="GET_FILES function, APEX_ZIP">
+      <meta name="DC.Relation" scheme="URI" content="APEX_ZIP.html#GUID-270BFF3A-5FB1-4089-894E-978608F9BD87">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-04C49D54-E547-42CC-8A70-E400D14FB5D6">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>GET_FILES Function (Deprecated)</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_ZIP.GET_FILE_CONTENT-Function-Signature-2.html" title="Previous" type="text/html">
+      <link rel="next" href="JavaScript-APIs.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"GET_FILES Function (Deprecated)","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_ZIP.GET_FILE_CONTENT-Function-Signature-2.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="JavaScript-APIs.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-04C49D54-E547-42CC-8A70-E400D14FB5D6" name="GUID-04C49D54-E547-42CC-8A70-E400D14FB5D6"></a>
+         
+         <h2 id="AEAPI-GUID-04C49D54-E547-42CC-8A70-E400D14FB5D6" class="sect2"><span class="enumeration_section">62.7 </span>GET_FILES Function (Deprecated)
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <div class="infobox-caution" id="GUID-04C49D54-E547-42CC-8A70-E400D14FB5D6__GUID-22C5BF9C-D42F-4B3E-8CB2-E32733C153AC">
+                     <p class="notep1">Caution:</p>
+                     <p>This API is deprecated and will be
+                                        removed in a future release.</p>
+                     <p>Use <a href="APEX_ZIP.GET_DIR_ENTRIES-Function.html#GUID-9AE91D64-2EF6-468B-BD5B-DE218EF282FA">GET_DIR_ENTRIES Function</a> instead.
+                     </p>
+                  </div>
+                  <p>This function returns an array of file names, including the path, of a provided zip file that contains a BLOB.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-04C49D54-E547-42CC-8A70-E400D14FB5D6__GUID-925378D3-370C-4AE3-BE51-0E53BE32706B">Syntax</p><pre class="pre codeblock"><code>APEX_ZIP.GET_FILES (
+    p_zipped_blob IN BLOB,
+    p_only_files  IN BOOLEAN DEFAULT TRUE,
+    p_encoding    IN VARCHAR2 DEFAULT NULL )
+RETURN t_files;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-04C49D54-E547-42CC-8A70-E400D14FB5D6__GUID-E9255932-AB14-4080-A1E9-ED77C67F424F">Parameters</p>
+                  <div class="tblformal" id="GUID-04C49D54-E547-42CC-8A70-E400D14FB5D6__GUID-A2C61818-DC4D-412E-A8E0-0E012C5B7744">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="31%" id="d309001e77">Parameter</th>
+                              <th align="left" valign="bottom" width="69%" id="d309001e79">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d309001e83" headers="d309001e77 "><code class="codeph">p_zipped_blob</code></td>
+                              <td align="left" valign="top" width="69%" headers="d309001e83 d309001e79 ">This is the zip file containing the BLOB.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d309001e89" headers="d309001e77 "><code class="codeph">p_only_files</code></td>
+                              <td align="left" valign="top" width="69%" headers="d309001e89 d309001e79 ">If set to <code class="codeph">TRUE</code>, empty directory entries are not included in the returned array. Otherwise, set to <code class="codeph">FALSE</code> to include empty directory entries.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d309001e101" headers="d309001e77 "><code class="codeph">p_encoding</code></td>
+                              <td align="left" valign="top" width="69%" headers="d309001e101 d309001e79 ">This is the encoding used to zip the file.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-04C49D54-E547-42CC-8A70-E400D14FB5D6__GUID-0484678C-F100-4FA2-8F32-215D80D2A99D">Returns</p>
+               </div>
+               <div class="tblformal" id="GUID-04C49D54-E547-42CC-8A70-E400D14FB5D6__GUID-F62D22D6-327D-4CB4-811B-2559D801FBF7">
+                  <table cellpadding="4" cellspacing="0" class="Formal" title summary="Returns of function." width="100%" frame="hsides" border="1" rules="rows">
+                     <thead>
+                        <tr align="left" valign="top">
+                           <th align="left" valign="bottom" width="31%" id="d309001e117">Return</th>
+                           <th align="left" valign="bottom" width="69%" id="d309001e119">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr align="left" valign="top">
+                           <td align="left" valign="top" width="31%" id="d309001e123" headers="d309001e117 ">t_files</td>
+                           <td align="left" valign="top" width="69%" headers="d309001e123 d309001e119 ">A table of file names and path. See <span class="q">"<a href="APEX_ZIP.Data-Types.html#GUID-30834CEE-92B3-4A75-BCED-E219B54796E6">Data Types</a>"</span> for more details.
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-04C49D54-E547-42CC-8A70-E400D14FB5D6__GUID-53D26C26-0F9C-408E-A57A-EDCB9980CCD7">Example</p>
+                  <p>This example demonstrates reading a zip file from a table, extracting it and storing all files of the zip file into <code class="codeph">my_files</code>.
+                  </p><pre class="pre codeblock"><code>declare
+    l_zip_file      blob;
+    l_unzipped_file blob;
+    l_files         apex_zip.t_files;
+begin
+    select file_content
+        into l_zip_file
+        from my_zip_files
+    where file_name = 'my_file.zip';
+
+    l_files := apex_zip.get_files (
+            p_zipped_blob =&gt; l_zip_file );
+
+    for i in 1 .. l_files.count loop
+        l_unzipped_file := apex_zip.get_file_content (
+            p_zipped_blob =&gt; l_zip_file,
+            p_file_name   =&gt; l_files(i) );
+
+        insert into my_files ( file_name, file_content )
+        values ( l_files(i), l_unzipped_file );
+    end loop;
+end;</code></pre></div>
+               <div class="section">
+                  <div class="infoboxnotealso" id="GUID-04C49D54-E547-42CC-8A70-E400D14FB5D6__GUID-EB37F8F3-DF07-4003-A0E4-776B11CBA001">
+                     <p class="notep1">See Also:</p><a href="APEX_ZIP.GET_DIR_ENTRIES-Function.html#GUID-9AE91D64-2EF6-468B-BD5B-DE218EF282FA">GET_DIR_ENTRIES Function</a></div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_ZIP.html#GUID-270BFF3A-5FB1-4089-894E-978608F9BD87">APEX_ZIP</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

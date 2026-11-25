@@ -1,0 +1,657 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Buttons">
+      <meta name="abstract" content="You can use buttons to direct users to a specific page or URL, or to post or process information (for example, by creating Create, Cancel, Next, Previous, or Delete buttons). You can also configure buttons to display conditionally or warn users of unsaved changes.">
+      <meta name="description" content="You can use buttons to direct users to a specific page or URL, or to post or process information (for example, by creating Create, Cancel, Next, Previous, or Delete buttons). You can also configure buttons to display conditionally or warn users of unsaved changes.">
+      <meta name="DC.subject" content="button, managing, branching, using buttons, branching, creating, names, REQUEST, button names, editing, displaying conditionally, conditions, using with buttons, editing, unsaved changes, warning users, Warn on Unsaved Changes, show processing, preventing double-clicking, requiring confirmation, confirmation message">
+      <meta name="keywords" content="button, managing, branching, using buttons, branching, creating, names, REQUEST, button names, editing, displaying conditionally, conditions, using with buttons, editing, unsaved changes, warning users, Warn on Unsaved Changes, show processing, preventing double-clicking, requiring confirmation, confirmation message">
+      <meta name="DC.Relation" scheme="URI" content="managing-application-controls.html#GUID-1356B4CC-6BF0-4D72-94AD-017382BBCA49">
+      <meta name="DC.Relation" scheme="URI" content="creating-buttons.html#GUID-1EA48F3A-8E5E-409A-ADAD-23F2BD2630D2">
+      <meta name="DC.Relation" scheme="URI" content="creating-buttons.html#GUID-6B910C4F-F418-4BE5-A8AA-C3101540D087">
+      <meta name="DC.Relation" scheme="URI" content="creating-buttons.html#GUID-158EA9FD-BB4D-4AD8-8DF5-C7C556130195">
+      <meta name="DC.Relation" scheme="URI" content="creating-buttons.html#GUID-D300F08C-C93C-47AE-9304-E8DF41797226">
+      <meta name="DC.Relation" scheme="URI" content="creating-buttons.html#GUID-73187F1D-EB52-4D18-89F8-2E8BEC08FEE0">
+      <meta name="DC.Relation" scheme="URI" content="creating-buttons.html#GUID-EE173844-C03C-4F76-9E0E-7B035BCC4121">
+      <meta name="DC.Relation" scheme="URI" content="creating-buttons.html#GUID-E5B6109A-6ABD-48C7-A876-39EDD8AF3987">
+      <meta name="DC.Relation" scheme="URI" content="creating-buttons.html#GUID-ED9D79F0-FB76-4CBC-ADE0-06443FECA14D">
+      <meta name="DC.Relation" scheme="URI" content="creating-buttons.html#GUID-57480ADB-B76B-4BB4-9104-CBA811D4CA03">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-F6DA76D1-2020-4930-8D26-12D0A3497C8E">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="You can use buttons to direct users to a specific page or URL, or to post or process information (for example, by creating Create, Cancel, Next, Previous, or Delete buttons). You can also configure buttons to display conditionally or warn users of unsaved changes.">
+      <meta name="description" content="You can use buttons to direct users to a specific page or URL, or to post or process information (for example, by creating Create, Cancel, Next, Previous, or Delete buttons). You can also configure buttons to display conditionally or warn users of unsaved changes.">
+      <title>Managing Buttons</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="You can use buttons to direct users to a specific page or URL, or to post or process information (for example, by creating Create, Cancel, Next, Previous, or Delete buttons). You can also configure buttons to display conditionally or warn users of unsaved changes.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-dynamic-actions.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-trees.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Managing Buttons","description":"You can use buttons to direct users to a specific page or URL, or to post or process information (for example, by creating Create, Cancel, Next, Previous, or Delete buttons). You can also configure buttons to display conditionally or warn users of unsaved changes.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-dynamic-actions.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-trees.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-F6DA76D1-2020-4930-8D26-12D0A3497C8E" name="GUID-F6DA76D1-2020-4930-8D26-12D0A3497C8E"></a><a id="HTMDB05009"></a>
+         
+         <h2 id="HTMDB-GUID-F6DA76D1-2020-4930-8D26-12D0A3497C8E" class="sect2"><span class="enumeration_section">13.3 </span>Managing Buttons
+         </h2>
+         <div class="ind">
+            <div>
+               <p>You can use buttons to direct users to a specific page or URL, or to post or process information (for example, by creating Create, Cancel, Next, Previous, or Delete buttons). You can also configure buttons to display conditionally or warn users of unsaved changes.</p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="creating-buttons.html#GUID-1EA48F3A-8E5E-409A-ADAD-23F2BD2630D2">About Actions Buttons Can Perform</a><br>Use buttons to submit a page or redirect to a different page or different         URL.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-buttons.html#GUID-6B910C4F-F418-4BE5-A8AA-C3101540D087">About Branching with Buttons</a><br>Learn about branching with buttons.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-buttons.html#GUID-158EA9FD-BB4D-4AD8-8DF5-C7C556130195">Creating a Button</a><br>Create buttons in Page Designer.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-buttons.html#GUID-D300F08C-C93C-47AE-9304-E8DF41797226">About the Relationship Between Button Names and REQUEST</a><br>The name you give a Submit button (that is, a button with an Action of Submit Page) determines the value of the built-in attribute <code class="codeph">REQUEST</code> when the page is submitted. 
+                  </li>
+                  <li class="ulchildlink"><a href="creating-buttons.html#GUID-73187F1D-EB52-4D18-89F8-2E8BEC08FEE0">Editing a Button</a><br>Edit buttons in Page Designer.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-buttons.html#GUID-EE173844-C03C-4F76-9E0E-7B035BCC4121">Displaying a Button Conditionally</a><br>You can choose to have a button display conditionally by editing the Server-side Condition attribute in Page Designer.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-buttons.html#GUID-E5B6109A-6ABD-48C7-A876-39EDD8AF3987">Configuring Button Attributes to Warn Users of Unsaved Changes</a><br>Use the Warn on Unsaved Changes attribute to warn users of unsaved changes when they attempt to navigate away from a page.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-buttons.html#GUID-ED9D79F0-FB76-4CBC-ADE0-06443FECA14D">Avoiding Multiple Page Submits by Enabling Show Processing</a><br>Prevent users from double-clicking a button by enabling the Show Processing         attribute.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-buttons.html#GUID-57480ADB-B76B-4BB4-9104-CBA811D4CA03">Displaying a Button Confirmation Dialog</a><br>Display a Confirmation dialog after the button is clicked by enabling the         Requires Confirmation attribute.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-F6DA76D1-2020-4930-8D26-12D0A3497C8E__GUID-391D5C3E-9F74-44E2-9B70-F95BEF1A4393">
+                  <p class="notep1">See Also:</p>
+                  <p><a href="understanding-legacy-url-syntax.html#GUID-70A38D52-92C4-4344-AB0C-8EA202DBAA71" title="Use URL syntax to call a page from a button URL.">Calling a Page from a Button URL</a> and <a href="accessing-page-specific-utilities.html#GUID-08369FB1-451F-4A53-8185-11C39B83BBEA" title="Use the links in the Page Specific Utilities region to access Cross Page Utilities and Page Groups as well as access handy utilities for regions, buttons, items, computations, validations, process, dynamic actions, and branches.">Accessing Page Specific Utilities</a></p>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-application-controls.html#GUID-1356B4CC-6BF0-4D72-94AD-017382BBCA49" title="Developers can create and manage a variety of application page controls, including page items, dynamic actions, buttons, and trees.">Managing Application Controls</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB29323"></a><div class="props_rev_3"><a id="GUID-1EA48F3A-8E5E-409A-ADAD-23F2BD2630D2" name="GUID-1EA48F3A-8E5E-409A-ADAD-23F2BD2630D2"></a><h3 id="HTMDB-GUID-1EA48F3A-8E5E-409A-ADAD-23F2BD2630D2" class="sect3"><span class="enumeration_section">13.3.1 </span>About Actions Buttons Can Perform
+               </h3>
+               <div>
+                  <p>Use buttons to submit a page or redirect to a different page or different
+        URL.</p>
+                  <p>The <span class="uicontrol bold">Behavior</span>, <span class="uicontrol bold">Action</span> attribute determines
+            the action to be performed when a button is clicked. Available options include:
+                  </p>
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        <p><span class="uicontrol bold">Submit Page</span> -  Submit the current page with a
+                        <code class="codeph">REQUEST</code> value equal to the Button Name.
+                        </p>
+                     </li>
+                     <li>
+                        <p><span class="uicontrol bold">Redirect to Page in this Application</span> - Redirect to a page in
+                    the current application with optional additional attributes for resetting
+                    pagination, setting the request value, clearing cache, and setting item values
+                    on the target page.
+                        </p>
+                     </li>
+                     <li>
+                        
+                        <p><span class="uicontrol bold">Redirect to Page in a different Application</span> - Redirect to
+                    a page in a different application with optional additional attributes for
+                    resetting pagination, setting the request value, clearing cache, and setting
+                    item values, on the target page. 
+                        </p>
+                        
+                        <div class="infoboxnote" id="GUID-1EA48F3A-8E5E-409A-ADAD-23F2BD2630D2__GUID-BB92EA28-934C-470F-A9D2-32BEA83174FA">
+                           <p class="notep1">Note:</p> Redirecting to a page in different application relies on deep linking being
+                    enabled in the target application. To enable deep linking, go to the
+                    application's Security attributes and enable Deep Linking.
+                        </div>
+                        
+                     </li>
+                     <li>
+                        
+                        <p><span class="uicontrol bold">Redirect to URL</span> - Redirect to the target URL
+                    you specify.
+                        </p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p><span class="uicontrol bold">Defined by Dynamic Action</span> - Does not submit
+                    the page or redirect to another page. Instead the button's behavior is defined
+                    by a Dynamic Action.
+                        </p>
+                        
+                     </li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-buttons.html#GUID-F6DA76D1-2020-4930-8D26-12D0A3497C8E" title="You can use buttons to direct users to a specific page or URL, or to post or process information (for example, by creating Create, Cancel, Next, Previous, or Delete buttons). You can also configure buttons to display conditionally or warn users of unsaved changes.">Managing Buttons</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25448"></a><div class="props_rev_3"><a id="GUID-6B910C4F-F418-4BE5-A8AA-C3101540D087" name="GUID-6B910C4F-F418-4BE5-A8AA-C3101540D087"></a><h3 id="HTMDB-GUID-6B910C4F-F418-4BE5-A8AA-C3101540D087" class="sect3"><span class="enumeration_section">13.3.2 </span>About Branching with Buttons
+               </h3>
+               <div>
+                  <p>Learn about branching with buttons.</p>
+                  <p>Each page can include any number of branches. A branch links to another page in your application or to a URL. The <span>Oracle APEX</span> engine considers branching at different times during page processing. You can choose to branch before processing, before computation, before validation, and after processing. Like any other control in <span>App Builder</span>, branching can be conditional. For example, you can branch when a user clicks a button. When you create a branch, you associate it with a specific button. The branch is only be considered if a user clicks the button.
+                  </p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-6B910C4F-F418-4BE5-A8AA-C3101540D087__GUID-F16D70EA-D069-42F9-9F7D-130178908F8F">
+                     <p class="notep1">See Also:</p>
+                     <p> <a href="controlling-navigation-using-branches.html#GUID-AE2164D3-6D95-4EB3-BF12-60C2278A1D0E" title="Add navigation to application pages by creating branches. A branch is an instruction to link to a specific page, procedure, or URL after a given page is submitted.">Controlling Navigation Using Branches</a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-buttons.html#GUID-F6DA76D1-2020-4930-8D26-12D0A3497C8E" title="You can use buttons to direct users to a specific page or URL, or to post or process information (for example, by creating Create, Cancel, Next, Previous, or Delete buttons). You can also configure buttons to display conditionally or warn users of unsaved changes.">Managing Buttons</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29743"></a><div class="props_rev_3"><a id="GUID-158EA9FD-BB4D-4AD8-8DF5-C7C556130195" name="GUID-158EA9FD-BB4D-4AD8-8DF5-C7C556130195"></a><h3 id="HTMDB-GUID-158EA9FD-BB4D-4AD8-8DF5-C7C556130195" class="sect3"><span class="enumeration_section">13.3.3 </span>Creating a Button
+               </h3>
+               <div>
+                  <p>Create buttons in Page Designer.</p>
+                  <div class="section">
+                     <p>To create a button in Page Designer:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears. </div>
+                     </li>
+                     <li class="stepexpand"><span>If necessary, create a region to contain the item.</span></li>
+                     <li class="stepexpand"><span>In the Gallery, click the <span class="uicontrol bold">Buttons</span> tab. </span><div>
+                           <p>Passing the cursor over a button displays a tooltip that describes it.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Right-click the button, select <span class="uicontrol bold">Add To</span>, and select the appropriate location.</span><div>
+                           <div class="infobox-tip" id="GUID-158EA9FD-BB4D-4AD8-8DF5-C7C556130195__GUID-81F528E9-BD34-4EAE-8F37-B426226ECFB2">
+                              <p class="notep1">Tip:</p>
+                              <p>You also select the button with the mouse and drag it to the appropriate location in the Layout tab.</p>
+                           </div>
+                           
+                           <p>The Property Editor displays button attributes in the right
+                        pane. Attributes are organized in groups.</p>
+                           
+                           <p>To find a group or attribute:</p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-158EA9FD-BB4D-4AD8-8DF5-C7C556130195__UL_PDD_3PS_GQB">
+                              <li>
+                                 
+                                 <p><span class="bold">Search for a group or attribute</span> -&nbsp;Enter keywords
+                                in the Filter Properties field.&nbsp;The Property Editor displays the
+                                group or attributes.&nbsp;To return to the default display, delete the
+                                keywords.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="bold">Go to Group</span> - Click <span class="uicontrol bold">Go to
+                                    Group</span> and select the group. To return the default
+                                display, click <span class="uicontrol bold">Go to Group</span> again and select
+                                    <span class="uicontrol bold">Expand All</span>.
+                                 </p>
+                                 
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Edit the appropriate attributes in the Property Editor. </span><div>
+                           
+                           <div class="infobox-tip" id="GUID-158EA9FD-BB4D-4AD8-8DF5-C7C556130195__GUID-8E3D2638-D737-4123-9A35-66E3A8E2F441">
+                              <p class="notep1">Tip:</p>
+                              <p>To learn more about an attribute, select the attribute in the Property Editor and click the <span class="uicontrol bold">Help</span> tab in the central pane.
+                              </p>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-158EA9FD-BB4D-4AD8-8DF5-C7C556130195__GUID-978EAD95-2925-405D-BFD3-1C6840E6A965">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="about-regions.html#GUID-D137BFE6-2F3A-4C63-9083-56D862B8C556" title="Learn how regions function as a container for content on an application page.">About Regions</a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-buttons.html#GUID-F6DA76D1-2020-4930-8D26-12D0A3497C8E" title="You can use buttons to direct users to a specific page or URL, or to post or process information (for example, by creating Create, Cancel, Next, Previous, or Delete buttons). You can also configure buttons to display conditionally or warn users of unsaved changes.">Managing Buttons</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25447"></a><div class="props_rev_3"><a id="GUID-D300F08C-C93C-47AE-9304-E8DF41797226" name="GUID-D300F08C-C93C-47AE-9304-E8DF41797226"></a><h3 id="HTMDB-GUID-D300F08C-C93C-47AE-9304-E8DF41797226" class="sect3"><span class="enumeration_section">13.3.4 </span>About the Relationship Between Button Names and REQUEST
+               </h3>
+               <div>
+                  <p>The name you give a Submit button (that is, a button with an Action of Submit Page) determines the value of the built-in attribute <code class="codeph">REQUEST</code> when the page is submitted. 
+                  </p>
+                  <p>You can reference the value of <code class="codeph">REQUEST</code> from within PL/SQL using the bind variable <code class="codeph">:REQUEST</code>. By using this bind variable, you can conditionally process, validate, or branch based on which button the user clicks. You can also create processes that execute when the user clicks a button. And you can use a more complex condition as demonstrated in the following examples:
+                  </p><pre class="oac_no_warn" dir="ltr">If :REQUEST in ('EDIT','DELETE') then ...
+If :REQUEST != 'DELETE' then ...
+</pre><p>These examples assume the existence of buttons named EDIT and DELETE. You can also use this syntax in PL/SQL Expression conditions. Be aware, however, that the button name capitalization (case) is preserved. In other words, if you name a button LOGIN, then a request looking for the name <span class="italic">Login</span> fails. For example:
+                  </p><pre class="oac_no_warn" dir="ltr">&lt;input type="BUTTON" value="Finish" onclick="apex.submit('Finish');"&gt;
+</pre><p>In this example <span class="italic">Finish</span> is the name of the <code class="codeph">REQUEST</code> and this example is case-sensitive.
+                  </p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-buttons.html#GUID-F6DA76D1-2020-4930-8D26-12D0A3497C8E" title="You can use buttons to direct users to a specific page or URL, or to post or process information (for example, by creating Create, Cancel, Next, Previous, or Delete buttons). You can also configure buttons to display conditionally or warn users of unsaved changes.">Managing Buttons</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29744"></a><div class="props_rev_3"><a id="GUID-73187F1D-EB52-4D18-89F8-2E8BEC08FEE0" name="GUID-73187F1D-EB52-4D18-89F8-2E8BEC08FEE0"></a><h3 id="HTMDB-GUID-73187F1D-EB52-4D18-89F8-2E8BEC08FEE0" class="sect3"><span class="enumeration_section">13.3.5 </span>Editing a Button
+               </h3>
+               <div>
+                  <p>Edit buttons in Page Designer.</p>
+                  <div class="section">
+                     <p>To edit a region button in Page Designer:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears. </div>
+                     </li>
+                     <li class="stepexpand"><span>In either the Rendering tab or the Layout tab, select the button to edit.</span><div>
+                           
+                           <p>The Property Editor displays button attributes in the right
+                        pane. Attributes are organized in groups.</p>
+                           
+                           <p>To find a group or attribute:</p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-73187F1D-EB52-4D18-89F8-2E8BEC08FEE0__UL_KKF_SSS_GQB">
+                              <li>
+                                 
+                                 <p><span class="bold">Search for the group or attribute</span> -&nbsp;Enter keywords
+                                in the Filter Properties field.&nbsp;The Property Editor displays the
+                                group or attributes.&nbsp;To return to the default display, delete the
+                                keywords.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="bold">Use Go to Group</span>&nbsp;- Click <span class="uicontrol bold">Go to
+                                    Group</span>&nbsp;and select the group. To return the default
+                                display, click <span class="uicontrol bold">Go to Group</span> again and select
+                                    <span class="uicontrol bold">Expand All</span>.
+                                 </p>
+                                 
+                              </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Edit the button attributes.</span><div>
+                           
+                           <div class="infoboxnote" id="GUID-73187F1D-EB52-4D18-89F8-2E8BEC08FEE0__GUID-61FCAF17-FF8B-49E3-9A65-18E16ECB4A67">
+                              <p class="notep1">Note:</p>
+                              
+                              <p>To view help for an attribute, select the attribute in the
+                            Property Editor and click the <span class="uicontrol bold">Help</span> tab in the
+                            central pane.
+                              </p>
+                              
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-buttons.html#GUID-F6DA76D1-2020-4930-8D26-12D0A3497C8E" title="You can use buttons to direct users to a specific page or URL, or to post or process information (for example, by creating Create, Cancel, Next, Previous, or Delete buttons). You can also configure buttons to display conditionally or warn users of unsaved changes.">Managing Buttons</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29745"></a><div class="props_rev_3"><a id="GUID-EE173844-C03C-4F76-9E0E-7B035BCC4121" name="GUID-EE173844-C03C-4F76-9E0E-7B035BCC4121"></a><h3 id="HTMDB-GUID-EE173844-C03C-4F76-9E0E-7B035BCC4121" class="sect3"><span class="enumeration_section">13.3.6 </span>Displaying a Button Conditionally
+               </h3>
+               <div>
+                  <p>You can choose to have a button display conditionally by editing the Server-side Condition attribute in Page Designer.</p>
+                  <div class="section">
+                     <p>To have a button display conditionally:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears. </div>
+                     </li>
+                     <li class="stepexpand"><span>In either the Rendering tab or the Layout tab, select the button to edit.</span><div>
+                           
+                           <p>The Property Editor displays button attributes in the right
+                        pane. Attributes are organized in groups.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Configure the Server-side Condition:</span><ol type="a" id="GUID-EE173844-C03C-4F76-9E0E-7B035BCC4121__SUBSTEPS_TBQ_GKQ_GQB">
+                           <li class="substepexpand"><span>Server-side Condition, Type - Select a condition type that must be met
+                            in order for this component to be rendered or processed. What displays
+                            next, depends upon selected Type.</span><div>What displays next, depends upon the Server-side Condition, Type
+                            you select.</div>
+                           </li>
+                           <li class="substepexpand"><span>Configure the remaining attributes.</span><div>
+                                 
+                                 <div class="infobox-tip" id="GUID-EE173844-C03C-4F76-9E0E-7B035BCC4121__GUID-FFDF6166-CABC-4F03-92DE-78A78318CDBF">
+                                    <p class="notep1">Tip:</p>
+                                    
+                                    <p>To learn more about an attribute, select the
+                                    attribute in the Property Editor and click the
+                                        <span class="uicontrol bold">Help</span> tab in the central pane.
+                                    </p>
+                                    
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-EE173844-C03C-4F76-9E0E-7B035BCC4121__GUID-8E8FEDD2-A74E-4FE7-B615-9D00958BF5BC">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="managing-session-state-values.html#GUID-A052DC04-0D04-4DEA-BDEF-4DCBFF489E07" title="Use bind variable syntax anywhere where you are using SQL or PL/SQL to reference session state of a specified item.&nbsp;">Referencing Session State Using Bind Variable Syntax</a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-buttons.html#GUID-F6DA76D1-2020-4930-8D26-12D0A3497C8E" title="You can use buttons to direct users to a specific page or URL, or to post or process information (for example, by creating Create, Cancel, Next, Previous, or Delete buttons). You can also configure buttons to display conditionally or warn users of unsaved changes.">Managing Buttons</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-E5B6109A-6ABD-48C7-A876-39EDD8AF3987" name="GUID-E5B6109A-6ABD-48C7-A876-39EDD8AF3987"></a><h3 id="HTMDB-GUID-E5B6109A-6ABD-48C7-A876-39EDD8AF3987" class="sect3"><span class="enumeration_section">13.3.7 </span>Configuring Button Attributes to Warn Users of Unsaved Changes
+               </h3>
+               <div>
+                  <p>Use the Warn on Unsaved Changes attribute to warn users of unsaved changes when they attempt to navigate away from a page.</p>
+                  <div class="section">
+                     <p>To configure the Warn on Unsaved Changes attribute:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears. </div>
+                     </li>
+                     <li class="stepexpand"><span>In either the Rendering tab or the Layout tab, select the button to edit.</span><div>
+                           
+                           <p>The Property Editor displays button attributes in the right
+                        pane. Attributes are organized in groups.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Behavior, Warn on Unsaved Changes - Select one of the following:</span><ul id="GUID-E5B6109A-6ABD-48C7-A876-39EDD8AF3987__CHOICES_OYY_T1S_GQB">
+                           <li><span class="uicontrol bold">Page Default</span> - Check for unsaved changes when the
+                        button is clicked if <span class="uicontrol bold">Warn on Unsaved Changes</span> is
+                        enabled at page level.
+                           </li>
+                           <li><span class="uicontrol bold">Do Not Check</span> - The unsaved changes check will not
+                        be performed when the button is clicked. Use this setting for Cancel,
+                        Delete, and Apply Changes buttons.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="bold">Save</span>.</span></li>
+                  </ol>
+                  <div class="section">
+                     <div class="infobox-tip" id="GUID-E5B6109A-6ABD-48C7-A876-39EDD8AF3987__GUID-5CDBF28C-5F58-4721-86BC-159440816323">
+                        <p class="notep1">Tip:</p>
+                        <p>The <span class="uicontrol bold">Warn on Unsaved Changes</span> attribute is implemented using the <code class="codeph">apex.page.warnOnUnsavedChanges</code> API.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-E5B6109A-6ABD-48C7-A876-39EDD8AF3987__GUID-9A49A04F-6299-48EE-BCF1-77DC30A36CC6">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="editing-page-attributes-in-page-designer.html#GUID-14B9A6F7-6381-44A1-8A51-47E8E436EE84" title="Enable the Warn on Unsaved Changes page attribute to warn users if they navigate away from a page containing unsaved changes.">Configuring Pages to Warn Users of Unsaved Changes</a> and <a href="https://docs.oracle.com/en/database/oracle/application-express/19.1/aexjs/apex.page.html#.warnOnUnsavedChanges" target="_blank">warnOnUnsavedChanges</a> in <span><cite>Oracle APEX JavaScript
+                                        API Reference</cite></span></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-buttons.html#GUID-F6DA76D1-2020-4930-8D26-12D0A3497C8E" title="You can use buttons to direct users to a specific page or URL, or to post or process information (for example, by creating Create, Cancel, Next, Previous, or Delete buttons). You can also configure buttons to display conditionally or warn users of unsaved changes.">Managing Buttons</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-ED9D79F0-FB76-4CBC-ADE0-06443FECA14D" name="GUID-ED9D79F0-FB76-4CBC-ADE0-06443FECA14D"></a><h3 id="HTMDB-GUID-ED9D79F0-FB76-4CBC-ADE0-06443FECA14D" class="sect3"><span class="enumeration_section">13.3.8 </span>Avoiding Multiple Page Submits by Enabling
+        Show Processing
+               </h3>
+               <div>
+                  <p>Prevent users from double-clicking a button by enabling the Show Processing
+        attribute.</p>
+                  <div class="section">The <span class="uicontrol bold">Show Processing</span> attribute is useful if you
+            have a slow process and provides feedback to the user that the button has already been
+            clicked. Enabling <span class="uicontrol bold">Show Processing</span> grays out the page and displays
+            a processing style animation when the page is submitted. 
+                  </div>
+                  <div class="p">To enable the Show Processing attribute, the button <span class="uicontrol bold">Action</span>
+            must be <span class="uicontrol bold">Submit Page</span>. 
+                  </div>
+                  <div class="section">
+                     <p>To enable Show Processing:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears. </div>
+                     </li>
+                     <li class="stepexpand"><span>In either the Rendering tab or the Layout tab, select the button to edit.</span><div>
+                           <p>The Property Editor displays button attributes in the right pane. Attributes are
+                        organized in groups.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Behavior - Configure the attributes:</span><ol type="a" id="GUID-ED9D79F0-FB76-4CBC-ADE0-06443FECA14D__SUBSTEPS_OXQ_4PH_L1C">
+                           <li><span>Behavior, Action - Select <span class="uicontrol bold">Submit Page</span>.</span></li>
+                           <li><span>Behavior, Show Processing - Enable this attribute to gray out the page
+                            and display a processing style animation during page submission. This
+                            attribute is useful to prevent end user action during long running
+                            operations.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>To save your changes click <span class="uicontrol bold">Save</span>. To save and run the
+                    page, click <span class="uicontrol bold">Save and Run Page</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-buttons.html#GUID-F6DA76D1-2020-4930-8D26-12D0A3497C8E" title="You can use buttons to direct users to a specific page or URL, or to post or process information (for example, by creating Create, Cancel, Next, Previous, or Delete buttons). You can also configure buttons to display conditionally or warn users of unsaved changes.">Managing Buttons</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-57480ADB-B76B-4BB4-9104-CBA811D4CA03" name="GUID-57480ADB-B76B-4BB4-9104-CBA811D4CA03"></a><h3 id="HTMDB-GUID-57480ADB-B76B-4BB4-9104-CBA811D4CA03" class="sect3"><span class="enumeration_section">13.3.9 </span>Displaying a Button Confirmation
+        Dialog
+               </h3>
+               <div>
+                  <p>Display a Confirmation dialog after the button is clicked by enabling the
+        Requires Confirmation attribute.</p>
+                  <div class="section">Enabling the <span class="uicontrol bold">Requires Confirmation</span> attribute
+            displays a confirmation dialog after a button is clicked. The button action, whether it
+            be it to submit the page, to redirect to another page, or to invoke a dynamic action,
+            will be delayed until the user has confirmed the action. If the user cancels, the action
+            will not be performed. You can configure the dialog message and apply style options such
+            as Information, Warning, Danger, or Success.  The dialog's Confirm button label will
+            match the actual button label.
+                  </div>
+                  <div class="section">
+                     <p>To display a button confirmation dialog:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears. </div>
+                     </li>
+                     <li class="stepexpand"><span>In either the Rendering tab or the Layout tab, select the button to edit.</span><div>
+                           <p>The Property Editor displays button attributes in the right pane. Attributes are
+                        organized in groups.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Behavior, Requires Confirmation - Enable this attribute.</span><div>The Confirmation group appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Configure the attributes under Confirmation:</span><ol type="a" id="GUID-57480ADB-B76B-4BB4-9104-CBA811D4CA03__SUBSTEPS_VZJ_5WQ_GQB">
+                           <li class="substepexpand"><span>Confirmation, Message - Enter the message to be displayed in the
+                            confirmation dialog. This attribute supports substitutions (application,
+                            page items, or system variables).</span></li>
+                           <li class="substepexpand"><span>Confirmation, Style - Select a style for the dialog. Options
+                            include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-57480ADB-B76B-4BB4-9104-CBA811D4CA03__UL_MXT_BXQ_GQB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Default</span></p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Information</span></p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Warning</span></p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Danger</span></p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Success</span></p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="bold">Save</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-buttons.html#GUID-F6DA76D1-2020-4930-8D26-12D0A3497C8E" title="You can use buttons to direct users to a specific page or URL, or to post or process information (for example, by creating Create, Cancel, Next, Previous, or Delete buttons). You can also configure buttons to display conditionally or warn users of unsaved changes.">Managing Buttons</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

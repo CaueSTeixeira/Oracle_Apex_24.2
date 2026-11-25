@@ -1,0 +1,391 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Oracle APEX Installation Requirements">
+      <meta name="abstract" content="Before installing Oracle APEX in a local self-managed installation you must verify your configuration meets the minimum installation requirements.">
+      <meta name="description" content="Before installing Oracle APEX in a local self-managed installation you must verify your configuration meets the minimum installation requirements.">
+      <meta name="DC.subject" content=", Oracle APEX, database requirement, , requirements, database, MEMORY_TARGET, checking, WORKAREA_SIZE_POLICY, WORKAREA_SIZE_POLICY, checking, Database Vault, Database Vault, Oracle, browser requirement, browser, requirement, Web browser, web server, Oracle REST Data Services, disk space requirements, disk space, APEX, XML DB requirement, XML DB, Oracle XML DB">
+      <meta name="keywords" content=", Oracle APEX, database requirement, , requirements, database, MEMORY_TARGET, checking, WORKAREA_SIZE_POLICY, WORKAREA_SIZE_POLICY, checking, Database Vault, Database Vault, Oracle, browser requirement, browser, requirement, Web browser, web server, Oracle REST Data Services, disk space requirements, disk space, APEX, XML DB requirement, XML DB, Oracle XML DB">
+      <meta name="DC.Relation" scheme="URI" content="apex-installation-requirements.html#GUID-ED8FE111-A861-4A54-938B-CB3664D49C68">
+      <meta name="DC.Relation" scheme="URI" content="apex-installation-requirements.html#GUID-6E817104-6C58-4FA8-861D-F884AA3369B0">
+      <meta name="DC.Relation" scheme="URI" content="apex-installation-requirements.html#GUID-848EF7A3-07D0-427E-A080-694144570136">
+      <meta name="DC.Relation" scheme="URI" content="apex-installation-requirements.html#GUID-CF588A4D-BBE5-4EBE-8F25-B9D11EDCF568">
+      <meta name="DC.Relation" scheme="URI" content="apex-installation-requirements.html#GUID-274D8E6E-40E0-4D0D-AC99-66EB94F58F4D">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="David Bliss">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Salim Hlayel">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vlad Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-02BE4A34-B631-412C-8A82-EB92DABBACE0">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Before installing Oracle APEX in a local self-managed installation you must verify your configuration meets the minimum installation requirements.">
+      <meta name="description" content="Before installing Oracle APEX in a local self-managed installation you must verify your configuration meets the minimum installation requirements.">
+      <title>Oracle APEX Installation Requirements</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Installation Guide ">
+      <meta property="og:description" content="Before installing Oracle APEX in a local self-managed installation you must verify your configuration meets the minimum installation requirements.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Installation Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-installation-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:41:45-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12910-03">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="changes-in-this-release.html" title="Previous" type="text/html">
+      <link rel="next" href="apex-installation-overview.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Installation Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="HTMIG">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Oracle APEX Installation Requirements","description":"Before installing Oracle APEX in a local self-managed installation you must verify your configuration meets the minimum installation requirements.","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="changes-in-this-release.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="apex-installation-overview.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-02BE4A34-B631-412C-8A82-EB92DABBACE0" name="GUID-02BE4A34-B631-412C-8A82-EB92DABBACE0"></a>
+         
+         <h2 id="HTMIG-GUID-02BE4A34-B631-412C-8A82-EB92DABBACE0" class="sect2"><span class="enumeration_chapter">2 </span><span>Oracle APEX</span> Installation Requirements 
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Before installing <span>Oracle APEX</span> in a local self-managed installation you must verify your configuration meets the minimum installation requirements.
+               </p>
+               <p><a id="d1921e44" class="indexterm-anchor"></a><a id="d1921e46" class="indexterm-anchor"></a></p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="apex-installation-requirements.html#GUID-ED8FE111-A861-4A54-938B-CB3664D49C68">Oracle Database Requirements</a><br><span>Oracle APEX</span> release <span>24.2</span> requires an <span>Oracle                                         Database</span> release 19c or later. <span>APEX</span> runs on all database editions, including Enterprise Edition (EE), Standard Edition (SE), and <span>Oracle                                         Database</span> Free. <span>APEX</span> can be installed in single-instance database and in Oracle Real Application Clusters (Oracle RAC) database.
+                  </li>
+                  <li class="ulchildlink"><a href="apex-installation-requirements.html#GUID-6E817104-6C58-4FA8-861D-F884AA3369B0">Browser Requirements</a><br><span>Oracle APEX</span> requires a JavaScript-enabled browser and supports the current and prior major release of Google Chrome, Mozilla Firefox, Apple Safari, and Microsoft Edge.
+                  </li>
+                  <li class="ulchildlink"><a href="apex-installation-requirements.html#GUID-848EF7A3-07D0-427E-A080-694144570136">Web Server Requirements</a><br><span>Oracle APEX</span> requires <span>Oracle REST Data                                         Services</span> (ORDS) 23.3 or later.
+                  </li>
+                  <li class="ulchildlink"><a href="apex-installation-requirements.html#GUID-CF588A4D-BBE5-4EBE-8F25-B9D11EDCF568">Disk Space Requirement</a><br><span>Oracle APEX</span> disk space requirements are described in this section.
+                  </li>
+                  <li class="ulchildlink"><a href="apex-installation-requirements.html#GUID-274D8E6E-40E0-4D0D-AC99-66EB94F58F4D">Oracle XML DB Requirement</a><br>Oracle XML DB must be installed in the <span>Oracle</span> database that you want to use if you are installing a full development environment. If you are using a preconfigured database created either during an installation or by Database Configuration Assistant (DBCA), Oracle XML DB is already installed and configured. 
+                  </li>
+               </ul>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-ED8FE111-A861-4A54-938B-CB3664D49C68" name="GUID-ED8FE111-A861-4A54-938B-CB3664D49C68"></a><h3 id="HTMIG-GUID-ED8FE111-A861-4A54-938B-CB3664D49C68" class="sect3"><span class="enumeration_section">2.1 </span>Oracle Database Requirements
+               </h3>
+               <p><span>Oracle APEX</span> release <span>24.2</span> requires an <span>Oracle
+                                        Database</span> release 19c or later. <span>APEX</span> runs on all database editions, including Enterprise Edition (EE), Standard Edition (SE), and <span>Oracle
+                                        Database</span> Free. <span>APEX</span> can be installed in single-instance database and in Oracle Real Application Clusters (Oracle RAC) database.
+               </p>
+               <div>
+                  <ul class="ullinks">
+                     <li class="ulchildlink"><a href="apex-installation-requirements.html#GUID-13DE5DEE-DA14-491F-B0A4-39B7FB8413D0">Checking the Memory Settings of the Target Database</a><br><span>Oracle APEX</span> requires the system global area (SGA) to be at least 1200 MB and program global area (PGA) to be at least 300 MB.
+                     </li>
+                     <li class="ulchildlink"><a href="apex-installation-requirements.html#GUID-90785C15-20A4-4F6C-A463-5E6155F64824">Checking the WORKAREA_SIZE_POLICY of the Target Database</a><br>For the <span>Oracle APEX</span> installation or upgrade process, the <code class="codeph">WORKAREA_SIZE_POLICY</code>                 session parameter must be set to <code class="codeph">AUTO</code>. 
+                     </li>
+                     <li class="ulchildlink"><a href="apex-installation-requirements.html#GUID-C260EB09-7BA4-455B-9151-D3D9A8EC6A46">Installing APEX in Databases where Database Vault is Enabled</a><br>Complete additional configuration steps to install <span>Oracle APEX</span> in databases where <span>Oracle</span> Database Vault is enabled.
+                     </li>
+                  </ul>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="apex-installation-requirements.html#GUID-02BE4A34-B631-412C-8A82-EB92DABBACE0" title="Before installing Oracle APEX in a local self-managed installation you must verify your configuration meets the minimum installation requirements.">Oracle APEX Installation Requirements</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="props_rev_3"><a id="GUID-13DE5DEE-DA14-491F-B0A4-39B7FB8413D0" name="GUID-13DE5DEE-DA14-491F-B0A4-39B7FB8413D0"></a><h4 id="HTMIG-GUID-13DE5DEE-DA14-491F-B0A4-39B7FB8413D0" class="sect4"><span class="enumeration_section">2.1.1 </span>Checking the Memory Settings of the Target Database
+                  </h4>
+                  <div>
+                     <p><span>Oracle APEX</span> requires the system global area (SGA) to be at least 1200 MB and program global area (PGA) to be at least 300 MB.
+                     </p>
+                     <div class="section">
+                        <p>Databases typically have two parameters to control the memory allocation: <code class="codeph">SGA_TARGET</code> and <code class="codeph">PGA_AGGREGATE_TARGET</code>. For full details on Oracle Database memory configuration, consult the <span><cite>Oracle Database
+                                        Administrator’s Guide</cite></span> to find out how to configure manual memory parameters (for example, <code class="codeph">SGA_TARGET</code>, <code class="codeph">PGA_AGGREGATE_TARGET</code>, <code class="codeph">SHARED_POOL_SIZE</code>). 
+                        </p>
+                        <p>To check the memory parameters of the target database:</p>
+                     </div>
+                     <ol>
+                        <li class="stepexpand"><span>Start the database:</span><div><pre class="pre codeblock"><code>SQL&gt; STARTUP</code></pre></div>
+                        </li>
+                        <li class="stepexpand"><span>(Optional) Enter the following command to determine whether the system uses an initialization parameter file (<code class="codeph">initsid.ora</code>) or a server parameter file (<code class="codeph">spfiledbname.ora</code>):</span><div><pre class="pre codeblock"><code>SQL&gt; SHOW PARAMETER PFILE;</code></pre><p>This command displays the name and location of the server parameter file or the initialization parameter file. </p>
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Determine the current values of the memory parameters, then do one of the following:</span><div><pre class="pre codeblock"><code>SQL&gt; SHOW PARAMETER SGA_TARGET
+SQL&gt; SHOW PARAMETER PGA_AGGREGATE_TARGET</code></pre></div>
+                           <ul id="GUID-13DE5DEE-DA14-491F-B0A4-39B7FB8413D0__CHOICES_G45_H1C_P2C">
+                              <li>If the value of <code class="codeph">SGA_TARGET</code> is <code class="codeph">0</code>, your database is using <span class="bold">automatic memory management</span>. Consult <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmig&id=ADMIN-GUID-8F54391B-D42A-4FDA-9D12-E1F81FD113EA" target="_blank">Using Automatic Memory Management</a> in <span><cite>Oracle Database
+                                        Administrator’s Guide</cite></span> to learn how to configure an equivalent memory size using the <code class="codeph">MEMORY_TARGET</code> parameter. Stop this procedure.
+                              </li>
+                              <li>If the values of <code class="codeph">SGA_TARGET</code> or <code class="codeph">PGA_AGGREGATE_TARGET</code> are lower than the recommended sizes, then you must <span class="bold">increase</span> them depending on whether your database is using a server parameter file or the initialization parameter file. Proceed to the next step.
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="stepexpand"><span>To determine whether your system uses a server parameter file or initialization parameter file:</span><div><pre class="pre codeblock"><code>SQL&gt; SHOW PARAMETER PFILE;</code></pre></div>
+                           <ul id="GUID-13DE5DEE-DA14-491F-B0A4-39B7FB8413D0__CHOICES_WDB_BBC_P2C">
+                              <li>
+                                 <p>If the file begins with the prefix <code class="codeph">sp</code> for <span class="bold">server parameter</span>, then issue:
+                                 </p><pre class="pre codeblock"><code>SQL&gt; ALTER SYSTEM SET SGA_TARGET='1200M' SCOPE=spfile;
+SQL&gt; ALTER SYSTEM SET PGA_AGGREGATE_TARGET='300M' SCOPE=spfile;</code></pre></li>
+                              <li>
+                                 <p>Otherwise, the system is using an <span class="bold">initialization parameter</span> file. Change the value of the <code class="codeph">MEMORY_TARGET</code> parameter to at least 300 MB in the initialization parameter file (<code class="codeph">init&lt;sid&gt;.ora</code>).
+                                 </p>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="stepexpand"><span>Shut down the database:</span><div><pre class="pre codeblock"><code>SQL&gt; SHUTDOWN</code></pre></div>
+                        </li>
+                        <li class="stepexpand"><span>Restart the database:</span><div><pre class="pre codeblock"><code>SQL&gt; STARTUP</code></pre></div>
+                        </li>
+                        <li class="stepexpand"><span>Confirm the new memory settings:</span><div><pre class="pre codeblock"><code>SQL&gt; SHOW PARAMETER SGA_TARGET
+SQL&gt; SHOW PARAMETER PGA_AGGREGATE_TARGET</code></pre></div>
+                        </li>
+                     </ol>
+                     <div class="section"></div>
+                  </div>
+                  <div>
+                     <div class="infoboxnotealso" id="GUID-13DE5DEE-DA14-491F-B0A4-39B7FB8413D0__GUID-A7C8EBF9-6DB9-4A0E-8089-8A6CAC294195">
+                        <p class="notep1">See Also:</p><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmig&id=ADMIN-GUID-8F54391B-D42A-4FDA-9D12-E1F81FD113EA" target="_blank">Using Automatic Memory
+                                        Management</a> in <span><cite>Oracle Database
+                                        Administrator’s Guide</cite></span></div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="apex-installation-requirements.html#GUID-ED8FE111-A861-4A54-938B-CB3664D49C68" title="Oracle APEX release 24.2 requires an Oracle Database release 19c or later. APEX runs on all database editions, including Enterprise Edition (EE), Standard Edition (SE), and Oracle Database Free. APEX can be installed in single-instance database and in Oracle Real Application Clusters (Oracle RAC) database.">Oracle Database Requirements</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="props_rev_3"><a id="GUID-90785C15-20A4-4F6C-A463-5E6155F64824" name="GUID-90785C15-20A4-4F6C-A463-5E6155F64824"></a><h4 id="HTMIG-GUID-90785C15-20A4-4F6C-A463-5E6155F64824" class="sect4"><span class="enumeration_section">2.1.2 </span>Checking the WORKAREA_SIZE_POLICY of the Target Database
+                  </h4>
+                  <div>
+                     <p>For the <span>Oracle APEX</span> installation or upgrade process, the <code class="codeph">WORKAREA_SIZE_POLICY</code>
+                session parameter must be set to <code class="codeph">AUTO</code>. 
+                     </p>
+                     <div class="section">
+                        <p>To check the <code class="codeph">WORKAREA_SIZE_POLICY</code> of the target database:
+                        </p>
+                     </div>
+                     <ol>
+                        <li class="stepexpand"><span>Start <span>SQLcl</span> and connect to the database as <code class="codeph">SYS</code> specifying the <code class="codeph">SYSDBA</code> role. For example:</span><ul id="GUID-90785C15-20A4-4F6C-A463-5E6155F64824__CHOICES_P3B_TFN_XWB">
+                              <li>
+                                 <p>On Windows:</p><pre class="pre codeblock"><code><span class="italic">SYSTEM_DRIVE:\</span> sql /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span></code></pre></li>
+                              <li>
+                                 <p>On UNIX and Linux:</p><pre class="pre codeblock"><code>$ sql /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span></code></pre></li>
+                           </ul>
+                        </li>
+                        <li class="stepexpand"><span>Check the current value of the
+                                                <code class="codeph">WORKAREA_SIZE_POLICY</code>
+                                        parameter:</span><div>
+                              <pre class="oac_no_warn" dir="ltr">SQL&gt; SHOW PARAMETER WORKAREA_SIZE_POLICY</pre>
+                              </div>
+                        </li>
+                        <li class="stepexpand"><span>If the value of the parameter is <code class="codeph">MANUAL</code>,
+                                        change it to <code class="codeph">AUTO</code> for the current database
+                                        session. For example:</span><div>
+                              <pre class="oac_no_warn" dir="ltr">SQL&gt; ALTER SESSION SET WORKAREA_SIZE_POLICY = AUTO;</pre>
+                              </div>
+                        </li>
+                        <li class="stepexpand"><span>Within the same database session, perform the installation or
+                                        upgrade of <span>Oracle APEX</span>.</span></li>
+                     </ol>
+                     <div class="section">
+                        
+                        <div class="infoboxnote" id="GUID-90785C15-20A4-4F6C-A463-5E6155F64824__GUID-D5ED7A8F-4057-4E19-BAF8-CE318954416F">
+                           <p class="notep1">Note:</p>
+                           
+                           <p>If you are installing <span>Oracle APEX</span> in a CDB, <code class="codeph">WORKAREA_SIZE_POLICY</code> must be
+                                        set system-wide. For example:
+                           </p>
+                           
+                           <p><code class="codeph">SQL&gt; ALTER SYSTEM SET
+                                                WORKAREA_SIZE_POLICY=AUTO SCOPE=BOTH;</code></p>
+                           
+                           <p>Then, if needed, change it back to
+                                                <code class="codeph">MANUAL</code> after <span>Oracle APEX</span> installation or upgrade.
+                           </p>
+                           
+                        </div>
+                        
+                     </div>
+                  </div>
+                  <div>
+                     <div class="infoboxnotealso" id="GUID-90785C15-20A4-4F6C-A463-5E6155F64824__GUID-0C90A695-D6EF-4D98-93FF-D38C455DE25B">
+                        <p class="notep1">See Also:</p><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmig&id=REFRN-GUID-39E50D52-177E-4EF4-AC36-1F92CF78EC27" target="_blank">WORKAREA_SIZE_POLICY</a> in <span><cite>Oracle Database
+                                        Reference</cite></span></div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="apex-installation-requirements.html#GUID-ED8FE111-A861-4A54-938B-CB3664D49C68" title="Oracle APEX release 24.2 requires an Oracle Database release 19c or later. APEX runs on all database editions, including Enterprise Edition (EE), Standard Edition (SE), and Oracle Database Free. APEX can be installed in single-instance database and in Oracle Real Application Clusters (Oracle RAC) database.">Oracle Database Requirements</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="sect3"><a id="GUID-C260EB09-7BA4-455B-9151-D3D9A8EC6A46" name="GUID-C260EB09-7BA4-455B-9151-D3D9A8EC6A46"></a><h4 id="HTMIG-GUID-C260EB09-7BA4-455B-9151-D3D9A8EC6A46" class="sect4"><span class="enumeration_section">2.1.3 </span>Installing APEX in Databases where Database Vault is Enabled
+                  </h4>
+                  <div>
+                     <p>Complete additional configuration steps to install <span>Oracle APEX</span> in databases where <span>Oracle</span> Database Vault is enabled.
+                     </p>
+                     <p>To begin, see <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmig&id=DVADM-GUID-567BB853-B438-4726-8318-BD6B29D35066" target="_blank">Integrating Oracle Database Vault with Oracle APEX</a> in <span><cite>Oracle Database Vault
+                                        Administrator’s Guide</cite></span>.
+                     </p>
+                     <p>You must also complete additional configuration steps for some  <span>APEX</span> features, including workspace provisioning and SQL Workshop.
+                     </p>
+                     <p>The Database Vault security controls protect application data from unauthorized access and help you to comply with privacy and regulatory requirements. Database Vault is a licensable option of <span>Oracle
+                                        Database</span> Enterprise Edition. Its purpose is to mitigate the potential impact of privileged account abuse, misuse, insider and external threats, and human error on your sensitive data.
+                     </p>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="apex-installation-requirements.html#GUID-ED8FE111-A861-4A54-938B-CB3664D49C68" title="Oracle APEX release 24.2 requires an Oracle Database release 19c or later. APEX runs on all database editions, including Enterprise Edition (EE), Standard Edition (SE), and Oracle Database Free. APEX can be installed in single-instance database and in Oracle Real Application Clusters (Oracle RAC) database.">Oracle Database Requirements</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+            <div class="props_rev_3"><a id="GUID-6E817104-6C58-4FA8-861D-F884AA3369B0" name="GUID-6E817104-6C58-4FA8-861D-F884AA3369B0"></a><h3 id="HTMIG-GUID-6E817104-6C58-4FA8-861D-F884AA3369B0" class="sect3"><span class="enumeration_section">2.2 </span>Browser Requirements
+               </h3>
+               <p><span>Oracle APEX</span> requires a JavaScript-enabled browser and supports the current and prior major release of Google Chrome, Mozilla Firefox, Apple Safari, and Microsoft Edge.
+               </p>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="apex-installation-requirements.html#GUID-02BE4A34-B631-412C-8A82-EB92DABBACE0" title="Before installing Oracle APEX in a local self-managed installation you must verify your configuration meets the minimum installation requirements.">Oracle APEX Installation Requirements</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-848EF7A3-07D0-427E-A080-694144570136" name="GUID-848EF7A3-07D0-427E-A080-694144570136"></a><h3 id="HTMIG-GUID-848EF7A3-07D0-427E-A080-694144570136" class="sect3"><span class="enumeration_section">2.3 </span>Web Server Requirements
+               </h3>
+               <div>
+                  <p><span>Oracle APEX</span> requires <span>Oracle REST Data
+                                        Services</span> (ORDS) 23.3 or later.
+                  </p>
+                  <div class="section">
+                     
+                     <p><span>Oracle REST Data
+                                        Services</span> (ORDS) is Java-based web server. <span>Oracle REST Data
+                                        Services</span> features the ability to emit RESTful web services, offers improved file upload capability, and is certified with Oracle WebLogic Server and Apache Tomcat.
+                     </p>
+                     
+                     <div class="infobox-tip" id="GUID-848EF7A3-07D0-427E-A080-694144570136__GUID-D14F9F19-BD4C-4349-A781-8F576D961F4B">
+                        <p class="notep1">Tip:</p>
+                        
+                        <p><span>APEX</span>-based REST Services were desupported in release 22.1. <span>Oracle REST Data
+                                        Services</span> (ORDS) release 21.4.2 and newer now ship with migration scripts that enable you to upgrade any remaining <span>APEX</span>-based REST Services to ORDS-based Services. To learn more, see Migration of Oracle APEX RESTful Service Modules in <a href="https://www.oracle.com/tools/ords/ords-relnotes-2142.html" target="_blank">Oracle REST Data Services Release Notes</a>.
+                        </p>
+                        
+                     </div>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="apex-installation-requirements.html#GUID-02BE4A34-B631-412C-8A82-EB92DABBACE0" title="Before installing Oracle APEX in a local self-managed installation you must verify your configuration meets the minimum installation requirements.">Oracle APEX Installation Requirements</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-CF588A4D-BBE5-4EBE-8F25-B9D11EDCF568" name="GUID-CF588A4D-BBE5-4EBE-8F25-B9D11EDCF568"></a><h3 id="HTMIG-GUID-CF588A4D-BBE5-4EBE-8F25-B9D11EDCF568" class="sect3"><span class="enumeration_section">2.4 </span>Disk Space Requirement
+               </h3>
+               <div>
+                  <p><span>Oracle APEX</span> disk space requirements are described in this section.
+                  </p>
+                  <div class="section">
+                     <p><span>APEX</span> disk space requirements are as follows: 
+                     </p>
+                     <ul style="list-style-type: disc;">
+                        <li>Free space for <span>APEX</span> software files on the file system: 670 MB if using English only download (<code class="codeph">apex_<span>24.2</span>_en.zip</code>) and 1,178 MB if using full download (<code class="codeph">apex_<span>24.2</span>.zip</code>).
+                        </li>
+                        <li>Free space in <span>APEX</span> tablespace: 260 MB
+                        </li>
+                        <li>Free space in <code class="codeph">SYSTEM</code> tablespace: 128 MB
+                        </li>
+                        <li>Free space in <span>APEX</span> tablespace for each additional language (other than English) installed: 60 MB
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="apex-installation-requirements.html#GUID-02BE4A34-B631-412C-8A82-EB92DABBACE0" title="Before installing Oracle APEX in a local self-managed installation you must verify your configuration meets the minimum installation requirements.">Oracle APEX Installation Requirements</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-274D8E6E-40E0-4D0D-AC99-66EB94F58F4D" name="GUID-274D8E6E-40E0-4D0D-AC99-66EB94F58F4D"></a><h3 id="HTMIG-GUID-274D8E6E-40E0-4D0D-AC99-66EB94F58F4D" class="sect3"><span class="enumeration_section">2.5 </span>Oracle XML DB Requirement
+               </h3>
+               <div>
+                  <p>Oracle XML DB must be installed in the <span>Oracle</span> database that you want to use if you are installing a full development environment. If you are using a preconfigured database created either during an installation or by Database Configuration Assistant (DBCA), Oracle XML DB is already installed and configured. 
+                  </p>
+                  <div class="section">
+                     <div class="infobox-tip" id="GUID-274D8E6E-40E0-4D0D-AC99-66EB94F58F4D__GUID-651B89BE-DA49-4300-9FD4-8F16EB1404EB">
+                        <p class="notep1">Tip:</p>The installer does a prerequisite check for Oracle XML DB and will exit if it is not installed.
+                     </div>
+                     <div class="infobox-tip" id="GUID-274D8E6E-40E0-4D0D-AC99-66EB94F58F4D__GUID-A1B020EC-52D3-4AA0-B25A-EEB18FCD09B8">
+                        <p class="notep1">Tip:</p>The installation of Oracle XML DB creates the user ANONYMOUS. In order for <span>Oracle APEX</span> workspace provisioning to work properly, the ANONYMOUS user must not be dropped from the database.
+                     </div>
+                     <div class="infobox-tip" id="GUID-274D8E6E-40E0-4D0D-AC99-66EB94F58F4D__GUID-548E1D88-ECAF-419F-B003-2BBF68E50ECD">
+                        <p class="notep1">Tip:</p>For more information about manually adding Oracle XML DB to an existing database, see <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmig&id=ADXDB-GUID-FD0BCF20-2345-4D78-B96F-C52A4361291D" target="_blank">Administration of Oracle XML&nbsp;DB</a> in <span><cite>Oracle XML&nbsp;DB Developer’s
+                                        Guide</cite></span> 
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="apex-installation-requirements.html#GUID-02BE4A34-B631-412C-8A82-EB92DABBACE0" title="Before installing Oracle APEX in a local self-managed installation you must verify your configuration meets the minimum installation requirements.">Oracle APEX Installation Requirements</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="concept">
+      <meta name="DC.Title" content="Working with G_Fnn Arrays (Legacy)">
+      <meta name="DC.subject" content="arrays, APEX_APPLICATION, G_Fnn arrays">
+      <meta name="keywords" content="arrays, APEX_APPLICATION, G_Fnn arrays">
+      <meta name="DC.Relation" scheme="URI" content="APEX_APPLICATION.html#GUID-46D9B879-3180-480D-B5D6-54AABDD146F6">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-9418A964-B125-4C9A-9CB3-DBBA0CB6E20A">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Working with G_Fnn Arrays (Legacy)</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_APPLICATION.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_APPLICATION-Global-Variables.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Working with G_Fnn Arrays (Legacy)","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_APPLICATION.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_APPLICATION-Global-Variables.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-9418A964-B125-4C9A-9CB3-DBBA0CB6E20A" name="GUID-9418A964-B125-4C9A-9CB3-DBBA0CB6E20A"></a>
+         
+         <h2 id="AEAPI-GUID-9418A964-B125-4C9A-9CB3-DBBA0CB6E20A" class="sect2"><span class="enumeration_section">6.1 </span>Working with G_Fnn Arrays (Legacy)
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="infoboxnote" id="GUID-9418A964-B125-4C9A-9CB3-DBBA0CB6E20A__GUID-4AB2ED7A-ACC5-44B6-B1DC-CA647F61BC6C">
+                  <p class="notep1">Important:</p>Support for G_Fnn arrays is legacy and will be removed in a future release. <span>Oracle</span> recommends using interactive grids instead.
+               </div>
+               <p>The <code class="codeph">APEX_APPLICATION.G_Fnn</code> arrays (where <span class="italic">nn</span> ranges from <code class="codeph">01</code> to <code class="codeph">50</code>) are used with <code class="codeph">APEX_ITEM</code> functions to enable the dynamic generation of HTML form elements to an <span>APEX</span>  page (such as <code class="codeph">APEX_ITEM.TEXT</code> and <code class="codeph">APEX_ITEM.SELECT_LIST</code>). On Page Submit, the item values are sent to the server and provided as the <code class="codeph">APEX_APPLICATION.G_Fnn</code> arrays.
+               </p>
+               <p>Only use <code class="codeph">APEX_APPLICATION.G_Fnn</code> in an <code class="codeph">APEX_ITEM</code> context. For other contexts (such as plain array processing for PL/SQL code) use the <code class="codeph">APEX_T_VARCHAR2</code> type and the procedures and functions within the <code class="codeph">APEX_STRING</code> package.
+               </p>
+               <div class="infoboxnote" id="GUID-9418A964-B125-4C9A-9CB3-DBBA0CB6E20A__GUID-EE16D260-250E-42E6-B45D-E2B37FB46D72">
+                  <p class="notep1">Note:</p>When working with <code class="codeph">APEX_APPLICATION.G_Fnn</code>, the <code class="codeph">TABLE_TO_STRING</code> and <code class="codeph">STRING_TO_TABLE</code> functions in <code class="codeph">APEX_UTIL</code> are deprecated. Use <code class="codeph">APEX_STRING.TABLE_TO_STRING</code> and <code class="codeph">APEX_STRING.STRING_TO_TABLE</code> instead.
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-9418A964-B125-4C9A-9CB3-DBBA0CB6E20A__GUID-E6EF35C8-3AAE-4453-8BF3-3D11D250C8CB">Referencing G_Fnn Arrays</p>
+                  <p>The following example uses <code class="codeph">APEX_ITEM</code> to manually create a tabular form on the <code class="codeph">EMP</code> table. Note that the <code class="codeph">ename</code>, <code class="codeph">sal</code>, and <code class="codeph">comm</code> columns use the <code class="codeph">APEX_ITEM.TEXT</code> function to generate an HTML text field for each row. Note also that each item in the query is passed a unique <code class="codeph">p_idx</code> parameter to ensure that each column is stored in its own array. 
+                  </p>
+                  <ol id="GUID-9418A964-B125-4C9A-9CB3-DBBA0CB6E20A__OL_XPL_3SL_NSB">
+                     <li>On a new page, add a classic report with a SQL Query such as the following example:<pre class="pre codeblock"><code>SELECT
+  empno,
+  APEX_ITEM.HIDDEN(1,empno)||
+  APEX_ITEM.TEXT(2,ename) ename,
+  APEX_ITEM.TEXT(3,job) job,
+  mgr,
+  APEX_ITEM.DATE_POPUP(4,rownum,hiredate,'dd-mon-yyyy') hiredate,
+  APEX_ITEM.TEXT(5,sal) sal,
+  APEX_ITEM.TEXT(6,comm) comm,
+  deptno
+FROM emp
+ORDER BY 1</code></pre></li>
+                     <li>Disable <span class="q">"Escape Special Characters"</span> for all report columns (under the Security property in Page Designer).
+                     </li>
+                     <li>Add a Submit button to the page.</li>
+                     <li>Run the application.</li>
+                  </ol>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-9418A964-B125-4C9A-9CB3-DBBA0CB6E20A__GUID-BB84DD5E-7A49-41D3-BA62-4E0676EC6DF5">Referencing Values Within an On Submit Process</p>
+                  <p>You can reference the values posted by the tabular form using the PL/SQL variable <code class="codeph">APEX_APPLICATION.G_F01</code> to <code class="codeph">APEX_APPLICATION.G_F50</code>. Because this element is an array, you can reference values directly. For example, the following code block collects all employee names as a text block and stores it as the value of the <code class="codeph">P3_G_F01_CONTENTS</code> item:
+                  </p><pre class="pre codeblock"><code>:P3_G_F01_CONTENTS := '';
+for i IN 1..APEX_APPLICATION.G_F01.COUNT LOOP
+    :P3_G_F01_CONTENTS := :P3_G_F01_CONTENTS 
+                       || 'element '||I||' has a value of '||APEX_APPLICATION.G_F02(i) || chr(10);
+END LOOP;</code></pre><p>Note that check boxes displayed using <code class="codeph">APEX_ITEM.CHECKBOX</code> only contain values in the <code class="codeph">APEX_APPLICATION</code> arrays for those rows which are checked. Unlike other items (<code class="codeph">TEXT</code>, <code class="codeph">TEXTAREA</code>, and <code class="codeph">DATE_POPUP</code>) which can contain an entry in the corresponding <code class="codeph">APEX_APPLICATION</code> array for every row submitted, a check box only has an entry in the <code class="codeph">APEX_APPLICATION</code> array if it is selected.
+                  </p>
+               </div>
+               <div class="section">
+                  <div class="infoboxnotealso" id="GUID-9418A964-B125-4C9A-9CB3-DBBA0CB6E20A__GUID-5E7C6D01-95C4-4B99-8365-5AAE48DA0F92">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-9418A964-B125-4C9A-9CB3-DBBA0CB6E20A__UL_X4Y_KR1_YRB">
+                        <li><a href="APEX_IG.html#GUID-9A4189AF-FEAE-4CC0-A602-A10A5E4868C2">APEX_IG</a></li>
+                        <li><a href="APEX_ITEM.html#GUID-A111B577-2503-4F4E-962E-192C7D5B5338">APEX_ITEM (Legacy)</a></li>
+                        <li><a href="APEX_STRING.html#GUID-CAFD987C-7382-4F0F-8CB9-1D3BD05F054A">APEX_STRING</a></li>
+                        <li><a href="STRING_TO_TABLE-1-Function.html#GUID-8EE18F03-968D-4141-B5B9-149B12F4F6CF">STRING_TO_TABLE Function</a></li>
+                        <li><a href="TABLE_TO_STRING-1-Function.html#GUID-93B4AD2A-704C-4D9C-B48C-5E8F21CB6616">TABLE_TO_STRING Function</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_APPLICATION.html#GUID-46D9B879-3180-480D-B5D6-54AABDD146F6">APEX_APPLICATION</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

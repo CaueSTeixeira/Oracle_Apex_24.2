@@ -1,0 +1,443 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Users Across an Oracle APEX Instance">
+      <meta name="abstract" content="An Instance administrator manages all user accounts within an Oracle APEX instance on the Manage Developers and Users page.">
+      <meta name="description" content="An Instance administrator manages all user accounts within an Oracle APEX instance on the Manage Developers and Users page.">
+      <meta name="DC.subject" content="administrator, Oracle APEX, managing users, administrator roles, user roles, developer, Workspace administrator, Oracle APEX administrator, Oracle APEX administrator, creating user accounts, user account, creating, APEX users, editing user accounts, editing, editing accounts, deleting user accounts, deleting, deleting accounts">
+      <meta name="keywords" content="administrator, Oracle APEX, managing users, administrator roles, user roles, developer, Workspace administrator, Oracle APEX administrator, Oracle APEX administrator, creating user accounts, user account, creating, APEX users, editing user accounts, editing, editing accounts, deleting user accounts, deleting, deleting accounts">
+      <meta name="DC.Relation" scheme="URI" content="oracle-apex-administration-services.html#GUID-3E40D63B-D9C4-42B9-87D7-88A015762392">
+      <meta name="DC.Relation" scheme="URI" content="managing-users-across-an-application-express-instance.html#GUID-65C833CA-BD36-468B-8BF8-0A9F93E44124">
+      <meta name="DC.Relation" scheme="URI" content="managing-users-across-an-application-express-instance.html#GUID-6945A6F8-6B8A-47F2-9EBB-209110755413">
+      <meta name="DC.Relation" scheme="URI" content="managing-users-across-an-application-express-instance.html#GUID-703F7FD1-83AC-4835-AA06-AFE603B0666D">
+      <meta name="DC.Relation" scheme="URI" content="managing-users-across-an-application-express-instance.html#GUID-CE23292D-05D1-4E79-BF40-8BC31E74E6C8">
+      <meta name="DC.Relation" scheme="URI" content="managing-users-across-an-application-express-instance.html#GUID-C80ABCDE-94EA-43D2-91AE-6F3F1188EAB8">
+      <meta name="DC.Relation" scheme="URI" content="managing-users-across-an-application-express-instance.html#GUID-AC40E0C2-A6D7-4A17-AAEC-AF39460A2C23">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-AC77C488-E9CC-4279-9D5F-C4C864EF3683">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="An Instance administrator manages all user accounts within an Oracle APEX instance on the Manage Developers and Users page.">
+      <meta name="description" content="An Instance administrator manages all user accounts within an Oracle APEX instance on the Manage Developers and Users page.">
+      <title>Managing Users Across an Oracle APEX Instance</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="An Instance administrator manages all user accounts within an Oracle APEX instance on the Manage Developers and Users page.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="accessing-data-dictionary-cache-from-administration-services.html" title="Previous" type="text/html">
+      <link rel="next" href="monitoring-activity-across-an-instance.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Managing Users Across an Oracle APEX Instance","description":"An Instance administrator manages all user accounts within an Oracle APEX instance on the Manage Developers and Users page.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="accessing-data-dictionary-cache-from-administration-services.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="monitoring-activity-across-an-instance.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-AC77C488-E9CC-4279-9D5F-C4C864EF3683" name="GUID-AC77C488-E9CC-4279-9D5F-C4C864EF3683"></a><a id="AEADM267"></a><a id="4050:12"></a><a id="4050:23"></a>
+         
+         <h2 id="AEADM-GUID-AC77C488-E9CC-4279-9D5F-C4C864EF3683" class="sect2"><span class="enumeration_section">3.13 </span>Managing Users Across an <span>Oracle APEX</span> Instance
+         </h2>
+         <div class="ind">
+            <div>
+               <p>An Instance administrator manages all user accounts within an <span>Oracle APEX</span> instance on the Manage Developers and Users page.
+    
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="managing-users-across-an-application-express-instance.html#GUID-65C833CA-BD36-468B-8BF8-0A9F93E44124">About the Advantages of Managing Users at the Instance Level</a><br>When setting up user accounts, instance administrators can take advantage of         security capabilities such as locking accounts, configuring password to have a fixed         lifetime, and requiring user passwords be changed on first use.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-users-across-an-application-express-instance.html#GUID-6945A6F8-6B8A-47F2-9EBB-209110755413">About Oracle APEX Accounts Authentication</a><br>User accounts are particularly useful if your application is using <span>Oracle APEX</span> Accounts authentication. <span>APEX</span> Accounts is a built-in authentication method in which user accounts are created and managed in the <span>APEX</span> user repository.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-users-across-an-application-express-instance.html#GUID-703F7FD1-83AC-4835-AA06-AFE603B0666D">About Oracle APEX User Roles</a><br><span>Oracle APEX</span> users are divided into four roles.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-users-across-an-application-express-instance.html#GUID-CE23292D-05D1-4E79-BF40-8BC31E74E6C8">Creating New User Accounts in Administration Services</a><br>Create new user accounts in Administration Services on the Manage Developers         and Users page.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-users-across-an-application-express-instance.html#GUID-C80ABCDE-94EA-43D2-91AE-6F3F1188EAB8">Editing an Existing User Account in Administration Services</a><br>Edit user accounts in Administration Services on the Manage Developers and Users page.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-users-across-an-application-express-instance.html#GUID-AC40E0C2-A6D7-4A17-AAEC-AF39460A2C23">Deleting User Accounts in Administration Services</a><br>Delete user accounts in Administration Services on the Manage Developers and Users page.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-AC77C488-E9CC-4279-9D5F-C4C864EF3683__GUID-87F36595-B558-4932-A0F3-516325B0C1EB">
+                  <p class="notep1">See Also:</p>
+                  <ul style="list-style-type: disc;">
+                     <li><a href="workspace-and-application-administration.html#GUID-853F40E1-F360-4CE9-8DC1-FC111A825D14" title="In an Oracle APEX development environment, users sign in to a shared work area called a workspace. Workspace administrators monitor and administer a shared work area called a workspace.">Workspace and Application Administration</a></li>
+                     <li><a href="managing-users-in-a-workspace.html#GUID-DF7FEC59-E25F-4DC9-88F0-DBE1ADADA8BC" title="Create new user accounts, manage existing user accounts, and change user passwords.">Managing Users in a Workspace</a></li>
+                  </ul>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="oracle-apex-administration-services.html#GUID-3E40D63B-D9C4-42B9-87D7-88A015762392" title="Instance administrators manage an entire APEX hosted instance using the Oracle APEX Administration Services (Administration Services) application.">Oracle APEX Administration Services</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="AEADM29225"></a><div class="props_rev_3"><a id="GUID-65C833CA-BD36-468B-8BF8-0A9F93E44124" name="GUID-65C833CA-BD36-468B-8BF8-0A9F93E44124"></a><h3 id="AEADM-GUID-65C833CA-BD36-468B-8BF8-0A9F93E44124" class="sect3"><span class="enumeration_section">3.13.1 </span>About the Advantages of Managing Users at the Instance Level
+               </h3>
+               <div>
+                  <p>When setting up user accounts, instance administrators can take advantage of
+        security capabilities such as locking accounts, configuring password to have a fixed
+        lifetime, and requiring user passwords be changed on first use.</p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-65C833CA-BD36-468B-8BF8-0A9F93E44124__GUID-5644C6EB-328C-487A-9975-9D5BE5B23873">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="configuring-security.html#GUID-5EC277A4-20BD-47CF-9448-46680C75593E" title="Instance administrators can configure instance security, including service-level security, configuring support for Real Application Security, configuring session time out, preventing browser attacks by isolating workspaces, excluding domains from regions and Web services, configuring authentication controls, creating strong password policies, and managing authorized URLs.">Configuring Security</a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-users-across-an-application-express-instance.html#GUID-AC77C488-E9CC-4279-9D5F-C4C864EF3683" title="An Instance administrator manages all user accounts within an Oracle APEX instance on the Manage Developers and Users page.">Managing Users Across an Oracle APEX Instance</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29226"></a><div class="props_rev_3"><a id="GUID-6945A6F8-6B8A-47F2-9EBB-209110755413" name="GUID-6945A6F8-6B8A-47F2-9EBB-209110755413"></a><h3 id="AEADM-GUID-6945A6F8-6B8A-47F2-9EBB-209110755413" class="sect3"><span class="enumeration_section">3.13.2 </span>About <span>Oracle APEX</span> Accounts Authentication
+               </h3>
+               <div>
+                  <p>User accounts are particularly useful if your application is using <span>Oracle APEX</span> Accounts authentication. <span>APEX</span> Accounts is a built-in authentication method in which user accounts are created and managed in the <span>APEX</span> user repository.
+                  </p>
+                  <p></p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-6945A6F8-6B8A-47F2-9EBB-209110755413__GUID-9233D213-C242-4498-A08E-814546483AC8">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="../htmdb/apex-accounts.html#HTMDB-GUID-CCB71436-57AC-40BD-B8D9-7B5B6C128D12" target="_blank">APEX Accounts</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-users-across-an-application-express-instance.html#GUID-AC77C488-E9CC-4279-9D5F-C4C864EF3683" title="An Instance administrator manages all user accounts within an Oracle APEX instance on the Manage Developers and Users page.">Managing Users Across an Oracle APEX Instance</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29227"></a><div class="props_rev_3"><a id="GUID-703F7FD1-83AC-4835-AA06-AFE603B0666D" name="GUID-703F7FD1-83AC-4835-AA06-AFE603B0666D"></a><h3 id="AEADM-GUID-703F7FD1-83AC-4835-AA06-AFE603B0666D" class="sect3"><span class="enumeration_section">3.13.3 </span>About <span>Oracle APEX</span> User Roles
+               </h3>
+               <div>
+                  <p><span>Oracle APEX</span> users are divided into four roles.
+                  </p>
+                  <p>To access the <span>APEX</span> development environment, users sign in to a shared work area called a workspace. Users are divided into four primary roles: 
+                  </p>
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        <p><span class="bold">End users</span> do not have access to development or administrative capabilities.
+                                                  End cannot sign in to a workspace and create
+                                                  applications. End users can only run existing
+                                                  applications.
+                        </p>
+                     </li>
+                     <li>
+                        <p><span class="bold">Developers</span> are users who create and edit applications, monitor workspace activity, and view dashboards.
+                        </p>
+                     </li>
+                     <li>
+                        <p><span class="bold">Workspace administrators</span> are users who perform administrator tasks specific to a workspace such as managing user accounts, monitoring workspace activity, and viewing log files.
+                        </p>
+                     </li>
+                     <li>
+                        <p><span class="bold">Instance administrators</span> are superusers that manage an entire hosted instance using the <span>Oracle APEX</span> Administration Services application. Instance administrators create workspaces, configure features and instance settings, and manage security.
+                        </p>
+                     </li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-users-across-an-application-express-instance.html#GUID-AC77C488-E9CC-4279-9D5F-C4C864EF3683" title="An Instance administrator manages all user accounts within an Oracle APEX instance on the Manage Developers and Users page.">Managing Users Across an Oracle APEX Instance</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM268"></a><div class="props_rev_3"><a id="GUID-CE23292D-05D1-4E79-BF40-8BC31E74E6C8" name="GUID-CE23292D-05D1-4E79-BF40-8BC31E74E6C8"></a><h3 id="AEADM-GUID-CE23292D-05D1-4E79-BF40-8BC31E74E6C8" class="sect3"><span class="enumeration_section">3.13.4 </span>Creating New User Accounts in Administration Services
+               </h3>
+               <div>
+                  <p>Create new user accounts in Administration Services on the Manage Developers
+        and Users page.</p>
+                  <div class="section">
+                     <p>To create a new user account:</p>
+                     <div class="infobox-tip" id="GUID-CE23292D-05D1-4E79-BF40-8BC31E74E6C8__GUID-2E3E28F9-AB69-465F-82DC-7980D33BF049">
+                        <p class="notep1">Tip:</p>
+                        <p>You can also access the Create/Edit User page by clicking <span class="uicontrol bold">Create
+                        User</span> on the Workspace Tasks list on the Administration Services
+                    home page.
+                        </p>
+                     </div>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to <span>Oracle APEX</span> Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Workspaces</span>.</span></li>
+                     <li class="stepexpand"><span>Under Workspace Actions, click <span class="uicontrol bold">Manage Developers and
+                        Users</span>.</span><div>The Manage Developers and Users page appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create User</span>. </span><div>The Create/Edit User page appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Under User Attribute:</span><ol type="a">
+                           <li class="substepexpand"><span>Username - Enter the username used to sign in to the system.
+                            Restrictions include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;">
+                                    <li>
+                                       
+                                       <p>Maximum length of 100 characters</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>No spaces</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Only these special characters are permitted: ampersand (&amp;) and period (.)</p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Email Address - Enter the valid email address for this user.</span></li>
+                           <li class="substepexpand"><span>First Name - Enter the first or given name to further identify the user
+                            (optional).</span></li>
+                           <li class="substepexpand"><span>Last Name - Enter the last or family name to further identify the user
+                            (optional). </span></li>
+                           <li class="substepexpand"><span>Description - Enter comments about this user (optional).</span></li>
+                           <li class="substepexpand"><span>Default Date Format - Specify the default Oracle date format for the
+                            user. This option controls the default date format within SQL
+                            Workshop.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Account Privileges:</span><ol type="a">
+                           <li class="substepexpand"><span>Workspace - Select a workspace in which to create the user.</span></li>
+                           <li class="substepexpand"><span>Default Schema - Select the default schema for this user.</span></li>
+                           <li class="substepexpand"><span>Accessible Schemas (null for all) - Enter a colon-delimited list of
+                            schemas for which this developer has permissions when using the SQL
+                            Workshop.</span><div>The list of schemas you enter here restricts the
+                            user to a subset of the full set of schemas provisioned for the
+                            workspace and determines what schema names the user sees in SQL
+                            Workshop.</div>
+                           </li>
+                           <li class="substepexpand"><span>To specify Workspace administrator privileges:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-CE23292D-05D1-4E79-BF40-8BC31E74E6C8__UL_N31_VW5_RNB">
+                                    <li>
+                                       
+                                       <p>User is an administrator- Select
+                                            <span class="uicontrol bold">Yes</span>.
+                                       </p>
+                                       
+                                       <p>Administrator accounts automatically have all
+                                        developer privileges enabled.</p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>To specify Developer privileges:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-CE23292D-05D1-4E79-BF40-8BC31E74E6C8__UL_GPW_4X5_RNB">
+                                    <li>
+                                       
+                                       <p>User is an administrator- Select
+                                            <span class="uicontrol bold">No</span>.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>User is a developer - Select
+                                            <span class="uicontrol bold">Yes</span>.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span>App Builder</span> Access - Determines whether a developer has access to <span>App Builder</span>. Use App Builder to create and manage applications and
+                                        application pages. Select <span class="uicontrol bold">Yes</span> or
+                                            <span class="uicontrol bold">No</span>.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>SQL Workshop Access - Determines whether a
+                                        developer has access to the SQL Workshop. SQL Workshop
+                                        provides tools that enable you to view and manage database
+                                        objects. Select <span class="uicontrol bold">Yes</span> or
+                                            <span class="uicontrol bold">No</span></p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Team Development Access - Determines whether a
+                                        user has access to the Team Development. Use Team
+                                        Development to track and manage issues in a conversational
+                                        fashion. Select <span class="uicontrol bold">Yes</span> or
+                                            <span class="uicontrol bold">No</span>.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                              <div>
+                                 
+                                 <div class="infoboxnote" id="GUID-CE23292D-05D1-4E79-BF40-8BC31E74E6C8__GUID-D8721760-EAB3-4C83-953C-341960AA5707">
+                                    <p class="notep1">Note:</p>To create an End
+                                User account, disable both <span class="uicontrol bold">User is an
+                                    administrator</span> and <span class="uicontrol bold">User is a
+                                    developer</span>. End users can only run existing
+                                applications
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Account Availability - Select <span class="uicontrol bold">Locked</span> to prevent
+                            the account from being used. Select <span class="uicontrol bold">Unlocked</span> to
+                            allow the account to be used.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Password:</span><ol type="a">
+                           <li><span>Password - Enter a case-sensitive password if you are creating a new
+                            account with a password, or are updating the password for an existing
+                            account.</span></li>
+                           <li><span>Confirm Password - Enter the password again if you are creating a new
+                            account with a password, or are updating the password for an existing
+                            account.</span></li>
+                           <li><span>Require Change of Password On First Use - Select
+                                <span class="uicontrol bold">Yes</span> to require the user to change the
+                            password immediately after logging in the first time. </span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create User</span> or <span class="uicontrol bold">Create and Create Another</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-users-across-an-application-express-instance.html#GUID-AC77C488-E9CC-4279-9D5F-C4C864EF3683" title="An Instance administrator manages all user accounts within an Oracle APEX instance on the Manage Developers and Users page.">Managing Users Across an Oracle APEX Instance</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM269"></a><div class="props_rev_3"><a id="GUID-C80ABCDE-94EA-43D2-91AE-6F3F1188EAB8" name="GUID-C80ABCDE-94EA-43D2-91AE-6F3F1188EAB8"></a><h3 id="AEADM-GUID-C80ABCDE-94EA-43D2-91AE-6F3F1188EAB8" class="sect3"><span class="enumeration_section">3.13.5 </span>Editing an Existing User Account in Administration Services
+               </h3>
+               <div>
+                  <p>Edit user accounts in Administration Services on the Manage Developers and Users page.</p>
+                  <div class="section">
+                     <p>To edit an existing user account in Administration Services:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to <span>Oracle APEX</span> Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Workspaces</span>.</span></li>
+                     <li class="stepexpand"><span>Under Workspace Actions, click <span class="uicontrol bold">Manage Developers and
+                        Users</span>.</span><div>The Manage Developers and Users page appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>To edit account details, click a user.</span></li>
+                     <li class="stepexpand"><span>Edit the appropriate attributes. </span><div>
+                           <div class="infobox-tip" id="GUID-C80ABCDE-94EA-43D2-91AE-6F3F1188EAB8__GUID-C0A28BD6-9231-45B1-9ACE-4CF4C3F7E3F0">
+                              <p class="notep1">Tip:</p>
+                              <p>To learn more about an attribute, see field-level Help.</p>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="bold">Apply Changes</span>.</span><div>
+                           <div class="infoboxnotealso" id="GUID-C80ABCDE-94EA-43D2-91AE-6F3F1188EAB8__GUID-1B1B1CAF-9706-4849-91B9-DC43706166BF">
+                              <p class="notep1">See Also:</p>
+                              <p><a href="managing-users-across-an-application-express-instance.html#GUID-CE23292D-05D1-4E79-BF40-8BC31E74E6C8" title="Create new user accounts in Administration Services on the Manage Developers and Users page.">Creating New User Accounts in Administration Services</a></p>
+                           </div>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-users-across-an-application-express-instance.html#GUID-AC77C488-E9CC-4279-9D5F-C4C864EF3683" title="An Instance administrator manages all user accounts within an Oracle APEX instance on the Manage Developers and Users page.">Managing Users Across an Oracle APEX Instance</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM270"></a><div class="props_rev_3"><a id="GUID-AC40E0C2-A6D7-4A17-AAEC-AF39460A2C23" name="GUID-AC40E0C2-A6D7-4A17-AAEC-AF39460A2C23"></a><h3 id="AEADM-GUID-AC40E0C2-A6D7-4A17-AAEC-AF39460A2C23" class="sect3"><span class="enumeration_section">3.13.6 </span>Deleting User Accounts in Administration Services
+               </h3>
+               <div>
+                  <p>Delete user accounts in Administration Services on the Manage Developers and Users page.</p>
+                  <div class="section">
+                     <p>To delete a user account in Administration Services:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Workspaces</span>.</span></li>
+                     <li class="stepexpand"><span>Under Workspace Actions, click <span class="uicontrol bold">Manage Developers and
+                        Users</span>.</span><div>The Manage Developers and Users page appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Click the user to be deleted.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Delete User</span>.</span></li>
+                     <li class="stepexpand"><span>Confirm your selection and click <span class="uicontrol bold">OK</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-users-across-an-application-express-instance.html#GUID-AC77C488-E9CC-4279-9D5F-C4C864EF3683" title="An Instance administrator manages all user accounts within an Oracle APEX instance on the Manage Developers and Users page.">Managing Users Across an Oracle APEX Instance</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

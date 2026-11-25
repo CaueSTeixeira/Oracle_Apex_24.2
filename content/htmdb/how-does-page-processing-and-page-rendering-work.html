@@ -1,0 +1,327 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="How Does Page Processing and Page Rendering Work?">
+      <meta name="abstract" content="Learn how the Oracle APEX engine renders and processes pages, when APEX issues implicit commits, how conditional rendering and processing works, and how to verify user identity or control access to controls and components.">
+      <meta name="description" content="Learn how the Oracle APEX engine renders and processes pages, when APEX issues implicit commits, how conditional rendering and processing works, and how to verify user identity or control access to controls and components.">
+      <meta name="DC.subject" content="page processing, understanding, page rendering, Show Page, Accept Page, commit points, conditions, using, conditional, rendering, processing, user identity, verifying, authentication, authorization, components, controlling access to, controls, controlling access to">
+      <meta name="keywords" content="page processing, understanding, page rendering, Show Page, Accept Page, commit points, conditions, using, conditional, rendering, processing, user identity, verifying, authentication, authorization, components, controlling access to, controls, controlling access to">
+      <meta name="DC.Relation" scheme="URI" content="application-builder-concepts.html#GUID-6D22E307-6D48-49BC-9FDC-A7D8B037E46A">
+      <meta name="DC.Relation" scheme="URI" content="how-does-page-processing-and-page-rendering-work.html#GUID-0ED6E5D2-12E1-4A97-9A48-28206CE01F7E">
+      <meta name="DC.Relation" scheme="URI" content="how-does-page-processing-and-page-rendering-work.html#GUID-8D079606-6445-49B9-88D5-9CE3AD677E7E">
+      <meta name="DC.Relation" scheme="URI" content="how-does-page-processing-and-page-rendering-work.html#GUID-E7A469B8-2757-49E9-B5FB-052C9AEA92CD">
+      <meta name="DC.Relation" scheme="URI" content="how-does-page-processing-and-page-rendering-work.html#GUID-9C19869D-66D7-4176-B41F-3F7D653E91E3">
+      <meta name="DC.Relation" scheme="URI" content="how-does-page-processing-and-page-rendering-work.html#GUID-F9D492AD-DC51-46BA-883B-1E22A100D6E8">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-570F6C98-8AEA-433B-A83C-3139C7214E1A">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn how the Oracle APEX engine renders and processes pages, when APEX issues implicit commits, how conditional rendering and processing works, and how to verify user identity or control access to controls and components.">
+      <meta name="description" content="Learn how the Oracle APEX engine renders and processes pages, when APEX issues implicit commits, how conditional rendering and processing works, and how to verify user identity or control access to controls and components.">
+      <title>How Does Page Processing and Page Rendering Work?</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Learn how the Oracle APEX engine renders and processes pages, when APEX issues implicit commits, how conditional rendering and processing works, and how to verify user identity or control access to controls and components.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="running-an-application-or-page.html" title="Previous" type="text/html">
+      <link rel="next" href="about-enabling-support-for-bookmarks.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"How Does Page Processing and Page Rendering Work?","description":"Learn how the Oracle APEX engine renders and processes pages, when APEX issues implicit commits, how conditional rendering and processing works, and how to verify user identity or control access to controls and components.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="running-an-application-or-page.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="about-enabling-support-for-bookmarks.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-570F6C98-8AEA-433B-A83C-3139C7214E1A" name="GUID-570F6C98-8AEA-433B-A83C-3139C7214E1A"></a><a id="HTMDB03002"></a>
+         
+         <h2 id="HTMDB-GUID-570F6C98-8AEA-433B-A83C-3139C7214E1A" class="sect2"><span class="enumeration_section">3.3 </span>How Does Page Processing and Page Rendering Work?
+         </h2>
+         <div class="ind">
+            <p>Learn how the <span>Oracle APEX</span> engine renders and processes pages, when <span>APEX</span> issues implicit commits, how conditional rendering and processing works, and how to verify user identity or control access to controls and components.
+            </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="how-does-page-processing-and-page-rendering-work.html#GUID-0ED6E5D2-12E1-4A97-9A48-28206CE01F7E">How the APEX Engine Renders and Processes Pages</a><br>The <span>Oracle APEX</span> engine dynamically renders and processes pages based on data stored in Oracle database         tables. 
+                  </li>
+                  <li class="ulchildlink"><a href="how-does-page-processing-and-page-rendering-work.html#GUID-8D079606-6445-49B9-88D5-9CE3AD677E7E">About Implicit Commit Points</a><br>Learn about when <span>Oracle APEX</span> issues implicit commits.
+                  </li>
+                  <li class="ulchildlink"><a href="how-does-page-processing-and-page-rendering-work.html#GUID-E7A469B8-2757-49E9-B5FB-052C9AEA92CD">Understanding Conditional Rendering and Processing</a><br>Use conditions in an application to control how pages and page components display and         when processes, computations, and validations execute.
+                  </li>
+                  <li class="ulchildlink"><a href="how-does-page-processing-and-page-rendering-work.html#GUID-9C19869D-66D7-4176-B41F-3F7D653E91E3">About Verifying User Identity</a><br>Authentication is the process of establishing users' identities before they can         access an application.
+                  </li>
+                  <li class="ulchildlink"><a href="how-does-page-processing-and-page-rendering-work.html#GUID-F9D492AD-DC51-46BA-883B-1E22A100D6E8">About Controlling Access to Controls and Components</a><br>Learn about controlling access to controls and components.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="application-builder-concepts.html#GUID-6D22E307-6D48-49BC-9FDC-A7D8B037E46A" title="To efficiently use App Builder, developers must understand some key concepts including managing user interface design, viewing rendered application pages, understanding page processing and rendering, managing session state, understanding URL syntax, managing session state values, and using built-in substitution strings.">App Builder Concepts</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB03003"></a><div class="props_rev_3"><a id="GUID-0ED6E5D2-12E1-4A97-9A48-28206CE01F7E" name="GUID-0ED6E5D2-12E1-4A97-9A48-28206CE01F7E"></a><h3 id="HTMDB-GUID-0ED6E5D2-12E1-4A97-9A48-28206CE01F7E" class="sect3"><span class="enumeration_section">3.3.1 </span>How the <span>APEX</span> Engine Renders and Processes Pages
+               </h3>
+               <div>
+                  <p>The <span>Oracle APEX</span> engine dynamically renders and processes pages based on data stored in Oracle database
+        tables. 
+                  </p>
+                  <p>To view a rendered version of your application, you request it from the <span>APEX</span> engine with a URL. When you run an application, the <span>APEX</span> engine relies on two processes:
+                  </p>
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        <p><span class="bold">Show Page</span> - Show Page is a page rendering process that assembles all the page attributes (including regions, items, and buttons) into a viewable HTML page. When you request a page using a URL, the engine is running <span class="bold">Show Page</span>. 
+                        </p>
+                     </li>
+                     <li>
+                        <p><span class="bold">Accept Page</span> - Accept Page performs forms page processing, including computations, validations, processes, and branching. When you submit a page, the <span>APEX</span> engine is running <span class="bold">Accept Page</span> or performing page processing during which it saves the submitted values in the session cache and then performs any computations, validations, or processes.
+                        </p>
+                     </li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="how-does-page-processing-and-page-rendering-work.html#GUID-570F6C98-8AEA-433B-A83C-3139C7214E1A" title="Learn how the Oracle APEX engine renders and processes pages, when APEX issues implicit commits, how conditional rendering and processing works, and how to verify user identity or control access to controls and components.">How Does Page Processing and Page Rendering Work?</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-8D079606-6445-49B9-88D5-9CE3AD677E7E" name="GUID-8D079606-6445-49B9-88D5-9CE3AD677E7E"></a><h3 id="HTMDB-GUID-8D079606-6445-49B9-88D5-9CE3AD677E7E" class="sect3"><span class="enumeration_section">3.3.2 </span>About Implicit Commit Points
+               </h3>
+               <div>
+                  <p>Learn about when <span>Oracle APEX</span> issues implicit commits.
+                  </p>
+                  <p><span>Oracle APEX</span> issues implicit commits at the following points:
+                  </p>
+                  <ul style="list-style-type: disc;">
+                     <li>On load, after a page finishes rendering&nbsp;</li>
+                     <li>On submit, before branching to another page</li>
+                     <li>On submit, if one or more validations fail, before re-rendering the page</li>
+                     <li>After a computation</li>
+                     <li>After changing the value of an item, for example after a PL/SQL process that&nbsp;modifies a bind variable value or when <code class="codeph">APEX_UTIL.SET_SESSION_STATE</code> is&nbsp;called.
+                     </li>
+                     <li>When <code class="codeph">APEX_MAIL.PUSH_QUEUE</code> is called
+                     </li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-8D079606-6445-49B9-88D5-9CE3AD677E7E__GUID-DFC2A10D-BFFA-4E32-8178-409C3DADA35D">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="../aeapi/SET_SESSION_STATE-Procedure.html#AEAPI-GUID-ECF66FA6-91DF-4463-A7DC-EFFB3E49A5D1" target="_blank">SET_SESSION_STATE Procedure</a> and <a href="../aeapi/PUSH_QUEUE-Procedure.html#AEAPI-GUID-A17CEA4E-B667-4657-AC0E-F2C0833010EC" target="_blank">PUSH_QUEUE Procedure</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="how-does-page-processing-and-page-rendering-work.html#GUID-570F6C98-8AEA-433B-A83C-3139C7214E1A" title="Learn how the Oracle APEX engine renders and processes pages, when APEX issues implicit commits, how conditional rendering and processing works, and how to verify user identity or control access to controls and components.">How Does Page Processing and Page Rendering Work?</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-E7A469B8-2757-49E9-B5FB-052C9AEA92CD" name="GUID-E7A469B8-2757-49E9-B5FB-052C9AEA92CD"></a><h3 id="HTMDB-GUID-E7A469B8-2757-49E9-B5FB-052C9AEA92CD" class="sect3"><span class="enumeration_section">3.3.3 </span>Understanding Conditional Rendering and
+        Processing
+               </h3>
+               <div>
+                  <p>Use conditions in an application to control how pages and page components display and
+        when processes, computations, and validations execute.</p>
+                  <div class="section">
+                     
+                     <p>A condition is a small unit of logic that helps you control the display
+                of regions, items, buttons, and tabs and the execution of processes, computations,
+                and validations.  For example, when you apply a condition to a button, the rendering
+                engine evaluates the condition during the rendering (or Show Page) process. Whether
+                the condition passes or fails determines if the button displays.</p>
+                     
+                     <p>You specify a condition by selecting a condition type. You can select a
+                condition type when you first create the control or component, or later when editing
+                the control or component.</p>
+                     
+                     <p>Depending upon the type of condition you select, you enter the
+                appropriate values in the fields provided. The condition evaluates to true or false
+                based on the values you enter. Click the select list to view a complete list of all
+                available conditions for a given component or control.</p>
+                     
+                     <div class="infoboxnotealso" id="GUID-E7A469B8-2757-49E9-B5FB-052C9AEA92CD__GUID-69B54D62-A001-490A-811F-56F838B3A878">
+                        <p class="notep1">See Also:</p>
+                        
+                        <p><a href="available-conditions.html#GUID-7FDEBB2E-8A43-4F98-9EE0-056C789EFE1B" title="Learn about conditions.Review descriptions of conditions available in Oracle APEX.">Available Conditions</a> for a
+                    detailed listing of available condition types
+                        </p>
+                        
+                     </div>
+                  </div>
+                  <div class="example" id="GUID-E7A469B8-2757-49E9-B5FB-052C9AEA92CD__GUID-DA1E70B6-3B07-4A81-BF51-F3C9D20EC0E3">
+                     <p class="titleinexample">Example 3-1 Current Page is NOT in comma delimited
+                list</p>
+                     <p><code class="codeph">Current Page is NOT in comma delimited list</code> evaluates to true if
+                the current page number is contained within the comma-delimited list of pages
+                provided. For example: 
+                     </p>
+                     <pre class="pre codeblock"><code>3,100,203
+</code></pre>
+                     <p>If the current page is 100, then this condition evaluates to true and
+                the condition passes.</p>
+                  </div>
+                  <div class="example" id="GUID-E7A469B8-2757-49E9-B5FB-052C9AEA92CD__GUID-72070A97-1676-4F01-8892-4DD9DB2F9254">
+                     <p class="titleinexample">Example 3-2 PLSQL Expression</p>
+                     
+                     
+                     <p>Use <code class="codeph">PLSQL Expression</code> to specify an expression in valid
+                PL/SQL syntax that evaluates to true or false. For example: 
+                     </p>
+                     <pre class="pre codeblock"><code>NVL(:MY_ITEM,'NO') = 'YES'
+</code></pre>
+                     <p>If the value of <code class="codeph">:MY_ITEM</code> is YES, as in the previous
+                example, then the condition evaluates as true. If the value of :MY_ITEM is anything
+                other than YES, then the condition evaluates as false.
+                     </p>
+                     
+                  </div>
+                  <div class="example" id="GUID-E7A469B8-2757-49E9-B5FB-052C9AEA92CD__GUID-0C823DBD-4904-4D80-A726-B486DA4DD119">
+                     <p class="titleinexample">Example 3-3 Rows returned</p>
+                     
+                     
+                     <p><code class="codeph">Rows returned </code> expressed as a SQL query. If the query
+                returns one or more rows, then the condition evaluates as true. For example: 
+                     </p>
+                     <pre class="pre codeblock"><code>SELECT 1 FROM employees WHERE department_id = :P101_DEPTNO
+</code></pre>
+                     <div class="p">This example references item <code class="codeph">P101_DEPTNO</code> as a bind
+                variable. You can use bind variables within application processes and SQL query
+                regions to reference items from session state. If one or more employees are in the
+                department identified by the value of <code class="codeph">P101_DEPTNO</code>, then the
+                condition evaluates as true.
+                        <div class="infoboxnotealso" id="GUID-E7A469B8-2757-49E9-B5FB-052C9AEA92CD__GUID-B27B3A28-3D57-4662-9BDF-1FEB1E81F4EA">
+                           <p class="notep1">See Also:</p>
+                           
+                           <p><a href="managing-session-state-values.html#GUID-A052DC04-0D04-4DEA-BDEF-4DCBFF489E07" title="Use bind variable syntax anywhere where you are using SQL or PL/SQL to reference session state of a specified item.&nbsp;">Referencing Session State Using Bind Variable Syntax</a></p>
+                           
+                        </div>
+                     </div>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="how-does-page-processing-and-page-rendering-work.html#GUID-570F6C98-8AEA-433B-A83C-3139C7214E1A" title="Learn how the Oracle APEX engine renders and processes pages, when APEX issues implicit commits, how conditional rendering and processing works, and how to verify user identity or control access to controls and components.">How Does Page Processing and Page Rendering Work?</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB03005"></a><div class="props_rev_3"><a id="GUID-9C19869D-66D7-4176-B41F-3F7D653E91E3" name="GUID-9C19869D-66D7-4176-B41F-3F7D653E91E3"></a><h3 id="HTMDB-GUID-9C19869D-66D7-4176-B41F-3F7D653E91E3" class="sect3"><span class="enumeration_section">3.3.4 </span>About Verifying User Identity
+               </h3>
+               <div>
+                  <p>Authentication is the process of establishing users' identities before they can
+        access an application.</p>
+                  <p>Authentication may require a user to enter a user name and password, or may involve
+            the use of a digital certificate or a secure key. </p>
+                  <p><span>Oracle APEX</span> supports modular authentication, making it easy to switch authentication methods when needed. You can establish a user's identity by selecting from several built-in authentication methods, or by using a wizard to create your own custom authentication approach.
+                  </p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-9C19869D-66D7-4176-B41F-3F7D653E91E3__GUID-3275D2FE-9675-4075-87B4-21A4299D0517">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="establishing-user-identity-through-authentication.html#GUID-45C4B1CD-4231-4FE9-8B5B-C90611F5F57B" title="Use authentication to establish a user's identity to control access to an application. Authentication may require a user identify a user name and password or could involve the use of digital certificates or a secure key.">Establishing User Identity Through Authentication</a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="how-does-page-processing-and-page-rendering-work.html#GUID-570F6C98-8AEA-433B-A83C-3139C7214E1A" title="Learn how the Oracle APEX engine renders and processes pages, when APEX issues implicit commits, how conditional rendering and processing works, and how to verify user identity or control access to controls and components.">How Does Page Processing and Page Rendering Work?</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB03006"></a><div class="props_rev_3"><a id="GUID-F9D492AD-DC51-46BA-883B-1E22A100D6E8" name="GUID-F9D492AD-DC51-46BA-883B-1E22A100D6E8"></a><h3 id="HTMDB-GUID-F9D492AD-DC51-46BA-883B-1E22A100D6E8" class="sect3"><span class="enumeration_section">3.3.5 </span>About Controlling Access to Controls and Components
+               </h3>
+               <div>
+                  <p>Learn about controlling access to controls and components.</p>
+                  <p>While conditions control the rendering and processing of specific controls or components on a page, authorization schemes control user access. Authorization is a broad term for controlling access to resources based on user privileges. </p>
+                  <p>Authorization schemes use the identities established by authentication to grant privileges on applications and objects within them. You can specify an authorization scheme for an entire application, a page, or a specific page control such as a region, item, or button. For example, you could use an authorization scheme to selectively determine which tabs, regions, or navigation bar entries a user sees.</p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-F9D492AD-DC51-46BA-883B-1E22A100D6E8__GUID-1D2C4A2F-B036-429B-A8C9-DA31044FA87E">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="providing-security-through-authorization.html#GUID-8FBF5F46-0541-4859-8470-D10E333DD271" title="Extend the security of your application by creating an authorization scheme.">Providing Security Through Authorization</a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="how-does-page-processing-and-page-rendering-work.html#GUID-570F6C98-8AEA-433B-A83C-3139C7214E1A" title="Learn how the Oracle APEX engine renders and processes pages, when APEX issues implicit commits, how conditional rendering and processing works, and how to verify user identity or control access to controls and components.">How Does Page Processing and Page Rendering Work?</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

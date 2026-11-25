@@ -1,0 +1,215 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="ADD_ATTACHMENT Procedure Signature 1">
+      <meta name="DC.subject" content="ADD_ATTACHMENT procedure, APEX_MAIL, email, sending as an attachment, application, sending outbound email as attachment">
+      <meta name="keywords" content="ADD_ATTACHMENT procedure, APEX_MAIL, email, sending as an attachment, application, sending outbound email as attachment">
+      <meta name="DC.Relation" scheme="URI" content="APEX_MAIL.html#GUID-14F51C6D-CB82-4B38-AB6E-61C46E75596F">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-5B514926-2C0A-40E3-82BB-7E357CB0C927">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>ADD_ATTACHMENT Procedure Signature 1</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="Configuring-Oracle-Application-Express-to-Send-Email.html" title="Previous" type="text/html">
+      <link rel="next" href="ADD_ATTACHMENT-Procedure-Signature-2.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"ADD_ATTACHMENT Procedure Signature 1","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="Configuring-Oracle-Application-Express-to-Send-Email.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="ADD_ATTACHMENT-Procedure-Signature-2.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-5B514926-2C0A-40E3-82BB-7E357CB0C927" name="GUID-5B514926-2C0A-40E3-82BB-7E357CB0C927"></a><a id="AEAPI1191"></a><a id="AEAPI1192"></a><a id="AEAPI1193"></a><a id="AEAPI1194"></a><a id="AEAPI343"></a>
+         
+         <h2 id="AEAPI-GUID-5B514926-2C0A-40E3-82BB-7E357CB0C927" class="sect2"><span class="enumeration_section">41.2 </span>ADD_ATTACHMENT Procedure Signature 1
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This procedure adds an attachment of type BLOB to an outbound email message. To add multiple attachments to a single email, <code class="codeph">APEX_MAIL.ADD_ATTACHMENT</code> can be called repeatedly for a single email message.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-5B514926-2C0A-40E3-82BB-7E357CB0C927__GUID-E65DA20F-0D73-4075-93FF-91E8D5A3A1E7">Syntax</p><pre class="pre codeblock"><code>APEX_MAIL.ADD_ATTACHMENT (
+    p_mail_id           IN NUMBER,
+    p_attachment        IN BLOB,
+    p_filename          IN VARCHAR2,
+    p_mime_type         IN VARCHAR2
+    p_content_id        IN VARCHAR2    DEFAULT NULL );</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-5B514926-2C0A-40E3-82BB-7E357CB0C927__GUID-0EDCAB1E-7E45-4B9B-AB01-56F23E5F123C">Parameters</p>
+                  <div class="tblformal" id="GUID-5B514926-2C0A-40E3-82BB-7E357CB0C927__CHDCHEEH">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="ParameterS for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="42%" id="d200341e85">Parameter</th>
+                              <th align="left" valign="bottom" width="58%" id="d200341e87">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d200341e91" headers="d200341e85 "><code class="codeph">p_mail_id</code></td>
+                              <td align="left" valign="top" width="58%" headers="d200341e91 d200341e87 ">The numeric ID associated with the email. This is the numeric identifier returned from the call to <code class="codeph">APEX_MAIL.SEND</code> to compose the email body.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d200341e100" headers="d200341e85 "><code class="codeph">p_attachment</code></td>
+                              <td align="left" valign="top" width="58%" headers="d200341e100 d200341e87 ">A <code class="codeph">BLOB</code> variable containing the binary content to be attached to the email message.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d200341e109" headers="d200341e85 "><code class="codeph">p_filename</code></td>
+                              <td align="left" valign="top" width="58%" headers="d200341e109 d200341e87 ">The filename associated with the email attachment.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d200341e115" headers="d200341e85 "><code class="codeph">p_mime_type</code></td>
+                              <td align="left" valign="top" width="58%" headers="d200341e115 d200341e87 ">A valid MIME type (or Internet media type) to associate with the email attachment.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d200341e121" headers="d200341e85 "><code class="codeph">p_content_id</code></td>
+                              <td align="left" valign="top" width="58%" headers="d200341e121 d200341e87 ">
+                                 <p>An optional identifier for the attachment. If non-null, then the file attaches inline. That attachment may then be referenced in the HTML of the email body by using the <code class="codeph">cid</code>.
+                                 </p>
+                                 <p>Note: Be aware that automatic displaying of inlined images may not be supported by all e-mail clients.</p>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-5B514926-2C0A-40E3-82BB-7E357CB0C927__GUID-9D6C5A66-810C-45C8-952F-CB2E57EC034E">Example 1</p>
+                  <p>The following example demonstrates how to access files stored in <code class="codeph">APEX_APPLICATION_FILES</code> and add them to an outbound email message.
+                  </p><pre class="pre codeblock"><code>DECLARE
+    l_id NUMBER;
+BEGIN
+    l_id := APEX_MAIL.SEND(
+        p_to        =&gt; 'fred@flintstone.com',
+        p_from      =&gt; 'barney@rubble.com',
+        p_subj      =&gt; 'APEX_MAIL with attachment',
+        p_body      =&gt; 'Please review the attachment.',
+        p_body_html =&gt; '&lt;b&gt;Please&lt;/b&gt; review the attachment');
+    FOR c1 IN (SELECT filename, blob_content, mime_type 
+        FROM APEX_APPLICATION_FILES
+        WHERE ID IN (123,456)) LOOP
+
+        APEX_MAIL.ADD_ATTACHMENT(
+            p_mail_id    =&gt; l_id,
+            p_attachment =&gt; c1.blob_content,
+            p_filename   =&gt; c1.filename,
+            p_mime_type  =&gt; c1.mime_type);
+        END LOOP;
+    COMMIT;
+END;
+/</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-5B514926-2C0A-40E3-82BB-7E357CB0C927__GUID-0937DF54-173B-4068-815B-DD3584242142">Example 2</p>
+                  <p>This example shows how to attach a file inline, by using a content identifier, and how to refer to that attachment in the HTML of the email.</p><pre class="pre codeblock"><code>DECLARE
+  l_id number;
+  l_body clob;
+  l_body_html clob;
+  l_content_id varchar2(100) := 'my-inline-image';
+  l_filename varchar2(100);
+  l_mime_type varchar2(100);
+  l_image blob;
+BEGIN
+  l_body := 'To view the content of this message, please use an HTML enabled mail client.' || utl_tcp.crlf;
+
+  l_body_html := '&lt;html&gt;&lt;body&gt;' || utl_tcp.crlf ||
+                 '&lt;p&gt;Here is the image you requested.&lt;/p&gt;' || utl_tcp.crlf ||
+                 '&lt;p&gt;&lt;img src="cid:' || l_content_id || '" alt="Requested Image"&gt;&lt;/p&gt;' || utl_tcp.crlf ||
+                 '&lt;p&gt;Thanks,&lt;br /&gt;' || utl_tcp.crlf ||
+                 'The EveryCorp Dev Team&lt;br /&gt;' || utl_tcp.crlf ||
+                 '&lt;/body&gt;&lt;/html&gt;';
+  l_id := apex_mail.send (
+    p_to =&gt; 'some_user@example.com', -- change to your email address
+    p_from =&gt; 'some_sender@example.com', -- change to a real senders email address
+    p_body =&gt; l_body,
+    p_body_html =&gt; l_body_html,
+    p_subj =&gt; 'Requested Image' );
+
+  select filename, mime_type, blob_content
+    into l_filename, l_mime_type, l_image
+    from apex_application_files
+   where id = 123;
+
+  apex_mail.add_attachment(
+    p_mail_id =&gt; l_id,
+    p_attachment =&gt; l_image,
+    p_filename =&gt; l_filename,
+    p_mime_type =&gt; l_mime_type,
+    p_content_id =&gt; l_content_id );
+
+  COMMIT;
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_MAIL.html#GUID-14F51C6D-CB82-4B38-AB6E-61C46E75596F">APEX_MAIL</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

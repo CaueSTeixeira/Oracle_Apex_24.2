@@ -1,0 +1,137 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Creating a Blueprint from Existing Tables">
+      <meta name="abstract" content="Select existing tables from your schema to quickly build a blueprint that enables fast inserts of generated data into them.">
+      <meta name="description" content="Select existing tables from your schema to quickly build a blueprint that enables fast inserts of generated data into them.">
+      <meta name="DC.Relation" scheme="URI" content="creating-blueprints.html#GUID-F2C7ECC4-88D6-4510-8E32-163FB6D2B457">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Neil Fernandez">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Synders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="January2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-C7EA2666-B1D5-4AB6-B9F2-CBA37B58EB5F">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Select existing tables from your schema to quickly build a blueprint that enables fast inserts of generated data into them.">
+      <meta name="description" content="Select existing tables from your schema to quickly build a blueprint that enables fast inserts of generated data into them.">
+      <title>Creating a Blueprint from Existing Tables</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="SQL Workshop Guide">
+      <meta property="og:description" content="Select existing tables from your schema to quickly build a blueprint that enables fast inserts of generated data into them.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="SQL Workshop Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-sql-workshop-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-01-14T12:14:06-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2008, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12911-01">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="creating-blueprints.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-blueprint-from-scratch.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX SQL Workshop Guide">
+    <meta name="dcterms.isVersionOf" content="AEUTL">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","name":"Creating a Blueprint from Existing Tables","description":"Select existing tables from your schema to quickly build a blueprint that enables fast inserts of generated data into them.","datePublished":"2025-01-14 CST","dateModified":"2025-01-14 CST"} </script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="creating-blueprints.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-blueprint-from-scratch.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article>
+         <header>
+            <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Workshop Guide</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-sql-workshop-utilities.html" property="item" typeof="WebPage"><span property="name"> Using SQL Workshop Utilities</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-data-generator.html" property="item" typeof="WebPage"><span property="name">Using Data Generator</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="creating-blueprints.html" property="item" typeof="WebPage"><span property="name">Creating Blueprints</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">Creating a Blueprint from Existing Tables</li>
+            </ol>
+            <a id="GUID-C7EA2666-B1D5-4AB6-B9F2-CBA37B58EB5F" name="GUID-C7EA2666-B1D5-4AB6-B9F2-CBA37B58EB5F"></a>
+            
+            <h2 id="AEUTL-GUID-C7EA2666-B1D5-4AB6-B9F2-CBA37B58EB5F" class="sect2"><span class="enumeration_section">5.2.3.1 </span>Creating a Blueprint from Existing Tables
+            </h2>
+         </header>
+         <div class="ind">
+            <div>
+               <p>Select existing tables from your schema to quickly build a blueprint that enables fast inserts of generated data into them.</p>
+               <ol>
+                  <li class="stepexpand"><span>On the Data Generator home page, click the <span class="uicontrol bold">Create Blueprint</span> button.</span><div>The Create Tables Blueprint wizard appears.</div>
+                  </li>
+                  <li class="stepexpand"><span>Click <span class="uicontrol bold">Use Existing Tables</span>.</span></li>
+                  <li class="stepexpand"><span>Do one of the following:</span><ul id="GUID-C7EA2666-B1D5-4AB6-B9F2-CBA37B58EB5F__CHOICES_RWB_KD3_2TB">
+                        <li><span class="uicontrol bold">Select from list</span> - (Default) Choose an existing table in your workspace schema to base the blueprint on.
+                           <ol type="a" id="GUID-C7EA2666-B1D5-4AB6-B9F2-CBA37B58EB5F__OL_DGN_SF3_2TB">
+                              <li>Blueprint Name - Name the blueprint.</li>
+                              <li>List of tables - Click the checkboxes of the tables to include in the blueprint. Use the search bar to filter the list of tables by name. Use the Reset button to remove all search filters applied to the list of tables.</li>
+                              <li>(Optional) Rows Column - Double-click a cell in the Rows column or toggle the <span class="uicontrol bold">Edit</span> button to change the number of rows to include from the table (default <code class="codeph">50</code>).
+                              </li>
+                              <li>(Optional) Excluded Columns - Input a list of column names to exclude from the auto column generation in the format <code class="codeph">column1,column2,column3</code>. The Excluded Columns parameter applies to all selected tables.
+                              </li>
+                           </ol>
+                        </li>
+                        <li><span class="uicontrol bold">Copy and Paste</span> - Use copy and paste to insert a large amount of tables more easily than selecting from the <strong class="term">Select from list</strong> option.
+                           <ol type="a" id="GUID-C7EA2666-B1D5-4AB6-B9F2-CBA37B58EB5F__OL_TGS_PH3_2TB">
+                              <li>Blueprint Name - Name the blueprint.</li>
+                              <li>Tables - Input a comma-separated list of tables and the number of records to generate by default. The format for each table is <code class="codeph">TABLE_NAME:ROWS_TO_GENERATE</code> (for example: <code class="codeph">PRODUCTS:10,CUSTOMERS:50,SALES:1000</code>).
+                              </li>
+                              <li>(Optional) Excluded Columns - Input a list of column names to exclude from the auto column generation in the format <code class="codeph">column1,column2,column3</code>. The Excluded Columns parameter applies to all selected tables.
+                              </li>
+                           </ol>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Blueprint</span>.</span></li>
+               </ol>
+               <div class="section">The wizard generates the blueprint. <span>Oracle APEX</span> navigates to the blueprint in Blueprint Designer.
+               </div>
+               <!-- class="section" -->
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="creating-blueprints.html#GUID-F2C7ECC4-88D6-4510-8E32-163FB6D2B457" title="Create Blueprints using the Create Tables Blueprint wizard by clicking the Create Blueprint button.">Creating Blueprints</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

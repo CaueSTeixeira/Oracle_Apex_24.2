@@ -1,0 +1,162 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Example: Creating a Human Task from a Form Submission">
+      <meta name="abstract" content="You can configure both approval and action tasks, collectively known as human tasks, as page processes that can run upon submission of a form.">
+      <meta name="description" content="You can configure both approval and action tasks, collectively known as human tasks, as page processes that can run upon submission of a form.">
+      <meta name="DC.subject" content="tasks, creating with page process">
+      <meta name="keywords" content="tasks, creating with page process">
+      <meta name="DC.Relation" scheme="URI" content="creating-tasks-from-task-definitions.html#GUID-942D166E-C71D-4667-90A6-92FAEDB4FD7F">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-CAFABAA3-6F24-41ED-BE3B-69A1729EAC41">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="You can configure both approval and action tasks, collectively known as human tasks, as page processes that can run upon submission of a form.">
+      <meta name="description" content="You can configure both approval and action tasks, collectively known as human tasks, as page processes that can run upon submission of a form.">
+      <title>Example: Creating a Human Task from a Form Submission</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="You can configure both approval and action tasks, collectively known as human tasks, as page processes that can run upon submission of a form.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="creating-tasks-from-task-definitions.html" title="Previous" type="text/html">
+      <link rel="next" href="about-creating-tasks-programmatically.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Example: Creating a Human Task from a Form Submission","description":"You can configure both approval and action tasks, collectively known as human tasks, as page processes that can run upon submission of a form.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="creating-tasks-from-task-definitions.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="about-creating-tasks-programmatically.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-CAFABAA3-6F24-41ED-BE3B-69A1729EAC41" name="GUID-CAFABAA3-6F24-41ED-BE3B-69A1729EAC41"></a>
+         
+         <h2 id="HTMDB-GUID-CAFABAA3-6F24-41ED-BE3B-69A1729EAC41" class="sect2"><span class="enumeration_section">20.16.1 </span>Example: Creating a Human Task from a Form Submission
+         </h2>
+         <div class="ind">
+            <div>
+               <p>You can configure both approval and action tasks, collectively known as <strong class="term">human tasks</strong>, as page processes that can run upon submission of a form.
+               </p>
+               <div class="section">This example uses the <strong class="term">Sample Workflows, Approvals, and Tasks</strong> application, which you can install from the Gallery. This example demonstrates how to set up the process that initiates a job change approval task when a user submits the Request Job Change form.
+               </div>
+               <p>To create approval tasks when the Request Job Change form is submitted:</p>
+               <ol id="GUID-CAFABAA3-6F24-41ED-BE3B-69A1729EAC41__STEPS_PPP_WGZ_SSB">
+                  <li><span>Open <span class="uicontrol bold">7 - Request Job Change</span> in Page Designer.</span></li>
+                  <li><span>Open the Processing tab.</span></li>
+                  <li><span>Right-click <span class="uicontrol bold">Processing</span> and select <span class="uicontrol bold">Create Process</span>.</span></li>
+                  <li><span>Under Identification:</span><ol type="a" id="GUID-CAFABAA3-6F24-41ED-BE3B-69A1729EAC41__SUBSTEPS_IKH_GJ2_ZSB">
+                        <li><span>Name - <code class="codeph">Submit Task</code></span></li>
+                        <li><span>Type - <code class="codeph">Human Task - Create</code></span></li>
+                     </ol>
+                  </li>
+                  <li><span>Under Settings:</span><ol type="a" id="GUID-CAFABAA3-6F24-41ED-BE3B-69A1729EAC41__SUBSTEPS_GKJ_NJ2_ZSB">
+                        <li><span>Definition - <code class="codeph">Job Change</code></span></li>
+                        <li><span>Details Primary Key Item - <code class="codeph">P7_EMPNO</code></span></li>
+                     </ol>
+                  </li>
+                  <li><span>Under Execution Options:</span><ol type="a" id="GUID-CAFABAA3-6F24-41ED-BE3B-69A1729EAC41__SUBSTEPS_MSD_RG2_ZSB">
+                        <li><span>Sequence - <code class="codeph">20</code></span></li>
+                        <li><span>Point - <code class="codeph">Processing</code></span></li>
+                        <li><span>Run Process - <code class="codeph">Once Per Page Visit (Default)</code></span></li>
+                     </ol>
+                  </li>
+                  <li><span>Under Server-side Condition:</span><ol type="a" id="GUID-CAFABAA3-6F24-41ED-BE3B-69A1729EAC41__SUBSTEPS_PP5_JVL_G5B">
+                        <li><span>When Button Pressed - <code class="codeph">SUBMIT_FOR_APPROVAL</code></span></li>
+                        <li><span>Type - Leave as <code class="codeph">- Select -</code></span></li>
+                     </ol>
+                  </li>
+                  <li><span>Set the Page Process Parameters.</span><ol type="a" id="GUID-CAFABAA3-6F24-41ED-BE3B-69A1729EAC41__SUBSTEPS_YWJ_J2P_1TB">
+                        <li><span>On the Processing tab, under Submit Task, expand <span class="uicontrol bold">Parameters</span>.</span></li>
+                        <li><span>Select <span class="uicontrol bold">New Job</span>.</span></li>
+                        <li><span>Under Value, select <code class="codeph">Item</code>.</span></li>
+                        <li><span>Set Item to <code class="codeph">P7_PROPOSED_JOB</code>.</span></li>
+                     </ol>
+                  </li>
+                  <li><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+               </ol>
+               <div class="section"><span>APEX</span> creates an approval task when a user submits the Request Job Change form.
+                  <div class="infoboxnote" id="GUID-CAFABAA3-6F24-41ED-BE3B-69A1729EAC41__GUID-54133EBA-5C4F-4C4E-9300-47C4B15FAD37">
+                     <p class="notep1">Note:</p>You can use the same steps to create an action task from a form submission.
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="creating-tasks-from-task-definitions.html#GUID-942D166E-C71D-4667-90A6-92FAEDB4FD7F" title="Create tasks in an Oracle APEX application from existing task definitions.">Creating Tasks from Task Definitions</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

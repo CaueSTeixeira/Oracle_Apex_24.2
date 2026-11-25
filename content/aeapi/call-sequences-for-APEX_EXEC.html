@@ -1,0 +1,287 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Call Sequences for APEX_EXEC">
+      <meta name="DC.subject" content="Call sequence, APEX_EXEC">
+      <meta name="keywords" content="Call sequence, APEX_EXEC">
+      <meta name="DC.Relation" scheme="URI" content="APEX_EXEC.html#GUID-3CF1D2DD-AEA4-4982-9857-548567AB7169">
+      <meta name="DC.Relation" scheme="URI" content="call-sequences-for-APEX_EXEC.html#GUID-CAB0706C-E9CF-45CF-82D6-69C2998ED237">
+      <meta name="DC.Relation" scheme="URI" content="call-sequences-for-APEX_EXEC.html#GUID-450A9C24-E63C-49E9-8CA9-66316887FC3A">
+      <meta name="DC.Relation" scheme="URI" content="call-sequences-for-APEX_EXEC.html#GUID-583B6B4C-0518-4EE4-961B-8DB85F35B385">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-DD8B248D-A6D9-48D5-8889-DE302644363A">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Call Sequences for APEX_EXEC</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_EXEC.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_EXEC.Global-Constants.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Call Sequences for APEX_EXEC","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_EXEC.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_EXEC.Global-Constants.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-DD8B248D-A6D9-48D5-8889-DE302644363A" name="GUID-DD8B248D-A6D9-48D5-8889-DE302644363A"></a>
+         
+         <h2 id="AEAPI-GUID-DD8B248D-A6D9-48D5-8889-DE302644363A" class="sect2"><span class="enumeration_section">27.1 </span>Call Sequences for APEX_EXEC
+         </h2>
+         <div class="ind">
+            <div>
+               <p>All <code class="codeph">APEX_EXEC</code> procedures require an existing <span>APEX</span> session to function. In a pure SQL or PL/SQL context, use the <code class="codeph">APEX_SESSION</code> package to initialize a new session.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="call-sequences-for-APEX_EXEC.html#GUID-CAB0706C-E9CF-45CF-82D6-69C2998ED237">Querying a Data Source with APEX_EXEC</a><br></li>
+                  <li class="ulchildlink"><a href="call-sequences-for-APEX_EXEC.html#GUID-450A9C24-E63C-49E9-8CA9-66316887FC3A">Executing a DML on a Data Source with APEX_EXEC</a><br></li>
+                  <li class="ulchildlink"><a href="call-sequences-for-APEX_EXEC.html#GUID-583B6B4C-0518-4EE4-961B-8DB85F35B385">Executing a Remote Procedure or REST API with APEX_EXEC</a><br></li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-DD8B248D-A6D9-48D5-8889-DE302644363A__GUID-8702D6DA-73E7-46FF-9305-515C7F759616">
+                  <p class="notep1">See Also:</p><a href="APEX_SESSION.html#GUID-710E9F4F-157C-4EBA-BBA9-3E0B9EE4002A">APEX_SESSION</a></div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_EXEC.html#GUID-3CF1D2DD-AEA4-4982-9857-548567AB7169">APEX_EXEC</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-CAB0706C-E9CF-45CF-82D6-69C2998ED237" name="GUID-CAB0706C-E9CF-45CF-82D6-69C2998ED237"></a><h3 id="AEAPI-GUID-CAB0706C-E9CF-45CF-82D6-69C2998ED237" class="sect3"><span class="enumeration_section">27.1.1 </span>Querying a Data Source with APEX_EXEC
+               </h3>
+               <div>
+                  <ol>
+                     <li class="stepexpand"><span>Prepare columns to be selected from the data source:</span><ol type="a">
+                           <li><span>Create a variable of the <code class="codeph">APEX_EXEC.T_COLUMNS</code> type.</span></li>
+                           <li><span>Add columns with the <code class="codeph">APEX_EXEC.ADD_COLUMN</code>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>(Optional) Prepare bind variables:</span><ol type="a">
+                           <li><span>Create a variable of <code class="codeph">APEX_EXEC.T_PARAMETERS</code> type.</span></li>
+                           <li><span>Add bind values with <code class="codeph">APEX_EXEC.ADD_PARAMETER</code>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>(Optional) Prepare filters:</span><ol type="a">
+                           <li><span>Create a variable of the type <code class="codeph">APEX_EXEC.T_FILTERS</code>.</span></li>
+                           <li><span>Add bind values with <code class="codeph">APEX_EXEC.ADD_FILTER</code>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Execute the data source query in one of the following ways:</span><ul id="GUID-CAB0706C-E9CF-45CF-82D6-69C2998ED237__CHOICES_T1W_BMP_3QB">
+                           <li>For <span class="bold">REST Data Sources</span>, use <code class="codeph">APEX_EXEC.OPEN_REST_SOURCE_QUERY</code>.
+                           </li>
+                           <li>For <span class="bold">REST Enabled SQL</span>, use <code class="codeph">APEX_EXEC.OPEN_REMOTE_SQL_QUERY</code>.
+                           </li>
+                           <li>Alternatively, use <code class="codeph">APEX_EXEC.OPEN_QUERY_CONTEXT</code> to pass in the location as a parameter.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Get the result set meta data:</span><ol type="a" id="GUID-CAB0706C-E9CF-45CF-82D6-69C2998ED237__SUBSTEPS_M2X_YLP_3QB">
+                           <li><span><code class="codeph">APEX_EXEC.GET_COLUMN_COUNT</code> returns the number of result columns.</span></li>
+                           <li><span><code class="codeph">APEX_EXEC.GET_COLUMN</code> returns information about a specific column.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Process the result set:</span><ol type="a" id="GUID-CAB0706C-E9CF-45CF-82D6-69C2998ED237__SUBSTEPS_N2X_YLP_3QB">
+                           <li><span><code class="codeph">APEX_EXEC.NEXT_ROW</code> advances the result cursor by one row.</span></li>
+                           <li><span><code class="codeph">APEX_EXEC.GET_NNNN</code> functions retrieve individual column values.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Close all resources with <code class="codeph">APEX_EXEC.CLOSE</code>.</span></li>
+                     <li class="stepexpand"><span>Add an exception handler and close those resources. For example:</span><div><pre class="pre codeblock"><code>EXCEPTION
+    WHEN others THEN
+         apex_debug.log_exception;
+         apex_exec.close( l_context );
+    RAISE;</code></pre></div>
+                     </li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-CAB0706C-E9CF-45CF-82D6-69C2998ED237__GUID-992E9A36-1B30-4FB7-9C79-504BE6EF3776">
+                     <p class="notep1">See Also:</p>
+                     <p>For code examples of a complete query to a Data Source, review the example sections in the following APIs:</p>
+                     <ul style="list-style-type: disc;" id="GUID-CAB0706C-E9CF-45CF-82D6-69C2998ED237__UL_RQ5_TJQ_3QB">
+                        <li><a href="APEX_EXEC-OPEN_QUERY_CONTEXT-Function-2.html#GUID-0EFB6FF7-15B1-4E25-A78E-9F482408F638">OPEN_QUERY_CONTEXT Function Signature 2</a></li>
+                        <li><a href="APEX_EXEC.OPEN_REMOTE_SQL_QUERY-Function.html#GUID-75BF9671-7289-40A9-9896-394DCD3FB482">OPEN_REMOTE_SQL_QUERY Function</a></li>
+                        <li><a href="APEX_EXEC.OPEN_REST_SOURCE_QUERY-Function.html#GUID-F09E0A46-8282-4917-8C3B-94910F9DD919">OPEN_REST_SOURCE_QUERY Function</a></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="call-sequences-for-APEX_EXEC.html#GUID-DD8B248D-A6D9-48D5-8889-DE302644363A">Call Sequences for APEX_EXEC</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-450A9C24-E63C-49E9-8CA9-66316887FC3A" name="GUID-450A9C24-E63C-49E9-8CA9-66316887FC3A"></a><h3 id="AEAPI-GUID-450A9C24-E63C-49E9-8CA9-66316887FC3A" class="sect3"><span class="enumeration_section">27.1.2 </span>Executing a DML on a Data Source with APEX_EXEC
+               </h3>
+               <div>
+                  <ol>
+                     <li class="stepexpand"><span>Define the Data Manipulation Language (DML) columns:</span><ol type="a" id="GUID-450A9C24-E63C-49E9-8CA9-66316887FC3A__SUBSTEPS_JNH_KHT_3QB">
+                           <li><span>Create a variable of the <code class="codeph">APEX_EXEC.T_COLUMNS</code> type.</span></li>
+                           <li><span>Add columns with <code class="codeph">APEX_EXEC.ADD_COLUMN</code>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>(Optional) Prepare bind variables:</span><ol type="a" id="GUID-450A9C24-E63C-49E9-8CA9-66316887FC3A__SUBSTEPS_KNH_KHT_3QB">
+                           <li><span>Create a variable of the <code class="codeph">APEX_EXEC.T_PARAMETERS</code> type.</span></li>
+                           <li><span>Add bind values with <code class="codeph">APEX_EXEC.ADD_PARAMETER</code>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Prepare the DML Context in one of the following ways:</span><ul id="GUID-450A9C24-E63C-49E9-8CA9-66316887FC3A__CHOICES_XBX_ZJT_3QB">
+                           <li>For <span class="bold">REST Data Sources</span>, use <code class="codeph">OPEN_REST_SOURCE_DML_CONTEXT</code>.
+                           </li>
+                           <li>For <span class="bold">REST Enabled SQL</span>, use <code class="codeph">OPEN_REMOTE_DML_CONTEXT</code>.
+                           </li>
+                           <li>For <span class="bold">local database</span>, use <code class="codeph">OPEN_LOCAL_DML_CONTEXT</code>.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Add row values for the DML to perform:</span><ol type="a" id="GUID-450A9C24-E63C-49E9-8CA9-66316887FC3A__SUBSTEPS_MNH_KHT_3QB">
+                           <li><span>Use <code class="codeph">APEX_EXEC.ADD_DML_ROW</code> to add a new row.</span></li>
+                           <li><span>Use <code class="codeph">APEX_EXEC.SET_VALUE</code> to provide individual column values.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Execute the DML with <code class="codeph">APEX_EXEC.EXECUTE_DML</code>.</span></li>
+                     <li class="stepexpand"><span>Walk through RETURNING values and error messages for processed DML rows.</span><div>
+                           <ul style="list-style-type: disc;" id="GUID-450A9C24-E63C-49E9-8CA9-66316887FC3A__UL_I5K_MJK_ZDC">
+                              <li><code class="codeph">APEX_EXEC.NEXT_ROW</code> advances the result cursor by one row.
+                              </li>
+                              <li><code class="codeph">APEX_EXEC.HAS_ERROR</code> indicates whether DML processing for this row was successful or not.
+                              </li>
+                              <li><code class="codeph">APEX_EXEC.GET_DML_STATUS_CODE</code> returns the status code (SQL Error Code) for each DML row. If DML for this row was successful, NULL is returned as the status code.
+                              </li>
+                              <li><code class="codeph">APEX_EXEC.GET_NNN</code> functions retrieve individual column <span class="q">"DML RETURNING"</span> values.
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Close all resources with <code class="codeph">APEX_EXEC.CLOSE</code>.</span></li>
+                     <li class="stepexpand"><span>Add an exception handler and close those resources. For example:</span><div><pre class="pre codeblock"><code>EXCEPTION 
+    WHEN others THEN
+        apex_exec.close( l_context );
+        RAISE;</code></pre></div>
+                     </li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-450A9C24-E63C-49E9-8CA9-66316887FC3A__GUID-40D79738-0728-4BF2-B0CA-BF25729A9DD5">
+                     <p class="notep1">See Also:</p>
+                     <p>For code examples of a complete DML query, review the example sections in the following APIs:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="APEX_EXEC.OPEN_LOCAL_DML_CONTEXT-Function.html#GUID-D3CAB370-8CA4-4371-A5EE-72FDA4AFE30C">OPEN_LOCAL_DML_CONTEXT Function</a></li>
+                        <li><a href="APEX_EXEC.OPEN_REMOTE_DML_CONTEXT-Function.html#GUID-1D856CD4-906A-404A-A541-66534CF3E0A9">OPEN_REMOTE_DML_CONTEXT Function</a></li>
+                        <li><a href="APEX_EXEC.OPEN_REST_SOURCE_DML_CONTEXT-Function.html#GUID-8C5E17C9-884D-43D0-8A12-2C071F05019C">OPEN_REST_SOURCE_DML_CONTEXT Function</a></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="call-sequences-for-APEX_EXEC.html#GUID-DD8B248D-A6D9-48D5-8889-DE302644363A">Call Sequences for APEX_EXEC</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-583B6B4C-0518-4EE4-961B-8DB85F35B385" name="GUID-583B6B4C-0518-4EE4-961B-8DB85F35B385"></a><h3 id="AEAPI-GUID-583B6B4C-0518-4EE4-961B-8DB85F35B385" class="sect3"><span class="enumeration_section">27.1.3 </span>Executing a Remote Procedure or REST API with APEX_EXEC
+               </h3>
+               <div>
+                  <ol id="GUID-583B6B4C-0518-4EE4-961B-8DB85F35B385__STEPS_LBP_TLT_3QB">
+                     <li class="stepexpand"><span>(Optional) Prepare bind variables:</span><ol type="a" id="GUID-583B6B4C-0518-4EE4-961B-8DB85F35B385__SUBSTEPS_MBP_TLT_3QB">
+                           <li><span>Create a variable of <code class="codeph">APEX_EXEC.T_PARAMETERS</code> type.</span></li>
+                           <li><span>Add bind values with <code class="codeph">APEX_EXEC.ADD_PARAMETER</code>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Execute the local or remote procedure or REST API in one of the following ways:</span><ul id="GUID-583B6B4C-0518-4EE4-961B-8DB85F35B385__CHOICES_NBP_TLT_3QB">
+                           <li>For <span class="bold">REST Data Sources</span>, use <code class="codeph">APEX_EXEC.EXECUTE_REST_SOURCE</code>.
+                           </li>
+                           <li>For <span class="bold">REST Enabled SQL</span>, use <code class="codeph">APEX_EXEC.EXECUTE_REMOTE_PLSQL</code>.
+                           </li>
+                           <li>For <span class="bold">local database</span>, use <code class="codeph">APEX_EXEC.EXECUTE_PLSQL</code>.
+                           </li>
+                        </ul>
+                        <div>The <code class="codeph">P_PARAMETERS</code> array which is used to pass bind variables is an <code class="codeph">IN OUT</code> parameter, so <code class="codeph">OUT</code> parameters are passed back.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>(Optional) Retrieve the <code class="codeph">OUT</code> parameters. Walk through the variable of the <code class="codeph">APEX_EXEC.T_PARAMETERS</code> type and use <code class="codeph">GET_PARAMETER_VALUE</code> to retrieve the <code class="codeph">OUT</code> parameter value.</span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-583B6B4C-0518-4EE4-961B-8DB85F35B385__GUID-40D79738-0728-4BF2-B0CA-BF25729A9DD5">
+                     <p class="notep1">See Also:</p>
+                     <p>For code examples of a complete remote procedure or REST API query, review the example sections in the following APIs:</p>
+                     <ul style="list-style-type: disc;" id="GUID-583B6B4C-0518-4EE4-961B-8DB85F35B385__UL_LKD_5LT_3QB">
+                        <li><a href="APEX_EXEC.EXECUTE_PLSQL-Procedure-Signature-1.html#GUID-53BF190A-464A-4BFD-B2A8-A8936E8EAC06">EXECUTE_PLSQL Procedure Signature 1</a></li>
+                        <li><a href="APEX_EXEC.EXECUTE_REMOTE_PLSQL-Procedure.html#GUID-EE9E3F1F-F40D-4CCD-84CF-C1CF6DC2B45B">EXECUTE_REMOTE_PLSQL Procedure Signature 1</a></li>
+                        <li><a href="APEX_EXEC.EXECUTE_REST_SOURCE-Procedure-Signature-1.html#GUID-2DB748DC-E5B7-4AF8-B64A-6716F8A5E447">EXECUTE_REST_SOURCE Procedure Signature 1</a></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="call-sequences-for-APEX_EXEC.html#GUID-DD8B248D-A6D9-48D5-8889-DE302644363A">Call Sequences for APEX_EXEC</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,852 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Creating a Faceted Search Manually">
+      <meta name="abstract" content="Create a faceted search page by manually adding the page and facet components.">
+      <meta name="description" content="Create a faceted search page by manually adding the page and facet components.">
+      <meta name="DC.subject" content="faceted search, creating manually">
+      <meta name="keywords" content="faceted search, creating manually">
+      <meta name="DC.Relation" scheme="URI" content="managing-faceted-search.html#GUID-1A586583-3DAB-4F49-A5B4-A09AD93F015F">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-88226F4A-2971-447D-A267-1B7E37E9946D">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Create a faceted search page by manually adding the page and facet components.">
+      <meta name="description" content="Create a faceted search page by manually adding the page and facet components.">
+      <title>Creating a Faceted Search Manually</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Create a faceted search page by manually adding the page and facet components.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="creating-faceted-search-using-create-page-wizard.html" title="Previous" type="text/html">
+      <link rel="next" href="editing-faceted-search-page.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Creating a Faceted Search Manually","description":"Create a faceted search page by manually adding the page and facet components.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="creating-faceted-search-using-create-page-wizard.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="editing-faceted-search-page.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D" name="GUID-88226F4A-2971-447D-A267-1B7E37E9946D"></a>
+         
+         <h2 id="HTMDB-GUID-88226F4A-2971-447D-A267-1B7E37E9946D" class="sect2"><span class="enumeration_section">8.7.5 </span>Creating a Faceted Search Manually
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Create a faceted search page by manually adding the page and facet
+        components.</p>
+               <div class="section">
+                  
+                  <p>Using the Create Application Wizard or Create Page Wizard is the easiest
+                way to create a faceted search page. However, you can create a faceted search page
+                manually. At a minimum, creating a faceted search page manually involves the
+                following steps:</p>
+                  
+                  <ul style="list-style-type: disc;" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__UL_N33_2HQ_NNB">
+                     <li>
+                        
+                        <p>Create a classic report or cards region.</p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>Add a faceted search region.</p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>Add individual facets or facet groups to the search region.</p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>Add a reset button.</p>
+                        
+                     </li>
+                  </ul>
+                  
+                  <p>The following example creates a faceted search page which contains a
+                classic report built on the <code class="codeph">EMP</code> table. The <code class="codeph">EMP</code>
+                table is available in the sample dataset, EMP / DEPT. 
+                  </p>
+                  
+               </div>
+               <p>To create a faceted search manually.</p>
+               <ol>
+                  <li class="stepexpand"><span>Run the Create Application Wizard:</span><ol type="a" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__SUBSTEPS_BWT_JZP_NNB">
+                        <li class="substepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                        <li class="substepexpand"><span>Click <span class="uicontrol bold">Create</span>.</span><div>
+                              
+                              <p>The wizard prompts you to select a method of creating an
+                                application.</p>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Click <span class="uicontrol bold">Use Create App Wizard</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>On Create an Application:</span><ol type="a" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__SUBSTEPS_KLN_HPM_MNB">
+                        <li class="substepexpand"><span>Set Icon - Click <span class="uicontrol bold">Set Icon</span> to select an
+                            application icon. The icon you select is used as the Favicon, the PWA
+                            icon, the Apple touch icon, and the <span>App Builder</span> icon. </span></li>
+                        <li class="substepexpand"><span> Name - Enter a name to identify the application. For example, enter
+                                <code class="codeph">Faceted Search - Manual</code></span></li>
+                        <li class="substepexpand"><span>Appearance - Accept the default Theme Style and menu layout (Vita, Side
+                            Menu). To change it, click the <span class="uicontrol bold">Set Appearance</span>
+                            icon adjacent to the Appearance field.</span></li>
+                        <li class="substepexpand"><span>Under Pages, click <span class="uicontrol bold">Add Page</span>. Expand
+                                <span class="uicontrol bold">Additional Pages</span> at the bottom of the window
+                            and select <span class="uicontrol bold">Classic Report</span>.</span></li>
+                        <li class="substepexpand"><span>On Add Report Page:</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__UL_W14_WPM_MNB">
+                                 <li>
+                                    
+                                    <p>Page Name - Enter a name for this page. For
+                                        example, enter <code class="codeph">Employees</code></p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Set Icon - Accept the default, or select an icon
+                                        to display in the navigation menu for this page.</p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Table or View - Select a table or view on which
+                                        to build the page. Select <span class="uicontrol bold">EMP</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Click <span class="uicontrol bold">Add Page</span>.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Click <span class="uicontrol bold">Create Application</span>.</span><div>The Application home page appears.</div>
+                        </li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>View the new page. </span><ol type="a" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__SUBSTEPS_YJP_ZRM_MNB">
+                        <li class="substepexpand"><span>On the Application home page, select the new page, <span class="uicontrol bold">2 -
+                                Employees</span>.</span><div>The page displays in Page Designer.</div>
+                        </li>
+                        <li class="substepexpand"><span>Click <span class="uicontrol bold">Save and Run Page</span> on the right side of the
+                            Page Designer toolbar.</span></li>
+                        <li class="substepexpand"><span>When prompted, enter your workspace username and password and click
+                                <span class="uicontrol bold">Sign In</span>.</span><div>
+                              
+                              <p>The Employees report appears.</p>
+                              
+                              <div class="figure" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__FIG_OZM_JDR_SNB"><img id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__IMAGE_PZM_JDR_SNB" height="581" width="1052" src="img/employees_classic_report.png" alt="Description of employees_classic_report.png follows" title="Description of employees_classic_report.png follows" longdesc="img_text/employees_classic_report.html"><br><a href="img_text/employees_classic_report.html">Description of the illustration employees_classic_report.png</a></div>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Return to Page Designer. Click <span class="uicontrol bold">Page X</span> on the
+                            Runtime Developer toolbar where <span class="italic">X</span> is the page number.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Add a search region:</span><ol type="a" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__SUBSTEPS_KG2_YZ4_MNB">
+                        <li class="substepexpand"><span>In the Rendering tab (or left pane), right-click
+                                <span class="uicontrol bold">Components</span> and select <span class="uicontrol bold">Create
+                                Region</span>.</span></li>
+                        <li class="substepexpand"><span>Select the new region. Edit the following Region attributes in the
+                            Property Editor (or right pane):</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__UL_PRP_11P_MNB">
+                                 <li>Identification, Name - Enter
+                                        <code class="codeph">Search</code></li>
+                                 <li>Identification, Type - Select <span class="uicontrol bold">Faceted
+                                        Search</span>.
+                                 </li>
+                                 <li>Source, Filtered Region - Select
+                                        <span class="uicontrol bold">Employees</span>.
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Update the region appearance:</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__UL_WJM_V32_CRB">
+                                 <li>
+                                    
+                                    <p>Appearance, Template Options - Click
+                                            <span class="uicontrol bold">Use Template Defaults, Scroll -
+                                            Default</span>.
+                                    </p>
+                                    
+                                    <p>The Template Options dialog appears.</p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Common, General - Select <span class="uicontrol bold">Remove Body
+                                            Padding</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Common, Header - Select <span class="uicontrol bold">Hidden but
+                                            accessible</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Click <span class="uicontrol bold">OK</span>.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Update the facet for searching multiple columns:</span><ol type="a" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__SUBSTEPS_JDJ_HVM_MNB">
+                        <li><span>Select <code class="codeph">P<span class="codeinlineitalic">X</span>_SEARCH</code> where
+                                <code class="codeph"><span class="codeinlineitalic">X</span></code> represents the page number.</span></li>
+                        <li><span>Source, Database Column(s) - Enter
+                                <code class="codeph">ENAME,JOB,MGR,DEPTNO</code></span></li>
+                        <li><span>Save your changes. Click <span class="uicontrol bold">Save</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Add a facet to filter the <code class="codeph">DEPTNO</code> column:</span><ol type="a" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__SUBSTEPS_VCZ_GHN_MNB">
+                        <li class="substepexpand"><span>In the Rendering tab, right-click <span class="uicontrol bold">Facets</span> and
+                            select <span class="uicontrol bold">Create Facet</span>.</span></li>
+                        <li class="substepexpand"><span>Select the new facet and edit the following attributes in the Property
+                            Editor:</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__UL_MDB_XSN_MNB">
+                                 <li>
+                                    
+                                    <p>Identification, Name - Enter
+                                            <code class="codeph">P<span class="codeinlineitalic">X</span>_DEPTNO</code> where
+                                            <code class="codeph"><span class="codeinlineitalic">X</span></code> represents the page
+                                        number.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Identification, Type - Accept the default,
+                                            <span class="uicontrol bold">Checkbox Group</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Label, Label - Enter
+                                        <code class="codeph">Department</code></p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>List of Values, Type - Select <span class="uicontrol bold">SQL
+                                            Query</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>List of Values, SQL Query - Enter <code class="codeph">SELECT
+                                            dname, deptno FROM dept</code></p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Save your changes. Click <span class="uicontrol bold">Save</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Add a facet to filter the <code class="codeph">MGR</code> column:</span><ol type="a" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__SUBSTEPS_ULJ_STN_MNB">
+                        <li class="substepexpand"><span>In the Rendering tab, right-click <span class="uicontrol bold">Facets</span> and
+                            select <span class="uicontrol bold">Create Facet</span>.</span></li>
+                        <li class="substepexpand"><span>Select the new facet and edit the following attributes in the Property
+                            Editor:</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__UL_VLJ_STN_MNB">
+                                 <li>
+                                    
+                                    <p>Identification, Name - Enter
+                                            <code class="codeph">P<span class="codeinlineitalic">X</span>_MGR</code> where
+                                            <code class="codeph"><span class="codeinlineitalic">X</span></code> represents the page
+                                        number.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Identification, Type - Accept the default,
+                                            <span class="uicontrol bold">Checkbox Group</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Source, Database Column - Verify that the column
+                                        is <span class="uicontrol bold">MGR</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Label, Label - Enter
+                                        <code class="codeph">Manager</code></p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>List of Values, Type - Select <span class="uicontrol bold">Shared
+                                            Component</span>.
+                                    </p>
+                                    
+                                    <p>The Create Application Wizard created a lookup
+                                        list of values named <code class="codeph">EMP.ENAME</code> so that the
+                                            <code class="codeph">MGR</code> column displays the manager name
+                                        instead of the employee number. 
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>List of Values, List of Values - Select
+                                            <span class="uicontrol bold">EMP.ENAME</span>.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Save your changes. Click <span class="uicontrol bold">Save</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Add a facet to filter the <code class="codeph">JOB</code> column:</span><ol type="a" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__SUBSTEPS_GMM_GVN_MNB">
+                        <li class="substepexpand"><span>In the Rendering tab, right-click <span class="uicontrol bold">Facets</span> and
+                            select <span class="uicontrol bold">Create Facet</span>.</span></li>
+                        <li class="substepexpand"><span>Select the new facet and edit the following attributes in the Property
+                            Editor:</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__UL_HMM_GVN_MNB">
+                                 <li>
+                                    
+                                    <p>Identification, Name - Enter
+                                            <code class="codeph">P<span class="codeinlineitalic">X</span>_JOB</code> where
+                                            <code class="codeph"><span class="codeinlineitalic">X</span></code> represents the page
+                                        number.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Identification, Type - Accept the default
+                                            <span class="uicontrol bold">Checkbox Group</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Source, Database Column - Verify that the column
+                                        is <span class="uicontrol bold">JOB</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Label, Label - Enter <code class="codeph">Job</code></p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>List of Values, Type - Select
+                                            <span class="uicontrol bold">Distinct Values</span>.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Save your changes. Click <span class="uicontrol bold">Save</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Add a facet to filter the <code class="codeph">SAL</code> column:</span><ol type="a" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__SUBSTEPS_BRW_ZTN_MNB">
+                        <li class="substepexpand"><span>In the Rendering tab, right-click <span class="uicontrol bold">Facets</span> and
+                            select <span class="uicontrol bold">Create Facet</span>.</span></li>
+                        <li class="substepexpand"><span>Select the new facet and edit the following attributes in the Property
+                            Editor:</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__UL_RJR_HPP_RNB">
+                                 <li>
+                                    
+                                    <p>Identification, Name - Enter
+                                            <code class="codeph">P<span class="codeinlineitalic">X</span>_SAL</code> where
+                                            <code class="codeph"><span class="codeinlineitalic">X</span></code> represents the page
+                                        number.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Identification, Type - Select
+                                            <span class="uicontrol bold">Range</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Label, Label - Enter <code class="codeph">Salary</code></p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Source, Database Column - Verify that the column
+                                        is <span class="uicontrol bold">SAL</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Source, Data Type - Select
+                                            <span class="uicontrol bold">NUMBER</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Settings, Select Multiple - Enable
+                                            <span class="uicontrol bold">Select Multiple</span>.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Define the facet as a static list of values:</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__UL_VDZ_4QP_RNB">
+                                 <li>
+                                    
+                                    <p>List of Values, Type - Select <span class="uicontrol bold">Static
+                                            Values</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    <p>List of Values, Static Value - Click
+                                            <span class="uicontrol bold">Display1, Display2</span>.
+                                    </p>
+                                    <p>In the Static Values dialog, define the
+                                        following:</p>
+                                    <ul style="list-style-type: disc;" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__UL_X2K_QHR_RNB">
+                                       <li>
+                                          
+                                          <p>Row 1:</p>
+                                          
+                                          <p>Display Value - Enter <code class="codeph">&lt; 1000</code></p>
+                                          
+                                          <p>Return Value - Enter <code class="codeph">|1000</code></p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p>Row 2:</p>
+                                          
+                                          <p>Display Value - Enter <code class="codeph">1000 to
+                                                3000</code></p>
+                                          
+                                          <p>Return Value - Enter <code class="codeph">1000|3000</code></p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p>Row 3:</p>
+                                          
+                                          <p>Display Value - Enter <code class="codeph">3000 to
+                                                4500</code></p>
+                                          
+                                          <p>Return Value - Enter <code class="codeph">3000|4500</code></p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p>Row 4:</p>
+                                          
+                                          <p>Display Value - Enter <code class="codeph">&gt; 4500</code></p>
+                                          
+                                          <p>Return Value - Enter <code class="codeph">4000|</code></p>
+                                          
+                                       </li>
+                                    </ul><img id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__IMAGE_I5W_YHR_RNB" height="319" width="464" src="img/static_list_of_values.png" alt="Description of static_list_of_values.png follows" title="Description of static_list_of_values.png follows" longdesc="img_text/static_list_of_values.html"><br><a href="img_text/static_list_of_values.html">Description of the illustration static_list_of_values.png</a></li>
+                                 <li>
+                                    
+                                    <p>Click <span class="uicontrol bold">OK</span> to save your
+                                        changes.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Save your changes. Click <span class="uicontrol bold">Save</span>.</span></li>
+                     </ol>
+                     <div>
+                        <p>Notice that the Search region displays
+                        below the Employees region. </p><img id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__IMAGE_CDJ_KMD_NNB" height="543" width="1051" src="img/region_position.png" alt="Description of region_position.png follows" title="Description of region_position.png follows" longdesc="img_text/region_position.html"><br><a href="img_text/region_position.html">Description of the illustration region_position.png</a><p>Next, move the Employees report so it displays adjacent
+                        to the Search region.</p>
+                        <div class="infobox-tip" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__GUID-D51D0C56-57CE-4E37-8546-95841F24482B">
+                           <p class="notep1">Tip:</p>
+                           
+                           <p>The procedure that follows explains how to reposition a
+                            region by editing Region attributes. You can also move components by
+                            selecting them in the Layout tab (central pane) and dragging and
+                            dropping them to a new position.</p>
+                           
+                        </div>
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>Select the <span class="uicontrol bold">Employees</span> region and update the following
+                    Region attributes:</span><ol type="a" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__SUBSTEPS_C2B_NM5_MNB">
+                        <li><span>Layout, Sequence - Enter <code class="codeph">20</code></span></li>
+                        <li><span>Start New Row - Disable this option.</span></li>
+                     </ol>
+                     <div>In the Layout tab, notice the Search and Employees regions
+                    now display adjacent to one another. </div>
+                  </li>
+                  <li class="stepexpand"><span>Make the Search region narrower and then update region appearance. Select the
+                        <span class="uicontrol bold">Search</span> region and update the following Region
+                    attributes:</span><ol type="a" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__SUBSTEPS_PXD_RVV_MNB">
+                        <li><span>Layout, Column - Enter <code class="codeph">1</code></span></li>
+                        <li><span>Layout, Column Span - Select <span class="uicontrol bold">3</span>.</span></li>
+                        <li><span>Save your changes. Click <span class="uicontrol bold">Save</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>View the page. </span><ol type="a" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__SUBSTEPS_M4H_KVN_MNB">
+                        <li class="substepexpand"><span>Click <span class="uicontrol bold">Save and Run Page</span> in the upper right
+                            corner.</span></li>
+                        <li class="substepexpand"><span>If prompted, enter your workspace username and password and click
+                                <span class="uicontrol bold">Sign In</span>.</span><div>
+                              <p>The revised page appears. Notice that the
+                                Search region contains the following facets: Search, Department,
+                                Manager, and Salary.</p><img id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__IMAGE_QVD_NMD_NNB" height="605" width="1047" src="img/faceted_search_manual_1.png" alt="Description of faceted_search_manual_1.png follows" title="Description of faceted_search_manual_1.png follows" longdesc="img_text/faceted_search_manual_1.html"><br><a href="img_text/faceted_search_manual_1.html">Description of the illustration faceted_search_manual_1.png</a></div>
+                        </li>
+                        <li class="substepexpand"><span>Return to Page Designer. Click <span class="uicontrol bold">Page X</span> on the
+                            Runtime Developer toolbar.</span></li>
+                     </ol>
+                     <div>Next, add a button to refresh the page.</div>
+                  </li>
+                  <li class="stepexpand"><span>Add a region to contain a reset button:</span><ol type="a" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__SUBSTEPS_OLJ_KZN_MNB">
+                        <li class="substepexpand"><span>In the Rendering tab, right-click <span class="uicontrol bold">Body</span> and
+                            select <span class="uicontrol bold">Create Region</span>.</span></li>
+                        <li class="substepexpand"><span>Select the new region. In the Property Editor under
+                                <span class="uicontrol bold">Region</span>, edit the following attributes:</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__UL_PLJ_KZN_MNB">
+                                 <li>
+                                    
+                                    <p>Identification, Name - Enter <code class="codeph">Button
+                                            Bar</code></p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Identification, Type - Accept the default
+                                            <span class="uicontrol bold">Static Content</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Layout, Sequence - Enter <code class="codeph">10</code></p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Update the Appearance attributes:</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__UL_XQL_MB4_MNB">
+                                 <li>
+                                    
+                                    <p>Appearance, Template - Select <span class="uicontrol bold">Buttons
+                                            Container</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Appearance, Template Options - Click
+                                            <span class="uicontrol bold">Use Template Defaults</span>.
+                                    </p>
+                                    
+                                    <p>The Template Options dialog appears.</p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Common, Body Padding - Select <span class="uicontrol bold">No
+                                            Padding</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Common, Style - Select <span class="uicontrol bold">Remove UI
+                                            Decoration</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Click <span class="uicontrol bold">OK</span>.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Add a button:</span><ol type="a" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__SUBSTEPS_D1Z_DZP_NNB">
+                        <li class="substepexpand"><span>In the Rendering tab, right-click the Button Bar region and select
+                                <span class="uicontrol bold">Create Button</span>.</span></li>
+                        <li class="substepexpand"><span>Edit the button. Select the button and edit the following attributes in
+                            the Property Editor:</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__UL_KRY_CC4_MNB">
+                                 <li>
+                                    
+                                    <p>Identification, Button Name - Enter
+                                            <code class="codeph">RESET</code></p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Layout, Slot - Select
+                                        <span class="uicontrol bold">Next</span>. 
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Update the Appearance attributes:</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__UL_LWC_5C4_MNB">
+                                 <li>
+                                    
+                                    <p>Appearance, Button Template - Select
+                                            <span class="uicontrol bold">Text with Icon</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Appearance, Template Options - Click
+                                            <span class="uicontrol bold">Use Template Defaults, Left</span>.
+                                    </p>
+                                    
+                                    <p>In the Template Options dialog:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__UL_VTB_XD4_MNB">
+                                       <li>
+                                          
+                                          <p>Common, Style - Select <span class="uicontrol bold">Remove
+                                                  UI Decoration</span>.
+                                          </p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p>Click <span class="uicontrol bold">OK</span>.
+                                          </p>
+                                          
+                                       </li>
+                                    </ul>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Appearance, Icon - Click <span class="uicontrol bold">List of
+                                            Values - Icon</span> and find and select
+                                            <span class="uicontrol bold">fa-undo</span>.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Update the Behavior attributes:</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__UL_FQH_MD4_MNB">
+                                 <li>
+                                    
+                                    <p>Behavior, Action - Select <span class="uicontrol bold">Redirect to
+                                            Page in this Application</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Behavior, Target - Click <span class="uicontrol bold">No Link
+                                            Defined</span>. 
+                                    </p>
+                                    
+                                    <p>In the Link Builder - Target dialog:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__UL_YVR_G24_MNB">
+                                       <li>
+                                          
+                                          <p>Target, Page - Select the current page.
+                                                For example, select <span class="uicontrol bold">2</span>.
+                                          </p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p>Clear/Reset, Clear Cache - Select the
+                                                current page. For example, select
+                                                  <span class="uicontrol bold">2</span>.
+                                          </p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p>Clear/Reset, Action - Select
+                                                  <span class="uicontrol bold">Reset Regions</span>.
+                                          </p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p>Click <span class="uicontrol bold">OK</span>.
+                                          </p>
+                                          
+                                       </li>
+                                    </ul>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Save your changes. Click <span class="uicontrol bold">Save</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>View the revised page. </span><ol type="a" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__SUBSTEPS_QBH_524_MNB">
+                        <li class="substepexpand"><span>Click <span class="uicontrol bold">Save and Run Page</span>.</span></li>
+                        <li class="substepexpand"><span>If prompted, enter your workspace username and password and click
+                                <span class="uicontrol bold">Sign In</span>.</span><div>
+                              
+                              <p>The faceted search page appears. Notice the new Reset
+                                button displays in the upper right above the report.</p>
+                              
+                              <div class="figure" id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__FIG_RJR_RMD_NNB"><img id="GUID-88226F4A-2971-447D-A267-1B7E37E9946D__IMAGE_SJR_RMD_NNB" height="517" width="928" src="img/faceted_search_manual_2.png" alt="Description of faceted_search_manual_2.png follows" title="Description of faceted_search_manual_2.png follows" longdesc="img_text/faceted_search_manual_2.html"><br><a href="img_text/faceted_search_manual_2.html">Description of the illustration faceted_search_manual_2.png</a></div>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Test the page. Select facets and then click
+                                <span class="uicontrol bold">Reset</span>.</span></li>
+                     </ol>
+                  </li>
+               </ol>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-faceted-search.html#GUID-1A586583-3DAB-4F49-A5B4-A09AD93F015F" title="A faceted search page displays and filters data using an intuitive experience users recognize from ecommerce sites (a left Search region and report region). The report region displays search results as cards or a classic report.">Managing Faceted Search</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

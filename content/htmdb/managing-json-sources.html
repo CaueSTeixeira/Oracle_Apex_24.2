@@ -1,0 +1,492 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing JSON Sources">
+      <meta name="abstract" content="Create a JSON Source to retrieve data from a JSON Collection Table or table with JSON columns in a local or a remote database.">
+      <meta name="description" content="Create a JSON Source to retrieve data from a JSON Collection Table or table with JSON columns in a local or a remote database.">
+      <meta name="DC.subject" content="JSON Sources, managing, about, creating, editing, deleting, Data Profile, copying, subscribing, viewing utilization, viewing history">
+      <meta name="keywords" content="JSON Sources, managing, about, creating, editing, deleting, Data Profile, copying, subscribing, viewing utilization, viewing history">
+      <meta name="DC.Relation" scheme="URI" content="working-with-duality-views-and-json-sources.html#GUID-2BE66757-8B5F-4F07-B218-57365DC53AFC">
+      <meta name="DC.Relation" scheme="URI" content="managing-json-sources.html#GUID-5B139C7B-AC34-4D54-BD40-34621D1E4316">
+      <meta name="DC.Relation" scheme="URI" content="managing-json-sources.html#GUID-94E7AFAC-DF34-45CF-B9F1-07BB784B274B">
+      <meta name="DC.Relation" scheme="URI" content="managing-json-sources.html#GUID-9893D6C8-B2C9-41D1-ABF5-9606600265B0">
+      <meta name="DC.Relation" scheme="URI" content="managing-json-sources.html#GUID-3A26CE9A-0240-4082-AD2F-84E1B479C963">
+      <meta name="DC.Relation" scheme="URI" content="managing-json-sources.html#GUID-6DD2106F-EB53-4DC8-9001-88F3B923A0A3">
+      <meta name="DC.Relation" scheme="URI" content="managing-json-sources.html#GUID-0E15BA92-419E-4B0E-BBD1-A5A835DBC807">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-38CB1AC5-2DDC-4B04-8A60-0D84935FE261">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Create a JSON Source to retrieve data from a JSON Collection Table or table with JSON columns in a local or a remote database.">
+      <meta name="description" content="Create a JSON Source to retrieve data from a JSON Collection Table or table with JSON columns in a local or a remote database.">
+      <title>Managing JSON Sources</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Create a JSON Source to retrieve data from a JSON Collection Table or table with JSON columns in a local or a remote database.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-duality-views.html" title="Previous" type="text/html">
+      <link rel="next" href="managing-REST-data-sources.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Managing JSON Sources","description":"Create a JSON Source to retrieve data from a JSON Collection Table or table with JSON columns in a local or a remote database.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-duality-views.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="managing-REST-data-sources.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-38CB1AC5-2DDC-4B04-8A60-0D84935FE261" name="GUID-38CB1AC5-2DDC-4B04-8A60-0D84935FE261"></a>
+         
+         <h2 id="HTMDB-GUID-38CB1AC5-2DDC-4B04-8A60-0D84935FE261" class="sect2"><span class="enumeration_section">18.3.2 </span>Managing JSON Sources
+         </h2>
+         <div class="ind">
+            <p>Create a JSON Source to retrieve data from a JSON Collection Table or table
+        with JSON columns in a local or a remote database.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="managing-json-sources.html#GUID-5B139C7B-AC34-4D54-BD40-34621D1E4316">About JSON Sources</a><br>Learn about creating and using JSON Sources in <span>Oracle APEX</span>.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-json-sources.html#GUID-94E7AFAC-DF34-45CF-B9F1-07BB784B274B">Creating a JSON Source</a><br>Create a JSON Source from Shared Components.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-json-sources.html#GUID-9893D6C8-B2C9-41D1-ABF5-9606600265B0">Editing and Deleting a JSON Source</a><br>Edit or delete a JSON Source on the Edit JSON Source page.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-json-sources.html#GUID-3A26CE9A-0240-4082-AD2F-84E1B479C963">Copying or Subscribing to a JSON Source</a><br>Copy a JSON Source from the current application or from another application.         When copying a JSON Source from another application, you can also subscribe to         it.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-json-sources.html#GUID-6DD2106F-EB53-4DC8-9001-88F3B923A0A3">Viewing JSON Sources Utilization</a><br>View the JSON Sources Utilization report.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-json-sources.html#GUID-0E15BA92-419E-4B0E-BBD1-A5A835DBC807">Viewing JSON Sources History</a><br>View the JSON Sources History report.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="working-with-duality-views-and-json-sources.html#GUID-2BE66757-8B5F-4F07-B218-57365DC53AFC" title="Learn about creating Duality View and JSON Sources to retrieve data from a local or a remote database.">Working with Duality Views and JSON Sources</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-5B139C7B-AC34-4D54-BD40-34621D1E4316" name="GUID-5B139C7B-AC34-4D54-BD40-34621D1E4316"></a><h3 id="HTMDB-GUID-5B139C7B-AC34-4D54-BD40-34621D1E4316" class="sect3"><span class="enumeration_section">18.3.2.1 </span>About JSON Sources
+               </h3>
+               <div>
+                  <p>Learn about creating and using JSON Sources in <span>Oracle APEX</span>.
+                  </p>
+                  <p>JSON Sources in <span>APEX</span> consist of information about the owner and name of a database table which can be a
+            plain table with columns containing JSON data or a JSON collection table. Each JSON
+            Source also includes Data Profile which maps JSON attributes to columns, to be consumed
+            by APEX components.
+                  </p>
+                  <p>Plain tables with JSON columns are supported in Oracle Database 19c and 21c.
+            JSON collection tables are only available in Oracle Database <span>23ai</span> or higher.
+                  </p>
+                  <div class="infoboxnote" id="GUID-5B139C7B-AC34-4D54-BD40-34621D1E4316__GUID-4FB6F58D-3DDD-4917-96EA-FCD3573DCEC6">
+                     <p class="notep1">Note:</p>To learn more, see <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmdb&id=ADJSN-GUID-B38676E8-F5FD-4347-84DB-DE13E08657D9" target="_blank">Tables With JSON Columns</a> and <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmdb&id=ADJSN-GUID-F69A381E-7A6A-4D18-A148-B0C541C174BD" target="_blank">JSON Collections</a> in <span><cite>Oracle Database JSON
+                                        Developer’s Guide</cite></span>.
+                  </div>
+                  <p>You can define a JSON Source using a local database or a remote database by
+            using a REST Enabled SQL service. After picking the table and column to use, <span>APEX</span> either determines the data profile from the actual data, or from an uploaded JSON
+            Schema file.
+                  </p>
+                  <p>Once created, the JSON Source is available to page components, such as
+            reports, charts, forms, and so on, and shared components, such as list of values and
+            automations. Developers can also use the <code class="codeph">APEX_EXEC</code> package to access
+            the JSON Source programmatically.
+                  </p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-5B139C7B-AC34-4D54-BD40-34621D1E4316__GUID-DAEA6A78-B979-4504-8FA6-1CC7541836BB">
+                     <p class="notep1">See Also:</p><a href="../aeapi/APEX_EXEC.html#AEAPI-GUID-3CF1D2DD-AEA4-4982-9857-548567AB7169" target="_blank">APEX_EXEC</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-json-sources.html#GUID-38CB1AC5-2DDC-4B04-8A60-0D84935FE261" title="Create a JSON Source to retrieve data from a JSON Collection Table or table with JSON columns in a local or a remote database.">Managing JSON Sources</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-94E7AFAC-DF34-45CF-B9F1-07BB784B274B" name="GUID-94E7AFAC-DF34-45CF-B9F1-07BB784B274B"></a><h3 id="HTMDB-GUID-94E7AFAC-DF34-45CF-B9F1-07BB784B274B" class="sect3"><span class="enumeration_section">18.3.2.2 </span>Creating a JSON Source
+               </h3>
+               <div>
+                  <p>Create a JSON Source from Shared Components.</p>
+                  <p>To create a JSON Source:</p>
+                  <ol>
+                     <li><span>Navigate to the JSON Sources page:</span><ol type="a" id="GUID-94E7AFAC-DF34-45CF-B9F1-07BB784B274B__SUBSTEPS_KQT_LRG_5CC">
+                           <li><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span> in the center of the page.</span></li>
+                           <li><span>Under Data Sources, select <span class="uicontrol bold">JSON Sources</span>. </span></li>
+                        </ol>
+                     </li>
+                     <li><span>On the JSON Sources page, click <span class="uicontrol bold">Create</span>.</span></li>
+                     <li><span>On General, specify:</span><ol type="a" id="GUID-94E7AFAC-DF34-45CF-B9F1-07BB784B274B__SUBSTEPS_DZJ_XRG_5CC">
+                           <li class="substepexpand"><span>Name - Enter a name for the new JSON Source.</span></li>
+                           <li class="substepexpand"><span>JSON Source Type - Select the JSON Source type. Options include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-94E7AFAC-DF34-45CF-B9F1-07BB784B274B__UL_ICK_HSG_5CC">
+                                    <li><span class="uicontrol bold">JSON Collection Table</span> - Denotes JSON
+                                    collection tables created using the <code class="codeph">CREATE JSON
+                                        COLLECTION TABLE</code> SQL syntax.
+                                    </li>
+                                    <li><span class="uicontrol bold">Table with JSON columns</span> - Denotes normal
+                                    tables with one or more columns containing JSON documents. After
+                                    choosing the table, Oracle APEX will ask for up to three columns
+                                    which contain JSON documents.
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Location - Specify whether data is to be sourced from the
+                                <span class="uicontrol bold">Local Database</span> or from a <span class="uicontrol bold">REST
+                                Enabled SQL Service</span>.</span></li>
+                           <li class="substepexpand"><span>Owner - Select the owner of the Table or View.</span></li>
+                           <li class="substepexpand"><span>Table with JSON Columns - Select a table with JSON columns.</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>JSON Columns - Select up to three columns from the selected table. Selected
+                    columns must contain valid JSON documents.</span><ol type="a">
+                           <li class="substepexpand"><span>JSON Column 1 - Select a column containing JSON documents, to use for
+                            this JSON Source. Columns can be of <code class="codeph">VARCHAR2</code>,
+                                <code class="codeph">CLOB</code>, <code class="codeph">BLOB</code>, or
+                                <code class="codeph">JSON</code> data type.</span></li>
+                           <li class="substepexpand"><span>JSON Schema for Column 1 - Provide a JSON Schema file to generate the
+                            Data Profile from. </span><div>
+                                 
+                                 <p>If no JSON Schema is provided, <span>Oracle APEX</span> generates the data profile by sampling existing data in the
+                                table. Providing a JSON schema is particularly useful when the table
+                                contains no or no representative data. 
+                                 </p>
+                                 
+                                 <p>
+                                    <span>Oracle APEX</span> currently only supports the full definition being in one
+                                self-contained JSON Schema. Multiple JSON schemas, using imports or
+                                being bundled in one file, are not supported; the $id attribute is
+                                ignored. Also, <span>Oracle APEX</span> only extracts information from the JSON Schema which is relevant
+                                for the Data Profile, which is attribute names, data types and the
+                                JSON hierarchy.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span><div>The Data Profile appears. <span>Oracle APEX</span> computes the Data Profile for the new JSON Source.<br><div class="imageleft"><img class="imageleft" id="GUID-94E7AFAC-DF34-45CF-B9F1-07BB784B274B__IMAGE_T4P_JNN_WCC" height="607" width="1102" src="img/json_source_data_profile.png" alt="Description of json_source_data_profile.png follows" title="Description of json_source_data_profile.png follows" longdesc="img_text/json_source_data_profile.html"><br><a href="img_text/json_source_data_profile.html">Description of the illustration json_source_data_profile.png</a></div><br></div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Data Profile - Review the data profile and check the Primary Key columns for
+                    each hierarchy level.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Create</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-json-sources.html#GUID-38CB1AC5-2DDC-4B04-8A60-0D84935FE261" title="Create a JSON Source to retrieve data from a JSON Collection Table or table with JSON columns in a local or a remote database.">Managing JSON Sources</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-9893D6C8-B2C9-41D1-ABF5-9606600265B0" name="GUID-9893D6C8-B2C9-41D1-ABF5-9606600265B0"></a><h3 id="HTMDB-GUID-9893D6C8-B2C9-41D1-ABF5-9606600265B0" class="sect3"><span class="enumeration_section">18.3.2.3 </span>Editing and Deleting a JSON Source
+               </h3>
+               <div>
+                  <p>Edit or delete a JSON Source on the Edit JSON Source page.</p>
+                  <p>To edit or delete a JSON Source:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the JSON Sources page:</span><ol type="a" id="GUID-9893D6C8-B2C9-41D1-ABF5-9606600265B0__SUBSTEPS_VXV_QYR_VCC">
+                           <li><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span> in the center of the page.</span></li>
+                           <li><span>Under Data Sources, select <span class="uicontrol bold">JSON Sources</span>. </span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On the JSON Source page, click the JSON Source Name.</span><div>
+                           
+                           <p>The Edit JSON Source page appears. Use this page to edit the JSON
+                        Source or delete it.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>To delete the JSON Source, click <span class="uicontrol bold">Delete</span>. When prompted,
+                    confirm your request and click <span class="uicontrol bold">Delete</span> again.</span></li>
+                     <li class="stepexpand"><span>Under <span class="uicontrol bold">Identification</span>:</span><ol type="a" id="GUID-9893D6C8-B2C9-41D1-ABF5-9606600265B0__SUBSTEPS_S2N_1ZR_VCC">
+                           <li class="substepexpand"><span>Name - Name of the JSON Source.</span></li>
+                           <li class="substepexpand"><span>Static ID - Static ID of the JSON Source. The static ID is used to
+                            programmatically access the JSON Source in PL/SQL code.</span></li>
+                           <li class="substepexpand"><span>JSON Source Type - Select JSON Source type:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-9893D6C8-B2C9-41D1-ABF5-9606600265B0__UL_RVV_HZR_VCC">
+                                    <li><span class="uicontrol bold">JSON Collection Table</span> - Denotes JSON
+                                    collection tables created using the <code class="codeph">CREATE JSON
+                                        COLLECTION TABLE</code> SQL syntax.
+                                    </li>
+                                    <li><span class="uicontrol bold">Table with JSON columns</span> - Denotes normal
+                                    tables with one or more columns containing JSON documents.
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under <span class="uicontrol bold">Source</span>:</span><ol type="a" id="GUID-9893D6C8-B2C9-41D1-ABF5-9606600265B0__SUBSTEPS_TMF_RZR_VCC">
+                           <li><span>Location - Specify whether data is sourced from a  <span class="uicontrol bold">Local
+                                Database</span> or from a <span class="uicontrol bold">REST Enabled SQL
+                                Service</span>.</span></li>
+                           <li><span>Table with JSON Columns - Select a table with JSON columns to
+                            use.</span></li>
+                           <li><span>Where Clause - Provide a <code class="codeph">WHERE</code> clause to restrict rows
+                            from the data source.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under <span class="uicontrol bold">Data Profile</span>: </span><ol type="a" id="GUID-9893D6C8-B2C9-41D1-ABF5-9606600265B0__SUBSTEPS_EJD_TNR_VCC">
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Edit Data Profile</span> to change how the Data
+                            Source format is being parsed and converted to rows and columns. </span></li>
+                           <li class="substepexpand"><span>Under <span class="uicontrol bold">Settings</span>:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-9893D6C8-B2C9-41D1-ABF5-9606600265B0__UL_VDK_ZNR_VCC">
+                                    <li>Name - Enter a name for the data profile.</li>
+                                    <li>Format - Choose the data format. </li>
+                                    <li>Row Selector - For a data profile returning a
+                                    table, enter the expression to select the collection of rows
+                                    within the Data Source.
+                                       <p>To learn more and view
+                                        examples, see item Help.</p>
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Under <span class="uicontrol bold">Columns</span> - Determines how one row is parsed
+                            and converted to multiple columns. Use the Edit icon or the available
+                            buttons to add or edit the columns.</span></li>
+                           <li class="substepexpand"><span>Rediscovery:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-9893D6C8-B2C9-41D1-ABF5-9606600265B0__UL_GFZ_T1S_VCC">
+                                    <li>Click <span class="uicontrol bold">Rediscover Data Profile</span>
+                                    to refresh the Data Profile. 
+                                    </li>
+                                    <li>JSON Schema - Provide a JSON Schema file fromwhich
+                                    to generate the Data Profile. If no JSON Schema is provided, <span>Oracle APEX</span> generates the data profile by sampling existing data in the
+                                    table. To learn more, see item Help.
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Under <span class="uicontrol bold">Advanced</span>:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-9893D6C8-B2C9-41D1-ABF5-9606600265B0__UL_EQN_MCS_VCC">
+                                    <li>Use Raw Selectors - If enabled, <span>Oracle APEX</span> will not sanitize row and column selectors when generating
+                                    the SQL query for JSON parsing. All selectors will be used
+                                    exactly as specified.
+                                    </li>
+                                    <li>Profile Comment - Enter any developer comments or
+                                    notes.</li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span> to save your changes.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Advanced - In <span class="uicontrol bold">Comment</span>, enter any developer comments or
+                    notes. </span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span> to save your changes.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-json-sources.html#GUID-38CB1AC5-2DDC-4B04-8A60-0D84935FE261" title="Create a JSON Source to retrieve data from a JSON Collection Table or table with JSON columns in a local or a remote database.">Managing JSON Sources</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-3A26CE9A-0240-4082-AD2F-84E1B479C963" name="GUID-3A26CE9A-0240-4082-AD2F-84E1B479C963"></a><h3 id="HTMDB-GUID-3A26CE9A-0240-4082-AD2F-84E1B479C963" class="sect3"><span class="enumeration_section">18.3.2.4 </span>Copying or Subscribing to a JSON Source
+               </h3>
+               <div>
+                  <p>Copy a JSON Source from the current application or from another application.
+        When copying a JSON Source from another application, you can also subscribe to
+        it.</p>
+                  <p>To copy a JSON Source:</p>
+                  <ol>
+                     <li><span>Navigate to the JSON Sources page:</span><ol type="a" id="GUID-3A26CE9A-0240-4082-AD2F-84E1B479C963__SUBSTEPS_A4S_RYG_5CC">
+                           <li><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span> in the center of the page.</span></li>
+                           <li><span>Under Data Sources, select <span class="uicontrol bold">JSON Sources</span>. </span></li>
+                        </ol>
+                     </li>
+                     <li><span>On the JSON Sources page, click <span class="uicontrol bold">Copy</span>.</span></li>
+                     <li><span>Copy From - Choose where to copy the JSON Source from. Options include:</span><ul id="GUID-3A26CE9A-0240-4082-AD2F-84E1B479C963__CHOICES_W2X_TSG_WCC">
+                           <li><span class="uicontrol bold">This Application</span></li>
+                           <li><span class="uicontrol bold">Other Application</span></li>
+                        </ul>
+                     </li>
+                     <li><span>To copy from the current application:</span><ol type="a" id="GUID-3A26CE9A-0240-4082-AD2F-84E1B479C963__SUBSTEPS_HBK_WSG_WCC">
+                           <li><span>Copy From - Select <span class="uicontrol bold">This Application</span>.</span></li>
+                           <li><span>Copy JSON Source - Select the JSON Source to copy.</span></li>
+                           <li><span>New JSON Source Name - Enter the name of the JSON Source you would like
+                            to create.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Copy</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>To copy from another application:</span><ol type="a" id="GUID-3A26CE9A-0240-4082-AD2F-84E1B479C963__SUBSTEPS_SYP_BTG_WCC">
+                           <li><span>Copy From - Select <span class="uicontrol bold">Other Application</span>.</span></li>
+                           <li><span>Application - Select the application from which you want to copy.</span></li>
+                           <li><span>Copy JSON Source - Select the JSON Source to copy.</span></li>
+                           <li><span>Subscribe - Enable <span class="uicontrol bold">Subscribe</span> to subscribe to the
+                            JSON Source.</span></li>
+                           <li><span>New JSON Source Name - Enter the name of the JSON Source you would like
+                            to create.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Copy</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-json-sources.html#GUID-38CB1AC5-2DDC-4B04-8A60-0D84935FE261" title="Create a JSON Source to retrieve data from a JSON Collection Table or table with JSON columns in a local or a remote database.">Managing JSON Sources</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-6DD2106F-EB53-4DC8-9001-88F3B923A0A3" name="GUID-6DD2106F-EB53-4DC8-9001-88F3B923A0A3"></a><h3 id="HTMDB-GUID-6DD2106F-EB53-4DC8-9001-88F3B923A0A3" class="sect3"><span class="enumeration_section">18.3.2.5 </span>Viewing JSON Sources Utilization
+               </h3>
+               <div>
+                  <p>View the JSON Sources Utilization report.</p>
+                  <p>To view JSON Sources Utilization report:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the JSON Sources page:</span><ol type="a" id="GUID-6DD2106F-EB53-4DC8-9001-88F3B923A0A3__SUBSTEPS_A4S_RYG_5CC">
+                           <li><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span> in the center of the page.</span></li>
+                           <li><span>Under Data Sources, select <span class="uicontrol bold">JSON Sources</span>. </span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On the JSON Sources page, click <span class="uicontrol bold">Utilization</span>.</span><div>The Utilization page displays where a&nbsp;JSON Sources are used
+                    within the current application.</div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-json-sources.html#GUID-38CB1AC5-2DDC-4B04-8A60-0D84935FE261" title="Create a JSON Source to retrieve data from a JSON Collection Table or table with JSON columns in a local or a remote database.">Managing JSON Sources</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-0E15BA92-419E-4B0E-BBD1-A5A835DBC807" name="GUID-0E15BA92-419E-4B0E-BBD1-A5A835DBC807"></a><h3 id="HTMDB-GUID-0E15BA92-419E-4B0E-BBD1-A5A835DBC807" class="sect3"><span class="enumeration_section">18.3.2.6 </span>Viewing JSON Sources History
+               </h3>
+               <div>
+                  <p>View the JSON Sources History report.</p>
+                  <p>To view JSON Sources History report:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the JSON Sources page:</span><ol type="a" id="GUID-0E15BA92-419E-4B0E-BBD1-A5A835DBC807__SUBSTEPS_A4S_RYG_5CC">
+                           <li><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span> in the center of the page.</span></li>
+                           <li><span>Under Data Sources, select <span class="uicontrol bold">JSON Sources</span>. </span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On the JSON Sources page, click <span class="uicontrol bold">History</span>.</span><div>The History page isplays recent modifications made to JSON
+                    Sources in the current application.</div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-json-sources.html#GUID-38CB1AC5-2DDC-4B04-8A60-0D84935FE261" title="Create a JSON Source to retrieve data from a JSON Collection Table or table with JSON columns in a local or a remote database.">Managing JSON Sources</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

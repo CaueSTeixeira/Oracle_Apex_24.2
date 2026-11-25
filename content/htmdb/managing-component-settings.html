@@ -1,0 +1,1582 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Component Settings">
+      <meta name="abstract" content="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">
+      <meta name="description" content="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">
+      <meta name="DC.subject" content="Component Settings, managing, Color Picker, color picker, configure display style, Component Settings, checkbox, check box, configure default value stored in page item, configure application-level component settings, Date Picker, Date Picker, Geocoded Address, Geocoded Address, interactive report, interactive report, configuring Actions menu structure, Map, Map, Vector Tile Layers, maps, enable Vector Tile Layers, Oracle Cloud Applications (BOSS) REST Service, Oracle Cloud Applications (BOSS) REST Service, Component Settings, Oracle Cloud Applications (SaaS) REST Service, Oracle Cloud Applications (SaaS) REST Service, configuring sandbox name, sandbox, Region Display Selector, region, Select Many, Select Many, Server Side Geocoding, Server Side Geocoding, Show AI Assistant, Show AI Assistant, Star Rating, Star Rating, Switch, Switch, viewing History report">
+      <meta name="keywords" content="Component Settings, managing, Color Picker, color picker, configure display style, Component Settings, checkbox, check box, configure default value stored in page item, configure application-level component settings, Date Picker, Date Picker, Geocoded Address, Geocoded Address, interactive report, interactive report, configuring Actions menu structure, Map, Map, Vector Tile Layers, maps, enable Vector Tile Layers, Oracle Cloud Applications (BOSS) REST Service, Oracle Cloud Applications (BOSS) REST Service, Component Settings, Oracle Cloud Applications (SaaS) REST Service, Oracle Cloud Applications (SaaS) REST Service, configuring sandbox name, sandbox, Region Display Selector, region, Select Many, Select Many, Server Side Geocoding, Server Side Geocoding, Show AI Assistant, Show AI Assistant, Star Rating, Star Rating, Switch, Switch, viewing History report">
+      <meta name="DC.Relation" scheme="URI" content="managing-shared-components.html#GUID-04D43728-0539-4817-9FBB-DEFFA616E916">
+      <meta name="DC.Relation" scheme="URI" content="managing-component-settings.html#GUID-B4676BA5-30C3-44E1-B81F-5D3583CFB835">
+      <meta name="DC.Relation" scheme="URI" content="managing-component-settings.html#GUID-02A0C020-7C51-44F3-9B01-C7BB7227CFDB">
+      <meta name="DC.Relation" scheme="URI" content="managing-component-settings.html#GUID-DC3E3BB2-77FE-4DD1-9A18-904A028380DA">
+      <meta name="DC.Relation" scheme="URI" content="managing-component-settings.html#GUID-2530D177-2273-4EBE-AE24-737EE6872B5E">
+      <meta name="DC.Relation" scheme="URI" content="managing-component-settings.html#GUID-89BE0E3C-B1F0-4ABB-9D79-471E0A1E295F">
+      <meta name="DC.Relation" scheme="URI" content="managing-component-settings.html#GUID-2D92DD59-8CF1-4D75-87C4-CAEFDD352D40">
+      <meta name="DC.Relation" scheme="URI" content="managing-component-settings.html#GUID-D6D82B56-A8CB-4F12-9265-C02A26E42E03">
+      <meta name="DC.Relation" scheme="URI" content="managing-component-settings.html#GUID-D2CBD2BB-F26B-45FE-90D5-65E4279BC0F1">
+      <meta name="DC.Relation" scheme="URI" content="managing-component-settings.html#GUID-AB687570-8EC6-444F-A265-3D0076E0A93B">
+      <meta name="DC.Relation" scheme="URI" content="managing-component-settings.html#GUID-669EE84D-7438-4D38-B01E-45D25D9462D1">
+      <meta name="DC.Relation" scheme="URI" content="managing-component-settings.html#GUID-A9B84375-4D50-4549-9DDE-AE8890BA23B2">
+      <meta name="DC.Relation" scheme="URI" content="managing-component-settings.html#GUID-F5478CDE-EEA8-451B-8D2C-679A7363F252">
+      <meta name="DC.Relation" scheme="URI" content="managing-component-settings.html#GUID-42F5F526-C89A-44EE-8696-7E52A243B5B7">
+      <meta name="DC.Relation" scheme="URI" content="managing-component-settings.html#GUID-ABB2C1E1-78ED-4EAB-B7BD-D38757D1FF92">
+      <meta name="DC.Relation" scheme="URI" content="managing-component-settings.html#GUID-8F7733DF-F988-4E69-9400-B85593F894A5">
+      <meta name="DC.Relation" scheme="URI" content="managing-component-settings.html#GUID-C5B91C35-5F20-4249-BD08-0AB366AFD3C1">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">
+      <meta name="description" content="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">
+      <title>Managing Component Settings</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-application-items.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-lists-of-values-at-the-application-level.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Managing Component Settings","description":"Use Component Settings to set application level values for built-in APEX components and installed plug-ins.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-application-items.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-lists-of-values-at-the-application-level.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30" name="GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30"></a><a id="HTMDB29146"></a><a id="4000:4445"></a><a id="4000:4447"></a><a id="4000:4446"></a>
+         
+         <h2 id="HTMDB-GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30" class="sect2"><span class="enumeration_section">16.6 </span> Managing Component Settings
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Use Component Settings to set application level values for built-in <span>APEX</span> components and installed plug-ins.
+               </p>
+               <div class="infobox-tip" id="GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30__GUID-E6EDDDE3-B1D1-40CA-8EDC-B2DA900A05E2">
+                  <p class="notep1">Tip:</p>The Component Settings in your environment will vary based on the currently selected application.
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="managing-component-settings.html#GUID-B4676BA5-30C3-44E1-B81F-5D3583CFB835">Configuring Component Settings</a><br>Configure Component Settings to set application-level values for built-in                         <span>APEX</span> components and installed plug-ins.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-component-settings.html#GUID-02A0C020-7C51-44F3-9B01-C7BB7227CFDB">Configuring Checkbox</a><br>Configure the default value stored in a page item for an enabled or disabled         checkbox in Component Settings, Checkbox.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-component-settings.html#GUID-DC3E3BB2-77FE-4DD1-9A18-904A028380DA">Configuring Color Picker Display</a><br>Configure the default display behavior for a Color Picker in Component         Settings, Color Picker.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-component-settings.html#GUID-2530D177-2273-4EBE-AE24-737EE6872B5E">Configuring Date Picker</a><br>Configure default Date Picker behavior in Shared Components, Component         Settings.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-component-settings.html#GUID-89BE0E3C-B1F0-4ABB-9D79-471E0A1E295F">Configuring Geocoded Address</a><br>Configure Geocoded Address behavior in Component Settings, Geocoded         Address.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-component-settings.html#GUID-2D92DD59-8CF1-4D75-87C4-CAEFDD352D40">Configuring Interactive Report Action Menu Structure</a><br>Configure if interactive reports use the new Action Menu or keep the legacy         structure from earlier releases.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-component-settings.html#GUID-D6D82B56-A8CB-4F12-9265-C02A26E42E03">Configuring Vector Tile Layers for Maps</a><br>Configure Map component settings to include Vector Tile Layers as the         background map.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-component-settings.html#GUID-D2CBD2BB-F26B-45FE-90D5-65E4279BC0F1">Configuring Oracle Cloud Applications (BOSS) REST Service</a><br>Configure Component Settings for an Oracle Cloud Applications (BOSS) REST         Service.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-component-settings.html#GUID-AB687570-8EC6-444F-A265-3D0076E0A93B">Configuring an Oracle Cloud Applications (SaaS) REST Service</a><br>Specify a sandbox name for use in  <span>App Builder</span> and at runtime when using a Oracle Cloud Applications (SaaS) REST Service.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-component-settings.html#GUID-669EE84D-7438-4D38-B01E-45D25D9462D1">Dynamically Adding Sliders to Regions</a><br>Dynamically add a slider to regions if the displayed region name exceeds the         width of the region by configuring the Component Settings, Region Display         Selector.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-component-settings.html#GUID-A9B84375-4D50-4549-9DDE-AE8890BA23B2">Configuring Select Many</a><br>Specify how to display values when the item is not focused in Component         Settings, Select Many.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-component-settings.html#GUID-F5478CDE-EEA8-451B-8D2C-679A7363F252">Configuring Server Side Geocoding</a><br>Configure Component Settings for Server Side Geocoding.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-component-settings.html#GUID-42F5F526-C89A-44EE-8696-7E52A243B5B7">Configuring Show AI Assistant</a><br>Configure Show AI Assistant component settings to set application-level         values for the Show AI Assistant plug-in.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-component-settings.html#GUID-ABB2C1E1-78ED-4EAB-B7BD-D38757D1FF92">Configuring Star Rating</a><br>Configure default Star Rating behavior in Component Setting, Star         Rating.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-component-settings.html#GUID-8F7733DF-F988-4E69-9400-B85593F894A5">Configuring Switch Defaults</a><br>Configure default Switch item type behavior Component Settings, Switch. 
+                  </li>
+                  <li class="ulchildlink"><a href="managing-component-settings.html#GUID-C5B91C35-5F20-4249-BD08-0AB366AFD3C1">Viewing the Component Settings History Report</a><br>View a report of recent modifications made to Component Settings in the         current application.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-shared-components.html#GUID-04D43728-0539-4817-9FBB-DEFFA616E916" title="Shared components can display or be applied on any page within an application. Developers can use the tools and wizards on the Shared Components page either at the application-level or on specific pages.">Managing Shared Components</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-B4676BA5-30C3-44E1-B81F-5D3583CFB835" name="GUID-B4676BA5-30C3-44E1-B81F-5D3583CFB835"></a><h3 id="HTMDB-GUID-B4676BA5-30C3-44E1-B81F-5D3583CFB835" class="sect3"><span class="enumeration_section">16.6.1 </span>Configuring Component Settings
+               </h3>
+               <div>
+                  <p>Configure Component Settings to set application-level values for built-in
+                        <span>APEX</span> components and installed plug-ins.
+                  </p>
+                  <div class="section">
+                     
+                     <div class="infobox-tip" id="GUID-B4676BA5-30C3-44E1-B81F-5D3583CFB835__GUID-4BF1F3A3-1EFD-430B-B9C2-DB393BB7F70B">
+                        <p class="notep1">Tip:</p>To learn more about a
+                specific component type, see the topics that follow.
+                     </div>
+                     
+                  </div>
+                  <p>
+                     </p><p>To configure Component Settings:</p>
+                  <p></p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a" id="GUID-B4676BA5-30C3-44E1-B81F-5D3583CFB835__SUBSTEPS_JBH_N2S_Q3B">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>
+                                 
+                                 <p>The Shared Components page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                        <div>
+                           
+                           <div class="infobox-tip" id="GUID-B4676BA5-30C3-44E1-B81F-5D3583CFB835__GUID-135C79F6-065A-4519-8EC7-883799DAD2A4">
+                              <p class="notep1">Tip:</p>You can also access Shared Components from Page Designer by
+                        clicking <span class="uicontrol bold">Shared Components</span> (<img id="GUID-B4676BA5-30C3-44E1-B81F-5D3583CFB835__IMAGE_YSP_CKB_H5B" height="34" width="50" src="img/pd_toolbar_shared_comp.png" alt="Shared Components" title="Shared Components">) on the Page Designer toolbar.
+                           </div>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under Other Components, click <span class="uicontrol bold">Component Settings</span>.</span></li>
+                     <li class="stepexpand"><span>On the Component Settings page, click the component name.</span></li>
+                     <li class="stepexpand"><span>On Component Settings, configure the appropriate settings.</span><div>
+                           
+                           <p>To learn more about a specific setting, see item Help.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Subscription:</span><ul id="GUID-B4676BA5-30C3-44E1-B81F-5D3583CFB835__CHOICES_LSG_ZQP_CZB">
+                           <li>Subscribe From - Select a master component to subscribe
+                        from. When you select a master component and click on the <span class="uicontrol bold">Apply
+                            Changes</span>, the component settings is automatically refreshed
+                        from the selected master.
+                              <p>If the component setting is already
+                            subscribed, then click <span class="uicontrol bold">Refresh Component Settings</span>
+                            to refresh the component settings from the master
+                        component.
+                              </p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-component-settings.html#GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30" title="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">Managing Component Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-02A0C020-7C51-44F3-9B01-C7BB7227CFDB" name="GUID-02A0C020-7C51-44F3-9B01-C7BB7227CFDB"></a><h3 id="HTMDB-GUID-02A0C020-7C51-44F3-9B01-C7BB7227CFDB" class="sect3"><span class="enumeration_section">16.6.2 </span>Configuring Checkbox
+               </h3>
+               <div>
+                  <p>Configure the default value stored in a page item for an enabled or disabled
+        checkbox in Component Settings, Checkbox.</p>
+                  <p>To configure the default value stored in a checkbox page
+                item:</p>
+                  <ol>
+                     <li><span>Navigate to the Shared Components page:</span><ol type="a" id="GUID-02A0C020-7C51-44F3-9B01-C7BB7227CFDB__SUBSTEPS_JBH_N2S_Q3B">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>
+                                 
+                                 <p>The Shared Components page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Under Other Components, click <span class="uicontrol bold">Component Settings</span>.</span></li>
+                     <li><span>On the Component Settings page, click <span class="uicontrol bold">Checkbox</span>.</span></li>
+                     <li><span>Settings:</span><ol type="a" id="GUID-02A0C020-7C51-44F3-9B01-C7BB7227CFDB__SUBSTEPS_GRT_ZLP_CZB">
+                           <li><span>Checked Value - Enter the value stored in the page item if the end user
+                            checks the checkbox. The value can be up to 255 characters long.</span></li>
+                           <li><span>Unchecked Value - Enter the value stored in the page item if the user
+                            deselects the checkbox. This attribute can also be left blank if you
+                            want to store NULL when checked. The value can be up to 255 characters
+                            long.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Subscription:</span><ul id="GUID-02A0C020-7C51-44F3-9B01-C7BB7227CFDB__CHOICES_CFH_BMP_CZB">
+                           <li>Subscribe From - Select a master component to subscribe from. When you
+                        select a master component and click on the <span class="uicontrol bold">Apply
+                            Changes</span>, the component settings is automatically refreshed
+                        from the selected master.
+                              <p>If the component setting is already subscribed,
+                            then click <span class="uicontrol bold">Refresh Component Settings</span> to refresh
+                            the component settings from the master component.
+                              </p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-component-settings.html#GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30" title="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">Managing Component Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-DC3E3BB2-77FE-4DD1-9A18-904A028380DA" name="GUID-DC3E3BB2-77FE-4DD1-9A18-904A028380DA"></a><h3 id="HTMDB-GUID-DC3E3BB2-77FE-4DD1-9A18-904A028380DA" class="sect3"><span class="enumeration_section">16.6.3 </span>Configuring Color Picker Display
+               </h3>
+               <div>
+                  <p>Configure the default display behavior for a Color Picker in Component
+        Settings, Color Picker.</p>
+                  <p>To configure the default display behavior for a Color Picker:</p>
+                  <ol>
+                     <li><span>Navigate to the Shared Components page:</span><ol type="a" id="GUID-DC3E3BB2-77FE-4DD1-9A18-904A028380DA__SUBSTEPS_JBH_N2S_Q3B">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>
+                                 
+                                 <p>The Shared Components page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Under Other Components, click <span class="uicontrol bold">Component Settings</span>.</span></li>
+                     <li><span>On the Component Settings page, click <span class="uicontrol bold">Color
+                    Picker</span>.</span></li>
+                     <li><span>Settings:</span><ol type="a" id="GUID-DC3E3BB2-77FE-4DD1-9A18-904A028380DA__SUBSTEPS_FGR_2NP_CZB">
+                           <li class="substepexpand"><span>Display As - Select how the color picker displays. Options
+                            include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-DC3E3BB2-77FE-4DD1-9A18-904A028380DA__UL_UTB_HXT_HRB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Popup</span> - A color can be
+                                        entered in the text field or chosen from the popup color
+                                        picker.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Inline</span> - A color picker
+                                        is shown inline.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Color-only Popup</span> - A
+                                        button opens a popup color picker.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Native Color Picker</span> - A
+                                        native browser color input. The UI is dependent on the
+                                        browser.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Mode - Select the amount of information shown in the color picker.
+                            Options include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-DC3E3BB2-77FE-4DD1-9A18-904A028380DA__UL_OJV_RPT_L5B">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Simple</span> - Shows just the
+                                        color spectrum controls and color presets if any are
+                                        defined.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Full</span> - Shows additional
+                                        fields to view or enter colors as Hex, HSL, or RGB values
+                                        with optional Alpha value depending on Return Value As. Also
+                                        shows the Initial and Current colors.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Subscription:</span><ul id="GUID-DC3E3BB2-77FE-4DD1-9A18-904A028380DA__CHOICES_L2P_NNP_CZB">
+                           <li>Subscribe From - Select a master component to subscribe
+                        from. When you select a master component and click on the <span class="uicontrol bold">Apply
+                            Changes</span>, the component settings is automatically refreshed
+                        from the selected master.
+                              <p>If the component setting is already
+                            subscribed, then click <span class="uicontrol bold">Refresh Component Settings</span>
+                            to refresh the component settings from the master
+                        component.
+                              </p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-component-settings.html#GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30" title="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">Managing Component Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-2530D177-2273-4EBE-AE24-737EE6872B5E" name="GUID-2530D177-2273-4EBE-AE24-737EE6872B5E"></a><h3 id="HTMDB-GUID-2530D177-2273-4EBE-AE24-737EE6872B5E" class="sect3"><span class="enumeration_section">16.6.4 </span>Configuring Date Picker
+               </h3>
+               <div>
+                  <p>Configure default Date Picker behavior in Shared Components, Component
+        Settings.</p>
+                  <p>To configure default Date Picker behavior:</p>
+                  <ol>
+                     <li><span>Navigate to the Shared Components page:</span><ol type="a" id="GUID-2530D177-2273-4EBE-AE24-737EE6872B5E__SUBSTEPS_JBH_N2S_Q3B">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>
+                                 
+                                 <p>The Shared Components page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Under Other Components, click <span class="uicontrol bold">Component Settings</span>.</span></li>
+                     <li><span>On the Component Settings page, click <span class="uicontrol bold">Date Picker</span>.</span></li>
+                     <li><span>Settings:</span><ol type="a" id="GUID-2530D177-2273-4EBE-AE24-737EE6872B5E__SUBSTEPS_T3D_P4P_CZB">
+                           <li class="substepexpand"><span>Appearance &amp; Behavior - Control the appearance and behavior of the
+                            calendar used to select dates. Only applies to Date Pickers when
+                                <span class="uicontrol bold">Display As</span> is either
+                                <span class="uicontrol bold">Popup</span> or <span class="uicontrol bold">Inline</span>. </span><div>
+                                 
+                                 <p>Options include:</p>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-2530D177-2273-4EBE-AE24-737EE6872B5E__UL_CJ5_BFX_WQB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Show Week</span> - Determines if
+                                        the week of the year is shown.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Month Picker</span>- Controls if
+                                        the month is rendered as a button which allows selection
+                                        instead of text.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Year Picker</span>- Determines
+                                        whether the year is rendered as a button which allow
+                                        selection instead of text.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Paginate by Multiple
+                                            Months</span> - Determines whether the pagination
+                                        size when displaying several months is only one month or the
+                                        number of months.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Show Today Button</span> -
+                                        Controls whether the today button displays to select the
+                                        current date.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Show Clear Button</span> -
+                                        Controls whether the clear button displays to clear the
+                                        value of the date picker. Note: This is only used when
+                                            <span class="uicontrol bold">Display As</span> is
+                                            <span class="uicontrol bold">Inline</span>.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Days Outside Month - Dictates the behavior of days outside the current
+                            viewing month. Only applies to Date Pickers when <span class="uicontrol bold">Display
+                                As</span> is either <span class="uicontrol bold">Popup</span> or
+                                <span class="uicontrol bold">Inline</span>.</span><div>
+                                 
+                                 <p>Options include:</p>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-2530D177-2273-4EBE-AE24-737EE6872B5E__UL_N25_4FX_WQB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Hidden</span> - Days outside the
+                                        current viewing month will be hidden.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Selectable</span> - Days outside
+                                        the current viewing month will be visible and
+                                        selectable.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Visible</span> - Days outside
+                                        the current viewing month will be visible.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Time Increment - Time increment in minutes used by the time selection
+                            control. Use this attribute to select the time of increments that can
+                            still be manually entered and saved. Only applies to Date Pickers when
+                                <span class="uicontrol bold">Display As</span> is either
+                                <span class="uicontrol bold">Popup</span> or <span class="uicontrol bold">Inline</span>.</span></li>
+                           <li class="substepexpand"><span>Show On - Controls when the calendar popup displays. Only applies to
+                            Date Pickers when <span class="uicontrol bold">Display As</span> is
+                                <span class="uicontrol bold">Popup</span>.</span><div>
+                                 
+                                 <p>Options include:</p>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-2530D177-2273-4EBE-AE24-737EE6872B5E__UL_AMB_3VW_WQB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Item Focus</span> - When the
+                                        item receives focus or when the calendar icon is
+                                        clicked.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Icon Click</span> - Only when
+                                        the calendar icon is clicked.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Subscription:</span><ul id="GUID-2530D177-2273-4EBE-AE24-737EE6872B5E__CHOICES_TW3_V4P_CZB">
+                           <li>Subscribe From - Select a master component to subscribe
+                        from. When you select a master component and click on the <span class="uicontrol bold">Apply
+                            Changes</span>, the component settings is automatically refreshed
+                        from the selected master.
+                              <p>If the component setting is already
+                            subscribed, then click <span class="uicontrol bold">Refresh Component Settings</span>
+                            to refresh the component settings from the master
+                        component.
+                              </p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-component-settings.html#GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30" title="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">Managing Component Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-89BE0E3C-B1F0-4ABB-9D79-471E0A1E295F" name="GUID-89BE0E3C-B1F0-4ABB-9D79-471E0A1E295F"></a><h3 id="HTMDB-GUID-89BE0E3C-B1F0-4ABB-9D79-471E0A1E295F" class="sect3"><span class="enumeration_section">16.6.5 </span>Configuring Geocoded Address
+               </h3>
+               <div>
+                  <p>Configure Geocoded Address behavior in Component Settings, Geocoded
+        Address.</p>
+                  <div class="section">A Geocoded Address item provides geocoding functionality that turns a
+            postal address to a coordinate. To learn more, see <a href="managing-page-items.html#GUID-77666224-27D0-4A0E-B5E3-EE5844E6CCB0" title="View existing page items, create new page items, and edit an item to change its appearance or behavior.">Managing Page Items</a> and <a href="about-item-types.html#GUID-9A0CA048-9C3F-40F2-A035-395EB2436C07" title="Provides geocoding functionality that turns a postal address to a coordinate.">Geocoded Address</a>.
+                  </div>
+                  <p>To configure default Geocoded Address behavior:</p>
+                  <ol>
+                     <li><span>Navigate to the Shared Components page:</span><ol type="a" id="GUID-89BE0E3C-B1F0-4ABB-9D79-471E0A1E295F__SUBSTEPS_JBH_N2S_Q3B">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>
+                                 
+                                 <p>The Shared Components page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Under Other Components, click <span class="uicontrol bold">Component Settings</span>.</span></li>
+                     <li><span>On the Component Settings page, click <span class="uicontrol bold">Geocoded
+                    Address</span>.</span></li>
+                     <li><span>Settings:</span><ol type="a" id="GUID-89BE0E3C-B1F0-4ABB-9D79-471E0A1E295F__SUBSTEPS_WL2_2PP_CZB">
+                           <li class="substepexpand"><span>Geocoder Match Mode - Determines how closely the attributes of an input
+                            address must match the data being used for geocoding. Options
+                            include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-89BE0E3C-B1F0-4ABB-9D79-471E0A1E295F__UL_SRF_PW5_HRB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Exact</span> - All provided
+                                        address parts must match. However, if the house number,
+                                        street name, or street type do not all match, the first
+                                        match in the following is returned: postal code, city or
+                                        town, and state. For example, if the street name is
+                                        incorrect but a valid postal code is specified, a location
+                                        in the postal code is returned.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Relax Street Type</span> - The
+                                        provided street type can be different from the data used for
+                                        geocoding. For example, <code class="codeph">Main Street</code> or
+                                            <code class="codeph">Main Blvd</code> match <code class="codeph">Main
+                                            St</code>, if there is no other<code class="codeph"> Main
+                                            Blvd</code> or <code class="codeph">Main Street</code> in the
+                                        relevant area.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Relax House Number</span> - The
+                                        house number and street type can be different from the data
+                                        used for geocoding. For example, <code class="codeph">123 Main
+                                            St</code> matches <code class="codeph">123 Main Lane</code> and
+                                            <code class="codeph">124 Main St</code>, as long as there are no
+                                        ambiguities or other matches.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Relax Street Name</span> - The
+                                        base name of the street, the house number, and the street
+                                        type can be different from the data used for geocoding. For
+                                        example, <code class="codeph">Pleasant Vale</code> matches
+                                            <code class="codeph">Pleasant Valley</code> as long as there are no
+                                        ambiguities or other matches in the data.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Relax Postal Code</span> - The
+                                        postal code (if provided), street name, street type and
+                                        house number can be different from the data used for
+                                        geocoding.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Relax All</span> - The address
+                                        can be outside the city specified as long as it is within
+                                        the same county. Also includes the characteristics of
+                                            <span class="uicontrol bold">Relax Postal Code</span>.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Display As - Select how the geocoding results display. Options
+                            include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-89BE0E3C-B1F0-4ABB-9D79-471E0A1E295F__UL_ORS_MX5_HRB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">List View</span> - The results
+                                        display in a list view.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Grid View</span> - The results
+                                        display in a grid view.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Map Preview - Determines whether to support previewing the geocoded
+                            address on a map. Options include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-89BE0E3C-B1F0-4ABB-9D79-471E0A1E295F__UL_IMN_1Y5_HRB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Results Popup</span> - Show the
+                                        map in the Geocoding results popup, so that users can review
+                                        the position before selecting a result. This is only
+                                        supported when <span class="uicontrol bold">Display As</span>,
+                                            <span class="uicontrol bold">Grid View</span> is enabled.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Item</span> - Show a map
+                                        visualizing the address location at the item position.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Background - Select an out-of-the-box map background or choose a custom
+                            map background defined in Shared Components. Options include: </span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-89BE0E3C-B1F0-4ABB-9D79-471E0A1E295F__UL_ZX1_3CD_YYB">
+                                    <li><span class="uicontrol bold">Default</span> - Use the default
+                                    map background. (either <span class="uicontrol bold">OpenStreetMap
+                                        Bright</span> or <span class="uicontrol bold">OpenStreetMap
+                                        Dark</span> for dark themes).
+                                    </li>
+                                    <li><span class="uicontrol bold">OpenStreetMap Bright</span> -
+                                    General purpose basemap based on OpenStreetMap data. This
+                                    basemap style provides detailed location context for your data. 
+                                    </li>
+                                    <li><span class="uicontrol bold">OpenStreetMap Dark</span> -
+                                    Non-obtrusive dark basemap based on OpenStreetMap data. This
+                                    basemap style accentuates visualizations of your data.
+                                    </li>
+                                    <li><span class="uicontrol bold">OpenStreetMap Positron</span> -
+                                    Non-obtrusive light basemap based on OpenStreetMap data. This
+                                    basemap style accentuates visualizations of your data.
+                                    </li>
+                                    <li><span class="uicontrol bold">Oracle World Map</span> - General
+                                    purpose basemap based on HERE Map data. This base map style
+                                    provides location context for your data and accentuates
+                                    visualization of your data.
+                                    </li>
+                                    <li><span class="uicontrol bold">Shared Component</span> - Use custom
+                                    map backgrounds defined in Shared Components.
+                                    </li>
+                                 </ul>
+                                 
+                                 <div class="infoboxnote" id="GUID-89BE0E3C-B1F0-4ABB-9D79-471E0A1E295F__GUID-1FBC2707-2A5A-4422-A660-FD5307D328A0">
+                                    <p class="notep1">Note:</p>To learn more about
+                                contributors and licensing for out-of-the-box map backgrounds, or to
+                                view them on Gitbub, see item Help.
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Custom Background - Only displays if <span class="uicontrol bold">Background</span>
+                            is set to <span class="uicontrol bold">Shared Component</span>. Select a background
+                            map to use. </span></li>
+                           <li class="substepexpand"><span>Height - Specify the height (in pixels) of the displayed map. Map's
+                            default height is calculated based on it's width with an 3:2 aspect
+                            ratio.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Subscription:</span><ul id="GUID-89BE0E3C-B1F0-4ABB-9D79-471E0A1E295F__CHOICES_KCC_KPP_CZB">
+                           <li>Subscribe From - Select a master component to subscribe
+                        from. When you select a master component and click on the <span class="uicontrol bold">Apply
+                            Changes</span>, the component settings is automatically refreshed
+                        from the selected master.
+                              <p>If the component setting is already
+                            subscribed, then click <span class="uicontrol bold">Refresh Component Settings</span>
+                            to refresh the component settings from the master
+                        component.
+                              </p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-component-settings.html#GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30" title="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">Managing Component Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-2D92DD59-8CF1-4D75-87C4-CAEFDD352D40" name="GUID-2D92DD59-8CF1-4D75-87C4-CAEFDD352D40"></a><h3 id="HTMDB-GUID-2D92DD59-8CF1-4D75-87C4-CAEFDD352D40" class="sect3"><span class="enumeration_section">16.6.6 </span>Configuring Interactive Report Action Menu Structure
+               </h3>
+               <div>
+                  <p>Configure if interactive reports use the new Action Menu or keep the legacy
+        structure from earlier releases.</p>
+                  <div class="section">
+                     
+                     <p>The structure of the interactive report Actions menu has changed to be
+                consistent with interactive grids. </p>
+                     
+                  </div>
+                  <p>To configure how the Actions menu displays in interactive
+                reports:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a" id="GUID-2D92DD59-8CF1-4D75-87C4-CAEFDD352D40__SUBSTEPS_JBH_N2S_Q3B">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>
+                                 
+                                 <p>The Shared Components page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Other Components, click <span class="uicontrol bold">Component Settings</span>.</span></li>
+                     <li class="stepexpand"><span>On the Component Settings page, click <span class="uicontrol bold">Interactive
+                    Report</span>.</span></li>
+                     <li class="stepexpand"><span>Settings, Actions Menu Structure - Specify how the Actions menu displays in
+                    interactive reports. Options include:</span><div>
+                           
+                           <p>Options include:</p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-2D92DD59-8CF1-4D75-87C4-CAEFDD352D40__UL_KF4_FXT_L5B">
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Interactive Grid</span> - Select
+                                    <span class="uicontrol bold">Interactive Grid</span> to have the interactive
+                                report Actions menu match interactive grid.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Legacy</span> - Select
+                                    <span class="uicontrol bold">Legacy</span> to have the interactive report
+                                Actions menu use the legacy structure.
+                                 </p>
+                                 
+                              </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Subscription:</span><ul id="GUID-2D92DD59-8CF1-4D75-87C4-CAEFDD352D40__CHOICES_MTH_TPP_CZB">
+                           <li>Subscribe From - Select a master component to subscribe
+                        from. When you select a master component and click on the <span class="uicontrol bold">Apply
+                            Changes</span>, the component settings is automatically refreshed
+                        from the selected master.
+                              <p>If the component setting is already
+                            subscribed, then click <span class="uicontrol bold">Refresh Component Settings</span>
+                            to refresh the component settings from the master
+                        component.
+                              </p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-component-settings.html#GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30" title="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">Managing Component Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-D6D82B56-A8CB-4F12-9265-C02A26E42E03" name="GUID-D6D82B56-A8CB-4F12-9265-C02A26E42E03"></a><h3 id="HTMDB-GUID-D6D82B56-A8CB-4F12-9265-C02A26E42E03" class="sect3"><span class="enumeration_section">16.6.7 </span>Configuring Vector Tile Layers for Maps
+               </h3>
+               <div>
+                  <p>Configure Map component settings to include Vector Tile Layers as the
+        background map.</p>
+                  <div class="section">
+                     
+                     <p>Some of the background maps are also available as Vector Tile Layers which include
+                the layers: <code class="codeph">OpenStreetMap Position</code>, <code class="codeph">OpenStreetMap
+                    Bright</code>, and <code class="codeph">OpenStreetMap DarkMatter</code>. Vector maps
+                provide superior resolution over raster maps for all map zoom levels. Started with
+                    <span>Oracle APEX</span> release 22.2, all new applicationsVector Tile Layer usage is enabled by default.
+                For aapplications created before release 22.2, you must enable Vector Tile Layers in
+                Shared Components, Component Settings.
+                     </p>
+                     
+                  </div>
+                  <div class="section">To enable Vector Tile Layers for maps:</div>
+                  <ol>
+                     <li><span>Navigate to the Shared Components page:</span><ol type="a" id="GUID-D6D82B56-A8CB-4F12-9265-C02A26E42E03__SUBSTEPS_JBH_N2S_Q3B">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>
+                                 
+                                 <p>The Shared Components page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Under Other Components, click <span class="uicontrol bold">Component Settings</span>.</span></li>
+                     <li><span>On the Component Settings page, click <span class="uicontrol bold">Maps</span>.</span></li>
+                     <li><span>Settings, Use Vector Tile Layers - Select <span class="uicontrol bold">Yes</span> to use
+                    Vector Tile Layers as the background map. If <a href="https://maps.oracle.com/" target="_blank">maps.oracle.com</a> provides a Vector Tile Layer for the chosen
+                    background map and this attribute is enabled, the map region will use it.</span></li>
+                     <li><span>Subscription:</span><ul id="GUID-D6D82B56-A8CB-4F12-9265-C02A26E42E03__CHOICES_QSC_YPP_CZB">
+                           <li>Subscribe From - Select a master component to subscribe
+                        from. When you select a master component and click on the <span class="uicontrol bold">Apply
+                            Changes</span>, the component settings is automatically refreshed
+                        from the selected master.
+                              <p>If the component setting is already
+                            subscribed, then click <span class="uicontrol bold">Refresh Component Settings</span>
+                            to refresh the component settings from the master
+                        component.
+                              </p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-component-settings.html#GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30" title="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">Managing Component Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-D2CBD2BB-F26B-45FE-90D5-65E4279BC0F1" name="GUID-D2CBD2BB-F26B-45FE-90D5-65E4279BC0F1"></a><h3 id="HTMDB-GUID-D2CBD2BB-F26B-45FE-90D5-65E4279BC0F1" class="sect3"><span class="enumeration_section">16.6.8 </span>Configuring Oracle Cloud Applications
+        (BOSS) REST Service
+               </h3>
+               <div>
+                  <p>Configure Component Settings for an Oracle Cloud Applications (BOSS) REST
+        Service.</p>
+                  <p>To configure Component Settings for an Oracle Cloud
+                Applications (BOSS) REST Service:</p>
+                  <ol>
+                     <li><span>Navigate to the Shared Components page:</span><ol type="a" id="GUID-D2CBD2BB-F26B-45FE-90D5-65E4279BC0F1__SUBSTEPS_DZ3_2TP_CZB">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>
+                                 
+                                 <p>The Shared Components page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Under Other Components, click <span class="uicontrol bold">Component Settings</span>.</span></li>
+                     <li><span>On the Component Settings page, click <span class="uicontrol bold">Oracle Cloud Applications
+                        (BOSS) REST Service</span>.</span></li>
+                     <li><span>Settings, Advanced Settings - Provide the case-sensitive names of Advanced
+                    Settings to be used with the guidance of Oracle Support. Add one setting name
+                    per line.</span></li>
+                     <li><span>Subscription:</span><ul>
+                           <li>Subscribe From - Select a master component to subscribe
+                        from. When you select a master component and click on the <span class="uicontrol bold">Apply
+                            Changes</span>, the component settings is automatically refreshed
+                        from the selected master.
+                              <p>If the component setting is already
+                            subscribed, then click <span class="uicontrol bold">Refresh Component Settings</span>
+                            to refresh the component settings from the master
+                        component.
+                              </p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section">
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-D2CBD2BB-F26B-45FE-90D5-65E4279BC0F1__GUID-2D5816F7-2920-49E1-A871-855D992E4B59">
+                     <p class="notep1">See Also:</p><a href="working-with-oracle-cloud-applications-boss-rest-services.html#GUID-F93EB097-52C9-476F-9585-B45CA4429DC3" title="Learn about using APEX REST Data Sources for Oracle Cloud Applications (BOSS) REST Services.">Working with Oracle Cloud Applications BOSS REST Services</a></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-component-settings.html#GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30" title="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">Managing Component Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-AB687570-8EC6-444F-A265-3D0076E0A93B" name="GUID-AB687570-8EC6-444F-A265-3D0076E0A93B"></a><h3 id="HTMDB-GUID-AB687570-8EC6-444F-A265-3D0076E0A93B" class="sect3"><span class="enumeration_section">16.6.9 </span>Configuring an Oracle Cloud Applications
+        (SaaS) REST Service
+               </h3>
+               <div>
+                  <p>Specify a sandbox name for use in  <span>App Builder</span> and at runtime when using a Oracle Cloud Applications (SaaS) REST Service.
+                  </p>
+                  <p>To configure a sandbox for use in the <span>App Builder</span> and at runtime when using this Oracle SaaS REST service.:
+                  </p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a" id="GUID-AB687570-8EC6-444F-A265-3D0076E0A93B__SUBSTEPS_DZ3_2TP_CZB">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>
+                                 
+                                 <p>The Shared Components page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Other Components, click <span class="uicontrol bold">Component Settings</span>.</span></li>
+                     <li class="stepexpand"><span>On the Component Settings page, click <span class="uicontrol bold">Oracle Cloud Applications
+                        (SaaS) REST Service</span>.</span></li>
+                     <li class="stepexpand"><span>Settings, Sandbox Name - Provides the name of a metadata sandbox (if any) to
+                    use in the <span>App Builder</span> and at runtime when using this Oracle SaaS REST service. .</span><div>
+                           
+                           <p>Oracle SaaS REST endpoints automatically reflect application customizations
+                        made to the system. If you need to develop an <span>APEX</span> application against in progress customizations being made in a named
+                        metadata sandbox, enter a case sensitive name of the sandbox that <span>APEX</span> should use. If the value is null, then <span>APEX</span> works with the version of the REST service that only reflects published
+                        customizations
+                           </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Subscription:</span><ul>
+                           <li>Subscribe From - Select a master component to subscribe
+                        from. When you select a master component and click on the <span class="uicontrol bold">Apply
+                            Changes</span>, the component settings is automatically refreshed
+                        from the selected master.
+                              <p>If the component setting is already
+                            subscribed, then click <span class="uicontrol bold">Refresh Component Settings</span>
+                            to refresh the component settings from the master
+                        component.
+                              </p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section">
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-AB687570-8EC6-444F-A265-3D0076E0A93B__GUID-2D5816F7-2920-49E1-A871-855D992E4B59">
+                     <p class="notep1">See Also:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-AB687570-8EC6-444F-A265-3D0076E0A93B__UL_H1W_KCN_5DC">
+                        <li><a href="working-with-REST-data-sources-for-oracle-cloud-apps.html#GUID-AA383BD4-DA87-4921-B94B-B24AD84FFCF9" title="Learn about using APEX REST Data Sources with Oracle Cloud SaaS applications.">Working with REST Data Sources for Oracle Cloud SaaS Applications</a></li>
+                        <li><a href="working-against-a-sandbox.html#GUID-49A13023-345B-405F-811A-C8AFE1AAB52D" title="Associate an APEX application with a sandbox by defining a sandbox name on the Shared Components, Component Settings, Oracle Cloud Applications (SaaS) REST Service page.">Working Against a Sandbox</a></li>
+                     </ul>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-component-settings.html#GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30" title="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">Managing Component Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-669EE84D-7438-4D38-B01E-45D25D9462D1" name="GUID-669EE84D-7438-4D38-B01E-45D25D9462D1"></a><h3 id="HTMDB-GUID-669EE84D-7438-4D38-B01E-45D25D9462D1" class="sect3"><span class="enumeration_section">16.6.10 </span>Dynamically Adding Sliders to Regions
+               </h3>
+               <div>
+                  <p>Dynamically add a slider to regions if the displayed region name exceeds the
+        width of the region by configuring the Component Settings, Region Display
+        Selector.</p>
+                  <div class="section">
+                     
+                     <p>To dynamically add a slider to a region if the displayed region name
+                exceeds the width of the region:</p>
+                     
+                  </div>
+                  <ol>
+                     <li><span>Navigate to the Shared Components page:</span><ol type="a" id="GUID-669EE84D-7438-4D38-B01E-45D25D9462D1__SUBSTEPS_JBH_N2S_Q3B">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>The Shared Components page appears.</div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Under Other Components, click <span class="uicontrol bold">Component Settings</span>.</span></li>
+                     <li><span>On the Component Settings page, click <span class="uicontrol bold">Region Display
+                        Selector</span>.</span></li>
+                     <li><span>Settings, Include Slider - Select <span class="uicontrol bold">Yes</span> to dynamically add
+                    a slider to the region if the displayed region name exceeds the width of the
+                    region.</span></li>
+                     <li><span>Subscription:</span><ul id="GUID-669EE84D-7438-4D38-B01E-45D25D9462D1__CHOICES_F2K_2QP_CZB">
+                           <li>Subscribe From - Select a master component to subscribe
+                        from. When you select a master component and click on the <span class="uicontrol bold">Apply
+                            Changes</span>, the component settings is automatically refreshed
+                        from the selected master.
+                              <p>If the component setting is already
+                            subscribed, then click <span class="uicontrol bold">Refresh Component Settings</span>
+                            to refresh the component settings from the master
+                        component.
+                              </p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-component-settings.html#GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30" title="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">Managing Component Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-A9B84375-4D50-4549-9DDE-AE8890BA23B2" name="GUID-A9B84375-4D50-4549-9DDE-AE8890BA23B2"></a><h3 id="HTMDB-GUID-A9B84375-4D50-4549-9DDE-AE8890BA23B2" class="sect3"><span class="enumeration_section">16.6.11 </span>Configuring Select Many
+               </h3>
+               <div>
+                  <p>Specify how to display values when the item is not focused in Component
+        Settings, Select Many.</p>
+                  <p>To configure Component Settings for Select Many:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a" id="GUID-A9B84375-4D50-4549-9DDE-AE8890BA23B2__SUBSTEPS_JBH_N2S_Q3B">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>
+                                 
+                                 <p>The Shared Components page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Other Components, click <span class="uicontrol bold">Component Settings</span>.</span></li>
+                     <li class="stepexpand"><span>On the Component Settings page, click <span class="uicontrol bold">Select Many</span>.</span></li>
+                     <li class="stepexpand"><span>Settings, Display Value As - Specify how to display values when the item is not
+                    focused.</span><div>
+                           
+                           <p> Available options include:</p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-A9B84375-4D50-4549-9DDE-AE8890BA23B2__UL_VHV_G2N_5DC">
+                              <li><span class="uicontrol bold">Chips</span></li>
+                              <li><span class="uicontrol bold">Comma-separated list</span></li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Subscription:</span><ul id="GUID-A9B84375-4D50-4549-9DDE-AE8890BA23B2__CHOICES_CFH_BMP_CZB">
+                           <li>Subscribe From - Select a master component to subscribe from. When you
+                        select a master component and click on the <span class="uicontrol bold">Apply
+                            Changes</span>, the component settings is automatically refreshed
+                        from the selected master.
+                              <p>If the component setting is already subscribed,
+                            then click <span class="uicontrol bold">Refresh Component Settings</span> to refresh
+                            the component settings from the master component.
+                              </p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-component-settings.html#GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30" title="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">Managing Component Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-F5478CDE-EEA8-451B-8D2C-679A7363F252" name="GUID-F5478CDE-EEA8-451B-8D2C-679A7363F252"></a><h3 id="HTMDB-GUID-F5478CDE-EEA8-451B-8D2C-679A7363F252" class="sect3"><span class="enumeration_section">16.6.12 </span>Configuring Server Side Geocoding
+               </h3>
+               <div>
+                  <p>Configure Component Settings for Server Side Geocoding.</p>
+                  <p>To configure Component Settings for Server Side
+                Geocoding:</p>
+                  <ol>
+                     <li><span>Navigate to the Shared Components page:</span><ol type="a" id="GUID-F5478CDE-EEA8-451B-8D2C-679A7363F252__SUBSTEPS_JBH_N2S_Q3B">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>
+                                 
+                                 <p>The Shared Components page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Under Other Components, click <span class="uicontrol bold">Component Settings</span>.</span></li>
+                     <li><span>On the Component Settings page, click <span class="uicontrol bold">Server Side
+                        Geocoding</span>.</span></li>
+                     <li><span>Settings:</span><ol type="a" class="single-step" id="GUID-F5478CDE-EEA8-451B-8D2C-679A7363F252__SUBSTEPS_WL2_2PP_CZB">
+                           <li class="substepexpand"><span>Match Mode - Determines how closely the attributes of an input address
+                            must match the data being used for geocoding</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-F5478CDE-EEA8-451B-8D2C-679A7363F252__UL_SRF_PW5_HRB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Exact</span> - All provided
+                                        address parts must match. However, if the house number,
+                                        street name, or street type do not all match, the first
+                                        match in the following is returned: postal code, city or
+                                        town, and state. For example, if the street name is
+                                        incorrect but a valid postal code is specified, a location
+                                        in the postal code is returned.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Relax Street Type</span> - The
+                                        provided street type can be different from the data used for
+                                        geocoding. For example, <code class="codeph">Main Street</code> or
+                                            <code class="codeph">Main Blvd</code> match <code class="codeph">Main
+                                            St</code>, if there is no other<code class="codeph"> Main
+                                            Blvd</code> or <code class="codeph">Main Street</code> in the
+                                        relevant area.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Relax House Number</span> - The
+                                        house number and street type can be different from the data
+                                        used for geocoding. For example, <code class="codeph">123 Main
+                                            St</code> matches <code class="codeph">123 Main Lane</code> and
+                                            <code class="codeph">124 Main St</code>, as long as there are no
+                                        ambiguities or other matches.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Relax Street Name</span> - The
+                                        base name of the street, the house number, and the street
+                                        type can be different from the data used for geocoding. For
+                                        example, <code class="codeph">Pleasant Vale</code> matches
+                                            <code class="codeph">Pleasant Valley</code> as long as there are no
+                                        ambiguities or other matches in the data.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Relax Postal Code</span> - The
+                                        postal code (if provided), street name, street type and
+                                        house number can be different from the data used for
+                                        geocoding.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Relax All</span> - The address
+                                        can be outside the city specified as long as it is within
+                                        the same county. Also includes the characteristics of
+                                            <span class="uicontrol bold">Relax Postal Code</span>.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Subscription:</span><ul id="GUID-F5478CDE-EEA8-451B-8D2C-679A7363F252__CHOICES_KCC_KPP_CZB">
+                           <li>Subscribe From - Select a master component to subscribe
+                        from. When you select a master component and click on the <span class="uicontrol bold">Apply
+                            Changes</span>, the component settings is automatically refreshed
+                        from the selected master.
+                              <p>If the component setting is already
+                            subscribed, then click <span class="uicontrol bold">Refresh Component Settings</span>
+                            to refresh the component settings from the master
+                        component.
+                              </p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-component-settings.html#GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30" title="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">Managing Component Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-42F5F526-C89A-44EE-8696-7E52A243B5B7" name="GUID-42F5F526-C89A-44EE-8696-7E52A243B5B7"></a><h3 id="HTMDB-GUID-42F5F526-C89A-44EE-8696-7E52A243B5B7" class="sect3"><span class="enumeration_section">16.6.13 </span>Configuring Show AI Assistant
+               </h3>
+               <div>
+                  <p>Configure Show AI Assistant component settings to set application-level
+        values for the Show AI Assistant plug-in.</p>
+                  <div class="section">
+                     
+                     <p>Configure the Show AI Assistant Settings to change the <strong class="term">AI Avatar</strong> and <strong class="term">User Avatar</strong> that
+                display in Show AI Assistant.
+                     </p>
+                     
+                  </div>
+                  <div class="section">To configure Show AI Assistant:</div>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a" id="GUID-42F5F526-C89A-44EE-8696-7E52A243B5B7__SUBSTEPS_JBH_N2S_Q3B">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>
+                                 
+                                 <p>The Shared Components page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Other Components, click <span class="uicontrol bold">Component Settings</span>.</span></li>
+                     <li class="stepexpand"><span>On the Component Settings page, click <span class="uicontrol bold">Show AI
+                    Assistant</span>.</span></li>
+                     <li class="stepexpand"><span>Settings, AI Avatar Type - Select the type of avatar for the AI assistant. </span><div>
+                           
+                           <p>Options include:</p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-42F5F526-C89A-44EE-8696-7E52A243B5B7__UL_AWX_JPZ_KBC">
+                              <li>Default</li>
+                              <li>Icon Classes - If selected, enter the Icon Classes.</li>
+                              <li>Image URL- If selected, enter the Image URL.</li>
+                              <li>Initials - If selected, enter the Image URL.</li>
+                           </ul>
+                           
+                           <p>Depending upon the option you select, additional settings
+                        appear.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>User Avatar Type - Select the type of avatar for the current application user.
+                    Options include:</span><div>
+                           
+                           <p>Depending upon the option you select, additional settings appears. </p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-42F5F526-C89A-44EE-8696-7E52A243B5B7__UL_U5J_QPZ_KBC">
+                              <li>Default</li>
+                              <li>Icon Classes - If selected, enter the Icon Classes.</li>
+                              <li>Image URL- If selected, enter the Image URL.</li>
+                              <li>Initials - If selected, enter the Image URL.</li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Subscription:</span><ul id="GUID-42F5F526-C89A-44EE-8696-7E52A243B5B7__CHOICES_QSC_YPP_CZB">
+                           <li>Subscribe From - Select a master component to subscribe
+                        from. When you select a master component and click on the <span class="uicontrol bold">Apply
+                            Changes</span>, the component settings is automatically refreshed
+                        from the selected master.
+                              <p>If the component setting is already
+                            subscribed, then click <span class="uicontrol bold">Refresh Component Settings</span>
+                            to refresh the component settings from the master
+                        component.
+                              </p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-component-settings.html#GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30" title="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">Managing Component Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-ABB2C1E1-78ED-4EAB-B7BD-D38757D1FF92" name="GUID-ABB2C1E1-78ED-4EAB-B7BD-D38757D1FF92"></a><h3 id="HTMDB-GUID-ABB2C1E1-78ED-4EAB-B7BD-D38757D1FF92" class="sect3"><span class="enumeration_section">16.6.14 </span>Configuring Star Rating
+               </h3>
+               <div>
+                  <p>Configure default Star Rating behavior in Component Setting, Star
+        Rating.</p>
+                  <p>To configure default Star Rating behavior:</p>
+                  <ol>
+                     <li><span>Navigate to the Shared Components page:</span><ol type="a" id="GUID-ABB2C1E1-78ED-4EAB-B7BD-D38757D1FF92__SUBSTEPS_JBH_N2S_Q3B">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>
+                                 
+                                 <p>The Shared Components page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Under Other Components, click <span class="uicontrol bold">Component Settings</span>.</span></li>
+                     <li><span>On the Component Settings page, click <span class="uicontrol bold">Star Rating</span>.</span></li>
+                     <li><span>Settings:</span><ol type="a" id="GUID-ABB2C1E1-78ED-4EAB-B7BD-D38757D1FF92__SUBSTEPS_C53_VS5_HRB">
+                           <li><span>Default Icon - Choose the default icon to use (such as
+                                <code class="codeph">fa-star</code>,<code class="codeph"> fa,-thumbs-up</code>, or
+                                <code class="codeph">fa-database</code>).</span></li>
+                           <li><span>Active Color - Choose the default color for active stars.</span></li>
+                           <li><span>Inactive Color - Choose the default color for inactive stars.</span></li>
+                           <li><span>Tooltip - Specify the template for the tooltip when end users hover the
+                            mouse over the item. This rating value replaces the
+                                <code class="codeph">#VALUE#</code> substitution (for example, the movie rating
+                            is <code class="codeph">#VALUE#</code>).</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Subscription:</span><ul id="GUID-ABB2C1E1-78ED-4EAB-B7BD-D38757D1FF92__CHOICES_DSZ_3QP_CZB">
+                           <li>Subscribe From - Select a master component to subscribe
+                        from. When you select a master component and click on the <span class="uicontrol bold">Apply
+                            Changes</span>, the component settings is automatically refreshed
+                        from the selected master.
+                              <p>If the component setting is already
+                            subscribed, then click <span class="uicontrol bold">Refresh Component Settings</span>
+                            to refresh the component settings from the master
+                        component.
+                              </p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-component-settings.html#GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30" title="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">Managing Component Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-8F7733DF-F988-4E69-9400-B85593F894A5" name="GUID-8F7733DF-F988-4E69-9400-B85593F894A5"></a><h3 id="HTMDB-GUID-8F7733DF-F988-4E69-9400-B85593F894A5" class="sect3"><span class="enumeration_section">16.6.15 </span>Configuring Switch Defaults
+               </h3>
+               <div>
+                  <p>Configure default Switch item type behavior Component Settings, Switch. </p>
+                  <div class="section">Display options include On/Off switch toggle, pill button, or select
+            list.</div>
+                  <p>To configure default Switch item type behavior:</p>
+                  <ol>
+                     <li><span>Navigate to the Shared Components page:</span><ol type="a" id="GUID-8F7733DF-F988-4E69-9400-B85593F894A5__SUBSTEPS_JBH_N2S_Q3B">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>
+                                 
+                                 <p>The Shared Components page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Under Other Components, click <span class="uicontrol bold">Component Settings</span></span></li>
+                     <li><span>On the Component Settings page, click <span class="uicontrol bold">Switch</span>.</span></li>
+                     <li><span>Settings:</span><ol type="a" id="GUID-8F7733DF-F988-4E69-9400-B85593F894A5__SUBSTEPS_VPJ_4QP_CZB">
+                           <li class="substepexpand"><span>Display Style - Options include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-8F7733DF-F988-4E69-9400-B85593F894A5__UL_U4Z_X2S_Q3B">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Switch</span></p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Pill Button</span></p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Select List</span></p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>On Value - Enter the value stored in the page item if the end user
+                            picks the <span class="uicontrol bold">On</span> option. The value can be up to 255
+                            characters long.</span></li>
+                           <li class="substepexpand"><span>On Label - Enter the text displayed for the <span class="uicontrol bold">On</span>
+                            option. If no text is entered, the system default label is used.</span></li>
+                           <li class="substepexpand"><span>Off Value - Enter the value stored in the page item if the user picks
+                            the <span class="uicontrol bold">Off</span> option. The value can be up to 255
+                            characters long. This value is used if the page item is populated with a
+                            value which does not match either the On Value or <span class="uicontrol bold">Off
+                                Value</span>.</span></li>
+                           <li class="substepexpand"><span>Off Label - Enter the text displayed for the <span class="uicontrol bold">Off</span>
+                            option. If no text is entered, the system default label is used.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Subscription:</span><ul id="GUID-8F7733DF-F988-4E69-9400-B85593F894A5__CHOICES_PXM_SQP_CZB">
+                           <li>Subscribe From - Select a master component to subscribe
+                        from. When you select a master component and click on the <span class="uicontrol bold">Apply
+                            Changes</span>, the component settings is automatically refreshed
+                        from the selected master.
+                              <p>If the component setting is already
+                            subscribed, then click <span class="uicontrol bold">Refresh Component Settings</span>
+                            to refresh the component settings from the master
+                        component.
+                              </p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-component-settings.html#GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30" title="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">Managing Component Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29149"></a><div class="props_rev_3"><a id="GUID-C5B91C35-5F20-4249-BD08-0AB366AFD3C1" name="GUID-C5B91C35-5F20-4249-BD08-0AB366AFD3C1"></a><h3 id="HTMDB-GUID-C5B91C35-5F20-4249-BD08-0AB366AFD3C1" class="sect3"><span class="enumeration_section">16.6.16 </span>Viewing the Component Settings History Report
+               </h3>
+               <div>
+                  <p>View a report of recent modifications made to Component Settings in the
+        current application.</p>
+                  <p>To view the Component Settings History report:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                 <p>The Shared Components page appears. </p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Other Components, click <span class="uicontrol bold">Component Settings</span>.</span></li>
+                     <li class="stepexpand"><span>Click the <span class="uicontrol bold">History</span> tab.</span><div>
+                           <p>The History page displays as an interactive report. To customize the report, use the Search bar at the top of the page.</p>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-component-settings.html#GUID-DB12E974-83B8-46B2-B29F-05963A9DEE30" title="Use Component Settings to set application level values for built-in APEX components and installed plug-ins.">Managing Component Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

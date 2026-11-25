@@ -1,0 +1,151 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="SET_FIRST_NAME Procedure">
+      <meta name="DC.subject" content="SET_FIRST_NAME procedure, APEX_UTIL, user account, updating FIRST_NAME">
+      <meta name="keywords" content="SET_FIRST_NAME procedure, APEX_UTIL, user account, updating FIRST_NAME">
+      <meta name="DC.Relation" scheme="URI" content="APEX_UTIL.html#GUID-5ECE5C10-1A88-4D37-8A7D-C51925ADB2B9">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-BC4570FB-1201-490B-8D8A-4651D613D856">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>SET_FIRST_NAME Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="SET_EMAIL-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="SET_GLOBAL_NOTIFICATION-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"SET_FIRST_NAME Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="SET_EMAIL-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="SET_GLOBAL_NOTIFICATION-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-BC4570FB-1201-490B-8D8A-4651D613D856" name="GUID-BC4570FB-1201-490B-8D8A-4651D613D856"></a><a id="AEAPI1830"></a><a id="AEAPI1831"></a><a id="AEAPI1832"></a><a id="AEAPI1833"></a><a id="AEAPI178"></a>
+         
+         <h2 id="AEAPI-GUID-BC4570FB-1201-490B-8D8A-4651D613D856" class="sect2"><span class="enumeration_section">59.124 </span>SET_FIRST_NAME Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <div class="infoboxnote" id="GUID-BC4570FB-1201-490B-8D8A-4651D613D856__GUID-E33BE396-B4A9-42A0-891C-D9DC12C1730F">
+                     <p class="notep1">Note:</p>
+                     <p>This procedure operates on the native Oracle APEX user accounts repository and is only applicable to applications configured with APEX Accounts authentication.</p>
+                  </div>
+                  <p>This procedure updates a user account with a new <code class="codeph">FIRST_NAME</code> value. To execute this procedure, the current user must have administrative privileges in the workspace.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-BC4570FB-1201-490B-8D8A-4651D613D856__GUID-5D1D154F-5748-4238-85F8-4F5F95C93661">Syntax</p><pre class="pre codeblock"><code>APEX_UTIL.SET_FIRST_NAME (
+    p_userid      IN NUMBER,
+    p_first_name  IN VARCHAR2 );</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-BC4570FB-1201-490B-8D8A-4651D613D856__GUID-1209DFA5-0CB1-4874-A1F1-BB8B7BD87C66">Parameters</p>
+                  <div class="tblformal" id="GUID-BC4570FB-1201-490B-8D8A-4651D613D856__GUID-09B03F67-DD33-4A7D-8CBC-F9AFD5ACA9C4">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="31%" id="d285759e84">Parameter</th>
+                              <th align="left" valign="bottom" width="69%" id="d285759e86">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d285759e90" headers="d285759e84 "><code class="codeph">p_userid</code></td>
+                              <td align="left" valign="top" width="69%" headers="d285759e90 d285759e86 ">The numeric ID of the user account.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d285759e96" headers="d285759e84 "><code class="codeph">p_first_name</code></td>
+                              <td align="left" valign="top" width="69%" headers="d285759e96 d285759e86 "><code class="codeph">FIRST_NAME</code> value to be saved in user account.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-BC4570FB-1201-490B-8D8A-4651D613D856__GUID-8B82629F-D80B-4F10-8A5F-9C5B8B5080A3">Example</p>
+                  <p>The following example shows how to use the <code class="codeph">SET_FIRST_NAME</code> procedure to set the value of <code class="codeph">FIRST_NAME</code> to 'FRANK' for the user 'FRANK'.
+                  </p><pre class="pre codeblock"><code>BEGIN	
+    APEX_UTIL.SET_FIRST_NAME(
+        p_userid       =&gt; APEX_UTIL.GET_USER_ID('FRANK'),
+        p_first_name   =&gt; 'FRANK');
+END;</code></pre></div>
+               <div class="section">
+                  <div class="infoboxnotealso" id="GUID-BC4570FB-1201-490B-8D8A-4651D613D856__GUID-EB0FCA54-CBCF-4F19-880E-77879DF534CF">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-BC4570FB-1201-490B-8D8A-4651D613D856__UL_F2B_F25_MCC">
+                        <li><a href="GET_FIRST_NAME-Function.html#GUID-9497A80C-69CE-4BE7-9BB0-E44B9A746482">GET_FIRST_NAME Function</a></li>
+                        <li><a href="GET_USER_ID-Function.html#GUID-26B8E977-A356-4A79-B35A-6C61C8C7A054">GET_USER_ID Function</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_UTIL.html#GUID-5ECE5C10-1A88-4D37-8A7D-C51925ADB2B9">APEX_UTIL</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

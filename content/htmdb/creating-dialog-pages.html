@@ -1,0 +1,500 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Creating Dialog Pages">
+      <meta name="abstract" content="Oracle APEX includes support for modal and non-modal dialog pages. Modal and non-modal dialog pages are only supported if the current application theme contains at least one page template of template type Dialog Page.">
+      <meta name="description" content="Oracle APEX includes support for modal and non-modal dialog pages. Modal and non-modal dialog pages are only supported if the current application theme contains at least one page template of template type Dialog Page.">
+      <meta name="DC.subject" content="dialog pages, about supported, Modal Dialog, non-modal dialog, creating a dialog page template, dialog page template, defining, generating a Cancel dynamic action, generating a close dialog page process, About branching, handling refresh actions">
+      <meta name="keywords" content="dialog pages, about supported, Modal Dialog, non-modal dialog, creating a dialog page template, dialog page template, defining, generating a Cancel dynamic action, generating a close dialog page process, About branching, handling refresh actions">
+      <meta name="DC.Relation" scheme="URI" content="managing-pages-in-an-application.html#GUID-83926801-6C69-4709-B6C3-C22C192B5A11">
+      <meta name="DC.Relation" scheme="URI" content="creating-dialog-pages.html#GUID-3904345F-B760-48D1-ADB0-C82ECB9A5151">
+      <meta name="DC.Relation" scheme="URI" content="creating-dialog-pages.html#GUID-4003C77C-8F55-4888-9942-7DF5F0FA3BC2">
+      <meta name="DC.Relation" scheme="URI" content="creating-dialog-pages.html#GUID-58EA16DB-BD5D-4F3A-9EFD-5F698535121C">
+      <meta name="DC.Relation" scheme="URI" content="creating-dialog-pages.html#GUID-284D90E0-1C11-4A79-BD35-606F746907E9">
+      <meta name="DC.Relation" scheme="URI" content="creating-dialog-pages.html#GUID-8D16C20E-C86F-43C1-AAB5-A1C7E4A82251">
+      <meta name="DC.Relation" scheme="URI" content="creating-dialog-pages.html#GUID-5B404B7A-A36E-46F8-93B2-02F536F18937">
+      <meta name="DC.Relation" scheme="URI" content="creating-dialog-pages.html#GUID-8035260D-EB88-4CB0-93C7-7574E7750D3B">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-BBFB0724-E33B-4846-AC94-A20E491B5D4E">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Oracle APEX includes support for modal and non-modal dialog pages. Modal and non-modal dialog pages are only supported if the current application theme contains at least one page template of template type Dialog Page.">
+      <meta name="description" content="Oracle APEX includes support for modal and non-modal dialog pages. Modal and non-modal dialog pages are only supported if the current application theme contains at least one page template of template type Dialog Page.">
+      <title>Creating Dialog Pages</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Oracle APEX includes support for modal and non-modal dialog pages. Modal and non-modal dialog pages are only supported if the current application theme contains at least one page template of template type Dialog Page.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-feature-pages.html" title="Previous" type="text/html">
+      <link rel="next" href="deleting-application-pages.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Creating Dialog Pages","description":"Oracle APEX includes support for modal and non-modal dialog pages. Modal and non-modal dialog pages are only supported if the current application theme contains at least one page template of template type Dialog Page.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-feature-pages.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="deleting-application-pages.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-BBFB0724-E33B-4846-AC94-A20E491B5D4E" name="GUID-BBFB0724-E33B-4846-AC94-A20E491B5D4E"></a><a id="HTMDB30095"></a>
+         
+         <h2 id="HTMDB-GUID-BBFB0724-E33B-4846-AC94-A20E491B5D4E" class="sect2"><span class="enumeration_section">6.6 </span>Creating Dialog Pages
+         </h2>
+         <div class="ind">
+            <p><span>Oracle APEX</span> includes support for modal and non-modal dialog pages. Modal and non-modal dialog pages are only supported if the current application theme contains at least one page template of template type Dialog Page. 
+            </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="creating-dialog-pages.html#GUID-3904345F-B760-48D1-ADB0-C82ECB9A5151">About Supported Dialogs</a><br>When you create a new page, the wizard prompts you to select a Page Mode. The Page         Mode determines if the page is a normal application page or a dialog page. 
+                  </li>
+                  <li class="ulchildlink"><a href="creating-dialog-pages.html#GUID-4003C77C-8F55-4888-9942-7DF5F0FA3BC2">Creating a Dialog Page Template</a><br>Create a dialog template if your theme does not include one and how to edit dialog         template attributes to change the display.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-dialog-pages.html#GUID-58EA16DB-BD5D-4F3A-9EFD-5F698535121C">Editing a Dialog Page in Page Designer</a><br>Change how a dialog page displays by editing attributes in Page Designer.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-dialog-pages.html#GUID-284D90E0-1C11-4A79-BD35-606F746907E9">Generating a Cancel Dialog Dynamic Action on the Dialog Page</a><br>For dialog pages that contain a Cancel button, create a dynamic action that controls         what happens when the button is clicked.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-dialog-pages.html#GUID-8D16C20E-C86F-43C1-AAB5-A1C7E4A82251">Generating a Close Dialog Page Process on the Dialog Page</a><br>Close a dialog page by creating a Close Dialog page process.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-dialog-pages.html#GUID-5B404B7A-A36E-46F8-93B2-02F536F18937">About Branching with Dialog Pages</a><br>Open dialog pages using buttons or links.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-dialog-pages.html#GUID-8035260D-EB88-4CB0-93C7-7574E7750D3B">Handling Refresh Actions on Parent Page</a><br>Learn about handling refresh actions on parent pages.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-pages-in-an-application.html#GUID-83926801-6C69-4709-B6C3-C22C192B5A11" title="A page is the basic building block of an application. Developers add pages to an application by running the Create Page Wizard.">Managing Pages in an Application</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB30096"></a><div class="props_rev_3"><a id="GUID-3904345F-B760-48D1-ADB0-C82ECB9A5151" name="GUID-3904345F-B760-48D1-ADB0-C82ECB9A5151"></a><h3 id="HTMDB-GUID-3904345F-B760-48D1-ADB0-C82ECB9A5151" class="sect3"><span class="enumeration_section">6.6.1 </span>About Supported Dialogs
+               </h3>
+               <div>
+                  <p>When you create a new page, the wizard prompts you to select a Page Mode. The Page
+        Mode determines if the page is a normal application page or a dialog page. </p>
+                  <p>
+                     <span>Oracle APEX</span> supports two types of dialog pages:
+                  </p>
+                  <ul style="list-style-type: disc;">
+                     <li><span class="bold">Modal Dialog</span> - A modal dialog is an overlay window positioned within the same browser window. A modal dialog remains active and focused until the user has finished with it and closes it. While a modal dialog is active, the user is unable to interact with the rest of the page until the dialog is closed.
+                     </li>
+                     <li><span class="bold">Non-modal Dialog</span> - A non-modal dialog displays a separate popup browser window. A user can interact with a non-modal dialog and content on the page. Use a non-modal dialog when the requested information is not essential to continue. This type of window can be left open while work continues elsewhere.
+                     </li>
+                  </ul>
+                  <p><span>Oracle APEX</span> includes dialog page templates in the <span class="italic">Universal Theme - 42</span>. When you set the
+            Page Mode to either <span class="bold">Modal</span> or <span class="bold">Non-Modal</span>, <span>APEX</span> automatically uses the default dialog page template.
+                  </p>
+                  <p>You can further define the appearance and layout of a dialog by specifying the Dialog
+            Template.</p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-dialog-pages.html#GUID-BBFB0724-E33B-4846-AC94-A20E491B5D4E" title="Oracle APEX includes support for modal and non-modal dialog pages. Modal and non-modal dialog pages are only supported if the current application theme contains at least one page template of template type Dialog Page.">Creating Dialog Pages</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB30099"></a><div class="props_rev_3"><a id="GUID-4003C77C-8F55-4888-9942-7DF5F0FA3BC2" name="GUID-4003C77C-8F55-4888-9942-7DF5F0FA3BC2"></a><h3 id="HTMDB-GUID-4003C77C-8F55-4888-9942-7DF5F0FA3BC2" class="sect3"><span class="enumeration_section">6.6.2 </span>Creating a Dialog Page Template
+               </h3>
+               <div>
+                  <p>Create a dialog template if your theme does not include one and how to edit dialog
+        template attributes to change the display.</p>
+                  <div class="p">
+                     
+                     <p>The dialog page template contains JavaScript function calls that handle
+                the initialization, closure, and cancellation of a dialog page. When you create a
+                dialog page template, you must define these and other Dialog Page Templates
+                attributes.</p>
+                     
+                     <div class="infoboxnotealso" id="GUID-4003C77C-8F55-4888-9942-7DF5F0FA3BC2__GUID-2EE9778C-2D8C-4A27-A429-D458E798AC61">
+                        <p class="notep1">See Also:</p>
+                        
+                        <p><a href="page-templates.html#GUID-896F1569-2408-4BDF-8A0E-C71B92E3F310" title="Learn about required dialog page template attributes.">Required Dialog Page Template Attributes</a></p>
+                        
+                     </div>
+                     
+                  </div>
+                  <div class="section">
+                     
+                     <p>If you are using an existing application and the theme does not contain
+                a dialog page template, then you must create one. While you can create one from
+                scratch, the easiest option is to copy an existing dialog template.</p>
+                     
+                  </div>
+                  <div class="section">
+                     
+                     <p>To create a dialog page template:</p>
+                     
+                  </div>
+                  <ol id="GUID-4003C77C-8F55-4888-9942-7DF5F0FA3BC2__STEPS_YGD_2TD_QQB">
+                     <li><span>Navigate to the Shared Components, Templates page:</span><ol type="a" id="GUID-4003C77C-8F55-4888-9942-7DF5F0FA3BC2__SUBSTEPS_HMP_FTD_QQB">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Shared Components</span>.</span></li>
+                           <li><span>Under User Interface, select <span class="uicontrol bold">Templates</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Create</span>.</span></li>
+                     <li><span>In the Create Template Wizard:.</span><ol type="a" id="GUID-4003C77C-8F55-4888-9942-7DF5F0FA3BC2__SUBSTEPS_FFD_GTD_QQB">
+                           <li><span>Template Type - Select <span class="uicontrol bold">Page</span> and click
+                                <span class="uicontrol bold">Next</span>.</span></li>
+                           <li><span>Creation Method - Select <span class="uicontrol bold">As a Copy of an Existing
+                                Template</span> and click <span class="uicontrol bold">Next</span>.</span></li>
+                           <li><span>Copy From - Select the application to copy from and click
+                                <span class="uicontrol bold">Next</span>.</span></li>
+                           <li><span>Identify Theme - Select the theme you are copying from and the theme
+                            you are copying to and click <span class="uicontrol bold">Next</span>.</span></li>
+                           <li><span>New Templates - Locate the Modal Dialog templates to copy (for example,
+                                <span class="uicontrol bold">Drawer</span>, <span class="uicontrol bold">Modal Dialog</span>,
+                            or <span class="uicontrol bold">Wizard Modal Dialog</span>) and select
+                                <span class="uicontrol bold">Yes</span>.</span></li>
+                           <li><span>Select <span class="uicontrol bold">Copy Page Templates</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Verify the dialog page template is active in the current theme</span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-4003C77C-8F55-4888-9942-7DF5F0FA3BC2__GUID-3593CEB3-D009-4874-8DCD-61B86563C29D">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="selecting-defaul-page-template.html#GUID-1E615D51-95CA-45CD-8239-31D885E73718" title="Select a default page template by either selecting a default page template within a specific theme, or by selecting a specific page template on a page-by-page basis.">Selecting a Default Page Template</a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-dialog-pages.html#GUID-BBFB0724-E33B-4846-AC94-A20E491B5D4E" title="Oracle APEX includes support for modal and non-modal dialog pages. Modal and non-modal dialog pages are only supported if the current application theme contains at least one page template of template type Dialog Page.">Creating Dialog Pages</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB30280"></a><div class="props_rev_3"><a id="GUID-58EA16DB-BD5D-4F3A-9EFD-5F698535121C" name="GUID-58EA16DB-BD5D-4F3A-9EFD-5F698535121C"></a><h3 id="HTMDB-GUID-58EA16DB-BD5D-4F3A-9EFD-5F698535121C" class="sect3"><span class="enumeration_section">6.6.3 </span>Editing a Dialog Page in Page Designer
+               </h3>
+               <div>
+                  <p>Change how a dialog page displays by editing attributes in Page Designer.</p>
+                  <p>To edit a dialog page in Page Designer:</p>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears. Attributes are organized in groups.</div>
+                     </li>
+                     <li class="stepexpand"><span>In Page Designer locate the <span class="uicontrol bold">Appearance</span> group.</span></li>
+                     <li class="stepexpand"><span>Appearance, Page Mode - Select one of the following:</span><ul>
+                           <li><span class="uicontrol bold">Modal Dialog</span> - The page is presented
+                        as a modal dialog. A modal dialog is an overlay window positioned within the
+                        viewport, which remains active and focused until the end user dismisses (or
+                        closes) it. The underlying page is grayed out and the end user is prevented
+                        from interacting with the rest of the page until the dialog is
+                        closed.
+                           </li>
+                           <li><span class="uicontrol bold">Non-Modal Dialog</span> - The page is
+                        presented as a non-modal dialog. A non-modal dialog is an overlay window
+                        positioned within the viewport, where the end user can interact with the
+                        dialog, and content on the page that launched the dialog. A non-modal dialog
+                        can be used when the requested information is not essential to continue;
+                        work can continue elsewhere while the window is still open.
+                           </li>
+                        </ul>
+                        <div>
+                           
+                           <p>Note that options Modal and Non-Modal Dialog will only be
+                        available for selection when the current application theme contains a
+                        default Dialog Page Template.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Appearance, Dialog Template - Select a dialog template to define the appearance
+                    and layout of this page.</span><div>
+                           
+                           <p>Dialog templates are defined in the application theme. When a dialog page is
+                        created, the template is automatically set to <span class="uicontrol bold">Theme
+                            Default</span> which renders the page using the default page
+                        template defined in the current theme. Making a selection here overrides the
+                        default dialog template.
+                           </p>
+                           
+                           <p>Universal Theme provides the following dialog templates:</p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-58EA16DB-BD5D-4F3A-9EFD-5F698535121C__UL_WXP_JHC_FVB">
+                              <li><span class="uicontrol bold">Modal Dialog</span> - Useful for most dialog
+                            use cases.
+                              </li>
+                              <li><span class="uicontrol bold">Wizard Modal Dialog</span> - Provides a
+                            streamlined user interface and is well suited for modal dialog wizards,
+                            alerts, notifications, or small forms.
+                              </li>
+                           </ul>
+                           
+                           <p>Dialog templates are defined in the application theme. When a
+                        dialog page is created, the template is automatically set to
+                            <span class="uicontrol bold">Theme Default</span> which renders the page using the
+                        default page template defined in the current theme.
+                           </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Edit the remaining attributes in <span class="uicontrol bold">Appearance</span> group as
+                    needed. </span><div>
+                           
+                           <p>To learn more about an attribute, see field-level Help.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under Dialog:</span><ol type="a">
+                           <li class="substepexpand"><span>Dialog, Width - Enter the width of the dialog, in pixels or a
+                            percentage. The substitution string <code class="codeph">#DIALOG_WIDTH#</code> in
+                            the dialog initialization code of the page template is replaced with the
+                            value entered in this item. </span></li>
+                           <li class="substepexpand"><span>Dialog, Height - Enter the height of the dialog, in pixels, for
+                            example, <code class="codeph">500</code>. The substitution string
+                                <code class="codeph">#DIALOG_HEIGHT#</code> in the dialog initialization code
+                            of the page template is replaced with the value entered.</span></li>
+                           <li class="substepexpand"><span>Dialog, Maximum Width - Enter the maximum width of the dialog in
+                            pixels. The substitution string <code class="codeph">#DIALOG_MAX_WIDTH#</code> in
+                            the dialog initialization code of the page template is replaced with the
+                            value entered in this item.</span></li>
+                           <li class="substepexpand"><span>Dialog, Attributes - Dialog support varies depending on the user
+                            interface of the page. A subset of dialog attributes are declaratively
+                            supported: height, width, and maximum width. </span><div>To define any additional attributes for the dialog, enter
+                            the name/value pairings in a comma separated list. The substitution
+                            string <code class="codeph">#DIALOG_ATTRIBUTES#</code> in the dialog initialization
+                            code defined at page template level, is replaced by any value(s) entered
+                            in this item.
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Dialog, CSS Classes - Enter classes to add to this component. You may
+                            add multiple classes by separating them with spaces.</span></li>
+                           <li class="substepexpand"><span>Dialog, Chained - Enable <span class="uicontrol bold">Chained</span> if the dialog
+                            is opened by another dialog  and should reuse the same dialog window
+                            (for example, if this dialog is part of a multiple page dialog wizard
+                            and you wish to reuse the dialog window for each step of the
+                            wizard).</span><div>
+                                 
+                                 <p>Disable <span class="uicontrol bold">Chained</span> if this dialog is opened by
+                                another dialog and should be opened in a new dialog window (for
+                                example, when this dialog is modal and you wish to open it within a
+                                parent modal dialog window).
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Dialog, Resizable - Enable <span class="uicontrol bold">Resizable</span> to enable
+                            end users to resize this modal dialog.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Edit additional attributes as needed. </span><div>
+                           
+                           <p>To learn more about an attribute, see field-level Help.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>To save your changes, click <span class="uicontrol bold">Save</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-dialog-pages.html#GUID-BBFB0724-E33B-4846-AC94-A20E491B5D4E" title="Oracle APEX includes support for modal and non-modal dialog pages. Modal and non-modal dialog pages are only supported if the current application theme contains at least one page template of template type Dialog Page.">Creating Dialog Pages</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB30101"></a><div class="props_rev_3"><a id="GUID-284D90E0-1C11-4A79-BD35-606F746907E9" name="GUID-284D90E0-1C11-4A79-BD35-606F746907E9"></a><h3 id="HTMDB-GUID-284D90E0-1C11-4A79-BD35-606F746907E9" class="sect3"><span class="enumeration_section">6.6.4 </span>Generating a Cancel Dialog Dynamic Action on the Dialog Page 
+               </h3>
+               <div>
+                  <p>For dialog pages that contain a Cancel button, create a dynamic action that controls
+        what happens when the button is clicked.</p>
+                  <div class="section">
+                     <p>The dynamic action must have True Action event which is set to <span class="bold">Cancel Dialog</span>.
+                This dynamic action will use the cancellation JavaScript call contained in the page
+                template (<code class="codeph">apex.navigation.dialog.cancel</code>) to handle the canceling
+                the dialog.
+                     </p>
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-284D90E0-1C11-4A79-BD35-606F746907E9__GUID-C8EC7D3A-544B-4C19-B665-A2D3DACCE002">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="managing-dynamic-actions.html#GUID-7E564715-E963-44AA-B620-5FFB5EFA62EE" title="Dynamic actions enable developers to define complex client-side behavior declaratively without the need for JavaScript.">Managing Dynamic Actions</a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-dialog-pages.html#GUID-BBFB0724-E33B-4846-AC94-A20E491B5D4E" title="Oracle APEX includes support for modal and non-modal dialog pages. Modal and non-modal dialog pages are only supported if the current application theme contains at least one page template of template type Dialog Page.">Creating Dialog Pages</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB30102"></a><div class="props_rev_3"><a id="GUID-8D16C20E-C86F-43C1-AAB5-A1C7E4A82251" name="GUID-8D16C20E-C86F-43C1-AAB5-A1C7E4A82251"></a><h3 id="HTMDB-GUID-8D16C20E-C86F-43C1-AAB5-A1C7E4A82251" class="sect3"><span class="enumeration_section">6.6.5 </span>Generating a Close Dialog Page Process on the Dialog Page
+               </h3>
+               <div>
+                  <p>Close a dialog page by creating a Close Dialog page process.</p>
+                  <div class="section">
+                     <p>In previous releases, this Close Dialog page processes were referred to as a
+                    <code class="codeph">Close Popup Window</code>. This dialog will use the closure JavaScript
+                call contained in the page template (<code class="codeph">apex.navigation.dialog.close)</code>,
+                to handle the closing of the dialog. The page process also supports the return of
+                dialog page items, which you may wish to reference on the parent page. 
+                     </p>
+                     <div class="infobox-tip" id="GUID-8D16C20E-C86F-43C1-AAB5-A1C7E4A82251__GUID-5A3A3B62-4025-454A-B3E3-BE69CC697350">
+                        <p class="notep1">Tip:</p>
+                        <p>You can also close a dialog page with the Close Dialog dynamic action. Both the dynamic action and the process support returning dialog page items. Use the page process when the page needs to be submitted and use the dynamic action when the page does not need to be submitted. Both end up calling the closure JavaScript call. Alternatively, you can create a page branch, which will close a dialog page and redirect to the page specified in the branch.</p>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-8D16C20E-C86F-43C1-AAB5-A1C7E4A82251__GUID-82F5D3A9-F426-4B44-8A30-128288A6E775">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="understanding-page-processes.html#GUID-DE72F8ED-A3A0-4FBC-8362-ABA47E543466" title="Create page processes to perform an action at a specified point during the rendering or submission of the page.">Understanding Page Processes</a></li>
+                        <li><a href="controlling-navigation-using-branches.html#GUID-AE2164D3-6D95-4EB3-BF12-60C2278A1D0E" title="Add navigation to application pages by creating branches. A branch is an instruction to link to a specific page, procedure, or URL after a given page is submitted.">Controlling Navigation Using Branches</a></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-dialog-pages.html#GUID-BBFB0724-E33B-4846-AC94-A20E491B5D4E" title="Oracle APEX includes support for modal and non-modal dialog pages. Modal and non-modal dialog pages are only supported if the current application theme contains at least one page template of template type Dialog Page.">Creating Dialog Pages</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-5B404B7A-A36E-46F8-93B2-02F536F18937" name="GUID-5B404B7A-A36E-46F8-93B2-02F536F18937"></a><h3 id="HTMDB-GUID-5B404B7A-A36E-46F8-93B2-02F536F18937" class="sect3"><span class="enumeration_section">6.6.6 </span>About Branching with Dialog Pages
+               </h3>
+               <div>
+                  <p>Open dialog pages using buttons or links.</p>
+                  <p>Dialog pages support the following branching options:</p>
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        <p>Dialog page to dialog page.</p>
+                        <p>You can branch from one dialog page to another dialog page if:</p>
+                        <ul style="list-style-type: disc;">
+                           <li>Both pages have the same Page Mode. For example, a Modal Dialog page and a page where the dialog Chained attribute is set to <span class="uicontrol bold">On</span>. Setting the Chained attribute to <span class="uicontrol bold">On</span> enables support for chained or nested dialogs such as the dialogs that appear in many internal <span>APEX</span> wizards. Chained or nested dialogs enable you to re-use a dialog window to display each page.
+                           </li>
+                        </ul>
+                     </li>
+                     <li>Dialog page to Normal page.
+                        <ul style="list-style-type: disc;">
+                           <li>When branching from a dialog page to a normal page, the dialog page is closed and the user navigates to a new page in the browser. The new page can be a parent (or launching) page or another Normal page in an application.</li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-dialog-pages.html#GUID-BBFB0724-E33B-4846-AC94-A20E491B5D4E" title="Oracle APEX includes support for modal and non-modal dialog pages. Modal and non-modal dialog pages are only supported if the current application theme contains at least one page template of template type Dialog Page.">Creating Dialog Pages</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB30103"></a><div class="props_rev_3"><a id="GUID-8035260D-EB88-4CB0-93C7-7574E7750D3B" name="GUID-8035260D-EB88-4CB0-93C7-7574E7750D3B"></a><h3 id="HTMDB-GUID-8035260D-EB88-4CB0-93C7-7574E7750D3B" class="sect3"><span class="enumeration_section">6.6.7 </span>Handling Refresh Actions on Parent Page
+               </h3>
+               <div>
+                  <p>Learn about handling refresh actions on parent pages.</p>
+                  <div class="section">
+                     <p>If you have generated a Close Dialog page process on the dialog page, you must implement refresh actions on the parent page using the new <code class="codeph">Dialog Closed</code> dynamic action event type. You can use the set type Dialog Return Item when creating a Set Value True Action, to set a single value, based on the return item of a dialog.
+                     </p>
+                     <div class="infobox-tip" id="GUID-8035260D-EB88-4CB0-93C7-7574E7750D3B__GUID-3310E516-175C-4F8A-AC28-8723D5944A3A">
+                        <p class="notep1">Tip:</p>
+                        <p> For a partial page refresh of a parent page, implement the close dialog with dynamic
+                                                  action (for example, for report and form pages
+                                                  where you want to edit data in a modal dialog form
+                                                  and only want the report refreshed on close). In
+                                                  contrast, branching is the best approach if you
+                                                  have a multi-step modal wizard or if you have
+                                                  several possible target pages when closing the
+                                                  dialog.</p>
+                     </div>
+                  </div>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-8035260D-EB88-4CB0-93C7-7574E7750D3B__GUID-16090F33-1CD4-4DD0-91F7-C27C194494A5">
+                     <p class="notep1">See Also:</p>
+                     
+                     <p><a href="managing-dynamic-actions.html#GUID-7E564715-E963-44AA-B620-5FFB5EFA62EE" title="Dynamic actions enable developers to define complex client-side behavior declaratively without the need for JavaScript.">Managing Dynamic Actions</a></p>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-dialog-pages.html#GUID-BBFB0724-E33B-4846-AC94-A20E491B5D4E" title="Oracle APEX includes support for modal and non-modal dialog pages. Modal and non-modal dialog pages are only supported if the current application theme contains at least one page template of template type Dialog Page.">Creating Dialog Pages</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

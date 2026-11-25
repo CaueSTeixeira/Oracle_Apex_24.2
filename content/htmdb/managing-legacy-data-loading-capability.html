@@ -1,0 +1,602 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Applications with Legacy Data Loading Capability">
+      <meta name="abstract" content="Applications with legacy data loading capability enable end users to dynamically import data into a table within any schema to which they have access.">
+      <meta name="description" content="Applications with legacy data loading capability enable end users to dynamically import data into a table within any schema to which they have access.">
+      <meta name="DC.subject" content="legacy data loading, adding, legacy Data Load page, adding to application, application, adding legacy Data Load page, about, data loading, Legacy Data Load Wizard, about creating, creating with Create Page Wizard, creating Data Load page, Legacy Data Load page, creating, re-creating, legacy Data Load Wizard, re-creating page">
+      <meta name="keywords" content="legacy data loading, adding, legacy Data Load page, adding to application, application, adding legacy Data Load page, about, data loading, Legacy Data Load Wizard, about creating, creating with Create Page Wizard, creating Data Load page, Legacy Data Load page, creating, re-creating, legacy Data Load Wizard, re-creating page">
+      <meta name="DC.Relation" scheme="URI" content="managing-app-legacy-components.html#GUID-0865D39D-EF75-43C9-8BEE-9CDD212A9378">
+      <meta name="DC.Relation" scheme="URI" content="managing-legacy-data-loading-capability.html#GUID-220D45C6-7D27-41E2-8B9D-EB1766429E51">
+      <meta name="DC.Relation" scheme="URI" content="managing-legacy-data-loading-capability.html#GUID-F175089D-809C-4CD4-9134-E1126A658AEB">
+      <meta name="DC.Relation" scheme="URI" content="managing-legacy-data-loading-capability.html#GUID-3149BC0B-35BF-46C3-8398-B92BE59442E7">
+      <meta name="DC.Relation" scheme="URI" content="managing-legacy-data-loading-capability.html#GUID-C2AB6DFE-EAD3-4261-863B-726D6501FC5F">
+      <meta name="DC.Relation" scheme="URI" content="managing-legacy-data-loading-capability.html#GUID-0FC788B1-3B39-4417-90BA-235BCF413E50">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-951F611B-BCCF-4256-BFAF-ABE96CA56CDB">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Applications with legacy data loading capability enable end users to dynamically import data into a table within any schema to which they have access.">
+      <meta name="description" content="Applications with legacy data loading capability enable end users to dynamically import data into a table within any schema to which they have access.">
+      <title>Managing Applications with Legacy Data Loading Capability</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Applications with legacy data loading capability enable end users to dynamically import data into a table within any schema to which they have access.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="supported-calendar-substitution-strings.html" title="Previous" type="text/html">
+      <link rel="next" href="managing-tabular-forms.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Managing Applications with Legacy Data Loading Capability","description":"Applications with legacy data loading capability enable end users to dynamically import data into a table within any schema to which they have access.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="supported-calendar-substitution-strings.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="managing-tabular-forms.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-951F611B-BCCF-4256-BFAF-ABE96CA56CDB" name="GUID-951F611B-BCCF-4256-BFAF-ABE96CA56CDB"></a><a id="HTMDB28980"></a><a id="4000:1701"></a><a id="4000:1702"></a><a id="4000:1704"></a><a id="4000:1706"></a><a id="4000:1801"></a><a id="4000:1700"></a>
+         
+         <h2 id="HTMDB-GUID-951F611B-BCCF-4256-BFAF-ABE96CA56CDB" class="sect2"><span class="enumeration_section">26.4 </span>Managing Applications with Legacy Data
+                Loading Capability
+         </h2>
+         <div class="ind">
+            <p>Applications with legacy data loading capability enable end users to dynamically import data into a table within any schema to which they have access.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="managing-legacy-data-loading-capability.html#GUID-220D45C6-7D27-41E2-8B9D-EB1766429E51">Comparing Legacy Data Loading and New Data Loading</a><br>Learn about the differences between legacy data loading and new data loading 
+                  </li>
+                  <li class="ulchildlink"><a href="managing-legacy-data-loading-capability.html#GUID-F175089D-809C-4CD4-9134-E1126A658AEB">About Creating a Legacy Data Load Wizard</a><br>Create a Data Load Wizard by running the Create Page Wizard and creating a  Data                 Load page.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-legacy-data-loading-capability.html#GUID-3149BC0B-35BF-46C3-8398-B92BE59442E7">Creating a Legacy Data Load Page</a><br>To create a legacy Data Load Wizard, a developer creates a Data Load page         with the Create Page Wizard. 
+                  </li>
+                  <li class="ulchildlink"><a href="managing-legacy-data-loading-capability.html#GUID-C2AB6DFE-EAD3-4261-863B-726D6501FC5F">Re-creating Legacy Data Load Pages</a><br>To make changes to existing legacy Data Load pages, Oracle recommends         re-creating new pages without deleting the data loading definitions. 
+                  </li>
+                  <li class="ulchildlink"><a href="managing-legacy-data-loading-capability.html#GUID-0FC788B1-3B39-4417-90BA-235BCF413E50">Editing a Legacy Data Load Definition</a><br>Edit the Data Load Definition in Shared Components.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-app-legacy-components.html#GUID-0865D39D-EF75-43C9-8BEE-9CDD212A9378" title="Although&nbsp;Oracle still supports legacy application components, Oracle does not recommend using them.">Managing Application Legacy Components</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-220D45C6-7D27-41E2-8B9D-EB1766429E51" name="GUID-220D45C6-7D27-41E2-8B9D-EB1766429E51"></a><h3 id="HTMDB-GUID-220D45C6-7D27-41E2-8B9D-EB1766429E51" class="sect3"><span class="enumeration_section">26.4.1 </span>Comparing   Legacy Data Loading
+        and New Data Loading
+               </h3>
+               <div>
+                  <p>Learn about the differences between legacy data loading and new data loading </p>
+                  <p><span>Oracle APEX</span> includes two types of data loading: new data loading and legacy data loading. The new data loading has many benefits over legacy data loading.
+                  </p>
+                  <p>Benefits of new data loading include:</p>
+                  <ul style="list-style-type: disc;" id="GUID-220D45C6-7D27-41E2-8B9D-EB1766429E51__UL_FNV_W1N_HPB">
+                     <li>New application data loading supports <code class="codeph">CSV</code>, <code class="codeph">XLSX</code>, <code class="codeph">XML</code>, and <code class="codeph">JSON</code> formats.
+                     </li>
+                     <li>Column mapping occurs at design time, removing the burden for end users.</li>
+                     <li>Flexible column mappings based on simple names or regular expressions.</li>
+                     <li>Data conversion with transformation rules or lookup queries.</li>
+                     <li>Easy work flow for end users: upload the file, verify the preview, and load data.</li>
+                     <li><code class="codeph">CSV</code>, <code class="codeph">XLSX</code>, <code class="codeph">XML</code>, and <code class="codeph">JSON</code> data formats can be loaded to tables or collections.
+                     </li>
+                     <li>Configure data loading to Append, Merge or Replace data, with or without Error Handling.</li>
+                     <li>Simple new Process Type Data Loading: Customize Data Loading pages as you wish.</li>
+                     <li> <code class="codeph">APEX_DATA_LOADING</code> PL/SQL API available for custom processing.
+                     </li>
+                     <li>Maximum number of columns to load is 300. Note that Legacy data load supports up to 45.</li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-220D45C6-7D27-41E2-8B9D-EB1766429E51__GUID-8E4D52FE-D160-4121-ACCE-E4CBE1D03F4B">
+                     <p class="notep1">See Also:</p><a href="creating-applications-with-data-loading-capability.html#GUID-B0173334-15DD-4EDC-9842-9F661B5C657B" title="Create applications with data loading capability to enable end users to dynamically import data into a table within any schema to which they have access.">Creating Applications with Data Loading Capability</a></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-legacy-data-loading-capability.html#GUID-951F611B-BCCF-4256-BFAF-ABE96CA56CDB" title="Applications with legacy data loading capability enable end users to dynamically import data into a table within any schema to which they have access.">Managing Applications with Legacy Data Loading Capability</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29469"></a><div class="props_rev_3"><a id="GUID-F175089D-809C-4CD4-9134-E1126A658AEB" name="GUID-F175089D-809C-4CD4-9134-E1126A658AEB"></a><h3 id="HTMDB-GUID-F175089D-809C-4CD4-9134-E1126A658AEB" class="sect3"><span class="enumeration_section">26.4.2 </span>About Creating a Legacy  Data Load
+        Wizard
+               </h3>
+               <div>
+                  <p>Create a Data Load Wizard by running the Create Page Wizard and creating a  Data
+                Load page.</p>
+                  <p>During the process of creating the Data Load page, developers can specify the upload
+                        table and its unique columns, table lookups, and data transformation rules. </p>
+                  <div class="infoboxnote" id="GUID-F175089D-809C-4CD4-9134-E1126A658AEB__GUID-2AAF9188-9E5E-4EC2-9D49-3FB8EE7CC1B4">
+                     <p class="notep1">Note:</p>
+                     <p>A Data Load Wizard is not designed or intended to load hundreds of thousands of rows of data. While it is possible to use a Data Load Wizard to load this high volume of data, you may encounter performance issues with both transmitting and loading large data files. Tools like Oracle SQL Developer and Oracle SQL*Loader are better suited to loading large volumes of data.</p>
+                  </div>
+                  <p>The Data Load Wizard includes support for the following: </p>
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        <p>Table Definitions - This definition specifies the data upload table name with its unique key columns.</p>
+                     </li>
+                     <li>
+                        <p>Data Transformation Rules - For formatting transformations such as changing import data to uppercase, lowercase, and so on, you must define data transformation rules. For example, if the import file includes column data with both upper and lowercase and the upload table requires all uppercase, you can define a data transformation rule to insert only uppercase into the target column.</p>
+                     </li>
+                     <li>
+                        <p>Table Lookups - If data existing in the import file must be mapped to data in another table, specify a table lookup to perform the mapping. For example, if the import file contains a department name for the <code class="codeph">DEPTNO</code> column but the upload table requires a number for that column, use a table lookup rule to find the corresponding department number for that department name in another table.
+                        </p>
+                     </li>
+                     <li>
+                        <p>Column Name Aliases - There are many situations when a developer does not wish to expose the table column names to the end user, or to expose all columns to the end user. In those situations, you can create a column aliases for the columns that need to exposed.</p>
+                     </li>
+                     <li>
+                        <p>Manage Concurrency - If multiple users are uploading data at the same time, developers can use extra column to track the version of data in the underlying table. The Data Load Wizard can use this column to check and signal the end user if anyone else is working with the same data at the same time. This is particularly important if uploading into a table that is regularly updated. </p>
+                     </li>
+                     <li>
+                        <p>Multiple Spreadsheet Columns - There are many situations when a spreadsheet to be uploaded has multiple columns that the developer wants to concatenate and upload in to one table column (for example <code class="codeph">FirstName</code> and <code class="codeph">LastName</code> on spreadsheet can be uploaded into <code class="codeph">ENAME</code> of the <code class="codeph">EMP</code> table).
+                        </p>
+                     </li>
+                     <li>
+                        <p>Skip Validation - You can improve data loading performance when uploading a large number of records by skipping the validation step. If uploading thousands of records, the end user might not be interested in validating each record. If you are certain that each record will be inserted as new record, the data loading process does not need to check for duplicates.</p>
+                     </li>
+                  </ul>
+                  <p>The newly generated Data Load Wizard consists of four pages that provide users with the ability to upload data from a file or by copy and paste, define data and table mappings, validate the data, and finally to upload the data to the table. The developer can later edit the Data Load Wizard's definitions such as table lookups and data transformation rules, by accessing Shared Components, Data References, Data Load Definitions.</p>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-F175089D-809C-4CD4-9134-E1126A658AEB__GUID-ACAEDEAA-53A4-44A5-822C-994B34EDC092">Supported Data Types</p>
+                     <p>Data Load Wizards support the following data types:</p>
+                     <ul style="list-style-type: disc;">
+                        <li>
+                           <p><code class="codeph">VARCHAR2</code></p>
+                        </li>
+                        <li>
+                           <p><code class="codeph">DATE</code></p>
+                        </li>
+                        <li>
+                           <p><code class="codeph">TIMESTAMP</code></p>
+                        </li>
+                        <li>
+                           <p><code class="codeph">NUMBER</code></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-F175089D-809C-4CD4-9134-E1126A658AEB__GUID-3EE6D223-933E-4F22-9748-0833957D2221">Unsupported Data Types</p>
+                     <p>Data Load Wizards do not support the following data types:</p>
+                     <ul style="list-style-type: disc;">
+                        <li>
+                           <p>Large objects (<code class="codeph">BLOB</code> and <code class="codeph">CLOB</code>)
+                           </p>
+                        </li>
+                        <li>
+                           <p>Complex types (<code class="codeph">XMLTYPE</code> and <code class="codeph">SDO_GEOMETRY</code>)
+                           </p>
+                        </li>
+                        <li>
+                           <p><code class="codeph">CHAR</code> 
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-F175089D-809C-4CD4-9134-E1126A658AEB__GUID-300B41E2-476D-49A0-90CE-2466CB0617F0">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="managing-legacy-data-loading-capability.html#GUID-3149BC0B-35BF-46C3-8398-B92BE59442E7" title="To create a legacy Data Load Wizard, a developer creates a Data Load page with the Create Page Wizard.">Creating a Legacy Data Load Page</a></li>
+                        <li><a href="creating-applications-with-data-loading-capability.html#GUID-9475D0A8-CBF2-491B-A09A-EACE5864AEA6" title="Edit a Data Load Definition in Shared Components.">Editing a Data Load Definition</a></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-legacy-data-loading-capability.html#GUID-951F611B-BCCF-4256-BFAF-ABE96CA56CDB" title="Applications with legacy data loading capability enable end users to dynamically import data into a table within any schema to which they have access.">Managing Applications with Legacy Data Loading Capability</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB28982"></a><div class="props_rev_3"><a id="GUID-3149BC0B-35BF-46C3-8398-B92BE59442E7" name="GUID-3149BC0B-35BF-46C3-8398-B92BE59442E7"></a><h3 id="HTMDB-GUID-3149BC0B-35BF-46C3-8398-B92BE59442E7" class="sect3"><span class="enumeration_section">26.4.3 </span>Creating a Legacy Data Load Page
+               </h3>
+               <div>
+                  <p>To create a legacy Data Load Wizard, a developer creates a Data Load page
+        with the Create Page Wizard. </p>
+                  <p>To create a legacy Data Load Wizard:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Select the application. </span></li>
+                     <li class="stepexpand"><span>On the Application home page, click <span class="uicontrol bold">Create Page</span>.</span><div><span class="uicontrol bold">Create a Page</span> appears and features three
+                    tabs: <span class="uicontrol bold">Component</span>, <span class="uicontrol bold">Feature</span>, and
+                        <span class="uicontrol bold">Legacy Pages</span>.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Legacy Pages</span> and select <span class="uicontrol bold">Legacy Data
+                        Loading</span>.</span></li>
+                     <li class="stepexpand"><span>For Data Load Table:</span><ol type="a">
+                           <li><span>Legacy Data Load - Choose whether to create a new or to re-use an
+                            existing Legacy Data Load definition.</span></li>
+                           <li><span>Definition Name - Enter the name of this data load definition.</span></li>
+                           <li><span>Owner - Select the owner of the table on which the form will be based..</span></li>
+                           <li><span>Table Name - Select the table to use for data loading (also known as the upload table).</span></li>
+                           <li><span>Unique Column 1 - Identify the column name(s) to be used as the primary unique key column during the data load process. You can define up to 3 unique key columns.</span></li>
+                           <li><span>Case Sensitive - Identify whether the selected unique key column is case sensitive. By default, this is set to <span class="uicontrol bold">No</span>.</span></li>
+                           <li><span>Define additional Unique Columns. You can define up to 3 unique key columns.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Add Transformation Rules (optional) - Transformation Rules enable you to
+                    change the data being uploaded before it is inserted into the base table. Select
+                    the column to transform and then the desired rule to apply to it.</span><ol type="a">
+                           <li><span>Select Column(s) to create a transformation rule - Select the column on
+                            which the transformation rule definition is to be based and move them to
+                            the right.</span></li>
+                           <li><span>Rule Name - Enter a name for this transformation rule.</span></li>
+                           <li><span>Sequence - Specify the sequence for the transformation rule. The
+                            sequence determines the order of execution.</span></li>
+                           <li><span>Type - Select the type of transformation rule you want to
+                            perform.</span></li>
+                           <li><span>Provide additional details based on the transformation type you have
+                            chosen.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Add Transformation</span>.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Table Lookups - Match an uploaded value against another table and use the
+                    associated key value, instead of the uploaded value.</span><ol type="a">
+                           <li><span>Add new table lookup for Column (optional) - Identify the column on
+                            which the table lookup definition is to be based.</span></li>
+                           <li><span>Lookup Table Owner - Select the owner of the lookup table.</span></li>
+                           <li><span>Lookup Table Name - Identify the table to be used for this table lookup
+                            definition.</span></li>
+                           <li><span>Return Column - Select the name of the column returned by the table
+                            lookup. This value will be inserted into the load column specified and
+                            is generally the key value of the parent in a foreign key relationship
+                            (for example: <code class="codeph">DEPTNO</code>).</span></li>
+                           <li><span>Upload Column - Select the name of the column end users will upload
+                            instead of the return column. This is the column that contains the
+                            display value from the lookup table (for example:
+                            <code class="codeph">DNAME</code>).</span></li>
+                           <li><span>Upload Column 2 - Select the name of the second column to be uploaded
+                            to uniquely identify the return column if necessary. For example, to
+                            uniquely identify a State Code it may be necessary to upload the State
+                            Name and Country.</span></li>
+                           <li><span>Upload Column 3 - Select the name of the third column to be uploaded to
+                            uniquely identify the return column. </span></li>
+                           <li><span>Click <span class="uicontrol bold">Add lookup</span> to add the lookup definition.
+                            Repeat the previous steps to add additional table lookups.&nbsp;</span></li>
+                           <li><span>Click <span class="uicontrol bold">Next</span> finish creating lookups.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Page Attributes:</span><ol type="a">
+                           <li><span>Step 1, Step 2, Step 3, and Step 4 - Enter a page name and page number
+                            for each step.</span></li>
+                           <li><span>Page Number -  Enter a page number for each step.</span></li>
+                           <li><span>Page Mode - Identify the page mode. To learn more, see field-level Help.</span></li>
+                           <li><span>Page Group - Identify the name of the page group you would like to
+                            associate with this page.</span></li>
+                           <li><span>Breadcrumb - Select whether you want to use a breadcrumb navigation control on your page and which breadcrumb navigation control you want to use.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Navigation Menu:</span><ol type="a">
+                           <li><span>Navigation Preference - Select how you want this page integrated into the Navigation Menu. To learn more, see field-level Help.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Buttons and Branching, specify the branching for the buttons on the data load wizard pages:</span><ol type="a">
+                           <li><span>New Button Label - Enter text to display on the Next button.</span></li>
+                           <li><span>Previous Button Label - Enter text to display on the Previous button.</span></li>
+                           <li><span>Cancel Button Label - Enter text to display on the Cancel button.</span></li>
+                           <li><span>Cancel Button Branch to Page - Specify the page number to branch to when the user clicks Cancel.</span></li>
+                           <li><span>Finish Button Label - Enter text to display on the Submit button.</span></li>
+                           <li><span>Finish Button Branch to Page - Specify the number of the page to branch to. You can choose to branch back to the same page or any other page in your application.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Create</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save and Run Page</span> to test the Data Load Wizard.</span></li>
+                  </ol>
+                  <div class="section">
+                     <div class="infobox-tip" id="GUID-3149BC0B-35BF-46C3-8398-B92BE59442E7__GUID-C7729ABF-B2FF-4864-B0DE-F3B1006ADD9C">
+                        <p class="notep1">Tip:</p>After creating Data Load Wizard
+                pages, if you wish to make changes, Oracle recommends re-creating new pages without
+                deleting the data loading definitions as described in the next section.
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-3149BC0B-35BF-46C3-8398-B92BE59442E7__GUID-96754164-6F4B-4419-AFAD-770D3A6607EB">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li>
+                           <p><a href="managing-legacy-data-loading-capability.html#GUID-C2AB6DFE-EAD3-4261-863B-726D6501FC5F" title="To make changes to existing legacy Data Load pages, Oracle recommends re-creating new pages without deleting the data loading definitions.">Re-creating Legacy Data Load Pages</a></p>
+                        </li>
+                        <li>
+                           <p><a href="editing-pages-page-designer.html#GUID-EFD04B51-9114-466C-9CCA-9BF43BE4F571" title="Developers view and edit application pages in Page Designer. Page Designer is a full featured Integrated Development Environment (IDE) that includes a toolbar and multiple panes.">Editing Pages in Page Designer</a></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-legacy-data-loading-capability.html#GUID-951F611B-BCCF-4256-BFAF-ABE96CA56CDB" title="Applications with legacy data loading capability enable end users to dynamically import data into a table within any schema to which they have access.">Managing Applications with Legacy Data Loading Capability</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB30270"></a><div class="props_rev_3"><a id="GUID-C2AB6DFE-EAD3-4261-863B-726D6501FC5F" name="GUID-C2AB6DFE-EAD3-4261-863B-726D6501FC5F"></a><h3 id="HTMDB-GUID-C2AB6DFE-EAD3-4261-863B-726D6501FC5F" class="sect3"><span class="enumeration_section">26.4.4 </span>Re-creating Legacy Data Load Pages
+               </h3>
+               <div>
+                  <p>To make changes to existing legacy Data Load pages, Oracle recommends
+        re-creating new pages without deleting the data loading definitions. </p>
+                  <p>To re-create legacy Data Load Wizard pages without deleting the
+                data loading definitions:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Data Load Definitions page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                 <p>The Shared Components page appears.</p>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Under Data Load Definitions, click <span class="uicontrol bold">Data Load
+                                Definitions</span>.</span></li>
+                           <li class="substepexpand"><span>Expand the <span class="uicontrol bold">Legacy Data Load</span> region and click the
+                            legacy data load.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click the Legacy Data Load you want to re-create.</span><div>
+                           
+                           <p>The Data Load Table Details page appears. </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>From Tasks, click <span class="uicontrol bold">Create Pages using this Legacy Data
+                        load</span>. </span><div>
+                           
+                           <p>The Page Attributes page of the Create Data Load Wizard
+                        appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>For each page, edit the appropriate attributes and click <span class="uicontrol bold">Next</span>.</span><div>
+                           <p>To learn more about any attributes, see field-level Help.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-legacy-data-loading-capability.html#GUID-951F611B-BCCF-4256-BFAF-ABE96CA56CDB" title="Applications with legacy data loading capability enable end users to dynamically import data into a table within any schema to which they have access.">Managing Applications with Legacy Data Loading Capability</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-0FC788B1-3B39-4417-90BA-235BCF413E50" name="GUID-0FC788B1-3B39-4417-90BA-235BCF413E50"></a><h3 id="HTMDB-GUID-0FC788B1-3B39-4417-90BA-235BCF413E50" class="sect3"><span class="enumeration_section">26.4.5 </span>Editing a Legacy Data Load Definition
+               </h3>
+               <div>
+                  <p>Edit the Data Load Definition in Shared Components.</p>
+                  <div class="section">A Data Load Definition is comprised of a data load table, table rules, and lookup
+            tables used by the Data Load Wizard in your application. A data load table is an
+            existing table in your schema that has been selected for use in the data loading
+            process, to upload data.</div>
+                  <p>To edit a Data Load Definition:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Data Load Definitions page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>The Shared Components page appears.</div>
+                           </li>
+                           <li class="substepexpand"><span>Under Data References, click <span class="uicontrol bold">Data Load Definitions</span>.</span></li>
+                           <li class="substepexpand"><span>Expand the <span class="uicontrol bold">Legacy Data Load</span> region and  click
+                                <span class="uicontrol bold">Legacy Data Load</span>.</span></li>
+                        </ol>
+                        <div>The Data Load Table Details page appears. To learn more about any
+                    attributes, see field-level Help.</div>
+                     </li>
+                     <li class="stepexpand"><span>For Data Load Definition:</span><div>
+                           <ul style="list-style-type: disc;">
+                              <li>
+                                 <p>Name - Name for the data load definition.</p>
+                              </li>
+                              <li>
+                                 <p>Table Name - Displays the name of underlying table to be used for data load
+                                definition.</p>
+                              </li>
+                              <li>
+                                 <p>Unique column 1 - The column name used as the primary unique key column during the data load process.</p>
+                              </li>
+                              <li>
+                                 <p>Case Sensitive - Identify whether the selected unique key column 1 is case sensitive. By default, this is set to No.</p>
+                              </li>
+                              <li>
+                                 <p>Unique column 2 - If the unique key definition of the selected table is a compound key, consisting of 2 or more columns, this column name is used as the second unique key column during the data load process.</p>
+                              </li>
+                              <li>
+                                 <p>Case Sensitive - Identify whether the selected unique key column 2 is case sensitive. By default, this is set to No.</p>
+                              </li>
+                              <li>
+                                 <p>Unique column 3 - If the unique key definition of the selected table is a compound key, consisting of 2 or more columns, this column name is used as the third unique key column during the data load process.</p>
+                              </li>
+                              <li>
+                                 <p>Case Sensitive - Identify whether the selected unique key column 3 is case sensitive. By default, this is set to No.</p>
+                              </li>
+                              <li>
+                                 <p>Skip Validation - One step in data loading is to validate actions to be taken on records to be uploaded. Select Yes to skip validation.</p>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Transformation Rules lists previously defined transformation rules.</span><div>
+                           <ul style="list-style-type: disc;">
+                              <li>
+                                 <p>To create a new rule:</p>
+                                 <ol type="a">
+                                    <li>
+                                       <p>Click <span class="uicontrol bold">Create Transformation Rule</span>.
+                                       </p>
+                                    </li>
+                                    <li>
+                                       <p>Edit the attributes.</p>
+                                       <p>To learn more about an attribute, see field-level Help. </p>
+                                    </li>
+                                    <li>
+                                       <p>Click <span class="uicontrol bold">Create</span>.
+                                       </p>
+                                    </li>
+                                 </ol>
+                              </li>
+                              <li>
+                                 <p>To edit an existing rule:</p>
+                                 <ol type="a">
+                                    <li>
+                                       <p>Click the rule name.</p>
+                                    </li>
+                                    <li>
+                                       <p>Edit the attributes.</p>
+                                    </li>
+                                    <li>
+                                       <p>Click <span class="uicontrol bold">Apply Changes</span>.
+                                       </p>
+                                    </li>
+                                 </ol>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Table Lookups map data in the import file to data found in another table.</span><div>
+                           <ul style="list-style-type: disc;">
+                              <li>
+                                 <p>To create a new Table Lookups:</p>
+                                 <ol type="a">
+                                    <li>
+                                       <p>Click <span class="uicontrol bold">Create Table Lookup</span>.
+                                       </p>
+                                    </li>
+                                    <li>
+                                       <p>Edit the attributes.</p>
+                                    </li>
+                                    <li>
+                                       <p>Click <span class="uicontrol bold">Create</span>.
+                                       </p>
+                                    </li>
+                                 </ol>
+                              </li>
+                              <li>
+                                 <p>To edit an existing Table Lookup:</p>
+                                 <ol type="a">
+                                    <li>
+                                       <p>Click column name.</p>
+                                    </li>
+                                    <li>
+                                       <p>Edit the attributes.</p>
+                                    </li>
+                                    <li>
+                                       <p>Click <span class="uicontrol bold">Apply Changes</span>.
+                                       </p>
+                                    </li>
+                                 </ol>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Column Name Aliases define aliases to help users correctly identify the columns to upload. </span><div>
+                           <p>To add Column Name Aliases:</p>
+                           <ol type="a">
+                              <li>
+                                 <p>Click <span class="uicontrol bold">Edit List of Values</span>.
+                                 </p>
+                              </li>
+                              <li>
+                                 <p>Edit the attributes.</p>
+                              </li>
+                              <li>
+                                 <p>Click <span class="uicontrol bold">Create</span>.
+                                 </p>
+                              </li>
+                           </ol>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>From Concurrency Column Name, select a column to be used for concurrency management. </span><div>
+                           <p>Concurrency gives the developer the option to select a column to check the version of the data in the underlying table. This is particularly important if uploading into a table that is regularly updated.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-legacy-data-loading-capability.html#GUID-951F611B-BCCF-4256-BFAF-ABE96CA56CDB" title="Applications with legacy data loading capability enable end users to dynamically import data into a table within any schema to which they have access.">Managing Applications with Legacy Data Loading Capability</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

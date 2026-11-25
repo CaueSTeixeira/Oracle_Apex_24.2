@@ -1,0 +1,362 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="OPEN_QUERY_CONTEXT Function Signature 1">
+      <meta name="DC.subject" content="OPEN_QUERY_CONTEXT function signature 1, APEX_EXEC">
+      <meta name="keywords" content="OPEN_QUERY_CONTEXT function signature 1, APEX_EXEC">
+      <meta name="DC.Relation" scheme="URI" content="APEX_EXEC.html#GUID-3CF1D2DD-AEA4-4982-9857-548567AB7169">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-9C0BF735-0749-44F6-B7E2-731070D0E9DE">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>OPEN_QUERY_CONTEXT Function Signature 1</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_EXEC.OPEN_LOCAL_DML_CONTEXT-Function.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_EXEC-OPEN_QUERY_CONTEXT-Function-2.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"OPEN_QUERY_CONTEXT Function Signature 1","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_EXEC.OPEN_LOCAL_DML_CONTEXT-Function.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_EXEC-OPEN_QUERY_CONTEXT-Function-2.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-9C0BF735-0749-44F6-B7E2-731070D0E9DE" name="GUID-9C0BF735-0749-44F6-B7E2-731070D0E9DE"></a>
+         
+         <h2 id="AEAPI-GUID-9C0BF735-0749-44F6-B7E2-731070D0E9DE" class="sect2"><span class="enumeration_section">27.52 </span>OPEN_QUERY_CONTEXT Function Signature 1
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>Opens a query context for a local database, remote database, or Rest Data Source, and executes the provided SQL query.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-9C0BF735-0749-44F6-B7E2-731070D0E9DE__TITLE-1321-F94BDADF">Syntax</p><pre class="pre codeblock"><code>APEX_EXEC.OPEN_QUERY_CONTEXT (
+    p_location               in apex_exec_api.t_location,
+    --
+    p_table_owner            IN VARCHAR2                       DEFAULT NULL,
+    p_table_name             IN VARCHAR2                       DEFAULT NULL,
+    p_where_clause           IN VARCHAR2                       DEFAULT NULL,
+    p_match_clause           IN VARCHAR2                       DEFAULT NULL,
+    p_columns_clause         IN VARCHAR2                       DEFAULT NULL,
+    p_order_by_clause        IN VARCHAR2                       DEFAULT NULL,
+    p_include_rowid_column   IN BOOLEAN                        DEFAULT FALSE,
+    --
+    p_sql_query              IN VARCHAR2                       DEFAULT NULL,
+    p_function_body          IN VARCHAR2                       DEFAULT NULL,
+    p_function_body_language IN t_language                     DEFAULT c_lang_plsql,
+    p_plsql_function_body    IN VARCHAR2                       DEFAULT NULL, -- Deprecated:
+    p_optimizer_hint         IN VARCHAR2                       DEFAULT NULL,
+    --
+    p_server_static_id       IN VARCHAR2                       DEFAULT NULL,
+    --
+    p_module_static_id       IN VARCHAR2                       DEFAULT NULL,
+    p_web_src_parameters     IN t_parameters                   DEFAULT c_empty_parameters,
+    p_external_filter_expr   IN VARCHAR2                       DEFAULT NULL,
+    p_external_order_by_expr IN VARCHAR2                       DEFAULT NULL,
+    --
+    p_sql_parameters         IN t_parameters                   DEFAULT c_empty_parameters,
+    p_auto_bind_items        IN BOOLEAN                        DEFAULT TRUE,
+    --
+    p_columns                IN t_columns                      DEFAULT c_empty_columns,
+    --
+    p_filters                IN t_filters                      DEFAULT c_empty_filters,
+    p_order_bys              IN t_order_bys                    DEFAULT c_empty_order_bys,
+    p_aggregation            IN t_aggregation                  DEFAULT c_empty_aggregation,
+    p_control_break          IN t_control_break                DEFAULT c_empty_control_break,
+    --
+    p_post_process_type      IN t_post_processing              DEFAULT NULL,
+    --
+    p_first_row              IN NUMBER                         DEFAULT NULL,
+    p_max_rows               IN NUMBER                         DEFAULT NULL,
+    --
+    p_total_row_count        IN BOOLEAN                        DEFAULT FALSE,
+    p_total_row_count_limit  IN NUMBER                         DEFAULT NULL,
+    --
+    p_supports_binary_number IN BOOLEAN                        DEFAULT FALSE,
+    --
+    p_array_column_name      IN VARCHAR2                       DEFAULT NULL,
+    --
+    p_duality_view_static_id IN VARCHAR2                       DEFAULT NULL,
+    p_json_source_static_id  IN VARCHAR2                       DEFAULT NULL )
+    RETURN t_context;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-9C0BF735-0749-44F6-B7E2-731070D0E9DE__TITLE-1341-F94C107A">Parameters</p>
+                  <div class="tblformal" id="GUID-9C0BF735-0749-44F6-B7E2-731070D0E9DE__WRITEPROCEDUREPARAMETERS-F94C1E2F">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="34%" id="d122246e69">Parameter</th>
+                              <th align="left" valign="bottom" width="66%" id="d122246e71">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e75" headers="d122246e69 "><code class="codeph">p_location</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e75 d122246e71 ">Location to open the query context for. Can be local database, remote database, or Rest Data Source. Use <code class="codeph">c_location_*</code> constants.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e84" headers="d122246e69 "><code class="codeph">p_table_owner</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e84 d122246e71 ">Table owner when query type TABLE is used.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e90" headers="d122246e69 "><code class="codeph">p_table_name</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e90 d122246e71 ">Table name when query type TABLE is used.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e96" headers="d122246e69 "><code class="codeph">p_where_clause</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e96 d122246e71 ">Where clause to append when query types TABLE or GRAPH is used.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e102" headers="d122246e69 "><code class="codeph">p_match_clause</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e102 d122246e71 ">Match clause to append when query type GRAPH is used.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e108" headers="d122246e69 "><code class="codeph">p_columns_clause</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e108 d122246e71 ">Columns clause to append when query type GRAPH is used.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e114" headers="d122246e69 "><code class="codeph">p_order_by_clause</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e114 d122246e71 ">Order by clause to append when query type TABLE is used.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e120" headers="d122246e69 "><code class="codeph">p_include_rowid_column</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e120 d122246e71 ">Default <code class="codeph">FALSE</code>. Add the <code class="codeph">ROWID</code> column to the <code class="codeph">SELECT</code> list when query type <code class="codeph">TABLE</code> is used. 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e138" headers="d122246e69 "><code class="codeph">p_sql_query</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e138 d122246e71 ">SQL Query to execute when query type <code class="codeph">SQL Query</code> is used.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e147" headers="d122246e69 "><code class="codeph">p_function_body</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e147 d122246e71 ">Function body returning SQL query.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e153" headers="d122246e69 "><code class="codeph">p_function_body_language</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e153 d122246e71 ">Programming language used for <code class="codeph">p_function_body</code>. Use <code class="codeph">c_lang_*</code> constants.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e166" headers="d122246e69 "><code class="codeph">p_plsql_function_body</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e166 d122246e71 ">Deprecated. Use <code class="codeph">p_function_body</code> instead.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e175" headers="d122246e69 "><code class="codeph">p_optimizer_hint</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e175 d122246e71 ">Optimizer hint to be applied to the most outer SQL query generated by <span>APEX</span>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e184" headers="d122246e69 "><code class="codeph">p_server_static_id</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e184 d122246e71 ">Static ID of the Remote Server when REST-enabled SQL is used (such as when <code class="codeph">p_location</code> uses <code class="codeph">c_location_remote_db</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e196" headers="d122246e69 "><code class="codeph">p_module_static_id</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e196 d122246e71 ">Static ID of the REST Data Source (such as when <code class="codeph">p_location</code> uses <code class="codeph">c_location_rest_source</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e208" headers="d122246e69 "><code class="codeph">p_web_src_parameters</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e208 d122246e71 ">Parameters to be passed to a REST Data Source.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e214" headers="d122246e69 "><code class="codeph">p_external_filter_expr</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e214 d122246e71 ">External filter expression to be passed to a REST Data Source.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e220" headers="d122246e69 "><code class="codeph">p_external_order_by_expr</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e220 d122246e71 ">External order by expression to be passed to a REST Data Source.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e226" headers="d122246e69 "><code class="codeph">p_sql_parameters</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e226 d122246e71 ">Additional bind variables to be used for the SQL query.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e232" headers="d122246e69 "><code class="codeph">p_auto_bind_items</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e232 d122246e71 ">Whether to auto-bind <span>APEX</span> items (page and application items).
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e241" headers="d122246e69 "><code class="codeph">p_columns</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e241 d122246e71 ">Columns to be selected.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e247" headers="d122246e69 "><code class="codeph">p_filters</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e247 d122246e71 ">Filters to be passed to the query context.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e254" headers="d122246e69 "><code class="codeph">p_order_bys</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e254 d122246e71 ">Order by expressions to be passed to the query context.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e260" headers="d122246e69 "><code class="codeph">p_aggregation</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e260 d122246e71 ">Aggregation (<code class="codeph">GROUP BY</code>, <code class="codeph">DISTINCT</code>) to apply on top of the query.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e272" headers="d122246e69 "><code class="codeph">p_control_break</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e272 d122246e71 ">Whether to return control breaks when looping trough the context data.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e278" headers="d122246e69 "><code class="codeph">p_post_process_type</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e278 d122246e71 ">Type of post processing to be applied to the REST Data Source result data. Use <code class="codeph">c_postprocess_*</code>constants.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e287" headers="d122246e69 "><code class="codeph">p_first_row</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e287 d122246e71 ">First row to be fetched from the result set.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e293" headers="d122246e69 "><code class="codeph">p_max_rows</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e293 d122246e71 ">Maximum amount of rows to be fetched.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e299" headers="d122246e69 "><code class="codeph">p_total_row_count</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e299 d122246e71 ">Whether to determine the total row count.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e305" headers="d122246e69 "><code class="codeph">p_total_row_count_limit</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e305 d122246e71 ">Upper boundary for total row count computation.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e311" headers="d122246e69 "><code class="codeph">p_supports_binary_number</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e311 d122246e71 ">Whether to return BINARY NUMBER columns as <code class="codeph">c_data_type_binary_number</code> instead of <code class="codeph">c_data_type_number</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e323" headers="d122246e69 "><code class="codeph">p_array_column_name</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e323 d122246e71 ">Name of an array column within the REST Source data profile.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e329" headers="d122246e69 "><code class="codeph">p_duality_view_static_id</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e329 d122246e71 ">Static ID of the Duality View Source.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d122246e336" headers="d122246e69 "><code class="codeph">p_json_source_static_id</code></td>
+                              <td align="left" valign="top" width="66%" headers="d122246e336 d122246e71 ">Static ID of the JSON Source.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-9C0BF735-0749-44F6-B7E2-731070D0E9DE__GUID-8CE6BC29-C75B-4177-8BE8-300D18B04212">Returns</p>
+                  <p>The context object representing a <span class="q">"cursor"</span> for the source query.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-9C0BF735-0749-44F6-B7E2-731070D0E9DE__GUID-EE3E204D-4EF2-4A57-9DB2-4073FFC77220">Example</p>
+                  <p>The following example executes a query and prints out the result set. This example code can be used within a <code class="codeph">Execute PL/SQL</code> region.
+                  </p><pre class="pre codeblock"><code>DECLARE
+    l_context apex_exec.t_context;
+
+    l_idx_empno    pls_integer;
+    l_idx_ename    pls_integer;
+    l_idx_job      pls_integer;
+    l_idx_hiredate pls_integer;
+    l_idx_mgr      pls_integer;
+    l_idx_sal      pls_integer;
+    l_idx_comm     pls_integer;
+    l_idx_deptno   pls_integer;
+
+BEGIN
+    l_context := apex_exec.open_query_context(
+        p_location          =&gt; apex_exec.c_location_local_db,
+        p_sql_query         =&gt; 'select * from emp' );
+
+    l_idx_empno    := apex_exec.get_column_position( l_context, 'EMPNO');
+    l_idx_ename    := apex_exec.get_column_position( l_context, 'ENAME');
+    l_idx_job      := apex_exec.get_column_position( l_context, 'JOB');
+    l_idx_hiredate := apex_exec.get_column_position( l_context, 'HIREDATE');
+    l_idx_mgr      := apex_exec.get_column_position( l_context, 'MGR');
+    l_idx_sal      := apex_exec.get_column_position( l_context, 'SAL');
+    l_idx_comm     := apex_exec.get_column_position( l_context, 'COMM');
+    l_idx_deptno   := apex_exec.get_column_position( l_context, 'DEPTNO');
+
+    WHILE apex_exec.next_row( l_context ) LOOP
+        sys.dbms_output.put_line( 'EMPNO: ' || apex_exec.get_number  ( l_context, l_idx_empno    ) );
+        sys.dbms_output.put_line( 'ENAME: ' || apex_exec.get_varchar2( l_context, l_idx_ename    ) );
+        sys.dbms_output.put_line( 'MGR:   ' || apex_exec.get_number  ( l_context, l_idx_mgr      ) );
+
+    END LOOP;
+
+    apex_exec.close( l_context );
+    RETURN;
+EXCEPTION
+    WHEN others THEN
+        apex_exec.close( l_context );
+        RAISE;
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_EXEC.html#GUID-3CF1D2DD-AEA4-4982-9857-548567AB7169">APEX_EXEC</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

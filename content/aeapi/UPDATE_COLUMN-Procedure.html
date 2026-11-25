@@ -1,0 +1,352 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="UPDATE_COLUMN Procedure">
+      <meta name="DC.subject" content="UPDATE_COLUMN procedure, APEX_DG_DATA_GEN">
+      <meta name="keywords" content="UPDATE_COLUMN procedure, APEX_DG_DATA_GEN">
+      <meta name="DC.Relation" scheme="URI" content="APEX_DG_DATA_GEN.html#GUID-5DB25668-0D85-45FD-A062-281D2852CFA1">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-82BDCDE8-F303-4F9C-846E-AEF5060C4C85">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>UPDATE_COLUMN Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="UPDATE_BLUEPRINT-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="UPDATE_DATA_SOURCE-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"UPDATE_COLUMN Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="UPDATE_BLUEPRINT-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="UPDATE_DATA_SOURCE-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-82BDCDE8-F303-4F9C-846E-AEF5060C4C85" name="GUID-82BDCDE8-F303-4F9C-846E-AEF5060C4C85"></a>
+         
+         <h2 id="AEAPI-GUID-82BDCDE8-F303-4F9C-846E-AEF5060C4C85" class="sect2"><span class="enumeration_section">24.24 </span>UPDATE_COLUMN Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This procedure updates an existing column in a blueprint table.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-82BDCDE8-F303-4F9C-846E-AEF5060C4C85__GUID-4BACA0A5-CA13-4765-914C-C9A5F5275A82">Syntax</p>
+                  <pre class="pre codeblock"><code>APEX_DG_DATA_GEN.UPDATE_COLUMN (
+    p_blueprint             IN VARCHAR2,
+    p_table_name            IN VARCHAR2,
+    p_column_name           IN VARCHAR2,
+    p_new_column_name       IN VARCHAR2     DEFAULT NULL,
+    p_sequence              IN PLS_INTEGER,
+    p_preserve_case         IN VARCHAR2     DEFAULT 'N',
+    p_display_name          IN VARCHAR2     DEFAULT NULL,
+    p_max_length            IN NUMBER       DEFAULT 4000,
+    p_multi_value           IN VARCHAR2     DEFAULT 'N',
+    p_mv_format             IN VARCHAR2     DEFAULT 'JSON',
+    p_mv_unique             IN VARCHAR2     DEFAULT 'Y',
+    p_mv_delimiter          IN VARCHAR2     DEFAULT ':',
+    p_mv_min_entries        IN INTEGER      DEFAULT 1,
+    p_mv_max_entries        IN INTEGER      DEFAULT 2,
+    p_mv_partition_by       IN VARCHAR2     DEFAULT NULL,
+    p_lang                  IN VARCHAR2     DEFAULT 'en',
+    p_data_source_type      IN VARCHAR2,
+    p_data_source           IN VARCHAR2     DEFAULT NULL,
+    p_ds_preserve_case      IN VARCHAR2     DEFAULT 'N',
+    p_min_numeric_value     IN NUMBER       DEFAULT 1,
+    p_max_numeric_value     IN NUMBER       DEFAULT 10,
+    p_numeric_precision     IN NUMBER       DEFAULT 0,
+    p_min_date_value        IN DATE         DEFAULT NULL,
+    p_max_date_value        IN DATE         DEFAULT NULL,
+    p_format_mask           IN VARCHAR2     DEFAULT c_json_date_format,
+    p_sequence_start_with   IN NUMBER       DEFAULT 1,
+    p_sequence_increment    IN NUMBER       DEFAULT 1,
+    p_formula               IN VARCHAR2     DEFAULT NULL,
+    p_formula_lang          IN VARCHAR2     DEFAULT 'PLSQL',
+    p_custom_attributes     IN VARCHAR2     DEFAULT NULL,
+    p_percent_blank         IN NUMBER       DEFAULT 0 )</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-82BDCDE8-F303-4F9C-846E-AEF5060C4C85__GUID-2118C338-643E-4828-B981-F63B51FF8CA0">Parameters</p>
+                  <div class="tblformal" id="GUID-82BDCDE8-F303-4F9C-846E-AEF5060C4C85__GUID-AFEF5317-38DA-4552-89F3-FCB6A18A7292">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="29%" id="d94432e70">Parameter</th>
+                              <th align="left" valign="bottom" width="71%" id="d94432e72">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e76" headers="d94432e70 "><code class="codeph">p_blueprint</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e76 d94432e72 ">Identifier for the blueprint.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e82" headers="d94432e70 "><code class="codeph">p_table_name</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e82 d94432e72 ">Table name as known to the blueprint. Checks exact case first, then checks upper case.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e88" headers="d94432e70 "><code class="codeph">p_column_name</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e88 d94432e72 ">Name of the column.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e94" headers="d94432e70 "><code class="codeph">p_new_column_name</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e94 d94432e72 ">New name of column (rename).</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e100" headers="d94432e70 "><code class="codeph">p_sequence</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e100 d94432e72 ">1 for first column, 2 for second, and so on.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e106" headers="d94432e70 "><code class="codeph">p_preserve_case</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e106 d94432e72 ">Defaults to <code class="codeph">N</code> which forces column name to uppercase. If <code class="codeph">Y</code>, preserves casing of parameter.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e118" headers="d94432e70 "><code class="codeph">p_display_name</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e118 d94432e72 ">A friendly name for a given table.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e124" headers="d94432e70 "><code class="codeph">p_max_length</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e124 d94432e72 ">When generating data (such as Latin text) substring to this.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e130" headers="d94432e70 "><code class="codeph">p_multi_value</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e130 d94432e72 ">
+                                 <p><code class="codeph">Y</code> or <code class="codeph">N</code> (currently available for <code class="codeph">BUILTIN</code> table data and <code class="codeph">INLINE</code> data).
+                                 </p>
+                                 <p><code class="codeph">BUILTIN</code> table data will be distinct.
+                                 </p>
+                                 <p><code class="codeph">INLINE</code> data will be distinct if all values appear once (<code class="codeph">red,1;blue,1;green,1</code>). Otherwise, permits duplicates (<code class="codeph">red,3;blue,4;green,8</code>). The number indicates the approximated frequency of each value on the generate data.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e162" headers="d94432e70 "><code class="codeph">p_mv_format</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e162 d94432e72 "><code class="codeph">DELIMITED</code> (based upon <code class="codeph">p_mv_delimiter</code>) or <code class="codeph">JSON</code> (such as <code class="codeph">{"p_column_name" : ["sympton1","sympton2"]}</code> ).
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e179" headers="d94432e70 "><code class="codeph">p_mv_unique</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e179 d94432e72 ">If <code class="codeph">Y</code>, values do not repeat within the multi-value column. If <code class="codeph">N</code>, indicates values may repeat.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e192" headers="d94432e70 "><code class="codeph">p_mv_delimiter</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e192 d94432e72 ">Delimiter for a <code class="codeph">DELIMITED</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e201" headers="d94432e70 "><code class="codeph">p_mv_min_entries</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e201 d94432e72 ">Minimum values in a multi value list.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e207" headers="d94432e70 "><code class="codeph">p_mv_max_entries</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e207 d94432e72 ">Maximum values in a multi value list.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e213" headers="d94432e70 "><code class="codeph">p_mv_partition_by</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e213 d94432e72 ">This value must match a column in the same built-in data source. For example, if <code class="codeph">p_data_source</code> is <span class="q">"car.model"</span>, this value may be <span class="q">"make"</span> because <span class="q">"car.make"</span> is valid.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e231" headers="d94432e70 "><code class="codeph">p_lang</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e231 d94432e72 ">Language code (for example <code class="codeph">en</code>, <code class="codeph">de</code>, <code class="codeph">es</code>).
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e246" headers="d94432e70 "><code class="codeph">p_data_source_type</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e246 d94432e72 ">
+                                 <ul style="list-style-type: disc;" id="GUID-82BDCDE8-F303-4F9C-846E-AEF5060C4C85__UL_PNM_VB1_CTB">
+                                    <li>BLUEPRINT</li>
+                                    <li>BUILTIN</li>
+                                    <li>DATA_SOURCE</li>
+                                    <li>FORMULA (requires <code class="codeph">p_data_source</code> to be <code class="codeph">null</code>)
+                                    </li>
+                                    <li>INLINE</li>
+                                    <li>SEQUENCE</li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e270" headers="d94432e70 "><code class="codeph">p_data_source</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e270 d94432e72 ">
+                                 <p>When <code class="codeph">p_data_source_type = DATA_SOURCE</code> then <code class="codeph">DATA_SOURCE_NAME.COLUMN_NAME</code> (column name'ss case follows <code class="codeph">p_ds_preserve_case</code> and defaults to upper case).
+                                 </p>
+                                 <p>Can be set to one of the following options:</p>
+                                 <ul style="list-style-type: disc;" id="GUID-82BDCDE8-F303-4F9C-846E-AEF5060C4C85__UL_PMQ_SX1_CTB">
+                                    <li><code class="codeph">BUILTIN</code>: see built-in list, must match a built-in exactly.
+                                    </li>
+                                    <li><code class="codeph">BLUEPRINT</code>: references table data already generated (table must have lower sequence). For example, <code class="codeph">Dept.Deptno</code> where <code class="codeph">add_table</code> with <code class="codeph">p_table_name = Dept</code> and <code class="codeph">add_column</code> with <code class="codeph">Deptno</code> exist.
+                                       <div class="infoboxnote" id="GUID-82BDCDE8-F303-4F9C-846E-AEF5060C4C85__GUID-FCC3526F-9960-4229-AB82-4C3EE4E13195">
+                                          <p class="notep1">Note:</p>This is case-sensitive. Tables created with <code class="codeph">p_preserve_case = N</code> are automatically uppercased. May require <code class="codeph">DEPT.DEPTNO</code> instead of <code class="codeph">dept.deptno</code>).
+                                       </div>
+                                    </li>
+                                    <li><code class="codeph">INLINE</code>: <code class="codeph">PART_TIME,3;FULL_TIME,7</code><div class="infoboxnote" id="GUID-82BDCDE8-F303-4F9C-846E-AEF5060C4C85__GUID-E04FD977-2D34-4839-95C6-F39C94560639">
+                                          <p class="notep1">Note:</p>Inline format is <code class="codeph">VALUE,FREQUENCY</code>, separated by a semi-colon. The frequency of the value is an approximation and <span>Oracle</span> best practice is to use the smallest numeric values that provide the desired distribution.
+                                       </div>
+                                    </li>
+                                    <li><code class="codeph">SEQUENCE</code>: uses <code class="codeph">p_sequence_</code> parameters.
+                                    </li>
+                                    <li><code class="codeph">FORMULA</code>: <code class="codeph">p_data_source</code> must be null. Uses <code class="codeph">p_formula</code> as a PL/SQL formula and <code class="codeph">{column_name}</code> as substitutions from this table. For example, <code class="codeph">p_formula =&gt; {first_name}||'.'||{last_name}||'.insum.ca'</code></li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e360" headers="d94432e70 "><code class="codeph">p_ds_preserve_case</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e360 d94432e72 ">If <code class="codeph">p_data_source_type</code> in <code class="codeph">('DATA_SOURCE'. 'BLUEPRINT')</code> and <code class="codeph">p_ds_preserve_case = N</code>, then the data source is upper cased to match an upper case <code class="codeph">table_name.column_name</code></td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e377" headers="d94432e70 "><code class="codeph">p_min_numeric_value</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e377 d94432e72 ">A positive integer number used as the minimum value (inclusive) to be used in <code class="codeph">BUILTIN</code> data sources that return <code class="codeph">NUMBER</code> values.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e389" headers="d94432e70 "><code class="codeph">p_max_numeric_value</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e389 d94432e72 ">A positive integer number used as the maximum value (inclusive) to be used in <code class="codeph">BUILTIN</code> data sources that return <code class="codeph">NUMBER</code> values.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e401" headers="d94432e70 "><code class="codeph">p_numeric_precision</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e401 d94432e72 ">
+                                 <p><code class="codeph">0</code> = no decimal values
+                                 </p>
+                                 <p><code class="codeph">-1</code> = round to ten
+                                 </p>
+                                 <p>positive integer = number of decimal places</p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e417" headers="d94432e70 "><code class="codeph">p_min_date_value</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e417 d94432e72 ">A <code class="codeph">DATE</code> used as the minimum value (inclusive) to be used in <code class="codeph">BUILTIN</code> data sources that return <code class="codeph">DATE</code> type values.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e432" headers="d94432e70 "><code class="codeph">p_max_date_value</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e432 d94432e72 ">A <code class="codeph">DATE</code> used as the maximum value (inclusive) to be used in <code class="codeph">BUILTIN</code> data sources that return <code class="codeph">DATE</code> type values.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e447" headers="d94432e70 "><code class="codeph">p_format_mask</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e447 d94432e72 ">Format mask when datatype is a date.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e453" headers="d94432e70 "><code class="codeph">p_sequence_start_with</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e453 d94432e72 ">Only used when <code class="codeph">p_data_source_type = SEQUENCE</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e462" headers="d94432e70 "><code class="codeph">p_sequence_increment</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e462 d94432e72 ">Only used when <code class="codeph">p_data_source_type = SEQUENCE</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e471" headers="d94432e70 "><code class="codeph">p_formula</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e471 d94432e72 ">
+                                 <p>Enables referencing columns in this row, PL/SQL expressions that can reference columns defined in this blueprint row. For example:</p><pre class="pre codeblock"><code>{FIRST_NAME}||'.'||{LAST_NAME}||'.insum.ca'</code></pre><p>Substitutions are case sensitive and must match <code class="codeph">{column_name}</code> exactly. If <code class="codeph">p_preserve_case</code> was set to <code class="codeph">N</code>, <code class="codeph">{COLUMN_NAME}</code> must be upper case.
+                                 </p>
+                                 <p>Can be used on any <code class="codeph">DATA_SOURCE_TYPE</code>.
+                                 </p>
+                                 <p>Formulas are applied last, after <code class="codeph">p_percent_blank</code>. If <code class="codeph">p_percent_blank = 100</code> but <code class="codeph">FORMULAR</code> is <code class="codeph">sysdate</code>, the column value will be <code class="codeph">sysdate</code>.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e516" headers="d94432e70 "><code class="codeph">p_formula_lang</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e516 d94432e72 ">Formulas can be used as a combination of PL/SQL functions performed on this or other columns using <code class="codeph">{column_name}</code> notation. String/Char, Date/Time, Numeric/Math functions are supported.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e525" headers="d94432e70 "><code class="codeph">p_custom_attributes</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e525 d94432e72 ">For future expansion.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="29%" id="d94432e531" headers="d94432e70 "><code class="codeph">p_percent_blank</code></td>
+                              <td align="left" valign="top" width="71%" headers="d94432e531 d94432e72 "><code class="codeph">0</code> to <code class="codeph">100</code>. This is applied prior to all formulas. If this column is referenced in a formula, the formula contains a blank when appropriate. 
+                                 <div class="infoboxnote" id="GUID-82BDCDE8-F303-4F9C-846E-AEF5060C4C85__GUID-8C3BA288-8D1D-4C64-A64D-E0876D0C293B">
+                                    <p class="notep1">Note:</p>A formula on this column may cause the column to <span class="bold">not</span> be blank.
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-82BDCDE8-F303-4F9C-846E-AEF5060C4C85__GUID-BD217647-FAFB-4D84-A2E1-4DCBBD38D3C9">Example</p>
+                  <pre class="pre codeblock"><code>BEGIN
+  apex_dg_data_gen.update_column(
+               p_blueprint               =&gt; 'Cars',
+               p_sequence                =&gt; 1,
+               p_table_name              =&gt; 'MY_CARS',
+               p_column_name             =&gt; 'make',
+               p_data_source_type        =&gt; 'BUILTIN',
+               p_data_source             =&gt; 'car.make');
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_DG_DATA_GEN.html#GUID-5DB25668-0D85-45FD-A062-281D2852CFA1">APEX_DG_DATA_GEN</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

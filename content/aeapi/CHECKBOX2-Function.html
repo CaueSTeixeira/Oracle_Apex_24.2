@@ -1,0 +1,182 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="CHECKBOX2 Function">
+      <meta name="DC.subject" content="CHECKBOX2 function, APEX_ITEM">
+      <meta name="keywords" content="CHECKBOX2 function, APEX_ITEM">
+      <meta name="DC.Relation" scheme="URI" content="APEX_ITEM.html#GUID-A111B577-2503-4F4E-962E-192C7D5B5338">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-27C89D70-D5A7-4418-B212-DAFDD44F44CC">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>CHECKBOX2 Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_ITEM.html" title="Previous" type="text/html">
+      <link rel="next" href="DATE_POPUP-Function.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"CHECKBOX2 Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_ITEM.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="DATE_POPUP-Function.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-27C89D70-D5A7-4418-B212-DAFDD44F44CC" name="GUID-27C89D70-D5A7-4418-B212-DAFDD44F44CC"></a><a id="AEAPI1006"></a><a id="AEAPI1007"></a><a id="AEAPI1008"></a><a id="AEAPI1009"></a><a id="AEAPI1010"></a><a id="AEAPI193"></a>
+         
+         <h2 id="AEAPI-GUID-27C89D70-D5A7-4418-B212-DAFDD44F44CC" class="sect2"><span class="enumeration_section">35.1 </span>CHECKBOX2 Function
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function creates check boxes.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-27C89D70-D5A7-4418-B212-DAFDD44F44CC__GUID-0EA42B8E-ACF7-48F5-A786-AA5E839F53F9">Syntax</p><pre class="pre codeblock"><code>APEX_ITEM.CHECKBOX2 (
+    p_idx                       IN    NUMBER,
+    p_value                     IN    VARCHAR2 DEFAULT NULL,
+    p_attributes                IN    VARCHAR2 DEFAULT NULL,
+    p_checked_values            IN    VARCHAR2 DEFAULT NULL,
+    p_checked_values_delimiter  IN    VARCHAR2 DEFAULT ':',
+    p_item_id                   IN    VARCHAR2 DEFAULT NULL,
+    p_item_label                IN    VARCHAR2 DEFAULT NULL )
+    RETURN VARCHAR2;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-27C89D70-D5A7-4418-B212-DAFDD44F44CC__GUID-F61ADE0C-906D-47CE-A11D-46426C2DDAB3">Parameters</p>
+                  <div class="tblformal" id="GUID-27C89D70-D5A7-4418-B212-DAFDD44F44CC__CHDBHBBJ">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="41%" id="d163197e76">Parameter</th>
+                              <th align="left" valign="bottom" width="59%" id="d163197e78">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="41%" id="d163197e82" headers="d163197e76 "><code class="codeph">p_idx</code></td>
+                              <td align="left" valign="top" width="59%" headers="d163197e82 d163197e78 ">Number that determines which <code class="codeph">APEX_APPLICATION</code> global variable is used. Valid range of values is 1 to 50. For example 1 creates <code class="codeph">F01</code> and 2 creates <code class="codeph">F02</code></td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="41%" id="d163197e96" headers="d163197e76 "><code class="codeph">p_value</code></td>
+                              <td align="left" valign="top" width="59%" headers="d163197e96 d163197e78 ">Value of a check box, hidden field, or input form item</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="41%" id="d163197e102" headers="d163197e76 "><code class="codeph">p_attributes</code></td>
+                              <td align="left" valign="top" width="59%" headers="d163197e102 d163197e78 ">Controls the size of the text field</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="41%" id="d163197e108" headers="d163197e76 "><code class="codeph">p_checked_values</code></td>
+                              <td align="left" valign="top" width="59%" headers="d163197e108 d163197e78 ">Values to be checked by default</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="41%" id="d163197e114" headers="d163197e76 "><code class="codeph">p_checked_values_delimiter</code></td>
+                              <td align="left" valign="top" width="59%" headers="d163197e114 d163197e78 ">Delimits the values in the previous parameter, <code class="codeph">p_checked_values</code></td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="41%" id="d163197e122" headers="d163197e76 "><code class="codeph">p_item_id</code></td>
+                              <td align="left" valign="top" width="59%" headers="d163197e122 d163197e78 ">HTML attribute ID for the <code class="codeph">&lt;input&gt;</code> tag
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="41%" id="d163197e131" headers="d163197e76 "><code class="codeph">p_item_label</code></td>
+                              <td align="left" valign="top" width="59%" headers="d163197e131 d163197e78 ">Invisible label created for the item</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-27C89D70-D5A7-4418-B212-DAFDD44F44CC__GUID-BCF6CC0E-F14E-4003-82B5-802E1FB4DD6E">Examples of Default Check Box Behavior</p>
+                  <p>The following example demonstrates how to create a selected check box for each employee in the <code class="codeph">emp</code> table.
+                  </p><pre class="pre codeblock"><code>SELECT APEX_ITEM.CHECKBOX2(1,empno,'CHECKED') "Select",
+    ename, job
+FROM   emp
+ORDER BY 1</code></pre><p>The following example demonstrates how to have all check boxes for employees display without being selected.</p><pre class="pre codeblock"><code>SELECT APEX_ITEM.CHECKBOX2(1,empno) "Select",
+    ename, job
+FROM   emp
+ORDER BY 1</code></pre><p>The following example demonstrates how to select the check boxes for employees who work in department 10.</p><pre class="pre codeblock"><code>SELECT APEX_ITEM.CHECKBOX2(1,empno,DECODE(deptno,10,'CHECKED',NULL)) "Select",
+    ename, job
+FROM   emp
+ORDER BY 1</code></pre><p>The next example demonstrates how to select the check boxes for employees who work in department 10 or department 20.</p><pre class="pre codeblock"><code>SELECT APEX_ITEM.CHECKBOX2(1,deptno,NULL,'10:20',':') "Select",
+    ename, job
+FROM   emp
+ORDER BY 1</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-27C89D70-D5A7-4418-B212-DAFDD44F44CC__GUID-1819BFA9-60CB-40CF-B3F5-86CEBC1B2E75">Creating an On-Submit Process</p>
+                  <p>If you are using check boxes in your application, you might need to create an On Submit process to perform a specific type of action on the selected rows. For example, you could have a Delete button that uses the following logic:</p><pre class="pre codeblock"><code>SELECT APEX_ITEM.CHECKBOX2(1,empno) "Select",
+    ename, job
+FROM   emp
+ORDER  by 1</code></pre><p>Consider the following sample on-submit process:</p><pre class="pre codeblock"><code>FOR I in 1..APEX_APPLICATION.G_F01.COUNT LOOP
+    DELETE FROM emp WHERE empno = to_number(APEX_APPLICATION.G_F01(i));
+END LOOP;</code></pre><p>The following example demonstrates how to create unselected checkboxes for each employee in the emp table, with a unique ID. This is useful for referencing records from within JavaScript code:</p><pre class="pre codeblock"><code>SELECT APEX_ITEM.CHECKBOX2(1,empno,NULL,NULL,NULL,'f01_#ROWNUM#') "Select",
+    ename, job
+FROM   emp
+ORDER BY 1</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_ITEM.html#GUID-A111B577-2503-4F4E-962E-192C7D5B5338">APEX_ITEM (Legacy)</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

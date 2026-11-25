@@ -1,0 +1,156 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="concept">
+      <meta name="DC.Title" content="About Build Options">
+      <meta name="abstract" content="Build options enable developers to enable or disable application components and functionality when the application installs or at runtime using the APEX_UTIL.GET_BUILD_OPTION_STATUS and APEX_UTIL.SET_BUILD_OPTION_STATUS APIs.">
+      <meta name="description" content="Build options enable developers to enable or disable application components and functionality when the application installs or at runtime using the APEX_UTIL.GET_BUILD_OPTION_STATUS and APEX_UTIL.SET_BUILD_OPTION_STATUS APIs.">
+      <meta name="DC.subject" content="build options, about">
+      <meta name="keywords" content="build options, about">
+      <meta name="DC.Relation" scheme="URI" content="using-build-options-to-control-configuration.html#GUID-4422AB40-3BC9-4FC3-AAF9-4EC68403D3F2">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-B1D8E905-ED9D-46B3-9108-8850413DE9A4">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Build options enable developers to enable or disable application components and functionality when the application installs or at runtime using the APEX_UTIL.GET_BUILD_OPTION_STATUS and APEX_UTIL.SET_BUILD_OPTION_STATUS APIs.">
+      <meta name="description" content="Build options enable developers to enable or disable application components and functionality when the application installs or at runtime using the APEX_UTIL.GET_BUILD_OPTION_STATUS and APEX_UTIL.SET_BUILD_OPTION_STATUS APIs.">
+      <title>About Build Options</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Build options enable developers to enable or disable application components and functionality when the application installs or at runtime using the APEX_UTIL.GET_BUILD_OPTION_STATUS and APEX_UTIL.SET_BUILD_OPTION_STATUS APIs.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="using-build-options-to-control-configuration.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-and-editiing-build-options.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"About Build Options","description":"Build options enable developers to enable or disable application components and functionality when the application installs or at runtime using the APEX_UTIL.GET_BUILD_OPTION_STATUS and APEX_UTIL.SET_BUILD_OPTION_STATUS APIs.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="using-build-options-to-control-configuration.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-and-editiing-build-options.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-B1D8E905-ED9D-46B3-9108-8850413DE9A4" name="GUID-B1D8E905-ED9D-46B3-9108-8850413DE9A4"></a>
+         
+         <h2 id="HTMDB-GUID-B1D8E905-ED9D-46B3-9108-8850413DE9A4" class="sect2"><span class="enumeration_section">25.6.1 </span>About Build Options
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Build options enable developers to enable or disable application components and functionality when the application installs or at runtime using the <code class="codeph">APEX_UTIL.GET_BUILD_OPTION_STATUS</code> and <code class="codeph">APEX_UTIL.SET_BUILD_OPTION_STATUS</code> APIs.
+               </p>
+               <p>You can apply build options to most application components (such as pages, regions, items, validations, and so on) and specify whether to include or exclude them in the runtime application.</p>
+               <p>Build options have two possible values:</p>
+               <ul style="list-style-type: disc;">
+                  <li><span class="uicontrol bold">Include</span>&nbsp;- Application components are enabled and included with the application.
+                  </li>
+                  <li><span class="uicontrol bold">Exclude</span>&nbsp;- Application components are disabled and excluded from the application.
+                  </li>
+               </ul>
+               <p>If you specify <span class="uicontrol bold">Include</span>, then the <span>Oracle APEX</span> engine considers the component as part of the application definition at runtime. Conversely, if you specify <span class="uicontrol bold">Exclude</span>, then the <span>APEX</span> engine treats the component as if it did not exist.
+               </p>
+               <div class="infoboxnote" id="GUID-B1D8E905-ED9D-46B3-9108-8850413DE9A4__GUID-BFF61ACF-9C58-4ABA-A5A5-4479C75138EB">
+                  <p class="notep1">Note:</p>
+                  
+                  <p>The <span class="uicontrol bold">Commented Out</span> build option is included by
+                default in new applications. This build option enables developers to include or
+                exclude page components by selecting a toggle on the tree context menu in Page
+                Designer. Deleting the <span class="uicontrol bold">Commented Out</span> will remove this
+                functionality. To learn more, see <a href="commenting-out-page-components-in-page-designer.html#GUID-4402FD34-743F-4B0F-9A3C-33A93036B462" title="Exclude or include page components at runtime using the Comment Out and Uncomment context menu option in Page Designer.">Commenting Out Page Components in Page Designer</a>.
+                  </p>
+                  
+               </div>
+               <div class="infoboxnotealso" id="GUID-B1D8E905-ED9D-46B3-9108-8850413DE9A4__GUID-20671AFA-C81D-40F4-970D-0DC1A7DC0346">
+                  <p class="notep1">See Also:</p><a href="../aeapi/APEX_APPLICATION_ADMIN.GET_BUILD_OPTION_STATUS-Function-Signature-1.html#AEAPI-GUID-C4F1D753-5706-40B0-B7DB-FE3AA3061E96" target="_blank">GET_BUILD_OPTION_STATUS Functions</a> and <a href="../aeapi/APEX_APPLICATION_ADMIN.SET_BUILD_OPTION_STATUS-Procedure.html#AEAPI-GUID-EA4B6939-510C-43D7-A6AB-3EBA2D72598E" target="_blank">SET_BUILD_OPTION_STATUS Procedure</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B1D8E905-ED9D-46B3-9108-8850413DE9A4__USECASES1ENABLEANDDISABLEFUNCTIONAL-38E9E92A">Use Case 1: Enable and Disable Functionality Based on Installation Type</p>
+                  <p>You are developing an application that has many installation types. For each installation type, users may choose to enable or disable certain application functionality. With build options, you can develop one application and when it installs, you can configure build options to include or exclude associated functionality. You may also use an API to expose features within the application. This enables privileged end users to selectively enable or disable application functionality.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B1D8E905-ED9D-46B3-9108-8850413DE9A4__USECASES2HIDINGINCOMPLETEFUNCTIONAL-38E9DF22">Use Case 2: Hiding Incomplete Functionality in Various Environments</p>
+                  <p>You are developing functionality which is not yet complete, so you do not wish to expose it to end users. You can use build options to disable functionality when the application is built for test and production environments. The benefit of this approach is that the application can still be deployed without including incomplete functionality.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B1D8E905-ED9D-46B3-9108-8850413DE9A4__USECASES3DETERMININGTHECONSEQUENCES-38E9E3AE">Use Case 3: Determining the Consequences of Removing Functionality</p>
+                  <p>You are removing functionality you think is not needed by the application, but are unsure if removing the functionality is a safe operation. In this case, you can use build options to essentially "comment out" specific functionality. When the application is deployed and you determine the functionality is necessary, you can re-instate it. If the functionality is deemed as unnecessary, you can then safely remove it from the application.</p>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="using-build-options-to-control-configuration.html#GUID-4422AB40-3BC9-4FC3-AAF9-4EC68403D3F2" title="Use build options to conditionally include or exclude application components and functionality.">Using Build Options to Control Configuration</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

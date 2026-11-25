@@ -1,0 +1,154 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="GET_USER_STYLE Function">
+      <meta name="DC.subject" content="GET_USER_STYLE Function, APEX_THEME">
+      <meta name="keywords" content="GET_USER_STYLE Function, APEX_THEME">
+      <meta name="DC.Relation" scheme="URI" content="APEX_THEME.html#GUID-D0E62CB5-22C1-42CE-A2C1-D1E22EE63555">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-69F4057C-66AD-486B-A8ED-8C74FD3EDC15">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>GET_USER_STYLE Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="ENABLE_USER_STYLE-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="SET_CURRENT_STYLE-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"GET_USER_STYLE Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="ENABLE_USER_STYLE-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="SET_CURRENT_STYLE-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-69F4057C-66AD-486B-A8ED-8C74FD3EDC15" name="GUID-69F4057C-66AD-486B-A8ED-8C74FD3EDC15"></a>
+         
+         <h2 id="AEAPI-GUID-69F4057C-66AD-486B-A8ED-8C74FD3EDC15" class="sect2"><span class="enumeration_section">57.5 </span>GET_USER_STYLE Function
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function returns the theme style user preference for the user and application. If no user preference is present, it returns NULL.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-69F4057C-66AD-486B-A8ED-8C74FD3EDC15__GUID-AB164994-80ED-4367-9E72-FA0EEF9EBE51">Syntax</p><pre class="pre codeblock"><code>APEX_THEME.GET_USER_STYLE (
+  p_application_id  IN NUMBER   DEFAULT {current application id},
+  p_user            IN VARCHAR2 DEFAULT {current user},
+  p_theme_number    IN NUMBER   DEFAULT {current theme number} )
+RETURN NUMBER;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-69F4057C-66AD-486B-A8ED-8C74FD3EDC15__GUID-3E90F420-3C89-4C72-94C3-D9DF66B3DF5D">Parameters</p>
+                  <div class="tblformal" id="GUID-69F4057C-66AD-486B-A8ED-8C74FD3EDC15__GUID-B7EBE307-2F05-4B1A-8CDC-784B4E899088">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" id="d249645e69">Parameter</th>
+                              <th align="left" valign="bottom" id="d249645e71">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d249645e75" headers="d249645e69 "><code class="codeph">p_application_id</code></td>
+                              <td align="left" valign="top" headers="d249645e75 d249645e71 ">The application ID. Default is the current application.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d249645e81" headers="d249645e69 "><code class="codeph">p_user</code></td>
+                              <td align="left" valign="top" headers="d249645e81 d249645e71 ">The user name to the user style preference.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d249645e87" headers="d249645e69 "><code class="codeph">p_theme_number</code></td>
+                              <td align="left" valign="top" headers="d249645e87 d249645e71 ">The theme number to set the session style.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-69F4057C-66AD-486B-A8ED-8C74FD3EDC15__GUID-39EF996D-64FA-4A9F-A6D9-01154D41295D">Returns</p>
+                  <p>The theme style ID which is set as a user preference.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-69F4057C-66AD-486B-A8ED-8C74FD3EDC15__GUID-4EE71E92-9C50-4FB3-8F3E-472EBF700929">Example</p>
+                  <p>The query returns the theme style user preference for the <code class="codeph">ADMIN</code> user in application <code class="codeph">100</code> and theme <code class="codeph">42</code>.
+                  </p><pre class="pre codeblock"><code>select apex_theme.get_user_style( 100, 'ADMIN', 42 ) from dual;</code></pre></div>
+               <div class="section">
+                  <div class="infoboxnotealso" id="GUID-69F4057C-66AD-486B-A8ED-8C74FD3EDC15__GUID-186B7357-0187-4A0A-A7CC-E02D290FC1D8">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-69F4057C-66AD-486B-A8ED-8C74FD3EDC15__UL_VRY_3LD_42C">
+                        <li><a href="SET_USER_STYLE-Procedure.html#GUID-5A24E1AB-E19F-4EB4-A604-2AEEEA2CF85A">SET_USER_STYLE Procedure</a></li>
+                        <li><a href="CLEAR_USER_STYLE-Procedure.html#GUID-E3D0A1A9-FC0E-414F-93E3-310920E53596">CLEAR_USER_STYLE Procedure</a></li>
+                        <li><a href="CLEAR_ALL_USERS_STYLE-Procedure.html#GUID-E52E6FE7-E250-4BB3-BC13-48F3C6D2FE4D">CLEAR_ALL_USERS_STYLE Procedure</a></li>
+                        <li><a href="ENABLE_USER_STYLE-Procedure.html#GUID-F356976E-FFC2-4305-B1D9-5F2D30BF80B9">ENABLE_USER_STYLE Procedure</a></li>
+                        <li><a href="DISABLE_USER_STYLE-Procedure.html#GUID-385E5D9D-05DC-4327-AF7A-9E7E8A13064A">DISABLE_USER_STYLE Procedure</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_THEME.html#GUID-D0E62CB5-22C1-42CE-A2C1-D1E22EE63555">APEX_THEME</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Upgrading Oracle APEX Applications">
+      <meta name="abstract" content="Installing a new release of APEX updates existing applications to the latest release, but does not alter application user interface or application components.">
+      <meta name="description" content="Installing a new release of APEX updates existing applications to the latest release, but does not alter application user interface or application components.">
+      <meta name="DC.subject" content="apps, upgrading, upgrading, apps, upgrading apps, reviewing Release Notes, Release Notes, reviewing, reviewing Changed Behavior, reviewing Deprecated Features, reviewing Deprecated in Previous Releases, reviewing Desupported Features, refreshing Universal Theme, Universal Theme, refreshing, refreshing Universal Theme, updating Compatibility Mode, Compatibility Mode, updating when upgrading, updating Compatibility Mode, Application Upgrade wizard, Application Upgrade wizard, running, running Application Upgrade wizard, reviewing app properties, app properties">
+      <meta name="keywords" content="apps, upgrading, upgrading, apps, upgrading apps, reviewing Release Notes, Release Notes, reviewing, reviewing Changed Behavior, reviewing Deprecated Features, reviewing Deprecated in Previous Releases, reviewing Desupported Features, refreshing Universal Theme, Universal Theme, refreshing, refreshing Universal Theme, updating Compatibility Mode, Compatibility Mode, updating when upgrading, updating Compatibility Mode, Application Upgrade wizard, Application Upgrade wizard, running, running Application Upgrade wizard, reviewing app properties, app properties">
+      <meta name="DC.Relation" scheme="URI" content="upgrading-apex-applications.html#GUID-A2B71013-542B-4D88-8E79-D9545109F7B3">
+      <meta name="DC.Relation" scheme="URI" content="upgrading-apex-applications.html#GUID-3D4BB59D-5387-4D57-8C15-E2F9B4E35A9A">
+      <meta name="DC.Relation" scheme="URI" content="upgrading-apex-applications.html#GUID-3415C581-1146-4D64-8044-DE5BD67F186C">
+      <meta name="DC.Relation" scheme="URI" content="upgrading-apex-applications.html#GUID-F8E4B8E4-687B-4493-B0F9-E9387C43604F">
+      <meta name="DC.Relation" scheme="URI" content="upgrading-apex-applications.html#GUID-AC6F3C7F-03B0-47F6-B8E5-4114923A53F2">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-AC003A2E-7851-4E97-B5DE-BB354A919971">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Installing a new release of APEX updates existing applications to the latest release, but does not alter application user interface or application components.">
+      <meta name="description" content="Installing a new release of APEX updates existing applications to the latest release, but does not alter application user interface or application components.">
+      <title>Upgrading Oracle APEX Applications</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Installing a new release of APEX updates existing applications to the latest release, but does not alter application user interface or application components.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="formatting-using-report-layouts.html" title="Previous" type="text/html">
+      <link rel="next" href="managing-application-data.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Upgrading Oracle APEX Applications","description":"Installing a new release of APEX updates existing applications to the latest release, but does not alter application user interface or application components.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="formatting-using-report-layouts.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="managing-application-data.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-AC003A2E-7851-4E97-B5DE-BB354A919971" name="GUID-AC003A2E-7851-4E97-B5DE-BB354A919971"></a><a id="4000:86"></a><a id="4000:89"></a><a id="4000:383"></a><a id="4000:646"></a><a id="4000:862"></a><a id="4000:911"></a>
+         
+         <h2 id="HTMDB-GUID-AC003A2E-7851-4E97-B5DE-BB354A919971" class="sect2"><span class="enumeration_chapter">17 </span>Upgrading <span>Oracle APEX</span> Applications
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Installing a new release of <span>APEX</span> updates existing applications to the latest release, but does not alter
+                application user interface or application components.
+               </p>
+               <p>Once you upgrade an <span>APEX</span> instance from a previous release, existing applications will work without modification. However, to keep applications maintainable, up-to-date, and to leverage new functionality, perform the following steps after an upgrade or after an application has been imported which was exported from a previous release.
+               </p>
+               <div class="infobox-tip" id="GUID-AC003A2E-7851-4E97-B5DE-BB354A919971__GUID-E5797360-90E5-445D-8956-3FA803DE818B">
+                  <p class="notep1">Tip:</p>At the completion of each task described in this section, Oracle
+                        recommends running and thoroughly testing your application.
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="upgrading-apex-applications.html#GUID-A2B71013-542B-4D88-8E79-D9545109F7B3">Reviewing Release Notes</a><br>After you upgrade from a previous <span>APEX</span> release, review the <span><cite>Oracle APEX Release                                         Notes</cite></span>.
+                  </li>
+                  <li class="ulchildlink"><a href="upgrading-apex-applications.html#GUID-3D4BB59D-5387-4D57-8C15-E2F9B4E35A9A">Refreshing the Universal Theme</a><br>Update an application to use the latest Universal Theme to take advantage of new features, enhancements, and bug fixes as well as styling for new <span>APEX</span> components.
+                  </li>
+                  <li class="ulchildlink"><a href="upgrading-apex-applications.html#GUID-3415C581-1146-4D64-8044-DE5BD67F186C">Updating App Compatibility Mode</a><br>The Compatibility Mode attribute controls the backward compatibility of the <span>APEX</span> runtime engine when executing an application.
+                  </li>
+                  <li class="ulchildlink"><a href="upgrading-apex-applications.html#GUID-F8E4B8E4-687B-4493-B0F9-E9387C43604F">Running Application Upgrade</a><br>After upgrading to a new release, the Application Upgrade wizard can         help you to bulk update your application to leverage new features instead of deprecated ones         or to automatically enable new functionality for existing components.
+                  </li>
+                  <li class="ulchildlink"><a href="upgrading-apex-applications.html#GUID-AC6F3C7F-03B0-47F6-B8E5-4114923A53F2">Reviewing Old JavaScript</a><br>For applications using jQuery Migrate or legacy JavaScript, review the User         Interface, JavaScript settings.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-AC003A2E-7851-4E97-B5DE-BB354A919971__GUID-E79486C7-99A1-45C3-AAC3-4FDB14575AD3">
+                  <p class="notep1">See Also:</p><a href="../htmig/upgrading-from-previous-apex-release.html#GUID-802A767F-2528-4B98-AC4F-B683DF4E572B" target="_blank">Upgrading from a Previous Oracle APEX Release</a> in <span><cite>Oracle APEX Installation
+                                        Guide</cite></span></div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-A2B71013-542B-4D88-8E79-D9545109F7B3" name="GUID-A2B71013-542B-4D88-8E79-D9545109F7B3"></a><h3 id="HTMDB-GUID-A2B71013-542B-4D88-8E79-D9545109F7B3" class="sect3"><span class="enumeration_section">17.1 </span>Reviewing Release
+        Notes
+               </h3>
+               <div>
+                  <p>After you upgrade from a previous <span>APEX</span> release, review the <span><cite>Oracle APEX Release
+                                        Notes</cite></span>.
+                  </p>
+                  <p><a href="../htmrn/about-release-notes.html#HTMRN-GUID-540B73CB-08A7-4422-B6BF-CC785EC47694" target="_blank"><span><cite>Oracle APEX Release
+                                        Notes</cite></span></a> contain important information not included in the <span>APEX</span> documentation. Key sections to review include:
+                  </p>
+                  <ul style="list-style-type: disc;" id="GUID-A2B71013-542B-4D88-8E79-D9545109F7B3__UL_XMR_WYY_SPB">
+                     <li><a href="../htmrn/changed-behavior.html#HTMRN-GUID-0F34A43F-A2B7-4D06-AA39-839396676C26" target="_blank">Changed Behavior</a> - Describes changes in application and component behavior compared to previous releases.
+                     </li>
+                     <li><a href="../htmrn/deprecated-features.html#HTMRN-GUID-657FF369-756E-4F31-96F9-B2D92C3DE084" target="_blank">Deprecated Features</a> - Lists features which Oracle plans to desupport or remove in a future <span>APEX</span> release. If a feature is related to application metadata or an API, existing applications can still use the feature, but Oracle strongly recommends that developers start to modify their applications as described in this section. Use <span>APEX</span> Advisor to scan existing applications for deprecated attributes.
+                     </li>
+                     <li><a href="../htmrn/deprecated-previous-releases.html#HTMRN-GUID-5DB77CAF-5288-4635-8C4D-4C40274BFE5B" target="_blank">Deprecated in Previous Releases</a> - Lists features which were deprecated in a previous release but have not been fully removed or desupported from <span>APEX</span>. Oracle strongly recommends that developers start to modify their applications as described in this section. Run <span>APEX</span> Advisor to scan existing applications for deprecated attributes.
+                     </li>
+                     <li><a href="../htmrn/desupported-features.html#HTMRN-GUID-CC4B5D70-22FD-45CA-8F6F-C34A91F1B5BD" target="_blank">Desupported Features</a> - Lists features that are no longer available. If a desupported feature is related to application metadata or APIs, then existing applications may not work as they did previously. Oracle recommends modifying the application to replace the feature.
+                     </li>
+                     <li>
+                        
+                        <p><a href="../htmrn/desupported-previous-releases.html#GUID-60117631-A3A0-4552-8EFD-8C2E0CED456F" target="_blank">Desupported in Previous Releases</a>- Lists features
+                    that were desupported in a previous release.
+                        </p>
+                        
+                     </li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-A2B71013-542B-4D88-8E79-D9545109F7B3__GUID-B1E60B0F-245E-4448-BD1A-D366E54249E1">
+                     <p class="notep1">See Also:</p><a href="running-advisor-to-check-application-integrity.html#GUID-18449973-3C6C-442E-84E3-2B7A52E5C325" title="Use Oracle APEX Advisor (Advisor) to check the integrity and quality of your APEX application.">Running Advisor to Check Application Integrity</a></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="upgrading-apex-applications.html#GUID-AC003A2E-7851-4E97-B5DE-BB354A919971" title="Installing a new release of APEX updates existing applications to the latest release, but does not alter application user interface or application components.">Upgrading Oracle APEX Applications</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-3D4BB59D-5387-4D57-8C15-E2F9B4E35A9A" name="GUID-3D4BB59D-5387-4D57-8C15-E2F9B4E35A9A"></a><h3 id="HTMDB-GUID-3D4BB59D-5387-4D57-8C15-E2F9B4E35A9A" class="sect3"><span class="enumeration_section">17.2 </span>Refreshing the Universal Theme
+               </h3>
+               <div>
+                  <p>Update an application to use the latest Universal Theme to take advantage of new features, enhancements, and bug fixes as well as styling for new <span>APEX</span> components.
+                  </p>
+                  <div class="p">
+                     
+                     <div class="infobox-tip" id="GUID-3D4BB59D-5387-4D57-8C15-E2F9B4E35A9A__GUID-A3E4BF86-04A5-4C03-8B93-520BA8AAE470">
+                        <p class="notep1">Tip:</p>
+                        
+                        <p>Before starting this procedure, Oracle recommends backing up your
+                    application by either exporting it or creating a copy. See <a href="exporting-an-application.html#GUID-CA08D090-882F-4745-87D9-149373F285F1" title="Move or copy an application by exporting and then importing it into the target instance.">Exporting an Application</a> and <a href="copying-an-application.html#GUID-9941C4F5-7D31-4B2A-A416-982033D3F149" title="Create a copy of an existing application.">Copying an Application</a>.
+                        </p>
+                        
+                     </div>
+                     
+                  </div>
+                  <div class="section"></div>
+                  <p>To update an application to use the latest Universal
+                Theme</p>
+                  <ol>
+                     <li><span>Navigate to the <span>App Builder</span> home page:</span><ol type="a" id="GUID-3D4BB59D-5387-4D57-8C15-E2F9B4E35A9A__SUBSTEPS_WKC_PJG_F3B">
+                           <li class="substepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span><div>
+                                 
+                                 <p>If the Universal Theme is not up-to-date, the <span>App Builder</span> home page displays a banner at the top of the page that
+                                reads:
+                                 </p>
+                                 
+                                 <p><code class="codeph">There is a new version of Universal Theme available! You can
+                                    refresh your theme to take advantage of new features,
+                                    enhancements, and bug fixes.</code></p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Refresh Theme</span>.</span></li>
+                     <li><span>Run and test your application.</span></li>
+                  </ol>
+                  <div class="section">
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-3D4BB59D-5387-4D57-8C15-E2F9B4E35A9A__GUID-3D3B1464-70C4-4860-8846-022B430815C4">
+                     <p class="notep1">See Also:</p><a href="https://apex.oracle.com/pls/apex/r/apex_pm/ut/migration-guide" target="_blank">Migration Guide</a> page in the
+                    <a href="https://apex.oracle.com/ut" target="_blank">Universal Theme Reference</a> app.
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="upgrading-apex-applications.html#GUID-AC003A2E-7851-4E97-B5DE-BB354A919971" title="Installing a new release of APEX updates existing applications to the latest release, but does not alter application user interface or application components.">Upgrading Oracle APEX Applications</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-3415C581-1146-4D64-8044-DE5BD67F186C" name="GUID-3415C581-1146-4D64-8044-DE5BD67F186C"></a><h3 id="HTMDB-GUID-3415C581-1146-4D64-8044-DE5BD67F186C" class="sect3"><span class="enumeration_section">17.3 </span>Updating App Compatibility Mode
+               </h3>
+               <div>
+                  <p>The Compatibility Mode attribute controls the backward compatibility of the <span>APEX</span> runtime engine when executing an application.
+                  </p>
+                  <div class="section">
+                     
+                     <p>Certain runtime behaviors change from release to release. To not break or change the
+                behavior of existing applications, this attribute is automatically set during
+                upgrade if necessary.</p>
+                     
+                     <p>To keep applications maintainable, set <span class="uicontrol bold">Compatibility
+                    Mode</span> to the latest release after reviewing the changed behavior in
+                the Release Notes and making the necessary changes.
+                     </p>
+                     
+                  </div>
+                  <div class="section">
+                     
+                     <p>To update the Compatibility Mode within an application:</p>
+                     
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Select an application.</span><div>
+                           
+                           <p>The Application home page appears.</p>
+                           
+                           <div class="figure" id="GUID-3415C581-1146-4D64-8044-DE5BD67F186C__GUID-FF0D155F-8732-480A-8DFE-E0F9E61EC25A"><img id="GUID-3415C581-1146-4D64-8044-DE5BD67F186C__IMAGE_LFP_GBD_QKB" height="445" width="897" src="img/edit_app_prop.png" alt="Description of edit_app_prop.png follows" title="Description of edit_app_prop.png follows" longdesc="img_text/edit_app_prop.html"><br><a href="img_text/edit_app_prop.html">Description of the illustration edit_app_prop.png</a></div>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>From Application home page, you can access the Edit Application Definition page
+                    in two ways:</span><ul id="GUID-3415C581-1146-4D64-8044-DE5BD67F186C__CHOICES_ABQ_4P1_TPB">
+                           <li>Click the <span class="uicontrol bold">Edit Application Definition</span>
+                        button.
+                           </li>
+                           <li>From Shared Components:
+                              <ul style="list-style-type: disc;" id="GUID-3415C581-1146-4D64-8044-DE5BD67F186C__UL_ARR_ZLC_QKB">
+                                 <li>
+                                    
+                                    <p>Click <span class="uicontrol bold">Shared Components</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Under Application Logic, click <span class="uicontrol bold">Application
+                                        Definition</span>.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                        <div>
+                           
+                           <p>The Edit Application Definition page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click the <span class="uicontrol bold">Definition</span> tab.</span></li>
+                     <li class="stepexpand"><span><span class="uicontrol bold">Properties</span>, <span class="uicontrol bold">Compatibility Mode</span> -
+                    To use standard behavior in an application, set the compatibility mode of the
+                    application to the current version. </span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span> to save your changes.</span></li>
+                     <li class="stepexpand"><span>Run and test your application.</span></li>
+                  </ol>
+                  <div class="section">
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-3415C581-1146-4D64-8044-DE5BD67F186C__GUID-1349C4ED-9B31-4515-937F-2E76800D0246">
+                     <p class="notep1">See Also:</p><span class="bold">Changed Behavior</span>, <a href="../htmrn/changed-behavior.html#HTMRN-GUID-712BE54F-08CD-43A3-A645-87B9360ED516" target="_blank">Compatibility Mode</a> in <span><cite>Oracle APEX Release
+                                        Notes</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="upgrading-apex-applications.html#GUID-AC003A2E-7851-4E97-B5DE-BB354A919971" title="Installing a new release of APEX updates existing applications to the latest release, but does not alter application user interface or application components.">Upgrading Oracle APEX Applications</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-F8E4B8E4-687B-4493-B0F9-E9387C43604F" name="GUID-F8E4B8E4-687B-4493-B0F9-E9387C43604F"></a><h3 id="HTMDB-GUID-F8E4B8E4-687B-4493-B0F9-E9387C43604F" class="sect3"><span class="enumeration_section">17.4 </span>Running Application Upgrade
+               </h3>
+               <div>
+                  <p>After upgrading to a new release, the Application Upgrade wizard can
+        help you to bulk update your application to leverage new features instead of deprecated ones
+        or to automatically enable new functionality for existing components.</p>
+                  <div class="section">
+                     
+                     <p>The Upgrade Application page displays the available upgrade types and
+                the number of objects that can be upgraded. Click on the number under
+                    <span class="uicontrol bold">Candidate Object</span> to review the candidates and
+                upgrade.
+                     </p>
+                     
+                  </div>
+                  <div class="section">
+                     
+                     <p>To upgrade an application to use new components:</p>
+                     
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Workspace home page.</span></li>
+                     <li class="stepexpand"><span>Click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Select an application.</span><div>The Application home page appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Utilities</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Upgrade Application</span>.</span><div>The Upgrade Application page appears displaying the
+                    available upgrade types and the number of objects that can be
+                    upgraded.</div>
+                     </li>
+                     <li class="stepexpand"><span>To review the candidate objects, click the number link under the
+                        <span class="uicontrol bold">Candidate Objects</span> column.</span></li>
+                     <li class="stepexpand"><span>On the Upgrade page, select the objects to upgrade and click
+                        <span class="uicontrol bold">Upgrade</span>.</span></li>
+                     <li class="stepexpand"><span>Run and test your application.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="upgrading-apex-applications.html#GUID-AC003A2E-7851-4E97-B5DE-BB354A919971" title="Installing a new release of APEX updates existing applications to the latest release, but does not alter application user interface or application components.">Upgrading Oracle APEX Applications</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-AC6F3C7F-03B0-47F6-B8E5-4114923A53F2" name="GUID-AC6F3C7F-03B0-47F6-B8E5-4114923A53F2"></a><h3 id="HTMDB-GUID-AC6F3C7F-03B0-47F6-B8E5-4114923A53F2" class="sect3"><span class="enumeration_section">17.5 </span>Reviewing Old JavaScript
+               </h3>
+               <div>
+                  <p>For applications using jQuery Migrate or legacy JavaScript, review the User
+        Interface, JavaScript settings.</p>
+                  <div class="section">
+                     
+                     <p>If your application uses jQuery Migrate or legacy JavaScript, review this logic to determine if it is still necessary. Removing this dependency benefits the application by not only ensuring you are only reliant on current, supported technology, but also a performance benefit because <span>APEX</span> will not need to load the corresponding library code.
+                     </p>
+                     
+                     <p>jQuery 3.x breaks compatibility with earlier 2.x versions. For
+                applications that still rely on removed 2.x functionality, you can use the jQuery
+                Migrate plug-in. To include the jQuery Migrate plug-in, go to the User Interface
+                page and enable <span class="uicontrol bold">Include jQuery Migrate</span> as described in the
+                task that follows.
+                     </p>
+                     
+                  </div>
+                  <div class="p">
+                     
+                     <p>If your application relies on removed 1.x jQuery APIs, that
+                functionality no longer works as of Oracle Application Express release 18.1. You
+                must update the JavaScript to only use jQuery 3.5 or later APIs. To learn more, see
+                    <a href="../htmrn/open-bugs-known-issues.html#HTMRN-GUID-6265BFAE-380D-4246-BDFC-01D877D6721A" target="_blank">Known Issues for jQuery Upgrade</a> in <span><cite>Oracle APEX Release
+                                        Notes</cite></span>.
+                     </p>
+                     
+                  </div>
+                  <div class="section">
+                     
+                     <p>To review the User Interface, JavaScript settings:</p>
+                     
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Select an application.</span><div>The Application home page appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>From Application home page, you can access the Edit Application Definition page
+                    in two ways:</span><ul id="GUID-AC6F3C7F-03B0-47F6-B8E5-4114923A53F2__CHOICES_ABQ_4P1_TPB">
+                           <li>Click the <span class="uicontrol bold">Edit Application Definition</span>
+                        button.
+                           </li>
+                           <li>From Shared Components:
+                              <ul style="list-style-type: disc;" id="GUID-AC6F3C7F-03B0-47F6-B8E5-4114923A53F2__UL_ARR_ZLC_QKB">
+                                 <li>
+                                    
+                                    <p>Click <span class="uicontrol bold">Shared Components</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Under Application Logic, click <span class="uicontrol bold">Application
+                                        Definition</span>.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                        <div>
+                           
+                           <p>The Edit Application Definition page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click the <span class="uicontrol bold">User Interface</span> tab.</span></li>
+                     <li class="stepexpand"><span>Edit the following settings:</span><ol type="a" id="GUID-AC6F3C7F-03B0-47F6-B8E5-4114923A53F2__SUBSTEPS_OHZ_2MF_TPB">
+                           <li class="substepexpand"><span><span class="uicontrol bold">JavaScript</span>, <span class="uicontrol bold">Include Deprecated or Desupported Javascript Functions</span> - Specifies if deprecated or desupported JavaScript functions are included on every page in the application by selecting the appropriate releases. See <a href="../htmrn/about-release-notes.html#HTMRN-GUID-540B73CB-08A7-4422-B6BF-CC785EC47694" target="_blank">Oracle APEX Release Notes</a> for a list of deprecated and desupported functions. </span><div>
+                                 <div class="infobox-tip" id="GUID-AC6F3C7F-03B0-47F6-B8E5-4114923A53F2__GUID-B3EFC161-BABB-4A23-99EB-AD53C4F77FEC">
+                                    <p class="notep1">Tip:</p>If you are confident your
+                                application does not contain any references to deprecated or
+                                supported functions, do not make a selection and reduce the overall
+                                size of the JavaScript files loaded.
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">JavaScript</span>, <span class="uicontrol bold">Include jQuery
+                                Migrate</span> - Specifies if the jQuery Migrate plug-in should
+                            be included on every page in the application. </span><div>
+                                 
+                                 <p> jQuery Migrate plug-in restores deprecated features and
+                                behaviors of jQuery so that old JavaScript code and jQuery plug-ins
+                                will still run properly with the jQuery version loaded by <span>APEX</span>. This plug-in also helps find where you are using deprecated or
+                                removed jQuery APIs by logging warnings to the browser console. 
+                                 </p>
+                                 
+                                 <div class="infobox-tip" id="GUID-AC6F3C7F-03B0-47F6-B8E5-4114923A53F2__GUID-4B7764DF-18F5-4610-B3D1-4605D414B391">
+                                    <p class="notep1">Tip:</p>If you
+                                are confident your application does not use a jQuery plug-in and
+                                does not contain any references to deprecated jQuery features,
+                                disable <span class="uicontrol bold">Include jQuery Migrate</span> to reduce the
+                                overall size of the JavaScript files loaded.
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span> to save your changes.</span></li>
+                     <li class="stepexpand"><span>Run and test your application.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="upgrading-apex-applications.html#GUID-AC003A2E-7851-4E97-B5DE-BB354A919971" title="Installing a new release of APEX updates existing applications to the latest release, but does not alter application user interface or application components.">Upgrading Oracle APEX Applications</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,776 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Creating a Progressive Web App (PWA)">
+      <meta name="abstract" content="Learn about Progressive Web App (PWA) features and requirements.">
+      <meta name="description" content="Learn about Progressive Web App (PWA) features and requirements.">
+      <meta name="DC.subject" content="Progressive Web App, creating, about support, Create Application Wizard, creating Progressive Web Application (PWA), configuring">
+      <meta name="keywords" content="Progressive Web App, creating, about support, Create Application Wizard, creating Progressive Web Application (PWA), configuring">
+      <meta name="DC.Relation" scheme="URI" content="creating-applications-for-mobile-devices.html#GUID-D36D47CE-37A1-4B2B-A647-DF1005EE9FB9">
+      <meta name="DC.Relation" scheme="URI" content="creating-a-progressive-web-app.html#GUID-CC27EBDB-4C18-43DC-86F9-F9293C356306">
+      <meta name="DC.Relation" scheme="URI" content="creating-a-progressive-web-app.html#GUID-F60D0CD9-2EA8-4825-ABAB-63CF092CA166">
+      <meta name="DC.Relation" scheme="URI" content="creating-a-progressive-web-app.html#GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about Progressive Web App (PWA) features and requirements.">
+      <meta name="description" content="Learn about Progressive Web App (PWA) features and requirements.">
+      <title>Creating a Progressive Web App (PWA)</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Learn about Progressive Web App (PWA) features and requirements.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="advantages-of-the-universal-theme.html" title="Previous" type="text/html">
+      <link rel="next" href="deleting-an-application.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Creating a Progressive Web App (PWA)","description":"Learn about Progressive Web App (PWA) features and requirements.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="advantages-of-the-universal-theme.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="deleting-an-application.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" name="GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB"></a><a id="4000:507"></a>
+         
+         <h2 id="HTMDB-GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" class="sect2"><span class="enumeration_section">5.10.2 </span>Creating a Progressive Web App (PWA)
+         </h2>
+         <div class="ind">
+            <p>Learn about Progressive Web App (PWA) features and requirements.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="creating-a-progressive-web-app.html#GUID-CC27EBDB-4C18-43DC-86F9-F9293C356306">About Progressive Web App Support</a><br>Progressive Web Apps (PWAs) leverage modern web APIs giving users an         experience that looks and feels like a native app.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-a-progressive-web-app.html#GUID-F60D0CD9-2EA8-4825-ABAB-63CF092CA166">Creating a Progressive Web App</a><br>Create a Progressive Web App by running the Create Application Wizard and         enabling the <span class="uicontrol bold">Install Progressive Web App</span> feature.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-a-progressive-web-app.html#GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47">Configuring Attributes for a Progressive Web App</a><br>Configure Progressive Web App attributes for both new and existing         Progressive Web App applications.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="creating-applications-for-mobile-devices.html#GUID-D36D47CE-37A1-4B2B-A647-DF1005EE9FB9" title="Build applications for mobile devices with mobile-specific design patterns that can provide an optimal user experience for small screens.">Creating Applications for Mobile Devices</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-CC27EBDB-4C18-43DC-86F9-F9293C356306" name="GUID-CC27EBDB-4C18-43DC-86F9-F9293C356306"></a><h3 id="HTMDB-GUID-CC27EBDB-4C18-43DC-86F9-F9293C356306" class="sect3"><span class="enumeration_section">5.10.2.1 </span>About Progressive Web App Support
+               </h3>
+               <div>
+                  <p>Progressive Web Apps (PWAs) leverage modern web APIs giving users an
+        experience that looks and feels like a native app.</p>
+                  <div class="section">
+                     
+                     <p>Developers can create a PWA when creating a new application with the Create
+                Application Wizard, or by editing attributes of an existing application.</p>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-CC27EBDB-4C18-43DC-86F9-F9293C356306__GUID-916705A9-7ABC-4668-8F0B-BBB3D36DA019">Progressive Web App Requirements</p>
+                     
+                     
+                     <p>Requirements for using this feature include:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-CC27EBDB-4C18-43DC-86F9-F9293C356306__UL_RCJ_NWM_SSB">
+                        <li>
+                           
+                           <p>The <span>Oracle APEX</span> application must be served over a secured HTTPS environment, or
+                        localhost. If using an unsecured environment, PWA features will not be
+                        rendered
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>The application Definition, <span class="uicontrol bold">Properties</span>,
+                            <span class="uicontrol bold">Friendly URLs</span> attribute must be
+                            <span class="uicontrol bold">On</span>. See <a href="editing-application-attributes.html#GUID-FB090A95-B3CB-4598-892C-131A4E1DC4A5" title="Access the Application Definition page from the Application home page.">Accessing the Application Definition Page</a>.
+                           </p>
+                           
+                        </li>
+                     </ul>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-CC27EBDB-4C18-43DC-86F9-F9293C356306__GUID-CC2B11E9-8610-4183-B163-828EC3F0F788">About Progressive Web Apps</p>
+                     
+                     
+                     <p>Enabling PWA functionality:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-CC27EBDB-4C18-43DC-86F9-F9293C356306__UL_LZR_CVS_XQB">
+                        <li>Adds the ability to install the app as a Progressive Web App
+                    (PWA).</li>
+                        <li>Adds a new navigation bar entry named <code class="codeph">Install App</code>
+                    to your application.
+                        </li>
+                        <li>Optimizes page loading speed on the mobile device. Improves page
+                    load rendering time with a new browser cache architecture for static files (<span>APEX</span> core files and app files).
+                        </li>
+                        <li>
+                           
+                           <p>Enables users to install the application on devices.</p>
+                           
+                        </li>
+                        <li>Provides a customizable offline page when users are offline and
+                    cannot request the network. See <a href="progressive-web-app-messages-requiring-translation.html#GUID-0402E337-BFE0-4231-83C7-9D38B51E6CAB" title="Lists Progressive Web Application (PWA) messages that require translation.">Progressive Web App (PWA) Messages Requiring Translation</a>.
+                        </li>
+                        <li>
+                           
+                           <p>Supports hooks into the service worker code for a fully customizable PWA
+                        experience.</p>
+                           
+                        </li>
+                     </ul>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-CC27EBDB-4C18-43DC-86F9-F9293C356306__GUID-98E8B640-CBA7-4183-9874-A72E405A221D">Creating a New PWA</p>
+                     
+                     
+                     <p>For a new application, you can create a PWA by enabling the
+                    <span class="uicontrol bold">Install Progressive Web App</span> feature in the Create
+                Application Wizard and then configuring the Progressive Web App attributes. 
+                     </p>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-CC27EBDB-4C18-43DC-86F9-F9293C356306__GUID-F55B5B7B-E02B-4AE8-8866-0053AD59D93A">Making an Existing App a
+                PWA</p>
+                     
+                     
+                  </div>
+                  <p>To make an existing application a PWA, you must: </p>
+                  <ul style="list-style-type: disc;" id="GUID-CC27EBDB-4C18-43DC-86F9-F9293C356306__UL_BQX_TSM_SSB">
+                     <li>
+                        
+                        <p>Verify <span class="uicontrol bold">Friendly URLs</span> attribute is
+                        <span class="uicontrol bold">On</span> in the Application Definition,
+                        <span class="uicontrol bold">Properties</span> section.
+                        </p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>Turn on the <span class="uicontrol bold">Enable Progressive Web App</span>
+                    attribute and then configure the remaining Progressive Web App attributes.
+                        </p>
+                        
+                     </li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-CC27EBDB-4C18-43DC-86F9-F9293C356306__GUID-C6BC07D4-9F2F-4102-8760-738C7EAEACF0">
+                     <p class="notep1">See Also:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-CC27EBDB-4C18-43DC-86F9-F9293C356306__UL_PY1_DXM_SSB">
+                        <li>
+                           
+                           <p><a href="editing-application-attributes.html#GUID-FB090A95-B3CB-4598-892C-131A4E1DC4A5" title="Access the Application Definition page from the Application home page.">Accessing the Application Definition Page</a></p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><a href="creating-a-progressive-web-app.html#GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47" title="Configure Progressive Web App attributes for both new and existing Progressive Web App applications.">Configuring Attributes for a Progressive Web App</a></p>
+                           
+                        </li>
+                     </ul>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-a-progressive-web-app.html#GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" title="Learn about Progressive Web App (PWA) features and requirements.">Creating a Progressive Web App (PWA)</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-F60D0CD9-2EA8-4825-ABAB-63CF092CA166" name="GUID-F60D0CD9-2EA8-4825-ABAB-63CF092CA166"></a><h3 id="HTMDB-GUID-F60D0CD9-2EA8-4825-ABAB-63CF092CA166" class="sect3"><span class="enumeration_section">5.10.2.2 </span>Creating a Progressive Web App
+               </h3>
+               <div>
+                  <p>Create a Progressive Web App by running the Create Application Wizard and
+        enabling the <span class="uicontrol bold">Install Progressive Web App</span> feature.
+                  </p>
+                  <div class="p">
+                     
+                     <div class="infobox-tip" id="GUID-F60D0CD9-2EA8-4825-ABAB-63CF092CA166__GUID-502C8B27-F83A-4322-817E-022B22DCFBDD">
+                        <p class="notep1">Tip:</p>To include mobile friendly reports and forms, create your application
+                and then add pages to it. See <a href="legacy-forms-optimized-for-mobile.html#GUID-140F1D2B-0E87-418B-9BF7-070886261DB1" title="Oracle APEX includes three mobile friendly reports and forms: List View, Column Toggle, and Reflow Report.">Mobile Friendly Legacy Forms</a>.
+                     </div>
+                     
+                  </div>
+                  <p>
+                     
+                     </p><p>To create a new application with Progressive Web App functionality
+                    enabled:</p>
+                     
+                  <p></p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create</span>.</span><div>
+                           
+                           <p>The wizard prompts you to select a method of creating an
+                        application.</p>
+                           
+                           <div class="infobox-tip" id="GUID-F60D0CD9-2EA8-4825-ABAB-63CF092CA166__GUID-14178935-7D6E-4534-A2AF-1FC1CAD5977D">
+                              <p class="notep1">Tip:</p>To learn more
+                        about all the options available, see <a href="choosing-an-application-creation-method.html#GUID-AA12AD40-0CBA-4549-B4AC-B97DA8F0A41E" title="Learn about available creation methods when creating a new application.">Choosing an Application Creation Method</a>.
+                           </div>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Use Create App Wizard</span>.</span><div>
+                           
+                           <p>The Create an Application page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>For Name, enter the name used to identify the application to developers.</span></li>
+                     <li class="stepexpand"><span>To add a page, click <span class="uicontrol bold">Add Page</span> and select the desired
+                    page type. The user interface changes based on the selected page type. </span><div>
+                           
+                           <div class="infobox-tip" id="GUID-F60D0CD9-2EA8-4825-ABAB-63CF092CA166__GUID-2CA0017F-D58D-41E8-A8A4-56E68D1DA9E8">
+                              <p class="notep1">Tip:</p> The Create Page
+                        Wizard supports the creation of a number of mobile friendly reports and
+                        forms. See <a href="legacy-forms-optimized-for-mobile.html#GUID-140F1D2B-0E87-418B-9BF7-070886261DB1" title="Oracle APEX includes three mobile friendly reports and forms: List View, Column Toggle, and Reflow Report.">Mobile Friendly Legacy Forms</a>. 
+                           </div>
+                           
+                           <p>Pages you create display under <span class="uicontrol bold">Pages</span>.
+                           </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>For Features, select features to include with your application. </span><div>
+                           
+                           <p>Features provide application-level functionality and can only be
+                        added once per application. To learn more, see Help. To select all features,
+                        click <span class="uicontrol bold">Check All</span>.
+                           </p>
+                           
+                           <div class="figure" id="GUID-F60D0CD9-2EA8-4825-ABAB-63CF092CA166__FIG_TYC_PZQ_XGB"><img id="GUID-F60D0CD9-2EA8-4825-ABAB-63CF092CA166__IMAGE_UYC_PZQ_XGB" height="606" width="1217" src="img/create_app_wiz_c.png" alt="Description of create_app_wiz_c.png follows" title="Description of create_app_wiz_c.png follows" longdesc="img_text/create_app_wiz_c.html"><br><a href="img_text/create_app_wiz_c.html">Description of the illustration create_app_wiz_c.png</a></div>
+                           
+                           <p>Features specific to a Progressive Web App include:</p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-F60D0CD9-2EA8-4825-ABAB-63CF092CA166__UL_CJX_GWY_MWB">
+                              <li><span class="uicontrol bold">Install Progressive Web App</span> - Progressive Web
+                            Applications (PWA) are designed to be capable, reliable, and
+                            installable. A Progressive Web App feels like a platform-specific
+                            application. Enabling this option:
+                                 <ul style="list-style-type: disc;" id="GUID-F60D0CD9-2EA8-4825-ABAB-63CF092CA166__UL_I13_NWY_MWB">
+                                    <li>Adds a new navigation bar entry, <code class="codeph">Install
+                                        App</code>.
+                                    </li>
+                                    <li>Enables users to install the app on devices.</li>
+                                 </ul>
+                              </li>
+                              <li><span class="uicontrol bold">Push Notifications</span> - Enable web apps to send
+                            notifications to a user's device even when the user is not currently on
+                            the website. Notifications can be sent to a user's desktop or mobile
+                            device and can be used to alert the user to new content or events on the
+                            website, or to re-engage the user with the website. Enabling this
+                                option:
+                                 <ul style="list-style-type: disc;" id="GUID-F60D0CD9-2EA8-4825-ABAB-63CF092CA166__UL_MWS_SWY_MWB">
+                                    <li>Adds a new navigation bar entry, <code class="codeph">User
+                                        Settings</code>.
+                                    </li>
+                                    <li>Enables users to subscribe and unsubscribe to push
+                                    notifications. </li>
+                                    <li>When subscribed, users can receive push
+                                    notifications from the <span>APEX</span> app.
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Application</span>.</span></li>
+                     <li class="stepexpand"><span>Configure Progressive Web App attributes. See <a href="creating-a-progressive-web-app.html#GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47" title="Configure Progressive Web App attributes for both new and existing Progressive Web App applications.">Configuring Attributes for a Progressive Web App</a>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-a-progressive-web-app.html#GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" title="Learn about Progressive Web App (PWA) features and requirements.">Creating a Progressive Web App (PWA)</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47" name="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47"></a><h3 id="HTMDB-GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47" class="sect3"><span class="enumeration_section">5.10.2.3 </span>Configuring Attributes for a Progressive Web
+        App
+               </h3>
+               <div>
+                  <p>Configure Progressive Web App attributes for both new and existing
+        Progressive Web App applications.</p>
+                  <div class="section">
+                     <p>To configure Progressive Web App attributes:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Select an application. </span></li>
+                     <li class="stepexpand"><span>From the Application home page, you can access the Progressive Web App page in
+                    two ways:</span><ul id="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47__CHOICES_VMQ_31D_QKB">
+                           <li><span class="uicontrol bold">Edit Application Definition</span>
+                            button:
+                              <ul style="list-style-type: disc;" id="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47__UL_ZWF_KJ1_4SB">
+                                 <li>
+                                    
+                                    <p>Click <span class="uicontrol bold">Edit Application
+                                        Definition</span> to the right of the application
+                                    name.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Click the <span class="uicontrol bold">Progressive Web App</span>
+                                    tab.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                           </li>
+                           <li>From Shared Components:
+                              <ol type="a" id="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47__OL_WMQ_31D_QKB">
+                                 <li>
+                                    
+                                    <p>Click <span class="uicontrol bold">Shared Components</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Under User Interface, click <span class="uicontrol bold">Progressive
+                                        Web App</span>.
+                                    </p>
+                                    
+                                 </li>
+                              </ol>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Under <span class="uicontrol bold">General</span>, edit the following:</span><ol type="a" id="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47__SUBSTEPS_KJJ_YJ1_4SB">
+                           <li><span>Enable Progressive Web App - Confirm this option is enabled.</span></li>
+                           <li><span>Installable - Confirm this option is enabled.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under <span class="uicontrol bold">Installability</span>:</span><ol type="a" id="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47__SUBSTEPS_XZY_NGY_WQB">
+                           <li class="substepexpand"><span>Display - Select the preferred display mode for the application. This
+                            option controls how much of the browser UI the user sees. Options
+                            include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47__UL_N5J_DHY_WQB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Fullscreen</span> - Opens the PWA
+                                        without any browser UI. This option takes the entirety of
+                                        the screen or window.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Standalone</span>- Opens the PWA
+                                        to look like a standalone application. The app runs in a
+                                        distinct window, separate from the browser. Standard browser
+                                        UI components like the URL bar and buttons are not
+                                        visible.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Minimal UI</span> - Similar to
+                                        standalone, except with browser controlling navigation
+                                        buttons like back and refresh.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Browser</span> - Opens the PWA
+                                        is a regular browser UI.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                                 <p><span class="bold">Note</span>: Some devices and browsers ignore this
+                                attribute. <span>Oracle APEX</span> is only relaying this information to the device which handles the
+                                Progressive Web App appropriately. For more information, see <a href="https://web.dev/add-manifest/" target="_blank">https://web.dev/add-manifest//</a>.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Screen Orientation - Select the preferred screen orientation when using
+                            this Progressive Web App. This option applies mostly for mobile
+                            devices.</span><div>
+                                 
+                                 <p><span class="bold">Note</span>: Some devices and browsers ignore this
+                                attribute. <span>Oracle APEX</span> is only relaying this information to the device which handles the
+                                Progressive Web App appropriately.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Theme Color - Defines the default theme color for the
+                            application.</span><div>
+                                 
+                                 <p>This attribute affects how the operating system displays
+                                the application (for example, for an Android's task switcher, the
+                                theme color surrounds the application).</p>
+                                 
+                                 <p><span class="bold">Note</span>: Some devices and browsers ignore this
+                                attribute. <span>Oracle APEX</span> is only relaying this information to the device which handles the
+                                Progressive Web App appropriately.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Background Color - Select the background color. </span><div>
+                                 
+                                 <p>The background color defines a placeholder background
+                                color for the application to display before its stylesheet is
+                                loaded. Therefore, the background color should match the theme body
+                                background color for a smooth transition between launching the web
+                                application and loading the application content.</p>
+                                 
+                                 <p><span class="bold">Note</span>: Some devices and browsers ignore this
+                                attribute. <span>APEX</span> is only relaying this information to the device which handles the
+                                Progressive Web App appropriately.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>iOS Status Bar Style - The iOS Status Bar Style attribute is rendered
+                            as a meta tag on the page to control the appearance of the status bar in
+                            a web application when it is added to the home screen on an iOS device.
+                            Options include</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47__UL_YHP_ZN1_4SB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Default</span> - This is the
+                                        default value and it displays the status bar in the usual
+                                        way.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Black</span> - This value makes
+                                        the status bar black.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Translucent</span> - This value
+                                        makes the status bar translucent, enabling the content to be
+                                        displayed behind it.
+                                       </p>
+                                       
+                                       <p><span class="uicontrol bold">Note</span>: Only iOS devices use this
+                                        attribute. <span>Oracle APEX</span> is only relaying this information to the device which
+                                        handles the Progressive Web App appropriately.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>App Description - Explains what the application does. Use this
+                            attribute to provide more information to users when they are prompted to
+                            install the application.</span></li>
+                           <li class="substepexpand"><span>Custom Manifest - Used to store additional JSON properties for the Web
+                            App Manifest file. The properties found here will be used to extend the
+                            declarative options above, by overriding existing properties or
+                            appending new properties.</span><div>
+                                 
+                                 <p>For more information on building a Custom Manifest, you
+                                can read the Web App Manifest specifications: <a href="https://www.w3.org/TR/appmanifest/" target="_blank">https://www.w3.org/TR/appmanifest/</a>.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Screenshots - Include screenshots for promotional purposes when users
+                            are prompted to install the Progressive Web App. </span><div>
+                                 
+                                 <p>To add a screenshot:</p>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47__UL_KS3_TFW_M5B">
+                                    <li>Click <span class="uicontrol bold">Add Screenshot</span>.
+                                    </li>
+                                    <li>Description - Enter the PWA screenshot label which
+                                    is used for accessibility purposes when installing the PWA.</li>
+                                    <li>Sequence - Identifies the display sequence used by
+                                    this PWA screenshot.</li>
+                                    <li>Upload a Screenshot:
+                                       <ul style="list-style-type: disc;" id="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47__UL_XNB_3GW_M5B">
+                                          <li>Drag and Drop - Drag and drop the file to
+                                            the region.</li>
+                                          <li>Choose a File - Click the <span class="uicontrol bold">Upload
+                                                a Screenshot</span> region and then navigate to
+                                            and select the file.
+                                          </li>
+                                       </ul>
+                                    </li>
+                                    <li>Build Option - Identifies the build option that this
+                                    PWA screenshot uses.</li>
+                                    <li>Comments - Add comments associated with this PWA
+                                    screenshot.</li>
+                                    <li>Click <span class="uicontrol bold">Create</span>.
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Shortcuts - Include shortcuts to enable users of installed PWAs to
+                            quickly access a specific page. For touch-enabled devices, shortcuts are
+                            accessible when doing a long-press on the application icon on the home
+                            screen. For other devices, shortcuts are accessible when doing a right
+                            click on the application icon on the task bar.</span><div>
+                                 
+                                 <p>To add a shortcut:</p>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47__UL_MC2_KHW_M5B">
+                                    <li>Click <span class="uicontrol bold">Add Shortcut</span>.
+                                    </li>
+                                    <li>Name - Enter the name of the PWA shortcut.</li>
+                                    <li>Target URL - Specify the page of the application
+                                    for the current shortcut.</li>
+                                    <li>Sequence - Identifies the display sequence used by
+                                    this PWA screenshot.</li>
+                                    <li>Upload an icon:
+                                       <ul style="list-style-type: disc;" id="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47__UL_CMR_MHW_M5B">
+                                          <li>Drag and Drop - Drag and drop the file to
+                                            the region.</li>
+                                          <li>Choose a File - Click the <span class="uicontrol bold">Upload
+                                                an Icon</span> region and then navigate to and
+                                            select the file.
+                                          </li>
+                                       </ul>
+                                    </li>
+                                    <li>Description - Enter a description for this PWA
+                                    shortcut.</li>
+                                    <li>Build Option - Identifies the build option that this
+                                    PWA shortcut uses.</li>
+                                    <li>Comments - Add comments associated with this PWA
+                                    shortcut.</li>
+                                    <li>Click <span class="uicontrol bold">Create</span>.
+                                    </li>
+                                 </ul>
+                                 
+                                 <div class="infobox-tip" id="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47__GUID-7EE326D2-9884-4F97-88A1-7D3DDCEF4AC0">
+                                    <p class="notep1">Tip:</p>An <span>APEX</span> application can only use PWA Shortcuts if Rejoin Sessions is
+                                enabled. Before configuring shortcuts, click either
+                                    <span class="uicontrol bold">Enable for Public Sessions</span> or
+                                    <span class="uicontrol bold">Enable for All Sessions</span>. To learn more,
+                                see <a href="configuring-security-attributes.html#GUID-33A67D5E-1128-4D23-9C5C-15FC9BE1B783">Session Management</a>.
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under <span class="uicontrol bold">Push Notifications</span>:</span><ol type="a" id="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47__SUBSTEPS_KGW_ZXY_MWB">
+                           <li class="substepexpand"><span>Enable Push Notifications - Enable this option to allow web apps to
+                            send notifications to a user's device even when the user is not
+                            currently on the website. Notifications can be sent to a user's desktop
+                            or mobile device and can be used to alert the user to new content or
+                            events on the website, or to re-engage the user with the website. </span><div>
+                                 
+                                 <p>Enabling this option:</p>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47__UL_NHN_FYY_MWB">
+                                    <li>Adds a new navigation bar entry: <span class="uicontrol bold">User
+                                        Settings</span></li>
+                                    <li>Enables users to subscribe and unsubscribe to push
+                                    notifications. </li>
+                                    <li>When subscribed, users can receive push
+                                    notifications from the <span>APEX</span> app.
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>If <span class="uicontrol bold">Enable Push Notifications</span> is enabled, the
+                            following attributes appear:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47__UL_S1Y_KYY_MWB">
+                                    <li>Credentials - Select the credential to authenticate against. To
+                                    edit the credential, navigate to Shared Components,
+                                        Credentials.
+                                       <p>Credentials are required to setup push
+                                        notification securely. A public and private key pair are
+                                        used respectively to allow users to subscribe to push
+                                        notifications on the client side, and for the server to send
+                                        the notifications to the subscribers.</p>
+                                    </li>
+                                    <li>Settings Page - If this application already has the push
+                                    notification feature page, the page number displays here. If the
+                                    application does not have the push notification feature page, it
+                                    will show that the feature page is available to add.</li>
+                                    <li>Contact Email - Enter the email address to contact in case the
+                                    push notification service provider (Google, Mozilla, Apple,
+                                    etc.) wants to contact the owner of the application. We
+                                    recommend using a group email so it's not dependent on a single
+                                    individual.</li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under <span class="uicontrol bold">Service Worker Configuration</span>, select a Service
+                    Worker. </span><div>
+                           
+                           <p>Service workers are JavaScript files that can execute code even
+                        when the app is not in use. Service workers can listen to events like
+                        fetching resources or handling notifications. You can modify a service
+                        worker through hooks, or by replacing events completely. Service Worker
+                        options include:</p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47__UL_X3Q_BP1_4SB">
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Default</span> - The <span>APEX</span> engine generates it with the following strategy:
+                                 </p>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-F7AFC719-BC93-41C4-9571-DF44A10D4A47__UL_FC5_GP1_4SB">
+                                    <li>
+                                       
+                                       <p>Install and activate the service worker</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Serve resources from cache if cache exists</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Otherwise serve from network, then put resource in cache</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Serve an offline page if network fails</p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Configure Hooks</span> - Fill in the placeholders in
+                                the service worker code to add your own. Hooks locations are
+                                provided by Oracle APEX. When using this option, you can choose to
+                                "Download Configuration" and use it as a File URL.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">File URL</span> -  Provide a URL reference to a file
+                                that contains the service worker hooks interface. This is useful for
+                                sharing service worker hooks across multiple applications. If using
+                                the file reference, make sure to follow the interface architecture
+                                appropriately or else the service worker will fail at runtime. 
+                                 </p>
+                                 
+                                 <p>To view the interface structure, see field-level Help for this
+                                attribute.</p>
+                                 
+                              </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-a-progressive-web-app.html#GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" title="Learn about Progressive Web App (PWA) features and requirements.">Creating a Progressive Web App (PWA)</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Unloading Data">
+      <meta name="abstract" content="Use the Unload Data page to export the contents of a table to a text file or XML document.">
+      <meta name="description" content="Use the Unload Data page to export the contents of a table to a text file or XML document.">
+      <meta name="DC.subject" content="data, exporting from database, unloading, Unload data Wizard, wizards, exporting contents of table, exporting text file, XML document, exporting to, exporting XML, Export XML Wizard, Unload to XML Wizard">
+      <meta name="keywords" content="data, exporting from database, unloading, Unload data Wizard, wizards, exporting contents of table, exporting text file, XML document, exporting to, exporting XML, Export XML Wizard, Unload to XML Wizard">
+      <meta name="DC.Relation" scheme="URI" content="using-data-workshop.html#GUID-C35417B6-D1D0-4098-BBE1-35F7BA1A2423">
+      <meta name="DC.Relation" scheme="URI" content="unloading-data.html#GUID-F362434C-FD53-4868-B2FE-5766D3E68FC4">
+      <meta name="DC.Relation" scheme="URI" content="unloading-data.html#GUID-C5AF9648-0613-4377-9F84-887C0F192AA3">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Neil Fernandez">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Synders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="January2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-DC0B8E1D-FA35-498E-AF2E-4EB737F51817">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Use the Unload Data page to export the contents of a table to a text file or XML document.">
+      <meta name="description" content="Use the Unload Data page to export the contents of a table to a text file or XML document.">
+      <title>Unloading Data</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="SQL Workshop Guide">
+      <meta property="og:description" content="Use the Unload Data page to export the contents of a table to a text file or XML document.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="SQL Workshop Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-sql-workshop-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-01-14T12:14:06-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2008, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12911-01">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="loading-data.html" title="Previous" type="text/html">
+      <link rel="next" href="loading-data-from-cloud.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX SQL Workshop Guide">
+    <meta name="dcterms.isVersionOf" content="AEUTL">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","name":"Unloading Data","description":"Use the Unload Data page to export the contents of a table to a text file or XML document.","datePublished":"2025-01-14 CST","dateModified":"2025-01-14 CST"} </script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="loading-data.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="loading-data-from-cloud.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article>
+         <header>
+            <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Workshop Guide</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-sql-workshop-utilities.html" property="item" typeof="WebPage"><span property="name"> Using SQL Workshop Utilities</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-data-workshop.html" property="item" typeof="WebPage"><span property="name">Using Data Workshop</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">Unloading Data</li>
+            </ol>
+            <a id="GUID-DC0B8E1D-FA35-498E-AF2E-4EB737F51817" name="GUID-DC0B8E1D-FA35-498E-AF2E-4EB737F51817"></a>
+            
+            <h2 id="AEUTL-GUID-DC0B8E1D-FA35-498E-AF2E-4EB737F51817" class="sect2"><span class="enumeration_section">5.1.6 </span>Unloading Data
+            </h2>
+         </header>
+         <div class="ind">
+            <div>
+               <p>Use the Unload Data page to export the contents of a table to a text file or XML document. </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="unloading-data.html#GUID-F362434C-FD53-4868-B2FE-5766D3E68FC4">Unloading a Text File</a><br>Use the Unload Data wizard to export the contents of a table to a text file. For example, you could export an entire table to a comma-delimited file (.csv).
+                  </li>
+                  <li class="ulchildlink"><a href="unloading-data.html#GUID-C5AF9648-0613-4377-9F84-887C0F192AA3">Unloading to an XML Document</a><br>Use the Unload Data wizard to export the contents of a table to an XML document adhering to the Canonical XML specification.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-DC0B8E1D-FA35-498E-AF2E-4EB737F51817__GUID-514677D5-552E-4CAF-B219-0A759AF2D8D3">
+                  <p class="notep1">See Also:</p>
+                  <p><a href="import-export-load-and-unload-options.html#GUID-654F74E2-2611-45F2-BE5F-C61D3B75707F" title="The Oracle Database and Oracle APEX provide several powerful options for importing, exporting, loading, and unloading data.">Import, Export, Load, and Unload Options</a></p>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="using-data-workshop.html#GUID-C35417B6-D1D0-4098-BBE1-35F7BA1A2423" title="Use Data Workshop to load and unload data to the database.">Using Data Workshop</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-F362434C-FD53-4868-B2FE-5766D3E68FC4" name="GUID-F362434C-FD53-4868-B2FE-5766D3E68FC4"></a><h3 id="AEUTL-GUID-F362434C-FD53-4868-B2FE-5766D3E68FC4" class="sect3"><span class="enumeration_section">5.1.6.1 </span>Unloading a Text File
+               </h3>
+               <div>
+                  <p>Use the Unload Data wizard to export the contents of a table to a text file. For example, you could export an entire table to a comma-delimited file (.csv).</p>
+                  <div class="section">
+                     <p>To unload a table to a text file: </p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol id="GUID-F362434C-FD53-4868-B2FE-5766D3E68FC4__STEPS_KY3_VG3_TSB">
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span class="uicontrol bold">SQL Workshop</span> icon.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Utilities</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Data Workshop</span>.</span></li>
+                     <li class="stepexpand"><span>Under Get Started, click <span class="uicontrol bold">Unload Data</span>.</span><div>
+                           <p>The Unload Data Wizard appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Select <span class="uicontrol bold">Text Format</span> and click <span class="uicontrol bold">Next</span>.</span><div>
+                           <p>The <span class="uicontrol bold">Unload to Text - Columns</span> appears.
+                           </p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>On Unload Text - Columns, edit the following:</span><ol type="a" id="GUID-F362434C-FD53-4868-B2FE-5766D3E68FC4__SUBSTEPS_BSV_CNF_PHB">
+                           <li><span>Schema - Select the database schema that owns the object you would like to export.</span></li>
+                           <li><span>Table - Select the database table you would like export to a plain text format.</span></li>
+                           <li><span>Columns - Highlight the columns you would like to be part of this plain text file. Only Oracle built in data types except BLOB and BFILE are supported to unload.</span></li>
+                           <li><span>Where Clause - Enter SQL <code class="codeph">WHERE</code> clause to limit the rows that are selected. For example: <code class="codeph">DEPTNO = 10</code></span></li>
+                           <li><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Options, enter the following:</span><ol type="a" id="GUID-F362434C-FD53-4868-B2FE-5766D3E68FC4__SUBSTEPS_TNY_SNF_PHB">
+                           <li><span>Separator - Specify the type of separator used to separate the column values on each line. The default value is a comma (,). To use a tab as a column separator, enter a backslash followed by the letter "t" ().</span></li>
+                           <li><span>Optionally Enclosed By - Use this option to specify how to identify text strings in a column. You can specify single or double quotation marks.</span></li>
+                           <li><span>Include Column Names - Check this box to include the name of each column in the text file.</span></li>
+                           <li><span>File Format - Select <span class="uicontrol bold">DOS</span> to have the lines in the resulting file terminated by carriage returns and line feeds. Select <span class="uicontrol bold">UNIX</span> to have the lines in the resulting file contain terminated by line feeds.</span></li>
+                           <li><span>File Character Set - Select the character set to encode the export file.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Unload Data</span>.</span><div>
+                           <p>The file is downloaded.</p>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="unloading-data.html#GUID-DC0B8E1D-FA35-498E-AF2E-4EB737F51817" title="Use the Unload Data page to export the contents of a table to a text file or XML document.">Unloading Data</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-C5AF9648-0613-4377-9F84-887C0F192AA3" name="GUID-C5AF9648-0613-4377-9F84-887C0F192AA3"></a><h3 id="AEUTL-GUID-C5AF9648-0613-4377-9F84-887C0F192AA3" class="sect3"><span class="enumeration_section">5.1.6.2 </span>Unloading to an XML Document
+               </h3>
+               <div>
+                  <p>Use the Unload Data wizard to export the contents of a table to an XML document adhering to the Canonical XML specification.</p>
+                  <p>To unload a table to an XML document:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span class="uicontrol bold">Utilities</span> icon.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Data Workshop</span>.</span></li>
+                     <li class="stepexpand"><span>Under data Unload, click <span class="uicontrol bold">to XML</span>. </span><div>The Unload to XML Wizard appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Under Get Started, click <span class="uicontrol bold">Unload Data</span>.</span><div>The Unload Data Wizard appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Select <span class="uicontrol bold">XML Format</span> and click <span class="uicontrol bold">Next</span>.</span><div>The <span class="uicontrol bold">Unload to XML - Columns</span> appears.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Select the appropriate schema.</span></li>
+                     <li class="stepexpand"><span>Select the table to unload.</span></li>
+                     <li class="stepexpand"><span>Highlight the columns to include.</span></li>
+                     <li class="stepexpand"><span>(Optional) Enter a Where clause to limit the records unloaded, and click <span class="uicontrol bold">Unload Data.</span></span><div>The File Download window appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span> to download the file.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="unloading-data.html#GUID-DC0B8E1D-FA35-498E-AF2E-4EB737F51817" title="Use the Unload Data page to export the contents of a table to a text file or XML document.">Unloading Data</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

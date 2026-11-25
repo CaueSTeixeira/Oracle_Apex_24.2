@@ -1,0 +1,165 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="GET_ORDERBY_NULLS_SUPPORT Function">
+      <meta name="DC.subject" content="GET_ORDERBY_NULLS_SUPPORT function, APEX_PLUGIN_UTIL">
+      <meta name="keywords" content="GET_ORDERBY_NULLS_SUPPORT function, APEX_PLUGIN_UTIL">
+      <meta name="DC.Relation" scheme="URI" content="APEX_PLUGIN_UTIL.html#GUID-E1FE05BA-E290-4446-82DC-5271B75FDD4C">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-4C417AD8-4EBE-415C-AD99-EF8A8FEA7EF6">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>GET_ORDERBY_NULLS_SUPPORT Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="GET_HTML_ATTR-Function.html" title="Previous" type="text/html">
+      <link rel="next" href="GET_PLSQL_EXPR_RESULT_BOOLEAN-Function.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"GET_ORDERBY_NULLS_SUPPORT Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="GET_HTML_ATTR-Function.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="GET_PLSQL_EXPR_RESULT_BOOLEAN-Function.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-4C417AD8-4EBE-415C-AD99-EF8A8FEA7EF6" name="GUID-4C417AD8-4EBE-415C-AD99-EF8A8FEA7EF6"></a>
+         
+         <h2 id="AEAPI-GUID-4C417AD8-4EBE-415C-AD99-EF8A8FEA7EF6" class="sect2"><span class="enumeration_section">45.23 </span>GET_ORDERBY_NULLS_SUPPORT Function
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function checks whether the current data source is enabled to specify a <code class="codeph">NULLS</code> clause for sorting. While this is always true for local and REST-enabled SQL, some REST APIs may not support it.
+                  </p>
+                  <p>Plug-in developers can use this function to determine whether a <code class="codeph">NULLS</code> clause is possible for this data source and show or hide these options in their UI.
+                  </p>
+                  <p>You can specify a <code class="codeph">NULLS FIRST</code> or <code class="codeph">NULLS LAST</code> clause if one of the following conditions is <span class="bold">true</span>:
+                  </p>
+                  <ul style="list-style-type: disc;" id="GUID-4C417AD8-4EBE-415C-AD99-EF8A8FEA7EF6__UL_NLD_GXP_DVB">
+                     <li>You are working against the local database or a REST-enabled SQL Service.</li>
+                     <li>The REST API disables pagination. You always fetch all rows and sort locally.</li>
+                     <li>The REST API disables server-side ordering. You must fetch all rows and sort locally.</li>
+                     <li>The REST API enables pagination, supports server-side ordering, and includes an <code class="codeph">ORDER BY NULLS</code> clause.
+                     </li>
+                  </ul>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-4C417AD8-4EBE-415C-AD99-EF8A8FEA7EF6__GUID-4BACA0A5-CA13-4765-914C-C9A5F5275A82">Syntax</p>
+                  <pre class="pre codeblock"><code>APEX_PLUGIN_UTIL.GET_ORDERBY_NULLS_SUPPORT
+    RETURN apex_exec.t_supports_orderby_nulls_as;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-4C417AD8-4EBE-415C-AD99-EF8A8FEA7EF6__GUID-2118C338-643E-4828-B981-F63B51FF8CA0">Returns</p>
+                  <p>This function returns an instance of <code class="codeph">APEX_EXEC.T_SUPPORTS_ORDERBY_NULLS_AS</code> which indicates whether <code class="codeph">ORDER BY NULLS</code> clauses are supported or how the REST API treats <code class="codeph">NULLS</code> when ordering.
+                  </p>
+                  <div class="tblformal" id="GUID-4C417AD8-4EBE-415C-AD99-EF8A8FEA7EF6__GUID-AFEF5317-38DA-4552-89F3-FCB6A18A7292">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Returns for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="42%" id="d215302e112">Return</th>
+                              <th align="left" valign="bottom" width="58%" id="d215302e114">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d215302e118" headers="d215302e112 "><code class="codeph">wwv_flow_exec_api.c_orderby_nulls_flexible</code></td>
+                              <td align="left" valign="top" width="58%" headers="d215302e118 d215302e114 ">The data source supports ORDER BY NULLs clauses.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d215302e124" headers="d215302e112 "><code class="codeph">wwv_flow_exec_api.c_orderby_nulls_are_lowest</code></td>
+                              <td align="left" valign="top" width="58%" headers="d215302e124 d215302e114 ">The data source treats NULLs as the lowest values when sorting.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d215302e130" headers="d215302e112 "><code class="codeph">wwv_flow_exec_api.c_orderby_nulls_are_highest</code></td>
+                              <td align="left" valign="top" width="58%" headers="d215302e130 d215302e114 ">The data source treats NULLs as the highest values when sorting.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d215302e136" headers="d215302e112 "><code class="codeph">wwv_flow_exec_api.c_orderby_nulls_always_last</code></td>
+                              <td align="left" valign="top" width="58%" headers="d215302e136 d215302e114 ">The data source always orders NULLs last.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d215302e142" headers="d215302e112 "><code class="codeph">wwv_flow_exec_api.c_orderby_nulls_always_first</code></td>
+                              <td align="left" valign="top" width="58%" headers="d215302e142 d215302e114 ">The data source always orders NULLs first.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-4C417AD8-4EBE-415C-AD99-EF8A8FEA7EF6__GUID-BD217647-FAFB-4D84-A2E1-4DCBBD38D3C9">Example</p>
+                  <pre class="pre codeblock"><code>DECLARE
+    l_supports_orderby_nulls apex_exec.t_supports_orderby_nulls_as;
+BEGIN
+    l_supports_orderby_nulls := apex_plugin_util.get_orderby_nulls_support;
+
+    IF l_supports_orderby_nulls = wwv_flow_exec_api.c_orderby_nulls_flexible THEN
+        ...
+    END IF;
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_PLUGIN_UTIL.html#GUID-E1FE05BA-E290-4446-82DC-5271B75FDD4C">APEX_PLUGIN_UTIL</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

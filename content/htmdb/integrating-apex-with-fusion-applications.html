@@ -1,0 +1,405 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Integrating APEX with Fusion Applications">
+      <meta name="abstract" content="Use Oracle APEX to build extensions to Fusion Applications.">
+      <meta name="description" content="Use Oracle APEX to build extensions to Fusion Applications.">
+      <meta name="DC.subject" content="Fusion application, integrating with, fusion integration, with APEX, Create Application Wizard, create fusion integration, application, creating fusion integration, Fusion Applications integration, requirements, Create Fusion Integration, starter application, Database Tools Fusion Integration Wizard, starter application, Create Application Wizard, Create Fusion Integration">
+      <meta name="keywords" content="Fusion application, integrating with, fusion integration, with APEX, Create Application Wizard, create fusion integration, application, creating fusion integration, Fusion Applications integration, requirements, Create Fusion Integration, starter application, Database Tools Fusion Integration Wizard, starter application, Create Application Wizard, Create Fusion Integration">
+      <meta name="DC.Relation" scheme="URI" content="creating-applications.html#GUID-F09AF2EB-F452-4CC1-A3B7-8B0DA9FF94B0">
+      <meta name="DC.Relation" scheme="URI" content="integrating-apex-with-fusion-applications.html#GUID-F066D9AB-B921-4B1A-815E-BBF760B46A57">
+      <meta name="DC.Relation" scheme="URI" content="integrating-apex-with-fusion-applications.html#GUID-B99DBC49-11F4-4398-B243-D9053E4C940F">
+      <meta name="DC.Relation" scheme="URI" content="integrating-apex-with-fusion-applications.html#GUID-D9CB45D8-9BF8-4B9C-91F9-B1E9FA162CE6">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Topic">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-E9480E6C-A6E9-4C40-8193-F15B41FFF442">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Use Oracle APEX to build extensions to Fusion Applications.">
+      <meta name="description" content="Use Oracle APEX to build extensions to Fusion Applications.">
+      <title>Integrating APEX with Fusion Applications</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Use Oracle APEX to build extensions to Fusion Applications.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="creating-an-application-from-a-file.html" title="Previous" type="text/html">
+      <link rel="next" href="using-blueprints.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Integrating APEX with Fusion Applications","description":"Use Oracle APEX to build extensions to Fusion Applications.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="creating-an-application-from-a-file.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="using-blueprints.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-E9480E6C-A6E9-4C40-8193-F15B41FFF442" name="GUID-E9480E6C-A6E9-4C40-8193-F15B41FFF442"></a>
+         
+         <h2 id="HTMDB-GUID-E9480E6C-A6E9-4C40-8193-F15B41FFF442" class="sect2"><span class="enumeration_section">5.6 </span>Integrating APEX with Fusion
+        Applications
+         </h2>
+         <div class="ind">
+            <p>Use <span>Oracle APEX</span> to build extensions to Fusion Applications.
+            </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="integrating-apex-with-fusion-applications.html#GUID-F066D9AB-B921-4B1A-815E-BBF760B46A57">About Oracle APEX and Fusion Applications Integration Requirements</a><br>Learn about requirements for integrating <span>Oracle APEX</span> with Fusion Applications. 
+                  </li>
+                  <li class="ulchildlink"><a href="integrating-apex-with-fusion-applications.html#GUID-B99DBC49-11F4-4398-B243-D9053E4C940F">About the Fusion Integration Starter Application</a><br>Learn about the Create Fusion Integration starter application.
+                  </li>
+                  <li class="ulchildlink"><a href="integrating-apex-with-fusion-applications.html#GUID-D9CB45D8-9BF8-4B9C-91F9-B1E9FA162CE6">Creating an Application with Integrations to Fusion Applications</a><br>Create a starter application with pre-configured integrations to Fusion                 Applications.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="creating-applications.html#GUID-F09AF2EB-F452-4CC1-A3B7-8B0DA9FF94B0" title="An application is a collection of pages linked together using navigation menus, tabs, buttons, or hypertext links. Application pages share a common session state and authentication.">Creating Applications</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-F066D9AB-B921-4B1A-815E-BBF760B46A57" name="GUID-F066D9AB-B921-4B1A-815E-BBF760B46A57"></a><h3 id="HTMDB-GUID-F066D9AB-B921-4B1A-815E-BBF760B46A57" class="sect3"><span class="enumeration_section">5.6.1 </span>About Oracle APEX and Fusion Applications
+        Integration Requirements
+               </h3>
+               <div>
+                  <p>Learn about requirements for integrating <span>Oracle APEX</span> with Fusion Applications. 
+                  </p>
+                  <div class="section">Requirements for integrating <span>Oracle APEX</span> with Fusion Applications include:
+                     <ul style="list-style-type: disc;" id="GUID-F066D9AB-B921-4B1A-815E-BBF760B46A57__UL_CDR_12R_LDC">
+                        <li>A Fusion Application subscription.</li>
+                        <li>An <span>Autonomous Database</span> with a workload type of Data Warehouse or Transactional Processing.
+                        </li>
+                        <li>SQLNet connections to an Oracle Database in the same tenancy.</li>
+                     </ul>
+                     <div class="infoboxnote" id="GUID-F066D9AB-B921-4B1A-815E-BBF760B46A57__GUID-6E92E560-D136-4D19-8964-3F46E48571C4">
+                        <p class="notep1">Note:</p>
+                        <span>Oracle APEX Application
+                                        Development</span> (<span>APEX Service</span>) does not support Fusion Application integrations since APEX workloads do not
+                include SQLNet connections.
+                     </div>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-F066D9AB-B921-4B1A-815E-BBF760B46A57__GUID-C0FC62A6-28D5-470A-B243-A7E77064CFD2">About the Integration Process</p>
+                     
+                     
+                     <p>Integrating <span>APEX</span> with Fusion Applications is a three-stage process:
+                     </p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-F066D9AB-B921-4B1A-815E-BBF760B46A57__UL_CJZ_RBR_LDC">
+                        <li>
+                           
+                           <p><span class="bold">Create a Connection</span> - Run the Database Tools Fusion
+                        Integration Wizard to create a connection between the Oracle Fusion
+                        Applications instance and the Oracle Database where <span>APEX</span> resides. 
+                           </p>
+                           
+                           <p>See <a href="https://docs.oracle.com/en-us/iaas/database-tools/doc/integrating-apex-fusion-applications.html" target="_blank">Integrating Oracle APEX with
+                            Fusion Applications</a> in <span class="italic">Oracle Cloud Infrastructure
+                            Documentation</span>.
+                           </p>
+                           
+                        </li>
+                        <li><span class="bold">Create a Starter Sample Application</span> - Run the Create
+                    Application Wizard in <span>App Builder</span> to create a starter sample application with pre-configured integration to the
+                    Oracle Fusion Applications instance. See <a href="integrating-apex-with-fusion-applications.html#GUID-D9CB45D8-9BF8-4B9C-91F9-B1E9FA162CE6" title="Create a starter application with pre-configured integrations to Fusion Applications.">Creating an Application with Integrations to Fusion Applications</a>.
+                        </li>
+                     </ul>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="integrating-apex-with-fusion-applications.html#GUID-E9480E6C-A6E9-4C40-8193-F15B41FFF442" title="Use Oracle APEX to build extensions to Fusion Applications.">Integrating APEX with Fusion Applications</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-B99DBC49-11F4-4398-B243-D9053E4C940F" name="GUID-B99DBC49-11F4-4398-B243-D9053E4C940F"></a><h3 id="HTMDB-GUID-B99DBC49-11F4-4398-B243-D9053E4C940F" class="sect3"><span class="enumeration_section">5.6.2 </span>About the Fusion Integration Starter
+        Application
+               </h3>
+               <div>
+                  <p>Learn about the Create Fusion Integration starter application.</p>
+                  <div class="section">
+                     
+                     <p>When you run the Create Application Wizard and select the
+                    <span class="uicontrol bold">Create Fusion Integration</span> option, the wizard creates a
+                starter application and completes the following database setup tasks:
+                     </p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-B99DBC49-11F4-4398-B243-D9053E4C940F__UL_AXG_FBT_MDC">
+                        <li><span class="bold">Remote Server</span> - Creates a Remote Server at the
+                    workspace-level named according to the convention
+                            <code class="codeph">APEX_FA_<span class="codeinlineitalic">FUSION_INSTANCE</span>_REST_APIS</code> where
+                            <code class="codeph"><span class="codeinlineitalic">FUSION_INSTANCE</span></code> is the System Name which can be
+                    found in your Fusion Applications Cloud Console. This Remote Server is
+                    pre-configured to reference the base URL of your Fusion REST API endpoints.
+                        </li>
+                        <li><span class="bold">Web Credential</span> - Creates a Web Credential a name of the
+                    format <code class="codeph">APEX_FA_<span class="codeinlineitalic">FUSION_INSTANCE</span>_DBMS_CRED</code> which utilizes
+                    Database Credentials created by the Database Tools Fusion Integration Wizard.
+                    This credential is used both by the pre-configured Authentication Scheme and by
+                    the sample REST Data Source.
+                        </li>
+                        <li><span class="bold">Authentication Scheme</span> - Creates a pre-configured
+                    Authentication Scheme with a name of the format
+                            <code class="codeph">APEX_FA_<span class="codeinlineitalic">FUSION_INSTANCE</span>_OAUTH</code>. You can copy and
+                    subscribe to this Authentication Scheme in your other Fusion integrated
+                    applications to easily enable Single Sign-On in those apps too. This
+                    Authentication Scheme contains placeholders referencing configuration parameters
+                    set at the instance-level by the Database Tools Fusion Integration Wizard.
+                        </li>
+                        <li><span class="bold">REST Data Source</span> - Creates a sample REST Data Source named
+                        <code class="codeph">HCM Self Details</code> which references the Workspace level
+                    Remote Server and Web Credentials to obtain details about the currently signed
+                    in user. You can study the setup of this Data Source in order to create your own
+                    for other Fusion REST API endpoints.
+                        </li>
+                     </ul>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-B99DBC49-11F4-4398-B243-D9053E4C940F__GUID-CE14264E-2C02-46D7-98D2-AEEB8A14DD4E">
+                     <p class="notep1">See Also:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-B99DBC49-11F4-4398-B243-D9053E4C940F__UL_FZ5_FVB_2DC">
+                        <li><a href="establishing-user-identity-through-authentication.html#GUID-45C4B1CD-4231-4FE9-8B5B-C90611F5F57B" title="Use authentication to establish a user's identity to control access to an application. Authentication may require a user identify a user name and password or could involve the use of digital certificates or a secure key.">Establishing User Identity Through Authentication</a></li>
+                        <li><a href="managing-REST-data-sources.html#GUID-93D7A596-03A9-48AF-9FC9-6538BCC25DED" title="Oracle APEX REST Data Sources enable developers to access to REST services or generic JSON data feeds in applications.">Sample REST Data Sources</a></li>
+                        <li><a href="managing-REST-data-sources.html#GUID-93D7A596-03A9-48AF-9FC9-6538BCC25DED" title="Oracle APEX REST Data Sources enable developers to access to REST services or generic JSON data feeds in applications.">Managing REST Data Sources</a></li>
+                        <li><a href="managing-remote-server-objects.html#GUID-0CD0245A-65BD-434C-B21D-9DD82EE73C18" title="Store REST Data Source server information as a Remote Server object.">Managing Remote Servers</a></li>
+                     </ul>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="integrating-apex-with-fusion-applications.html#GUID-E9480E6C-A6E9-4C40-8193-F15B41FFF442" title="Use Oracle APEX to build extensions to Fusion Applications.">Integrating APEX with Fusion Applications</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-D9CB45D8-9BF8-4B9C-91F9-B1E9FA162CE6" name="GUID-D9CB45D8-9BF8-4B9C-91F9-B1E9FA162CE6"></a><h3 id="HTMDB-GUID-D9CB45D8-9BF8-4B9C-91F9-B1E9FA162CE6" class="sect3"><span class="enumeration_section">5.6.3 </span>Creating an Application with Integrations to
+                Fusion Applications
+               </h3>
+               <div>
+                  <p>Create a starter application with pre-configured integrations to Fusion
+                Applications.</p>
+                  <div class="p">
+                     
+                     <div class="infoboxnote" id="GUID-D9CB45D8-9BF8-4B9C-91F9-B1E9FA162CE6__GUID-18D5633C-A548-47E3-8025-1B18BFBBF7BF">
+                        <p class="notep1">Note:</p>Before attempting this
+                                task, you must run the Database Tools, Integrate APEX with Fusion
+                                Applications Wizard. See <a href="integrating-apex-with-fusion-applications.html#GUID-F066D9AB-B921-4B1A-815E-BBF760B46A57" title="Learn about requirements for integrating Oracle APEX with Fusion Applications.">About Oracle APEX and Fusion Applications Integration Requirements</a>.
+                     </div>
+                     
+                  </div>
+                  <p>To create a starter application with
+                                pre-configured integration to an Oracle Fusion Applications
+                                instance:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create</span>.</span><div>
+                           
+                           <p>The wizard prompts you to select a method of
+                                                creating your application.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Fusion Integration</span>.</span><div>
+                           
+                           <div class="infoboxnote" id="GUID-D9CB45D8-9BF8-4B9C-91F9-B1E9FA162CE6__GUID-D4052E96-68FE-4D22-A1FB-35B4A3AA2E60">
+                              <p class="notep1">Note:</p>If you
+                                                have not created a connection between the Oracle
+                                                Fusion Applications instance and the database where
+                                                  <span>APEX</span> resides, a warning message appears.
+                           </div>
+                           
+                           <p>The Create Fusion Integration page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Configuration Options:</span><ol type="a" id="GUID-D9CB45D8-9BF8-4B9C-91F9-B1E9FA162CE6__SUBSTEPS_X3L_4F1_2DC">
+                           <li class="substepexpand"><span>Fusion Instance System Name - Select the Fusion
+                                                  instance with which you wish to integrate the new
+                                                  starter application. Only those Fusion instances
+                                                  that have been configured using the Database Tools
+                                                  integration wizard are available.</span></li>
+                           <li class="substepexpand"><span>Base URL for the REST APIs - The URL of your
+                                                  Fusion instance where the REST API endpoints can
+                                                  be found. Typically, the URL will be the
+                                                  <code class="codeph">https://<span class="codeinlineitalic">my.host</span>.<span class="codeinlineitalic">name</span>/</code>
+                                                  portion of the URL you use to access your Fusion
+                                                  application in your browser.</span><div>
+                                 
+                                 <p>Once you select a <span class="uicontrol bold">Fusion Instance
+                                                  System Name</span>, the Base URL is
+                                                  calculated based upon information  provided by the
+                                                  Database Tools integration wizard. 
+                                 </p>
+                                 
+                                 <p>If the information was not
+                                                  provided by the wizard, then the value is
+                                                  calculated based on Oracle OCI standards. As a
+                                                  best practice, Oracle recommends you verify that
+                                                  any provided value matches your environment. </p>
+                                 
+                                 <p>If that calculation is still incorrect, then
+                                                  enter a value manually.</p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>API Status - Once <span class="uicontrol bold">Base URL for the
+                                                  REST APIs</span> is populated, <span>APEX</span> attempts to contact the server at the specified
+                                                  location. The status of that request displays
+                                                  here. </span><div>
+                                 
+                                 <p>If the server is contacted, this
+                                                  attribute displays:</p>
+                                 
+                                 <p><code class="codeph">200-OK</code></p>
+                                 
+                                 <p>If any other status displays,
+                                                  there is a network configuration issue between <span>APEX</span> and the Fusion Applications instance. Although
+                                                  you can proceed and create a starter application,
+                                                  you may not be able to run the application until
+                                                  the issues are resolved.
+                                 </p>
+                                 
+                                 <p>If the network configuration or URL is
+                                                  incorrect, then this check  may take several
+                                                  minutes to complete.</p>
+                                 
+                                 <div class="infobox-tip" id="GUID-D9CB45D8-9BF8-4B9C-91F9-B1E9FA162CE6__GUID-2BA6CD26-D9D6-4E3A-8CFF-76965D712323">
+                                    <p class="notep1">Tip:</p>Possible issues include the
+                                                  incorrect configuration of ACLs or ACEs between
+                                                  <span>APEX</span> and the Fusion Applications instance. For more
+                                                  information, see <a href="../htmig/enabling-network-services-in-oracle-db11g-or-later.html#HTMIG-GUID-8D125731-989A-4A51-AFFE-00181729F87F" target="_blank">Enabling Network
+                                                  Services in Oracle Database</a> in <span><cite>Oracle APEX Installation
+                                        Guide</cite></span>.
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Advanced Settings - The wizard creates the following attributes
+                                        in the starter application and pre-populates with default
+                                        values. </span><ol type="a" id="GUID-D9CB45D8-9BF8-4B9C-91F9-B1E9FA162CE6__SUBSTEPS_BFC_WF1_2DC">
+                           <li><span>Application Name - Enter the name used to
+                                                  identify the application to developers.</span></li>
+                           <li><span>Application Alias - An alphanumeric identifier,
+                                                  unique within the workspace, for the application.
+                                                  This identifier appears in the URL used to access
+                                                  the application.</span></li>
+                           <li><span>Application ID - Enter a unique, numeric
+                                                  identifier for your application. This field
+                                                  contains an automatically generated identifier by
+                                                  default. Application IDs between 3000 to 9000 are
+                                                  reserved for internal use by <span>Oracle APEX</span>.</span></li>
+                        </ol>
+                        <div>
+                           
+                           <div class="infobox-tip" id="GUID-D9CB45D8-9BF8-4B9C-91F9-B1E9FA162CE6__GUID-B6529EF9-49A8-48F9-9831-34BC561427DE">
+                              <p class="notep1">Tip:</p>You
+                                                can override the default values to provide your own
+                                                Application Name and Alias. Be cautious when
+                                                overriding the Application ID since it must be
+                                                unique within the entire <span>APEX</span> instance.
+                           </div>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Application</span>.</span><div>
+                           
+                           <p>The Create Application Wizard creates a
+                                                starter application and completes a number of
+                                                database setup tasks. See <a href="integrating-apex-with-fusion-applications.html#GUID-B99DBC49-11F4-4398-B243-D9053E4C940F" title="Learn about the Create Fusion Integration starter application.">About the Fusion Integration Starter Application</a>.
+                           </p>
+                           
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="integrating-apex-with-fusion-applications.html#GUID-E9480E6C-A6E9-4C40-8193-F15B41FFF442" title="Use Oracle APEX to build extensions to Fusion Applications.">Integrating APEX with Fusion Applications</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

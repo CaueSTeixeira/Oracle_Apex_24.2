@@ -1,0 +1,517 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Instance Security">
+      <meta name="abstract" content="Learn about security best practices when managing an Oracle APEX instance.">
+      <meta name="description" content="Learn about security best practices when managing an Oracle APEX instance.">
+      <meta name="DC.subject" content="security best practices, managing instance security, creating login controls, login controls, creating, enabling public file upload, public file upload, enabling, restricting access by IP address, IP address, restricting access, specifying instance proxy, instance proxy, specifying, secure sockets layer, secure sockets layer, best practices, enabling RESTful access, RESTful access, enabling, session joins, session joins, security best practices, Rejoin Sessions, about security risks, preventing browser attacks, isolating workspaces, isolating workspaces, about, session timeout, session timeout, utilizing, restricting password reuse, password, restricting reuse, enabling RESTful services">
+      <meta name="keywords" content="security best practices, managing instance security, creating login controls, login controls, creating, enabling public file upload, public file upload, enabling, restricting access by IP address, IP address, restricting access, specifying instance proxy, instance proxy, specifying, secure sockets layer, secure sockets layer, best practices, enabling RESTful access, RESTful access, enabling, session joins, session joins, security best practices, Rejoin Sessions, about security risks, preventing browser attacks, isolating workspaces, isolating workspaces, about, session timeout, session timeout, utilizing, restricting password reuse, password, restricting reuse, enabling RESTful services">
+      <meta name="DC.Relation" scheme="URI" content="understanding-administrator-security-best-practices.html#GUID-F7EF538E-D12A-4623-A68C-6F8E6523B6B8">
+      <meta name="DC.Relation" scheme="URI" content="manging-instance-security.html#GUID-F898DA9B-1880-4340-BC04-C6046E101E74">
+      <meta name="DC.Relation" scheme="URI" content="manging-instance-security.html#GUID-41A2BCDC-5792-4E71-B775-484D3784DD5E">
+      <meta name="DC.Relation" scheme="URI" content="manging-instance-security.html#GUID-84459D23-B43F-46DD-B6BD-9B83B79CF46A">
+      <meta name="DC.Relation" scheme="URI" content="manging-instance-security.html#GUID-7529D01F-F0DA-4A68-84F0-C5C736F2CDFD">
+      <meta name="DC.Relation" scheme="URI" content="manging-instance-security.html#GUID-B4A6FE7E-6D4D-4E8F-93F1-1DE582F7D0BB">
+      <meta name="DC.Relation" scheme="URI" content="manging-instance-security.html#GUID-D7361972-32E2-4DB0-9650-688A04DBA400">
+      <meta name="DC.Relation" scheme="URI" content="manging-instance-security.html#GUID-C676EF2F-2939-4EC3-9385-8FAEA99C8971">
+      <meta name="DC.Relation" scheme="URI" content="manging-instance-security.html#GUID-862FFE3C-202A-4733-B109-3719FDE78A3F">
+      <meta name="DC.Relation" scheme="URI" content="manging-instance-security.html#GUID-701E333D-0CFA-4FCD-869E-4678A4ABAF06">
+      <meta name="DC.Relation" scheme="URI" content="manging-instance-security.html#GUID-272CD65A-7246-43D1-9D2C-DAD290BFD4AB">
+      <meta name="DC.Relation" scheme="URI" content="manging-instance-security.html#GUID-ADD36EE3-7372-47A2-972F-886DCD3BFC16">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about security best practices when managing an Oracle APEX instance.">
+      <meta name="description" content="Learn about security best practices when managing an Oracle APEX instance.">
+      <title>Managing Instance Security</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Learn about security best practices when managing an Oracle APEX instance.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="web-server-security-considerations.html" title="Previous" type="text/html">
+      <link rel="next" href="configuring-instance-settings.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Managing Instance Security","description":"Learn about security best practices when managing an Oracle APEX instance.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="web-server-security-considerations.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="configuring-instance-settings.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17" name="GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17"></a><a id="HTMDB29396"></a>
+         
+         <h2 id="HTMDB-GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17" class="sect2"><span class="enumeration_section">21.1.3 </span>Managing Instance Security 
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Learn about security best practices when managing an <span>Oracle APEX</span> instance. 
+               </p>
+               <div class="infoboxnote" id="GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17__GUID-04A628C8-9024-4F89-8642-1D3312871783">
+                  <p class="notep1">Note:</p>To ensure the security and performance
+                                of your development environment, some administration functionality
+                                is not available in Oracle APEX instances running in Oracle
+                                Cloud.
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="manging-instance-security.html#GUID-F898DA9B-1880-4340-BC04-C6046E101E74">About Creating Login Controls</a><br>Administrators can configure login controls for an entire instance or for individual workspaces.
+                  </li>
+                  <li class="ulchildlink"><a href="manging-instance-security.html#GUID-41A2BCDC-5792-4E71-B775-484D3784DD5E">About Enabling Public File Upload</a><br>Administrators can use the Allow Public File Upload attribute to control whether unauthenticated users can upload files in applications that provide file upload capability
+                  </li>
+                  <li class="ulchildlink"><a href="manging-instance-security.html#GUID-84459D23-B43F-46DD-B6BD-9B83B79CF46A">About Restricting User Access by IP Address</a><br>Administrators can restrict user access to an <span>APEX</span> instance by entering a comma-delimited list of allowable IP addresses in the Restrict Access by IP Address attribute on the Manage Instance, Security page.
+                  </li>
+                  <li class="ulchildlink"><a href="manging-instance-security.html#GUID-7529D01F-F0DA-4A68-84F0-C5C736F2CDFD">About Specifying an Instance Proxy</a><br>Administrators can use the Instance Proxy attribute to configure an entire <span>APEX</span> instance to use a proxy for all outbound HTTP traffic.
+                  </li>
+                  <li class="ulchildlink"><a href="manging-instance-security.html#GUID-B4A6FE7E-6D4D-4E8F-93F1-1DE582F7D0BB">About Utilizing Secure Sockets Layer</a><br>Secure Sockets Layer (SSL) is a protocol for managing the security of data transmitted on the Internet. For web applications, SSL is implemented by using the HTTPS protocol. Oracle recommends that you run <span>APEX</span> applications using SSL (HTTPS protocol) to prevent any sensitive data from being sent over an unencrypted (cleartext) communication channel.
+                  </li>
+                  <li class="ulchildlink"><a href="manging-instance-security.html#GUID-D7361972-32E2-4DB0-9650-688A04DBA400">About Enabling RESTful Access</a><br>Administrators can use the Allow RESTful Access attribute to control whether developers can expose report regions as RESTful services.
+                  </li>
+                  <li class="ulchildlink"><a href="manging-instance-security.html#GUID-C676EF2F-2939-4EC3-9385-8FAEA99C8971">About Rejoin Sessions</a><br>Use the Rejoin Sessions attribute to control if <span>APEX</span> supports application URLs that do not contain session IDs. 
+                  </li>
+                  <li class="ulchildlink"><a href="manging-instance-security.html#GUID-862FFE3C-202A-4733-B109-3719FDE78A3F">About Isolating Workspaces</a><br>Isolating workspaces is an effective approach to preventing browser attacks.
+                  </li>
+                  <li class="ulchildlink"><a href="manging-instance-security.html#GUID-701E333D-0CFA-4FCD-869E-4678A4ABAF06">About Utilizing Session Timeout</a><br>Configure Session Timeout attributes to reduce your application's exposure. 
+                  </li>
+                  <li class="ulchildlink"><a href="manging-instance-security.html#GUID-272CD65A-7246-43D1-9D2C-DAD290BFD4AB">Restricting Password Reuse</a><br>Site administrators can restrict password reuse for all administrator, developer, and end-user accounts based on a history of passwords previously used for the accounts.
+                  </li>
+                  <li class="ulchildlink"><a href="manging-instance-security.html#GUID-ADD36EE3-7372-47A2-972F-886DCD3BFC16">About Enabling RESTful Services</a><br>Administrators can control the ability to create and access RESTful Services at either the workspace or instance-level.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17__GUID-AB705DE9-B538-408B-8B72-3E5EE3961E63">
+                  <p class="notep1">See Also:</p>
+                  <p><a href="../aeadm/configuring-security.html#AEADM-GUID-5EC277A4-20BD-47CF-9448-46680C75593E" target="_blank">Configuring Security</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="understanding-administrator-security-best-practices.html#GUID-F7EF538E-D12A-4623-A68C-6F8E6523B6B8" title="Learn about security best practices for Oracle APEX administrators.">Understanding Administrator Security Best Practices</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB25970"></a><div class="props_rev_3"><a id="GUID-F898DA9B-1880-4340-BC04-C6046E101E74" name="GUID-F898DA9B-1880-4340-BC04-C6046E101E74"></a><h3 id="HTMDB-GUID-F898DA9B-1880-4340-BC04-C6046E101E74" class="sect3"><span class="enumeration_section">21.1.3.1 </span>About Creating Login Controls
+               </h3>
+               <div>
+                  <p>Administrators can configure login controls for an entire instance or for individual workspaces.</p>
+                  <p>Workspace administrators and developers can create user accounts for the purpose of logging in to the <span>APEX</span> development environment and for end-user authentication to applications developed within their workspaces. 
+                  </p>
+                  <p>Administrators can configure login controls at the instance or workspace level. For example, if an Instance administrator configures account login controls in <span>APEX</span> Administration Services, that configuration applies to all <span>APEX</span> accounts in all workspaces across an entire development instance. 
+                  </p>
+                  <p>If the Instance administrator does <span class="italic">not</span> enable login controls across an entire instance, then each Workspace administrator can enable the following controls on a workspace-by-workspace basis: 
+                  </p>
+                  <ul style="list-style-type: disc;">
+                     <li>End-user account expiration and locking.</li>
+                     <li>A maximum number of failed login attempts for end-user accounts.</li>
+                     <li>The password lifetime (or number of days an end-user account password can be used before it expires for end-user accounts).</li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-F898DA9B-1880-4340-BC04-C6046E101E74__GUID-8B4B1A14-7EAD-4EDF-A083-EC908D2F9EA4">
+                     <p class="notep1">See Also:</p>
+                     
+                     <p><a href="../aeadm/configuring-workspace-preferences.html#AEADM-GUID-F432BD64-26B0-47D4-8514-7F7176E66D43" target="_blank">Managing Workspace Account Login Controls</a> and in <a href="../aeadm/configuring-authentication-controls-for-an-instance.html#AEADM-GUID-E06E263E-F489-4F10-968B-9BA82F0D4894" target="_blank">Configuring Authentication Controls for an Instance</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="manging-instance-security.html#GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17" title="Learn about security best practices when managing an Oracle APEX instance.">Managing Instance Security</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29397"></a><div class="props_rev_3"><a id="GUID-41A2BCDC-5792-4E71-B775-484D3784DD5E" name="GUID-41A2BCDC-5792-4E71-B775-484D3784DD5E"></a><h3 id="HTMDB-GUID-41A2BCDC-5792-4E71-B775-484D3784DD5E" class="sect3"><span class="enumeration_section">21.1.3.2 </span>About Enabling Public File Upload
+               </h3>
+               <div>
+                  <p>Administrators can use the Allow Public File Upload attribute to control whether unauthenticated users can upload files in applications that provide file upload capability</p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-41A2BCDC-5792-4E71-B775-484D3784DD5E__GUID-6D462273-EB3D-49DC-AF11-0CF62D677A28">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="../aeadm/configuring-service-level-security-settings.html#AEADM-GUID-5D83A6BC-DAE1-404A-9DAE-85CA10965493" target="_blank">Controlling Public File Upload</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="manging-instance-security.html#GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17" title="Learn about security best practices when managing an Oracle APEX instance.">Managing Instance Security</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29398"></a><div class="props_rev_3"><a id="GUID-84459D23-B43F-46DD-B6BD-9B83B79CF46A" name="GUID-84459D23-B43F-46DD-B6BD-9B83B79CF46A"></a><h3 id="HTMDB-GUID-84459D23-B43F-46DD-B6BD-9B83B79CF46A" class="sect3"><span class="enumeration_section">21.1.3.3 </span>About Restricting User Access by IP Address
+               </h3>
+               <div>
+                  <p>Administrators can restrict user access to an <span>APEX</span> instance by entering a comma-delimited list of allowable IP addresses in the Restrict Access by IP Address attribute on the Manage Instance, Security page.
+                  </p>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-84459D23-B43F-46DD-B6BD-9B83B79CF46A__GUID-5F0F11BA-6871-4DC3-B9B2-AFB0B5597684">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="../aeadm/configuring-service-level-security-settings.html#AEADM-GUID-1952AB59-7DC5-48C3-B4A5-31398CEA1485" target="_blank">Restricting User Access by IP Address</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="manging-instance-security.html#GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17" title="Learn about security best practices when managing an Oracle APEX instance.">Managing Instance Security</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29399"></a><div class="props_rev_3"><a id="GUID-7529D01F-F0DA-4A68-84F0-C5C736F2CDFD" name="GUID-7529D01F-F0DA-4A68-84F0-C5C736F2CDFD"></a><h3 id="HTMDB-GUID-7529D01F-F0DA-4A68-84F0-C5C736F2CDFD" class="sect3"><span class="enumeration_section">21.1.3.4 </span>About Specifying an Instance Proxy
+               </h3>
+               <div>
+                  <p>Administrators can use the Instance Proxy attribute to configure an entire <span>APEX</span> instance to use a proxy for all outbound HTTP traffic.
+                  </p>
+                  <p>Setting a proxy at the instance-level supersedes any proxies defined at the application-level or in web service references. If a proxy is specified, regions of type URL, Web services, and report printing will use the proxy.</p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-7529D01F-F0DA-4A68-84F0-C5C736F2CDFD__GUID-A7156DAA-4655-46AF-8657-315BB2B3785B">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="../aeadm/configuring-service-level-security-settings.html#AEADM-GUID-06973DA0-92C6-4195-99FD-B3311252D172" target="_blank">Configuring a Proxy Server for an Instance</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="manging-instance-security.html#GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17" title="Learn about security best practices when managing an Oracle APEX instance.">Managing Instance Security</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25968"></a><div class="props_rev_3"><a id="GUID-B4A6FE7E-6D4D-4E8F-93F1-1DE582F7D0BB" name="GUID-B4A6FE7E-6D4D-4E8F-93F1-1DE582F7D0BB"></a><h3 id="HTMDB-GUID-B4A6FE7E-6D4D-4E8F-93F1-1DE582F7D0BB" class="sect3"><span class="enumeration_section">21.1.3.5 </span>About Utilizing Secure Sockets Layer
+               </h3>
+               <div>
+                  <p>Secure Sockets Layer (SSL) is a protocol for managing the security of data transmitted on the Internet. For web applications, SSL is implemented by using the HTTPS protocol. Oracle recommends that you run <span>APEX</span> applications using SSL (HTTPS protocol) to prevent any sensitive data from being sent over an unencrypted (cleartext) communication channel.
+                  </p>
+                  <p>Instance administrators can configure both their <span>APEX</span> instance and all related applications to require HTTPS by configuring the <span class="bold">Require HTTPS</span> and <span class="bold">Require Outbound HTTPS</span> attributes. Configuring these attributes forces authenticated pages within the <span>App Builder</span> to require HTTPS which encrypts network communications. Changing the Require HTTPS option does not affect the web server in any way. You will still need to enable the web server for HTTPS for these options to have any meaning. To learn more about enabling HTTPS, see the documentation for your specific web server.
+                  </p>
+                  <p><span class="bold">Require HTTPS</span> options include:
+                  </p>
+                  <ul style="list-style-type: disc;">
+                     <li><span class="bold">Always</span> - Enforces HTTPS for all applications (including the <span>APEX</span> development and administration applications) to require HTTPS. 
+                     </li>
+                     <li><span class="bold">Development and Administration</span> - Forces all internal applications within <span>APEX</span> (that is, <span>App Builder</span>, SQL Workshop, Instance Administration and so on) to require HTTPS.
+                     </li>
+                     <li><span class="bold">Application specific</span> - Makes HTTPS dependent on application-level settings.
+                     </li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-B4A6FE7E-6D4D-4E8F-93F1-1DE582F7D0BB__GUID-1E869739-705F-4AD7-967C-0A0952416642">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="../aeadm/configuring-http-attributes.html#AEADM-GUID-DCC66FF6-200E-42D1-AFD1-EC0A058A0A2D" target="_blank">Configuring HTTP Protocol Attributes</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="manging-instance-security.html#GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17" title="Learn about security best practices when managing an Oracle APEX instance.">Managing Instance Security</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29400"></a><div class="props_rev_3"><a id="GUID-D7361972-32E2-4DB0-9650-688A04DBA400" name="GUID-D7361972-32E2-4DB0-9650-688A04DBA400"></a><h3 id="HTMDB-GUID-D7361972-32E2-4DB0-9650-688A04DBA400" class="sect3"><span class="enumeration_section">21.1.3.6 </span>About Enabling RESTful Access
+               </h3>
+               <div>
+                  <p>Administrators can use the Allow RESTful Access attribute to control whether developers can expose report regions as RESTful services.</p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-D7361972-32E2-4DB0-9650-688A04DBA400__GUID-4EC27F19-F1D3-4052-871F-F40EDCA060AD">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="../aeadm/configuring-features.html#AEADM-GUID-F9491905-FFDB-4ED1-BAAC-B13F8C48D436" target="_blank">Enabling RESTful Services for an Instance</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="manging-instance-security.html#GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17" title="Learn about security best practices when managing an Oracle APEX instance.">Managing Instance Security</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29961"></a><div class="props_rev_3"><a id="GUID-C676EF2F-2939-4EC3-9385-8FAEA99C8971" name="GUID-C676EF2F-2939-4EC3-9385-8FAEA99C8971"></a><h3 id="HTMDB-GUID-C676EF2F-2939-4EC3-9385-8FAEA99C8971" class="sect3"><span class="enumeration_section">21.1.3.7 </span>About Rejoin Sessions
+               </h3>
+               <div>
+                  <p>Use the Rejoin Sessions attribute to control if <span>APEX</span> supports application URLs that do not contain session IDs. 
+                  </p>
+                  <div class="infobox-tip" id="GUID-C676EF2F-2939-4EC3-9385-8FAEA99C8971__GUID-7D50386D-55AD-4AC7-B556-BC9021BEB8DD">
+                     <p class="notep1">Tip:</p>
+                     <p>For security reasons, Oracles recommends that administrators disable Rejoin Sessions unless they implement workspace isolation by configuring the Allow Hostname attribute at the workspace or instance-level. See <a href="manging-instance-security.html#GUID-862FFE3C-202A-4733-B109-3719FDE78A3F" title="Isolating workspaces is an effective approach to preventing browser attacks.">About Isolating Workspaces</a>.
+                     </p>
+                  </div>
+                  <p>When rejoin sessions is enabled, <span>APEX</span> attempts to use the session cookie to join an existing session, when a URL does not contain a session ID. To use Rejoin Sessions, administrators must enable Rejoin Sessions at the application or page-level. Note that a more restrictive value of Rejoin Sessions at the instance-level overrides application and page settings.
+                  </p>
+                  <p>While supporting session joins is convenient, it does present some serious security risks:</p>
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        <p><span class="bold">Triggering malicious session state changes or other modifications</span>. 
+                        </p>
+                        <p>If an attacker tricks the user into clicking an application link, this can trigger malicious session state changes or other modifications. Because of this risk, <span>APEX</span> requires a checksum that the attacker will not be able to guess when processing requests that alters data. 
+                        </p>
+                     </li>
+                     <li>
+                        <p><span class="bold">Triggering unintended changes between applications</span>. 
+                        </p>
+                        <p>If a user has two applications open in separate tabs on the same <span>APEX</span> instance, one application could trigger unintended changes in the other one. The attacking application could be written by a hacker or it could have an XSS vulnerability that enables an attacker to inject code. This application could use Ajax calls that simulate user interactions with the other application. 
+                        </p>
+                     </li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-C676EF2F-2939-4EC3-9385-8FAEA99C8971__GUID-1DF18708-0D58-4985-9666-8CC4043B020D">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="about-enabling-support-for-bookmarks.html#GUID-EBF9369E-EDF5-4749-8FF3-6E766A5007DC" title="Developers can assist users who bookmark application pages by either using zero as the session ID, or enabling Rejoin Sessions.">About Enabling Support for Bookmarks</a></li>
+                        <li><a href="configuring-security-attributes.html#GUID-33A67D5E-1128-4D23-9C5C-15FC9BE1B783">Session Management</a></li>
+                        <li><a href="editing-page-attributes-in-page-designer.html#GUID-C5DC542A-6963-43AB-AA35-26FDC0730B18" title="Configure the Rejoin Sessions attribute to determine whether URLs to this application page contain session IDs.">Configuring Rejoin Sessions for a Page</a></li>
+                        <li><a href="../aeadm/configuring-service-level-security-settings.html#AEADM-GUID-6AB636A0-7DDE-4D7E-99AA-244C77D72776" target="_blank">Configuring Rejoin Sessions for an Instance</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="manging-instance-security.html#GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17" title="Learn about security best practices when managing an Oracle APEX instance.">Managing Instance Security</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29979"></a><div class="props_rev_3"><a id="GUID-862FFE3C-202A-4733-B109-3719FDE78A3F" name="GUID-862FFE3C-202A-4733-B109-3719FDE78A3F"></a><h3 id="HTMDB-GUID-862FFE3C-202A-4733-B109-3719FDE78A3F" class="sect3"><span class="enumeration_section">21.1.3.8 </span>About Isolating Workspaces
+               </h3>
+               <div>
+                  <p>Isolating workspaces is an effective approach to preventing browser attacks.</p>
+                  <p>The only way to truly isolate a workspace is to enforce different domains in the URL by configuring the Allow Hostnames attribute in <span>APEX</span> Administration Services. When the URLs of the attacker and the victim have different domains and hostnames, the browser's same-origin policy prevents attacks.
+                  </p>
+                  <p>Workspace isolation by configuring Allow Hostnames is a counter measure against client side attacks that attempt to cross workspace boundaries. This security measure is not necessary if you trust all applications that are accessible using the instance's host which includes applications that are written in other frameworks and languages such as Oracle Application Development Framework (ADF) and Java.</p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-862FFE3C-202A-4733-B109-3719FDE78A3F__GUID-C2EF482D-7B18-415F-95F6-2FEBBC75439C">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="../aeadm/isolating-workspaces-in-an-instance.html#AEADM-GUID-B3BD09CF-D003-4837-A7D2-91A6E756D72E" target="_blank">Isolating All Workspaces in an Instance</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                        <li><a href="../aeadm/isolating-workspace-to-prevent-browser-attacks.html#AEADM-GUID-8BF9FF41-1CA7-44E7-A82E-42B927F42CF9" target="_blank">Isolating a Workspace to Prevent Browser Attacks</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="manging-instance-security.html#GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17" title="Learn about security best practices when managing an Oracle APEX instance.">Managing Instance Security</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25972"></a><div class="props_rev_3"><a id="GUID-701E333D-0CFA-4FCD-869E-4678A4ABAF06" name="GUID-701E333D-0CFA-4FCD-869E-4678A4ABAF06"></a><h3 id="HTMDB-GUID-701E333D-0CFA-4FCD-869E-4678A4ABAF06" class="sect3"><span class="enumeration_section">21.1.3.9 </span>About Utilizing Session Timeout
+               </h3>
+               <div>
+                  <p>Configure Session Timeout attributes to reduce your application's exposure. </p>
+                  <p>Users often leave their computers unattended for extended periods and do not close applications before departing. Therefore, an unauthorized person can easily assume the user's identity within the application. By setting the session and idle timeout, users are automatically logged out of their application after the specified timeout.</p>
+                  <p>Session Timeout attributes include:</p>
+                  <ul style="list-style-type: disc;">
+                     <li>Maximum Session Length in Seconds</li>
+                     <li>Maximum Session Idle Time in Seconds</li>
+                     <li>Session Timeout Warning in Seconds</li>
+                     <li>Session Timeout URL (application-level setting)</li>
+                     <li>Idle Timeout URL (application-level setting)</li>
+                  </ul>
+                  <p>Developers can configure session timeout for a specific application, or
+            administrators can configure sessions timeout for a workspace or an entire instance.</p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-701E333D-0CFA-4FCD-869E-4678A4ABAF06__GUID-313A05E7-6CAD-436B-86EE-3E311D0A4B43">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="configuring-security-attributes.html#GUID-33A67D5E-1128-4D23-9C5C-15FC9BE1B783">Session Management</a> to learn how to configure these attributes at an application-level.
+                        </li>
+                        <li><a href="../aeadm/configuring-workspace-preferences.html#AEADM-GUID-5908DB3B-9348-4195-AB8F-3B426166C94A" target="_blank">Configuring Session Timeout for a Workspace</a> and <a href="../aeadm/configuiring-session-timeout.html#AEADM-GUID-FCFC6DC3-FC8B-4053-BE69-033F7F51BFD0" target="_blank">Configuring Session Timeout for an Instance</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="manging-instance-security.html#GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17" title="Learn about security best practices when managing an Oracle APEX instance.">Managing Instance Security</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB28550"></a><div class="props_rev_3"><a id="GUID-272CD65A-7246-43D1-9D2C-DAD290BFD4AB" name="GUID-272CD65A-7246-43D1-9D2C-DAD290BFD4AB"></a><h3 id="HTMDB-GUID-272CD65A-7246-43D1-9D2C-DAD290BFD4AB" class="sect3"><span class="enumeration_section">21.1.3.10 </span>Restricting Password Reuse
+               </h3>
+               <div>
+                  <p>Site administrators can restrict password reuse for all administrator, developer, and end-user accounts based on a history of passwords previously used for the accounts.</p>
+                  <div class="section">
+                     <p>To restrict password reuse:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Start <span>SQLcl</span> and connect to the database where <span>Oracle APEX</span> is installed as <code class="codeph">SYS</code>, for example:</span><ul id="GUID-272CD65A-7246-43D1-9D2C-DAD290BFD4AB__CHOICES_ZPZ_3J5_QXB">
+                           <li>
+                              <p>On Windows:</p><pre class="pre codeblock"><code><span class="italic">SYSTEM_DRIVE:\</span> sql /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span></code></pre></li>
+                           <li>
+                              <p>On UNIX and Linux:</p><pre class="pre codeblock"><code>$ sql /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span></code></pre></li>
+                        </ul>
+                        <div>
+                           
+                           <div class="infobox-tip" id="GUID-272CD65A-7246-43D1-9D2C-DAD290BFD4AB__GUID-788350E4-FCE2-49A9-8458-D68B4B860A0B">
+                              <p class="notep1">Tip:</p>
+                              
+                              <p>The <code class="codeph">APEX_ADMINISTRATOR_ROLE</code> must be granted
+                            directly to a user and not through another database role.
+                              </p>
+                              
+                           </div>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Execute the following statement: </span><div><pre class="oac_no_warn" dir="ltr">ALTER SESSION SET CURRENT_SCHEMA = <span>APEX_240200</span>;
+
+</pre></div>
+                     </li>
+                     <li class="stepexpand"><span>Execute the following statement: </span><div><pre class="oac_no_warn" dir="ltr">BEGIN
+APEX_INSTANCE_ADMIN.SET_PARAMETER('PASSWORD_HISTORY_DAYS',365);
+COMMIT;
+END;
+/</pre><p>This restricts new or updated passwords to those that have not been used for the
+                        account for the previous 365 days. Recording of previously used passwords
+                        (actually, hashed representations of passwords) begins upon installation of
+                            <span>Oracle APEX</span>. 
+                           </p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>To disable this feature, run the block above, providing 0 for the parameter value. For example:</span><div><pre class="oac_no_warn" dir="ltr">BEGIN
+APEX_INSTANCE_ADMIN.SET_PARAMETER('PASSWORD_HISTORY_DAYS',0);
+COMMIT;
+END;
+/
+</pre></div>
+                     </li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-272CD65A-7246-43D1-9D2C-DAD290BFD4AB__GUID-38468618-7E13-45D4-8A45-1ABAB433E1D0">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="../aeapi/STRONG_PASSWORD_CHECK-Procedure.html#AEAPI-GUID-5EECBD3D-C82E-49A3-985D-2DC32DE9C642" target="_blank">STRONG_PASSWORD_CHECK Procedure</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></li>
+                        <li><a href="../aeapi/STRONG_PASSWORD_VALIDATION-Function.html#AEAPI-GUID-9E1EB5D3-DEB4-4C11-8233-E7589CA561F7" target="_blank">STRONG_PASSWORD_VALIDATION Function</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="manging-instance-security.html#GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17" title="Learn about security best practices when managing an Oracle APEX instance.">Managing Instance Security</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29395"></a><div class="props_rev_3"><a id="GUID-ADD36EE3-7372-47A2-972F-886DCD3BFC16" name="GUID-ADD36EE3-7372-47A2-972F-886DCD3BFC16"></a><h3 id="HTMDB-GUID-ADD36EE3-7372-47A2-972F-886DCD3BFC16" class="sect3"><span class="enumeration_section">21.1.3.11 </span>About Enabling RESTful Services
+               </h3>
+               <div>
+                  <p>Administrators can control the ability to create and access RESTful Services at either the workspace or instance-level.</p>
+                  <p>Disabling the <span class="uicontrol bold">Enable RESTful Services</span> attribute prevents developers from creating and editing RESTful Web Services mapped to SQL and PL/SQL in conjunction with Oracle REST Data Services 2.0 or later.
+                  </p>
+                  <p>To configure Enable RESTful Services:</p>
+                  <ul style="list-style-type: disc;">
+                     <li>In Workspace Administration — Sign in to <span>APEX</span> and click the <span class="uicontrol bold">Administration</span> menu. Select <span class="uicontrol bold">Manage Service</span>, <span class="uicontrol bold">Set Workspace Preferences</span>, <span class="uicontrol bold">SQL Workshop</span> and find the <span class="uicontrol bold">Enable RESTful Services</span> attribute.
+                     </li>
+                     <li>In Instance Administration — Sign in to <span>APEX</span> Administration Services. Click <span class="uicontrol bold">Manage
+                                                  Instance</span>. Under Instance Settings,
+                                                click <span class="uicontrol bold">Feature Configuration</span>
+                                                and click <span class="uicontrol bold">Feature
+                                                  Configuration</span>. Find the
+                                                  <span class="uicontrol bold">REST</span> tab and then
+                                                  <span class="uicontrol bold">Enable RESTful Services</span>
+                                                attribute.
+                     </li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-ADD36EE3-7372-47A2-972F-886DCD3BFC16__GUID-B3A4585D-3282-42D9-9C3A-C88DC82A96D8">
+                     <p class="notep1">See Also:</p>
+                     
+                     <p><a href="../aeadm/configuring-workspace-preferences.html#AEADM-GUID-140DE54B-E74A-47E0-AFFE-436F6FC329C0" target="_blank">Enabling RESTful Services and Defining a Path Prefix for a Workspace</a> and <a href="../aeadm/configuring-features.html#AEADM-GUID-F9491905-FFDB-4ED1-BAAC-B13F8C48D436" target="_blank">Enabling RESTful Services for an Instance</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="manging-instance-security.html#GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17" title="Learn about security best practices when managing an Oracle APEX instance.">Managing Instance Security</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

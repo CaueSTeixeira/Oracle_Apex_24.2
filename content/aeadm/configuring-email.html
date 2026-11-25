@@ -1,0 +1,368 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Configuring Email">
+      <meta name="abstract" content="To enable APEX to send mail, an instance administrator must configure instance-level email settings.">
+      <meta name="description" content="To enable APEX to send mail, an instance administrator must configure instance-level email settings.">
+      <meta name="DC.subject" content="instance settings, configuring email, email, configuring, configuring for development instance, configuring email, Instance URL, Images URL, SMTP Host Address, SMTP Host Port, SMTP Authentication Username, SMTP Authentication Password, Use SSL/TLS, Default Email From Address, Maximum Emails per Workspace, Maximum Emails Processed per Workspace, for a runtime instance, determining settings in runtime instance">
+      <meta name="keywords" content="instance settings, configuring email, email, configuring, configuring for development instance, configuring email, Instance URL, Images URL, SMTP Host Address, SMTP Host Port, SMTP Authentication Username, SMTP Authentication Password, Use SSL/TLS, Default Email From Address, Maximum Emails per Workspace, Maximum Emails Processed per Workspace, for a runtime instance, determining settings in runtime instance">
+      <meta name="DC.Relation" scheme="URI" content="configuring-instance-settings.html#GUID-0DE7FA26-7FF5-409A-9CED-2BFD218CFE14">
+      <meta name="DC.Relation" scheme="URI" content="configuring-email.html#GUID-336F4872-8C9C-4F8A-86F4-6DCE463D58C3">
+      <meta name="DC.Relation" scheme="URI" content="configuring-email.html#GUID-3F10A06B-69F0-4B4E-BA05-8E315DD1E6DA">
+      <meta name="DC.Relation" scheme="URI" content="configuring-email.html#GUID-466A0174-DC1F-4092-AC49-99E818FD7899">
+      <meta name="DC.Relation" scheme="URI" content="configuring-email.html#GUID-CB105D22-317D-4B8D-83CA-0E1D7F9FAC13">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-FEC98D5E-3C89-423E-9603-4CD2E553BA34">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="To enable APEX to send mail, an instance administrator must configure instance-level email settings.">
+      <meta name="description" content="To enable APEX to send mail, an instance administrator must configure instance-level email settings.">
+      <title>Configuring Email</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="To enable APEX to send mail, an instance administrator must configure instance-level email settings.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="configuring-storage.html" title="Previous" type="text/html">
+      <link rel="next" href="configuring-wallet-information.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Configuring Email","description":"To enable APEX to send mail, an instance administrator must configure instance-level email settings.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="configuring-storage.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="configuring-wallet-information.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-FEC98D5E-3C89-423E-9603-4CD2E553BA34" name="GUID-FEC98D5E-3C89-423E-9603-4CD2E553BA34"></a><a id="AEADM210"></a>
+         
+         <h2 id="AEADM-GUID-FEC98D5E-3C89-423E-9603-4CD2E553BA34" class="sect2"><span class="enumeration_section">3.5.4 </span>Configuring Email
+         </h2>
+         <div class="ind">
+            <div>
+               <p>To enable <span>APEX</span> to send mail, an instance administrator must configure instance-level email settings.
+               </p>
+               <p>You can configure <span>APEX</span> to automatically email users their login credentials when a new workspace request has
+            been approved. To learn more, see <a href="creating-workspaces.html#GUID-CDB898E3-6348-4273-9264-9FB8D65E1584" title="The Instance administrator determines how the process of provisioning (or creating) a workspace works for a specific APEX instance.">About Specifying How Workspaces Are Created</a> and <a href="creating-workspaces.html#GUID-529BB1CB-E6A6-46B2-BCCB-E28062DE1039" title="An Instance Administrator selects a Provisioning Method to determine how workspace provisioning works.">Selecting a Workspace Provisioning Mode</a>.
+               </p>
+               <div class="infoboxnote" id="GUID-FEC98D5E-3C89-423E-9603-4CD2E553BA34__GUID-B61EF8E5-D193-4635-A6C1-B546ECB0C906">
+                  <p class="notep1">Note:</p>To learn more about configuring email
+            in <span>Oracle APEX</span> with <span>Autonomous Database</span>, see <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeadm&id=ADBSB-GUID-060AC41F-4C3A-44E6-992C-B0CC2DB5B73E" target="_blank">Sending Email from APEX</a> in <span id="GUID-FEC98D5E-3C89-423E-9603-4CD2E553BA34__ADBSB"><cite>Using Oracle Autonomous Database Serverless</cite></span>.
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="configuring-email.html#GUID-336F4872-8C9C-4F8A-86F4-6DCE463D58C3">About Enabling Network Services</a><br>Enabling network services enables support for sending outbound mail in             <span>Oracle APEX</span>, use of Web services in <span>APEX</span>, and PDF report printing with BI Publisher.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-email.html#GUID-3F10A06B-69F0-4B4E-BA05-8E315DD1E6DA">Configuring Email in a Full Development Environment</a><br>An Instance administrator must configure <span>Oracle APEX</span> to send mail in a full development environment.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-email.html#GUID-466A0174-DC1F-4092-AC49-99E818FD7899">Configuring Email in a Runtime Environment</a><br>An Instance administrator must configure <span>Oracle APEX</span> to send mail in a runtime environment.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-email.html#GUID-CB105D22-317D-4B8D-83CA-0E1D7F9FAC13">Determining Email Settings in a Runtime Environment</a><br>Determine email settings in runtime environment.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-FEC98D5E-3C89-423E-9603-4CD2E553BA34__GUID-E741C791-E592-441E-8815-19C5F598D695">
+                  <p class="notep1">See Also:</p>
+                  
+                  <ul style="list-style-type: disc;" id="GUID-FEC98D5E-3C89-423E-9603-4CD2E553BA34__UL_PWM_PXR_1FC">
+                     <li><a href="managing-meta-data.html#GUID-F24BA1C6-82A1-4316-A4B9-56B9EC2A7954" title="Manage email sent from applications by monitoring email messages in the mail queue.">Managing the Mail Queue</a></li>
+                     <li><a href="../aeapi/APEX_MAIL.html#AEAPI-GUID-14F51C6D-CB82-4B38-AB6E-61C46E75596F" target="_blank">APEX_MAIL</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></li>
+                  </ul>
+                  
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="configuring-instance-settings.html#GUID-0DE7FA26-7FF5-409A-9CED-2BFD218CFE14" title="Control a variety of general settings for an Oracle APEX development instance including configuring workspace provisioning behavior, email provisioning, storage, email, wallet information, report printing, workflow settings, Application Gallery settings, Help menu, workspace size options, application ID ranges, and background jobs.">Configuring Instance Settings</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="AEADM29176"></a><div class="props_rev_3"><a id="GUID-336F4872-8C9C-4F8A-86F4-6DCE463D58C3" name="GUID-336F4872-8C9C-4F8A-86F4-6DCE463D58C3"></a><h3 id="AEADM-GUID-336F4872-8C9C-4F8A-86F4-6DCE463D58C3" class="sect3"><span class="enumeration_section">3.5.4.1 </span>About Enabling Network Services
+               </h3>
+               <div>
+                  <p>Enabling network services enables support for sending outbound mail in
+            <span>Oracle APEX</span>, use of Web services in <span>APEX</span>, and PDF report printing with BI Publisher.
+                  </p>
+                  <p>By default, the ability to interact with network services is disabled in
+            Oracle Database 11g Release 2 or later. Therefore, if you are running <span>Oracle APEX</span> with Oracle Database 11g Release 2 or later, you must use the new
+                <code class="codeph">DBMS_NETWORK_ACL_ADMIN</code> package to grant connect privileges to any
+            host for the <span><code class="codeph">APEX_240200</code></span> database user. Failing to grant these privileges results in issues with:
+                  </p>
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        
+                        <p>Sending outbound mail in <span>Oracle APEX</span>.
+                        </p>
+                        
+                        <p>Users can call methods from the <code class="codeph">APEX_MAIL</code> package,
+                    but issues arise when sending outbound email.
+                        </p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>Consuming web services from <span>APEX</span>.
+                        </p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>Making outbound LDAP calls from <span>APEX</span>.
+                        </p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>PDF report printing with BI Publisher.</p>
+                        
+                     </li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-email.html#GUID-FEC98D5E-3C89-423E-9603-4CD2E553BA34" title="To enable APEX to send mail, an instance administrator must configure instance-level email settings.">Configuring Email</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM211"></a><div class="props_rev_3"><a id="GUID-3F10A06B-69F0-4B4E-BA05-8E315DD1E6DA" name="GUID-3F10A06B-69F0-4B4E-BA05-8E315DD1E6DA"></a><h3 id="AEADM-GUID-3F10A06B-69F0-4B4E-BA05-8E315DD1E6DA" class="sect3"><span class="enumeration_section">3.5.4.2 </span>Configuring Email in a Full Development Environment
+               </h3>
+               <div>
+                  <p>An Instance administrator must configure <span>Oracle APEX</span> to send mail in a full development environment.
+                  </p>
+                  <p>To configure <span>Oracle APEX</span> to send mail in a full development environment:
+                  </p>
+                  <ol>
+                     <li><span>Sign in to <span>Oracle APEX</span> Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Instance Settings</span>.</span></li>
+                     <li><span>Under Email, edit the following:</span><ol type="a">
+                           <li class="substepexpand"><span><span class="bold"><span>Oracle APEX</span> Instance URL</span> - Specify the URL to this <span>APEX</span> instance, including the trailing slash after the Database Access Descriptor or Context Root. This setting is used for system-generated emails. For example:</span><div>
+                                 <p><code class="codeph">https://www.example.com/apex/</code></p>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="bold"><span>Oracle APEX</span> Images URL</span> - Specify the full URL to the images directory of this <span>APEX</span> instance, including the trailing slash after the images directory. This setting is used for system-generated emails.. </span><div>
+                                 <p><code class="codeph">https://www.example.com/i/</code></p>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="bold">SMTP Host Address</span> - Defines the server address of the SMTP server. By default on installation, this is set to <code class="codeph">localhost</code>. If you are using another server as an SMTP relay, change this parameter to that server's address.</span></li>
+                           <li class="substepexpand"><span><span class="bold">SMTP Host Port</span> - Defines the port the SMTP server listens to for mail requests. The default setting is 25.</span></li>
+                           <li class="substepexpand"><span><span class="bold">SMTP Authentication Username</span> - If you enter a username, <span>APEX</span> authenticates against it when sending emails. Prior to Oracle Database 11<span class="italic">g</span> Release 2 (11.2.0.2), only the SMTP authentication scheme "LOGIN" is supported. On newer database versions, all authentication schemes of <code class="codeph">UTL_SMTP</code> are supported.</span></li>
+                           <li class="substepexpand"><span><span class="bold">SMTP Authentication Password</span> - If you enter a password, <span>APEX</span> authenticates against it when sending emails. Prior to Oracle Database 11<span class="italic">g</span> Release 2, Release 11.2.0.2, only the SMTP authentication scheme "LOGIN" is supported. On newer database versions, all authentication schemes of <code class="codeph">UTL_SMTP</code> are supported.</span></li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">SMTP Password</span> - Enter a password if your SMTP
+                            server requires authentication.</span></li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Confirm SMTP Password</span> - Enter the SMTP password
+                            again to confirm.</span></li>
+                           <li class="substepexpand"><span><span class="bold">Use SSL/TLS</span> - Beginning with Oracle Database 11<span class="italic">g</span> Release 2, Release 11.2.0.2, <span>APEX</span> supports secure SMTP connections.</span><div>
+                                 <p>Options include:</p>
+                                 <ul style="list-style-type: disc;">
+                                    <li>
+                                       <p><span class="uicontrol bold">Yes</span> - A secure connection with SSL/TLS is made before SMTP communication.
+                                       </p>
+                                    </li>
+                                    <li>
+                                       <p><span class="uicontrol bold">After connection is established</span> - <span>APEX</span> sends the SMTP command <code class="codeph">STARTTLS</code> immediately after the connection is opened.
+                                       </p>
+                                    </li>
+                                    <li>
+                                       <p><span class="uicontrol bold">No</span> - A non-secure connection is opened.
+                                       </p>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Default Email From Address</span> - Defines the
+                                <code class="codeph">from</code> address for tasks that generate email, such as
+                            approving a provision request or resetting a password.</span></li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Maximum Emails per Workspace</span> - Defines the
+                            number of email messages that can be sent with the
+                                <code class="codeph">APEX_MAIL</code> API per workspace per 24 hour
+                            period.</span></li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Maximum Emails Processed per Workspace</span> - Defines
+                            the number of email messages that can be processed from the queue per
+                            workspace during each invocation of the mail job,
+                                <code class="codeph">ORACLE_APEX_MAIL_QUEUE</code>.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-email.html#GUID-FEC98D5E-3C89-423E-9603-4CD2E553BA34" title="To enable APEX to send mail, an instance administrator must configure instance-level email settings.">Configuring Email</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM212"></a><div class="props_rev_3"><a id="GUID-466A0174-DC1F-4092-AC49-99E818FD7899" name="GUID-466A0174-DC1F-4092-AC49-99E818FD7899"></a><h3 id="AEADM-GUID-466A0174-DC1F-4092-AC49-99E818FD7899" class="sect3"><span class="enumeration_section">3.5.4.3 </span>Configuring Email in a Runtime Environment
+               </h3>
+               <div>
+                  <p>An Instance administrator must configure <span>Oracle APEX</span> to send mail in a runtime environment.
+                  </p>
+                  <p>To configure <span>APEX</span> to send mail in a runtime environment:
+                  </p>
+                  <ol>
+                     <li class="stepexpand"><span>Start <span>SQLcl</span> and connect to the database where <span>Oracle APEX</span> is installed as <code class="codeph">SYS</code>, for example:</span><div>
+                           
+                           <ul style="list-style-type: disc;">
+                              <li>
+                                 
+                                 <p>On Windows:</p>
+                                 <pre class="oac_no_warn" dir="ltr"><span class="italic">SYSTEM_DRIVE:</span>\ <span>sql</span> /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span>
+</pre>
+                                 </li>
+                              <li>
+                                 
+                                 <p>On UNIX and Linux:</p>
+                                 <pre class="oac_no_warn" dir="ltr">$ <span>sql</span> /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span>
+</pre>
+                                 </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Run the following statement:</span><div>
+                           <pre class="pre codeblock"><code>BEGIN
+   APEX_INSTANCE_ADMIN.SET_PARAMETER(<span class="italic">PARAMETER_NAME</span>, <span class="italic">PARAMETER_VALUE</span>);
+   COMMIT;
+END;</code></pre><div class="infobox-tip" id="GUID-466A0174-DC1F-4092-AC49-99E818FD7899__GUID-9B84E17D-D713-4469-8D8D-90595DB0D1B9">
+                              <p class="notep1">Tip:</p>
+                              <p>For a description of email parameters, see <a href="configuring-email.html#GUID-3F10A06B-69F0-4B4E-BA05-8E315DD1E6DA" title="An Instance administrator must configure Oracle APEX to send mail in a full development environment.">Configuring Email in a Full Development Environment</a>.
+                              </p>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Once all parameters have been configured, validate the configuration:</span><div>
+                           <pre class="pre codeblock"><code>BEGIN
+    APEX_INSTANCE_ADMIN.VALIDATE_EMAIL_CONFIG;
+END;</code></pre>
+                           </div>
+                     </li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-466A0174-DC1F-4092-AC49-99E818FD7899__GUID-109A812D-9C4A-4F6C-9B6D-90377857B7BC">
+                     <p class="notep1">See Also:</p><a href="../aeapi/SET_PARAMETER-Procedure.html#AEAPI-GUID-A6D8CA93-798D-4582-97B9-C7D3ED709AC5" target="_blank">SET_PARAMETER Procedure</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-email.html#GUID-FEC98D5E-3C89-423E-9603-4CD2E553BA34" title="To enable APEX to send mail, an instance administrator must configure instance-level email settings.">Configuring Email</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM213"></a><div class="props_rev_3"><a id="GUID-CB105D22-317D-4B8D-83CA-0E1D7F9FAC13" name="GUID-CB105D22-317D-4B8D-83CA-0E1D7F9FAC13"></a><h3 id="AEADM-GUID-CB105D22-317D-4B8D-83CA-0E1D7F9FAC13" class="sect3"><span class="enumeration_section">3.5.4.4 </span>Determining Email Settings in a Runtime Environment
+               </h3>
+               <div>
+                  <p>Determine email settings in runtime environment.</p>
+                  <p>To determine email settings in runtime environment:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Start <span>SQLcl</span> and connect to the database where <span>Oracle APEX</span> is installed as <code class="codeph">SYS</code>, for example:</span><div>
+                           
+                           <ul style="list-style-type: disc;">
+                              <li>
+                                 
+                                 <p>On Windows:</p>
+                                 <pre class="oac_no_warn" dir="ltr"><span class="italic">SYSTEM_DRIVE:</span>\ <span>sql</span> /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span>
+</pre>
+                                 </li>
+                              <li>
+                                 
+                                 <p>On UNIX and Linux:</p>
+                                 <pre class="oac_no_warn" dir="ltr">$ <span>sql</span> /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span>
+</pre>
+                                 </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Run the following statement:</span><div><pre class="oac_no_warn" dir="ltr">SELECT 
+APEX_INSTANCE_ADMIN.GET_PARAMETER(<span class="italic">PARAMETER_NAME</span>)
+FROM DUAL;
+</pre><div class="infobox-tip" id="GUID-CB105D22-317D-4B8D-83CA-0E1D7F9FAC13__GUID-5047E6D2-906F-41F6-B13F-2B11BD8E72A1">
+                              <p class="notep1">Tip:</p>
+                              <p>For a description of email parameters, see <a href="configuring-email.html#GUID-3F10A06B-69F0-4B4E-BA05-8E315DD1E6DA" title="An Instance administrator must configure Oracle APEX to send mail in a full development environment.">Configuring Email in a Full Development Environment</a>.
+                              </p>
+                           </div>
+                        </div>
+                     </li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-CB105D22-317D-4B8D-83CA-0E1D7F9FAC13__GUID-2AE5BF48-8B85-4F8D-80F3-A02E0FB2E924">
+                     <p class="notep1">See Also:</p><a href="../aeapi/GET_PARAMETER-Function.html#AEAPI-GUID-6BA9A60E-9B0A-4AE5-98DB-68E229008CE0" target="_blank">GET_PARAMETER Function</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-email.html#GUID-FEC98D5E-3C89-423E-9603-4CD2E553BA34" title="To enable APEX to send mail, an instance administrator must configure instance-level email settings.">Configuring Email</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

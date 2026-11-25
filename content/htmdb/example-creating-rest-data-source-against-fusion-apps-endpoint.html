@@ -1,0 +1,318 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Example: Creating a REST Data Source Against a Fusion Applications Endpoint">
+      <meta name="abstract" content="Learn how avoid an error when creating a REST Data Source against a Fusion Applications end point which uses selectively required attributes.">
+      <meta name="description" content="Learn how avoid an error when creating a REST Data Source against a Fusion Applications end point which uses selectively required attributes.">
+      <meta name="DC.subject" content="Fusion Applications end point, using selectively required attributes">
+      <meta name="keywords" content="Fusion Applications end point, using selectively required attributes">
+      <meta name="DC.Relation" scheme="URI" content="working-with-REST-data-sources-for-oracle-cloud-apps.html#GUID-AA383BD4-DA87-4921-B94B-B24AD84FFCF9">
+      <meta name="DC.Relation" scheme="URI" content="example-creating-rest-data-source-against-fusion-apps-endpoint.html#GUID-25A2BF46-EFC1-4E72-AF83-D0BDC1CD0AF8">
+      <meta name="DC.Relation" scheme="URI" content="example-creating-rest-data-source-against-fusion-apps-endpoint.html#GUID-615E4980-3BD1-4AE7-B02B-A56FD7EB3907">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Topic">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-D9B2055F-D58D-4ECD-98D4-14C98130E1F4">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn how avoid an error when creating a REST Data Source against a Fusion Applications end point which uses selectively required attributes.">
+      <meta name="description" content="Learn how avoid an error when creating a REST Data Source against a Fusion Applications end point which uses selectively required attributes.">
+      <title>Example: Creating a REST Data Source Against a Fusion Applications Endpoint</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Learn how avoid an error when creating a REST Data Source against a Fusion Applications end point which uses selectively required attributes.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="data-profile-column-annotations.html" title="Previous" type="text/html">
+      <link rel="next" href="working-with-oracle-cloud-applications-boss-rest-services.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Example: Creating a REST Data Source Against a Fusion Applications Endpoint","description":"Learn how avoid an error when creating a REST Data Source against a Fusion Applications end point which uses selectively required attributes.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="data-profile-column-annotations.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="working-with-oracle-cloud-applications-boss-rest-services.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-D9B2055F-D58D-4ECD-98D4-14C98130E1F4" name="GUID-D9B2055F-D58D-4ECD-98D4-14C98130E1F4"></a>
+         
+         <h2 id="HTMDB-GUID-D9B2055F-D58D-4ECD-98D4-14C98130E1F4" class="sect2"><span class="enumeration_section">18.4.7.10 </span>Example: Creating a REST Data Source Against a
+                Fusion Applications Endpoint
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Learn how avoid an error when creating a REST Data Source against a Fusion
+                Applications end point which uses selectively required attributes.</p>
+               <p>Some Fusion Applications end points identify a set of indexed
+                        attributes, at least one of which must be provided when retrieving the data.
+                        Since <span>App Builder</span> retrieves sample data from the endpoint when you define a REST Data
+                        Source, you may encounter an error when trying to use such an endpoint. This
+                        topic explains how to avoid the error during REST Data Source creation by
+                        configuring a filter that uses one of these selectively required
+                        attributes.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="example-creating-rest-data-source-against-fusion-apps-endpoint.html#GUID-25A2BF46-EFC1-4E72-AF83-D0BDC1CD0AF8">Create a REST Data Source for an Endpoint with Selectively Required Attributes</a><br>Create a REST Data Source against a Fusion Applications end point which         uses selectively required attributes.
+                  </li>
+                  <li class="ulchildlink"><a href="example-creating-rest-data-source-against-fusion-apps-endpoint.html#GUID-615E4980-3BD1-4AE7-B02B-A56FD7EB3907">Remove the Hard-Coded q Parameter</a><br>Edit the REST Data Source to remove the hard-coded <code class="codeph">q</code>         parameter and add a filter parameter for selectively required attributes.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="working-with-REST-data-sources-for-oracle-cloud-apps.html#GUID-AA383BD4-DA87-4921-B94B-B24AD84FFCF9" title="Learn about using APEX REST Data Sources with Oracle Cloud SaaS applications.">Working with REST Data Sources for Oracle Cloud SaaS Applications</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-25A2BF46-EFC1-4E72-AF83-D0BDC1CD0AF8" name="GUID-25A2BF46-EFC1-4E72-AF83-D0BDC1CD0AF8"></a><h3 id="HTMDB-GUID-25A2BF46-EFC1-4E72-AF83-D0BDC1CD0AF8" class="sect3"><span class="enumeration_section">18.4.7.10.1 </span>Create a REST Data Source for an Endpoint
+        with Selectively Required Attributes
+               </h3>
+               <div>
+                  <p>Create a REST Data Source against a Fusion Applications end point which
+        uses selectively required attributes.</p>
+                  <p>To create the REST Data Source:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the REST Data Sources page:</span><ol type="a" id="GUID-25A2BF46-EFC1-4E72-AF83-D0BDC1CD0AF8__SUBSTEPS_UVP_DY3_CZB">
+                           <li><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span></li>
+                           <li><span>Under Data Sources, select <span class="uicontrol bold">REST Data Sources</span>.
+                        </span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On the REST Data Sources page, click <span class="uicontrol bold">Create</span>.</span><div>The Create REST Data Source Wizard appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Create REST Data Source - Select <span class="uicontrol bold">From Scratch</span> and click
+                        <span class="uicontrol bold">Next</span>.</span></li>
+                     <li class="stepexpand"><span>General:</span><ol type="a">
+                           <li class="substepexpand"><span>REST Data Source Type - Select <span class="uicontrol bold">Oracle Cloud Applications
+                                (SaaS) REST Service</span>.</span></li>
+                           <li class="substepexpand"><span>Name - Enter a descriptive name for this REST Data Source.</span></li>
+                           <li class="substepexpand"><span>URL Endpoint - Enter the endpoint of the service with Selectively
+                            Required attributes, without providing any Query String (that is, no
+                            question mark and no parameter values at this step). For example: </span><div>
+                                 
+                                 <p><code class="codeph">https://fa.com/fscmRestApi/resources/11.13.18.05/inventoryOnhandBalances</code></p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Remote Server - Accept the defaults and click
+                    <span class="uicontrol bold">Next</span>.</span></li>
+                     <li class="stepexpand"><span>Settings, Pagination Type - Accept the defaults and click
+                        <span class="uicontrol bold">Next</span>.</span></li>
+                     <li class="stepexpand"><span>Authentication, Authentication Required:</span><ol type="a" id="GUID-25A2BF46-EFC1-4E72-AF83-D0BDC1CD0AF8__SUBSTEPS_CJY_HLV_G2C">
+                           <li class="substepexpand"><span>Choose an existing credential if appropriate, or choose an
+                            Authentication Type and enter the relevant details for defining a new
+                            credential. </span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Discover</span>.</span><div>
+                                 
+                                 <p>The following error appears:</p>
+                                 
+                                 <p><code class="codeph"><span class="bold">HTTP Status</span></code></p>
+                                 
+                                 <p><code class="codeph">Discovery error: Oracle APEX cannot compute a data profile
+                                    from the response data of type:
+                                    application/vnd.oracle.adf.resourcecollection+json.</code></p>
+                                 
+                                 <p>For this example, one of the following attributes is required:
+                                    <code class="codeph">ItemNumber</code>, <code class="codeph">OrganizationCode</code>,
+                                    <code class="codeph">InventoryItemId</code>,
+                                    <code class="codeph">OrganizationId</code></p>
+                                 
+                              </div>
+                              <div>
+                                 
+                                 <p>To avoid this error, you need to create a filter for one
+                                for one attribute (for example,
+                                <code class="codeph">OrganizationId</code>).
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click the <span class="uicontrol bold">Back</span> arrow (&lt;) to return to the previous
+                    Authentication step.</span></li>
+                     <li class="stepexpand"><span>Authentication, Authentication Required:</span><ol type="a" id="GUID-25A2BF46-EFC1-4E72-AF83-D0BDC1CD0AF8__SUBSTEPS_HPL_WKH_32C">
+                           <li><span>Re-enter your credentials. </span></li>
+                           <li><span>Click <span class="uicontrol bold">Advanced</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On Parameters:</span><ol type="a" id="GUID-25A2BF46-EFC1-4E72-AF83-D0BDC1CD0AF8__SUBSTEPS_CY5_4LV_G2C">
+                           <li class="substepexpand"><span>Parameter Type - Select <span class="uicontrol bold">URL Query String</span>.</span></li>
+                           <li class="substepexpand"><span>Parameter Name - Enter <code class="codeph">q</code></span></li>
+                           <li class="substepexpand"><span>Value of - Enter <code class="codeph">OrganizationId='0'</code></span><div>
+                                 
+                                 <div class="infoboxnote" id="GUID-25A2BF46-EFC1-4E72-AF83-D0BDC1CD0AF8__GUID-0E82AA27-5464-481E-BECB-C6064206DC7E">
+                                    <p class="notep1">Note:</p>Adjust the example
+                                attribute name (for example, <code class="codeph">OrganizationId</code>) to
+                                instead use the name of one of the selectively required attributes
+                                required by the endpoint you want to work with. The value on the
+                                right hand side of the equals sign is not important.
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Discover</span>. </span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On the Preview step, click <span class="uicontrol bold">Create REST Data
+                    Source</span>.</span><div>The REST Data Source is created.</div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="example-creating-rest-data-source-against-fusion-apps-endpoint.html#GUID-D9B2055F-D58D-4ECD-98D4-14C98130E1F4" title="Learn how avoid an error when creating a REST Data Source against a Fusion Applications end point which uses selectively required attributes.">Example: Creating a REST Data Source Against a Fusion Applications Endpoint</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-615E4980-3BD1-4AE7-B02B-A56FD7EB3907" name="GUID-615E4980-3BD1-4AE7-B02B-A56FD7EB3907"></a><h3 id="HTMDB-GUID-615E4980-3BD1-4AE7-B02B-A56FD7EB3907" class="sect3"><span class="enumeration_section">18.4.7.10.2 </span>Remove the Hard-Coded q Parameter
+               </h3>
+               <div>
+                  <p>Edit the REST Data Source to remove the hard-coded <code class="codeph">q</code>
+        parameter and add a filter parameter for selectively required attributes.
+                  </p>
+                  <p>To remove the hard-coded <code class="codeph">q</code>
+                parameter:
+                  </p>
+                  <ol>
+                     <li class="stepexpand"><span>On the REST Data Sources page, click the appropriate <span class="italic">REST Source
+                    Name</span>.</span><div>The REST Data Source page appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Delete the <code class="codeph">q </code>parameter:</span><ol type="a" id="GUID-615E4980-3BD1-4AE7-B02B-A56FD7EB3907__SUBSTEPS_JDY_LYV_G2C">
+                           <li><span>Find <span class="uicontrol bold">Parameters</span>.</span></li>
+                           <li><span>Find the <code class="codeph">q</code> parameter and click the
+                                <span class="uicontrol bold">Edit</span> icon.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Delete</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Add a Filter Parameter for selectively required attributes.</span><ol type="a" id="GUID-615E4980-3BD1-4AE7-B02B-A56FD7EB3907__SUBSTEPS_RDH_TZV_G2C">
+                           <li class="substepexpand"><span>Find <span class="uicontrol bold">Operations</span>:</span></li>
+                           <li class="substepexpand"><span>Edit the <code class="codeph">GET</code> operation with Database Action of
+                                <code class="codeph">Fetch rows</code>.</span></li>
+                           <li class="substepexpand"><span>On the REST Source Operation page, find <span class="uicontrol bold">Operation
+                                Parameters</span> and click <span class="uicontrol bold">Add
+                                Parameter</span>.</span></li>
+                           <li class="substepexpand"><span>On Edit REST Data Source Parameter:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-615E4980-3BD1-4AE7-B02B-A56FD7EB3907__UL_B4Z_WWV_G2C">
+                                    <li>Type - Accept the default, <span class="uicontrol bold">URL
+                                        Pattern</span>.
+                                    </li>
+                                    <li>Name - Enter the name of the parameter. For
+                                    example, enter <code class="codeph">OrganizationId_eq$norowsifnull</code><p>Be sure to enter the parameter name you
+                                        specified when your created the REST Data Source.</p>
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Add Parameter</span>.</span></li>
+                           <li class="substepexpand"><span>On the REST Source Operation page, click <span class="uicontrol bold">Apply
+                                Changes</span>.</span></li>
+                        </ol>
+                        <div>The REST Data Source page appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span> again to complete the REST Data
+                    Source editing task.</span><div>
+                           
+                           <p>The filter parameter you added lets you declaratively bind a page item or
+                        other value to the selectively required attribute in any region where you
+                        use this new REST Data Source. For more information on Filter Parameters,
+                        see <a href="filter-parameters-for-query-by-example.html#GUID-F7A7A1B6-AB3D-449F-9B4E-8337CA1E433A" title="Learn about filter parameters for Query By Example (QBE) and parent and child use cases.">Filter Parameters for Query By Example and Parent and Child Use Cases</a>.
+                           </p>
+                           
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="example-creating-rest-data-source-against-fusion-apps-endpoint.html#GUID-D9B2055F-D58D-4ECD-98D4-14C98130E1F4" title="Learn how avoid an error when creating a REST Data Source against a Fusion Applications end point which uses selectively required attributes.">Example: Creating a REST Data Source Against a Fusion Applications Endpoint</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

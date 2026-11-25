@@ -1,0 +1,154 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="SET_WORKSPACE_PARAMETER Procedure">
+      <meta name="DC.subject" content="SET_WORKSPACE_PARAMETER procedure, APEX_INSTANCE_ADMIN">
+      <meta name="keywords" content="SET_WORKSPACE_PARAMETER procedure, APEX_INSTANCE_ADMIN">
+      <meta name="DC.Relation" scheme="URI" content="APEX_INSTANCE_ADMIN.html#GUID-1A894D25-A884-466B-9B88-B10888B2FFEA">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-410868A9-01CC-409F-965E-5F76A00B585B">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>SET_WORKSPACE_PARAMETER Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="SET_WORKSPACE_CONSUMER_GROUP-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="TRUNCATE_LOG-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"SET_WORKSPACE_PARAMETER Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="SET_WORKSPACE_CONSUMER_GROUP-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="TRUNCATE_LOG-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-410868A9-01CC-409F-965E-5F76A00B585B" name="GUID-410868A9-01CC-409F-965E-5F76A00B585B"></a><a id="AEAPI30136"></a><a id="AEAPI30137"></a><a id="AEAPI30138"></a><a id="AEAPI30139"></a><a id="AEAPI30135"></a>
+         
+         <h2 id="AEAPI-GUID-410868A9-01CC-409F-965E-5F76A00B585B" class="sect2"><span class="enumeration_section">32.34 </span>SET_WORKSPACE_PARAMETER Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This procedure sets the designated workspace parameter.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-410868A9-01CC-409F-965E-5F76A00B585B__GUID-6CC6216C-C265-4C5B-98A7-6A4B77C32820">Syntax</p><pre class="pre codeblock"><code>APEX_INSTANCE_ADMIN.SET_WORKSPACE_PARAMETER (
+    p_workspace     IN VARCHAR2,
+    p_parameter     IN VARCHAR2,
+    p_value         IN VARCHAR2 )</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-410868A9-01CC-409F-965E-5F76A00B585B__GUID-32D81DF6-8B1C-49E0-90C0-CB9DD3689E71">Parameters</p>
+                  <div class="tblformal" id="GUID-410868A9-01CC-409F-965E-5F76A00B585B__CIABHBFH">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="21%" id="d155023e74">Parameter</th>
+                              <th align="left" valign="bottom" width="79%" id="d155023e76">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d155023e80" headers="d155023e74 "><code class="codeph">p_workspace</code></td>
+                              <td align="left" valign="top" width="79%" headers="d155023e80 d155023e76 ">The name of the workspace to which you are setting the workspace parameter.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d155023e86" headers="d155023e74 "><code class="codeph">p_parameter</code></td>
+                              <td align="left" valign="top" width="79%" headers="d155023e86 d155023e76 ">
+                                 <p>The parameter name which overrides the instance parameter value of the same name for this workspace. See <span class="q">"Instance and Workspace Parameters"</span> and <span class="q">"Workspace Parameters"</span> in <a href="APEX_INSTANCE_ADMIN.Available-Parameter-Values.html#GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A">Available Parameter Values</a>.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d155023e102" headers="d155023e74 "><code class="codeph">p_value</code></td>
+                              <td align="left" valign="top" width="79%" headers="d155023e102 d155023e76 ">The parameter value.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-410868A9-01CC-409F-965E-5F76A00B585B__GUID-2ED9DDD0-C134-458B-AB48-7F36834866AF">Example</p>
+                  <p>The following example demonstrates how to use the <code class="codeph">set_workspace_parameter</code> procedure to restrict URLs for accessing applications in the HR workspace that have hr.example.com in the hostname or domain name.
+                  </p><pre class="pre codeblock"><code>BEGIN
+  apex_instance_admin.set_workspace_parameter (
+    p_workspace =&gt; 'HR',
+    p_parameter =&gt; 'ALLOW_HOSTNAMES',
+    p_value     =&gt; 'hr.example.com' );
+  COMMIT;
+END;</code></pre></div>
+               <div class="section">
+                  <div class="infoboxnotealso" id="GUID-410868A9-01CC-409F-965E-5F76A00B585B__GUID-D231D554-29C4-486D-A6E7-67FAE1ABA540">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-410868A9-01CC-409F-965E-5F76A00B585B__UL_WNG_RWK_KBC">
+                        <li><a href="APEX_INSTANCE_ADMIN.Available-Parameter-Values.html#GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A">Available Parameter Values</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_INSTANCE_ADMIN.html#GUID-1A894D25-A884-466B-9B88-B10888B2FFEA">APEX_INSTANCE_ADMIN</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

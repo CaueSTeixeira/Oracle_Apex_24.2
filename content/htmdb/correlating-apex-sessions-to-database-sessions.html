@@ -1,0 +1,1143 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Correlating APEX Sessions to Database Sessions">
+      <meta name="abstract" content="Learn about best practices that enable administrators and developers to correlate the database session with a specific APEX application in order to troubleshoot application performance issues.">
+      <meta name="description" content="Learn about best practices that enable administrators and developers to correlate the database session with a specific APEX application in order to troubleshoot application performance issues.">
+      <meta name="DC.subject" content="sessions, APEX, correlating to database sessions, about, database sessions, about, session attributes, client_id, client_info, module, action, Session longops">
+      <meta name="keywords" content="sessions, APEX, correlating to database sessions, about, database sessions, about, session attributes, client_id, client_info, module, action, Session longops">
+      <meta name="DC.Relation" scheme="URI" content="correlating-apex-sessions-to-database-sessions.html#GUID-8A33D738-7F0F-4BE8-AC62-0CC55188CB1B">
+      <meta name="DC.Relation" scheme="URI" content="correlating-apex-sessions-to-database-sessions.html#GUID-3758CB03-6837-470E-A099-23387D9DC386">
+      <meta name="DC.Relation" scheme="URI" content="correlating-apex-sessions-to-database-sessions.html#GUID-84224ECC-1F66-4A8A-BD7C-E51E358606C0">
+      <meta name="DC.Relation" scheme="URI" content="correlating-apex-sessions-to-database-sessions.html#GUID-78E20247-5A0D-4416-9327-31FFC5F2D839">
+      <meta name="DC.Relation" scheme="URI" content="correlating-apex-sessions-to-database-sessions.html#GUID-CD004D99-9394-463E-B2D2-E99644FF3B7E">
+      <meta name="DC.Relation" scheme="URI" content="correlating-apex-sessions-to-database-sessions.html#GUID-7AEAB21D-6C3B-4719-8098-BCECCD01E677">
+      <meta name="DC.Relation" scheme="URI" content="correlating-apex-sessions-to-database-sessions.html#GUID-962A21EA-9F65-4953-B323-47482D11527A">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Orientation">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-F3782ABA-E506-40E3-9E32-292AB020F256">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about best practices that enable administrators and developers to correlate the database session with a specific APEX application in order to troubleshoot application performance issues.">
+      <meta name="description" content="Learn about best practices that enable administrators and developers to correlate the database session with a specific APEX application in order to troubleshoot application performance issues.">
+      <title>Correlating APEX Sessions to Database Sessions</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Learn about best practices that enable administrators and developers to correlate the database session with a specific APEX application in order to troubleshoot application performance issues.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="directory-structure-when-splitting-export-files.html" title="Previous" type="text/html">
+      <link rel="next" href="available-conditions.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Correlating APEX Sessions to Database Sessions","description":"Learn about best practices that enable administrators and developers to correlate the database session with a specific APEX application in order to troubleshoot application performance issues.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="directory-structure-when-splitting-export-files.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="available-conditions.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-F3782ABA-E506-40E3-9E32-292AB020F256" name="GUID-F3782ABA-E506-40E3-9E32-292AB020F256"></a>
+         
+         <h2 id="HTMDB-GUID-F3782ABA-E506-40E3-9E32-292AB020F256" class="sect2"><span class="enumeration_chapter">D </span>Correlating <span>APEX</span> Sessions to Database Sessions
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Learn about best practices that enable administrators and developers to
+                correlate the database session with a specific <span>APEX</span> application in order to troubleshoot application performance issues.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="correlating-apex-sessions-to-database-sessions.html#GUID-8A33D738-7F0F-4BE8-AC62-0CC55188CB1B">About APEX Sessions and Database Sessions</a><br>Learn about <span>APEX</span> sessions and database sessions.
+                  </li>
+                  <li class="ulchildlink"><a href="correlating-apex-sessions-to-database-sessions.html#GUID-3758CB03-6837-470E-A099-23387D9DC386">Session Attributes</a><br>Learn about session attributes visible to system administrators and         developers.
+                  </li>
+                  <li class="ulchildlink"><a href="correlating-apex-sessions-to-database-sessions.html#GUID-84224ECC-1F66-4A8A-BD7C-E51E358606C0">APEX Processes</a><br>Learn how <span>APEX</span> sets session attributes for an application or background mail session.
+                  </li>
+                  <li class="ulchildlink"><a href="correlating-apex-sessions-to-database-sessions.html#GUID-78E20247-5A0D-4416-9327-31FFC5F2D839">SQL Workshop</a><br>Learn how <span>APEX</span> sets session attributes in <span>SQL Commands</span> and <span>SQL                                         Scripts</span>.
+                  </li>
+                  <li class="ulchildlink"><a href="correlating-apex-sessions-to-database-sessions.html#GUID-CD004D99-9394-463E-B2D2-E99644FF3B7E">Data Workshop</a><br>Learn how <span>APEX</span> sets session attributes while importing data using Data Workshop.
+                  </li>
+                  <li class="ulchildlink"><a href="correlating-apex-sessions-to-database-sessions.html#GUID-7AEAB21D-6C3B-4719-8098-BCECCD01E677">Automations</a><br>Learn how <span>APEX</span> sets session attributes while running Automations.
+                  </li>
+                  <li class="ulchildlink"><a href="correlating-apex-sessions-to-database-sessions.html#GUID-962A21EA-9F65-4953-B323-47482D11527A">Installer</a><br>Learn how <span>APEX</span> installation scripts set session attributes while <span>APEX</span> is being installed or upgraded.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-F3782ABA-E506-40E3-9E32-292AB020F256__GUID-963252F6-588B-4991-8C16-6AF54448A3E9">
+                  <p class="notep1">See Also:</p><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmdb&id=ARPLS-GUID-988EA930-BDFE-4205-A806-E54F05333562" target="_blank">SET_IDENTIFIER Procedure</a> and
+                                <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmdb&id=ARPLS-GUID-14484F86-44F2-4B34-B34E-0C873D323EAD" target="_blank">DBMS_APPLICATION_INFO</a> in <span><cite>Oracle Database PL/SQL
+                                        Packages and Types Reference</cite></span></div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-8A33D738-7F0F-4BE8-AC62-0CC55188CB1B" name="GUID-8A33D738-7F0F-4BE8-AC62-0CC55188CB1B"></a><h3 id="HTMDB-GUID-8A33D738-7F0F-4BE8-AC62-0CC55188CB1B" class="sect3"><span class="enumeration_section">D.1 </span>About <span>APEX</span> Sessions and Database Sessions
+               </h3>
+               <div>
+                  <p>Learn about <span>APEX</span> sessions and database sessions.
+                  </p>
+                  <p><span>Oracle APEX</span> includes a database account called <code class="codeph">APEX_PUBLIC_USER</code>. All
+                        database sessions in the database session pool of Oracle REST Data Services
+                        (ORDS) use a single database user such as <code class="codeph">ORDS_PUBLIC_USER</code>,
+                                <code class="codeph">APEX_PUBLIC_USER</code>, or some other user depending how
+                        the instance was configured. There is no permanent, fixed correlation
+                        between an <span>APEX</span> session and a database session. Because the assignment of a session in
+                        the session pool to service an <span>APEX</span> request is essentially unpredictable and not constant, this correlation
+                        can only be done for active database sessions, which are actively servicing
+                                <span>APEX</span> requests.
+                  </p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="correlating-apex-sessions-to-database-sessions.html#GUID-F3782ABA-E506-40E3-9E32-292AB020F256" title="Learn about best practices that enable administrators and developers to correlate the database session with a specific APEX application in order to troubleshoot application performance issues.">Correlating APEX Sessions to Database Sessions</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-3758CB03-6837-470E-A099-23387D9DC386" name="GUID-3758CB03-6837-470E-A099-23387D9DC386"></a><h3 id="HTMDB-GUID-3758CB03-6837-470E-A099-23387D9DC386" class="sect3"><span class="enumeration_section">D.2 </span>Session Attributes
+               </h3>
+               <div>
+                  <p>Learn about session attributes visible to system administrators and
+        developers.</p>
+                  <div class="section">
+                     
+                     <p>While one or more <span>APEX</span> database processes are active, they may set the following session attributes
+                which are visible to system administrators from <code class="codeph">v$session</code>,
+                    <code class="codeph">v$sqlarea</code>, <code class="codeph">v$session_longops</code>, and from various
+                audit and SQL tracing tools. Developers can set these session attributes using
+                PL/SQL.
+                     </p>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-3758CB03-6837-470E-A099-23387D9DC386__GUID-9C849773-D43F-4245-8241-7FE5E69AD6F4">client_id</p>
+                     
+                     
+                     <p><code class="codeph">client_id</code> is a 64 byte string that is generally used to
+                identify the user/client session. Since it is possible for the processing for a
+                single <span>APEX</span> session to execute in different database sessions, you can correlate the workload
+                across all database sessions to each <span>APEX</span> session. <code class="codeph">client_id</code> is also often used in conjunction with
+                Virtual Private Database (VPD) using an application context. In PL/SQL, you can set
+                    <code class="codeph">client_id</code> for a session by calling
+                    <code class="codeph">dbms_session.set_identifier</code> and retrieve it with
+                    <code class="codeph">sys_context('USERENV','CLIENT_IDENTIFIER')</code>. You can view
+                    <code class="codeph">client_id</code> for active sessions in the
+                    <code class="codeph">client_identifier</code> column in the <code class="codeph">v$session</code>
+                view.
+                     </p>
+                     
+                     <p>Within an <span>APEX</span> session, setting this attribute is not necessary and generally should be left
+                unchanged. If custom PL/SQL code executed within an <span>APEX</span> session changes <code class="codeph">client_id</code>, this change will not cause problems
+                for <span>Oracle APEX</span>. However, it may affect the ability for some monitoring tools to effectively
+                identify the <span>APEX</span> session.
+                     </p>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-3758CB03-6837-470E-A099-23387D9DC386__GUID-917E0B92-399A-425F-86A3-35B175774CC7">client_info</p>
+                     
+                     
+                     <p><code class="codeph">client_info</code> is a 64 byte string that is usually used by <span>APEX</span> to identify the workspace and user. In PL/SQL, you can set
+                    <code class="codeph">client_info</code> for the session by calling
+                    <code class="codeph">dbms_application_info.set_client_info</code> and retrieve it using
+                    <code class="codeph">dbms_application_info.read_client_info</code> or with
+                    <code class="codeph">sys_context('USERENV','CLIENT_INFO')</code>. You can view
+                    <code class="codeph">client_info</code> for active sessions in the
+                    <code class="codeph">client_info</code> column in the <code class="codeph">v$session</code> view.
+                     </p>
+                     
+                     <p>Within an <span>APEX</span> session, setting this attribute is not necessary and generally should be left
+                unchanged. If custom PL/SQL code executed within an <span>APEX</span> session changes <code class="codeph">client_info</code>, this change will not cause problems
+                for <span>Oracle APEX</span>. However, it may affect the ability for some monitoring tools to effectively
+                identify the <span>APEX</span> session.
+                     </p>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-3758CB03-6837-470E-A099-23387D9DC386__GUID-2707275F-48AE-430A-846E-8A889B483F42">module</p>
+                     
+                     
+                     <p><code class="codeph">module</code> is a 48 byte string that is usually used to identify the
+                currently running module or process. In PL/SQL, you can set <code class="codeph">module</code>
+                by calling <code class="codeph">dbms_application_info.set_module</code> and retrieve it using
+                    <code class="codeph">dbms_application_info.read_module</code> or with
+                    <code class="codeph">sys_context('USERENV','MODULE')</code>. You can view
+                    <code class="codeph">module</code> for active sessions in the <code class="codeph">module</code>
+                column in the <code class="codeph">v$session</code> view.
+                     </p>
+                     
+                     <p>Within an <span>APEX</span> session, Oracle recommends setting this attribute (along with
+                    <code class="codeph">action</code> ) as a way to allow monitoring tools to identify what is
+                currently being processed.
+                     </p>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-3758CB03-6837-470E-A099-23387D9DC386__GUID-F2662210-1F09-4453-8485-AB22DAFB1FCC">action</p>
+                     
+                     
+                     <p><code class="codeph">action</code> is a 32 byte string that is usually used to identify the
+                current step being performed within a module or process.  In PL/SQL, you can set
+                    <code class="codeph">action</code> for the session by calling
+                    <code class="codeph">dbms_application_info.set_module</code> or <code class="codeph">set_action</code>
+                and retrieve it using <code class="codeph">dbms_application_info.read_module</code> or
+                    <code class="codeph">sys_context('USERENV','ACTION')</code>. You can view
+                    <code class="codeph">action</code> for active sessions in the <code class="codeph">action</code>
+                column in the <code class="codeph">v$session</code> view.
+                     </p>
+                     
+                     <p>Within an <span>APEX</span> session, Oracle recommends setting this attribute (along with
+                    <code class="codeph">module</code>) as a way to allow monitoring tools to identify what is
+                currently being processed.
+                     </p>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-3758CB03-6837-470E-A099-23387D9DC386__GUID-159555C3-64B5-4EA3-95BC-C077CE25B7C4">Session long ops </p>
+                     
+                     
+                     <p><code class="codeph">Session longops</code> (long operations) is a record structure
+                that describes the number of units processed so far versus the total number of units
+                expected to be processed. You can use <code class="codeph">session longops</code> to estimate
+                completion time for long-running processes. In PL/SQL, you can set <code class="codeph">session
+                    longops</code> for the session by calling
+                    <code class="codeph">dbms_application_info.set_session_longops</code>. You can monitor long
+                operations by querying the <code class="codeph">v$session_longops</code> view.
+                     </p>
+                     
+                     <p>Within an <span>APEX</span> session, Oracle recommends setting this attribute for processes that are expected
+                to take a long time, if the workload can be reasonably broken up into discrete units
+                of work (for example, "number of records processed").
+                     </p>
+                     
+                     <div class="infoboxnote" id="GUID-3758CB03-6837-470E-A099-23387D9DC386__GUID-E153124A-CAE9-423F-BF6B-11FB881EC407">
+                        <p class="notep1">Note:</p><span>Oracle APEX</span> calls the <span class="uicontrol bold">SYS</span> version of
+                    <code class="codeph">dbms_application_info</code>; even if a wrapper for the package
+                exists, it will not be used.
+                     </div>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="correlating-apex-sessions-to-database-sessions.html#GUID-F3782ABA-E506-40E3-9E32-292AB020F256" title="Learn about best practices that enable administrators and developers to correlate the database session with a specific APEX application in order to troubleshoot application performance issues.">Correlating APEX Sessions to Database Sessions</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-84224ECC-1F66-4A8A-BD7C-E51E358606C0" name="GUID-84224ECC-1F66-4A8A-BD7C-E51E358606C0"></a><h3 id="HTMDB-GUID-84224ECC-1F66-4A8A-BD7C-E51E358606C0" class="sect3"><span class="enumeration_section">D.3 </span><span>APEX</span> Processes
+               </h3>
+               <div>
+                  <p>Learn how <span>APEX</span> sets session attributes for an application or background mail session.
+                  </p>
+                  <div class="section">
+                     
+                     <div class="infobox-tip" id="GUID-84224ECC-1F66-4A8A-BD7C-E51E358606C0__GUID-BB533F22-C5A3-4DFD-98FC-D95574C55FF3">
+                        <p class="notep1">Tip:</p>Most <span>APEX</span> processes reset the session values to NULL when they finish. They do not restore
+                prior values.
+                     </div>
+                     <p>The following table details how <span>APEX</span> sets session attributes for an application session.
+                     </p>
+                     
+                     <div class="tblformalwide" id="GUID-84224ECC-1F66-4A8A-BD7C-E51E358606C0__TABLE_HCJ_P4V_J5B">
+                        <table cellpadding="4" cellspacing="0" class="FormalWide" title summary="Application Session." width="100%" frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="0%" id="d427713e811">Session Attribute</th>
+                                 <th align="left" valign="bottom" width="0%" id="d427713e813">Expression</th>
+                                 <th align="left" valign="bottom" width="0%" id="d427713e815">Example.</th>
+                                 <th align="left" valign="bottom" width="0%" id="d427713e817">Notes More...</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e821" headers="d427713e811 ">
+                                    
+                                    <p><code class="codeph">client_id</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e821 d427713e813 ">
+                                    <pre class="pre codeblock"><code><code class="codeph"><span class="codeinlineitalic">app_user</span> || ':' || <span class="codeinlineitalic">session-id</span></code></code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e821 d427713e815 ">
+                                    
+                                    <p><code class="codeph">jane.doe@example.com:12161645673208</code>
+                                       
+                                    </p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e821 d427713e817 ">
+                                    
+                                    <p> If app_user is too long, it will be truncated to
+                                    fit (for example, the first 50 or 49 bytes). Before
+                                    authentication is completed, will be:</p>
+                                    <pre class="pre codeblock"><code>'nobody:' || session-id</code></pre>
+                                    </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e853" headers="d427713e811 ">
+                                    
+                                    <p><code class="codeph">client_info</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e853 d427713e813 ">
+                                    <pre class="pre codeblock"><code><span class="italic">workspace-id</span> || ':' || <span class="italic">app_user</span> </code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e853 d427713e815 ">
+                                    
+                                    <p><code class="codeph">3574091691765823934:jane.doe@example.com</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e853 d427713e817 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e881" headers="d427713e811 ">
+                                    
+                                    <p><code class="codeph">module</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e881 d427713e813 ">
+                                    <pre class="pre codeblock"><code>schema || '/APEX:APP ' || <span class="italic">app-id</span> || ':' || <span class="italic">page-id</span> </code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e881 d427713e815 ">
+                                    
+                                    <p><code class="codeph">MY_DB/APEX:APP 17251:4</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e881 d427713e817 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e910" headers="d427713e811 ">
+                                    
+                                    <p><code class="codeph">action</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e910 d427713e813 ">
+                                    
+                                    <p>A range of different values may be seen, such as:</p>
+                                    <pre class="pre codeblock"><code>'start_page_request'
+'PAGE ' || page-id 
+'computation and processes' 
+'fetch meta data'
+'Processes - point: ' || process-point 
+'Validations' 
+'branching' 
+'import app ' || app-id </code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e910 d427713e815 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e910 d427713e817 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-84224ECC-1F66-4A8A-BD7C-E51E358606C0__GUID-57240C66-FE48-4E8F-8AE4-BD36AB1E6BC9">Mail Background Session</p>
+                     
+                     
+                     <p>The following table details how <span>APEX</span> sets session attributes for a mail background session.
+                     </p>
+                     
+                     <div class="tblformalwide" id="GUID-84224ECC-1F66-4A8A-BD7C-E51E358606C0__TABLE_A32_VRV_J5B">
+                        <table cellpadding="4" cellspacing="0" class="FormalWide" title summary="This table details how APEX sets session attributes for a mail background session." width="100%" frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="0%" id="d427713e957">Session Attribute</th>
+                                 <th align="left" valign="bottom" width="0%" id="d427713e959">Expression</th>
+                                 <th align="left" valign="bottom" width="0%" id="d427713e961">Notes</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e965" headers="d427713e957 ">
+                                    
+                                    <p><code class="codeph">client_id</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e965 d427713e959 ">
+                                    <pre class="pre codeblock"><code>mail-from || ':' || message-guid</code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e965 d427713e961 ">
+                                    
+                                    <p>Long email addresses are truncated to fit.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e982" headers="d427713e957 ">
+                                    
+                                    <p><code class="codeph">client_info</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e982 d427713e959 ">
+                                    <pre class="pre codeblock"><code>workspace-id || ':' || mail-from </code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e982 d427713e961 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e999" headers="d427713e957 ">
+                                    
+                                    <p><code class="codeph">module</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e999 d427713e959 ">
+                                    
+                                    <p>(unchanged)</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e999 d427713e961 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1016" headers="d427713e957 ">
+                                    
+                                    <p><code class="codeph">action</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1016 d427713e959 ">
+                                    
+                                    <p>(unchanged)</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1016 d427713e961 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="correlating-apex-sessions-to-database-sessions.html#GUID-F3782ABA-E506-40E3-9E32-292AB020F256" title="Learn about best practices that enable administrators and developers to correlate the database session with a specific APEX application in order to troubleshoot application performance issues.">Correlating APEX Sessions to Database Sessions</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-78E20247-5A0D-4416-9327-31FFC5F2D839" name="GUID-78E20247-5A0D-4416-9327-31FFC5F2D839"></a><h3 id="HTMDB-GUID-78E20247-5A0D-4416-9327-31FFC5F2D839" class="sect3"><span class="enumeration_section">D.4 </span><span>SQL Workshop</span></h3>
+               <div>
+                  <p>Learn how <span>APEX</span> sets session attributes in <span>SQL Commands</span> and <span>SQL
+                                        Scripts</span>.
+                  </p>
+                  <div class="section">
+                     
+                     <div class="p">
+                        
+                        <div class="infoboxnote" id="GUID-78E20247-5A0D-4416-9327-31FFC5F2D839__GUID-66D54BE5-D229-438D-BDED-4B5EA530466B">
+                           <p class="notep1">Note:</p>The
+                        <span class="uicontrol bold">Autocommit</span> check box displays in <span>SQL Commands</span> if  <span class="uicontrol bold">Enable Transactional SQL Commands</span> is enabled in
+                    Administration Services, Feature Configuration. To learn more, see <a href="../aeadm/configuring-features.html#AEADM-GUID-1F994F8E-112D-4D6B-AE4C-D8F7647493A6" target="_blank">Configuring SQL Workshop</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></div>
+                        
+                     </div>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-78E20247-5A0D-4416-9327-31FFC5F2D839__GUID-C780C11B-E619-4CE3-85DC-F8EDFDC9F1BC"><span>SQL Commands</span> (Autocommit = ON)
+                     </p>
+                     
+                     
+                     <p>The following table details how <span>APEX</span> sets session attributes in <span>SQL Commands</span> when <span class="uicontrol bold">Autocommit</span> is enabled.
+                     </p>
+                     
+                     <div class="tblformal" id="GUID-78E20247-5A0D-4416-9327-31FFC5F2D839__TABLE_ZN5_MTV_J5B">
+                        <table cellpadding="4" cellspacing="0" class="Formal" title summary="SQL Commands (Autocommit = ON)." frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="0%" id="d427713e1193">Session Attribute</th>
+                                 <th align="left" valign="bottom" width="0%" id="d427713e1195">Expression</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1199" headers="d427713e1193 ">
+                                    
+                                    <p><code class="codeph">client_id</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1199 d427713e1195 ">
+                                    <pre class="pre codeblock"><code><span class="italic">app_user</span> || ':' || <span class="italic">session-id</span></code></pre>
+                                    </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1215" headers="d427713e1193 ">
+                                    
+                                    <p><code class="codeph">client_info</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1215 d427713e1195 ">
+                                    <pre class="pre codeblock"><code><span class="italic">workspace-id</span> || ':' || <span class="italic">app_user</span></code></pre>
+                                    </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1231" headers="d427713e1193 ">
+                                    
+                                    <p><code class="codeph">module</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1231 d427713e1195 ">
+                                    <pre class="pre codeblock"><code>'APEX:SQL Workshop'</code></pre>
+                                    </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1243" headers="d427713e1193 ">
+                                    
+                                    <p><code class="codeph">action</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1243 d427713e1195 ">
+                                    <pre class="pre codeblock"><code><span class="italic">sql-statement</span></code></pre>
+                                    </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-78E20247-5A0D-4416-9327-31FFC5F2D839__GUID-20153D01-5925-419A-8F3D-8FBA6C6538A4"><span>SQL Commands</span> (Autocommit = OFF)
+                     </p>
+                     
+                     
+                     <p>The following table details how <span>APEX</span> sets session attributes in <span>SQL Commands</span> when <span class="uicontrol bold">Autocommit</span> is disabled. When
+                    <span class="uicontrol bold">Autocommit</span> is disabled, <span>SQL Commands</span> are executed by a separate database job. While awaiting a command from the <span>SQL Commands</span> window, the job is in an "idle" state.
+                     </p>
+                     
+                     <div class="tblformal" id="GUID-78E20247-5A0D-4416-9327-31FFC5F2D839__TABLE_YJ4_WTV_J5B">
+                        <table cellpadding="4" cellspacing="0" class="Formal" title summary="SQL Commands (Autocommit = OFF)" frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="0%" id="d427713e1295">Session Attribute</th>
+                                 <th align="left" valign="bottom" width="0%" id="d427713e1297">Expression</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1301" headers="d427713e1295 ">
+                                    
+                                    <p><code class="codeph">client_id</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1301 d427713e1297 ">
+                                    <pre class="pre codeblock"><code><span class="italic">app_user</span> || ':' || <span class="italic">session-id</span></code></pre>
+                                    </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1317" headers="d427713e1295 ">
+                                    
+                                    <p><code class="codeph">client_info</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1317 d427713e1297 ">
+                                    <pre class="pre codeblock"><code><span class="italic">workspace-id</span> || ':' || <span class="italic">app_user</span></code></pre>
+                                    </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1333" headers="d427713e1295 ">
+                                    
+                                    <p><code class="codeph">module</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1333 d427713e1297 ">
+                                    <pre class="pre codeblock"><code>'APEX:SQL Workshop-No Autocommit'</code></pre>
+                                    </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1345" headers="d427713e1295 ">
+                                    
+                                    <p><code class="codeph">action</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1345 d427713e1297 ">
+                                    <pre class="pre codeblock"><code>Working
+
+<span class="italic">sql-statement</span> 
+
+Idle, awaiting work
+
+Stopping</code></pre>
+                                    </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     
+                     <div class="infoboxnotealso" id="GUID-78E20247-5A0D-4416-9327-31FFC5F2D839__GUID-2DF95E1D-7F8A-4ED1-AE0B-132F48A64AD8">
+                        <p class="notep1">See Also:</p><a href="../aeutl/using-sql-commands.html#AEUTL-GUID-41CC2FC0-F6B6-4737-B7D2-6C9C1B85310C" target="_blank">Using SQL Commands</a> in <span><cite>Oracle APEX SQL Workshop
+                                        Guide</cite></span></div>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-78E20247-5A0D-4416-9327-31FFC5F2D839__GUID-D2DA7F00-0E96-4A39-A9DD-F6CF9A22E354"><span>SQL
+                                        Scripts</span></p>
+                     
+                     
+                     <p>The following table details how <span>APEX</span> sets session attributes while running <span>SQL
+                                        Scripts</span>.
+                     </p>
+                     
+                     <div class="tblformalwide" id="GUID-78E20247-5A0D-4416-9327-31FFC5F2D839__TABLE_ABQ_25V_J5B">
+                        <table cellpadding="4" cellspacing="0" class="FormalWide" title summary="This table details how APEX sets session attributes while running SQL&#xA;                                        Scripts." width="100%" frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="0%" id="d427713e1398">Session Attribute</th>
+                                 <th align="left" valign="bottom" width="0%" id="d427713e1400">Expression</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1404" headers="d427713e1398 ">
+                                    
+                                    <p><code class="codeph">client_id</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1404 d427713e1400 ">
+                                    <pre class="pre codeblock"><code><span class="italic">app_user</span> || ':' || <span class="italic">session-id</span></code></pre>
+                                    </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1420" headers="d427713e1398 ">
+                                    
+                                    <p><code class="codeph">client_info</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1420 d427713e1400 ">
+                                    <pre class="pre codeblock"><code><span class="italic">workspace-id</span> || ':' || <span class="italic">app_user</span></code></pre>
+                                    </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1436" headers="d427713e1398 ">
+                                    
+                                    <p><code class="codeph">module</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1436 d427713e1400 ">
+                                    <pre class="pre codeblock"><code>'APEX:SQL Workshop:<span class="italic">Script</span>'</code></pre>
+                                    </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1451" headers="d427713e1398 ">
+                                    
+                                    <p><code class="codeph">action</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1451 d427713e1400 ">
+                                    <pre class="pre codeblock"><code><span class="italic">script-name</span></code></pre>
+                                    </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1464" headers="d427713e1398 ">
+                                    
+                                    <p><code class="codeph">longops</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1464 d427713e1400 ">
+                                    <pre class="pre codeblock"><code>SQL statement <span class="italic">N</span> of <span class="italic">M</span></code></pre>
+                                    </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-78E20247-5A0D-4416-9327-31FFC5F2D839__GUID-FEEDFA8C-9157-4544-A4BB-A966CA24FA10">
+                     <p class="notep1">See Also:</p><a href="../aeutl/using-sql-scripts.html#AEUTL-GUID-7288B4B4-E00C-4DC4-89EA-5FA52623A1EF" target="_blank">Using SQL Scripts</a> in <span><cite>Oracle APEX SQL Workshop
+                                        Guide</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="correlating-apex-sessions-to-database-sessions.html#GUID-F3782ABA-E506-40E3-9E32-292AB020F256" title="Learn about best practices that enable administrators and developers to correlate the database session with a specific APEX application in order to troubleshoot application performance issues.">Correlating APEX Sessions to Database Sessions</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-CD004D99-9394-463E-B2D2-E99644FF3B7E" name="GUID-CD004D99-9394-463E-B2D2-E99644FF3B7E"></a><h3 id="HTMDB-GUID-CD004D99-9394-463E-B2D2-E99644FF3B7E" class="sect3"><span class="enumeration_section">D.5 </span>Data Workshop
+               </h3>
+               <div>
+                  <p>Learn how <span>APEX</span> sets session attributes while importing data using Data Workshop.
+                  </p>
+                  <div class="section">
+                     
+                     <p>The following table details how <span>APEX</span> sets session attributes while importing data using Data Workshop.
+                     </p>
+                     
+                     <div class="tblformalwide" id="GUID-CD004D99-9394-463E-B2D2-E99644FF3B7E__TABLE_CW1_XBW_J5B">
+                        <table cellpadding="4" cellspacing="0" class="FormalWide" title summary="How APEX sets session attributes while importing data using Data Workshop." width="100%" frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="0%" id="d427713e1611">Session Attribute</th>
+                                 <th align="left" valign="bottom" width="0%" id="d427713e1613">Expression</th>
+                                 <th align="left" valign="bottom" width="0%" id="d427713e1615">Notes</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1619" headers="d427713e1611 ">
+                                    
+                                    <p><code class="codeph">client_id</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1619 d427713e1613 ">
+                                    
+                                    <p>(unchanged)</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1619 d427713e1615 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1636" headers="d427713e1611 ">
+                                    
+                                    <p><code class="codeph">client_info</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1636 d427713e1613 ">
+                                    <pre class="pre codeblock"><code><span class="italic">workspace-id</span> || ':' || <span class="italic">app-user</span> </code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1636 d427713e1615 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1658" headers="d427713e1611 ">
+                                    
+                                    <p><code class="codeph">module</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1658 d427713e1613 ">
+                                    <pre class="pre codeblock"><code>schema || '/APEX:APP' || app-id || ':DATA_LOADING' 
+or
+schema || '/APEX:APP' || app-id || ':DATA_LOADING_SODA' </code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1658 d427713e1615 ">
+                                    
+                                    <p>If the schema name is long, it may be truncated so that the
+                                    module string fits within 48 bytes. </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1675" headers="d427713e1611 ">
+                                    
+                                    <p><code class="codeph">action</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1675 d427713e1613 ">
+                                    <pre class="pre codeblock"><code>Data Loading Job</code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1675 d427713e1615 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="correlating-apex-sessions-to-database-sessions.html#GUID-F3782ABA-E506-40E3-9E32-292AB020F256" title="Learn about best practices that enable administrators and developers to correlate the database session with a specific APEX application in order to troubleshoot application performance issues.">Correlating APEX Sessions to Database Sessions</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-7AEAB21D-6C3B-4719-8098-BCECCD01E677" name="GUID-7AEAB21D-6C3B-4719-8098-BCECCD01E677"></a><h3 id="HTMDB-GUID-7AEAB21D-6C3B-4719-8098-BCECCD01E677" class="sect3"><span class="enumeration_section">D.6 </span>Automations
+               </h3>
+               <div>
+                  <p>Learn how <span>APEX</span> sets session attributes while running Automations.
+                  </p>
+                  <div class="section">
+                     
+                     <p>The following table details how <span>APEX</span> sets session attributes while running Automations.
+                     </p>
+                     
+                     <div class="tblformalwide" id="GUID-7AEAB21D-6C3B-4719-8098-BCECCD01E677__TABLE_NML_GDW_J5B">
+                        <table cellpadding="4" cellspacing="0" class="FormalWide" title summary="How APEX sets session attributes while running Automations." width="100%" frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="0%" id="d427713e1812">Session Attribute</th>
+                                 <th align="left" valign="bottom" width="0%" id="d427713e1814">Expression</th>
+                                 <th align="left" valign="bottom" width="0%" id="d427713e1816">Notes</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1820" headers="d427713e1812 ">
+                                    
+                                    <p><code class="codeph">client_id</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1820 d427713e1814 ">
+                                    
+                                    <p>(unchanged)</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1820 d427713e1816 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1837" headers="d427713e1812 ">
+                                    
+                                    <p><code class="codeph">client_info</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1837 d427713e1814 ">
+                                    <pre class="pre codeblock"><code><span class="italic">workspace-id</span> || ':' </code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1837 d427713e1816 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1856" headers="d427713e1812 ">
+                                    
+                                    <p><code class="codeph">module</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1856 d427713e1814 ">
+                                    <pre class="pre codeblock"><code><span class="italic">automation-module</span></code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1856 d427713e1816 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1874" headers="d427713e1812 ">
+                                    
+                                    <p><code class="codeph">action</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1874 d427713e1814 ">
+                                    <pre class="pre codeblock"><code><span class="italic">automation-static-id</span> || ':I' </code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1874 d427713e1816 ">
+                                    
+                                    <p>Executing initialisation procedure. </p>
+                                    
+                                    <p>In all cases, <code class="codeph">automation-static-ID</code> is truncated
+                                    to 16 characters.
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1899" headers="d427713e1812 ">
+                                    
+                                    <p><code class="codeph">action</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1899 d427713e1814 ">
+                                    <pre class="pre codeblock"><code><span class="italic">automation-static-id</span></code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1899 d427713e1816 ">
+                                    
+                                    <p>Starting / fetching data.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1917" headers="d427713e1812 ">
+                                    
+                                    <p><code class="codeph">action</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1917 d427713e1814 ">
+                                    <pre class="pre codeblock"><code><span class="italic">automation-static-id</span> || ':R' || <span class="italic">row-num</span> || ':B' </code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1917 d427713e1816 ">
+                                    
+                                    <p>Before action.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1939" headers="d427713e1812 ">
+                                    
+                                    <p><code class="codeph">action</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1939 d427713e1814 ">
+                                    <pre class="pre codeblock"><code><span class="italic">automation-static-id</span> || ':R' || <span class="italic">row-num</span> || ':A' || action-sequence </code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1939 d427713e1816 ">
+                                    
+                                    <p>Executing action.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1961" headers="d427713e1812 ">
+                                    
+                                    <p><code class="codeph">action</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1961 d427713e1814 ">
+                                    <pre class="pre codeblock"><code><span class="italic">automation-static-id</span> || ':R' || <span class="italic">row-num</span></code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1961 d427713e1816 ">
+                                    
+                                    <p>Finished action.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e1982" headers="d427713e1812 ">
+                                    
+                                    <p><code class="codeph">action</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1982 d427713e1814 ">
+                                    <pre class="pre codeblock"><code><span class="italic">automation-static-id</span> || ':T'</code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e1982 d427713e1816 ">
+                                    
+                                    <p>Cleanup.</p>
+                                    
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-7AEAB21D-6C3B-4719-8098-BCECCD01E677__GUID-C1BD76C5-B202-4992-9670-9B9769466E2A">
+                     <p class="notep1">See Also:</p><a href="managing-automations.html#GUID-EC3FF1D8-6CEF-4C8A-B200-11C3F02A6B92" title="Automations initiate a sequential set of actions based on a schedule.">Managing Automations</a></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="correlating-apex-sessions-to-database-sessions.html#GUID-F3782ABA-E506-40E3-9E32-292AB020F256" title="Learn about best practices that enable administrators and developers to correlate the database session with a specific APEX application in order to troubleshoot application performance issues.">Correlating APEX Sessions to Database Sessions</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-962A21EA-9F65-4953-B323-47482D11527A" name="GUID-962A21EA-9F65-4953-B323-47482D11527A"></a><h3 id="HTMDB-GUID-962A21EA-9F65-4953-B323-47482D11527A" class="sect3"><span class="enumeration_section">D.7 </span>Installer
+               </h3>
+               <div>
+                  <p>Learn how <span>APEX</span> installation scripts set session attributes while <span>APEX</span> is being installed or upgraded.
+                  </p>
+                  <div class="section">
+                     
+                     <p>The following table details how <span>APEX</span> installation scripts set session attributes while installing or upgrading <span>APEX</span>.
+                     </p>
+                     
+                     <div class="tblformalwide" id="GUID-962A21EA-9F65-4953-B323-47482D11527A__TABLE_DLC_PGW_J5B">
+                        <table cellpadding="4" cellspacing="0" class="FormalWide" title summary="How APEX installation scripts set session attributes while installing or&#xA;                    upgrading." width="100%" frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="0%" id="d427713e2134">Session Attribute</th>
+                                 <th align="left" valign="bottom" width="0%" id="d427713e2136">Expression</th>
+                                 <th align="left" valign="bottom" width="0%" id="d427713e2138">Notes</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e2142" headers="d427713e2134 ">
+                                    
+                                    <p><code class="codeph">client_id</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e2142 d427713e2136 ">
+                                    
+                                    <p>(unchanged)</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e2142 d427713e2138 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e2159" headers="d427713e2134 ">
+                                    
+                                    <p><code class="codeph">client_info</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e2159 d427713e2136 ">
+                                    
+                                    <p>(unchanged)</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e2159 d427713e2138 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e2176" headers="d427713e2134 ">
+                                    
+                                    <p><code class="codeph">module</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e2176 d427713e2136 ">
+                                    <pre class="pre codeblock"><code>'APEX ' || <span class="italic">install-type</span> || ' PHASE ' || phase </code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e2176 d427713e2138 ">
+                                    
+                                    <p><code class="codeph"><span class="codeinlineitalic">install-type</span></code> is something
+                                    like <code class="codeph">'FULLINS'</code> , <code class="codeph">'RUNTIME'</code> ,
+                                        <code class="codeph">'PATCH'</code> , and so on.
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d427713e2208" headers="d427713e2134 ">
+                                    
+                                    <p><code class="codeph">action</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e2208 d427713e2136 ">
+                                    
+                                    <p>A range of different values may be seen, such
+                                    as:</p>
+                                    <pre class="pre codeblock"><code>'upgrade' 
+'recompiling' </code></pre>
+                                    </td>
+                                 <td align="left" valign="top" width="0%" headers="d427713e2208 d427713e2138 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="correlating-apex-sessions-to-database-sessions.html#GUID-F3782ABA-E506-40E3-9E32-292AB020F256" title="Learn about best practices that enable administrators and developers to correlate the database session with a specific APEX application in order to troubleshoot application performance issues.">Correlating APEX Sessions to Database Sessions</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

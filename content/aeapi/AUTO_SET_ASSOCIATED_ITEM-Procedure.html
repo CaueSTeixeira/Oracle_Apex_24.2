@@ -1,0 +1,145 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="AUTO_SET_ASSOCIATED_ITEM Procedure">
+      <meta name="DC.subject" content="AUTO_SET_ASSOCIATED_ITEM procedure, APEX_ERROR">
+      <meta name="keywords" content="AUTO_SET_ASSOCIATED_ITEM procedure, APEX_ERROR">
+      <meta name="DC.Relation" scheme="URI" content="APEX_ERROR.html#GUID-F9353D6E-85FB-48EE-B493-3A0C0F596436">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-408422C1-BED2-4DE6-8E92-169639A098D4">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>AUTO_SET_ASSOCIATED_ITEM Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="ADD_ERROR-Procedure-Signature-5.html" title="Previous" type="text/html">
+      <link rel="next" href="EXTRACT_CONSTRAINT_NAME-Function.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"AUTO_SET_ASSOCIATED_ITEM Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="ADD_ERROR-Procedure-Signature-5.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="EXTRACT_CONSTRAINT_NAME-Function.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-408422C1-BED2-4DE6-8E92-169639A098D4" name="GUID-408422C1-BED2-4DE6-8E92-169639A098D4"></a><a id="AEAPI2243"></a><a id="AEAPI2244"></a><a id="AEAPI2245"></a><a id="AEAPI2246"></a><a id="AEAPI2242"></a>
+         
+         <h2 id="AEAPI-GUID-408422C1-BED2-4DE6-8E92-169639A098D4" class="sect2"><span class="enumeration_section">25.8 </span>AUTO_SET_ASSOCIATED_ITEM Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This procedure automatically sets the associated page item or tabular form column based on a constraint contained in <code class="codeph">p_error.ora_sqlerrm</code>.This procedure performs the following:
+                  </p>
+                  <ul style="list-style-type: disc;" id="GUID-408422C1-BED2-4DE6-8E92-169639A098D4__UL_WGW_3LN_LCC">
+                     <li>Identifies the constraint by searching for the <code class="codeph">schema.constraint</code> pattern.
+                     </li>
+                     <li>Only supports constraints of type P, U, R and C.</li>
+                     <li>For constraints of type C (check constraints), the procedure parses the expression to identify those columns that are used in the constraints expression.</li>
+                     <li>Using those columns, the procedure gets the first visible page item or tabular form column that is based on that column and set it as associated <code class="codeph">p_error_result.page_item_name</code> or <code class="codeph">p_error_result.column_alias</code>.
+                     </li>
+                     <li>If a page item or tabular form column was found, <code class="codeph">p_error_result.display_location</code> is set to <code class="codeph">apex_error.c_inline_with_field_and_notif</code>.
+                     </li>
+                  </ul>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-408422C1-BED2-4DE6-8E92-169639A098D4__GUID-6AAC7379-1010-4CE4-8321-8AAFB3127002">Syntax</p><pre class="pre codeblock"><code>APEX_ERROR.AUTO_SET_ASSOCIATED_ITEM (
+    p_error_result IN OUT NOCOPY t_error_result,
+    p_error        IN            t_error );</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-408422C1-BED2-4DE6-8E92-169639A098D4__GUID-1B623547-3753-42D7-906A-325C16CF905E">Parameters</p>
+                  <div class="tblformal" id="GUID-408422C1-BED2-4DE6-8E92-169639A098D4__GUID-1E40B201-B9F9-4606-B6EA-AF678DC55DD2">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="31%" id="d99677e103">Parameters</th>
+                              <th align="left" valign="bottom" width="69%" id="d99677e105">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d99677e109" headers="d99677e103 "><code class="codeph">p_error_result</code></td>
+                              <td align="left" valign="top" width="69%" headers="d99677e109 d99677e105 ">The result variable of your error handling function.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d99677e115" headers="d99677e103 "><code class="codeph">p_error</code></td>
+                              <td align="left" valign="top" width="69%" headers="d99677e115 d99677e105 ">The <code class="codeph">p_error</code> parameter of your error handling function.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-408422C1-BED2-4DE6-8E92-169639A098D4__GUID-037BBAC4-7B04-43E8-9611-A08195C33D8B">Example</p>
+                  <p>See an example of how to use this procedure in <a href="Example-of-an-Error-Handling-Function.html#GUID-2CD75881-1A59-4787-B04B-9AAEC14E1A82">Example of an Error Handling Function</a>.
+                  </p>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_ERROR.html#GUID-F9353D6E-85FB-48EE-B493-3A0C0F596436">APEX_ERROR</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

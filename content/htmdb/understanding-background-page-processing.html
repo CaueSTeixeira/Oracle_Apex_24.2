@@ -1,0 +1,464 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Understanding Background Page Processing">
+      <meta name="abstract" content="Background page processing enables developers to run a sequence of page processes that can execute in the foreground or in the background.">
+      <meta name="description" content="Background page processing enables developers to run a sequence of page processes that can execute in the foreground or in the background.">
+      <meta name="DC.subject" content="page processes, background, background process, reimporting, process, Execution Chain, Execution Chain page process, about, creating, monitoring, terminating">
+      <meta name="keywords" content="page processes, background, background process, reimporting, process, Execution Chain, Execution Chain page process, about, creating, monitoring, terminating">
+      <meta name="DC.Relation" scheme="URI" content="understanding-page-processes.html#GUID-DE72F8ED-A3A0-4FBC-8362-ABA47E543466">
+      <meta name="DC.Relation" scheme="URI" content="understanding-background-page-processing.html#GUID-27F8C574-4B52-463B-AD2A-66B27B249AD9">
+      <meta name="DC.Relation" scheme="URI" content="understanding-background-page-processing.html#GUID-996D6358-EC5C-4461-A4CC-926F7A38EEBF">
+      <meta name="DC.Relation" scheme="URI" content="understanding-background-page-processing.html#GUID-F39985B3-14E9-4DB0-8B4D-CF80A99D05CA">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-4FCFB2D6-EF19-4692-8980-4F9EBED0DBB7">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Background page processing enables developers to run a sequence of page processes that can execute in the foreground or in the background.">
+      <meta name="description" content="Background page processing enables developers to run a sequence of page processes that can execute in the foreground or in the background.">
+      <title>Understanding Background Page Processing</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Background page processing enables developers to run a sequence of page processes that can execute in the foreground or in the background.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="editing-page-processes.html" title="Previous" type="text/html">
+      <link rel="next" href="understanding-application-processes.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Understanding Background Page Processing","description":"Background page processing enables developers to run a sequence of page processes that can execute in the foreground or in the background.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="editing-page-processes.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="understanding-application-processes.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-4FCFB2D6-EF19-4692-8980-4F9EBED0DBB7" name="GUID-4FCFB2D6-EF19-4692-8980-4F9EBED0DBB7"></a>
+         
+         <h2 id="HTMDB-GUID-4FCFB2D6-EF19-4692-8980-4F9EBED0DBB7" class="sect2"><span class="enumeration_section">15.3.4 </span>Understanding Background Page
+        Processing
+         </h2>
+         <div class="ind">
+            <p>Background page processing enables developers to run a sequence of page
+                processes that can execute in the foreground or in the background.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="understanding-background-page-processing.html#GUID-27F8C574-4B52-463B-AD2A-66B27B249AD9">About Background Page Processes</a><br>Learn about background page processes.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-background-page-processing.html#GUID-996D6358-EC5C-4461-A4CC-926F7A38EEBF">Creating a Background Page Page Process</a><br>Create a background page process using the Execution Chain process type,         which contains child processes executing one after the other. Execution chains can run in         the background or in the foreground.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-background-page-processing.html#GUID-F39985B3-14E9-4DB0-8B4D-CF80A99D05CA">Monitoring Currently Running Background Processes</a><br>Monitor background processes by clicking Session on the Runtime Developer         toolbar.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="understanding-page-processes.html#GUID-DE72F8ED-A3A0-4FBC-8362-ABA47E543466" title="Create page processes to perform an action at a specified point during the rendering or submission of the page.">Understanding Page Processes</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-27F8C574-4B52-463B-AD2A-66B27B249AD9" name="GUID-27F8C574-4B52-463B-AD2A-66B27B249AD9"></a><h3 id="HTMDB-GUID-27F8C574-4B52-463B-AD2A-66B27B249AD9" class="sect3"><span class="enumeration_section">15.3.4.1 </span>About Background Page Processes
+               </h3>
+               <div>
+                  <p>Learn about background page processes.</p>
+                  <div class="section">
+                     
+                     <p>The Execution Chain process type enables page processing to execute in
+                the background so that users don't have to wait until processing finishes. Typical
+                use cases are long running operations such as data loading or expensive data
+                processing. An Execution Chain process type may contain one or multiple child
+                processes, which do the actual processing, and are executed one after the other. An
+                execution chain can run either in the background or in the foreground.</p>
+                     
+                     <p>Creating a background page process involves the following general
+                steps:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-27F8C574-4B52-463B-AD2A-66B27B249AD9__UL_OY4_25R_5WB">
+                        <li>In Page Designer, create a Execution Chain page process.</li>
+                        <li>To the Execution Chain process, add the child processes which do
+                    the actual processing (for example, Execute PL/SQL code, Data Loading, and so
+                    on).</li>
+                        <li>Edit the Execution Chain attributes and enable the
+                        <span class="uicontrol bold">Execute in Background</span> switch.
+                        </li>
+                     </ul>
+                     
+                     <div class="infobox-tip" id="GUID-27F8C574-4B52-463B-AD2A-66B27B249AD9__GUID-2D482131-028F-4106-96EF-2BFF1C2E6FF4">
+                        <p class="notep1">Tip:</p>You can monitor
+                background procecces programatically, using the
+                    <code class="codeph">APEX_BACKGROUND_PROCESS</code> API. See <a href="../aeapi/apex_background_process.html#AEAPI-GUID-3CF5E160-F9FA-4FE0-8907-CAFC173348FF" target="_blank">APEX_BACKGROUND_PROCESS</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></div>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-27F8C574-4B52-463B-AD2A-66B27B249AD9__GUID-0DE333E3-B02A-4DC9-BCF7-DFDFAC553366">About Reimporting an Application
+                with Background Processes</p>
+                     
+                     
+                     <p>Reimporting an application with background processes has a slightly
+                different workflow compared to a standard Application Export. During the import, the
+                wizard prompts you on how to handle existing background processes. See <a href="importing-export-files.html#GUID-C4FFAB70-EC96-4A9D-9699-E1573F7B04FA" title="Learn about the workflow when reimporting an application with background processes.">Reimporting an Application Containing Background Processes</a>.
+                     </p>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-27F8C574-4B52-463B-AD2A-66B27B249AD9__GUID-4476808E-EDE0-407D-9F5C-9B684F12D8C6">Configuring Limits for  Concurrently Running Scheduler Jobs</p>
+                     
+                     
+                     <p>Background page processing is actually executed by the database
+                scheduler (<code class="codeph">DBMS_SCHEDULER</code>). This means that the application's
+                parsing schema must have the <code class="codeph">CREATE JOB</code> privilege granted in order
+                to run background page processing jobs.
+                     </p>
+                     
+                     <p>You can configure limits for concurrently running background page
+                processing jobs as follows. If a new background execution would exceed the
+                configured limits, it will wait in a queued state until one of the running
+                executions finishes and a slot becomes available.</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-27F8C574-4B52-463B-AD2A-66B27B249AD9__UL_BH5_VVR_5WB">
+                        <li>
+                           
+                           <p><span class="uicontrol bold">Instance level</span> (as a default). Configure the
+                            <span class="uicontrol bold">Background Jobs</span> attributes in Instance Settings.
+                        The instance level setting acts as a default for all workspaces and can be
+                        overridden at the workspace level.
+                           </p>
+                           
+                           <p>See <a href="../aeadm/configuring-background-jobs.html#AEADM-GUID-E0AEDBAC-108B-4BA2-A02D-16472C3C9ADE" target="_blank">Configuring Background
+                            Jobs</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="uicontrol bold">Workspace level</span>. Edit the <span class="uicontrol bold">Maximum
+                            Background Page Process Jobs</span> attribute under Workspace
+                        Isolation. The workspace limit acts as a <span class="italic">maximum</span> for all applications
+                        within that workspace.
+                           </p>
+                           
+                           <p>See <a href="../aeadm/isolating-workspace-to-prevent-browser-attacks.html#AEADM-GUID-39A99209-B587-44DE-8C5D-19B9906C7D94" target="_blank">Configuring Workspace
+                            Isolation Attributes</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="uicontrol bold">Application level</span>. Edit the Application
+                        Definition, <span class="uicontrol bold">Maximum Background Page Process Jobs</span>
+                        attribute. This limit is specific to this application. Use this setting to
+                        distribute the workspace limit across applications in that workspace. If you
+                        configure a higher value than the workspace limit, this limit will be
+                        ignored and the workspace limit will be used instead.
+                           </p>
+                           
+                           <p><span class="uicontrol bold">Application level</span>. Edit the Application Definition,
+                            <span class="uicontrol bold">Maximum Background Page Process Jobs</span> attribute.
+                        See <a href="editing-application-attributes.html#GUID-583B8D2A-D236-4A35-A510-F87BF3C694FA">Properties</a>.
+                           </p>
+                           
+                        </li>
+                     </ul>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-background-page-processing.html#GUID-4FCFB2D6-EF19-4692-8980-4F9EBED0DBB7" title="Background page processing enables developers to run a sequence of page processes that can execute in the foreground or in the background.">Understanding Background Page Processing</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-996D6358-EC5C-4461-A4CC-926F7A38EEBF" name="GUID-996D6358-EC5C-4461-A4CC-926F7A38EEBF"></a><h3 id="HTMDB-GUID-996D6358-EC5C-4461-A4CC-926F7A38EEBF" class="sect3"><span class="enumeration_section">15.3.4.2 </span>Creating a Background Page Page
+        Process
+               </h3>
+               <div>
+                  <p>Create a background page process using the Execution Chain process type,
+        which contains child processes executing one after the other. Execution chains can run in
+        the background or in the foreground.</p>
+                  <p>To create background page process using the Execution Chain
+                process type:</p>
+                  <ol>
+                     <li><span>View the page in Page Designer.</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>Select a page.</span><div>
+                                 
+                                 <p>Page Designer appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                  </ol>
+                  <p>Create Execution Chain page process:</p>
+                  <ol start="2">
+                     <li><span>In  the Processing tab, locate the node where the process will occur.
+                    Right-click and select <span class="uicontrol bold">Create Process</span>.</span></li>
+                  </ol>
+                  <p>In the Property Editor, configure the Execution Chain
+                process.</p>
+                  <ol start="3">
+                     <li><span>Under <span class="uicontrol bold">Identification</span>:</span><ol type="a" id="GUID-996D6358-EC5C-4461-A4CC-926F7A38EEBF__SUBSTEPS_H2T_PKS_5WB">
+                           <li><span>Identification, Name - Enter the name of the process for easy
+                            identification by developers.</span></li>
+                           <li><span>Identification, Type - Select <span class="uicontrol bold">Execution
+                            Chain</span>.</span></li>
+                           <li><span>Identification, Execution Chain - This attribute enables support for
+                            nested execution chains. Use this attribute to define another execution
+                            chain as the parent for this chain. For this example, select
+                                <span class="uicontrol bold">None</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Under <span class="uicontrol bold">Settings</span>:</span><ol type="a" id="GUID-996D6358-EC5C-4461-A4CC-926F7A38EEBF__SUBSTEPS_X13_WFS_5WB">
+                           <li class="substepexpand"><span>Settings, Execute in Background - Enable this option to execute this
+                            chain in the background.</span></li>
+                           <li class="substepexpand"><span>Settings, Serialize Executions - Specify whether to serialize
+                            executions of this execution chain. When enabled, all executions (from
+                            all <span>APEX</span> sessions) are serialized to avoid concurrent executions in the
+                            background. Use this setting when processes of this chain are likely to
+                            work on the same resources, for instance, performing DML on the same row
+                            in a table..</span></li>
+                           <li class="substepexpand"><span>Settings, Return Execution ID into Item - Choose a page item to return
+                            the execution ID into. Based on the execution ID, the current status of
+                            the background execution can be fetched.</span></li>
+                           <li class="substepexpand"><span>Settings, Temporary File Handling - Determine how to deal with
+                            temporary files, uploaded through a File Browse page item. Options
+                            include: </span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-996D6358-EC5C-4461-A4CC-926F7A38EEBF__UL_CMD_DKS_5WB">
+                                    <li><span class="uicontrol bold">Ignore</span> - Neither move nor copy temporary
+                                    files to the working session for background execution. Choose
+                                    this option if the background processes will not work with
+                                    uploaded files.
+                                    </li>
+                                    <li><span class="uicontrol bold">Move</span> - Move temporary files to the
+                                    working session for background execution. Choose this option if
+                                    access to temporary files is only needed by one background
+                                    execution chain.
+                                    </li>
+                                    <li><span class="uicontrol bold">Copy</span> - Copy temporary files to the
+                                    working session for background execution. Choose this option if
+                                    you have multiple background execution chains, and all of them
+                                    require access to the temporary files.
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Settings, Executions Limit - If an execution limit is specified, <span>Oracle APEX</span> will raise an error message, if an application user requests more
+                            than the specified limit of background executions. For example,
+                            specifying the value <code class="codeph">3</code>,  users see an error message
+                            when attempting to submit the fourth background execution. This
+                            attribute is useful to prevent users from submitting large amounts of
+                            background executions to the server.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Under <span class="uicontrol bold">Execution </span>:</span><ol type="a">
+                           <li class="substepexpand"><span>Execution, Sequence - Specify the sequence for this computation. The
+                            sequence determines the order of execution.</span><div>
+                                 
+                                 <p>If two components have the same sequence value, then
+                                they may be executed in a different order when the application is
+                                exported and imported into another environment.</p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Execution, Point - Select the point at which this process is
+                            executed.</span></li>
+                           <li class="substepexpand"><span>Execution, Run Process - Select the frequency that this process
+                            executes.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Under <span class="uicontrol bold">Success Message</span>:</span><ul id="GUID-996D6358-EC5C-4461-A4CC-926F7A38EEBF__CHOICES_VRW_TVP_1VB">
+                           <li>Success Message, Success Message - Enter the success
+                        message for this process. 
+                              <p>If the process runs and does not
+                            generate an error, then this process success message displays in the
+                            notification section of the resulting page displayed. If you are
+                            branching to another page using a URL redirect, you may need to check
+                            the <span class="uicontrol bold">preserve success message</span> attribute.
+                              </p>
+                              <p>To learn more, select the attribute in the Property Editor
+                            and click the Help tab in the central pane.</p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><span>Under <span class="uicontrol bold">Error</span>:</span><ol type="a">
+                           <li class="substepexpand"><span>Error, Error Message - Enter the error message for this process.</span><div>
+                                 
+                                 <p>This message displays if an unhandled exception is
+                                raised. After any error processing stops, a rollback is issued and
+                                an error message displays.</p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Error, Display Location - Select where this process error message
+                            displays, when the process fails to complete successfully.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                  </ol>
+                  <p>Create one or more child process:</p>
+                  <ol start="9">
+                     <li><span>Create a child process:</span><ol type="a" id="GUID-996D6358-EC5C-4461-A4CC-926F7A38EEBF__SUBSTEPS_RLR_XMS_5WB">
+                           <li class="substepexpand"><span>In  the Processing tab, select the Execution Chain process, right-click
+                            and select <span class="uicontrol bold">Create Child Process</span>.</span><div>The new child process displays under
+                                <span class="uicontrol bold">Processes</span>.
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>In the Property Editor, configure the process attributes.</span><div>
+                                 
+                                 <p>To learn more about an attribute, select the attribute in
+                                the Property Editor and click the Help tab in the central pane.</p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Repeat the previous step to create additional child processes.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-background-page-processing.html#GUID-4FCFB2D6-EF19-4692-8980-4F9EBED0DBB7" title="Background page processing enables developers to run a sequence of page processes that can execute in the foreground or in the background.">Understanding Background Page Processing</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-F39985B3-14E9-4DB0-8B4D-CF80A99D05CA" name="GUID-F39985B3-14E9-4DB0-8B4D-CF80A99D05CA"></a><h3 id="HTMDB-GUID-F39985B3-14E9-4DB0-8B4D-CF80A99D05CA" class="sect3"><span class="enumeration_section">15.3.4.3 </span>Monitoring Currently Running Background Processes
+               </h3>
+               <div>
+                  <p>Monitor background processes by clicking Session on the Runtime Developer
+        toolbar.</p>
+                  <div class="section">
+                     
+                     <div class="infobox-tip" id="GUID-F39985B3-14E9-4DB0-8B4D-CF80A99D05CA__GUID-8BA488E7-084C-4C94-829A-A0A67C0CEC58">
+                        <p class="notep1">Tip:</p>You can also view a Background Processing report for Active Sessions in
+                Workspace Administration. From the Administration menu, select <span class="uicontrol bold">Monitor
+                    Activity</span> and then <span class="uicontrol bold">Active Sessions</span>. Select an
+                active session and then <span class="uicontrol bold">Background Processing</span>.
+                     </div>
+                     
+                  </div>
+                  <p>To monitor background processes:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Run the application as a developer.</span></li>
+                     <li class="stepexpand"><span>Locate the Runtime Developer toolbar. By default, the Runtime Developer toolbar
+                    displays at the bottom of the page.</span></li>
+                     <li class="stepexpand"><span>On the Runtime Developer toolbar, click <span class="uicontrol bold">Session</span> and then
+                        <span class="uicontrol bold">View Session State</span>.</span><div>
+                           
+                           <p>The Session page appears and displays the following information
+                        displays at the center of the page. </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>From View, select <span class="uicontrol bold">Background Executions</span> and click
+                        <span class="uicontrol bold">Set</span>.</span><div>The Background Processing region appears displaying currently running
+                    background processes as shown in the following example.<img id="GUID-F39985B3-14E9-4DB0-8B4D-CF80A99D05CA__IMAGE_YBK_ZFT_5WB" height="608" width="1022" src="img/background_processing.png" alt="Description of background_processing.png follows" title="Description of background_processing.png follows" longdesc="img_text/background_processing.html"><br><a href="img_text/background_processing.html">Description of the illustration background_processing.png</a></div>
+                     </li>
+                     <li class="stepexpand"><span>Statuses - Configure which background executions to include and click
+                        <span class="uicontrol bold">Go</span>.  Available Statuses include:</span><div>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-F39985B3-14E9-4DB0-8B4D-CF80A99D05CA__UL_IWB_B3T_5WB">
+                              <li>Submitted for Execution</li>
+                              <li>Scheduler Job Created</li>
+                              <li>Executing</li>
+                              <li>Finished Successfully</li>
+                              <li>Terminate</li>
+                              <li>Failed</li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>To terminate a currently running background process, click
+                        <span class="uicontrol bold">Terminate</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-background-page-processing.html#GUID-4FCFB2D6-EF19-4692-8980-4F9EBED0DBB7" title="Background page processing enables developers to run a sequence of page processes that can execute in the foreground or in the background.">Understanding Background Page Processing</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

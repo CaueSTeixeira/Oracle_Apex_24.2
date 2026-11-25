@@ -1,0 +1,151 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Controlling Page Layout">
+      <meta name="abstract" content="Developers can customize their application's page layout by using a global page, customizing regions, and editing item attributes.">
+      <meta name="description" content="Developers can customize their application's page layout by using a global page, customizing regions, and editing item attributes.">
+      <meta name="DC.Relation" scheme="URI" content="about-page-layout-in-oracle-apex.html#GUID-A6FDC56E-9525-4CDE-B64D-5E44E8E7BD7F">
+      <meta name="DC.Relation" scheme="URI" content="optimizing-a-page-for-printing.html#GUID-952C9D91-BA76-4EB3-8B4C-4064B6EB74C2">
+      <meta name="DC.Relation" scheme="URI" content="creating-a-global-page-to-display-components-on-every-page.html#GUID-8ADAD109-F5D3-46EB-B9A1-3678CA116B2C">
+      <meta name="DC.Relation" scheme="URI" content="managing-regions.html#GUID-6AD21C62-3F13-422A-A5BC-91BFC898419D">
+      <meta name="DC.Relation" scheme="URI" content="about-incorporating-content-from-other-websites.html#GUID-CE4CCB4A-09D9-495F-9FD5-59707ACF3AF9">
+      <meta name="DC.Relation" scheme="URI" content="about-managing-images.html#GUID-39F51BEA-E301-438C-84F7-0C08F427506A">
+      <meta name="DC.Relation" scheme="URI" content="rendering-html-using-custom-plsql.html#GUID-130FAB48-EEDA-4564-93DA-9249927793BB">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-2A096B0F-FAB4-4D9A-962B-3406A2F5CFBF">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Developers can customize their application's page layout by using a global page, customizing regions, and editing item attributes.">
+      <meta name="description" content="Developers can customize their application's page layout by using a global page, customizing regions, and editing item attributes.">
+      <title>Controlling Page Layout</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Developers can customize their application's page layout by using a global page, customizing regions, and editing item attributes.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="using-custom-cascading-style-sheets.html" title="Previous" type="text/html">
+      <link rel="next" href="about-page-layout-in-oracle-apex.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Controlling Page Layout","description":"Developers can customize their application's page layout by using a global page, customizing regions, and editing item attributes.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="using-custom-cascading-style-sheets.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="about-page-layout-in-oracle-apex.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-2A096B0F-FAB4-4D9A-962B-3406A2F5CFBF" name="GUID-2A096B0F-FAB4-4D9A-962B-3406A2F5CFBF"></a><a id="HTMDB25564"></a>
+         
+         <h2 id="HTMDB-GUID-2A096B0F-FAB4-4D9A-962B-3406A2F5CFBF" class="sect2"><span class="enumeration_chapter">12 </span>Controlling Page Layout
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Developers can customize their application's page layout by using a global
+        page, customizing regions, and editing item attributes. </p>
+               <p>This section also describes how to manage images and static files as well as explains how to render HTML using custom POL/SQL.</p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="about-page-layout-in-oracle-apex.html#GUID-A6FDC56E-9525-4CDE-B64D-5E44E8E7BD7F">About Page Layout in Oracle APEX</a><br>The <span>Oracle APEX</span> engine renders pages by combining templates with application components defined by the developer and data in the database.
+                  </li>
+                  <li class="ulchildlink"><a href="optimizing-a-page-for-printing.html#GUID-952C9D91-BA76-4EB3-8B4C-4064B6EB74C2">Optimizing a Page for Printing</a><br>You can optimize a page for printing by creating a specific Printer Friendly template and selecting that template on the Create/Edit Theme page.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-a-global-page-to-display-components-on-every-page.html#GUID-8ADAD109-F5D3-46EB-B9A1-3678CA116B2C">Creating a Global Page to Display Components on Every Page</a><br>A global page (previously referred to as Page 0) functions as a master         page.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-regions.html#GUID-6AD21C62-3F13-422A-A5BC-91BFC898419D">Managing Regions</a><br>Regions function as containers for content.
+                  </li>
+                  <li class="ulchildlink"><a href="about-incorporating-content-from-other-websites.html#GUID-CE4CCB4A-09D9-495F-9FD5-59707ACF3AF9">About Incorporating Content from Other Websites</a><br>To incorporate content from other servers, you can create a region based on a URL to display content. 
+                  </li>
+                  <li class="ulchildlink"><a href="about-managing-images.html#GUID-39F51BEA-E301-438C-84F7-0C08F427506A">About Managing Images</a><br>To reference an image within an application, you must upload it to the static file repository. During the upload process, you specify whether the file is available to all applications or just a specific application.
+                  </li>
+                  <li class="ulchildlink"><a href="rendering-html-using-custom-plsql.html#GUID-130FAB48-EEDA-4564-93DA-9249927793BB">Rendering HTML Using Custom PL/SQL</a><br>If you must generate specific HTML content not handled by <span>Oracle APEX</span> forms, reports, and charts, you can use the PL/SQL region type. 
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-2A096B0F-FAB4-4D9A-962B-3406A2F5CFBF__GUID-ADE18437-0064-4569-9860-215BE5751CA2">
+                  <p class="notep1">See Also:</p>
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        <p><a href="adding-navigation.html#GUID-E537CAE9-EF77-4E1A-AE9B-05A8563DA76A" title="Add navigation to an application by creating breadcrumbs, branches, tabs, or classic navigation bars.">Adding Navigation</a></p>
+                     </li>
+                     <li>
+                        <p><a href="editing-user-interface-attributes.html#GUID-6572C3DF-8B48-4322-81CA-8480E536B4BE" title="Use the User Interface page to control the default characteristics of the application and optimize the display.">Editing User Interface Attributes</a></p>
+                     </li>
+                     <li>
+                        <p>
+                           <a href="using-themes-and-theme-styles.html#GUID-96618A09-614B-4E61-937B-E85885512057" title="Developers can alter an application's user interface and page layout through themes and theme styles.">Using Themes and Theme Styles</a></p>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

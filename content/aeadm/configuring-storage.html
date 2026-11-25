@@ -1,0 +1,383 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Configuring Storage">
+      <meta name="abstract" content="Instance administrators can configure the following Storage options: require a new schema when requesting a workspace, auto extend tablespaces, automaticaly approve storage requests, or delete uploaded files in a specified number of days.">
+      <meta name="description" content="Instance administrators can configure the following Storage options: require a new schema when requesting a workspace, auto extend tablespaces, automaticaly approve storage requests, or delete uploaded files in a specified number of days.">
+      <meta name="DC.subject" content="instance settings, requiring a new schema, specify instance tablespace, auto extend tablespaces, deleting uploaded files">
+      <meta name="keywords" content="instance settings, requiring a new schema, specify instance tablespace, auto extend tablespaces, deleting uploaded files">
+      <meta name="DC.Relation" scheme="URI" content="configuring-instance-settings.html#GUID-0DE7FA26-7FF5-409A-9CED-2BFD218CFE14">
+      <meta name="DC.Relation" scheme="URI" content="configuring-storage.html#GUID-6F316AD0-78EB-48A7-BBBA-773EB04E8405">
+      <meta name="DC.Relation" scheme="URI" content="configuring-storage.html#GUID-52FFFC94-5BB4-4511-995D-5325265C8C08">
+      <meta name="DC.Relation" scheme="URI" content="configuring-storage.html#GUID-212623D4-C48E-4F5B-B665-FB40E92332BD">
+      <meta name="DC.Relation" scheme="URI" content="configuring-storage.html#GUID-4E82A1C3-405F-4DE6-A41F-35B07703C20F">
+      <meta name="DC.Relation" scheme="URI" content="configuring-storage.html#GUID-EEFC916D-FEE9-4AFA-A6E2-54CDC9FD1EF3">
+      <meta name="DC.Relation" scheme="URI" content="configuring-storage.html#GUID-CA06FC5B-A452-4F58-A89B-5518CCFB6D28">
+      <meta name="DC.Relation" scheme="URI" content="configuring-storage.html#GUID-1D3E8F18-AEA6-45B1-8746-6C99B7B32DAF">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-95407496-C692-43B0-A795-9D335128A688">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Instance administrators can configure the following Storage options: require a new schema when requesting a workspace, auto extend tablespaces, automaticaly approve storage requests, or delete uploaded files in a specified number of days.">
+      <meta name="description" content="Instance administrators can configure the following Storage options: require a new schema when requesting a workspace, auto extend tablespaces, automaticaly approve storage requests, or delete uploaded files in a specified number of days.">
+      <title>Configuring Storage</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Instance administrators can configure the following Storage options: require a new schema when requesting a workspace, auto extend tablespaces, automaticaly approve storage requests, or delete uploaded files in a specified number of days.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="disabling-email-provisioning.html" title="Previous" type="text/html">
+      <link rel="next" href="configuring-email.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Configuring Storage","description":"Instance administrators can configure the following Storage options: require a new schema when requesting a workspace, auto extend tablespaces, automaticaly approve storage requests, or delete uploaded files in a specified number of days.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="disabling-email-provisioning.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="configuring-email.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-95407496-C692-43B0-A795-9D335128A688" name="GUID-95407496-C692-43B0-A795-9D335128A688"></a><a id="AEADM223"></a>
+         
+         <h2 id="AEADM-GUID-95407496-C692-43B0-A795-9D335128A688" class="sect2"><span class="enumeration_section">3.5.3 </span>Configuring Storage
+         </h2>
+         <div class="ind">
+            <p>Instance administrators can configure the following Storage options: require
+        a new schema when requesting a workspace, auto extend tablespaces, automaticaly approve
+        storage requests, or delete uploaded files in a specified number of days.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="configuring-storage.html#GUID-6F316AD0-78EB-48A7-BBBA-773EB04E8405">Requiring a New Schema</a><br>Control if a user requesting a workspace can select an existing schema or must request a new schema.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-storage.html#GUID-52FFFC94-5BB4-4511-995D-5325265C8C08">Configuring Instance Tablespace</a><br>Specify the name of an existing data tablespace to use for the database user         for all new workspaces.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-storage.html#GUID-212623D4-C48E-4F5B-B665-FB40E92332BD">Enabling Auto Extend Tablespaces</a><br>Enable Auto Extend Tablespaces.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-storage.html#GUID-4E82A1C3-405F-4DE6-A41F-35B07703C20F">Enabling Bigfile Tablespaces</a><br>Enable support for bigfile tablespaces.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-storage.html#GUID-EEFC916D-FEE9-4AFA-A6E2-54CDC9FD1EF3">Enabling Encrypted Tablespaces</a><br>Enable support for encrypted tablespaces.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-storage.html#GUID-CA06FC5B-A452-4F58-A89B-5518CCFB6D28">Enabling Automatic Approval of Storage Requests</a><br>Automatically enable the approval of storage requests up to the selected         size.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-storage.html#GUID-1D3E8F18-AEA6-45B1-8746-6C99B7B32DAF">Deleting Uploaded Files</a><br>Specify the number of days after which <span>APEX</span> automatically deletes uploaded files.&nbsp;
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="configuring-instance-settings.html#GUID-0DE7FA26-7FF5-409A-9CED-2BFD218CFE14" title="Control a variety of general settings for an Oracle APEX development instance including configuring workspace provisioning behavior, email provisioning, storage, email, wallet information, report printing, workflow settings, Application Gallery settings, Help menu, workspace size options, application ID ranges, and background jobs.">Configuring Instance Settings</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="AEADM443"></a><div class="props_rev_3"><a id="GUID-6F316AD0-78EB-48A7-BBBA-773EB04E8405" name="GUID-6F316AD0-78EB-48A7-BBBA-773EB04E8405"></a><h3 id="AEADM-GUID-6F316AD0-78EB-48A7-BBBA-773EB04E8405" class="sect3"><span class="enumeration_section">3.5.3.1 </span>Requiring a New Schema
+               </h3>
+               <div>
+                  <p>Control if a user requesting a workspace can select an existing schema or must request a new schema.</p>
+                  <p>To require a new schema when creating a workspace:</p>
+                  <ol>
+                     <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Instance Settings</span>.</span></li>
+                     <li><span>Scroll down to <span class="uicontrol bold">Storage</span>.</span></li>
+                     <li><span>From <span class="uicontrol bold">Require New Schema</span>, select one of the
+                    following:</span><ul>
+                           <li><span class="uicontrol bold">Yes</span> - Requires users to request a
+                        new schema when they request a new workspace.
+                           </li>
+                           <li><span class="uicontrol bold">No</span> - Enables users to select an
+                        existing schema when they request a new workspace.
+                           </li>
+                        </ul>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section">
+                     <div class="infoboxnote" id="GUID-6F316AD0-78EB-48A7-BBBA-773EB04E8405__GUID-BA9D84F7-9776-4937-BA67-3934724172C4">
+                        <p class="notep1">See  Also:</p>
+                        <p><a href="configuring-storage.html#GUID-212623D4-C48E-4F5B-B665-FB40E92332BD" title="Enable Auto Extend Tablespaces.">Enabling Auto Extend Tablespaces</a>.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-storage.html#GUID-95407496-C692-43B0-A795-9D335128A688" title="Instance administrators can configure the following Storage options: require a new schema when requesting a workspace, auto extend tablespaces, automaticaly approve storage requests, or delete uploaded files in a specified number of days.">Configuring Storage</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-52FFFC94-5BB4-4511-995D-5325265C8C08" name="GUID-52FFFC94-5BB4-4511-995D-5325265C8C08"></a><h3 id="AEADM-GUID-52FFFC94-5BB4-4511-995D-5325265C8C08" class="sect3"><span class="enumeration_section">3.5.3.2 </span>Configuring Instance Tablespace
+               </h3>
+               <div>
+                  <p>Specify the name of an existing data tablespace to use for the database user
+        for all new workspaces.</p>
+                  <p>To configure Instance Tablespace:</p>
+                  <ol>
+                     <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Instance Settings</span>.</span></li>
+                     <li><span>Scroll down to <span class="uicontrol bold">Storage</span>.</span></li>
+                     <li><span><span class="uicontrol bold">Instance Tablespace</span> - Enter the name of an existing data
+                    tablespace, or comma separated list of tablespaces, to use for the database user
+                    for all new workspaces. When not set, a new tablespace is created.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-storage.html#GUID-95407496-C692-43B0-A795-9D335128A688" title="Instance administrators can configure the following Storage options: require a new schema when requesting a workspace, auto extend tablespaces, automaticaly approve storage requests, or delete uploaded files in a specified number of days.">Configuring Storage</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM444"></a><div class="props_rev_3"><a id="GUID-212623D4-C48E-4F5B-B665-FB40E92332BD" name="GUID-212623D4-C48E-4F5B-B665-FB40E92332BD"></a><h3 id="AEADM-GUID-212623D4-C48E-4F5B-B665-FB40E92332BD" class="sect3"><span class="enumeration_section">3.5.3.3 </span>Enabling Auto Extend Tablespaces
+               </h3>
+               <div>
+                  <p>Enable Auto Extend Tablespaces.</p>
+                  <div class="section">
+                     <p>If Auto Extend Tablespaces is enabled, tablespaces provisioned with <span>APEX</span> are created with a data file that is one tenth the requested size. The data file automatically extends up to the requested size. For example, if a user requests a 100 MB workspace, the initial size of the data file is 10 MB and automatically extends up to a maximum size of 100 MB. 
+                     </p>
+                  </div>
+                  <p>To enable Auto Extend Tablespaces:</p>
+                  <ol>
+                     <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Instance Settings</span>.</span></li>
+                     <li><span>Scroll down to <span class="uicontrol bold">Storage</span>.</span></li>
+                     <li><span>To enable <span class="uicontrol bold">Auto Extend Tablespaces</span>, select
+                        <span class="uicontrol bold">Yes</span>.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-storage.html#GUID-95407496-C692-43B0-A795-9D335128A688" title="Instance administrators can configure the following Storage options: require a new schema when requesting a workspace, auto extend tablespaces, automaticaly approve storage requests, or delete uploaded files in a specified number of days.">Configuring Storage</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM488"></a><div class="props_rev_3"><a id="GUID-4E82A1C3-405F-4DE6-A41F-35B07703C20F" name="GUID-4E82A1C3-405F-4DE6-A41F-35B07703C20F"></a><h3 id="AEADM-GUID-4E82A1C3-405F-4DE6-A41F-35B07703C20F" class="sect3"><span class="enumeration_section">3.5.3.4 </span>Enabling Bigfile Tablespaces
+               </h3>
+               <div>
+                  <p>Enable support for bigfile tablespaces.</p>
+                  <div class="section">
+                     <p>When a workspace is provisioned, <span>APEX</span> creates the associated database user, tablespace, and data file. If Bigfile Tablespaces is enabled, tablespaces provisioned with <span>APEX</span> are created as bigfile tablespaces. A bigfile tablespace is a tablespace with a single, but very large data file. Traditional smallfile tablespaces, in contrast, can contain multiple data files, but the files cannot be as large.
+                     </p>
+                     <div class="infobox-tip" id="GUID-4E82A1C3-405F-4DE6-A41F-35B07703C20F__GUID-B048430F-FA77-4893-82C3-AA22F077E1D4">
+                        <p class="notep1">Tip:</p>
+                        <p>Oracle does not recommend using bigfile tablespaces on platforms that do not support large file sizes and can limit tablespace capacity. Refer to your operating system specific documentation for information about maximum supported file sizes.</p>
+                     </div>
+                  </div>
+                  <p>To enable bigfile tablespaces:</p>
+                  <ol>
+                     <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Instance Settings</span>.</span></li>
+                     <li><span>Scroll down to <span class="uicontrol bold">Storage</span>.</span></li>
+                     <li><span>For <span class="uicontrol bold">Bigfile Tablespaces</span>, select
+                        <span class="uicontrol bold">Yes</span>.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-4E82A1C3-405F-4DE6-A41F-35B07703C20F__GUID-31573237-B796-4DB6-B14D-BED0755012DB">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="../aeapi/index.html" target="_blank">Available Parameter Values</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span> to learn about the <code class="codeph">BIGFILE_TABLESPACES_ENABLED</code> parameter
+                     </p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-storage.html#GUID-95407496-C692-43B0-A795-9D335128A688" title="Instance administrators can configure the following Storage options: require a new schema when requesting a workspace, auto extend tablespaces, automaticaly approve storage requests, or delete uploaded files in a specified number of days.">Configuring Storage</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM489"></a><div class="props_rev_3"><a id="GUID-EEFC916D-FEE9-4AFA-A6E2-54CDC9FD1EF3" name="GUID-EEFC916D-FEE9-4AFA-A6E2-54CDC9FD1EF3"></a><h3 id="AEADM-GUID-EEFC916D-FEE9-4AFA-A6E2-54CDC9FD1EF3" class="sect3"><span class="enumeration_section">3.5.3.5 </span>Enabling Encrypted Tablespaces
+               </h3>
+               <div>
+                  <p>Enable support for encrypted tablespaces.</p>
+                  <div class="section">
+                     <p>If Encrypted Tablespaces is enabled, tablespaces provisioned with <span>APEX</span> are created as encrypted tablespaces using the Oracle database feature Transparent Data Encryption (TDE). TDE encrypts sensitive data stored in data files. To prevent unauthorized decryption, TDE stores the encryption keys in a security module external to the database.
+                     </p>
+                     <p>To be able to exploit this feature in <span>APEX</span>, an encryption wallet must be created and with a master encryption key set. Additionally, the encryption wallet must be open before provisioning a new <span>APEX</span> workspace.
+                     </p>
+                  </div>
+                  <p>To enable Encrypted Tablespaces:</p>
+                  <ol>
+                     <li><span>Sign in to <span>Oracle APEX</span> Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Instance Settings</span>.</span></li>
+                     <li><span>Scroll down to <span class="uicontrol bold">Storage</span>.</span></li>
+                     <li><span>For <span class="uicontrol bold">Encrypted Tablespaces</span>, select
+                        <span class="uicontrol bold">Yes</span>.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-EEFC916D-FEE9-4AFA-A6E2-54CDC9FD1EF3__GUID-ECBFA059-7683-4749-B3DB-BF7110BAF080">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="../aeapi/index.html" target="_blank">Available Parameter Values</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span> to learn about the <code class="codeph">ENCRYPTED_TABLESPACES_ENABLED</code> parameter
+                     </p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-storage.html#GUID-95407496-C692-43B0-A795-9D335128A688" title="Instance administrators can configure the following Storage options: require a new schema when requesting a workspace, auto extend tablespaces, automaticaly approve storage requests, or delete uploaded files in a specified number of days.">Configuring Storage</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-CA06FC5B-A452-4F58-A89B-5518CCFB6D28" name="GUID-CA06FC5B-A452-4F58-A89B-5518CCFB6D28"></a><h3 id="AEADM-GUID-CA06FC5B-A452-4F58-A89B-5518CCFB6D28" class="sect3"><span class="enumeration_section">3.5.3.6 </span>Enabling Automatic Approval of Storage
+        Requests
+               </h3>
+               <div>
+                  <p>Automatically enable the approval of storage requests up to the selected
+        size.</p>
+                  <div class="section">
+                     <p>To use this option, the workspace Provisioning Method must be set to
+                    <span class="uicontrol bold">Automatic</span>. If the workspace Provisioning Method is set to
+                    <span class="uicontrol bold">Manual</span> or <span class="uicontrol bold">Request</span> then storage
+                requests cannot be automatically approved. 
+                     </p>
+                  </div>
+                  <p>To automatically enable the approve storage requests:</p>
+                  <ol>
+                     <li><span>Sign in to <span>Oracle APEX</span> Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Instance Settings</span>.</span></li>
+                     <li><span>Scroll down to <span class="uicontrol bold">Storage</span>.</span></li>
+                     <li><span>For <span class="uicontrol bold">Automatically Approve Requests</span>, select a
+                    value.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section">
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-CA06FC5B-A452-4F58-A89B-5518CCFB6D28__GUID-21ADF9F5-5BEE-4F2F-AE87-6199B1605605">
+                     <p class="notep1">See Also:</p>
+                     
+                     <p><a href="creating-workspaces.html#GUID-529BB1CB-E6A6-46B2-BCCB-E28062DE1039" title="An Instance Administrator selects a Provisioning Method to determine how workspace provisioning works.">Selecting a Workspace Provisioning Mode</a></p>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-storage.html#GUID-95407496-C692-43B0-A795-9D335128A688" title="Instance administrators can configure the following Storage options: require a new schema when requesting a workspace, auto extend tablespaces, automaticaly approve storage requests, or delete uploaded files in a specified number of days.">Configuring Storage</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM445"></a><div class="props_rev_3"><a id="GUID-1D3E8F18-AEA6-45B1-8746-6C99B7B32DAF" name="GUID-1D3E8F18-AEA6-45B1-8746-6C99B7B32DAF"></a><h3 id="AEADM-GUID-1D3E8F18-AEA6-45B1-8746-6C99B7B32DAF" class="sect3"><span class="enumeration_section">3.5.3.7 </span>Deleting Uploaded Files
+               </h3>
+               <div>
+                  <p>Specify the number of days after which <span>APEX</span> automatically deletes uploaded files.&nbsp;
+                  </p>
+                  <div class="section">
+                     <p><span class="uicontrol bold">Use Delete Uploaded Files After (days)</span> to specify the number of days after which <span>APEX</span> automatically deletes uploaded files. Note this automatic deletion process applies to all workspaces in an <span>APEX</span> instance. The types of files that are deleted include:
+                     </p>
+                     <ul style="list-style-type: disc;">
+                        <li>Application Export</li>
+                        <li>CSS Export</li>
+                        <li>Images Export</li>
+                        <li>Page Export</li>
+                        <li>Plug-in</li>
+                        <li>Script Export</li>
+                        <li>Spreadsheet / Text Data Import</li>
+                        <li>Static Files Export</li>
+                        <li>Themes</li>
+                        <li>User Interface Defaults</li>
+                        <li>Workspace Export</li>
+                        <li>XML Data Import</li>
+                     </ul>
+                  </div>
+                  <p>To configure when export and import files are deleted:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Instance Settings, click <span class="uicontrol bold">Instance Settings</span>.</span></li>
+                     <li class="stepexpand"><span>Scroll down to <span class="uicontrol bold">Storage</span>.</span></li>
+                     <li class="stepexpand"><span>In <span class="uicontrol bold">Delete Uploaded Files After (days)</span>, enter the number of days after which <span>APEX</span> deletes uploaded files.</span><div>
+                           <p>Enter a positive, whole number. If this setting is null, then no files are automatically deleted.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section">
+                     <div class="infobox-tip" id="GUID-1D3E8F18-AEA6-45B1-8746-6C99B7B32DAF__GUID-6386C052-EA6F-4DE6-8601-C2658F3DA40D">
+                        <p class="notep1">Tip:</p>
+                        <p>To view a summary of deleted files, see the Automatic File Delete Log. See <a href="monitoring-activity-across-an-instance.html#GUID-57123911-C427-4C9E-96A7-A91D54A2B9C6" title="Use the links on the Monitor Activity page to access various reports on application, developer, and session activity in all workspaces.">Monitoring Activity Across an Instance</a></p>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-storage.html#GUID-95407496-C692-43B0-A795-9D335128A688" title="Instance administrators can configure the following Storage options: require a new schema when requesting a workspace, auto extend tablespaces, automaticaly approve storage requests, or delete uploaded files in a specified number of days.">Configuring Storage</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

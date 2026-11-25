@@ -1,0 +1,773 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Preventing URL Tampering">
+      <meta name="abstract" content="Session State Protection is a built-in functionality that prevents hackers from tampering with the URLs within your application. URL tampering can adversely affect program logic, session state contents, and information privacy.">
+      <meta name="description" content="Session State Protection is a built-in functionality that prevents hackers from tampering with the URLs within your application. URL tampering can adversely affect program logic, session state contents, and information privacy.">
+      <meta name="DC.subject" content="URL tampering, preventing, session state protection, preventing URL tampering, understanding, enabling from Session State Protection, enabling using a wizard, configuring security attributes, viewing existing settings, viewing summaries, reports, configuring all attributes">
+      <meta name="keywords" content="URL tampering, preventing, session state protection, preventing URL tampering, understanding, enabling from Session State Protection, enabling using a wizard, configuring security attributes, viewing existing settings, viewing summaries, reports, configuring all attributes">
+      <meta name="DC.Relation" scheme="URI" content="understanding-developer-security-best-practices.html#GUID-CC6B3716-C74D-4769-AA14-CE92D1E2B841">
+      <meta name="DC.Relation" scheme="URI" content="preventing-url-tampering.html#GUID-48920CC7-3A15-4026-A8FF-625B5D48362E">
+      <meta name="DC.Relation" scheme="URI" content="preventing-url-tampering.html#GUID-1FE1C7C7-D16E-4349-9775-797FEFB84508">
+      <meta name="DC.Relation" scheme="URI" content="preventing-url-tampering.html#GUID-D5D63EFA-11CA-4A47-9168-B997282B4616">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-C47B5B4C-FA49-47C7-BAAE-6D5A06DE029C">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Session State Protection is a built-in functionality that prevents hackers from tampering with the URLs within your application. URL tampering can adversely affect program logic, session state contents, and information privacy.">
+      <meta name="description" content="Session State Protection is a built-in functionality that prevents hackers from tampering with the URLs within your application. URL tampering can adversely affect program logic, session state contents, and information privacy.">
+      <title>Preventing URL Tampering</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Session State Protection is a built-in functionality that prevents hackers from tampering with the URLs within your application. URL tampering can adversely affect program logic, session state contents, and information privacy.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="about-session-state-and-security.html" title="Previous" type="text/html">
+      <link rel="next" href="about-securing-file-uploads.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Preventing URL Tampering","description":"Session State Protection is a built-in functionality that prevents hackers from tampering with the URLs within your application. URL tampering can adversely affect program logic, session state contents, and information privacy.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="about-session-state-and-security.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="about-securing-file-uploads.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-C47B5B4C-FA49-47C7-BAAE-6D5A06DE029C" name="GUID-C47B5B4C-FA49-47C7-BAAE-6D5A06DE029C"></a><a id="HTMDB12002"></a><a id="4000:510"></a>
+         
+         <h2 id="HTMDB-GUID-C47B5B4C-FA49-47C7-BAAE-6D5A06DE029C" class="sect2"><span class="enumeration_section">21.2.5 </span>Preventing URL Tampering
+         </h2>
+         <div class="ind">
+            <p>Session State Protection is a built-in functionality that prevents hackers from tampering with the URLs within your application. URL tampering can adversely affect program logic, session state contents, and information privacy.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="preventing-url-tampering.html#GUID-48920CC7-3A15-4026-A8FF-625B5D48362E">How Session State Protection Works</a><br>Learn session state protection works.
+                  </li>
+                  <li class="ulchildlink"><a href="preventing-url-tampering.html#GUID-1FE1C7C7-D16E-4349-9775-797FEFB84508">Enabling Session State Protection</a><br>Enable Session State Protection in Shared Components.
+                  </li>
+                  <li class="ulchildlink"><a href="preventing-url-tampering.html#GUID-D5D63EFA-11CA-4A47-9168-B997282B4616">Configuring Session State Protection</a><br>Learn how to configure Session State Protection.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="understanding-developer-security-best-practices.html#GUID-CC6B3716-C74D-4769-AA14-CE92D1E2B841" title="Learn about security best practices for Oracle APEX developers.">Understanding Developer Security Best Practices</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB25754"></a><div class="props_rev_3"><a id="GUID-48920CC7-3A15-4026-A8FF-625B5D48362E" name="GUID-48920CC7-3A15-4026-A8FF-625B5D48362E"></a><h3 id="HTMDB-GUID-48920CC7-3A15-4026-A8FF-625B5D48362E" class="sect3"><span class="enumeration_section">21.2.5.1 </span>How Session State Protection Works
+               </h3>
+               <div>
+                  <p>Learn session state protection works.</p>
+                  <p>Enabling Session State Protection is a two-step process. First, you enable the Session
+            State Protection feature in Shared Components. Second, you set page and item security
+            attributes. You can perform these steps using a wizard, or you can set security
+            attributes for pages and items manually on the Session State Protection page.</p>
+                  <p>When enabled, Session State Protection uses the <span class="uicontrol bold">Page Access
+                Protection</span> and the item <span class="uicontrol bold">Session State Protection</span>
+            attributes with checksums positioned in <code class="codeph">f?p=</code> URLs to prevent URL
+            tampering and unauthorized access to and alteration of session state. When Session State
+            Protection is disabled, the page and item attributes related to session state protection
+            are ignored and checksums are not included checksums in generated <code class="codeph">f?p=</code>
+            URLs.
+                  </p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="preventing-url-tampering.html#GUID-C47B5B4C-FA49-47C7-BAAE-6D5A06DE029C" title="Session State Protection is a built-in functionality that prevents hackers from tampering with the URLs within your application. URL tampering can adversely affect program logic, session state contents, and information privacy.">Preventing URL Tampering</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25758"></a><div class="props_rev_3"><a id="GUID-1FE1C7C7-D16E-4349-9775-797FEFB84508" name="GUID-1FE1C7C7-D16E-4349-9775-797FEFB84508"></a><h3 id="HTMDB-GUID-1FE1C7C7-D16E-4349-9775-797FEFB84508" class="sect3"><span class="enumeration_section">21.2.5.2 </span>Enabling Session State Protection
+               </h3>
+               <div>
+                  <p>Enable Session State Protection in Shared Components.</p>
+                  <div class="section">
+                     
+                     <div class="infobox-tip" id="GUID-1FE1C7C7-D16E-4349-9775-797FEFB84508__GUID-E0C762B8-7136-4CFA-8D95-577E51E18D7C">
+                        <p class="notep1">Tip:</p>
+                        
+                        <p>To disable Session State Protection, perform the steps described in
+                    this topic, but select <span class="uicontrol bold">Disable</span> instead of
+                        <span class="uicontrol bold">Enable</span>. Disabling Session State Protection does not
+                    change existing security attribute settings, but those attributes are ignored at
+                    runtime.
+                        </p>
+                        
+                     </div>
+                     
+                  </div>
+                  <p>To enable Session State Protection:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application. </span></li>
+                           <li><span>Click <span class="uicontrol bold">Shared Components</span>.</span></li>
+                           <li><span>Under Security, select <span class="uicontrol bold">Session State Protection</span>.</span></li>
+                        </ol>
+                        <div>The Session State Protection page appears. Note that the
+                    page displays the application name and  current Session State Protection status
+                    (that is, <span class="uicontrol bold">Enabled</span> or
+                    <span class="uicontrol bold">Disabled</span>).
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Set Protection</span>.</span><div>
+                           
+                           <p>The Session State Protection page appears. </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>In the Session State Protection wizard:</span><ol type="a" id="GUID-1FE1C7C7-D16E-4349-9775-797FEFB84508__SUBSTEPS_XC1_MRK_GVB">
+                           <li class="substepexpand"><span>Select Action - Select <span class="uicontrol bold">Enable</span>.</span><div>
+                                 
+                                 <p>When enabled, Session State Protection, uses the Page Access
+                                Protection page attributes and the Session State Protection item
+                                attributes in conjunction with checksums positioned in
+                                    <code class="codeph">f?p=</code> URLs to prevent URL tampering and
+                                unauthorized access to and alteration of session state.
+                                 </p>
+                                 
+                                 <div class="infobox-tip" id="GUID-1FE1C7C7-D16E-4349-9775-797FEFB84508__GUID-5E091B8D-F65C-40B4-A502-43F09BE422A8">
+                                    <p class="notep1">Tip:</p>You can also adjust page and item security attributes
+                                manually. Select <span class="uicontrol bold">Enable</span>, return to the
+                                Session State Protection page, and click the appropriate
+                                icon.
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Enable</span>.</span><div>
+                                 
+                                 <p> Next, determine whether to set security attributes for
+                                pages and items.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="preventing-url-tampering.html#GUID-C47B5B4C-FA49-47C7-BAAE-6D5A06DE029C" title="Session State Protection is a built-in functionality that prevents hackers from tampering with the URLs within your application. URL tampering can adversely affect program logic, session state contents, and information privacy.">Preventing URL Tampering</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25759"></a><div class="props_rev_3"><a id="GUID-D5D63EFA-11CA-4A47-9168-B997282B4616" name="GUID-D5D63EFA-11CA-4A47-9168-B997282B4616"></a><h3 id="HTMDB-GUID-D5D63EFA-11CA-4A47-9168-B997282B4616" class="sect3"><span class="enumeration_section">21.2.5.3 </span>Configuring Session State Protection
+               </h3>
+               <div>
+                  <p>Learn how to configure Session State Protection.</p>
+                  <div class="infobox-tip" id="GUID-D5D63EFA-11CA-4A47-9168-B997282B4616__GUID-CDF0CB4D-1553-459B-A266-9CE7B930C0B1">
+                     <p class="notep1">Tip:</p>
+                     <p>Before you can configure security attributes, you must first enable Session State Protection. See <a href="preventing-url-tampering.html#GUID-1FE1C7C7-D16E-4349-9775-797FEFB84508" title="Enable Session State Protection in Shared Components.">Enabling Session State Protection</a>.
+                     </p>
+                  </div>
+               </div>
+               <div>
+                  <ul class="ullinks">
+                     <li class="ulchildlink"><a href="preventing-url-tampering.html#GUID-6823A649-A3D7-482C-920A-BC65F37721CD">About Configuring Session State Protection</a><br>Learn about configuring Session State Protection.
+                     </li>
+                     <li class="ulchildlink"><a href="preventing-url-tampering.html#GUID-59C4D429-3EB2-4D48-ABEA-696FA902D161">Reviewing Existing Session State Protection Settings</a><br>Review a summary of Session State Protection settings for pages, items, and         application items on the first page of the Session State Protection wizard.
+                     </li>
+                     <li class="ulchildlink"><a href="preventing-url-tampering.html#GUID-AF34B5A4-5BA1-4FD7-A706-664E277ADC09">Configuring Session State Protection Using a Wizard</a><br>Configure Session State Protection using a wizard.
+                     </li>
+                     <li class="ulchildlink"><a href="preventing-url-tampering.html#GUID-17FC5264-C6A1-4257-9B37-94AAACB6F514">Configuring Session State Protection for a Page</a><br>Configure Session State Protection for a page in Page Designer.
+                     </li>
+                     <li class="ulchildlink"><a href="preventing-url-tampering.html#GUID-0A640D92-3FB2-410E-ACC8-1464F2F632FE">Configuring Session State Protection for Page Items</a><br>Configuring Session State Protection for page items in Page Designer.
+                     </li>
+                     <li class="ulchildlink"><a href="preventing-url-tampering.html#GUID-3D39B3A9-69D4-416B-B6DF-41EA13178654">Configuring Session State Protection for Application Items</a><br>Configuring Session State Protection for application items in Shared         Components.
+                     </li>
+                  </ul>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="preventing-url-tampering.html#GUID-C47B5B4C-FA49-47C7-BAAE-6D5A06DE029C" title="Session State Protection is a built-in functionality that prevents hackers from tampering with the URLs within your application. URL tampering can adversely affect program logic, session state contents, and information privacy.">Preventing URL Tampering</a></p>
+                     </div>
+                  </div>
+               </div>
+               <a id="HTMDB29414"></a><div class="props_rev_3"><a id="GUID-6823A649-A3D7-482C-920A-BC65F37721CD" name="GUID-6823A649-A3D7-482C-920A-BC65F37721CD"></a><h4 id="HTMDB-GUID-6823A649-A3D7-482C-920A-BC65F37721CD" class="sect4"><span class="enumeration_section">21.2.5.3.1 </span>About Configuring Session State Protection
+                  </h4>
+                  <div>
+                     <p>Learn about configuring Session State Protection.</p>
+                     <p>Once you have enabled Session State Protection, the next step is to configure security attributes. You can configure security attributes in two ways:</p>
+                     <ul style="list-style-type: disc;">
+                        <li>
+                           <p>Use a wizard and select a value for specific attribute categories. Those selections are then applied to all pages and items within the application.</p>
+                        </li>
+                        <li>
+                           <p>Configure values for individual pages, items, or application items. </p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="preventing-url-tampering.html#GUID-D5D63EFA-11CA-4A47-9168-B997282B4616" title="Learn how to configure Session State Protection.">Configuring Session State Protection</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div><a id="HTMDB25760"></a><div class="props_rev_3"><a id="GUID-59C4D429-3EB2-4D48-ABEA-696FA902D161" name="GUID-59C4D429-3EB2-4D48-ABEA-696FA902D161"></a><h4 id="HTMDB-GUID-59C4D429-3EB2-4D48-ABEA-696FA902D161" class="sect4"><span class="enumeration_section">21.2.5.3.2 </span>Reviewing Existing Session State Protection Settings
+                  </h4>
+                  <div>
+                     <p>Review a summary of Session State Protection settings for pages, items, and
+        application items on the first page of the Session State Protection wizard.</p>
+                     <p>To view summaries of existing Session State Protection
+                settings:</p>
+                     <ol>
+                        <li><span>Navigate to the Session State Protection page:</span><ol type="a">
+                              <li class="substepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                              <li class="substepexpand"><span>Select an application. </span></li>
+                              <li class="substepexpand"><span>Click <span class="uicontrol bold">Shared Components</span>.</span></li>
+                              <li class="substepexpand"><span>Under Security, select <span class="uicontrol bold">Session State Protection</span>.</span><div>
+                                    <p>The Session State Protection page appears. </p>
+                                 </div>
+                              </li>
+                           </ol>
+                        </li>
+                        <li><span>Click <span class="uicontrol bold">Set Protection</span>.</span></li>
+                        <li><span>Expand and review the following regions at the bottom of the page:</span><ul id="GUID-59C4D429-3EB2-4D48-ABEA-696FA902D161__CHOICES_QNH_1HB_W3B">
+                              <li><span class="uicontrol bold">Page Level Session State Protection
+                        Summary</span></li>
+                              <li><span class="uicontrol bold">Page Item Session State Protection
+                        Summary</span></li>
+                              <li><span class="uicontrol bold">Application Item Session State
+                        Protection</span></li>
+                           </ul>
+                        </li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="preventing-url-tampering.html#GUID-D5D63EFA-11CA-4A47-9168-B997282B4616" title="Learn how to configure Session State Protection.">Configuring Session State Protection</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div><a id="HTMDB25761"></a><div class="props_rev_3"><a id="GUID-AF34B5A4-5BA1-4FD7-A706-664E277ADC09" name="GUID-AF34B5A4-5BA1-4FD7-A706-664E277ADC09"></a><h4 id="HTMDB-GUID-AF34B5A4-5BA1-4FD7-A706-664E277ADC09" class="sect4"><span class="enumeration_section">21.2.5.3.3 </span>Configuring Session State Protection Using a Wizard
+                  </h4>
+                  <div>
+                     <p>Configure Session State Protection using a wizard.</p>
+                     <div class="section">When you configure Session State Protection using a wizard, you set a
+            value for specific attribute categories. Those selections are then applied to all pages
+            and items within the application.</div>
+                     <p>To configure Session State Protection using a wizard:</p>
+                     <ol>
+                        <li class="stepexpand"><span>Navigate to the Session State Protection page:</span><ol type="a">
+                              <li class="substepexpand"><span>On the Workspace home page, click the <span>App Builder</span> icon.</span></li>
+                              <li class="substepexpand"><span>Select an application.</span></li>
+                              <li class="substepexpand"><span>Click <span class="uicontrol bold">Shared Components</span>.</span></li>
+                              <li class="substepexpand"><span>Under Security, select <span class="uicontrol bold">Session State
+                            Protection</span>.</span><div>
+                                    
+                                    <p>The Session State Protection page appears. </p>
+                                    
+                                 </div>
+                              </li>
+                           </ol>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Set Protection</span>.</span><div>
+                              
+                              <p>The Session State Protection wizard appears.</p>
+                              
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Select Action - Select <span class="uicontrol bold">Configure</span> and click
+                        <span class="uicontrol bold">Next</span>.</span><div>
+                              
+                              <p>Select security attributes for pages and items. You may accept the default
+                        settings displayed here, or make new selections. Note that the value you
+                        choose for an attribute category will be applied to all pages and items
+                        throughout the application.</p>
+                              
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Page Access Protection:</span><ul id="GUID-AF34B5A4-5BA1-4FD7-A706-664E277ADC09__CHOICES_KPQ_KHB_W3B">
+                              <li><span class="uicontrol bold">Unrestricted</span> - The page may be
+                        requested using a URL with or without session state arguments (Request,
+                        Clear Cache, Name/Values). 
+                              </li>
+                              <li><span class="uicontrol bold">Arguments Must Have Checksum</span> - If
+                        Request, Clear Cache, or Name/Value arguments appear in the URL, a checksum
+                        must also be provided. The checksum type must be compatible with the most
+                        stringent Session State Protection attribute of all the items passed as
+                        arguments. 
+                              </li>
+                              <li><span class="uicontrol bold">No Arguments Allowed</span> - A URL may be
+                        used to request the page but no Request, Clear Cache, or Name/Value
+                        arguments are allowed.
+                              </li>
+                              <li><span class="uicontrol bold">No URL Access</span> - The page may not be
+                        accessed using a URL; however, the page may be the target of a Branch to
+                        Page branch type, which does not do a URL redirect. 
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="stepexpand"><span>Page Data Entry Item Protection:</span><ul id="GUID-AF34B5A4-5BA1-4FD7-A706-664E277ADC09__CHOICES_VWP_25K_GVB">
+                              <li><span class="uicontrol bold">Unrestricted</span> - The item's session
+                        state may be set by passing the item name/value in a URL or in a form. No
+                        checksum is required in the URL.
+                              </li>
+                              <li><span class="uicontrol bold">Checksum Required: Application Level</span>
+                        - The item's session state may be set by passing the item name/value in a
+                        URL if a checksum is also provided that is specific to the workspace and
+                        application. A user-level checksum or a session-level checksum will also
+                        suffice (see the next option). Use this option when you want to allow the
+                        item to be set only by URLs having checksums that were generated by any user
+                        running the same application in the current workspace but in a different
+                        session.
+                              </li>
+                              <li><span class="uicontrol bold">Checksum Required: User Level</span> - The
+                        item's session state may be set by passing the item name/value in a URL if a
+                        checksum is also provided that is specific to the workspace, application,
+                        and user. A session-level checksum will also suffice (see the next option).
+                        Use this option when you want to allow the item to be set only by URLs
+                        having checksums that were generated by the same named user, running the
+                        same application in the current workspace but in a different
+                        session.
+                              </li>
+                              <li><span class="uicontrol bold">Checksum Required: Session Level</span> -
+                        The item's session state may be set by passing the item name/value in a URL
+                        if a checksum is also provided that is specific to the current session. Use
+                        this option when you want to allow this item to be set only by URLs having
+                        checksums that were generated in the current session.
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="stepexpand"><span>Page Display-Only Item Protection:</span><ul id="GUID-AF34B5A4-5BA1-4FD7-A706-664E277ADC09__CHOICES_WY4_QHB_W3B">
+                              <li><span class="uicontrol bold">Unrestricted</span> - The item may be set by
+                        passing the item name/value in a URL or in a form. No checksum is required
+                        in the URL.
+                              </li>
+                              <li><span class="uicontrol bold">Restricted: May not be set from
+                            browser</span> - The item may not be altered via the URL or
+                        POSTDATA. Use this when you want to restrict the way that the item value can
+                        be set to internal processes, computations, and so on. This attribute is
+                        always observed, even if Session State Protection is disabled. This
+                        attribute may be used with any of these <span class="uicontrol bold">Display As</span>
+                            types:
+                                 <ul style="list-style-type: disc;" id="GUID-AF34B5A4-5BA1-4FD7-A706-664E277ADC09__UL_LVK_X5K_GVB">
+                                    <li>Display Only (Save State=No)</li>
+                                    <li>Display as Text (does not save state)</li>
+                                    <li>Display as Text (based on LOV, does not save state)</li>
+                                    <li>Display as Text (based on PLSQL, does not save
+                                state)</li>
+                                    <li>Text Field (Disabled, does not save state)</li>
+                                    <li>Stop and Start Grid Layout (Displays label only)</li>
+                                 </ul>
+                              </li>
+                              <li><span class="uicontrol bold">Checksum Required: Application Level</span>
+                        - The item's session state may be set by passing the item name/value in a
+                        URL if a checksum is also provided that is specific to the workspace and
+                        application. A user-level checksum or a session-level checksum will also
+                        suffice (see next bullets). Use this option when you want to allow the item
+                        to be set only by URLs having checksums that were generated by any user
+                        running the same application in the current workspace but in a different
+                        session.
+                              </li>
+                              <li><span class="uicontrol bold">Checksum Required: User Level</span> - The
+                        item's session state may be set by passing the item name/value in a URL if a
+                        checksum is also provided that is specific to the workspace, application,
+                        and user. A session-level checksum will also suffice (see next bullet). Use
+                        this option when you want to allow the item to be set only by URLs having
+                        checksums that were generated by the same named user, running the same
+                        application in the current workspace but in a different session.
+                              </li>
+                              <li><span class="uicontrol bold">Checksum Required: Session Level</span> - The item's
+                        session state may be set by passing the item name/value in a URL if a
+                        checksum is also provided that is specific to the current session. Use this
+                        option when you want to allow this item to be set only by URLs having
+                        checksums that were generated in the current session.
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="stepexpand"><span>Application Item Protection:</span><ul id="GUID-AF34B5A4-5BA1-4FD7-A706-664E277ADC09__CHOICES_DNN_MVK_GVB">
+                              <li><span class="uicontrol bold">Restricted - May not be set from
+                            browser</span> - The item may not be altered using the URL or
+                        POSTDATA. Use this option when you want to restrict the way that the item
+                        value can be set to internal processes, computations, and so on. This
+                        attribute is only applicable only to items that cannot be used as data entry
+                        items and is always observed even if Session State Protection is disabled.
+                        This attribute may be used for application items or for page items with any
+                        of these <span class="uicontrol bold">Display As</span> types:
+                                 <ul style="list-style-type: disc;" id="GUID-AF34B5A4-5BA1-4FD7-A706-664E277ADC09__UL_KXF_4VK_GVB">
+                                    <li>Display Only (Save State=No)</li>
+                                    <li>Text Field (Disabled, does not save state) </li>
+                                    <li>Stop and Start Grid Layout (Displays label only) </li>
+                                 </ul>
+                              </li>
+                              <li><span class="uicontrol bold">Checksum Required: Application Level</span> - The item
+                        may be set by passing the item name/value in a URL if a checksum is also
+                        provided that is specific to the workspace and application. A user-level
+                        checksum or a session-level checksum will also suffice (see next bullets).
+                        Use this option when you want to allow the item to be set only by URLs
+                        having checksums that were generated by any user running the same
+                        application in the current workspace but in a different session.
+                              </li>
+                              <li><span class="uicontrol bold">Checksum Required: User Level</span> - The item may be
+                        set by passing the item name/value in a URL if a checksum is also provided
+                        that is specific to the workspace, application, and user. A session-level
+                        checksum will also suffice (see next bullet). Use this option when you want
+                        to allow the item to be set only by URLs having checksums that were
+                        generated by the same named user, running the same application in the
+                        current workspace but in a different session.
+                              </li>
+                              <li><span class="uicontrol bold">Checksum Required: Session Level</span> - The item may be
+                        set by passing the item name/value in a URL if a checksum is also provided
+                        that is specific to the current session. Use this option when you want to
+                        allow this item to be set only by URLs having checksums that were generated
+                        in the current session.
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Finish</span>.</span></li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="preventing-url-tampering.html#GUID-D5D63EFA-11CA-4A47-9168-B997282B4616" title="Learn how to configure Session State Protection.">Configuring Session State Protection</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div><a id="HTMDB25762"></a><div class="props_rev_3"><a id="GUID-17FC5264-C6A1-4257-9B37-94AAACB6F514" name="GUID-17FC5264-C6A1-4257-9B37-94AAACB6F514"></a><h4 id="HTMDB-GUID-17FC5264-C6A1-4257-9B37-94AAACB6F514" class="sect4"><span class="enumeration_section">21.2.5.3.4 </span>Configuring Session State Protection for a
+        Page
+                  </h4>
+                  <div>
+                     <p>Configure Session State Protection for a page in Page Designer.</p>
+                     <p>To configure Session State
+                Protection for a page:</p>
+                     <ol>
+                        <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a" id="GUID-17FC5264-C6A1-4257-9B37-94AAACB6F514__SUBSTEPS_LV1_V3B_W3B">
+                              <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                              <li><span>Select an application.</span></li>
+                              <li><span>Select a page.</span></li>
+                           </ol>
+                           <div>Page Designer appears. </div>
+                        </li>
+                        <li class="stepexpand"><span>In either the Rendering tab, select the page name. </span><div>The Property Editor displays the page attributes in the
+                    right pane. Attributes are organized in groups.</div>
+                        </li>
+                        <li class="stepexpand"><span>Find the <span class="uicontrol bold">Security</span> group and edit the <span class="uicontrol bold">Page
+                        Access Protection</span> attribute. Options include:</span><ul id="GUID-17FC5264-C6A1-4257-9B37-94AAACB6F514__CHOICES_VYC_MJB_W3B">
+                              <li><span class="uicontrol bold">Unrestricted</span> - The page may be requested using a
+                        URL, with or without session state arguments, and without having to have a
+                        checksum. 
+                              </li>
+                              <li><span class="uicontrol bold">Arguments Must Have Checksum</span> - If Request, Clear
+                        Cache, or Name/Value arguments appear in the URL, a checksum must also be
+                        provided. The checksum type must be compatible with the most stringent
+                            <span class="uicontrol bold">Session State Protection</span> attribute of all the
+                        items passed as arguments.
+                              </li>
+                              <li><span class="uicontrol bold">No Arguments Supported</span> - A URL may be
+                        used to request the page, but the URL can not contain Request, Clear Cache,
+                        or Name/Value Pair arguments.
+                              </li>
+                              <li><span class="uicontrol bold">No URL Access</span> - The page may not be accessed
+                        using a URL. However, the page may be the target of a Branch to Page branch
+                        type, as this does not perform a URL redirect.
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="stepexpand"><span>To save your changes, click <span class="uicontrol bold">Save</span>.</span></li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="preventing-url-tampering.html#GUID-D5D63EFA-11CA-4A47-9168-B997282B4616" title="Learn how to configure Session State Protection.">Configuring Session State Protection</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div><a id="HTMDB25763"></a><div class="props_rev_3"><a id="GUID-0A640D92-3FB2-410E-ACC8-1464F2F632FE" name="GUID-0A640D92-3FB2-410E-ACC8-1464F2F632FE"></a><h4 id="HTMDB-GUID-0A640D92-3FB2-410E-ACC8-1464F2F632FE" class="sect4"><span class="enumeration_section">21.2.5.3.5 </span>Configuring Session State Protection for Page Items
+                  </h4>
+                  <div>
+                     <p>Configuring Session State Protection for page items in Page Designer.</p>
+                     <p>To configure Session State Protection for items:</p>
+                     <ol>
+                        <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a" id="GUID-0A640D92-3FB2-410E-ACC8-1464F2F632FE__SUBSTEPS_LV1_V3B_W3B">
+                              <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                              <li><span>Select an application.</span></li>
+                              <li><span>Select a page.</span></li>
+                           </ol>
+                           <div>Page Designer appears. </div>
+                        </li>
+                        <li class="stepexpand"><span>In either the Rendering tab or the Layout tab, select the page item. </span><div>The Property Editor displays the page attributes in the
+                    right pane. Attributes are organized in groups.</div>
+                        </li>
+                        <li class="stepexpand"><span>In either the Rendering tab, select the page item.</span></li>
+                        <li class="stepexpand"><span>Find the <span class="uicontrol bold">Security</span> group .</span></li>
+                        <li class="stepexpand"><span>Under <span class="uicontrol bold">Security</span>, edit the <span class="uicontrol bold">Session State
+                        Protection</span> attribute. Options include:</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-0A640D92-3FB2-410E-ACC8-1464F2F632FE__UL_ETR_XTB_W3B">
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Unrestricted</span> - The item can be
+                                set by passing the item in a URL or in a form. No checksum is
+                                required in the URL.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Checksum Required - Application
+                                    Level</span> - The item can be set by passing the item in a
+                                URL that includes a checksum specific to the the workspace and
+                                application.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Checksum Required - User Level</span> -
+                                The item can be set by passing the item in a URL that includes a
+                                checksum specific to the the workspace, application and user.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Checksum Required - Session Level</span>
+                                - The item can be set by passing the item in a URL that includes a
+                                checksum specific to the the session.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    <span class="uicontrol bold">Restricted - May not be set from browser</span> - The
+                            item can not be altered using the URL or POSTDATA. Select this option to
+                            restrict what can set the item value to internal processes,
+                            computations, and so on. This attribute only applies to items that are
+                            not used as data entry items and is always observed, even if Session
+                            State Protection is disabled. Use this attribute for page or application
+                            items that have the following <span class="uicontrol bold">Display As</span>
+                                types:
+                                    <ul style="list-style-type: disc;" id="GUID-0A640D92-3FB2-410E-ACC8-1464F2F632FE__UL_RVH_LTB_W3B">
+                                       <li><span class="uicontrol bold">Display Only (Save State=No)</span></li>
+                                       <li><span class="uicontrol bold">Text Field (Disabled, does not save
+                                        state)</span></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>To save your changes, click <span class="uicontrol bold">Save</span>.</span></li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="preventing-url-tampering.html#GUID-D5D63EFA-11CA-4A47-9168-B997282B4616" title="Learn how to configure Session State Protection.">Configuring Session State Protection</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div><a id="HTMDB25764"></a><div class="props_rev_3"><a id="GUID-3D39B3A9-69D4-416B-B6DF-41EA13178654" name="GUID-3D39B3A9-69D4-416B-B6DF-41EA13178654"></a><h4 id="HTMDB-GUID-3D39B3A9-69D4-416B-B6DF-41EA13178654" class="sect4"><span class="enumeration_section">21.2.5.3.6 </span>Configuring Session State Protection for Application Items
+                  </h4>
+                  <div>
+                     <p>Configuring Session State Protection for application items in Shared
+        Components.</p>
+                     <div class="section">
+                        
+                        <p>To configure Session State Protection for an application item:</p>
+                     </div>
+                     <ol>
+                        <li class="stepexpand"><span>Navigate to the Session State Protection page:</span><ol type="a">
+                              <li class="substepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                              <li class="substepexpand"><span>Select an application. </span></li>
+                              <li class="substepexpand"><span>Click <span class="uicontrol bold">Shared Components</span>.</span></li>
+                              <li class="substepexpand"><span>Under Application Logic, select <span class="uicontrol bold">Application
+                                Items</span>.</span><div>
+                                    
+                                    <p>The Application Items page appears.</p>
+                                    
+                                 </div>
+                              </li>
+                           </ol>
+                        </li>
+                        <li class="stepexpand"><span>Click the name of an <span class="uicontrol bold">Application Item</span>.</span></li>
+                        <li class="stepexpand"><span>Security, Session State Protection - Select Session State Protection for this
+                    item. Options include:</span><div>
+                              
+                              <ul style="list-style-type: disc;">
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Unrestricted</span> - The item's session
+                                state may be set by passing the item name/value in a URL or in a
+                                form. No checksum is required in the URL.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Restricted - May not be set from
+                                    browser</span> - The item may not be altered using the URL
+                                or POSTDATA. Use this option when you want to restrict the way that
+                                the item value can be set to internal processes, computations, and
+                                so on. This attribute is only applicable only to items that cannot
+                                be used as data entry items and is always observed even if Session
+                                State Protection is disabled. This attribute may be used for
+                                application items or for page items with any of these
+                                    <span class="uicontrol bold">Display As</span> types: 
+                                    </p>
+                                    
+                                    <ul style="list-style-type: disc;">
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Display Only (Save
+                                            State=No)</span></p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Text Field (Disabled, does not save
+                                            state)</span></p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Stop and Start Grid Layout (Displays
+                                            label only)</span></p>
+                                          
+                                       </li>
+                                    </ul>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Checksum Required: Application
+                                    Level</span> - The item may be set by passing the item
+                                name/value in a URL if a checksum is also provided that is specific
+                                to the workspace and application. Use this option when you want to
+                                allow the item to be set only by URLs having checksums that were
+                                generated by any user running the same application in the current
+                                workspace but in a different session.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Checksum Required: User Level</span> -
+                                The item may be set by passing the item name/value in a URL if a
+                                checksum is also provided that is specific to the workspace,
+                                application, and user. Use this option when you want to allow the
+                                item to be set only by URLs having checksums that were generated by
+                                the same named user, running the same application in the current
+                                workspace but in a different session.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Checksum Required: Session Level</span> -
+                                The item may be set by passing the item name/value in a URL if a
+                                checksum is also provided that is specific to the current session.
+                                Use this option when you want to allow this item to be set only by
+                                URLs having checksums that were generated in the current
+                                session.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="preventing-url-tampering.html#GUID-D5D63EFA-11CA-4A47-9168-B997282B4616" title="Learn how to configure Session State Protection.">Configuring Session State Protection</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

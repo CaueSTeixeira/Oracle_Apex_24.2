@@ -1,0 +1,111 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Cleaning Up After a Failed Installation">
+      <meta name="abstract" content="Learn about best practices for troubleshooting and cleaning up after a failed installation.">
+      <meta name="description" content="Learn about best practices for troubleshooting and cleaning up after a failed installation.">
+      <meta name="DC.subject" content="installing, failures, troubleshooting, cleaning up after failed installation">
+      <meta name="keywords" content="installing, failures, troubleshooting, cleaning up after failed installation">
+      <meta name="DC.Relation" scheme="URI" content="apex-installation-troubleshooting.html#GUID-DD71A070-847A-44D0-AF9A-27B55B826F9C">
+      <meta name="DC.Relation" scheme="URI" content="reverting-to-previous-release-after-failed-upgrade-installation.html#GUID-24B09CC5-32FB-494F-AF84-E4482219E4E2">
+      <meta name="DC.Relation" scheme="URI" content="removing-apex-from-the-database.html#GUID-A16032EF-3440-4D7A-B8A2-193A49D0BB30">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="David Bliss">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Salim Hlayel">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vlad Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-872260A2-2BF5-42F8-A9D5-B7A40EF9345C">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about best practices for troubleshooting and cleaning up after a failed installation.">
+      <meta name="description" content="Learn about best practices for troubleshooting and cleaning up after a failed installation.">
+      <title>Cleaning Up After a Failed Installation</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Installation Guide ">
+      <meta property="og:description" content="Learn about best practices for troubleshooting and cleaning up after a failed installation.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Installation Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-installation-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:41:45-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12910-03">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="verifying-validity-of-an-apex-installation.html" title="Previous" type="text/html">
+      <link rel="next" href="reverting-to-previous-release-after-failed-upgrade-installation.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Installation Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="HTMIG">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Cleaning Up After a Failed Installation","description":"Learn about best practices for troubleshooting and cleaning up after a failed installation.","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="verifying-validity-of-an-apex-installation.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="reverting-to-previous-release-after-failed-upgrade-installation.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-872260A2-2BF5-42F8-A9D5-B7A40EF9345C" name="GUID-872260A2-2BF5-42F8-A9D5-B7A40EF9345C"></a>
+         
+         <h2 id="HTMIG-GUID-872260A2-2BF5-42F8-A9D5-B7A40EF9345C" class="sect2"><span class="enumeration_section">C.3 </span>Cleaning Up After a Failed Installation
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Learn about best practices for troubleshooting and cleaning up after a failed
+        installation.</p>
+               <p>In a successful installation the following banner displays near the end of the installation:</p><pre class="pre codeblock"><code>Thank you for installing <span>Oracle APEX</span>.
+<span>Oracle APEX</span> is installed in the <span><code class="codeph">APEX_240200</code></span> schema.</code></pre><p>To reinstall, you must either drop the <span>APEX</span> database schemas, or run a script to completely remove <span>APEX</span> from the database, depending upon the installation type.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="reverting-to-previous-release-after-failed-upgrade-installation.html#GUID-24B09CC5-32FB-494F-AF84-E4482219E4E2">Reverting to a Previous Release After a Failed Upgrade Installation</a><br>Learn about reverting to <span>Oracle APEX</span> to a previous release in the case of a failed upgrade installation.
+                  </li>
+                  <li class="ulchildlink"><a href="removing-apex-from-the-database.html#GUID-A16032EF-3440-4D7A-B8A2-193A49D0BB30">Removing APEX from the Database</a><br>Start <span>SQLcl</span> and connect to the database where <span>Oracle APEX</span> is installed as <code class="codeph">SYS</code> specifying the <code class="codeph">SYSDBA</code> role and execute the <code class="codeph">SQL&gt; @apxremov.sql</code> command.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="apex-installation-troubleshooting.html#GUID-DD71A070-847A-44D0-AF9A-27B55B826F9C" title="Learn about troubleshooting Oracle APEX Installation.">APEX Installation Troubleshooting</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

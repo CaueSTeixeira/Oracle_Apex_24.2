@@ -1,0 +1,223 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Understanding Authentication">
+      <meta name="abstract" content="Learn about authentication.">
+      <meta name="description" content="Learn about authentication.">
+      <meta name="DC.subject" content="authentication, understanding, linking, deep, deep linking">
+      <meta name="keywords" content="authentication, understanding, linking, deep, deep linking">
+      <meta name="DC.Relation" scheme="URI" content="establishing-user-identity-through-authentication.html#GUID-45C4B1CD-4231-4FE9-8B5B-C90611F5F57B">
+      <meta name="DC.Relation" scheme="URI" content="understanding-authentication.html#GUID-6DE1B6DC-6C44-4DC8-B7C5-62959E381D3D">
+      <meta name="DC.Relation" scheme="URI" content="understanding-authentication.html#GUID-5D1A94F1-4286-47EE-AC80-0E674099B7C0">
+      <meta name="DC.Relation" scheme="URI" content="understanding-authentication.html#GUID-252D3182-ED76-471F-A23A-FD533281AA0F">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-144A774D-2B05-4BE5-9550-6951EE0B536B">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about authentication.">
+      <meta name="description" content="Learn about authentication.">
+      <title>Understanding Authentication</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Learn about authentication.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="establishing-user-identity-through-authentication.html" title="Previous" type="text/html">
+      <link rel="next" href="preconfigured-authentication-schemes.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Understanding Authentication","description":"Learn about authentication.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="establishing-user-identity-through-authentication.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="preconfigured-authentication-schemes.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-144A774D-2B05-4BE5-9550-6951EE0B536B" name="GUID-144A774D-2B05-4BE5-9550-6951EE0B536B"></a><a id="HTMDB30081"></a>
+         
+         <h2 id="HTMDB-GUID-144A774D-2B05-4BE5-9550-6951EE0B536B" class="sect2"><span class="enumeration_section">21.4.1 </span>Understanding Authentication
+         </h2>
+         <div class="ind">
+            <p>Learn about authentication. </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="understanding-authentication.html#GUID-6DE1B6DC-6C44-4DC8-B7C5-62959E381D3D">How Authentication Works</a><br>Lean how authentication works.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-authentication.html#GUID-5D1A94F1-4286-47EE-AC80-0E674099B7C0">About Support for Deep Linking</a><br>Learn about support for deep linking.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-authentication.html#GUID-252D3182-ED76-471F-A23A-FD533281AA0F">About Determining Whether to Include Authentication</a><br>Learn about determining whether to include application authentication.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="establishing-user-identity-through-authentication.html#GUID-45C4B1CD-4231-4FE9-8B5B-C90611F5F57B" title="Use authentication to establish a user's identity to control access to an application. Authentication may require a user identify a user name and password or could involve the use of digital certificates or a secure key.">Establishing User Identity Through Authentication</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB25765"></a><div class="props_rev_3"><a id="GUID-6DE1B6DC-6C44-4DC8-B7C5-62959E381D3D" name="GUID-6DE1B6DC-6C44-4DC8-B7C5-62959E381D3D"></a><h3 id="HTMDB-GUID-6DE1B6DC-6C44-4DC8-B7C5-62959E381D3D" class="sect3"><span class="enumeration_section">21.4.1.1 </span>How Authentication Works
+               </h3>
+               <div>
+                  <p>Lean how authentication works.</p>
+                  <p>You determine how your application interacts with users. If all users have the same rights and privileges, they are referred to as public users. However, if your application must track each user individually, you must specify an authentication method.</p>
+                  <p>Authentication establishes the identity of each user who accesses your application. Many authentication processes require that a user provide some type of credentials such as a user name and password. These credentials are then evaluated and they either pass or fail. If the credentials pass, the user has access to the application. Otherwise, access is denied. </p>
+                  <p>Once a user has been identified, the <span>Oracle APEX</span> engine keeps track of each user by setting the value of the built-in substitution string <code class="codeph">APP_USER</code>. As a user navigates from page to page, the <span>APEX</span> engine sets the value of <code class="codeph">APP_USER</code> to identify the user. The <span>APEX</span> engine uses <code class="codeph">APP_USER</code> as one component of a key for tracking each user's session state. 
+                  </p>
+                  <p>From a programming perspective, you can access <code class="codeph">APP_USER</code> using the following syntax:
+                  </p>
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        <p> As a bind variable from either PL/SQL or SQL: </p><pre class="oac_no_warn" dir="ltr">:APP_USER
+</pre></li>
+                     <li>
+                        <p>From PL/SQL packages and triggers:</p><pre class="oac_no_warn" dir="ltr">V('APP_USER')
+</pre></li>
+                     <li>
+                        <p>As an attribute of the context APEX$SESSION:</p><pre class="oac_no_warn" dir="ltr">sys_context('APEX$SESSION', 'APP_USER')
+</pre></li>
+                  </ul>
+                  <p>You can use <code class="codeph">APP_USER</code> to perform your own security checks and conditional processing. For example, suppose you created the following table: 
+                  </p><pre class="oac_no_warn" dir="ltr">CREATE TABLE my_security_table (
+  user_id   VARCHAR2(30),
+  privilege VARCHAR2(30));
+</pre><p>Once created, you could populate this table with user privilege information and then use it to control the display of pages, tabs, navigation bars, buttons, regions, or any other control or component. </p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-6DE1B6DC-6C44-4DC8-B7C5-62959E381D3D__GUID-3DC3FF53-E2E2-4F32-87D9-122F982AA05C">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="using-available-built-in-substitution-strings.html#GUID-3AFC7346-902C-4DCA-8D28-960BD8FC6628">APP_USER</a></li>
+                        <li><a href="configuring-security-attributes.html#GUID-5AEB6EEF-A89B-41B6-B8D5-00A0FD926E8F" title="Use the Security page to set application-wide security settings.">Configuring Security Attributes</a></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-authentication.html#GUID-144A774D-2B05-4BE5-9550-6951EE0B536B" title="Learn about authentication.">Understanding Authentication</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25781"></a><div class="props_rev_3"><a id="GUID-5D1A94F1-4286-47EE-AC80-0E674099B7C0" name="GUID-5D1A94F1-4286-47EE-AC80-0E674099B7C0"></a><h3 id="HTMDB-GUID-5D1A94F1-4286-47EE-AC80-0E674099B7C0" class="sect3"><span class="enumeration_section">21.4.1.2 </span>About Support for Deep Linking
+               </h3>
+               <div>
+                  <p>Learn about support for deep linking.</p>
+                  <p><span>APEX</span> applications that use authentication schemes support deep linking. Deep linking
+            refers to the ability to link to an <span>APEX</span> page out of context (for example, from a hyperlink in an email or workflow
+            notification). When you link to a page out of context and the application requires the
+            user be authenticated, the user is taken to the Sign In page. After credentials
+            verification, the <span>APEX</span> engine automatically displays the page that was referenced in the original link. Deep
+            linking is disabled by default. Application developers can enable deep linking at the
+            application-level on the Security Attributes page in Shared Components or for individual
+            pages in Page Designer.
+                  </p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-authentication.html#GUID-144A774D-2B05-4BE5-9550-6951EE0B536B" title="Learn about authentication.">Understanding Authentication</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25766"></a><div class="props_rev_3"><a id="GUID-252D3182-ED76-471F-A23A-FD533281AA0F" name="GUID-252D3182-ED76-471F-A23A-FD533281AA0F"></a><h3 id="HTMDB-GUID-252D3182-ED76-471F-A23A-FD533281AA0F" class="sect3"><span class="enumeration_section">21.4.1.3 </span>About Determining Whether to Include Authentication
+               </h3>
+               <div>
+                  <p>Learn about determining whether to include application authentication.</p>
+                  <p>As you create your application, you must determine whether to include
+            authentication. Options include:</p>
+                  <ul style="list-style-type: disc;">
+                     <li><span class="bold">Choose to not require authentication</span>. <span>APEX</span> does not check any user credentials. All pages of your application are accessible to all users. 
+                     </li>
+                     <li><span class="bold">Select a built-in authentication scheme</span>. Create an authentication method based on available preconfigured authentication schemes. Depending on which scheme you choose, you may also have to configure the corresponding components of Oracle 10<span class="italic">g</span>iAS, Oracle Internet Directory, or other external services. 
+                     </li>
+                     <li><span class="bold">Create custom authentication scheme</span>. Create a custom authentication method to have complete control over the authentication interface. To implement this approach, you must provide a PL/SQL function the <span>APEX</span> engine executes before processing each page request. This function's Boolean return value determines whether the <span>APEX</span> engine processes the page normally or displays a failure page.
+                     </li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-252D3182-ED76-471F-A23A-FD533281AA0F__GUID-6B289FA1-F0BB-48A9-AF3C-3D0E0A49DE18">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="preconfigured-authentication-schemes.html#GUID-CD382D4A-AC00-4185-B37F-9A5BC9417A7B" title="Learn about the preconfigured authentication schemes.">Understanding Preconfigured Authentication Schemes</a></li>
+                        <li><a href="changing-authentication-scheme.html#GUID-D188D129-5616-46EC-968A-508663647970" title="Change the authentication scheme associated with an application.">Changing the Authentication Scheme Associated with an Application</a></li>
+                        <li><a href="editing-authorization-scheme.html#GUID-439E713B-7238-48D6-BE5A-A6D38137F694" title="Learn how to edit an authorization scheme.">Editing an Authorization Scheme</a></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-authentication.html#GUID-144A774D-2B05-4BE5-9550-6951EE0B536B" title="Learn about authentication.">Understanding Authentication</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

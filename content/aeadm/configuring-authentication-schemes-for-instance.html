@@ -1,0 +1,167 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Configuring Authentication Schemes for an Instance">
+      <meta name="abstract" content="Instance administrators can configure available authentication schemes for an Oracle APEX instance.">
+      <meta name="description" content="Instance administrators can configure available authentication schemes for an Oracle APEX instance.">
+      <meta name="DC.subject" content="authentication schemes, about, configuring for, Oracle APEX">
+      <meta name="keywords" content="authentication schemes, about, configuring for, Oracle APEX">
+      <meta name="DC.Relation" scheme="URI" content="configuring-authentication-controls-for-an-instance.html#GUID-E06E263E-F489-4F10-968B-9BA82F0D4894">
+      <meta name="DC.Relation" scheme="URI" content="editing-apex-accounts.html#GUID-34F4CEF0-DF88-483C-B7F8-3DA478ACFD7A">
+      <meta name="DC.Relation" scheme="URI" content="editing-database-accounts.html#GUID-7C7173A9-008A-496C-881D-1E1B1808CDF9">
+      <meta name="DC.Relation" scheme="URI" content="editing-http-header-variable.html#GUID-75191381-9EC9-4FDF-B303-647C88C0E1E5">
+      <meta name="DC.Relation" scheme="URI" content="editing_ldap_directory.html#GUID-AD5001DD-2E38-4448-8865-3B540EFDC808">
+      <meta name="DC.Relation" scheme="URI" content="editing-oracle-application-server-single-sign-on.html#GUID-727B62F4-2816-4857-9AEE-10DD57DC72BF">
+      <meta name="DC.Relation" scheme="URI" content="editing-saml-sign-in.html#GUID-D13FDB40-8FE2-441D-9EDB-E9DB7891D7FE">
+      <meta name="DC.Relation" scheme="URI" content="editing-social-sign-in.html#GUID-693A8416-F42B-4907-8ED3-F4351CDD06AF">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-A1EFFB66-8D37-437C-9183-A230213CBDCC">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Instance administrators can configure available authentication schemes for an Oracle APEX instance.">
+      <meta name="description" content="Instance administrators can configure available authentication schemes for an Oracle APEX instance.">
+      <title>Configuring Authentication Schemes for an Instance</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Instance administrators can configure available authentication schemes for an Oracle APEX instance.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="configuring-security-for-developer-end-user-login.html" title="Previous" type="text/html">
+      <link rel="next" href="editing-apex-accounts.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Configuring Authentication Schemes for an Instance","description":"Instance administrators can configure available authentication schemes for an Oracle APEX instance.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="configuring-security-for-developer-end-user-login.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="editing-apex-accounts.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-A1EFFB66-8D37-437C-9183-A230213CBDCC" name="GUID-A1EFFB66-8D37-437C-9183-A230213CBDCC"></a>
+         
+         <h2 id="AEADM-GUID-A1EFFB66-8D37-437C-9183-A230213CBDCC" class="sect2"><span class="enumeration_section">3.4.8.3 </span>Configuring Authentication Schemes for an
+        Instance
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Instance administrators can configure available authentication schemes for
+        an <span>Oracle APEX</span> instance.
+               </p>
+               <p>The authentication scheme designated as <span class="uicontrol bold">Current</span>
+            determines how <span>Oracle APEX</span> identifies and verifies instance administrators, workspace administrators, and
+            developers. Depending upon the selected authentication scheme type, you can configure
+            various settings to fine-tune authentication behavior.
+               </p>
+               <p>Even for external authentication schemes (such as HTTP Header Variable),
+            make sure that users exist as developers or administrators in your workspace. Otherwise,
+                <span>APEX</span> will not be able to verify in which workspace a user is allowed to work.
+               </p>
+               <div class="infobox-tip" id="GUID-A1EFFB66-8D37-437C-9183-A230213CBDCC__GUID-E1A9A607-1B36-4B02-A54F-DD0A423581AB">
+                  <p class="notep1">Tip:</p>
+                  
+                  <p>You can also change the authentication scheme using the
+                    <code class="codeph">APEX_BUILDER_AUTHENTICATION</code> parameter in
+                    <code class="codeph">APEX_INSTANCE_ADMIN</code> package. See APEX_INSTANCE_ADMIN,  <a href="../aeapi/APEX_INSTANCE_ADMIN.Available-Parameter-Values.html#AEAPI-GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A" target="_blank">Available Parameter Values</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span>.
+                  </p>
+                  
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="editing-apex-accounts.html#GUID-34F4CEF0-DF88-483C-B7F8-3DA478ACFD7A">Editing Oracle APEX Accounts</a><br>Edit the <span>Oracle APEX</span> Accounts authentication scheme for an instance.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-database-accounts.html#GUID-7C7173A9-008A-496C-881D-1E1B1808CDF9">Editing Database Accounts</a><br>Edit the Database Accounts authentication scheme for an         instance.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-http-header-variable.html#GUID-75191381-9EC9-4FDF-B303-647C88C0E1E5">Editing HTTP Header Variable</a><br>Edit the HTTP Header Variable authentication scheme for an         instance.
+                  </li>
+                  <li class="ulchildlink"><a href="editing_ldap_directory.html#GUID-AD5001DD-2E38-4448-8865-3B540EFDC808">Editing LDAP Directory</a><br>Edit the LDAP Directory authentication scheme for an         instance.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-oracle-application-server-single-sign-on.html#GUID-727B62F4-2816-4857-9AEE-10DD57DC72BF">Editing Oracle Application Server Single Sign-On</a><br>Edit the Oracle Application Server Single Sign-On for an         instance.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-saml-sign-in.html#GUID-D13FDB40-8FE2-441D-9EDB-E9DB7891D7FE">Editing SAML Sign In</a><br>Delegates authentication to the Security Assertion Markup Language (SAML)         Sign In authentication scheme.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-social-sign-in.html#GUID-693A8416-F42B-4907-8ED3-F4351CDD06AF">Editing Social Sign-In</a><br>Edit the Social Sign-In authentication scheme for an         instance.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-A1EFFB66-8D37-437C-9183-A230213CBDCC__GUID-D2CC435D-3237-47DC-91C5-2A886EEBC026">
+                  <p class="notep1">See Also:</p>
+                  
+                  <ul style="list-style-type: disc;" id="GUID-A1EFFB66-8D37-437C-9183-A230213CBDCC__UL_ZCJ_ZBV_VRB">
+                     <li>
+                        
+                        <p><a href="../htmdb/establishing-user-identity-through-authentication.html#HTMDB-GUID-45C4B1CD-4231-4FE9-8B5B-C90611F5F57B" target="_blank">Establishing User Identity Through
+                            Authentication</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p><a href="../htmdb/configuring-an-existing-authentication-schemes.html#HTMDB-GUID-7D1B223C-0D32-428F-9F6E-E26285F2B606" target="_blank">Editing an Existing Authentication Scheme</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></p>
+                        
+                     </li>
+                  </ul>
+                  
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="configuring-authentication-controls-for-an-instance.html#GUID-E06E263E-F489-4F10-968B-9BA82F0D4894" title="Administrators can configure authentication controls for an entire instance or for each individual workspace.">Configuring Authentication Controls for an Instance</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

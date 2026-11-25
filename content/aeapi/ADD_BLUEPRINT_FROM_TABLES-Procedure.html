@@ -1,0 +1,181 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="ADD_BLUEPRINT_FROM_TABLES Procedure">
+      <meta name="DC.subject" content="ADD_BLUEPRINT_FROM_TABLES procedure, APEX_DG_DATA_GEN">
+      <meta name="keywords" content="ADD_BLUEPRINT_FROM_TABLES procedure, APEX_DG_DATA_GEN">
+      <meta name="DC.Relation" scheme="URI" content="APEX_DG_DATA_GEN.html#GUID-5DB25668-0D85-45FD-A062-281D2852CFA1">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-9BD5C59E-C17C-45BE-8829-5FEBC9CC7CF1">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>ADD_BLUEPRINT_FROM_TABLES Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="ADD_BLUEPRINT_FROM_FILE-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_DG_DATA_GEN.ADD_COLUMN-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"ADD_BLUEPRINT_FROM_TABLES Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="ADD_BLUEPRINT_FROM_FILE-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_DG_DATA_GEN.ADD_COLUMN-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-9BD5C59E-C17C-45BE-8829-5FEBC9CC7CF1" name="GUID-9BD5C59E-C17C-45BE-8829-5FEBC9CC7CF1"></a>
+         
+         <h2 id="AEAPI-GUID-9BD5C59E-C17C-45BE-8829-5FEBC9CC7CF1" class="sect2"><span class="enumeration_section">24.3 </span>ADD_BLUEPRINT_FROM_TABLES Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This procedure creates a blueprint and adds the tables specified based on the data dictionary.</p>
+                  <p>For all the table names specified by the user, the Data Generator retrieves each table from the current schema, plus its definition, column names, data types, and attributes as they come from the DB data dictionary.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-9BD5C59E-C17C-45BE-8829-5FEBC9CC7CF1__GUID-4BACA0A5-CA13-4765-914C-C9A5F5275A82">Syntax</p>
+                  <pre class="pre codeblock"><code>APEX_DG_DATA_GEN.ADD_BLUEPRINT_FROM_TABLES (
+    p_name              IN VARCHAR2,
+    p_tables            IN wwv_flow_t_varchar2,
+    p_preserve_case     IN VARCHAR2 DEFAULT 'N',
+    p_exclude_columns   IN wwv_flow_t_varchar2 DEFAULT c_empty_t_varchar2,
+    p_description       IN VARCHAR2 DEFAULT NULL,
+    p_lang              IN VARCHAR2 DEFAULT 'en',
+    p_default_schema    IN VARCHAR2 DEFAULT NULL,   
+    p_blueprint_id      OUT NUMBER );</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-9BD5C59E-C17C-45BE-8829-5FEBC9CC7CF1__GUID-2118C338-643E-4828-B981-F63B51FF8CA0">Parameters</p>
+                  <div class="tblformal" id="GUID-9BD5C59E-C17C-45BE-8829-5FEBC9CC7CF1__GUID-AFEF5317-38DA-4552-89F3-FCB6A18A7292">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="42%" id="d86862e72">Parameter</th>
+                              <th align="left" valign="bottom" width="58%" id="d86862e74">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d86862e78" headers="d86862e72 "><code class="codeph">p_name</code></td>
+                              <td align="left" valign="top" width="58%" headers="d86862e78 d86862e74 ">Name of blueprint, combination of name and language are unique. Name is automatically upper cased.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d86862e84" headers="d86862e72 "><code class="codeph">p_tables</code></td>
+                              <td align="left" valign="top" width="58%" headers="d86862e84 d86862e74 ">
+                                 <div class="p">List of tables and the number of records. The format is: <pre class="pre codeblock"><code>apex_t_varchar2('&lt;Table name&gt;:[Rows]',...)</code></pre>For example: <code class="codeph">apex_t_varchar2('PRODUCTS:10','CUSTOMERS:50', 'SALES:1000')</code></div>
+                                 <p>The ordering of tables should be: master tables before child tables (for FK relationships).</p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d86862e98" headers="d86862e72 "><code class="codeph">p_preserve_case</code></td>
+                              <td align="left" valign="top" width="58%" headers="d86862e98 d86862e74 ">Defaults to <code class="codeph">N</code> which forces table name to uppercase. If <code class="codeph">Y</code>, preserves table case.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d86862e110" headers="d86862e72 "><code class="codeph">p_exclude_columns</code></td>
+                              <td align="left" valign="top" width="58%" headers="d86862e110 d86862e74 ">String array (<code class="codeph">apex_t_varchar2</code>) of column names to exclude from the auto column generation. The exclude columns parameter applies to all tables in the <code class="codeph">p_tables</code> parameter.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d86862e122" headers="d86862e72 "><code class="codeph">p_description</code></td>
+                              <td align="left" valign="top" width="58%" headers="d86862e122 d86862e74 ">Description of blueprint.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d86862e128" headers="d86862e72 "><code class="codeph">p_lang</code></td>
+                              <td align="left" valign="top" width="58%" headers="d86862e128 d86862e74 ">Blueprint language determines values from built-in data sources. If the built-in data source has 0 records in this language, <code class="codeph">en</code> is used.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d86862e137" headers="d86862e72 "><code class="codeph">p_default_schema</code></td>
+                              <td align="left" valign="top" width="58%" headers="d86862e137 d86862e74 ">The default schema name for the blueprint.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d86862e143" headers="d86862e72 "><code class="codeph">p_blueprint_id</code></td>
+                              <td align="left" valign="top" width="58%" headers="d86862e143 d86862e74 ">ID of the added blueprint (<code class="codeph">OUT</code>).
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-9BD5C59E-C17C-45BE-8829-5FEBC9CC7CF1__GUID-BD217647-FAFB-4D84-A2E1-4DCBBD38D3C9">Example</p>
+                  <pre class="pre codeblock"><code>DECLARE
+  l_blueprint_id number;
+BEGIN
+    apex_dg_data_gen.add_blueprint_from_tables(
+                 p_name            =&gt; 'Product Sales',
+                 p_tables          =&gt; apex_t_varchar2('PRODUCTS:10','CUSTOMERS:50','SALES:1000'),
+                 p_exclude_columns =&gt; apex_t_varchar2('CREATED_BY','CREATED_DATE'),
+                 p_description     =&gt; 'A blueprint to generate product sales data',
+                 p_lang            =&gt; 'en',
+                 p_blueprint_id    =&gt; l_blueprint_id
+                 );
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_DG_DATA_GEN.html#GUID-5DB25668-0D85-45FD-A062-281D2852CFA1">APEX_DG_DATA_GEN</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Removing the APEX Release Schema">
+      <meta name="abstract" content="After you revert to the prior release, remove the Oracle APEX schema.">
+      <meta name="description" content="After you revert to the prior release, remove the Oracle APEX schema.">
+      <meta name="DC.Relation" scheme="URI" content="reverting-to-previous-release-after-failed-upgrade-installation.html#GUID-24B09CC5-32FB-494F-AF84-E4482219E4E2">
+      <meta name="DC.Relation" scheme="URI" content="removing-the-apex-release-schema.html#GUID-12F57A77-14BB-4AEA-9D06-D426D3CB65B2">
+      <meta name="DC.Relation" scheme="URI" content="removing-the-apex-release-schema.html#GUID-D56D5C6D-EFAC-4628-A433-3EB84292E99B">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="David Bliss">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Salim Hlayel">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vlad Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-E7A956E1-00F8-44F5-B92F-6628514D2DF0">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="After you revert to the prior release, remove the Oracle APEX schema.">
+      <meta name="description" content="After you revert to the prior release, remove the Oracle APEX schema.">
+      <title>Removing the APEX Release Schema</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Installation Guide ">
+      <meta property="og:description" content="After you revert to the prior release, remove the Oracle APEX schema.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Installation Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-installation-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:41:45-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12910-03">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="reverting-to-a-previous-release.html" title="Previous" type="text/html">
+      <link rel="next" href="removing-apex-from-the-database.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Installation Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="HTMIG">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Removing the APEX Release Schema","description":"After you revert to the prior release, remove the Oracle APEX schema.","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="reverting-to-a-previous-release.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="removing-apex-from-the-database.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-E7A956E1-00F8-44F5-B92F-6628514D2DF0" name="GUID-E7A956E1-00F8-44F5-B92F-6628514D2DF0"></a><a id="HTMIG268"></a>
+         
+         <h2 id="HTMIG-GUID-E7A956E1-00F8-44F5-B92F-6628514D2DF0" class="sect2"><span class="enumeration_section">C.3.1.4 </span>Removing the <span>APEX</span> Release Schema
+         </h2>
+         <div class="ind">
+            <p>After you revert to the prior release, remove the <span>Oracle APEX</span> schema.
+            </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="removing-the-apex-release-schema.html#GUID-12F57A77-14BB-4AEA-9D06-D426D3CB65B2">Removing the APEX Release 24.2 Schema from a Non-CDB</a><br>Start <span>SQLcl</span> and connect to the database and execute <code class="codeph">DROP USER <span><code class="codeph">APEX_240200</code></span> CASCADE;</code> command.
+                  </li>
+                  <li class="ulchildlink"><a href="removing-the-apex-release-schema.html#GUID-D56D5C6D-EFAC-4628-A433-3EB84292E99B">Removing the APEX Release 24.2 Schema from a CDB</a><br>Create text files, start <span>SQLcl</span> and connect to the database execute <code class="codeph">@remove_<span>apx242</span>_usr.sql</code>.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="reverting-to-previous-release-after-failed-upgrade-installation.html#GUID-24B09CC5-32FB-494F-AF84-E4482219E4E2" title="Learn about reverting to Oracle APEX to a previous release in the case of a failed upgrade installation.">Reverting to a Previous Release After a Failed Upgrade Installation</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMIG29485"></a><div class="props_rev_3"><a id="GUID-12F57A77-14BB-4AEA-9D06-D426D3CB65B2" name="GUID-12F57A77-14BB-4AEA-9D06-D426D3CB65B2"></a><h3 id="HTMIG-GUID-12F57A77-14BB-4AEA-9D06-D426D3CB65B2" class="sect3"><span class="enumeration_section">C.3.1.4.1 </span>Removing the <span>APEX</span> Release <span>24.2</span> Schema from a Non-CDB
+               </h3>
+               <div>
+                  <p>Start <span>SQLcl</span> and connect to the database and execute <code class="codeph">DROP USER <span><code class="codeph">APEX_240200</code></span> CASCADE;</code> command.
+                  </p>
+                  <div class="section">
+                     <p>To remove the release <span>24.2</span> schema from a non-CDB:
+                     </p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Start <span>SQLcl</span> and connect to the database where <span>APEX</span> is installed as <code class="codeph">SYS</code> specifying the <code class="codeph">SYSDBA</code> role:</span><ul id="GUID-12F57A77-14BB-4AEA-9D06-D426D3CB65B2__CHOICES_BQZ_W1H_XWB">
+                           <li>
+                              <p>On Windows:</p><pre class="pre codeblock"><code><span class="italic">SYSTEM_DRIVE:\</span> sql /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span></code></pre></li>
+                           <li>
+                              <p>On UNIX and Linux:</p><pre class="pre codeblock"><code>$ sql /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span></code></pre></li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Execute the following command:</span><div>
+                           <pre class="pre codeblock"><code>DROP USER <span><code class="codeph">APEX_240200</code></span> CASCADE;</code></pre><p>Once you have removed the <span>APEX</span> <span>24.2</span> schema, you can now attempt the upgrade again.
+                           </p>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="removing-the-apex-release-schema.html#GUID-E7A956E1-00F8-44F5-B92F-6628514D2DF0" title="After you revert to the prior release, remove the Oracle APEX schema.">Removing the APEX Release Schema</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMIG29486"></a><div class="props_rev_3"><a id="GUID-D56D5C6D-EFAC-4628-A433-3EB84292E99B" name="GUID-D56D5C6D-EFAC-4628-A433-3EB84292E99B"></a><h3 id="HTMIG-GUID-D56D5C6D-EFAC-4628-A433-3EB84292E99B" class="sect3"><span class="enumeration_section">C.3.1.4.2 </span>Removing the <span>APEX</span> Release <span>24.2</span> Schema from a CDB
+               </h3>
+               <div>
+                  <p>Create text files, start <span>SQLcl</span> and connect to the database execute <code class="codeph">@remove_<span>apx242</span>_usr.sql</code>.
+                  </p>
+                  <div class="section">
+                     <p>To remove the release <span>24.2</span> schema from a CDB:
+                     </p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Create a new text file named <code class="codeph">remove_<span>apx242</span>_usr1.sql</code> with the following contents:</span><div><pre class="pre codeblock"><code>alter session set current_schema = SYS;
+drop user <span><code class="codeph">APEX_240200</code></span> cascade;</code></pre></div>
+                     </li>
+                     <li class="stepexpand"><span>Create a second new text file named <code class="codeph">remove_<span>apx242</span>_usr.sql</code> with the following contents:</span><div><pre class="pre codeblock"><code>set define '^'
+whenever sqlerror exit
+column :xe_home new_value OH_HOME NOPRINT
+variable xe_home varchar2(255)
+ 
+set serverout on
+begin
+-- get oracle_home
+    sys.dbms_system.get_env('ORACLE_HOME',:xe_home);
+    if length(:xe_home) = 0 then
+        sys.dbms_output.put_line(lpad('-',80,'-'));
+        raise_application_error (
+            -20001,
+            'Oracle Home environment variable not set' );
+    end if;
+end;
+/
+whenever sqlerror continue
+ 
+set termout off
+select :xe_home from sys.dual;
+set termout on
+host ^OH_HOME/perl/bin/perl -I ^OH_HOME/rdbms/admin ^OH_HOME/rdbms/admin/catcon.pl -b
+      remove_<span>apx242</span>_usr remove_<span>apx242</span>_usr.sql</code></pre></div>
+                     </li>
+                     <li class="stepexpand"><span>Start <span>SQLcl</span> and connect to the database where <span>APEX</span> is installed as <code class="codeph">SYS</code> specifying the <code class="codeph">SYSDBA</code> role:</span><ul id="GUID-D56D5C6D-EFAC-4628-A433-3EB84292E99B__CHOICES_DH4_RCH_XWB">
+                           <li>
+                              <p>On Windows:</p><pre class="pre codeblock"><code><span class="italic">SYSTEM_DRIVE:\</span> sql /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span></code></pre></li>
+                           <li>
+                              <p>On UNIX and Linux:</p><pre class="pre codeblock"><code>$ sql /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span></code></pre></li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Execute the following command:</span><div><pre class="pre codeblock"><code>@remove_<span>apx242</span>_usr.sql</code></pre><p>Once you have removed the <span>APEX</span> <span>24.2</span> schema, you can now attempt the upgrade again.
+                           </p>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="removing-the-apex-release-schema.html#GUID-E7A956E1-00F8-44F5-B92F-6628514D2DF0" title="After you revert to the prior release, remove the Oracle APEX schema.">Removing the APEX Release Schema</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

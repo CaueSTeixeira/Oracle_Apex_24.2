@@ -1,0 +1,421 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Quick SQL Models and Scripts">
+      <meta name="abstract" content="Save entered Quick SQL shorthand syntax as a model for future use, or save the generated SQL as a SQL script.">
+      <meta name="description" content="Save entered Quick SQL shorthand syntax as a model for future use, or save the generated SQL as a SQL script.">
+      <meta name="DC.subject" content="Quick SQL, saving as model, saving as script, Quick SQL model, saving, saving model, loading, editing, deleting, rename, saving under different name, viewing diagram, Quick SQL:, saving a script">
+      <meta name="keywords" content="Quick SQL, saving as model, saving as script, Quick SQL model, saving, saving model, loading, editing, deleting, rename, saving under different name, viewing diagram, Quick SQL:, saving a script">
+      <meta name="DC.Relation" scheme="URI" content="using-quick-sql.html#GUID-21EE36C2-F814-48C0-90EA-7D464E9014FD">
+      <meta name="DC.Relation" scheme="URI" content="managing-quick-sql-models-and-scripts.html#GUID-0C86A74F-70E1-442A-AE41-827A750213AC">
+      <meta name="DC.Relation" scheme="URI" content="managing-quick-sql-models-and-scripts.html#GUID-E5400079-E441-4451-AC63-BC44F4C421C8">
+      <meta name="DC.Relation" scheme="URI" content="managing-quick-sql-models-and-scripts.html#GUID-1A703B90-1588-468A-BF62-A37B68302591">
+      <meta name="DC.Relation" scheme="URI" content="managing-quick-sql-models-and-scripts.html#GUID-BEA38C4C-E324-4329-9052-5A806A4873D8">
+      <meta name="DC.Relation" scheme="URI" content="managing-quick-sql-models-and-scripts.html#GUID-0FEBE773-A51E-47C1-B75E-C907DC97B3CB">
+      <meta name="DC.Relation" scheme="URI" content="managing-quick-sql-models-and-scripts.html#GUID-6E4A8B72-D439-428A-9C99-A3C545D86220">
+      <meta name="DC.Relation" scheme="URI" content="managing-quick-sql-models-and-scripts.html#GUID-75CD79CE-C528-4CCD-A863-32032953D2ED">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Neil Fernandez">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Synders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="January2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-C2EA1899-6C18-4FC8-A410-E5CC63EE2390">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Save entered Quick SQL shorthand syntax as a model for future use, or save the generated SQL as a SQL script.">
+      <meta name="description" content="Save entered Quick SQL shorthand syntax as a model for future use, or save the generated SQL as a SQL script.">
+      <title>Managing Quick SQL Models and Scripts</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="SQL Workshop Guide">
+      <meta property="og:description" content="Save entered Quick SQL shorthand syntax as a model for future use, or save the generated SQL as a SQL script.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="SQL Workshop Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-sql-workshop-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-01-14T12:14:06-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2008, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12911-01">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="generating-quick-sql-with-sql-shorthand-syntax.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-an-app-from-generated-sql-script.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX SQL Workshop Guide">
+    <meta name="dcterms.isVersionOf" content="AEUTL">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","name":"Managing Quick SQL Models and Scripts","description":"Save entered Quick SQL shorthand syntax as a model for future use, or save the generated SQL as a SQL script.","datePublished":"2025-01-14 CST","dateModified":"2025-01-14 CST"} </script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="generating-quick-sql-with-sql-shorthand-syntax.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-an-app-from-generated-sql-script.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article>
+         <header>
+            <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Workshop Guide</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-sql-workshop-utilities.html" property="item" typeof="WebPage"><span property="name"> Using SQL Workshop Utilities</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-quick-sql.html" property="item" typeof="WebPage"><span property="name">Using Quick SQL</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">Managing Quick SQL Models and
+                Scripts</li>
+            </ol>
+            <a id="GUID-C2EA1899-6C18-4FC8-A410-E5CC63EE2390" name="GUID-C2EA1899-6C18-4FC8-A410-E5CC63EE2390"></a>
+            
+            <h2 id="AEUTL-GUID-C2EA1899-6C18-4FC8-A410-E5CC63EE2390" class="sect2"><span class="enumeration_section">5.4.7 </span>Managing Quick SQL Models and
+                Scripts
+            </h2>
+         </header>
+         <div class="ind">
+            <p>Save entered Quick SQL shorthand syntax as a model for future use, or save
+                the generated SQL as a SQL script.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="managing-quick-sql-models-and-scripts.html#GUID-0C86A74F-70E1-442A-AE41-827A750213AC">Saving a Quick SQL Model</a><br>Reuse Quick SQL shorthand syntax by saving a model.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-quick-sql-models-and-scripts.html#GUID-E5400079-E441-4451-AC63-BC44F4C421C8">Loading a Saved Quick SQL Model</a><br>Load saved Quick SQL models from the Load window. 
+                  </li>
+                  <li class="ulchildlink"><a href="managing-quick-sql-models-and-scripts.html#GUID-1A703B90-1588-468A-BF62-A37B68302591">Saving a Quick SQL Model Under a Different Name</a><br>Save a Quick SQL model under a different name.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-quick-sql-models-and-scripts.html#GUID-BEA38C4C-E324-4329-9052-5A806A4873D8">Deleting a Quick SQL Model</a><br>Delete an existing Quick SQL model with the Save Model dialog.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-quick-sql-models-and-scripts.html#GUID-0FEBE773-A51E-47C1-B75E-C907DC97B3CB">Viewing an Entity Relationship Diagram</a><br>View an entity relationship diagram of a data model's tables, columns,         datatypes, and relationships.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-quick-sql-models-and-scripts.html#GUID-6E4A8B72-D439-428A-9C99-A3C545D86220">Saving a Generated SQL Script</a><br>Save generated SQL as a script in SQL Scripts.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-quick-sql-models-and-scripts.html#GUID-75CD79CE-C528-4CCD-A863-32032953D2ED">Downloading SQL Scripts</a><br>Download a generated SQL script locally.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="using-quick-sql.html#GUID-21EE36C2-F814-48C0-90EA-7D464E9014FD" title="Rapidly design and prototype data models using a markdown-like shorthand syntax that expands to standards-based Oracle SQL.">Using Quick SQL</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-0C86A74F-70E1-442A-AE41-827A750213AC" name="GUID-0C86A74F-70E1-442A-AE41-827A750213AC"></a><h3 id="AEUTL-GUID-0C86A74F-70E1-442A-AE41-827A750213AC" class="sect3"><span class="enumeration_section">5.4.7.1 </span>Saving a Quick SQL Model
+               </h3>
+               <div>
+                  <p>Reuse Quick SQL shorthand syntax by saving a model.</p>
+                  <p>To save a Quick SQL model:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Quick SQL page, click the <span class="uicontrol bold">Quick SQL Actions</span> menu
+                    (three vertical dots) and select <span class="uicontrol bold">Save Model</span> for an
+                    unsaved model or <span class="uicontrol bold">Update Model</span> for a pre-existing
+                    model.</span><div>The Save Model dialog appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>In the Save Model dialog:</span><ol type="a" id="GUID-0C86A74F-70E1-442A-AE41-827A750213AC__SUBSTEPS_D4K_PMJ_NMB">
+                           <li><span>Model Name - Enter a name.</span></li>
+                           <li><span>Description - Enter a description for the model.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Save Model</span> or <span class="uicontrol bold">Update Model</span>.</span></li>
+                        </ol>
+                        <div>The <code class="codeph">Model saved</code> message
+                    appears.
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-quick-sql-models-and-scripts.html#GUID-C2EA1899-6C18-4FC8-A410-E5CC63EE2390" title="Save entered Quick SQL shorthand syntax as a model for future use, or save the generated SQL as a SQL script.">Managing Quick SQL Models and Scripts</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-E5400079-E441-4451-AC63-BC44F4C421C8" name="GUID-E5400079-E441-4451-AC63-BC44F4C421C8"></a><h3 id="AEUTL-GUID-E5400079-E441-4451-AC63-BC44F4C421C8" class="sect3"><span class="enumeration_section">5.4.7.2 </span>Loading a Saved Quick SQL Model
+               </h3>
+               <div>
+                  <p>Load saved Quick SQL models from the Load window. </p>
+                  <div class="section"> Developers can view and load their own saved models on the Load window under
+                <span class="uicontrol bold">My Models</span> or all workspace developer models under
+                <span class="uicontrol bold">Workspace Models</span>.
+                  </div>
+                  <!-- class="section" -->
+                  <p>To load a saved Quick SQL model:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Quick SQL page, click the <span class="uicontrol bold">Quick SQL Actions</span> menu
+                    (three vertical dots) and select <span class="uicontrol bold">Load </span>.</span><div>
+                           
+                           <p>The Load windows appears and displays three tabs:</p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-E5400079-E441-4451-AC63-BC44F4C421C8__UL_JPZ_SRR_RZB">
+                              <li>Samples</li>
+                              <li>My Models</li>
+                              <li>Workspace Models</li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>To load a saved model:</span><ol type="a" id="GUID-E5400079-E441-4451-AC63-BC44F4C421C8__SUBSTEPS_L3K_ZJM_NMB">
+                           <li><span>Under either <span class="uicontrol bold">My Models</span> or <span class="uicontrol bold">Workspace
+                                Models</span>, choose a model.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Load Model</span>.</span></li>
+                        </ol>
+                        <div>The selected model appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>To edit the model name or description, or delete a saved model:</span><ol type="a" id="GUID-E5400079-E441-4451-AC63-BC44F4C421C8__SUBSTEPS_J33_CKM_NMB">
+                           <li class="substepexpand"><span>View the Load window.</span><div>
+                                 
+                                 <p>On the Quick SQL page, click  the <span class="uicontrol bold">Quick SQL
+                                    Actions</span> menu (three vertical dots) and select the
+                                    <span class="uicontrol bold">Load</span> action.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Under either <span class="uicontrol bold">My Models</span> or <span class="uicontrol bold">Workspace
+                                Models</span>, choose a model.</span></li>
+                           <li class="substepexpand"><span>Click the model name.</span><div>The Edit Model dialog appears.</div>
+                           </li>
+                           <li class="substepexpand"><span>Edit the model name or description and click
+                                <span class="uicontrol bold">Save</span>.</span></li>
+                           <li class="substepexpand"><span>To delete the model, click <span class="uicontrol bold">Delete</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-quick-sql-models-and-scripts.html#GUID-C2EA1899-6C18-4FC8-A410-E5CC63EE2390" title="Save entered Quick SQL shorthand syntax as a model for future use, or save the generated SQL as a SQL script.">Managing Quick SQL Models and Scripts</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-1A703B90-1588-468A-BF62-A37B68302591" name="GUID-1A703B90-1588-468A-BF62-A37B68302591"></a><h3 id="AEUTL-GUID-1A703B90-1588-468A-BF62-A37B68302591" class="sect3"><span class="enumeration_section">5.4.7.3 </span>Saving a Quick SQL Model Under a Different
+        Name
+               </h3>
+               <div>
+                  <p>Save a Quick SQL model under a different name.</p>
+                  <p>To save a Quick SQL model under a different name:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Quick SQL page, click the <span class="uicontrol bold">Quick SQL Actions</span> menu
+                    (three vertical dots) and select <span class="uicontrol bold">Save Model As</span>.</span><div>The Save Model dialog appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>In the Save Model dialog:</span><ol type="a" id="GUID-1A703B90-1588-468A-BF62-A37B68302591__SUBSTEPS_D4K_PMJ_NMB">
+                           <li><span>Model Name - Enter a new model name.</span></li>
+                           <li><span>Description - (Optional) Enter a description for the model.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Save Model</span>.</span></li>
+                        </ol>
+                        <div>The <code class="codeph">Model saved</code> message
+                    appears.
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-quick-sql-models-and-scripts.html#GUID-C2EA1899-6C18-4FC8-A410-E5CC63EE2390" title="Save entered Quick SQL shorthand syntax as a model for future use, or save the generated SQL as a SQL script.">Managing Quick SQL Models and Scripts</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-BEA38C4C-E324-4329-9052-5A806A4873D8" name="GUID-BEA38C4C-E324-4329-9052-5A806A4873D8"></a><h3 id="AEUTL-GUID-BEA38C4C-E324-4329-9052-5A806A4873D8" class="sect3"><span class="enumeration_section">5.4.7.4 </span>Deleting a Quick SQL Model
+               </h3>
+               <div>
+                  <p>Delete an existing Quick SQL model with the Save Model dialog.</p>
+                  <p>To delete a model:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Quick SQL page, click the <span class="uicontrol bold">Quick SQL Actions</span> menu
+                    (three vertical dots) and click <span class="uicontrol bold">Update Model</span>.</span><div>The Save Model dialog appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Delete</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Delete</span> again in the confirmation dialog.</span><div>The model is deleted.</div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-quick-sql-models-and-scripts.html#GUID-C2EA1899-6C18-4FC8-A410-E5CC63EE2390" title="Save entered Quick SQL shorthand syntax as a model for future use, or save the generated SQL as a SQL script.">Managing Quick SQL Models and Scripts</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-0FEBE773-A51E-47C1-B75E-C907DC97B3CB" name="GUID-0FEBE773-A51E-47C1-B75E-C907DC97B3CB"></a><h3 id="AEUTL-GUID-0FEBE773-A51E-47C1-B75E-C907DC97B3CB" class="sect3"><span class="enumeration_section">5.4.7.5 </span>Viewing an Entity Relationship Diagram
+               </h3>
+               <div>
+                  <p>View an entity relationship diagram of a data model's tables, columns,
+        datatypes, and relationships.</p>
+                  <p>To view entity relationship diagram of a data model's tables,
+                columns, datatypes, and relationships:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Quick SQL page, load a Quick SQL model.</span></li>
+                     <li class="stepexpand"><span>On the right pane, click the <span class="uicontrol bold">Diagram</span> tab.</span><div>
+                           
+                           <p>The entity relationship diagram appears.</p>
+                           
+                           <div class="figure" id="GUID-0FEBE773-A51E-47C1-B75E-C907DC97B3CB__FIG_PGZ_WXR_RZB"><br><div class="imageleft"><img class="imageleft" id="GUID-0FEBE773-A51E-47C1-B75E-C907DC97B3CB__IMAGE_QGZ_WXR_RZB" height="580" width="1031" src="img/quick_sql_diagram.png" alt="Description of quick_sql_diagram.png follows" title="Description of quick_sql_diagram.png follows" longdesc="img_text/quick_sql_diagram.html"><br><a href="img_text/quick_sql_diagram.html">Description of the illustration quick_sql_diagram.png</a></div><br></div>
+                           <!-- class="figure" -->
+                           
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-quick-sql-models-and-scripts.html#GUID-C2EA1899-6C18-4FC8-A410-E5CC63EE2390" title="Save entered Quick SQL shorthand syntax as a model for future use, or save the generated SQL as a SQL script.">Managing Quick SQL Models and Scripts</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-6E4A8B72-D439-428A-9C99-A3C545D86220" name="GUID-6E4A8B72-D439-428A-9C99-A3C545D86220"></a><h3 id="AEUTL-GUID-6E4A8B72-D439-428A-9C99-A3C545D86220" class="sect3"><span class="enumeration_section">5.4.7.6 </span>Saving a Generated SQL Script
+               </h3>
+               <div>
+                  <p>Save generated SQL as a script in SQL Scripts.</p>
+                  <p>To save generated SQL as a script:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Quick SQL page, enter Quick SQL shorthand syntax in the left pane.</span><div>
+                           
+                           <p>The generated SQL displays in the right pane.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>In the right pane, click the <span class="uicontrol bold">SQL Actions</span> menu (three
+                    vertical dots) and select <span class="uicontrol bold">Save SQL Script </span>.</span></li>
+                     <li class="stepexpand"><span>In the Save Script dialog:</span><ol type="a" id="GUID-6E4A8B72-D439-428A-9C99-A3C545D86220__SUBSTEPS_D4K_PMJ_NMB">
+                           <li class="substepexpand"><span>Script Name - Enter a name.</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Save Script</span>.</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-6E4A8B72-D439-428A-9C99-A3C545D86220__UL_UCV_5MJ_NMB">
+                                    <li>
+                                       
+                                       <p>Script Name - Enter a name.</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Click <span class="uicontrol bold">Save Script</span>.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                        <div>The script is saved in SQL Scripts.</div>
+                     </li>
+                  </ol>
+                  <div class="section">
+                     
+                     
+                  </div>
+                  <!-- class="section" -->
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-6E4A8B72-D439-428A-9C99-A3C545D86220__GUID-193E7587-C928-43C0-B7FA-4DABDD90E56E">
+                     <p class="notep1">See Also:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-6E4A8B72-D439-428A-9C99-A3C545D86220__UL_HNZ_X1S_RZB">
+                        <li><a href="generating-quick-sql-with-sql-shorthand-syntax.html#GUID-A1308899-AA1D-42EA-8CAE-B128366538FE" title="Generate a SQL script for simple tables and views by entering SQL shorthand syntax in the the left Quick SQL pane.">Generating SQL with SQL Shorthand Syntax</a></li>
+                        <li><a href="using-sql-scripts.html#GUID-7288B4B4-E00C-4DC4-89EA-5FA52623A1EF" title="Use SQL scripts to create, edit, view, run, and delete script files.">Using SQL Scripts</a></li>
+                     </ul>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-quick-sql-models-and-scripts.html#GUID-C2EA1899-6C18-4FC8-A410-E5CC63EE2390" title="Save entered Quick SQL shorthand syntax as a model for future use, or save the generated SQL as a SQL script.">Managing Quick SQL Models and Scripts</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-75CD79CE-C528-4CCD-A863-32032953D2ED" name="GUID-75CD79CE-C528-4CCD-A863-32032953D2ED"></a><h3 id="AEUTL-GUID-75CD79CE-C528-4CCD-A863-32032953D2ED" class="sect3"><span class="enumeration_section">5.4.7.7 </span>Downloading SQL Scripts
+               </h3>
+               <div>
+                  <p>Download a generated SQL script locally.</p>
+                  <p>To download a generated SQL script:</p>
+                  <ol id="GUID-75CD79CE-C528-4CCD-A863-32032953D2ED__STEPS_WFK_WF3_TSB">
+                     <li class="stepexpand"><span>On the Quick SQL page, enter Quick SQL shorthand syntax in the left pane.</span><div>
+                           
+                           <p>The generated SQL displays in the right pane.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Scroll through generated SQL in right pane. </span><div>
+                           
+                           <p>At the bottom, the line starting with <code class="codeph">-- Generated by Quick
+                     SQL</code> is the SQL shorthand syntax. If you specified any settings they
+                  display after the line starting with <code class="codeph"># settings = </code>. Consider the
+                  following  example:
+                           </p>
+                           <pre class="pre codeblock"><code>-- Generated by Quick SQL undefined 12/7/2023, 12:20:47 PM
+
+/*
+departments /insert 4
+   name /nn
+   location
+   country
+   employees /insert 14
+      name /nn vc50
+      email /lower
+      cost center num
+      date hired
+      job vc255
+
+view emp_v departments employees
+
+--- Non-default options:
+# settings = {"apex":"Y","db":"19c"}
+
+*/</code></pre>
+                           </div>
+                     </li>
+                     <li class="stepexpand"><span>In the right pane, click the <span class="uicontrol bold">SQL Actions</span> menu (three
+               vertical dots) and select <span class="uicontrol bold">Download </span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-quick-sql-models-and-scripts.html#GUID-C2EA1899-6C18-4FC8-A410-E5CC63EE2390" title="Save entered Quick SQL shorthand syntax as a model for future use, or save the generated SQL as a SQL script.">Managing Quick SQL Models and Scripts</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

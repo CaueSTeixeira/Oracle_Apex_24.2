@@ -1,0 +1,222 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Custom Authentication">
+      <meta name="abstract" content="Creating a Custom Authentication scheme from scratch to have complete control over your authentication interface.">
+      <meta name="description" content="Creating a Custom Authentication scheme from scratch to have complete control over your authentication interface.">
+      <meta name="DC.subject" content="authentication schemes, Custom authentication, Custom authentication, about, setting up">
+      <meta name="keywords" content="authentication schemes, Custom authentication, Custom authentication, about, setting up">
+      <meta name="DC.Relation" scheme="URI" content="preconfigured-authentication-schemes.html#GUID-CD382D4A-AC00-4185-B37F-9A5BC9417A7B">
+      <meta name="DC.Relation" scheme="URI" content="custom-authentication.html#GUID-FD8526CE-0CFC-42CA-A1CF-0E656A889C6A">
+      <meta name="DC.Relation" scheme="URI" content="custom-authentication.html#GUID-21FB6C0E-1921-4E53-BE3C-195A5050CEDA">
+      <meta name="DC.Relation" scheme="URI" content="custom-authentication.html#GUID-84997769-B5A5-423F-9821-AFF2898C4C4D">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-27D42A6E-8BF5-44CB-BDB3-E7F544CDE267">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Creating a Custom Authentication scheme from scratch to have complete control over your authentication interface.">
+      <meta name="description" content="Creating a Custom Authentication scheme from scratch to have complete control over your authentication interface.">
+      <title>Custom Authentication</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Creating a Custom Authentication scheme from scratch to have complete control over your authentication interface.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="builder-extension-sign-in.html" title="Previous" type="text/html">
+      <link rel="next" href="database-accounts.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Custom Authentication","description":"Creating a Custom Authentication scheme from scratch to have complete control over your authentication interface.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="builder-extension-sign-in.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="database-accounts.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-27D42A6E-8BF5-44CB-BDB3-E7F544CDE267" name="GUID-27D42A6E-8BF5-44CB-BDB3-E7F544CDE267"></a><a id="HTMDB25778"></a>
+         
+         <h2 id="HTMDB-GUID-27D42A6E-8BF5-44CB-BDB3-E7F544CDE267" class="sect2"><span class="enumeration_section">21.4.2.2 </span>Custom Authentication
+         </h2>
+         <div class="ind">
+            <p>Creating a Custom Authentication scheme from scratch to have complete control over your authentication interface.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="custom-authentication.html#GUID-FD8526CE-0CFC-42CA-A1CF-0E656A889C6A">About Custom Authentication</a><br>Learn about Custom authentication.
+                  </li>
+                  <li class="ulchildlink"><a href="custom-authentication.html#GUID-21FB6C0E-1921-4E53-BE3C-195A5050CEDA">Setting Up Custom Authentication</a><br>Learn how to set up Custom authentication.
+                  </li>
+                  <li class="ulchildlink"><a href="custom-authentication.html#GUID-84997769-B5A5-423F-9821-AFF2898C4C4D">About Session Management Security</a><br>Learn about session management security.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="preconfigured-authentication-schemes.html#GUID-CD382D4A-AC00-4185-B37F-9A5BC9417A7B" title="Learn about the preconfigured authentication schemes.">Understanding Preconfigured Authentication Schemes</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB29416"></a><div class="props_rev_3"><a id="GUID-FD8526CE-0CFC-42CA-A1CF-0E656A889C6A" name="GUID-FD8526CE-0CFC-42CA-A1CF-0E656A889C6A"></a><h3 id="HTMDB-GUID-FD8526CE-0CFC-42CA-A1CF-0E656A889C6A" class="sect3"><span class="enumeration_section">21.4.2.2.1 </span>About Custom Authentication
+               </h3>
+               <div>
+                  <p>Learn about Custom authentication.</p>
+                  <p>Custom authentication is the best approach for applications when any of the
+            following is true: </p>
+                  <ul style="list-style-type: disc;">
+                     <li>Database authentication or other methods are not adequate. </li>
+                     <li>You want to develop your own login form and associated methods. </li>
+                     <li>You want to control security aspects of session management. </li>
+                     <li>You want to record or audit activity at the user or session level. </li>
+                     <li>You want to enforce session activity or expiry limits. </li>
+                     <li>You want to program conditional one-way redirection logic before <span>Oracle APEX</span> page processing. 
+                     </li>
+                     <li>You want to integrate your application with non-<span>APEX</span> applications using a common session management framework. 
+                     </li>
+                     <li>Your application consists of multiple applications that operate seamlessly (for example, more than one application ID). </li>
+                  </ul>
+                  <div class="infobox-tip" id="GUID-FD8526CE-0CFC-42CA-A1CF-0E656A889C6A__GUID-DF1FF601-1722-45BB-8CE0-1BFD9016CD43">
+                     <p class="notep1">Tip:</p>
+                     <p>If you are planning on using the same authentication scheme for multiple applications, consider writing a custom authentication plug-in. See <a href="implementing-plug-ins.html#GUID-B158814B-C3FC-4030-AF25-D14208DB1E27" title="Create plug-ins to declaratively extend, share, and reuse the built-in types available in APEX.">Implementing Plug-ins</a>. 
+                     </p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="custom-authentication.html#GUID-27D42A6E-8BF5-44CB-BDB3-E7F544CDE267" title="Creating a Custom Authentication scheme from scratch to have complete control over your authentication interface.">Custom Authentication</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB28966"></a><div class="props_rev_3"><a id="GUID-21FB6C0E-1921-4E53-BE3C-195A5050CEDA" name="GUID-21FB6C0E-1921-4E53-BE3C-195A5050CEDA"></a><h3 id="HTMDB-GUID-21FB6C0E-1921-4E53-BE3C-195A5050CEDA" class="sect3"><span class="enumeration_section">21.4.2.2.2 </span>Setting Up Custom Authentication
+               </h3>
+               <div>
+                  <p>Learn how to set up Custom authentication.</p>
+                  <p>To create a custom authentication scheme:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Select an application. </span></li>
+                     <li class="stepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                           <p>The Shared Components page appears. </p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under Security, select <span class="uicontrol bold">Authentication Schemes</span>.</span></li>
+                     <li class="stepexpand"><span>On the Authentication Schemes page, click <span class="uicontrol bold">Create</span>.</span></li>
+                     <li class="stepexpand"><span>Select <span class="uicontrol bold">Based on a pre-configured scheme from the gallery</span> and click <span class="uicontrol bold">Next</span>.</span></li>
+                     <li class="stepexpand"><span>Under Name: </span><ol type="a">
+                           <li><span>Name - Enter the name used to reference the authentication scheme by other application developers.</span></li>
+                           <li><span>Scheme Type - Select <span class="uicontrol bold">Custom</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Fill in the appropriate fields. </span><div>
+                           <p>To learn more about a specific field, see field-level Help.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="bold">Create Authentication Scheme</span>.</span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-21FB6C0E-1921-4E53-BE3C-195A5050CEDA__GUID-183940AB-D732-494A-B409-192C8C7FA55C">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="using-oracle-apex-documentation.html#GUID-86D5F514-0613-4A96-9400-B320B03699C9" title="Learn about field-level Help and Help in Page Designer.">Viewing Field-Level and Page Designer Help</a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="custom-authentication.html#GUID-27D42A6E-8BF5-44CB-BDB3-E7F544CDE267" title="Creating a Custom Authentication scheme from scratch to have complete control over your authentication interface.">Custom Authentication</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25779"></a><div class="props_rev_3"><a id="GUID-84997769-B5A5-423F-9821-AFF2898C4C4D" name="GUID-84997769-B5A5-423F-9821-AFF2898C4C4D"></a><h3 id="HTMDB-GUID-84997769-B5A5-423F-9821-AFF2898C4C4D" class="sect3"><span class="enumeration_section">21.4.2.2.3 </span>About Session Management Security
+               </h3>
+               <div>
+                  <p>Learn about session management security.</p>
+                  <p>When running custom authentication, <span>APEX</span> attempts to prevent two improper situations: 
+                  </p>
+                  <ul style="list-style-type: disc;">
+                     <li>Intentional attempts by a user to access session state belonging to someone else. However, users can still type in an arbitrary application session ID into the URL. </li>
+                     <li>Inadvertent access to a stale session state (probably belonging to the same user from an earlier time). This would commonly result from using bookmarks to application pages. </li>
+                  </ul>
+                  <p><span>APEX</span> checks that the user identity token set by the custom authentication function matches the user identity recorded when the application session was first created. If the user has not yet been authenticated and the user identity is not yet known, the session state being accessed does not belong to someone else. These checks determine whether the session ID in the request can be used. If not, the <span>APEX</span> engine redirects back the same page using an appropriate session ID. 
+                  </p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="custom-authentication.html#GUID-27D42A6E-8BF5-44CB-BDB3-E7F544CDE267" title="Creating a Custom Authentication scheme from scratch to have complete control over your authentication interface.">Custom Authentication</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

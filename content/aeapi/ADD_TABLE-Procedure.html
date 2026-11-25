@@ -1,0 +1,227 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="ADD_TABLE Procedure">
+      <meta name="DC.subject" content="ADD_TABLE procedure, APEX_DG_DATA_GEN">
+      <meta name="keywords" content="ADD_TABLE procedure, APEX_DG_DATA_GEN">
+      <meta name="DC.Relation" scheme="URI" content="APEX_DG_DATA_GEN.html#GUID-5DB25668-0D85-45FD-A062-281D2852CFA1">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-B8D6DD0D-2C4B-4D5A-8376-9BF1B8878EF7">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>ADD_TABLE Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="ADD_DATA_SOURCE-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="EXPORT_BLUEPRINT-Function.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"ADD_TABLE Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="ADD_DATA_SOURCE-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="EXPORT_BLUEPRINT-Function.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-B8D6DD0D-2C4B-4D5A-8376-9BF1B8878EF7" name="GUID-B8D6DD0D-2C4B-4D5A-8376-9BF1B8878EF7"></a>
+         
+         <h2 id="AEAPI-GUID-B8D6DD0D-2C4B-4D5A-8376-9BF1B8878EF7" class="sect2"><span class="enumeration_section">24.6 </span>ADD_TABLE Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This procedure adds a destination table for the generated data.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B8D6DD0D-2C4B-4D5A-8376-9BF1B8878EF7__GUID-4BACA0A5-CA13-4765-914C-C9A5F5275A82">Syntax</p>
+                  <pre class="pre codeblock"><code>APEX_DG_DATA_GEN.ADD_TABLE (
+    p_blueprint             IN VARCHAR2,
+    p_sequence              IN PLS_INTEGER,
+    p_table_name            IN VARCHAR2,
+    p_preserve_case         IN VARCHAR2             DEFAULT 'N',
+    p_display_name          IN VARCHAR2             DEFAULT NULL,
+    p_singular_name         IN VARCHAR2             DEFAULT NULL,
+    p_plural_name           IN VARCHAR2             DEFAULT NULL,
+    p_rows                  IN NUMBER               DEFAULT 0,
+    p_max_rows              IN NUMBER               DEFAULT NULL,
+    p_use_existing_table    IN VARCHAR2             DEFAULT 'N',
+    p_exclude_columns       IN wwv_flow_t_varchar2  DEFAULT c_empty_t_varchar2,
+    p_table_id              OUT NUMBER )</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B8D6DD0D-2C4B-4D5A-8376-9BF1B8878EF7__GUID-2118C338-643E-4828-B981-F63B51FF8CA0">Parameters</p>
+                  <div class="tblformal" id="GUID-B8D6DD0D-2C4B-4D5A-8376-9BF1B8878EF7__GUID-AFEF5317-38DA-4552-89F3-FCB6A18A7292">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="42%" id="d89437e70">Parameter</th>
+                              <th align="left" valign="bottom" width="58%" id="d89437e72">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d89437e76" headers="d89437e70 "><code class="codeph">p_blueprint</code></td>
+                              <td align="left" valign="top" width="58%" headers="d89437e76 d89437e72 ">Identifier for the blueprint.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d89437e82" headers="d89437e70 "><code class="codeph">p_sequence</code></td>
+                              <td align="left" valign="top" width="58%" headers="d89437e82 d89437e72 ">1 for first table, 2 for second, and so forth.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d89437e88" headers="d89437e70 "><code class="codeph">p_table_name</code></td>
+                              <td align="left" valign="top" width="58%" headers="d89437e88 d89437e72 ">Name of table that can exist or not exist.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d89437e94" headers="d89437e70 "><code class="codeph">p_preserve_case</code></td>
+                              <td align="left" valign="top" width="58%" headers="d89437e94 d89437e72 ">Defaults to <code class="codeph">N</code>,  which forces table name to uppercase. If <code class="codeph">Y</code>, perserves casing of parameter.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d89437e106" headers="d89437e70 "><code class="codeph">p_display_name</code></td>
+                              <td align="left" valign="top" width="58%" headers="d89437e106 d89437e72 ">Friendly display name.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d89437e112" headers="d89437e70 "><code class="codeph">p_singular_name</code></td>
+                              <td align="left" valign="top" width="58%" headers="d89437e112 d89437e72 ">Singluar friendly name.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d89437e118" headers="d89437e70 "><code class="codeph">p_plural_name</code></td>
+                              <td align="left" valign="top" width="58%" headers="d89437e118 d89437e72 ">Plural friendly name.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d89437e124" headers="d89437e70 "><code class="codeph">p_rows</code></td>
+                              <td align="left" valign="top" width="58%" headers="d89437e124 d89437e72 ">Number of rows to generate for this table.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d89437e130" headers="d89437e70 "><code class="codeph">p_max_rows</code></td>
+                              <td align="left" valign="top" width="58%" headers="d89437e130 d89437e72 ">If <code class="codeph">null</code>, then <code class="codeph">p_rows</code> determines the number of rows, otherwise random rows between <code class="codeph">p_rows</code> and <code class="codeph">p_max_rows</code> are used when generating output.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d89437e148" headers="d89437e70 "><code class="codeph">p_use_existing_table</code></td>
+                              <td align="left" valign="top" width="58%" headers="d89437e148 d89437e72 ">
+                                 <p>If <code class="codeph">Y</code>, uses the data dictionary to auto generate columns.
+                                 </p>
+                                 <p>The automatic blueprint column creation supports the following data source mapping rules:</p>
+                                 <ul style="list-style-type: disc;" id="GUID-B8D6DD0D-2C4B-4D5A-8376-9BF1B8878EF7__UL_BCK_2NZ_BTB">
+                                    <li>Foreign key data generation (populates the column with keys from the master table).</li>
+                                    <li>Inline data generation based on CHECK constraints (simple <code class="codeph">IN</code> constructs are supported).
+                                    </li>
+                                    <li>Mapping based on existing built-in tables (based on the table and column name).</li>
+                                    <li>Mapping based on the column name, data type, and length.</li>
+                                    <li>If the column is nullable, 5% of the values will be <code class="codeph">NULL</code>.
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d89437e177" headers="d89437e70 "><code class="codeph">p_exclude_columns</code></td>
+                              <td align="left" valign="top" width="58%" headers="d89437e177 d89437e72 ">String array (<code class="codeph">apex_t_varchar2</code>) of column names to exclude from the automatic column generation.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d89437e187" headers="d89437e70 "><code class="codeph">p_table_id</code></td>
+                              <td align="left" valign="top" width="58%" headers="d89437e187 d89437e72 ">ID of the added table (<code class="codeph">OUT</code>).
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B8D6DD0D-2C4B-4D5A-8376-9BF1B8878EF7__GUID-BD217647-FAFB-4D84-A2E1-4DCBBD38D3C9">Example</p>
+                  <pre class="pre codeblock"><code>DECLARE
+   l_table_id number;
+BEGIN
+   apex_dg_data_gen.add_table(
+                p_blueprint               =&gt; 'Cars',
+                p_sequence                =&gt; 1,
+                p_table_name              =&gt; 'my_cars',
+                p_rows                    =&gt; '50',
+                p_table_id                =&gt; l_table_id);
+
+   apex_dg_data_gen.add_table(
+                p_blueprint               =&gt; 'Cars',
+                p_sequence                =&gt; 1,
+                p_table_name              =&gt; 'my_cars',
+                p_rows                    =&gt; '50',
+                p_use_existing_table      =&gt; 'Y',
+                p_table_id                =&gt; l_table_id
+   );
+
+   apex_dg_data_gen.add_table(
+                p_blueprint               =&gt; 'Cars',
+                p_sequence                =&gt; 1,
+                p_table_name              =&gt; 'my_cars',
+                p_rows                    =&gt; '50',
+                p_use_existing_table      =&gt; 'Y',
+                p_exclude_columns         =&gt; apex_t_varchar2('CREATED_BY','CREATED_DATE'),
+                p_table_id                =&gt; l_table_id
+   );
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_DG_DATA_GEN.html#GUID-5DB25668-0D85-45FD-A062-281D2852CFA1">APEX_DG_DATA_GEN</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

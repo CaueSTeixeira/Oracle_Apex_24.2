@@ -1,0 +1,486 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Understanding the Installation Process">
+      <meta name="abstract" content="Installing Oracle APEX is a multiple step process. You follow the same instructions for new or upgrade installations.">
+      <meta name="description" content="Installing Oracle APEX is a multiple step process. You follow the same instructions for new or upgrade installations.">
+      <meta name="DC.subject" content="installation, understanding, planning, requirements, patch sets, point releases, overview, overview, process, Oracle APEX, configuring your environment, environment, configuring, Sign In dialog, requesting a workspace, workspace, requesting from Sign In dialog, password, resetting from Sign In page, recovering workspace name, workspace name, recovering, login credentials, recovering workspace name">
+      <meta name="keywords" content="installation, understanding, planning, requirements, patch sets, point releases, overview, overview, process, Oracle APEX, configuring your environment, environment, configuring, Sign In dialog, requesting a workspace, workspace, requesting from Sign In dialog, password, resetting from Sign In page, recovering workspace name, workspace name, recovering, login credentials, recovering workspace name">
+      <meta name="DC.Relation" scheme="URI" content="apex-installation-overview.html#GUID-DB8E4B2B-1AEB-4B76-BBA3-31C5876C3F14">
+      <meta name="DC.Relation" scheme="URI" content="understanding-installation-process.html#GUID-07DF83AA-E2CD-44ED-927B-38B6FCB16F1A">
+      <meta name="DC.Relation" scheme="URI" content="understanding-installation-process.html#GUID-F494B8A9-316C-4AE4-BC6B-A30BDD9B6773">
+      <meta name="DC.Relation" scheme="URI" content="understanding-installation-process.html#GUID-CB7E08C8-2757-4F88-876B-19C23C582326">
+      <meta name="DC.Relation" scheme="URI" content="understanding-installation-process.html#GUID-43D822B2-4B84-4411-9315-FB613DC4E9CB">
+      <meta name="DC.Relation" scheme="URI" content="understanding-installation-process.html#GUID-BEEC262D-50FE-432F-AAB5-E95A3E508842">
+      <meta name="DC.Relation" scheme="URI" content="understanding-installation-process.html#GUID-027C0587-1CC1-48F2-BE59-F6D46E86560F">
+      <meta name="DC.Relation" scheme="URI" content="understanding-installation-process.html#GUID-853B2DF0-ED46-46C4-8833-1021F05C57AC">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="David Bliss">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Salim Hlayel">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vlad Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-EA165C61-C987-47F6-91D9-C44353207E1B">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Installing Oracle APEX is a multiple step process. You follow the same instructions for new or upgrade installations.">
+      <meta name="description" content="Installing Oracle APEX is a multiple step process. You follow the same instructions for new or upgrade installations.">
+      <title>Understanding the Installation Process</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Installation Guide ">
+      <meta property="og:description" content="Installing Oracle APEX is a multiple step process. You follow the same instructions for new or upgrade installations.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Installation Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-installation-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:41:45-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12910-03">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="accessing-apex-in-oracle-cloud.html" title="Previous" type="text/html">
+      <link rel="next" href="about-apex-runtime-environment.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Installation Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="HTMIG">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Understanding the Installation Process","description":"Installing Oracle APEX is a multiple step process. You follow the same instructions for new or upgrade installations.","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="accessing-apex-in-oracle-cloud.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="about-apex-runtime-environment.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-EA165C61-C987-47F6-91D9-C44353207E1B" name="GUID-EA165C61-C987-47F6-91D9-C44353207E1B"></a><a id="HTMIG29308"></a>
+         
+         <h2 id="HTMIG-GUID-EA165C61-C987-47F6-91D9-C44353207E1B" class="sect2"><span class="enumeration_section">3.3 </span>Understanding the Installation Process
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Installing <span>Oracle APEX</span> is a multiple step process. You follow the same instructions for new or upgrade installations.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="understanding-installation-process.html#GUID-07DF83AA-E2CD-44ED-927B-38B6FCB16F1A">About Planning Your Installation</a><br>Learn about the steps needed to install <span>Oracle APEX</span>.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-installation-process.html#GUID-F494B8A9-316C-4AE4-BC6B-A30BDD9B6773">About Patch Sets</a><br>Patch sets provide bug fixes only. <span>Oracle</span> may release one or several patch set bundles in between major product releases.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-installation-process.html#GUID-CB7E08C8-2757-4F88-876B-19C23C582326">About the Installation Scripts</a><br>You can install <span>Oracle APEX</span> or update from previous release using the same installation procedure and the                 installation scripts. 
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-installation-process.html#GUID-43D822B2-4B84-4411-9315-FB613DC4E9CB">About Accessing APEX</a><br>You access the <span>Oracle APEX</span> development environment, by signing in to a shared work area called a workspace.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-installation-process.html#GUID-BEEC262D-50FE-432F-AAB5-E95A3E508842">Requesting a Workspace from the Sign In Dialog</a><br>Request a workspace from the Sign In dialog.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-installation-process.html#GUID-027C0587-1CC1-48F2-BE59-F6D46E86560F">Resetting Your Password from the Sign In Page</a><br>Reset your password by clicking a link on <span>Oracle APEX</span> Sign In page.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-installation-process.html#GUID-853B2DF0-ED46-46C4-8833-1021F05C57AC">Recovering Your Workspace Name</a><br>Recover your workspace name from the <span>Oracle APEX</span> Sign In page.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-EA165C61-C987-47F6-91D9-C44353207E1B__GUID-67E61819-150A-414B-8798-4011D86E6225">
+                  <p class="notep1">See Also:</p>
+                  
+                  <p><a href="upgrading-from-previous-apex-release.html#GUID-802A767F-2528-4B98-AC4F-B683DF4E572B" title="Upgrading Oracle APEX creates new database objects in a new schema and migrates the application metadata to the new release.">Upgrading from a Previous APEX Release</a></p>
+                  
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="apex-installation-overview.html#GUID-DB8E4B2B-1AEB-4B76-BBA3-31C5876C3F14" title="Oracle APEX Installation Guide describes how to install Oracle APEX in a self-managed (local) database.">APEX Installation Overview</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMIG364"></a><div class="props_rev_3"><a id="GUID-07DF83AA-E2CD-44ED-927B-38B6FCB16F1A" name="GUID-07DF83AA-E2CD-44ED-927B-38B6FCB16F1A"></a><h3 id="HTMIG-GUID-07DF83AA-E2CD-44ED-927B-38B6FCB16F1A" class="sect3"><span class="enumeration_section">3.3.1 </span>About Planning Your Installation 
+               </h3>
+               <div>
+                  <p>Learn about the steps needed to install <span>Oracle APEX</span>.
+                  </p>
+                  <p>Oracle recommends you take the time to carefully plan your installation.</p>
+                  <p>Installing <span>Oracle APEX</span> involves the following steps:
+                  </p>
+                  <ol>
+                     <li>
+                        <p><span class="bold"> Decide on a Full or Runtime Environment</span> - Determine whether to install a full
+                    development environment or runtime environment. A <span class="bold">full development</span>
+                    environment provides complete access to the <span>App Builder</span>  development environment to develop applications. A <span class="bold">runtime
+                        environment</span> is the appropriate choice for production implementations in
+                    which you want to run applications that cannot be modified. 
+                        </p>
+                        
+                        <p>See <a href="about-apex-runtime-environment.html#GUID-BEB2F250-40B7-4022-9B05-3B1199386020" title="Learn about the Oracle APEX runtime environment.">About the APEX Runtime Environment</a>.
+                        </p>
+                     </li>
+                     <li>
+                        
+                        <p><span class="bold">Verify installation requirements</span>- Before installing, verify
+                    your system meets the minimum requirements. 
+                        </p>
+                        
+                        <p>See <a href="apex-installation-requirements.html#GUID-02BE4A34-B631-412C-8A82-EB92DABBACE0" title="Before installing Oracle APEX in a local self-managed installation you must verify your configuration meets the minimum installation requirements.">Oracle APEX Installation Requirements</a>.
+                        </p>
+                        
+                     </li>
+                     <li>
+                        <p><span class="bold">Install the software</span> - Install or upgrade <span>Oracle APEX</span> by downloading a ZIP file from the <span>Oracle APEX</span> download page and then downloading and installing Oracle REST Data Services
+                    (ORDS) as described in <a href="installing-and-configuring-apex-and-ords.html#GUID-8EE981AD-B1F9-46C2-BB5A-C9FE60CCD4AA" title="Install or upgrade Oracle APEX by downloading a ZIP file from the APEX download page and then downloading and installing Oracle REST Data Services (ORDS). These instructions apply to both new and upgrade installations.">Installing and Configuring APEX and Oracle REST Data Services</a>.
+                        </p>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-07DF83AA-E2CD-44ED-927B-38B6FCB16F1A__GUID-C012ED8E-22B2-4800-8395-6245E8E4F237">
+                     <p class="notep1">See Also:</p>
+                     
+                     <p><a href="upgrading-from-previous-apex-release.html#GUID-802A767F-2528-4B98-AC4F-B683DF4E572B" title="Upgrading Oracle APEX creates new database objects in a new schema and migrates the application metadata to the new release.">Upgrading from a Previous APEX Release</a></p>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-installation-process.html#GUID-EA165C61-C987-47F6-91D9-C44353207E1B" title="Installing Oracle APEX is a multiple step process. You follow the same instructions for new or upgrade installations.">Understanding the Installation Process</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMIG29309"></a><div class="props_rev_3"><a id="GUID-F494B8A9-316C-4AE4-BC6B-A30BDD9B6773" name="GUID-F494B8A9-316C-4AE4-BC6B-A30BDD9B6773"></a><h3 id="HTMIG-GUID-F494B8A9-316C-4AE4-BC6B-A30BDD9B6773" class="sect3"><span class="enumeration_section">3.3.2 </span>About Patch Sets
+               </h3>
+               <div>
+                  <p>Patch sets provide bug fixes only. <span>Oracle</span> may release one or several patch set bundles in between major product releases.
+                  </p>
+                  <p>Patch sets are a mechanism for delivering fully tested and integrated product fixes. Patch sets provide bug fixes only. Patch sets typically do not include new functionality and they do not require certification on the target system. Patch sets include all of the libraries that have been rebuilt to implement the bug fixes in the set. All of the fixes in the patch set have been tested and are certified to work with each other. </p>
+                  <p>In between major product releases, <span>Oracle</span> may release one or several patch set bundles. Visit <a href="https://apex.oracle.com/download" target="_blank">Oracle APEX Downloads</a> to learn about the contents of each patch set.
+                  </p>
+                  <p>In fully managed Cloud databases, such as an <span>Autonomous Database</span> or <span>Oracle APEX Application
+                                        Development</span> (<span>APEX Service</span>), <span>Oracle</span> automatically applies patch set bundles. For all other environments, customers can download patch set bundles from <a href="https://support.oracle.com/" target="_blank">My Oracle Support</a>.
+                  </p>
+                  <p>To review the history of APEX patch sets installed in your database, query the APEX_PATCHES dictionary view:</p><pre class="pre codeblock"><code>select patch_number, patch_version, installed_on
+  from APEX_PATCHES
+ order by installed_on;</code></pre></div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-F494B8A9-316C-4AE4-BC6B-A30BDD9B6773__GUID-AD2ACE17-F449-47F1-907D-1EE1B4590677">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-F494B8A9-316C-4AE4-BC6B-A30BDD9B6773__UL_B1D_C3M_BCC">
+                        <li><a href="upgrading-from-previous-apex-release.html#GUID-802A767F-2528-4B98-AC4F-B683DF4E572B" title="Upgrading Oracle APEX creates new database objects in a new schema and migrates the application metadata to the new release.">Upgrading from a Previous APEX Release</a></li>
+                        <li><a href="https://apex.oracle.com/download" target="_blank">Oracle APEX Downloads</a></li>
+                        <li><a href="https://support.oracle.com/" target="_blank">My Oracle Support</a></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-installation-process.html#GUID-EA165C61-C987-47F6-91D9-C44353207E1B" title="Installing Oracle APEX is a multiple step process. You follow the same instructions for new or upgrade installations.">Understanding the Installation Process</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMIG29312"></a><div class="props_rev_3"><a id="GUID-CB7E08C8-2757-4F88-876B-19C23C582326" name="GUID-CB7E08C8-2757-4F88-876B-19C23C582326"></a><h3 id="HTMIG-GUID-CB7E08C8-2757-4F88-876B-19C23C582326" class="sect3"><span class="enumeration_section">3.3.3 </span>About the Installation Scripts
+               </h3>
+               <div>
+                  <p>You can install <span>Oracle APEX</span> or update from previous release using the same installation procedure and the
+                installation scripts. 
+                  </p>
+                  <p>The installation script checks for the latest existing <span>Oracle APEX</span> schema and automatically copies the instance metadata, workspaces, and
+                        applications from the previous schema into the current schema. The original
+                        schema associated with the previous release is left completely unaltered.
+                        Following best practices, Oracle recommends that you create new tablespaces
+                        for a new release of <span>Oracle APEX</span> and follow the appropriate installation instructions as outlined in this
+                        document.
+                  </p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-installation-process.html#GUID-EA165C61-C987-47F6-91D9-C44353207E1B" title="Installing Oracle APEX is a multiple step process. You follow the same instructions for new or upgrade installations.">Understanding the Installation Process</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-43D822B2-4B84-4411-9315-FB613DC4E9CB" name="GUID-43D822B2-4B84-4411-9315-FB613DC4E9CB"></a><h3 id="HTMIG-GUID-43D822B2-4B84-4411-9315-FB613DC4E9CB" class="sect3"><span class="enumeration_section">3.3.4 </span>About Accessing <span>APEX</span></h3>
+               <div>
+                  <p>You access the <span>Oracle APEX</span> development environment, by signing in to a shared work area called a workspace.
+                  </p>
+                  <div class="section">
+                     <p>How you sign in and access <span>APEX</span> depends upon your user role.
+                     </p>
+                     <p>A workspace enables multiple users to work within the same <span>APEX</span> installation while keeping their objects, data, and applications private. Each workspace has a unique ID and name. An instance administrator can create a workspace manually within <span>APEX</span> Administration Services or have users submit requests. <span>APEX</span> Administration Services is a separate application for managing an entire <span>APEX</span> instance.
+                     </p>
+                     <p>Users are divided into four primary roles: </p>
+                     <ul style="list-style-type: disc;">
+                        <li><strong class="term">Instance administrators</strong> are <span class="italic">superusers</span> that manage an entire hosted instance using a separate application called <span>APEX</span> Administration Services. Instance administrators manage workspace provisioning, configure features and instance settings, and manage security.
+                        </li>
+                        <li><strong class="term">Workspace administrators</strong> can perform administrator tasks specific to a workspace such as configuring workspace preferences, managing user accounts, monitoring workspace activity, and viewing log files. 
+                        </li>
+                        <li><strong class="term">Developers</strong> are users who sign in to a workspace and create and edit applications.
+                        </li>
+                        <li><strong class="term">End users</strong> can only run existing applications.
+                        </li>
+                     </ul>
+                     <p>If you are a developer, an administrator must grant you access to shared work area called a workspace. If you are an Instance administrator, you must sign in to <span>APEX</span> Administration Services, determine whether to specify a provisioning mode, create a workspace, and then sign in to that workspace.
+                     </p>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-43D822B2-4B84-4411-9315-FB613DC4E9CB__GUID-0EA55BB3-477F-441B-B51E-053F052E7A7D">About Specifying a Provisioning Mode</p>
+                     <p>The Instance administrator determines how the process of provisioning (or creating) a workspace works for a specific <span>APEX</span> instance. To determine how provisioning works, an Instance Administrator selects a Provisioning Methods on the Instance Settings page:
+                     </p>
+                     <ul style="list-style-type: disc;">
+                        <li><strong class="term">Manual</strong> - An Instance administrator creates new workspaces and notifies the Workspace administrator regarding the Sign In credentials.
+                        </li>
+                        <li><strong class="term">Request</strong> - Users request a workspace. Once an administrator approves the request, the user receives an email containing an email verification link. After the user clicks the email verification link, the workspace is created.
+                        </li>
+                        <li><strong class="term">Automatic</strong> - Works similar to Request except requests are automatically approved with no administrator review required
+                        </li>
+                     </ul>
+                     
+                     <div class="infoboxnotealso" id="GUID-43D822B2-4B84-4411-9315-FB613DC4E9CB__NOTE_JLW_F1Q_B3B">
+                        <p class="notep1">See Also:</p>
+                        
+                        <p><a href="../aeadm/creating-workspaces.html#AEADM-GUID-CDB898E3-6348-4273-9264-9FB8D65E1584" target="_blank">About Specifying How Workspaces Are Created</a> and <a href="../aeadm/creating-workspaces.html#AEADM-GUID-529BB1CB-E6A6-46B2-BCCB-E28062DE1039" target="_blank">Selecting a Workspace Provisioning Mode</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                        
+                     </div>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-43D822B2-4B84-4411-9315-FB613DC4E9CB__GUID-1D5C37DC-9683-47DC-9750-64B594109E95">About Creating Workspaces and Users</p>
+                     <p>Before you can develop or install applications, an administrator must create a workspace and add <span>APEX</span> users. To learn more contact your administrator, or see <a href="creating-workspace-and-adding-apex-users.html#GUID-EB1F45FA-29B3-4E9F-9493-13F16772742C" title="Before you can develop or install applications, you must create a workspace, add Oracle APEX users, and sign in to your workspace.">Creating a Workspace and Adding APEX Users</a>.
+                     </p>
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-43D822B2-4B84-4411-9315-FB613DC4E9CB__GUID-92F2E100-5E72-4141-B45C-13C4FD6520D4">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-43D822B2-4B84-4411-9315-FB613DC4E9CB__UL_VNS_ZXS_Y5B">
+                        <li><a href="../aeadm/creating-workspaces.html#AEADM-GUID-4C221D31-B584-40DB-A407-A4CABDECDAD8" target="_blank">Creating Workspaces in Administration Services</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                        <li><a href="../aeadm/making-a-service-request.html#AEADM-GUID-FFCFDDE8-5165-4E2F-A832-F2915487373E" target="_blank">Making a Service Request</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                        <li><a href="../aeadm/managing-workspace-and-change-requests.html#AEADM-GUID-622172B3-CDAA-48C2-9F0C-A9A23B9E938A" target="_blank">Managing Requests</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-installation-process.html#GUID-EA165C61-C987-47F6-91D9-C44353207E1B" title="Installing Oracle APEX is a multiple step process. You follow the same instructions for new or upgrade installations.">Understanding the Installation Process</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-BEEC262D-50FE-432F-AAB5-E95A3E508842" name="GUID-BEEC262D-50FE-432F-AAB5-E95A3E508842"></a><h3 id="HTMIG-GUID-BEEC262D-50FE-432F-AAB5-E95A3E508842" class="sect3"><span class="enumeration_section">3.3.5 </span>Requesting a Workspace from the Sign In
+        Dialog
+               </h3>
+               <div>
+                  <p>Request a workspace from the Sign In dialog.</p>
+                  <div class="section">
+                     
+                     <p>Your administrator determines how you request a new workspace. If your
+                administrator has set Provisioning Method to either <span class="uicontrol bold">Request</span>
+                or <span class="uicontrol bold">Automatic</span> and has configured email, you can request a
+                workspace on the Sign In dialog. 
+                     </p>
+                     
+                  </div>
+                  <p>To request a workspace from the Sign In dialog:</p>
+                  <ol id="GUID-BEEC262D-50FE-432F-AAB5-E95A3E508842__STEPS_WSD_1JK_XHB">
+                     <li class="stepexpand"><span>Navigate to the <span>Oracle APEX</span> Sign in dialog.</span></li>
+                     <li class="stepexpand"><span>Under Sign In, click <span class="uicontrol bold">Request a Workspace</span>.</span><div>The Request a Workspace Wizard appears. </div>
+                     </li>
+                     <li class="stepexpand"><span>For Identification:</span><ol type="a" id="GUID-BEEC262D-50FE-432F-AAB5-E95A3E508842__SUBSTEPS_W5G_VP3_XHB">
+                           <li><span>First Name - Enter your first name.</span></li>
+                           <li><span>Last Name - Enter your last name.</span></li>
+                           <li><span>Email - Enter the email address. A link to activate your workspace will
+                            be sent to this email address. </span></li>
+                           <li><span>Workspace - Enter a workspace name that name uniquely identifies your
+                            development environment.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>If defined, review and accept the service agreement and click
+                        <span class="uicontrol bold">Next</span>.</span></li>
+                     <li class="stepexpand"><span>Verify your request and click <span class="uicontrol bold">Submit Request</span>.</span><div>Once you complete the Identification form, the following
+                    events occur:
+                           <ol type="a" id="GUID-BEEC262D-50FE-432F-AAB5-E95A3E508842__OL_LW5_QV3_XHB">
+                              <li>
+                                 
+                                 <p>You will receive an email containing a verification
+                                link.</p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>When you click the verification link, the workspace is
+                                created.</p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>You will receive another email containing Sign In
+                                credentials (that is, the workspace name, username, and
+                                password).</p>
+                                 
+                              </li>
+                           </ol>
+                        </div>
+                     </li>
+                  </ol>
+                  <div class="section">
+                     
+                     <p>Once you complete the Identification form, the following events occur:</p>
+                     
+                     <ol id="GUID-BEEC262D-50FE-432F-AAB5-E95A3E508842__OL_RH1_HVK_XHB">
+                        <li>You will receive an email containing a verification link.</li>
+                        <li>When you click the verification link, the workspace is created.</li>
+                        <li>You will then receive another email containing Sign In credentials
+                    (that is, the workspace name, username, and password).</li>
+                     </ol>
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-BEEC262D-50FE-432F-AAB5-E95A3E508842__GUID-5E38D2D7-8F0E-4548-B347-92AD7EC7A264">
+                     <p class="notep1">See Also:</p>
+                     
+                     <p><a href="../aeadm/creating-workspaces.html#AEADM-GUID-CDB898E3-6348-4273-9264-9FB8D65E1584" target="_blank">About Specifying How Workspaces
+                        Are Created</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-installation-process.html#GUID-EA165C61-C987-47F6-91D9-C44353207E1B" title="Installing Oracle APEX is a multiple step process. You follow the same instructions for new or upgrade installations.">Understanding the Installation Process</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-027C0587-1CC1-48F2-BE59-F6D46E86560F" name="GUID-027C0587-1CC1-48F2-BE59-F6D46E86560F"></a><h3 id="HTMIG-GUID-027C0587-1CC1-48F2-BE59-F6D46E86560F" class="sect3"><span class="enumeration_section">3.3.6 </span>Resetting Your Password from the Sign In Page
+               </h3>
+               <div>
+                  <p>Reset your password by clicking a link on <span>Oracle APEX</span> Sign In page.
+                  </p>
+                  <div class="section">
+                     <div class="infobox-tip" id="GUID-027C0587-1CC1-48F2-BE59-F6D46E86560F__GUID-3B89B932-BBF6-4325-B683-011A0F5B9607">
+                        <p class="notep1">Tip:</p>
+                        <p>To reset your password from the Sign In page, you must provide your email address
+                    and the workspace name.</p>
+                     </div>
+                  </div>
+                  <p>To reset your password from the Sign In Page: </p>
+                  <ol>
+                     <li class="stepexpand"><span>In a web browser, navigate to the <span>Oracle APEX</span> Sign In page. </span><div>The Sign In page appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Under <span class="uicontrol bold">Sign In</span>, click <span class="uicontrol bold">Reset
+                        Password</span>.</span></li>
+                     <li class="stepexpand"><span>In the Reset Password form, enter your email address, workspace name, and click
+                        <span class="uicontrol bold">Reset Password</span>.</span><div>
+                           
+                           <p>You will receive an email confirming your workspace name and
+                        username and containing a <span class="uicontrol bold">Reset Password URL</span>
+                        link.
+                           </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>In the email, click the <span class="uicontrol bold">Reset Password URL</span> link.</span></li>
+                     <li class="stepexpand"><span> In the Change Password form:</span><ol type="a">
+                           <li class="substepexpand"><span>New Password - Enter your new password.</span><div>
+                                 
+                                 <div class="infobox-tip" id="GUID-027C0587-1CC1-48F2-BE59-F6D46E86560F__GUID-95FA9908-17A7-4AC1-819D-39620BFEEC7F">
+                                    <p class="notep1">Tip:</p>
+                                    
+                                    <p>Passwords are case sensitive.</p>
+                                    
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Confirm Password - Enter your new password again.</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+                  <div class="section">
+                     
+                     <div class="infobox-tip" id="GUID-027C0587-1CC1-48F2-BE59-F6D46E86560F__GUID-096C17D4-5E4A-4EC0-A142-FFB41B35F907">
+                        <p class="notep1">Tip:</p>
+                        
+                        <p>You can also reset your password within <span>Oracle APEX</span>. See <a href="../htmdb/editing-your-account-profile.html#HTMDB-GUID-18098DFC-08AF-4C61-8383-5ECA6954782A" target="_blank">Changing Your Profile or
+                        Password</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></p>
+                        
+                     </div>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-installation-process.html#GUID-EA165C61-C987-47F6-91D9-C44353207E1B" title="Installing Oracle APEX is a multiple step process. You follow the same instructions for new or upgrade installations.">Understanding the Installation Process</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-853B2DF0-ED46-46C4-8833-1021F05C57AC" name="GUID-853B2DF0-ED46-46C4-8833-1021F05C57AC"></a><h3 id="HTMIG-GUID-853B2DF0-ED46-46C4-8833-1021F05C57AC" class="sect3"><span class="enumeration_section">3.3.7 </span>Recovering Your Workspace Name
+               </h3>
+               <div>
+                  <p>Recover your workspace name from the <span>Oracle APEX</span> Sign In page.
+                  </p>
+                  <div class="section">
+                     <p>If you cannot remember your workspace name, you can request a list of all workspace names associated with your email address.</p>
+                     <p>To find your workspace name: </p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>In a web browser, navigate to the <span>Oracle APEX</span> Sign In page. </span></li>
+                     <li class="stepexpand"><span>On the Sign In page, click <span class="uicontrol bold">Reset Password</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Find My Workspace</span>.</span></li>
+                     <li class="stepexpand"><span>Enter your email address and click <span class="uicontrol bold">Find Workspace</span>.</span><div>
+                           <p>You will receive an email listing all workspaces associated with the email address you provided.</p>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-installation-process.html#GUID-EA165C61-C987-47F6-91D9-C44353207E1B" title="Installing Oracle APEX is a multiple step process. You follow the same instructions for new or upgrade installations.">Understanding the Installation Process</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

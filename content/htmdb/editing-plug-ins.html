@@ -1,0 +1,1164 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Editing Plug-ins">
+      <meta name="abstract" content="Edit a plug-in to specify additional custom attributes, upload files such as image, CSS and JavaScript files, or add events.">
+      <meta name="description" content="Edit a plug-in to specify additional custom attributes, upload files such as image, CSS and JavaScript files, or add events.">
+      <meta name="DC.subject" content="plug-ins, creating, editing, subscribing to, refresh subscription, unsubscribe from subscription, custom attributes, Attribute Types, attribute groups, adding events">
+      <meta name="keywords" content="plug-ins, creating, editing, subscribing to, refresh subscription, unsubscribe from subscription, custom attributes, Attribute Types, attribute groups, adding events">
+      <meta name="DC.Relation" scheme="URI" content="implementing-plug-ins.html#GUID-B158814B-C3FC-4030-AF25-D14208DB1E27">
+      <meta name="DC.Relation" scheme="URI" content="editing-plug-ins.html#GUID-52164B12-47C0-4713-B7D7-63433BA9EB60">
+      <meta name="DC.Relation" scheme="URI" content="editing-plug-ins.html#GUID-6DBC5626-BB16-4169-AD2A-872F08FC7673">
+      <meta name="DC.Relation" scheme="URI" content="editing-plug-ins.html#GUID-E7CEF4E6-175B-466C-9068-EDB99941F909">
+      <meta name="DC.Relation" scheme="URI" content="editing-plug-ins.html#GUID-10AD6316-ECE1-4138-ACDC-6FF6158B6973">
+      <meta name="DC.Relation" scheme="URI" content="editing-plug-ins.html#GUID-72DC54C0-442F-4877-845A-79A5AF51AE65">
+      <meta name="DC.Relation" scheme="URI" content="editing-plug-ins.html#GUID-2DA3665A-42DF-4880-8A3D-D06AD1F9CAF2">
+      <meta name="DC.Relation" scheme="URI" content="editing-plug-ins.html#GUID-8416E8D1-8CB8-474F-B4E9-02EB66CA2259">
+      <meta name="DC.Relation" scheme="URI" content="editing-plug-ins.html#GUID-E48C9A44-FFF3-4741-BA23-263CF22FE980">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-421D9548-777C-4BB7-9FB5-A8B585629B45">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Edit a plug-in to specify additional custom attributes, upload files such as image, CSS and JavaScript files, or add events.">
+      <meta name="description" content="Edit a plug-in to specify additional custom attributes, upload files such as image, CSS and JavaScript files, or add events.">
+      <title>Editing Plug-ins</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Edit a plug-in to specify additional custom attributes, upload files such as image, CSS and JavaScript files, or add events.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="creating-plug-ins.html" title="Previous" type="text/html">
+      <link rel="next" href="copying-or-subscribing-to-a-plug-in.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Editing Plug-ins","description":"Edit a plug-in to specify additional custom attributes, upload files such as image, CSS and JavaScript files, or add events.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="creating-plug-ins.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="copying-or-subscribing-to-a-plug-in.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-421D9548-777C-4BB7-9FB5-A8B585629B45" name="GUID-421D9548-777C-4BB7-9FB5-A8B585629B45"></a>
+         
+         <h2 id="HTMDB-GUID-421D9548-777C-4BB7-9FB5-A8B585629B45" class="sect2"><span class="enumeration_section">19.2.3 </span>Editing Plug-ins
+         </h2>
+         <div class="ind">
+            <p>Edit a plug-in to specify additional custom attributes, upload files such
+        as image, CSS and JavaScript files, or add events.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="editing-plug-ins.html#GUID-52164B12-47C0-4713-B7D7-63433BA9EB60">Editing a Plug-in</a><br>Edit a plug-in by navigating to Shared Components and selecting it on the Plug-ins         page.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-plug-ins.html#GUID-6DBC5626-BB16-4169-AD2A-872F08FC7673">Subscribing to a Plug-in</a><br>Subscribe to a plug-in on the Plug-ins, Edit page.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-plug-ins.html#GUID-E7CEF4E6-175B-466C-9068-EDB99941F909">Adding Custom Attributes to a Plug-in</a><br>Add Custom Attributes by editing the plug-in.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-plug-ins.html#GUID-10AD6316-ECE1-4138-ACDC-6FF6158B6973">Plug-in Attribute Types</a><br>Review the attribute types supported for item plug-ins.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-plug-ins.html#GUID-72DC54C0-442F-4877-845A-79A5AF51AE65">Creating a File to Associate with a Plug-in</a><br>Create a file to associate with a plug-in.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-plug-ins.html#GUID-2DA3665A-42DF-4880-8A3D-D06AD1F9CAF2">Automatically Loading CSS and JavaScript Files</a><br>Automatically load CSS and JavaScript files when a plug-in is used on a         page.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-plug-ins.html#GUID-8416E8D1-8CB8-474F-B4E9-02EB66CA2259">Creating Attribute Groups</a><br>Define plugin attribute groups and assign them to custom plug-in         attributes.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-plug-ins.html#GUID-E48C9A44-FFF3-4741-BA23-263CF22FE980">Adding Events to a Plug-in</a><br>Add events to an item, region, or dynamic action type plug-in, to enable them to be         exposed to dynamic actions.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="implementing-plug-ins.html#GUID-B158814B-C3FC-4030-AF25-D14208DB1E27" title="Create plug-ins to declaratively extend, share, and reuse the built-in types available in APEX.">Implementing Plug-ins</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB27008"></a><div class="props_rev_3"><a id="GUID-52164B12-47C0-4713-B7D7-63433BA9EB60" name="GUID-52164B12-47C0-4713-B7D7-63433BA9EB60"></a><h3 id="HTMDB-GUID-52164B12-47C0-4713-B7D7-63433BA9EB60" class="sect3"><span class="enumeration_section">19.2.3.1 </span>Editing a Plug-in
+               </h3>
+               <div>
+                  <p>Edit a plug-in by navigating to Shared Components and selecting it on the Plug-ins
+        page.</p>
+                  <div class="section">
+                     <p>To edit a plug-in:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                 <p>The Shared Components page appears. </p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Other Components, click <span class="uicontrol bold">Plug-ins</span>.</span></li>
+                     <li class="stepexpand"><span>Click the plug-in you want to edit. </span><div>
+                           
+                           <p>The Edit page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Make modifications.</span><div>
+                           <p>To learn more about each option, see field-level Help.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>. </span></li>
+                  </ol>
+                  <div class="section">
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-52164B12-47C0-4713-B7D7-63433BA9EB60__GUID-D6695C1C-3A5C-42FC-ABA8-B922C132A10C">
+                     <p class="notep1">See Also:</p><a href="creating-plug-ins.html#GUID-FD29626A-462D-45EE-B0A5-AC988D27F27F" title="Review Standard Attributes for Item type plug-ins.">Standard Attributes for Item Type Plug-ins</a></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-plug-ins.html#GUID-421D9548-777C-4BB7-9FB5-A8B585629B45" title="Edit a plug-in to specify additional custom attributes, upload files such as image, CSS and JavaScript files, or add events.">Editing Plug-ins</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-6DBC5626-BB16-4169-AD2A-872F08FC7673" name="GUID-6DBC5626-BB16-4169-AD2A-872F08FC7673"></a><h3 id="HTMDB-GUID-6DBC5626-BB16-4169-AD2A-872F08FC7673" class="sect3"><span class="enumeration_section">19.2.3.2 </span>Subscribing to a Plug-in
+               </h3>
+               <div>
+                  <p>Subscribe to a plug-in on the Plug-ins, Edit page.</p>
+                  <div class="section">
+                     
+                     <p>Subscriptions enable developers to reuse shared components across several
+                applications in a workspace. To learn more about shared component subscriptions, see
+                    <a href="using-shared-component-subscriptions.html#GUID-24D34103-5C45-4DC6-A7BF-228744B04AAE" title="Use subscriptions to reuse shared components across several applications in a workspace.">Using Shared Component Subscriptions</a>.
+                     </p>
+                     
+                     <div class="infobox-tip" id="GUID-6DBC5626-BB16-4169-AD2A-872F08FC7673__GUID-F71F39C2-5F98-4F73-AAA8-AA169C391BA2">
+                        <p class="notep1">Tip:</p>You can also subscribe
+                to a list of values by copying it and then subscribing. See <a href="copying-or-subscribing-to-a-plug-in.html#GUID-57DB1C7D-9040-4E4A-9265-F171A3A801C7" title="Copy a plug-in from the current application or from another applications. When copying a plug-in from another app, you can also subscribe to it.">Copying or Subscribing to a Plug-in</a>.
+                     </div>
+                     
+                  </div>
+                  <p>To subscribe to a plug-in:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a" id="GUID-6DBC5626-BB16-4169-AD2A-872F08FC7673__SUBSTEPS_RR4_HBQ_41C">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>
+                                 
+                                 <p>The Shared Components page appears. </p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Other Components, click <span class="uicontrol bold">Plug-ins</span>.</span><div>
+                           
+                           <p>The Plug-ins page appears. Note that the report view includes
+                        the following columns: Subscribed From, Subscription Status, and
+                        Subscribers.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Select a plug-in.</span><div>The Plug-ins, Edit page appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>To subscribe to a plug-in:</span><ol type="a" id="GUID-6DBC5626-BB16-4169-AD2A-872F08FC7673__SUBSTEPS_G1B_Z2K_41C">
+                           <li class="substepexpand"><span>Find the <span class="uicontrol bold">Subscription</span> region.</span></li>
+                           <li class="substepexpand"><span>Subscription, Subscribe From - Select a master plug-ins to subscribe to
+                            and click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                           <li class="substepexpand"><span>Confirm your selection and click
+                            <span class="uicontrol bold">Subscribe</span>.</span><div>
+                                 
+                                 <p>The subscribed component is automatically refreshed from
+                                the selected master.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>To refresh a plug-in:</span><ol type="a" id="GUID-6DBC5626-BB16-4169-AD2A-872F08FC7673__SUBSTEPS_EM2_1FK_41C">
+                           <li><span>Find the <span class="uicontrol bold">Subscription</span> region.</span></li>
+                           <li><span>Subscription, Refresh Plug-in - If the plugin is already subscribed,
+                            click <span class="uicontrol bold">Refresh Plug-in</span>.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>To unsubscribe from a plug-in:</span><ol type="a" id="GUID-6DBC5626-BB16-4169-AD2A-872F08FC7673__SUBSTEPS_UPJ_CFK_41C">
+                           <li><span>Find the <span class="uicontrol bold">Subscription</span> region.</span></li>
+                           <li><span>Subscription, Unsubscribe - Click
+                            <span class="uicontrol bold">Unsubscribe</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-plug-ins.html#GUID-421D9548-777C-4BB7-9FB5-A8B585629B45" title="Edit a plug-in to specify additional custom attributes, upload files such as image, CSS and JavaScript files, or add events.">Editing Plug-ins</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB27010"></a><div class="props_rev_3"><a id="GUID-E7CEF4E6-175B-466C-9068-EDB99941F909" name="GUID-E7CEF4E6-175B-466C-9068-EDB99941F909"></a><h3 id="HTMDB-GUID-E7CEF4E6-175B-466C-9068-EDB99941F909" class="sect3"><span class="enumeration_section">19.2.3.3 </span>Adding Custom Attributes to a Plug-in
+               </h3>
+               <div>
+                  <p>Add Custom Attributes by editing the plug-in.</p>
+                  <div class="p">
+                     
+                     <div class="infobox-tip" id="GUID-E7CEF4E6-175B-466C-9068-EDB99941F909__GUID-313F531C-1B1D-4EE8-BA60-F3847F7ADADE">
+                        <p class="notep1">Tip:</p>The maximum number of custom attributes that can be added for an
+                Item-type plug-in is 25.
+                     </div>
+                     
+                  </div>
+                  <div class="section">Custom Attributes specified by the developer might contain items referenced with
+            substitution syntax.</div>
+                  <p>To add custom attributes to the plug-in:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                 <p>The Shared Components page appears. </p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Other Components, click <span class="uicontrol bold">Plug-ins</span>.</span></li>
+                     <li class="stepexpand"><span>Click the plug-in you want to modify. </span><div>
+                           <p>The Edit page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Custom Attributes - Enable or disable <span class="uicontrol bold">Substitute Attribute
+                        Values</span>.</span><div>
+                           
+                           <p>Custom Attribute Values specified by the developer may contain
+                        items referenced with substitution syntax, for example
+                            <code class="codeph">&amp;P1_DNAME</code>. Options include:
+                           </p>
+                           
+                           <ul style="list-style-type: disc;">
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">On</span> - <span>APEX</span> automatically replaces substitution syntax with their actual
+                                values. 
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Off</span> - Substitution syntax is
+                                written unchanged into the <code class="codeph">attribute_01</code> through
+                                    <code class="codeph">attribute_15</code> record type attributes of
+                                    <code class="codeph">p_plugin</code>, <code class="codeph">p_item</code>,
+                                    <code class="codeph">p_region</code>, and so on. The plug-in developer is
+                                responsible for replacing those substitution syntax references with
+                                a call to <code class="codeph">apex_plugin_util.replace_substitutions</code> or
+                                perform similar replacements. 
+                                 </p>
+                                 
+                                 <p>To learn more and view examples, see field-level
+                                Help.</p>
+                                 
+                              </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>To add an attribute click <span class="uicontrol bold">Add Attribute</span>.</span><div>
+                           <p>The Edit Attribute page appears. Edit the appropriate attributes.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Name:</span><div>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-E7CEF4E6-175B-466C-9068-EDB99941F909__UL_NJS_LJN_SWB">
+                              <li>
+                                 
+                                 <p>Scope - Options incude:</p>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-E7CEF4E6-175B-466C-9068-EDB99941F909__UL_ZSG_NJN_SWB">
+                                    <li><span class="uicontrol bold">Application</span> - The attribute
+                                    can only be defined once for the application.
+                                    </li>
+                                    <li><span class="uicontrol bold">Component</span> - The attribute
+                                    can be defined each time the plug-in is referenced in a
+                                    component.
+                                    </li>
+                                    <li><span class="uicontrol bold">Report</span> - The attribute can
+                                    only be defined if the region's display attribute is set to
+                                    Multiple (Report).
+                                    </li>
+                                    <li><span class="uicontrol bold">Report Group</span> - The attribute
+                                    can only be defined if the region's display attribute is set to
+                                    Multiple (Report).
+                                    </li>
+                                 </ul>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>Attribute - Sequence which correlates with the
+                                    <code class="codeph">ATTRIBUTE_XX</code> columns (for example in
+                                    <code class="codeph">APEX_APPLICATION_PAGE_ITEMS</code>) and to the PL/SQL
+                                types defined in the package <code class="codeph">APEX_PLUGIN</code>.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>Display Sequence - Specify the display sequence for this plug-in
+                                attribute in the <span>App Builder</span>.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>Static ID - Specify the Static ID for this attribute. </p>
+                                 
+                                 <p>Template component plug-ins should use uppercase IDs such as
+                                    <code class="codeph">MY_PLACEHOLDER</code>. The attribute value can then be
+                                referenced in the template by using the substitution syntax
+                                    <code class="codeph">#MY_PLACEHOLDER#</code>.
+                                 </p>
+                                 
+                                 <p>Region and Item plug-ins should use lowercase IDs such as
+                                    <code class="codeph">my_static_id</code>. The attribute value can then be
+                                referenced in the code using
+                                    <code class="codeph">p_region.attributes.get_varchar2('my_static_id')</code>
+                                    or<code class="codeph">
+                                    p_item.attributes.get_varchar2('my_static_id')</code>.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>Label - Specify the label which is displayed for that attribute in
+                                the <span>App Builder</span>.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>Attribute Group - Specify the group in Page Designer where this
+                                attribute displays.</p>
+                                 
+                              </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Settings:</span><div>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-E7CEF4E6-175B-466C-9068-EDB99941F909__UL_ZTM_RKN_SWB">
+                              <li>
+                                 
+                                 <p>Type - Specify the type the attribute should have when it is displays
+                                in the <span>App Builder</span>. The type is also used to verify the entered data when the
+                                developer sets or modifies them and is used by the Advisor as well
+                                when checking the application.
+                                 </p>
+                                 
+                                 <p>To learn more about a specific attribute Type, see <a href="editing-plug-ins.html#GUID-10AD6316-ECE1-4138-ACDC-6FF6158B6973" title="Review the attribute types supported for item plug-ins.">Plug-in Attribute Types</a>. 
+                                 </p>
+                                 
+                              </li>
+                              <li>Common - Specify if this attribute should always be display
+                            in the Property Editor of Page Designer or only if advanced attributes
+                            are displayed.</li>
+                              <li>Show in Wizard - Specify if this attribute should display in
+                            the Create Wizard if a new component is created based on the current
+                            plug-in.</li>
+                              <li>Required - Specify if this attribute must contain a
+                            value.</li>
+                              <li>Translatable - Specify whether or not this attribute is
+                            included in the XLIFF translation file.</li>
+                              <li>Display Width - Specify the length (in characters) that is
+                            displayed for this attribute in the <span>App Builder</span>.  
+                              </li>
+                              <li>Maximum Length - Specify the maximum number of character
+                            users are allowed to type into this attribute.</li>
+                              <li>Set Text Case - Specify if the entered plug-in attribute
+                            value should always be stored in upper or lowercase.</li>
+                              <li>Unit - Enter the text to be displayed as the unit (for
+                            example, pixels) for the attribute's value in Page Designer.</li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Default Value:</span><ul id="GUID-E7CEF4E6-175B-466C-9068-EDB99941F909__CHOICES_SHX_TCT_SWB">
+                           <li>Default Value - Specify a default value for this plug-in
+                        attribute. The default value is used when a new component is created that
+                        uses this plug-in. Use <code class="codeph">Y and N</code> for attributes of Type
+                            <span class="uicontrol bold">Yes/No</span>.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Condition:</span><ul id="GUID-E7CEF4E6-175B-466C-9068-EDB99941F909__CHOICES_F5N_TCT_SWB">
+                           <li>Default Value - Specify a default value for this plug-in
+                        attribute. The default value is used when a new component is created that
+                        uses this plug-in. Use <code class="codeph">Y and N</code> for attributes of
+                            Type<span class="uicontrol bold"> Yes/No</span>.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Help Text and Examples: </span><ul id="GUID-E7CEF4E6-175B-466C-9068-EDB99941F909__CHOICES_M1B_2DT_SWB">
+                           <li>Help Text - Specify help text for this plug-in attribute. The help text
+                        is displayed as context sensitive help for the attribute in <span>App Builder</span>.
+                           </li>
+                           <li>Examples - 
+                              <p>Specify examples for this plug-in attribute. The examples
+                            are displayed as part of the context sensitive help for the attribute in
+                            the App Builder.</p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Submit your changes:</span><ul id="GUID-E7CEF4E6-175B-466C-9068-EDB99941F909__CHOICES_L5B_JDT_SWB">
+                           <li>Click <span class="uicontrol bold">Create</span> to create the attribute and go back
+                        to the Edit page
+                           </li>
+                           <li>Click <span class="bold">Create and Create Another</span> to create the attribute and then
+                        create another one.
+                           </li>
+                        </ul>
+                     </li>
+                  </ol>
+                  <div class="section">
+                     <div class="infoboxnote" id="GUID-E7CEF4E6-175B-466C-9068-EDB99941F909__GUID-7098164D-B2E4-4507-8BC4-B7C1394ED49D">
+                        <p class="notep1">Note:</p>
+                        <p>If you click <span class="uicontrol bold">Create</span> or <span class="uicontrol bold">Create and Create
+                        Another</span> and the <span class="uicontrol bold">Return To Page</span> checkbox
+                    on the right panel under Plug-ins is checked, this same Edit Attribute page
+                    displays.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-plug-ins.html#GUID-421D9548-777C-4BB7-9FB5-A8B585629B45" title="Edit a plug-in to specify additional custom attributes, upload files such as image, CSS and JavaScript files, or add events.">Editing Plug-ins</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-10AD6316-ECE1-4138-ACDC-6FF6158B6973" name="GUID-10AD6316-ECE1-4138-ACDC-6FF6158B6973"></a><h3 id="HTMDB-GUID-10AD6316-ECE1-4138-ACDC-6FF6158B6973" class="sect3"><span class="enumeration_section">19.2.3.4 </span>Plug-in Attribute Types
+               </h3>
+               <div>
+                  <p>Review the attribute types supported for item plug-ins.</p>
+                  <div class="section">
+                     
+                     <p>The following table describes the attribute types supported for item
+                plug-ins.</p>
+                     
+                     <div class="tblformal" id="GUID-10AD6316-ECE1-4138-ACDC-6FF6158B6973__TABLE_O5V_GGW_SWB">
+                        <table cellpadding="4" cellspacing="0" class="Formal" title summary="Item plug-ins attribute types." frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="0%" id="d281535e1071">
+                                Attribute Types
+                            </th>
+                                 <th align="left" valign="bottom" width="0%" id="d281535e1076">
+                                Description
+                            </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1083" headers="d281535e1071 ">
+                                    
+                                    <p>Checkboxes</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1083 d281535e1076 ">
+                                    
+                                    <p>Predefined list of checkboxes which allows the user
+                                    to pick from. The values of all checked checkboxes are stored as
+                                    colon separated string.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1094" headers="d281535e1071 ">
+                                    
+                                    <p>Color</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1094 d281535e1076 ">
+                                    
+                                    <p>For a HEX color code with Color Picker support in
+                                    Page Designer (for example: <code class="codeph">#FF0000</code> or
+                                        <code class="codeph">#000000</code>).
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1111" headers="d281535e1071 ">
+                                    
+                                    <p>HTML</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1111 d281535e1076 ">
+                                    
+                                    <p>For HTML data with Code Editor support in Page
+                                    Designer. The stored value can also be translated.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1122" headers="d281535e1071 ">
+                                    
+                                    <p>Icon </p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1122 d281535e1076 ">
+                                    
+                                    <p>For Icon CSS classes with Icon Picker support in Page
+                                    Designer.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1133" headers="d281535e1071 ">
+                                    
+                                    <p>Integer</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1133 d281535e1076 ">Number without a decimal component (for
+                                example: <code class="codeph">15</code> or   <code class="codeph">-12</code>).
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1147" headers="d281535e1071 ">
+                                    
+                                    <p>JavaScript</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1147 d281535e1076 ">
+                                    
+                                    <p>For JavaScript code with Code Editor support in Page
+                                    Designer.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1158" headers="d281535e1071 ">
+                                    
+                                    <p>Link to Target Page/URL</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1158 d281535e1076 ">
+                                    
+                                    <p>For a link with Link Builder support in Page Designer.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1169" headers="d281535e1071 ">
+                                    
+                                    <p>Number</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1169 d281535e1076 ">
+                                    
+                                    <p>Number with an optional decimal component (for example:
+                                        <code class="codeph">531.98</code>, <code class="codeph">-363.55</code>, or
+                                        <code class="codeph">214</code>).
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1189" headers="d281535e1071 ">
+                                    
+                                    <p>PL/SQL Code</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1189 d281535e1076 ">
+                                    
+                                    <p>An anonymous PL/SQL code block. </p>
+                                    
+                                    <p>For example:</p>
+                                    <pre class="pre codeblock"><code>begin
+    update emp set sal=sal*1.1;
+end;</code></pre>
+                                    <p>For example:</p>
+                                    <pre class="pre codeblock"><code>case when :P7_CATEGORY='computer' then true else false end</code></pre>
+                                    </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1212" headers="d281535e1071 ">
+                                    
+                                    <p>PL/SQL Expression Returning VARCHAR2</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1212 d281535e1076 ">
+                                    
+                                    <p>Simple PL/SQL code which returns a result string. Example:</p>
+                                    
+                                    <p>For example:</p>
+                                    <pre class="pre codeblock"><code>case when :P7_CATEGORY='computer' then 'Y' else 'N' end
+</code></pre>
+                                    </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1229" headers="d281535e1071 ">
+                                    
+                                    <p>PL/SQL Function Body Returning BOOLEAN</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1229 d281535e1076 ">
+                                    
+                                    <p>Advanced PL/SQL code which returns TRUE or FALSE.</p>
+                                    
+                                    <p>For example:</p>
+                                    <pre class="pre codeblock"><code>declare
+    l_price number;
+begin
+    select product_price
+      into l_price
+      from demo_products
+     where id = :P7_ID;
+
+    return case when calculate_new_price(l_price) &gt; 1000 then true else false end;
+end;</code></pre>
+                                    </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1247" headers="d281535e1071 ">
+                                    <p>PL/SQL Function Body Returning
+                                    VARCHAR2</p>:
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1247 d281535e1076 ">
+                                    
+                                    <p>Advanced PL/SQL code which returns a result string.</p>
+                                    
+                                    <p>For example:</p>
+                                    <pre class="pre codeblock"><code>declare
+    l_price number;
+begin
+    select product_price
+      into l_price
+      from demo_products
+     where id = :P7_ID;
+
+    return calculate_new_price(l_price);
+end;</code></pre>
+                                    </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1263" headers="d281535e1071 ">
+                                    
+                                    <p>Page Item</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1263 d281535e1076 ">
+                                    
+                                    <p>Name of a page item.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1274" headers="d281535e1071 ">
+                                    
+                                    <p>Page Items</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1274 d281535e1076 ">
+                                    
+                                    <p>Comma delimited list of page items.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1285" headers="d281535e1071 ">
+                                    
+                                    <p>Page Number</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1285 d281535e1076 ">
+                                    
+                                    <p>Identifies a page in <span>Oracle APEX</span>.
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1299" headers="d281535e1071 ">
+                                    
+                                    <p>Page Numbers</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1299 d281535e1076 ">
+                                    
+                                    <p>Comma delimited list of pages in <span>Oracle APEX</span>.
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1313" headers="d281535e1071 ">
+                                    
+                                    <p>Region SQL Statement Column</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1313 d281535e1076 ">
+                                    
+                                    <p>List of columns used in the Region SQL Statement which allows the
+                                    user to pick from. This attribute type is only available for
+                                    Region Type plug-ins.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1324" headers="d281535e1071 ">
+                                    
+                                    <p>SQL Query </p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1324 d281535e1076 ">
+                                    
+                                    <p>A SQL Statement with the specified number of columns in the
+                                    statement.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1335" headers="d281535e1071 ">
+                                    
+                                    <p>Select List </p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1335 d281535e1076 ">
+                                    
+                                    <p>Predefined list of values which allows the user to pick from.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1346" headers="d281535e1071 ">
+                                    
+                                    <p>Text</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1346 d281535e1076 ">
+                                    
+                                    <p>For alphanumeric data. The stored value can also be
+                                    translated.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1357" headers="d281535e1071 ">
+                                    
+                                    <p>Textarea</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1357 d281535e1076 ">
+                                    
+                                    <p>For multi-line alphanumeric data. The stored value can also be
+                                    translated.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1368" headers="d281535e1071 ">
+                                    
+                                    <p>XML</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1368 d281535e1076 ">
+                                    
+                                    <p>For XML data with Code Editor support in Page Designer. The
+                                    stored value can also be translated.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d281535e1380" headers="d281535e1071 ">
+                                    
+                                    <p>Yes/No</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d281535e1380 d281535e1076 ">
+                                    
+                                    <p>Predefined select list with Yes/No for boolean decisions.</p>
+                                    
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-plug-ins.html#GUID-421D9548-777C-4BB7-9FB5-A8B585629B45" title="Edit a plug-in to specify additional custom attributes, upload files such as image, CSS and JavaScript files, or add events.">Editing Plug-ins</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29461"></a><div class="props_rev_3"><a id="GUID-72DC54C0-442F-4877-845A-79A5AF51AE65" name="GUID-72DC54C0-442F-4877-845A-79A5AF51AE65"></a><h3 id="HTMDB-GUID-72DC54C0-442F-4877-845A-79A5AF51AE65" class="sect3"><span class="enumeration_section">19.2.3.5 </span>Creating a File to Associate with a
+        Plug-in
+               </h3>
+               <div>
+                  <p>Create a file to associate with a plug-in.</p>
+                  <div class="section">
+                     <p>To create a file:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                 <p>The Shared Components page appears. </p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Other Components, click <span class="uicontrol bold">Plug-ins</span>.</span></li>
+                     <li class="stepexpand"><span>Select the plug-in.</span><div>
+                           
+                           <p>The Edit page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Locate the <span class="uicontrol bold">Files</span> section. </span><div>
+                           <p><span class="uicontrol bold">File Prefix</span> determines the virtual path the Web server uses to
+                        point to the files of the plug-in. Do not specify anything to reference
+                        files which are stored with your plug-in definition in the database. For
+                        performance reasons you can also store your plug-in files on your Web
+                        Server. Use <code class="codeph">#APEX_FILES#</code> or any valid URL to reference
+                        them.
+                           </p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>To upload a file, click <span class="uicontrol bold">Create File</span>.</span></li>
+                     <li class="stepexpand"><span>On the Create page:</span><ol type="a" id="GUID-72DC54C0-442F-4877-845A-79A5AF51AE65__SUBSTEPS_HXD_21B_1RB">
+                           <li class="substepexpand"><span>Directory - Enter the name of the directory where the file should be
+                            stored. For example, <code class="codeph">css</code> or
+                            <code class="codeph">css/images</code>. </span><div>If no directory is specified, the file is stored in
+                            the root directory.</div>
+                           </li>
+                           <li class="substepexpand"><span>File Name - If creating a blank file (for example,
+                                <code class="codeph">script.js</code>), enter the name of the file.</span></li>
+                           <li class="substepexpand"><span>Content - If uploading a file, do one of the following:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-72DC54C0-442F-4877-845A-79A5AF51AE65__UL_J2H_K3S_2RB">
+                                    <li>
+                                       
+                                       <p>Drag and drop the file to the Content region.</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Click the Content region and select the file.</p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Create</span> or <span class="uicontrol bold">Create and Create
+                                Another</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-plug-ins.html#GUID-421D9548-777C-4BB7-9FB5-A8B585629B45" title="Edit a plug-in to specify additional custom attributes, upload files such as image, CSS and JavaScript files, or add events.">Editing Plug-ins</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29460"></a><div class="props_rev_3"><a id="GUID-2DA3665A-42DF-4880-8A3D-D06AD1F9CAF2" name="GUID-2DA3665A-42DF-4880-8A3D-D06AD1F9CAF2"></a><h3 id="HTMDB-GUID-2DA3665A-42DF-4880-8A3D-D06AD1F9CAF2" class="sect3"><span class="enumeration_section">19.2.3.6 </span>Automatically Loading CSS and JavaScript Files
+               </h3>
+               <div>
+                  <p>Automatically load CSS and JavaScript files when a plug-in is used on a
+        page.</p>
+                  <div class="section">
+                     <p>You can have <span>APEX</span> automatically load CSS and JavaScript files when a plug-in is used on a page by configuring the File URLs to Load attributes. To specify which of the uploaded files should be loaded and in what order. 
+                     </p>
+                     <p>To automatically load a CSS or JavaScript file:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                 <p>The Shared Components page appears. </p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Other Components, click <span class="uicontrol bold">Plug-ins</span>.</span></li>
+                     <li class="stepexpand"><span>Select the plug-in.</span><div>
+                           
+                           <p>The Edit page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Locate <span class="uicontrol bold">File URLs to Load</span>:</span><ol type="a">
+                           <li class="substepexpand"><span>Cascading Style Sheet - Enter Cascading Style Sheet file URLs to be
+                            loaded with this plug-in. Each URL has to be written on a new line. </span><div>
+                                 
+                                 <p>If you provide a minified version of your file you can use the
+                                substitution string <code class="codeph">#MIN#</code> to include .min, or
+                                    <code class="codeph">#MIN_DIRECTORY#</code> to include
+                                    <code class="codeph">minified/</code> in your file URL for a regular page
+                                view, and an empty string if the page is viewed in debug mode. You
+                                also have access to the substitution string
+                                    <code class="codeph">#PLUGIN_FILES#</code> to substitute with the value of
+                                the plug-in's file prefix.
+                                 </p>
+                                 
+                                 <p>File URLs you enter here will be emitted within the
+                                    <code class="codeph">#APEX_CSS#</code> substitution string in the page
+                                template.
+                                 </p>
+                                 
+                                 <p>You do not need to include opening or closing link tags, just the
+                                file URL.</p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>JavaScript - Enter JavaScript file URLs for code to be loaded with this
+                            plug-in.</span><div>
+                                 
+                                 <p>Enter JavaScript file URLs for code to be loaded with this plug-in.
+                                Each URL has to be written on a new line. If you provide a minified
+                                version of your file you can use the substitution string
+                                    <code class="codeph">#MIN#</code> to include .min, or
+                                    <code class="codeph">#MIN_DIRECTORY#</code> to include minified/ in your
+                                file URL for a regular page view, and an empty string if the page is
+                                viewed in debug mode. You also have access to the substitution
+                                string <code class="codeph">#PLUGIN_FILES#</code> to substitute the value of
+                                the plug-in's file prefix.
+                                 </p>
+                                 
+                                 <p>JavaScript file URLs you enter here will be emitted within the
+                                    <code class="codeph">#GENERATED_JAVASCRIPT#</code> substitution string in
+                                the page template.
+                                 </p>
+                                 
+                                 <p>You do not need to include opening or closing
+                                    <code class="codeph">script</code> tags, just the file URL.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                        <div>
+                           
+                           <p>To view examples, see field-level Help.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-plug-ins.html#GUID-421D9548-777C-4BB7-9FB5-A8B585629B45" title="Edit a plug-in to specify additional custom attributes, upload files such as image, CSS and JavaScript files, or add events.">Editing Plug-ins</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-8416E8D1-8CB8-474F-B4E9-02EB66CA2259" name="GUID-8416E8D1-8CB8-474F-B4E9-02EB66CA2259"></a><h3 id="HTMDB-GUID-8416E8D1-8CB8-474F-B4E9-02EB66CA2259" class="sect3"><span class="enumeration_section">19.2.3.7 </span>Creating Attribute Groups
+               </h3>
+               <div>
+                  <p>Define plugin attribute groups and assign them to custom plug-in
+        attributes.</p>
+                  <div class="section">
+                     <p>You can create attribute groups for the following
+                plug-in types: Item, Region, Process and Dynamic Action. For each attribute group
+                you specify a group Name and Sequence. Then, when you create custom attributes, you
+                select the Attribute Group. </p>
+                     <p>Other features of attribute groups
+                include:</p>
+                     <ul style="list-style-type: disc;" id="GUID-8416E8D1-8CB8-474F-B4E9-02EB66CA2259__UL_BMV_2M4_XWB">
+                        <li>Group names must be unique for each plug-in</li>
+                        <li>Attributes are ordered within an attribute group according to the
+                    value of their display sequence</li>
+                        <li>The attribute group Sequence defines the order in which groups are
+                    displayed in Page Designer</li>
+                        <li>Plug-in attributes that are not assigned to an attribute group
+                    display directly under Settings in the Attributes tab in Page Designer</li>
+                     </ul>
+                     <p>The following example shows two attribute groups, Group A and Group
+                B. Note that Attribute 3 is not assigned to an attribute group and displays directly
+                under Settings.</p><img id="GUID-8416E8D1-8CB8-474F-B4E9-02EB66CA2259__IMAGE_RSF_ZX4_XWB" height="585" width="946" src="img/attribute_groups.png" alt="Description of attribute_groups.png follows" title="Description of attribute_groups.png follows" longdesc="img_text/attribute_groups.html"><br><a href="img_text/attribute_groups.html">Description of the illustration attribute_groups.png</a></div>
+                  <p>To create an attribute group.</p>
+                  <ol>
+                     <li class="stepexpand"><span>Create a plug-in as described in <a href="creating-plug-ins.html#GUID-35DE391B-AE85-4688-9556-1CA2AD6A32A6" title="Create plug-ins by navigating to Shared Components and running the Create Plug-in Wizard.">Creating Plug-ins</a>.</span></li>
+                     <li class="stepexpand"><span>On the Plug-ins page, click the plug-in you want to edit.</span><div>
+                           
+                           <p>The Edit page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Add attribute groups:</span><ol type="a" id="GUID-8416E8D1-8CB8-474F-B4E9-02EB66CA2259__SUBSTEPS_PSD_1P4_XWB">
+                           <li class="substepexpand"><span>Under Attribute Groups, click <span class="uicontrol bold">Add Group</span>.</span><div>
+                                 
+                                 <p>A new row displays under Attribute Groups.</p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>For each attribute group, edit the following:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-8416E8D1-8CB8-474F-B4E9-02EB66CA2259__UL_BPC_CP4_XWB">
+                                    <li>Title - Enter a title for the attribute group.</li>
+                                    <li>Sequence - Enter the sequence.</li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Add custom attributes as described in <a href="editing-plug-ins.html#GUID-E7CEF4E6-175B-466C-9068-EDB99941F909" title="Add Custom Attributes by editing the plug-in.">Adding Custom Attributes to a Plug-in</a>. Under Name, Attribute Group, select a group. In Page Designer, the attribute
+                    group Sequence determines where the attribute displays.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-plug-ins.html#GUID-421D9548-777C-4BB7-9FB5-A8B585629B45" title="Edit a plug-in to specify additional custom attributes, upload files such as image, CSS and JavaScript files, or add events.">Editing Plug-ins</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB27012"></a><div class="props_rev_3"><a id="GUID-E48C9A44-FFF3-4741-BA23-263CF22FE980" name="GUID-E48C9A44-FFF3-4741-BA23-263CF22FE980"></a><h3 id="HTMDB-GUID-E48C9A44-FFF3-4741-BA23-263CF22FE980" class="sect3"><span class="enumeration_section">19.2.3.8 </span>Adding Events to a Plug-in
+               </h3>
+               <div>
+                  <p>Add events to an item, region, or dynamic action type plug-in, to enable them to be
+        exposed to dynamic actions.</p>
+                  <div class="section">
+                     <p>For example, suppose you have a Slider plug-in that exposes events such as Start
+                Slide, Sliding, and Stop Slide, and allows the creation of dynamic actions that can
+                react when these events occur.</p>
+                     <p>To add events to a plug-in:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                 <p>The Shared Components page appears. </p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Other Components, click <span class="uicontrol bold">Plug-ins</span>.</span></li>
+                     <li class="stepexpand"><span>Click the plug-in you want to edit.</span><div>
+                           
+                           <p>The Edit page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Locate <span class="uicontrol bold">Events</span> and Click <span class="uicontrol bold">Add
+                    Event</span>.</span><div>
+                           
+                           <p>A new row displays under Events.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under Events:</span><ol type="a">
+                           <li><span>Name - The display name under which the plug-in event appears in the dynamic action, for example: <code class="codeph">Start Slide</code>.</span></li>
+                           <li><span>Internal Name - The name of the assigned JavaScript event that triggers the dynamic action, for example: <code class="codeph">slidestart</code>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Add Event</span>.</span></li>
+                     <li class="stepexpand"><span>Repeat steps 3 through 4 to add another event.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-plug-ins.html#GUID-421D9548-777C-4BB7-9FB5-A8B585629B45" title="Edit a plug-in to specify additional custom attributes, upload files such as image, CSS and JavaScript files, or add events.">Editing Plug-ins</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Creating a Global Page to Display Components on Every Page">
+      <meta name="abstract" content="A global page (previously referred to as Page 0) functions as a master page.">
+      <meta name="description" content="A global page (previously referred to as Page 0) functions as a master page.">
+      <meta name="DC.subject" content="components, displaying on all pages, Global page, pages, about Global page, creating, viewing, editing">
+      <meta name="keywords" content="components, displaying on all pages, Global page, pages, about Global page, creating, viewing, editing">
+      <meta name="DC.Relation" scheme="URI" content="controlling-page-layout.html#GUID-2A096B0F-FAB4-4D9A-962B-3406A2F5CFBF">
+      <meta name="DC.Relation" scheme="URI" content="creating-a-global-page-to-display-components-on-every-page.html#GUID-926773D7-C7A6-48D1-8449-4AF0909D478A">
+      <meta name="DC.Relation" scheme="URI" content="creating-a-global-page-to-display-components-on-every-page.html#GUID-C04BDF7D-3C8F-4F36-8FD5-195CB7E44D74">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-8ADAD109-F5D3-46EB-B9A1-3678CA116B2C">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="A global page (previously referred to as Page 0) functions as a master page.">
+      <meta name="description" content="A global page (previously referred to as Page 0) functions as a master page.">
+      <title>Creating a Global Page to Display Components on Every Page</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="A global page (previously referred to as Page 0) functions as a master page.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="optimizing-a-page-for-printing.html" title="Previous" type="text/html">
+      <link rel="next" href="managing-regions.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Creating a Global Page to Display Components on Every Page","description":"A global page (previously referred to as Page 0) functions as a master page.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="optimizing-a-page-for-printing.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="managing-regions.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-8ADAD109-F5D3-46EB-B9A1-3678CA116B2C" name="GUID-8ADAD109-F5D3-46EB-B9A1-3678CA116B2C"></a><a id="HTMDB06002"></a>
+         
+         <h2 id="HTMDB-GUID-8ADAD109-F5D3-46EB-B9A1-3678CA116B2C" class="sect2"><span class="enumeration_section">12.3 </span>Creating a Global Page to Display Components on Every Page
+         </h2>
+         <div class="ind">
+            <div>
+               <p>A global page (previously referred to as Page 0) functions as a master
+        page.</p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="creating-a-global-page-to-display-components-on-every-page.html#GUID-926773D7-C7A6-48D1-8449-4AF0909D478A">Creating a Global Page</a><br>Create a Global page using the Create Page Wizard.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-a-global-page-to-display-components-on-every-page.html#GUID-C04BDF7D-3C8F-4F36-8FD5-195CB7E44D74">Viewing or Editing a Global Page</a><br>View or edit a Global page in Page Designer.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-8ADAD109-F5D3-46EB-B9A1-3678CA116B2C__GUID-DC554080-D203-47AB-AD18-E02B95E0F9AC">
+                  <p class="notep1">See Also:</p>
+                  <div class="p">
+                     <ul style="list-style-type: disc;">
+                        <li><a href="managing-pages-in-an-application.html#GUID-83926801-6C69-4709-B6C3-C22C192B5A11" title="A page is the basic building block of an application. Developers add pages to an application by running the Create Page Wizard.">Managing Pages in an Application</a></li>
+                        <li><a href="how-does-page-processing-and-page-rendering-work.html#GUID-E7A469B8-2757-49E9-B5FB-052C9AEA92CD" title="Use conditions in an application to control how pages and page components display and when processes, computations, and validations execute.">Understanding Conditional Rendering and Processing</a></li>
+                        <li><a href="available-conditions.html#GUID-7FDEBB2E-8A43-4F98-9EE0-056C789EFE1B" title="Learn about conditions.Review descriptions of conditions available in Oracle APEX.">Available Conditions</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="controlling-page-layout.html#GUID-2A096B0F-FAB4-4D9A-962B-3406A2F5CFBF" title="Developers can customize their application's page layout by using a global page, customizing regions, and editing item attributes.">Controlling Page Layout</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB28490"></a><div class="props_rev_3"><a id="GUID-926773D7-C7A6-48D1-8449-4AF0909D478A" name="GUID-926773D7-C7A6-48D1-8449-4AF0909D478A"></a><h3 id="HTMDB-GUID-926773D7-C7A6-48D1-8449-4AF0909D478A" class="sect3"><span class="enumeration_section">12.3.1 </span>Creating a Global Page
+               </h3>
+               <div>
+                  <p>Create a Global page using the Create Page Wizard.</p>
+                  <div class="section">
+                     
+                     <p> Developers can create a separate Global page for each user interface.
+                The <span>Oracle APEX</span> engine renders all components you add to a Global page on every page within your
+                application. You can further control whether the <span>APEX</span> engine renders a component or runs a computation, validation, or process by
+                defining conditions.
+                     </p>
+                     
+                  </div>
+                  <p>To create a Global page:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                     <li class="stepexpand"><span>Select an application.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Page</span>.</span><div>
+                           
+                           <p><span class="uicontrol bold">Create a Page</span> appears and features three
+                        tabs: <span class="uicontrol bold">Component</span>, <span class="uicontrol bold">Feature</span>, and
+                            <span class="uicontrol bold">Legacy Pages</span>.
+                           </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under Component, select <span class="uicontrol bold">Global Page</span>.</span><div>
+                           
+                           <div class="infobox-tip" id="GUID-926773D7-C7A6-48D1-8449-4AF0909D478A__GUID-A779F3B3-45B7-4A77-88C0-9BDA87E96FC2">
+                              <p class="notep1">Tip:</p>
+                              
+                              <p>The <span class="uicontrol bold">Global Page</span> option only appears
+                            if the application does not have a Global page..
+                              </p>
+                              
+                           </div>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Page Number - The page number is an integer value that identifies a page within
+                    an application. </span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Page</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-a-global-page-to-display-components-on-every-page.html#GUID-8ADAD109-F5D3-46EB-B9A1-3678CA116B2C" title="A global page (previously referred to as Page 0) functions as a master page.">Creating a Global Page to Display Components on Every Page</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB28491"></a><div class="props_rev_3"><a id="GUID-C04BDF7D-3C8F-4F36-8FD5-195CB7E44D74" name="GUID-C04BDF7D-3C8F-4F36-8FD5-195CB7E44D74"></a><h3 id="HTMDB-GUID-C04BDF7D-3C8F-4F36-8FD5-195CB7E44D74" class="sect3"><span class="enumeration_section">12.3.2 </span>Viewing or Editing a Global Page
+               </h3>
+               <div>
+                  <p>View or edit a Global page in Page Designer.</p>
+                  <p>To view or edit a Global page:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span><div>
+                           <p>The <span>App Builder</span> home page appears.
+                           </p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Select an application.</span><div>
+                           <p>The Application home page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Select <span class="uicontrol bold">Global Page</span> (or <span class="uicontrol bold">Page Zero</span> if this is an older application). </span><div>The page displays in Page Designer.</div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-a-global-page-to-display-components-on-every-page.html#GUID-8ADAD109-F5D3-46EB-B9A1-3678CA116B2C" title="A global page (previously referred to as Page 0) functions as a master page.">Creating a Global Page to Display Components on Every Page</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

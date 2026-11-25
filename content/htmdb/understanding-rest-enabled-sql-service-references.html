@@ -1,0 +1,696 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Understanding REST Enabled SQL Service References">
+      <meta name="abstract" content="Create REST Enabled SQL Service references to execute SQL or PL/SQL defined on a remote database.">
+      <meta name="description" content="Create REST Enabled SQL Service references to execute SQL or PL/SQL defined on a remote database.">
+      <meta name="DC.subject" content="REST Enabled SQL Services, about, requirements, Oracle Database requirements, MySQL requirements, MySQL, supported, APEX, unupported features, differences with database links, Endpoint URL, populating with callback procedure, Configuration Procedure attribute, configuring, importing, exporting">
+      <meta name="keywords" content="REST Enabled SQL Services, about, requirements, Oracle Database requirements, MySQL requirements, MySQL, supported, APEX, unupported features, differences with database links, Endpoint URL, populating with callback procedure, Configuration Procedure attribute, configuring, importing, exporting">
+      <meta name="DC.Relation" scheme="URI" content="managing-rest-enabled-sql-references.html#GUID-94515117-40F3-42FC-BBB2-EE77315DF434">
+      <meta name="DC.Relation" scheme="URI" content="understanding-rest-enabled-sql-service-references.html#GUID-F4A110D0-E944-43C1-BD7E-8DD7445CEF86">
+      <meta name="DC.Relation" scheme="URI" content="understanding-rest-enabled-sql-service-references.html#GUID-308AEFC1-BE1D-4EF3-BB97-91AE7E55CE4F">
+      <meta name="DC.Relation" scheme="URI" content="understanding-rest-enabled-sql-service-references.html#GUID-D4185C8C-459D-448F-8429-9998B9C7DC1C">
+      <meta name="DC.Relation" scheme="URI" content="understanding-rest-enabled-sql-service-references.html#GUID-88AFE0BC-3811-4C96-81E3-B8319068D2B6">
+      <meta name="DC.Relation" scheme="URI" content="understanding-rest-enabled-sql-service-references.html#GUID-226084B2-098B-44FA-B928-AA7085E3AD26">
+      <meta name="DC.Relation" scheme="URI" content="understanding-rest-enabled-sql-service-references.html#GUID-DC255B39-72CC-45DD-AFD8-D4C04FFC7EC8">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-327EF999-FA26-4E0B-9CBA-A966594FD95C">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Create REST Enabled SQL Service references to execute SQL or PL/SQL defined on a remote database.">
+      <meta name="description" content="Create REST Enabled SQL Service references to execute SQL or PL/SQL defined on a remote database.">
+      <title>Understanding REST Enabled SQL Service References</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Create REST Enabled SQL Service references to execute SQL or PL/SQL defined on a remote database.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-rest-enabled-sql-references.html" title="Previous" type="text/html">
+      <link rel="next" href="rest-enabled-sql-requirements.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Understanding REST Enabled SQL Service References","description":"Create REST Enabled SQL Service references to execute SQL or PL/SQL defined on a remote database.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-rest-enabled-sql-references.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="rest-enabled-sql-requirements.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-327EF999-FA26-4E0B-9CBA-A966594FD95C" name="GUID-327EF999-FA26-4E0B-9CBA-A966594FD95C"></a>
+         
+         <h2 id="HTMDB-GUID-327EF999-FA26-4E0B-9CBA-A966594FD95C" class="sect2"><span class="enumeration_section">18.5.1 </span>Understanding REST Enabled SQL Service
+        References
+         </h2>
+         <div class="ind">
+            <p>Create REST Enabled SQL Service references to execute SQL or PL/SQL defined
+                on a remote database. </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="understanding-rest-enabled-sql-service-references.html#GUID-F4A110D0-E944-43C1-BD7E-8DD7445CEF86">About REST Enabled SQL Service References</a><br>Use REST Enabled SQL Service references to execute SQL or PL/SQL defined on         a remote database. 
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-rest-enabled-sql-service-references.html#GUID-308AEFC1-BE1D-4EF3-BB97-91AE7E55CE4F">REST Enabled SQL Service Reference Requirements</a><br>Review the minimum requirements for using REST Enabled SQL Service         references.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-rest-enabled-sql-service-references.html#GUID-D4185C8C-459D-448F-8429-9998B9C7DC1C">About MySQL Support</a><br>MySQL only supports read-only <span>APEX</span> components. 
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-rest-enabled-sql-service-references.html#GUID-88AFE0BC-3811-4C96-81E3-B8319068D2B6">Differences between REST Enabled SQL Service References and Database Links</a><br>Learn how REST Enabled SQL Service references differ from database links. 
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-rest-enabled-sql-service-references.html#GUID-226084B2-098B-44FA-B928-AA7085E3AD26">Populating the Endpoint URL Dynamically</a><br>Populate the server portion of the Endpoint URL dynamically using a         callback procedure you specify in the Configuration Procedure attribute. 
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-rest-enabled-sql-service-references.html#GUID-DC255B39-72CC-45DD-AFD8-D4C04FFC7EC8">Exporting and Importing REST Enabled SQL Services</a><br>Create REST Enabled SQL Service references to execute SQL or PL/SQL defined on a remote <span>Oracle</span> database. 
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-rest-enabled-sql-references.html#GUID-94515117-40F3-42FC-BBB2-EE77315DF434" title="Execute SQL queries or PL/SQL defined at the component-level on a remote database using REST Enabled SQL references.">Managing REST Enabled SQL References</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-F4A110D0-E944-43C1-BD7E-8DD7445CEF86" name="GUID-F4A110D0-E944-43C1-BD7E-8DD7445CEF86"></a><h3 id="HTMDB-GUID-F4A110D0-E944-43C1-BD7E-8DD7445CEF86" class="sect3"><span class="enumeration_section">18.5.1.1 </span>About REST Enabled SQL Service
+        References
+               </h3>
+               <div>
+                  <p>Use REST Enabled SQL Service references to execute SQL or PL/SQL defined on
+        a remote database. </p>
+                  <p><span>Oracle APEX</span> installations that meet the minimum Oracle REST Data Services (ORDS) requirements can
+            execute any SQL or PL/SQL   through a REST endpoint.
+                  </p>
+                  <p>Developers create REST Enabled SQL references by defining a name, the endpoint URL, and authentication information within Shared Components. <span>APEX</span> passes the SQL or PL/SQL query to ORDS over REST, and a self-describing JSON response is returned. The JSON object contains result set meta data, the result data, and pagination details.
+                  </p>
+                  <p>Because REST Enabled SQL services are stored at the workspace-level within <span>APEX</span> components, they are available to all applications within a workspace. Developers can utilize REST Enabled SQL references for interactive reports, interactive grids, classic reports, forms, master detail forms, calendars, JET charts, trees, and PL/SQL processes. References can also be used with Calendars, JET Charts, Trees, and PL/SQL processes.
+                  </p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-rest-enabled-sql-service-references.html#GUID-327EF999-FA26-4E0B-9CBA-A966594FD95C" title="Create REST Enabled SQL Service references to execute SQL or PL/SQL defined on a remote database.">Understanding REST Enabled SQL Service References</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-308AEFC1-BE1D-4EF3-BB97-91AE7E55CE4F" name="GUID-308AEFC1-BE1D-4EF3-BB97-91AE7E55CE4F"></a><h3 id="HTMDB-GUID-308AEFC1-BE1D-4EF3-BB97-91AE7E55CE4F" class="sect3"><span class="enumeration_section">18.5.1.2 </span>REST Enabled SQL Service Reference
+        Requirements
+               </h3>
+               <div>
+                  <p>Review the minimum requirements for using REST Enabled SQL Service
+        references.</p>
+                  <div class="section">
+                     
+                     <p>Requirements for using REST Enabled SQL Service references include:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-308AEFC1-BE1D-4EF3-BB97-91AE7E55CE4F__UL_PTL_QRV_5HB">
+                        <li>
+                           
+                           <p>A remote Oracle Database that includes <span>Oracle REST Data
+                                        Services</span> (ORDS) 23.3 or later on the front-end.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>A remote MySQL Database that includes <span>Oracle REST Data
+                                        Services</span> (ORDS) 23.3 or later on the front-end.
+                           </p>
+                           
+                           <p>See <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmdb&id=ORDIG-GUID-1993C803-AD9B-430B-8287-487E79B83356" target="_blank">Using the REST Enabled SQL
+                            Service with MySQL Database</a> in <span><cite>Oracle REST Data Services Installation and
+                                        Configuration Guide</cite></span> and <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmdb&id=ORDGG-GUID-3B463D97-4F7C-4B9B-8E56-1ED11E17960F" target="_blank">REST Enabled SQL Service and
+                            MySQL Database</a> in <span><cite>Oracle REST Data Services Developer's
+                                Guide</cite></span>.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>An administrator must enable RESTful Services either at the
+                        workspace or instance-level as described in <a href="../aeadm/configuring-workspace-preferences.html#AEADM-GUID-140DE54B-E74A-47E0-AFFE-436F6FC329C0" target="_blank">Enabling RESTful Services and
+                            Defining a Path Prefix for a Workspace</a> and <a href="../aeadm/configuring-features.html#AEADM-GUID-F9491905-FFDB-4ED1-BAAC-B13F8C48D436" target="_blank">Enabling RESTful Services
+                            for an Instance</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span>.
+                           </p>
+                           
+                        </li>
+                     </ul>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-rest-enabled-sql-service-references.html#GUID-327EF999-FA26-4E0B-9CBA-A966594FD95C" title="Create REST Enabled SQL Service references to execute SQL or PL/SQL defined on a remote database.">Understanding REST Enabled SQL Service References</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-D4185C8C-459D-448F-8429-9998B9C7DC1C" name="GUID-D4185C8C-459D-448F-8429-9998B9C7DC1C"></a><h3 id="HTMDB-GUID-D4185C8C-459D-448F-8429-9998B9C7DC1C" class="sect3"><span class="enumeration_section">18.5.1.3 </span>About MySQL Support
+               </h3>
+               <div>
+                  <p>MySQL only supports read-only <span>APEX</span> components. 
+                  </p>
+                  <div class="section">
+                     
+                     <p>The following table lists supported <span>APEX</span> components and unsupported  features when using a REST Enabled SQL Service
+                references with a remote MySQL database.
+                     </p>
+                     
+                     <div class="tblformal" id="GUID-D4185C8C-459D-448F-8429-9998B9C7DC1C__TABLE_QPC_YJG_VVB">
+                        <table cellpadding="4" cellspacing="0" class="Formal" title summary="APEX components and and unsupported features." frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="0%" id="d263790e537">
+                                APEX Component
+                            </th>
+                                 <th align="left" valign="bottom" width="0%" id="d263790e542">
+                                Unsupported Features and Comments
+                            </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d263790e549" headers="d263790e537 ">
+                                    
+                                    <p>Classic reports</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d263790e549 d263790e542 ">
+                                    
+                                    <p>BLOB column (see below).</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d263790e560" headers="d263790e537 ">
+                                    
+                                    <p>Interactive reports</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d263790e560 d263790e542 ">
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-D4185C8C-459D-448F-8429-9998B9C7DC1C__UL_CBM_3QG_VVB">
+                                       <li> Pivot View</li>
+                                       <li>Some aggregate functions (for example,  Ratio To Report,
+                                        Median, Approx Count Distinct)</li>
+                                       <li>Flashback</li>
+                                       <li>BLOB column (see below)</li>
+                                       <li>Column display based on LOV cannot use Static LOVs</li>
+                                    </ul>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d263790e580" headers="d263790e537 ">
+                                    
+                                    <p>Interactive grids</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d263790e580 d263790e542 ">
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-D4185C8C-459D-448F-8429-9998B9C7DC1C__UL_SYD_NQG_VVB">
+                                       <li>Editing (DML support)</li>
+                                       <li>Some aggregate functions (for example, Ratio To Report,
+                                        Median, Approx Count Distinct)</li>
+                                       <li>Control breaks require a Primary Key column to be
+                                        defined</li>
+                                       <li>Filtering on multi-value columns</li>
+                                       <li>Flashback</li>
+                                       <li>Column display based on LOV cannot use Static LOVs</li>
+                                    </ul>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d263790e602" headers="d263790e537 ">
+                                    
+                                    <p>Faceted search and smart filters</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d263790e602 d263790e542 ">
+                                    
+                                    <p>Multi-value facets.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d263790e613" headers="d263790e537 ">
+                                    
+                                    <p>Calendars</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d263790e613 d263790e542 ">
+                                    
+                                    <p>Drag and drop.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d263790e624" headers="d263790e537 ">
+                                    
+                                    <p>Form regions</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d263790e624 d263790e542 ">
+                                    
+                                    <p>Only support for read-only forms. DML is not
+                                    supported..</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d263790e635" headers="d263790e537 ">
+                                    
+                                    <p>Charts</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d263790e635 d263790e542 ">
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-D4185C8C-459D-448F-8429-9998B9C7DC1C__UL_SY3_BPG_VVB">
+                                       <li>Box plot charts</li>
+                                       <li>Some aggregate functions (for example, Ratio To Report,
+                                        Median, Approx Count Distinct)</li>
+                                    </ul>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d263790e649" headers="d263790e537 ">
+                                    
+                                    <p>Cards</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d263790e649 d263790e542 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d263790e660" headers="d263790e537 ">
+                                    
+                                    <p>Column toggle reports</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d263790e660 d263790e542 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d263790e671" headers="d263790e537 ">
+                                    
+                                    <p>Reflow reports</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d263790e671 d263790e542 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d263790e682" headers="d263790e537 ">
+                                    
+                                    <p>Shared lists of values</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d263790e682 d263790e542 ">
+                                    
+                                    <p>n/a</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d263790e694" headers="d263790e537 ">
+                                    
+                                    <p>Map regions</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d263790e694 d263790e542 ">
+                                    
+                                    <p>MySQL native Geometry type is not supported. Also,
+                                    the map query must return GeoJSON.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d263790e705" headers="d263790e537 ">
+                                    
+                                    <p>Trees</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d263790e705 d263790e542 ">
+                                    
+                                    <p>Column chosen as <span class="uicontrol bold">Order Siblings
+                                        By</span> must be a <code class="codeph">VARCHAR</code> data type
+                                    (no numeric or date columns).
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d263790e722" headers="d263790e537 ">
+                                    
+                                    <p>Execute Code page process</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d263790e722 d263790e542 ">
+                                    
+                                    <p>MySQL is not supported, and cannot be chosen from
+                                    the list of remote servers when using REST Enabled SQL.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d263790e733" headers="d263790e537 ">
+                                    
+                                    <p>Automations</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d263790e733 d263790e542 ">
+                                    
+                                    <p>MySQL servers are supported for the Automation
+                                    Query, but are not supported as a target within an Automation
+                                    Action and the Execute Code action type.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d263790e744" headers="d263790e537 ">
+                                    
+                                    <p>BLOB column in interactive report and classic
+                                    report</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d263790e744 d263790e542 ">
+                                    
+                                    <p>No support for BLOB columns in interactive reports
+                                    and classic reports since these do not support REST Enabled SQL
+                                    in general. BLOB columns are supported for the Cards regions and
+                                    for Form Display.</p>
+                                    
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-rest-enabled-sql-service-references.html#GUID-327EF999-FA26-4E0B-9CBA-A966594FD95C" title="Create REST Enabled SQL Service references to execute SQL or PL/SQL defined on a remote database.">Understanding REST Enabled SQL Service References</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-88AFE0BC-3811-4C96-81E3-B8319068D2B6" name="GUID-88AFE0BC-3811-4C96-81E3-B8319068D2B6"></a><h3 id="HTMDB-GUID-88AFE0BC-3811-4C96-81E3-B8319068D2B6" class="sect3"><span class="enumeration_section">18.5.1.4 </span>Differences between REST Enabled SQL
+        Service References and Database Links
+               </h3>
+               <div>
+                  <p>Learn how REST Enabled SQL Service references differ from database links. </p>
+                  <div class="section">
+                     <p> Both REST Enabled SQL Service references and database links enable developers to
+                access data remotely. However, these features access remote data differently. Key
+                differences between database links and REST Enabled SQL Service references
+                include:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><span class="bold">Database Link</span><ul style="list-style-type: disc;">
+                              <li>Functions at the SQL-level which enables developers to use remote tables and local tables in the same SQL query. </li>
+                              <li>Works over SQL*Net, which can be problematic when connecting to a Cloud instance over the internet.</li>
+                           </ul>
+                        </li>
+                        <li><span class="bold">REST Enabled SQL Service References</span><ul style="list-style-type: disc;">
+                              <li>Functions at the workspace-level. Developers can create an <span>APEX</span> component with a query on a REST enabled SQL Service but cannot join it to a local table.
+                              </li>
+                              <li>Works with JSON over HTTP(s) which makes it easy-to-use it in Cloud environments or over the internet.</li>
+                           </ul>
+                        </li>
+                     </ul>
+                     <p>Both Database Links and REST Enabled SQL fetch data over the network which is significantly slower than fetching data from a table in the local database. When evaluating the best approach for your environment, be sure to evaluate the impact on page view performance and always consider replicating remote data in local tables, with an appropriate refresh algorithm.</p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-rest-enabled-sql-service-references.html#GUID-327EF999-FA26-4E0B-9CBA-A966594FD95C" title="Create REST Enabled SQL Service references to execute SQL or PL/SQL defined on a remote database.">Understanding REST Enabled SQL Service References</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-226084B2-098B-44FA-B928-AA7085E3AD26" name="GUID-226084B2-098B-44FA-B928-AA7085E3AD26"></a><h3 id="HTMDB-GUID-226084B2-098B-44FA-B928-AA7085E3AD26" class="sect3"><span class="enumeration_section">18.5.1.5 </span>Populating the Endpoint URL
+        Dynamically
+               </h3>
+               <div>
+                  <p>Populate the server portion of the Endpoint URL dynamically using a
+        callback procedure you specify in the Configuration Procedure attribute. </p>
+                  <p>You can edit the Configuration Procedure attribute on the Edit Remote Server page. See
+                <a href="editing-or-deleting-a-remote-server.html#GUID-14B3F27F-E706-4654-BC85-3E8F7E7DF24C" title="Edit or delete a Remote Server from Shared Components.">Editing or Deleting a Remote Server</a>.
+                  </p>
+                  <div class="section">
+                     
+                     <p>Flexible Remote Server works as follows:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-226084B2-098B-44FA-B928-AA7085E3AD26__UL_SLP_4S2_HDC">
+                        <li>When the REST Enabled SQL reference is invoked, the <span>APEX</span> Engine evaluates the Configuration Procedure attribute.
+                        </li>
+                        <li>If the Configuration Procedure attribute has a value, either stored
+                    in the database or in an anonymous block in the <span class="uicontrol bold">PL/SQL
+                        Code</span> attribute, the <span>APEX</span> Engine executes the procedure to fetch a collection of substitution
+                    parameters that are then used to change the Endpoint URL.
+                        </li>
+                     </ul>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-226084B2-098B-44FA-B928-AA7085E3AD26__GUID-1726312E-EA9C-4DE7-9F9E-148C73D7C51D">Flexible Remote Server Use Cases</p>
+                     
+                     
+                     <p>Common use cases for using a Flexible Remote Server include:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-226084B2-098B-44FA-B928-AA7085E3AD26__UL_NLS_2TJ_HDC">
+                        <li>
+                           
+                           <p><span class="bold">Environment dependencies</span> - A Flexible Remote Server is a
+                        good choice when the environment is dependent upon where the server or
+                        application is deployed (for example, in production, test or development
+                        instances). Instead of manually changing the Endpoint URL attribute for each
+                        environment, you can use an API to change it dynamically. 
+                           </p>
+                           
+                           <div class="infobox-tip" id="GUID-226084B2-098B-44FA-B928-AA7085E3AD26__GUID-66B99F31-6401-4372-8123-641836F24F1F">
+                              <p class="notep1">Tip:</p>You can also use
+                            <code class="codeph">APPLICATION_ADMIN.SET_REMOTE_SERVER</code> procedure to change
+                        the Endpoint URL in a deployment script. See <a href="../aeapi/APEX_APPLICATION_ADMIN.SET_REMOTE_SERVER-Procedure.html#AEAPI-GUID-6D3B66D3-824A-4E01-900C-BE91C7F2BCF2" target="_blank">SET_REMOTE_SERVER
+                            Procedure</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></div>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="bold">Application data or the application user dependencies</span> - A
+                        Flexible Remote Server enables you to use the Configuration Procedure
+                        attribute to change the Endpoint URL at runtime depending on dynamic
+                        parameters. These dynamic parameters are flexible and can be based on a
+                        configuration table, items in Session State, Application Items or
+                        Substitution Items.
+                           </p>
+                           
+                           <p>The results of the Configuration Procedure are cached and reused within the
+                        same request (page view or page processing).</p>
+                           
+                        </li>
+                     </ul>
+                     
+                     <div class="infoboxnote" id="GUID-226084B2-098B-44FA-B928-AA7085E3AD26__GUID-9F377F97-EC09-4E3E-A8B2-2A006A5A3266">
+                        <p class="notep1">Note:</p>Flexible Remote Servers are only supported for <span class="uicontrol bold">REST Data
+                    Source</span> and <span class="uicontrol bold">Authentication</span> Server Types or
+                Remote Servers used in REST Enabled SQL.
+                     </div>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-226084B2-098B-44FA-B928-AA7085E3AD26__GUID-A41C5216-3969-4401-928A-06A50A29CE88">Configuring a Flexible Remote
+                Server</p>
+                     
+                     
+                     <p>To configure a Flexible Remote Server, edit the REST Enabled SQL service
+                and enter a procedure name in the <span class="uicontrol bold">Configuration Procedure</span>
+                attribute. This procedure can be the name of a procedure stored in the database,
+                stored in a database package procedure, or a procedure stored in the
+                    <span class="uicontrol bold">PL/SQL Code</span> attribute. 
+                     </p>
+                     
+                     <p>This signature of the procedure must have two parameters of type:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-226084B2-098B-44FA-B928-AA7085E3AD26__UL_E2Z_LWJ_HDC">
+                        <li><code class="codeph">p_info in apex_plugin.t_remote_server_info</code></li>
+                        <li><code class="codeph">p_config in out
+                    apex_plugin.t_remote_server_config</code></li>
+                     </ul>
+                     
+                     <p>The parameter <code class="codeph">p_config</code> has two optional attributes which
+                can be changed in the configuration procedure: 
+                     </p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-226084B2-098B-44FA-B928-AA7085E3AD26__UL_PTX_QHK_HDC">
+                        <li><code class="codeph">p_config.base_url</code> -
+                        <code class="codeph"><span class="codeinlineitalic">base_url</span></code> changes the Endpoint URL.
+                        </li>
+                        <li><code class="codeph">p_config.substitutions</code> -
+                            <code class="codeph"><span class="codeinlineitalic">substitutions</span></code> assigns name/value pairs using
+                        <code class="codeph">apex_t_varchar2</code>. <span>Oracle APEX</span> substitutes each <code class="codeph">#<span class="codeinlineitalic">NAME</span>#</code> in the base url or Endpoint
+                    URL. 
+                        </li>
+                     </ul>
+                     
+                     <p>Together these two attributes determine the actual Endpoint URL the
+                Remote Server uses. </p>
+                     
+                     <div class="infobox-tip" id="GUID-226084B2-098B-44FA-B928-AA7085E3AD26__GUID-B41C58CB-2BD6-4CB3-9102-EBD4C6243491">
+                        <p class="notep1">Tip:</p>To view Configuration
+                Procedure examples, see item Help for the <span class="uicontrol bold">Configuration
+                    Procedure</span> attribute. 
+                     </div>
+                     
+                     <p>The following example changes the base URL if the application ID is
+                100:</p>
+                     <pre class="pre codeblock"><code>procedure my_server_config(
+  p_info    in  apex_plugin.t_remote_server_info,
+  p_config  out apex_plugin.t_remote_server_config )
+is
+begin
+  if v('APP_ID') = 100 then
+    p_config.base_url := 'http://example100.com';
+  else
+    p_config.base_url := 'http://example.com';
+  end if;
+end;
+</code></pre>
+                     <p>You can also can use placeholders by enclosing the "<span class="italic">name</span>" with the
+                number symbol (#) and use substitutions to replace the value in those placeholders.
+                Consider the following example:
+                     </p>
+                     <pre class="pre codeblock"><code>procedure my_server_config(
+  p_info    in  apex_plugin.t_remote_server_info,
+  p_config  out apex_plugin.t_remote_server_config )
+is
+begin
+  if v('APP_ID') = 100 then
+    p_config.base_url := 'http://example100.com';
+  else
+    p_config.base_url := 'http://example.com';
+  end if;
+end;
+</code></pre>
+                     
+                     </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-226084B2-098B-44FA-B928-AA7085E3AD26__GUID-FF3B11BA-EA21-47F2-8ED9-B5BCA2EA8B23">
+                     <p class="notep1">See Also:</p><a href="editing-rest-enabled-sql-service-reference.html#GUID-72970F0F-2A69-46A0-A470-765999E53920" title="Edit existing REST Enabled SQL references on the Edit page.">Editing a REST Enabled SQL Service Reference</a></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-rest-enabled-sql-service-references.html#GUID-327EF999-FA26-4E0B-9CBA-A966594FD95C" title="Create REST Enabled SQL Service references to execute SQL or PL/SQL defined on a remote database.">Understanding REST Enabled SQL Service References</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-DC255B39-72CC-45DD-AFD8-D4C04FFC7EC8" name="GUID-DC255B39-72CC-45DD-AFD8-D4C04FFC7EC8"></a><h3 id="HTMDB-GUID-DC255B39-72CC-45DD-AFD8-D4C04FFC7EC8" class="sect3"><span class="enumeration_section">18.5.1.6 </span>Exporting and Importing REST Enabled SQL
+        Services
+               </h3>
+               <div>
+                  <p>Create REST Enabled SQL Service references to execute SQL or PL/SQL defined on a remote <span>Oracle</span> database. 
+                  </p>
+                  <p>When you export an application, used REST Enabled SQL references are added to
+            the export file. If you export an application and import it into another workspace, <span>APEX</span> checks whether the target workspace already contains REST Enabled SQL references with
+            the same static ID. If a REST Enabled SQL reference already exists, the application uses
+            the existing reference. If the reference does not exist, it is created in the target
+            workspace.
+                  </p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-rest-enabled-sql-service-references.html#GUID-327EF999-FA26-4E0B-9CBA-A966594FD95C" title="Create REST Enabled SQL Service references to execute SQL or PL/SQL defined on a remote database.">Understanding REST Enabled SQL Service References</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

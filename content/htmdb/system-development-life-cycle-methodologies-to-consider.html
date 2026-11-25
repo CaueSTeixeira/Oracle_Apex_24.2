@@ -1,0 +1,272 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="System Development Life Cycle Methodologies to Consider">
+      <meta name="abstract" content="The system development life cycle (SDLC) is the overall process of developing software using a series of defined steps. There are several system SDLC models that work well for developing applications in Oracle APEX.">
+      <meta name="description" content="The system development life cycle (SDLC) is the overall process of developing software using a series of defined steps. There are several system SDLC models that work well for developing applications in Oracle APEX.">
+      <meta name="DC.subject" content="SDLC, Spiral, rapid application development">
+      <meta name="keywords" content="SDLC, Spiral, rapid application development">
+      <meta name="DC.Relation" scheme="URI" content="deploying-an-application.html#GUID-3EE94790-D67B-4CE0-8A8E-85B05305DEDD">
+      <meta name="DC.Relation" scheme="URI" content="system-development-life-cycle-methodologies-to-consider.html#GUID-3864BB3B-B120-44D1-9D4B-0CAA611F1E8B">
+      <meta name="DC.Relation" scheme="URI" content="system-development-life-cycle-methodologies-to-consider.html#GUID-42E22914-3E86-4EEF-8B91-43DA5A108A1E">
+      <meta name="DC.Relation" scheme="URI" content="system-development-life-cycle-methodologies-to-consider.html#GUID-BC559DEA-C9AD-42C5-88B9-4B3A3AE13669">
+      <meta name="DC.Relation" scheme="URI" content="system-development-life-cycle-methodologies-to-consider.html#GUID-EF33C76B-D2F2-4649-9A92-654171E8C0F0">
+      <meta name="DC.Relation" scheme="URI" content="system-development-life-cycle-methodologies-to-consider.html#GUID-8476DD90-0F8A-4874-B746-FE7A7F053422">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-6BF671CD-F282-4BA7-BD8A-01E878064F69">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="The system development life cycle (SDLC) is the overall process of developing software using a series of defined steps. There are several system SDLC models that work well for developing applications in Oracle APEX.">
+      <meta name="description" content="The system development life cycle (SDLC) is the overall process of developing software using a series of defined steps. There are several system SDLC models that work well for developing applications in Oracle APEX.">
+      <title>System Development Life Cycle Methodologies to Consider</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="The system development life cycle (SDLC) is the overall process of developing software using a series of defined steps. There are several system SDLC models that work well for developing applications in Oracle APEX.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="deploying-an-application.html" title="Previous" type="text/html">
+      <link rel="next" href="understanding-the-deployment-process.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"System Development Life Cycle Methodologies to Consider","description":"The system development life cycle (SDLC) is the overall process of developing software using a series of defined steps. There are several system SDLC models that work well for developing applications in Oracle APEX.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="deploying-an-application.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="understanding-the-deployment-process.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-6BF671CD-F282-4BA7-BD8A-01E878064F69" name="GUID-6BF671CD-F282-4BA7-BD8A-01E878064F69"></a><a id="HTMDB25794"></a>
+         
+         <h2 id="HTMDB-GUID-6BF671CD-F282-4BA7-BD8A-01E878064F69" class="sect2"><span class="enumeration_section">25.1 </span>System Development Life Cycle Methodologies to Consider
+         </h2>
+         <div class="ind">
+            <p>The system development life cycle (SDLC) is the overall process of developing software using a series of defined steps. There are several system SDLC models that work well for developing applications in <span>Oracle APEX</span>.
+            </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="system-development-life-cycle-methodologies-to-consider.html#GUID-3864BB3B-B120-44D1-9D4B-0CAA611F1E8B">Differences Between Iterative and Planned Development</a><br>Learn about the differences between iterative and planned development.
+                  </li>
+                  <li class="ulchildlink"><a href="system-development-life-cycle-methodologies-to-consider.html#GUID-42E22914-3E86-4EEF-8B91-43DA5A108A1E">About the Advantages of Creating Prototypes</a><br>Learn about the advantages of creating prototypes.
+                  </li>
+                  <li class="ulchildlink"><a href="system-development-life-cycle-methodologies-to-consider.html#GUID-BC559DEA-C9AD-42C5-88B9-4B3A3AE13669">Waterfall</a><br>Learn about the Waterfall methodology.
+                  </li>
+                  <li class="ulchildlink"><a href="system-development-life-cycle-methodologies-to-consider.html#GUID-EF33C76B-D2F2-4649-9A92-654171E8C0F0">Spiral</a><br>Learn about the Spiral methodology.
+                  </li>
+                  <li class="ulchildlink"><a href="system-development-life-cycle-methodologies-to-consider.html#GUID-8476DD90-0F8A-4874-B746-FE7A7F053422">Rapid Application Development</a><br>Learn about the Rapid Application Development (RAD) methodology.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="deploying-an-application.html#GUID-3EE94790-D67B-4CE0-8A8E-85B05305DEDD" title="Learn about best practices for deploying an application. Deployment is the process of moving an application from the testing phase to the production phase.">Deploying an Application</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB29425"></a><div class="props_rev_3"><a id="GUID-3864BB3B-B120-44D1-9D4B-0CAA611F1E8B" name="GUID-3864BB3B-B120-44D1-9D4B-0CAA611F1E8B"></a><h3 id="HTMDB-GUID-3864BB3B-B120-44D1-9D4B-0CAA611F1E8B" class="sect3"><span class="enumeration_section">25.1.1 </span>Differences Between Iterative and Planned
+        Development
+               </h3>
+               <div>
+                  <p>Learn about the differences between iterative and planned development.</p>
+                  <p>When developing applications using <span>App Builder</span>, you must find a balance between two dramatically different development methodologies:
+                  </p>
+                  <ul style="list-style-type: disc;">
+                     <li>Iterative, rapid application development</li>
+                     <li>Planned, linear style development</li>
+                  </ul>
+                  <p>Iterative, rapid application development offers so much flexibility that you run the risk of never completing your project. In contrast, planned, linear style development can yield applications that do not meet the needs of end users even if they meet the stated requirements on paper.</p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="system-development-life-cycle-methodologies-to-consider.html#GUID-6BF671CD-F282-4BA7-BD8A-01E878064F69" title="The system development life cycle (SDLC) is the overall process of developing software using a series of defined steps. There are several system SDLC models that work well for developing applications in Oracle APEX.">System Development Life Cycle Methodologies to Consider</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29426"></a><div class="props_rev_3"><a id="GUID-42E22914-3E86-4EEF-8B91-43DA5A108A1E" name="GUID-42E22914-3E86-4EEF-8B91-43DA5A108A1E"></a><h3 id="HTMDB-GUID-42E22914-3E86-4EEF-8B91-43DA5A108A1E" class="sect3"><span class="enumeration_section">25.1.2 </span>About the Advantages of Creating Prototypes
+               </h3>
+               <div>
+                  <p>Learn about the advantages of creating prototypes.</p>
+                  <p>The <span>APEX</span> development environment enables developers to take a more iterative approach to development. Unlike many other development environments, creating prototypes is easy. With <span>APEX</span>, developers can: 
+                  </p>
+                  <ul style="list-style-type: disc;">
+                     <li>Use built-in wizards to quickly design an application user interface.</li>
+                     <li>Make prototypes available to users and gather feedback.</li>
+                     <li>Implement changes in real time, creating new prototypes instantly.</li>
+                  </ul>
+                  <p>Methodologies that work well with <span>APEX</span> include Spiral and Rapid Application Development (RAD).
+                  </p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-42E22914-3E86-4EEF-8B91-43DA5A108A1E__GUID-E674F100-80B0-44A7-957E-C546D311A2BE">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="system-development-life-cycle-methodologies-to-consider.html#GUID-EF33C76B-D2F2-4649-9A92-654171E8C0F0" title="Learn about the Spiral methodology.">Spiral</a></li>
+                        <li><a href="system-development-life-cycle-methodologies-to-consider.html#GUID-8476DD90-0F8A-4874-B746-FE7A7F053422" title="Learn about the Rapid Application Development (RAD) methodology.">Rapid Application Development</a></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="system-development-life-cycle-methodologies-to-consider.html#GUID-6BF671CD-F282-4BA7-BD8A-01E878064F69" title="The system development life cycle (SDLC) is the overall process of developing software using a series of defined steps. There are several system SDLC models that work well for developing applications in Oracle APEX.">System Development Life Cycle Methodologies to Consider</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29427"></a><div class="props_rev_3"><a id="GUID-BC559DEA-C9AD-42C5-88B9-4B3A3AE13669" name="GUID-BC559DEA-C9AD-42C5-88B9-4B3A3AE13669"></a><h3 id="HTMDB-GUID-BC559DEA-C9AD-42C5-88B9-4B3A3AE13669" class="sect3"><span class="enumeration_section">25.1.3 </span>Waterfall
+               </h3>
+               <div>
+                  <p>Learn about the Waterfall methodology.</p>
+                  <div class="section">
+                     <p>The <strong class="term">Waterfall</strong> is probably the best known SDLC model. In this
+                methodology, the development process is broken down into the following stages:
+                     </p>
+                     <ol>
+                        <li>
+                           <p>Project Planning</p>
+                        </li>
+                        <li>
+                           <p>Requirements Definition</p>
+                        </li>
+                        <li>
+                           <p>Design</p>
+                        </li>
+                        <li>
+                           <p>Development</p>
+                        </li>
+                        <li>
+                           <p>Integration and Testing</p>
+                        </li>
+                        <li>
+                           <p>Installation and Acceptance</p>
+                        </li>
+                        <li>
+                           <p>Maintenance</p>
+                        </li>
+                     </ol>
+                     <p>This methodology is referred to as a waterfall because the output from one stage is the input for the next stage. </p>
+                     <p>A primary problem with this approach is that it is assumed that all requirements can be established in advance. Unfortunately, requirements often change and evolve during the development process.</p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="system-development-life-cycle-methodologies-to-consider.html#GUID-6BF671CD-F282-4BA7-BD8A-01E878064F69" title="The system development life cycle (SDLC) is the overall process of developing software using a series of defined steps. There are several system SDLC models that work well for developing applications in Oracle APEX.">System Development Life Cycle Methodologies to Consider</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29428"></a><div class="props_rev_3"><a id="GUID-EF33C76B-D2F2-4649-9A92-654171E8C0F0" name="GUID-EF33C76B-D2F2-4649-9A92-654171E8C0F0"></a><h3 id="HTMDB-GUID-EF33C76B-D2F2-4649-9A92-654171E8C0F0" class="sect3"><span class="enumeration_section">25.1.4 </span>Spiral
+               </h3>
+               <div>
+                  <p>Learn about the Spiral methodology.</p>
+                  <div class="section">
+                     <p>A <strong class="term">Spiral</strong> methodology is actually a series of short waterfall cycles.
+                Each waterfall cycle yields new requirements and enables the development team to
+                create a robust series of prototypes. One advantage of this approach is that it
+                accommodates changing requirements. Disadvantages include complex project management
+                and the risk development goes on indefinitely.
+                     </p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="system-development-life-cycle-methodologies-to-consider.html#GUID-6BF671CD-F282-4BA7-BD8A-01E878064F69" title="The system development life cycle (SDLC) is the overall process of developing software using a series of defined steps. There are several system SDLC models that work well for developing applications in Oracle APEX.">System Development Life Cycle Methodologies to Consider</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29429"></a><div class="props_rev_3"><a id="GUID-8476DD90-0F8A-4874-B746-FE7A7F053422" name="GUID-8476DD90-0F8A-4874-B746-FE7A7F053422"></a><h3 id="HTMDB-GUID-8476DD90-0F8A-4874-B746-FE7A7F053422" class="sect3"><span class="enumeration_section">25.1.5 </span>Rapid Application Development
+               </h3>
+               <div>
+                  <p>Learn about the Rapid Application Development (RAD) methodology.</p>
+                  <div class="section">
+                     <p>A <strong class="term">Rapid Application Development</strong> (RAD) methodology has a heavy emphasis
+                on creating a prototype that closely resembles the final product. The prototype is
+                an essential part of the requirements phase. Advantages of this model include the
+                ability to accommodate changing requirements, rapid development cycles, and progress
+                can be easily measured. The major disadvantage of this model is that the emphasis on
+                prototyping can result in scope creep. As a result, developers can lose sight of
+                their initial goals in the attempt to create the perfect application.
+                     </p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="system-development-life-cycle-methodologies-to-consider.html#GUID-6BF671CD-F282-4BA7-BD8A-01E878064F69" title="The system development life cycle (SDLC) is the overall process of developing software using a series of defined steps. There are several system SDLC models that work well for developing applications in Oracle APEX.">System Development Life Cycle Methodologies to Consider</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

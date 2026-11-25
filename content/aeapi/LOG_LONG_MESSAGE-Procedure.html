@@ -1,0 +1,163 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="LOG_LONG_MESSAGE Procedure">
+      <meta name="DC.subject" content="LOG_LONG_MESSAGE procedure, APEX_DEBUG">
+      <meta name="keywords" content="LOG_LONG_MESSAGE procedure, APEX_DEBUG">
+      <meta name="DC.Relation" scheme="URI" content="APEX_DEBUG.html#GUID-8E80E46E-CCEF-4CCC-8D00-8EC3A5C36FDE">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-92348F3F-9021-49B3-9203-7100EED6B904">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>LOG_LONG_MESSAGE Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="LOG_DBMS_OUTPUT-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="LOG_MESSAGE-Procedure-Deprecated.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"LOG_LONG_MESSAGE Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="LOG_DBMS_OUTPUT-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="LOG_MESSAGE-Procedure-Deprecated.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-92348F3F-9021-49B3-9203-7100EED6B904" name="GUID-92348F3F-9021-49B3-9203-7100EED6B904"></a><a id="AEAPI29214"></a><a id="AEAPI29215"></a><a id="AEAPI29216"></a><a id="AEAPI29217"></a><a id="AEAPI29213"></a>
+         
+         <h2 id="AEAPI-GUID-92348F3F-9021-49B3-9203-7100EED6B904" class="sect2"><span class="enumeration_section">23.12 </span>LOG_LONG_MESSAGE Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This procedure emits debug messages from PL/SQL components of <span>Oracle APEX</span>, or PL/SQL procedures and functions.
+                  </p>
+                  <p>This procedure is the same as LOG_MESSAGE, except it allows logging of much longer messages, which are subsequently split into 4,000 character chunks in the debugging output (because a single debug message is constrained to 4,000 characters).</p>
+                  <div class="infoboxnote" id="GUID-92348F3F-9021-49B3-9203-7100EED6B904__GUID-AF210F41-CFD5-4B3A-9019-2776EFDB6F1B">
+                     <p class="notep1">Note:</p>As a best practice, <span>Oracle</span> recommends using shorter message APIs when possible (ERROR, WARN, and so on), and reserving LOG_LONG_MESSAGE for scenarios that require longer messages.
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-92348F3F-9021-49B3-9203-7100EED6B904__GUID-82699200-1DC9-44F7-BCC7-C0B01DFDF038">Syntax</p><pre class="pre codeblock"><code>APEX_DEBUG.LOG_LONG_MESSAGE (
+    p_message   IN VARCHAR2     DEFAULT NULL,
+    p_enabled   IN BOOLEAN      DEFAULT FALSE,
+    p_level     IN t_log_level  DEFAULT c_log_level_app_trace )</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-92348F3F-9021-49B3-9203-7100EED6B904__GUID-89C082AB-1B7F-42A6-9874-91637E186C2B">Parameters</p>
+                  <div class="tblformal" id="GUID-92348F3F-9021-49B3-9203-7100EED6B904__BCGFIJAG">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="31%" id="d83373e84">Parameter</th>
+                              <th align="left" valign="bottom" width="69%" id="d83373e86">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d83373e90" headers="d83373e84 "><code class="codeph">p_message</code></td>
+                              <td align="left" valign="top" width="69%" headers="d83373e90 d83373e86 ">Log long message with maximum size of 32,767 bytes.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d83373e96" headers="d83373e84 "><code class="codeph">p_enabled</code></td>
+                              <td align="left" valign="top" width="69%" headers="d83373e96 d83373e86 ">Set to <code class="codeph">TRUE</code> to always log messages, irrespective of whether debugging is enabled. Set to <code class="codeph">FALSE</code> to only log messages if debugging is enabled.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d83373e108" headers="d83373e84 ">p_level</td>
+                              <td align="left" valign="top" width="69%" headers="d83373e108 d83373e86 ">Identifies the level of the long log message. See <a href="APEX_DEBUG-Constants.html#GUID-412ED5E2-1739-4A9B-B214-38674B4A4BCD">Constants</a>.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-92348F3F-9021-49B3-9203-7100EED6B904__GUID-5CE7BC7C-FA4E-447F-852C-29E317B28EAB">Example</p>
+                  <p>This example enables debug message logging for level <code class="codeph">1</code> and <code class="codeph">2</code> messages and display a level <code class="codeph">1</code> message that could contain anything up to 32,767 characters. Note the <code class="codeph">p_enabled</code> parameter need not be specified, as debugging has been explicitly enabled and the default of <code class="codeph">FALSE</code> for this parameter respects this enabling.
+                  </p><pre class="pre codeblock"><code>DECLARE
+    l_msg VARCHAR2(32767) := 'Debug outputs anything up to varchar2 limit';
+BEGIN
+    APEX_DEBUG.ENABLE (p_level =&gt; 2);
+
+    APEX_DEBUG.LOG_LONG_MESSAGE(
+        p_message =&gt; l_msg,
+        p_level =&gt; 1 );     
+END;</code></pre><div class="infoboxnotealso" id="GUID-92348F3F-9021-49B3-9203-7100EED6B904__GUID-BB2157F8-FD76-4C85-AADE-10D54823CACE">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="ENTER-Procedure.html#GUID-56D49575-92E8-4BD9-8469-30E3F66D7682">ENTER Procedure</a></li>
+                        <li><a href="ERROR-Procedure.html#GUID-9CAFF9DD-A2FB-46DC-A4CB-EEB6D61CE0D5">ERROR Procedure</a></li>
+                        <li><a href="INFO-Procedure.html#GUID-C8E6E25E-8211-49F8-9110-33F074E68927">INFO Procedure</a></li>
+                        <li><a href="MESSAGE-Procedure.html#GUID-2503CA63-2C6F-429C-A767-611CFEE6FE73">MESSAGE Procedure</a></li>
+                        <li><a href="TRACE-Procedure.html#GUID-B2EC13C4-C3EF-4941-AD75-EBBB202190B5">TRACE Procedure</a></li>
+                        <li><a href="WARN-Procedure.html#GUID-97BA4A04-A342-45DE-8524-893AF3AD49AA">WARN Procedure</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_DEBUG.html#GUID-8E80E46E-CCEF-4CCC-8D00-8EC3A5C36FDE">APEX_DEBUG</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

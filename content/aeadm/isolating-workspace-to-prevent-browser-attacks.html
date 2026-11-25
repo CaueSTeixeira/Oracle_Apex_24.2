@@ -1,0 +1,476 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Isolating a Workspace to Prevent Browser Attacks">
+      <meta name="abstract" content="Workspace administrators can prevent browser attacks by isolating a specific workspace. Workspace-level settings override those configured for an entire instance.">
+      <meta name="description" content="Workspace administrators can prevent browser attacks by isolating a specific workspace. Workspace-level settings override those configured for an entire instance.">
+      <meta name="DC.subject" content="workspace isolation, configuring for instance, workspace, isolating to prevent browser attacks, Workspace Isolation, configuring attributes">
+      <meta name="keywords" content="workspace isolation, configuring for instance, workspace, isolating to prevent browser attacks, Workspace Isolation, configuring attributes">
+      <meta name="DC.Relation" scheme="URI" content="managing-existing-workspaces.html#GUID-ACCB0B3A-C7DE-40F7-BD57-716417FD71A9">
+      <meta name="DC.Relation" scheme="URI" content="isolating-workspace-to-prevent-browser-attacks.html#GUID-D7EED8D0-7329-4054-B503-BE8FA80B44AB">
+      <meta name="DC.Relation" scheme="URI" content="isolating-workspace-to-prevent-browser-attacks.html#GUID-39A99209-B587-44DE-8C5D-19B9906C7D94">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-8BF9FF41-1CA7-44E7-A82E-42B927F42CF9">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Workspace administrators can prevent browser attacks by isolating a specific workspace. Workspace-level settings override those configured for an entire instance.">
+      <meta name="description" content="Workspace administrators can prevent browser attacks by isolating a specific workspace. Workspace-level settings override those configured for an entire instance.">
+      <title>Isolating a Workspace to Prevent Browser Attacks</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Workspace administrators can prevent browser attacks by isolating a specific workspace. Workspace-level settings override those configured for an entire instance.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="viewing-existing-workspace-information.html" title="Previous" type="text/html">
+      <link rel="next" href="deleting-a-workspace.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Isolating a Workspace to Prevent Browser Attacks","description":"Workspace administrators can prevent browser attacks by isolating a specific workspace. Workspace-level settings override those configured for an entire instance.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="viewing-existing-workspace-information.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="deleting-a-workspace.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-8BF9FF41-1CA7-44E7-A82E-42B927F42CF9" name="GUID-8BF9FF41-1CA7-44E7-A82E-42B927F42CF9"></a><a id="AEADM479"></a>
+         
+         <h2 id="AEADM-GUID-8BF9FF41-1CA7-44E7-A82E-42B927F42CF9" class="sect2"><span class="enumeration_section">3.12.3 </span>Isolating a Workspace to Prevent Browser Attacks
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Workspace administrators can prevent browser attacks by isolating a specific
+                workspace. Workspace-level settings override those configured for an entire
+                instance.</p>
+               <div class="infoboxnote" id="GUID-8BF9FF41-1CA7-44E7-A82E-42B927F42CF9__GUID-5531CA81-DB11-419F-9E4E-67464A848C82">
+                  <p class="notep1">Note:</p>To ensure the security and performance of your
+                                development environment, this functionality is not available in
+                                Oracle APEX instances running in Oracle Cloud.
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="isolating-workspace-to-prevent-browser-attacks.html#GUID-D7EED8D0-7329-4054-B503-BE8FA80B44AB">About Isolating a Workspace to Prevent Browser Attacks</a><br>Isolating workspaces is an effective approach to preventing browser attacks.
+                  </li>
+                  <li class="ulchildlink"><a href="isolating-workspace-to-prevent-browser-attacks.html#GUID-39A99209-B587-44DE-8C5D-19B9906C7D94">Configuring Workspace Isolation Attributes</a><br>Configure Workspace Isolation attributes.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-existing-workspaces.html#GUID-ACCB0B3A-C7DE-40F7-BD57-716417FD71A9" title="Instance administrators can manage existing workspaces within an Oracle APEX instance.">Managing Existing Workspaces</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="AEADM29238"></a><div class="props_rev_3"><a id="GUID-D7EED8D0-7329-4054-B503-BE8FA80B44AB" name="GUID-D7EED8D0-7329-4054-B503-BE8FA80B44AB"></a><h3 id="AEADM-GUID-D7EED8D0-7329-4054-B503-BE8FA80B44AB" class="sect3"><span class="enumeration_section">3.12.3.1 </span>About Isolating a Workspace to Prevent Browser Attacks
+               </h3>
+               <div>
+                  <p>Isolating workspaces is an effective approach to preventing browser attacks.</p>
+                  <p>The only way to truly isolate a workspace is to enforce different domains in the URL
+            by configuring the Allow Hostnames attribute. When the URLs of the attacker and the
+            victim have different domains and hostnames, the browser's same-origin policy prevents
+            attacks.</p>
+                  <p>Workspace isolation by configuring Allow Hostnames is a counter measure against client
+            side attacks that attempt to cross workspace boundaries. This security measure is not
+            necessary if you trust all applications that are accessible using the instance's host
+            which includes applications that are written in other frameworks and languages such as
+            Oracle Application Development Framework (ADF) and Java.</p>
+                  <p>Instance administrators can cofigure the Allow Hostnames attribute at the instance-level.
+            Workspace administrators can override the instance-level setting for a specific
+            workspace.</p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-D7EED8D0-7329-4054-B503-BE8FA80B44AB__GUID-6F629461-6DDF-4A02-A862-9C1190321CE9">
+                     <p class="notep1">See Also:</p>
+                     
+                     <p><a href="isolating-workspaces-in-an-instance.html#GUID-B3BD09CF-D003-4837-A7D2-91A6E756D72E" title="Instance administrators can configure limits to isolate all workspaces and prevent browser attacks. Workspace administrators can override these default values at the workspace-level.">Isolating All Workspaces in an Instance</a></p>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="isolating-workspace-to-prevent-browser-attacks.html#GUID-8BF9FF41-1CA7-44E7-A82E-42B927F42CF9" title="Workspace administrators can prevent browser attacks by isolating a specific workspace. Workspace-level settings override those configured for an entire instance.">Isolating a Workspace to Prevent Browser Attacks</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29240"></a><a id="AEADM29239"></a><div class="props_rev_3"><a id="GUID-39A99209-B587-44DE-8C5D-19B9906C7D94" name="GUID-39A99209-B587-44DE-8C5D-19B9906C7D94"></a><h3 id="AEADM-GUID-39A99209-B587-44DE-8C5D-19B9906C7D94" class="sect3"><span class="enumeration_section">3.12.3.2 </span>Configuring Workspace Isolation Attributes
+               </h3>
+               <div>
+                  <p>Configure Workspace Isolation attributes.</p>
+                  <p>To configure Workspace Isolation attributes:</p>
+                  <ol>
+                     <li class="stepexpand"><span>View the existing workspace:</span><ol type="a">
+                           <li><span>Sign in to <span>Oracle APEX</span> Administration Services.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Manage Workspaces</span>.</span></li>
+                           <li><span>Under Workspace Reports, click <span class="uicontrol bold">Existing Workspaces</span>.</span></li>
+                           <li><span>Click a workspace name. </span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On the Edit Information page, locate Workspace Isolation and edit the
+                    attributes as described in the following table.</span><div>
+                           
+                           <div class="infobox-tip" id="GUID-39A99209-B587-44DE-8C5D-19B9906C7D94__GUID-098DBEDC-052B-42B2-BD34-B36F06499B38">
+                              <p class="notep1">Tip:</p>
+                              
+                              <p>To learn more about an attribute and view examples, see
+                            field-level Help.</p>
+                              
+                           </div>
+                           
+                           <div class="tblformalwide" id="GUID-39A99209-B587-44DE-8C5D-19B9906C7D94__TABLE_AXT_FL2_WXB">
+                              <table cellpadding="4" cellspacing="0" class="FormalWide" title summary="Workspace Isolation attributes." width="90%" frame="hsides" border="1" rules="rows">
+                                 <thead>
+                                    <tr align="left" valign="top">
+                                       <th align="left" valign="bottom" width="0%" id="d45759e263">
+                                        Attribute
+                                    </th>
+                                       <th align="left" valign="bottom" width="0%" id="d45759e268">
+                                        Description
+                                    </th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="0%" id="d45759e275" headers="d45759e263 ">
+                                          <p>Allow Hostnames
+                                            </p><a id="d45759e278" class="indexterm-anchor"></a><a id="d45759e282" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="0%" headers="d45759e275 d45759e268 ">
+                                          
+                                          <p>Enter a comma separated list of hostnames
+                                            that can be used to access this workspace. If you leave
+                                            this attribute empty, the instance-level value applies.
+                                            If you enter one or more hostnames, the incoming HTTP
+                                            request URL's hostname part must match one of the listed
+                                            hostnames. </p>
+                                          
+                                          <p>For example, you can register the DNS alias
+                                                <code class="codeph">hr.example.com</code> for your web server
+                                                <code class="codeph">www.example.com</code>. If you set the HR
+                                            workspace's <span class="uicontrol bold">Allow Hostnames</span> to
+                                                <code class="codeph">hr.example.com</code>, users have to
+                                            access HR applications using
+                                                <code class="codeph">hr.example.com</code> and all other
+                                            applications of this instance
+                                                using<code class="codeph">www.example.com</code>. With this
+                                            configuration, the browser's <strong class="term">Same
+                                                Origin security policy</strong> provides a client-side
+                                            barrier between HR applications and other applications
+                                            of the instance, which run in another browser tab or
+                                            window.
+                                          </p>
+                                          
+                                          <p>If your workspace uses RESTful services, you
+                                            have to additionally configure a pool in the
+                                                <code class="codeph">url-mapping.xml</code> configuration file
+                                            of Oracle REST Data Services for isolation. Note that
+                                            Oracle REST Data Services will ignore the
+                                                <span class="uicontrol bold">RESTful Path Prefix</span> workspace
+                                            attribute if <span class="uicontrol bold">Allow Hostnames</span> is
+                                            configured.
+                                          </p>
+                                          
+                                          <p>The configuration example below specifies
+                                            that RESTful services of the HR workspace can only be
+                                            accessed using
+                                                  <code class="codeph">https://hr.example.com/apex/<span class="codeinlineitalic">resource-handler</span></code>:
+                                          </p>
+                                          
+                                          <p><code class="codeph">&lt;pool
+                                                base-url="https://hr.example.com/apex" name="apex"
+                                                workspace-id="hr" /&gt;</code></p>
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="0%" id="d45759e341" headers="d45759e263 ">
+                                          <p>Resource Consumer
+                                            Group</p><a id="d45759e344" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="0%" headers="d45759e341 d45759e268 ">
+                                          
+                                          <p>Specify the Database Resource Manager
+                                            consumer group to be used for all page events associated
+                                            with this workspace. If you leave this attribute empty,
+                                            the instance level value applies. The Resource Consumer
+                                            Group provides more control of hardware resources such
+                                            as CPU and I/O requests. Workspace-level settings
+                                            override instance-level settings to enable
+                                            administrators to provide more or less resources
+                                            depending on the needs or importance of a workspace.</p>
+                                          
+                                          <p>At the beginning of every request, the <span>APEX</span> engine switches the current consumer group of the
+                                            current database session to the consumer group that is
+                                            defined at workspace or instance-level. This applies to
+                                            both executing applications and any of the applications
+                                            used within the <span>APEX</span> development environment.
+                                          </p>
+                                          
+                                          <p>These limitations apply to all page
+                                            requests, where application code executes using the <span>APEX</span> engine which enables the assigned Resource Manager
+                                            settings. However, they do not apply to Oracle Scheduler
+                                            jobs that workspace developers create, or to ORDS REST
+                                            requests where <span>APEX</span> is not in the code path.
+                                          </p>
+                                          
+                                          <p>A call to set the workspace, such as
+                                                <code class="codeph">apex_util.set_workspace('MY_WORKSPACE');</code>
+                                            at the beginning of the scheduler job, enables the right
+                                            consumer group. However, there is often no reason for
+                                            developers to add this type call. Therefore,
+                                            administrators should apply the Resource Manager
+                                            consumer groups both to <span>APEX</span> workspaces and to the workspace schemas (that is, the
+                                            underlying database users). 
+                                          </p>
+                                          
+                                          <p>You must grant privilege to switch to a
+                                            consumer group to either <code class="codeph">PUBLIC</code> or the
+                                                <span>APEX</span> schema. This privilege is typically granted using the
+                                            procedure
+                                                <code class="codeph">DBMS_RESOURCE_MANAGER_PRIVS.GRANT_SWITCH_CONSUMER_GROUP</code>.
+                                          </p>
+                                          
+                                          <p><span class="bold">See Also</span>: <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeadm&id=ADMIN-GUID-2BEF5482-CF97-4A85-BD90-9195E41E74EF" target="_blank">Managing
+                                                Resources with Oracle Database Resource
+                                                Manager</a> in <span><cite>Oracle Database
+                                        Administrator’s Guide</cite></span></p>
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="0%" id="d45759e406" headers="d45759e263 ">
+                                          <p>Maximum
+                                            Concurrent Workspace Requests</p><a id="d45759e409" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="0%" headers="d45759e406 d45759e268 ">
+                                          
+                                          <p>Enter the maximum number of concurrent page
+                                            events that <span>APEX</span> supports for all applications of this workspace. If
+                                            you leave this attribute empty, the instance-level value
+                                            applies. Instead of processing a page event, <span>APEX</span> shows an error message when the limit is already
+                                            reached.
+                                          </p>
+                                          
+                                          <p><span>APEX</span> keeps track of session requests by querying the
+                                                <code class="codeph">CLIENT_INFO</code> column of
+                                                <code class="codeph">GV$SESSION</code>. This tracking will not
+                                            work if developers overwrite
+                                                <code class="codeph">CLIENT_INFO</code>, for example, with a
+                                            call to
+                                                <code class="codeph">DBMS_APPLICATION_INFO.SET_CLIENT_INFO</code>.
+                                          </p>
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="0%" id="d45759e442" headers="d45759e263 ">
+                                          <p>Maximum
+                                            Concurrent Session Requests</p><a id="d45759e445" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="0%" headers="d45759e442 d45759e268 ">
+                                          
+                                          <p>Enter the maximum number of concurrent page
+                                            events that <span>APEX</span> supports for each session for applications in this
+                                            workspace. Instead of processing a new page event, <span>APEX</span> shows an error message when the limit is already
+                                            reached. Alternatively, use the Concurrent Session
+                                            Requests Kill Timeout attribute to kill an active
+                                            database session, to process the new page event. 
+                                          </p>
+                                          
+                                          <p><span>APEX</span> keeps track of session requests by querying the
+                                                <code class="codeph">CLIENT_IDENTIFIER</code> column of
+                                                <code class="codeph">GV$SESSION</code>. This tracking will not
+                                            work if developers overwrite
+                                                <code class="codeph">CLIENT_IDENTIFIER</code>, for example with
+                                            a call to
+                                            <code class="codeph">DBMS_SESSION.SET_IDENTIFIER</code>.
+                                          </p>
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="0%" id="d45759e478" headers="d45759e263 ">
+                                          <p>Concurrent
+                                            Session Requests Kill Timeout</p><a id="d45759e481" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="0%" headers="d45759e478 d45759e268 ">
+                                          
+                                          <p>If a new page event comes in that is outside
+                                            the limits of <span class="uicontrol bold">Maximum Concurrent Session
+                                                Requests</span>, <span>APEX</span> can execute <code class="codeph">alter system kill
+                                                session</code> on the oldest active database
+                                            session which processes another page event for this <span>APEX</span> session. This attribute specifies the number of
+                                            seconds a database process has to be active, before it
+                                            can be killed. If you leave this attribute empty, the
+                                            instance-level value applies.
+                                          </p>
+                                          
+                                          <p><span class="bold">Warning</span>: Killing sessions can cause
+                                            problems with the application server's database session
+                                            pool.
+                                          </p>
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="0%" id="d45759e508" headers="d45759e263 ">
+                                          <p>Maximum Size of
+                                            Files in Workspace</p><a id="d45759e511" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="0%" headers="d45759e508 d45759e268 ">
+                                          
+                                          <p>Enter the total size (in bytes) of all files
+                                            that can be uploaded to this workspace.</p>
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="0%" id="d45759e521" headers="d45759e263 ">
+                                          <p>Maximum Email
+                                            Messages</p><a id="d45759e524" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="0%" headers="d45759e521 d45759e268 ">
+                                          
+                                          <p>Enter the maximum number of email messages
+                                            that can be sent with the <code class="codeph">APEX_MAIL API</code>
+                                            per 24 hour period. 
+                                          </p>
+                                          
+                                          <p>This value overrides the instance-level
+                                            setting.</p>
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="0%" id="d45759e540" headers="d45759e263 ">
+                                          <p>Maximum Web
+                                            Service Requests</p><a id="d45759e543" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="0%" headers="d45759e540 d45759e268 ">
+                                          
+                                          <p>Enter the maximum number of email messages
+                                            that can be sent with the <code class="codeph">APEX_MAIL API</code>
+                                            per 24 hour period. This value will override the
+                                            instance-level setting.
+                                          </p>
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="0%" id="d45759e556" headers="d45759e263 ">
+                                          <p>Content Cache
+                                            target size</p><a id="d45759e559" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="0%" headers="d45759e556 d45759e268 ">
+                                          
+                                          <p>Denotes the target size for the content cache
+                                            on workspace-level. The content cache can currently
+                                            being used by Web Source and REST Enabled SQL services.
+                                            The Cache Size Target acts as a soft limit, which, for
+                                            performance reasons, is only maintained by the <span>APEX</span> scheduler jobs. In other words, <span>APEX</span> might exceed the specified limit during normal
+                                            operations. With the next run of the maintenance job,
+                                            cached content with the shortest remaining validity will
+                                            be removed until the cache size is below the specified
+                                            limit.
+                                          </p>
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="0%" id="d45759e575" headers="d45759e263 ">
+                                          <p>Content Cache
+                                            maximum entry size</p><a id="d45759e578" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="0%" headers="d45759e575 d45759e268 ">
+                                          
+                                          <p>Denotes the maximum size for content to be
+                                            placed into the content cache. This value will override
+                                            the instance-level setting.</p>
+                                          
+                                          <p>This value overrides the instance-level
+                                            setting.</p>
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="0%" id="d45759e591" headers="d45759e263 ">
+                                          <p>Maximum Background
+                                            Page Process Jobs</p><a id="d45759e594" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="0%" headers="d45759e591 d45759e268 ">
+                                          
+                                          <p>Specifies the maximum amount of scheduler
+                                            jobs being available for background execution of page
+                                            processes for this workspace (applies to all
+                                            applications). Only the configured amount of jobs will
+                                            run at the same time to execute page processes in the
+                                            background. If the configured maximum amount of
+                                            scheduler jobs is active, new submitted executions will
+                                            wait until a job becomes available.</p>
+                                          
+                                          <p><span class="bold">See Also</span>: "Configuring Limits for
+                                            Concurrently Running Scheduler Jobs" section in <a href="../htmdb/understanding-background-page-processing.html#HTMDB-GUID-27F8C574-4B52-463B-AD2A-66B27B249AD9" target="_blank">About
+                                                Background Page Processes</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></p>
+                                          
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="isolating-workspace-to-prevent-browser-attacks.html#GUID-8BF9FF41-1CA7-44E7-A82E-42B927F42CF9" title="Workspace administrators can prevent browser attacks by isolating a specific workspace. Workspace-level settings override those configured for an entire instance.">Isolating a Workspace to Prevent Browser Attacks</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

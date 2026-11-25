@@ -1,0 +1,200 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Configuring Session Timeout for an Instance">
+      <meta name="abstract" content="Use the Session Timeout attributes for an instance to reduce exposure at the application-level for abandoned computers with an open web browser.">
+      <meta name="description" content="Use the Session Timeout attributes for an instance to reduce exposure at the application-level for abandoned computers with an open web browser.">
+      <meta name="DC.subject" content="Session Timeout, configuring for instance, instance, Session Timeout, Maximum Session Length in Seconds, Maximum Session Idle Time in Seconds, Session Timeout Warning in Seconds">
+      <meta name="keywords" content="Session Timeout, configuring for instance, instance, Session Timeout, Maximum Session Length in Seconds, Maximum Session Idle Time in Seconds, Session Timeout Warning in Seconds">
+      <meta name="DC.Relation" scheme="URI" content="configuring-security.html#GUID-5EC277A4-20BD-47CF-9448-46680C75593E">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-FCFC6DC3-FC8B-4053-BE69-033F7F51BFD0">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Use the Session Timeout attributes for an instance to reduce exposure at the application-level for abandoned computers with an open web browser.">
+      <meta name="description" content="Use the Session Timeout attributes for an instance to reduce exposure at the application-level for abandoned computers with an open web browser.">
+      <title>Configuring Session Timeout for an Instance</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Use the Session Timeout attributes for an instance to reduce exposure at the application-level for abandoned computers with an open web browser.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="enabling-real-application-security.html" title="Previous" type="text/html">
+      <link rel="next" href="isolating-workspaces-in-an-instance.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Configuring Session Timeout for an Instance","description":"Use the Session Timeout attributes for an instance to reduce exposure at the application-level for abandoned computers with an open web browser.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="enabling-real-application-security.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="isolating-workspaces-in-an-instance.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-FCFC6DC3-FC8B-4053-BE69-033F7F51BFD0" name="GUID-FCFC6DC3-FC8B-4053-BE69-033F7F51BFD0"></a><a id="AEADM293"></a>
+         
+         <h2 id="AEADM-GUID-FCFC6DC3-FC8B-4053-BE69-033F7F51BFD0" class="sect2"><span class="enumeration_section">3.4.5 </span>Configuring Session Timeout for an
+        Instance
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Use the Session Timeout attributes for an instance to reduce exposure at the
+        application-level for abandoned computers with an open web browser.</p>
+               <div class="section">
+                  
+                  <p>Instance administrators can Session Timeout for an instance on the
+                Instance Settings, Security page.</p>
+                  
+               </div>
+               <p>To configure Session Timeout attributes for an instance:</p>
+               <ol>
+                  <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                  <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                  <li><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                  <li><span>Under Session Timeout:</span><ol type="a" id="GUID-FCFC6DC3-FC8B-4053-BE69-033F7F51BFD0__SUBSTEPS_XHN_1WN_RKB">
+                        <li class="substepexpand"><span><span class="uicontrol bold">Maximum Session Length in Seconds</span> - Defines how long (in seconds) sessions can exist and be used by applications in this <span>APEX</span> instance. This setting is superseded by the corresponding workspace-level setting and application-level setting.</span><div>
+                              <ul style="list-style-type: disc;" id="GUID-FCFC6DC3-FC8B-4053-BE69-033F7F51BFD0__UL_MSF_DWN_RKB">
+                                 <li>
+                                    <p>Enter a positive integer to control how long a session can exist.</p>
+                                 </li>
+                                 <li>
+                                    <p>Enter <code class="codeph">0</code> to have the session exist indefinitely.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>Leave the value empty in order to revert to the default value of 8 hours (28800 seconds).</p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span><span class="uicontrol bold">Maximum Session Idle Time in Seconds</span> - Session
+                            Idle Time is the time between the last page request and the next page
+                            request. This setting is superseded by the corresponding workspace-level
+                            setting and application-level setting.</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-FCFC6DC3-FC8B-4053-BE69-033F7F51BFD0__UL_YGC_KWN_RKB">
+                                 <li>
+                                    
+                                    <p>Enter a positive integer to control the default idle time for sessions used by applications in this <span>APEX</span> instance.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Leave the value empty in order to revert to the
+                                        default value of 1 hour (3600 seconds).</p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span><span class="uicontrol bold">Session Timeout Warning in Seconds</span> - The session
+                            timeout warning time defines (in seconds) how long before a session
+                            times out (either maximum session length, or maximum session idle time),
+                            to warn the user. For the maximum session idle time warning, the user
+                            will have the opportunity to extend the session. For maximum session
+                            length warning, the user will be prompted to save any work, to avoid
+                            loss of data when the session maximum time is reached. This setting is
+                            superseded by the corresponding workspace-level setting and
+                            application-level setting.</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-FCFC6DC3-FC8B-4053-BE69-033F7F51BFD0__UL_KQV_PWN_RKB">
+                                 <li>
+                                    
+                                    <p>Enter a positive integer to control the warning time for sessions used by applications in this <span>APEX</span> instance.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Enter 0 to switch off session timeout warnings.</p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Leave the value empty in order to revert to the default value
+                                        of 5 minutes (300 seconds).</p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                     </ol>
+                  </li>
+                  <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+               </ol>
+               <div class="section">
+                  <div class="infoboxnotealso" id="GUID-FCFC6DC3-FC8B-4053-BE69-033F7F51BFD0__GUID-DF25D128-CC1A-4542-A345-C8585B122670">
+                     <p class="notep1">See Also:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-FCFC6DC3-FC8B-4053-BE69-033F7F51BFD0__UL_BCF_MMN_RKB">
+                        <li><a href="configuring-workspace-preferences.html#GUID-5908DB3B-9348-4195-AB8F-3B426166C94A" title="Use the Session Timeout attributes for a workspace to reduce exposure at the application-level for abandoned computers with an open web browser.">Configuring Session Timeout for a Workspace</a></li>
+                        <li><a href="../htmdb/manging-instance-security.html#HTMDB-GUID-701E333D-0CFA-4FCD-869E-4678A4ABAF06" target="_blank">About Utilizing Session Timeout</a> and <a href="../htmdb/configuring-security-attributes.html#HTMDB-GUID-33A67D5E-1128-4D23-9C5C-15FC9BE1B783" target="_blank">Session Management</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="configuring-security.html#GUID-5EC277A4-20BD-47CF-9448-46680C75593E" title="Instance administrators can configure instance security, including service-level security, configuring support for Real Application Security, configuring session time out, preventing browser attacks by isolating workspaces, excluding domains from regions and Web services, configuring authentication controls, creating strong password policies, and managing authorized URLs.">Configuring Security</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

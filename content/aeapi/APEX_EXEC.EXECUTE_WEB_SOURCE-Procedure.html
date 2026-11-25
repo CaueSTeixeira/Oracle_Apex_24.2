@@ -1,0 +1,238 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="EXECUTE_WEB_SOURCE Procedure (Deprecated)">
+      <meta name="DC.subject" content="EXECUTE_WEB_SOURCE procedure, APEX_EXEC">
+      <meta name="keywords" content="EXECUTE_WEB_SOURCE procedure, APEX_EXEC">
+      <meta name="DC.Relation" scheme="URI" content="APEX_EXEC.html#GUID-3CF1D2DD-AEA4-4982-9857-548567AB7169">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-30272C98-EA7B-4220-A26B-63DFF9DFCD1F">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>EXECUTE_WEB_SOURCE Procedure (Deprecated)</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_EXEC.EXECUTE_REST_SOURCE-Procedure-Signature-2.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_EXEC.GET-Functions.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"EXECUTE_WEB_SOURCE Procedure (Deprecated)","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_EXEC.EXECUTE_REST_SOURCE-Procedure-Signature-2.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_EXEC.GET-Functions.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-30272C98-EA7B-4220-A26B-63DFF9DFCD1F" name="GUID-30272C98-EA7B-4220-A26B-63DFF9DFCD1F"></a>
+         
+         <h2 id="AEAPI-GUID-30272C98-EA7B-4220-A26B-63DFF9DFCD1F" class="sect2"><span class="enumeration_section">27.26 </span>EXECUTE_WEB_SOURCE Procedure (Deprecated)
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <div class="infoboxnote" id="GUID-30272C98-EA7B-4220-A26B-63DFF9DFCD1F__GUID-F82CA049-4E29-486D-B5DC-29B3561BF324">
+                     <p class="notep1">Note:</p> This procedure is deprecated and will be removed in a future release. Use <code class="codeph">execute_rest_source</code> instead.
+                  </div>
+                  <p>This procedure executes a web source operation based on module name, operation and URL pattern (if required). Use the <code class="codeph">t_parameters</code> array to pass in values for declared web source parameters. Web Source invocation is done based on metadata defined in Shared Components.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-30272C98-EA7B-4220-A26B-63DFF9DFCD1F__TITLE-1321-F94BDADF">Syntax</p><pre class="pre codeblock"><code>APEX_EXEC.EXECUTE_WEB_SOURCE (
+    p_module_static_id IN VARCHAR2,
+    p_operation        IN VARCHAR2,
+    p_url_pattern      IN VARCHAR2         DEFAULT NULL,
+    p_parameters       IN OUT t_parameters )</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-30272C98-EA7B-4220-A26B-63DFF9DFCD1F__TITLE-1341-F94C107A">Parameters</p>
+                  <div class="tblformal" id="GUID-30272C98-EA7B-4220-A26B-63DFF9DFCD1F__WRITEPROCEDUREPARAMETERS-F94C1E2F">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="34%" id="d116003e77">Parameter</th>
+                              <th align="left" valign="bottom" width="66%" id="d116003e79">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d116003e83" headers="d116003e77 "><code class="codeph">p_module_static_id</code></td>
+                              <td align="left" valign="top" width="66%" headers="d116003e83 d116003e79 ">Static ID of the web source module.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d116003e89" headers="d116003e77 "><code class="codeph">p_operation</code></td>
+                              <td align="left" valign="top" width="66%" headers="d116003e89 d116003e79 ">Name of the operation (for example, POST, GET, DELETE).</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d116003e95" headers="d116003e77 "><code class="codeph">p_url_pattern</code></td>
+                              <td align="left" valign="top" width="66%" headers="d116003e95 d116003e79 "> If multiple operations with the same name exist, specify the URL pattern, as defined in Shared Components, to identify the web source operation.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d116003e101" headers="d116003e77 "><code class="codeph">p_parameters</code></td>
+                              <td align="left" valign="top" width="66%" headers="d116003e101 d116003e79 ">
+                                 <p> Parameter values to pass to the external web source.</p>
+                                 <p>Note that HTTP Headers, URL Patterns and other parameters being passed to a Web Source Module are typically strings. Oracle recommends to explicitly pass all values to <code class="codeph">VARCHAR2</code> before adding to the <code class="codeph">T_PARAMETERS</code> array.
+                                 </p>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-30272C98-EA7B-4220-A26B-63DFF9DFCD1F__GUID-B32ADC23-75FB-4B38-AD2B-079431220779">Returns</p>
+                  <div class="tblformal" id="GUID-30272C98-EA7B-4220-A26B-63DFF9DFCD1F__TABLE_Z3B_YWQ_LCC">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Returns for procedure." frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="0%" id="d116003e126">Return</th>
+                              <th align="left" valign="bottom" width="0%" id="d116003e128">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d116003e132" headers="d116003e126 "><code class="codeph">p_parameters</code></td>
+                              <td align="left" valign="top" width="0%" headers="d116003e132 d116003e128 ">Array with <code class="codeph">OUT</code> parameter values, received from the web source module.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-30272C98-EA7B-4220-A26B-63DFF9DFCD1F__TITLE-1361-F94C98D8">Example</p>
+                  <p>This example assumes a REST service being created on the EMP table using ORDS and the "Auto-REST" feature (<code class="codeph">ORDS.ENABLE_OBJECT</code>). Then a Web Source Module for this REST service is being created in Shared Components as "ORDS EMP".
+                  </p>
+                  <p>The POST operation has the following "Request Body Template" defined:</p><pre class="pre codeblock"><code>{"empno": "#EMPNO#", "ename": "#ENAME#", "job": "#JOB#", "sal": #SAL#}</code></pre><p>Parameters are defined as follows:</p>
+                  <div class="tblformal" id="GUID-30272C98-EA7B-4220-A26B-63DFF9DFCD1F__GUID-1B929683-E285-462B-B3C6-A37600390F19">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="This table defines the parameters." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="20%" id="d116003e164">Name</th>
+                              <th align="left" valign="bottom" width="20%" id="d116003e166">Direction</th>
+                              <th align="left" valign="bottom" width="20%" id="d116003e168">Type</th>
+                              <th align="left" valign="bottom" width="20%" id="d116003e170">Default Value</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="20%" id="d116003e174" headers="d116003e164 "><code class="codeph">EMPNO</code></td>
+                              <td align="left" valign="top" width="20%" headers="d116003e174 d116003e166 ">IN</td>
+                              <td align="left" valign="top" width="20%" headers="d116003e174 d116003e168 ">Request Body </td>
+                              <td align="left" valign="top" width="20%" headers="d116003e174 d116003e170 ">n/a</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="20%" id="d116003e184" headers="d116003e164 "><code class="codeph">ENAME</code></td>
+                              <td align="left" valign="top" width="20%" headers="d116003e184 d116003e166 ">IN</td>
+                              <td align="left" valign="top" width="20%" headers="d116003e184 d116003e168 ">Request Body </td>
+                              <td align="left" valign="top" width="20%" headers="d116003e184 d116003e170 ">n/a</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="20%" id="d116003e194" headers="d116003e164 "><code class="codeph">SAL</code></td>
+                              <td align="left" valign="top" width="20%" headers="d116003e194 d116003e166 ">IN</td>
+                              <td align="left" valign="top" width="20%" headers="d116003e194 d116003e168 ">Request Body </td>
+                              <td align="left" valign="top" width="20%" headers="d116003e194 d116003e170 ">n/a</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="20%" id="d116003e204" headers="d116003e164 "><code class="codeph">JOB</code></td>
+                              <td align="left" valign="top" width="20%" headers="d116003e204 d116003e166 ">IN</td>
+                              <td align="left" valign="top" width="20%" headers="d116003e204 d116003e168 ">Request Body </td>
+                              <td align="left" valign="top" width="20%" headers="d116003e204 d116003e170 ">n/a</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="20%" id="d116003e214" headers="d116003e164 "><code class="codeph">RESPONSE</code></td>
+                              <td align="left" valign="top" width="20%" headers="d116003e214 d116003e166 ">OUT</td>
+                              <td align="left" valign="top" width="20%" headers="d116003e214 d116003e168 ">Request Body </td>
+                              <td align="left" valign="top" width="20%" headers="d116003e214 d116003e170 ">n/a</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="20%" id="d116003e224" headers="d116003e164 "><code class="codeph">Content-Type</code></td>
+                              <td align="left" valign="top" width="20%" headers="d116003e224 d116003e166 ">IN</td>
+                              <td align="left" valign="top" width="20%" headers="d116003e224 d116003e168 ">HTTP Header</td>
+                              <td align="left" valign="top" width="20%" headers="d116003e224 d116003e170 ">
+                                 <p>application/json</p>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p>PL/SQL code to invoke that web source operation looks as follows:</p><pre class="pre codeblock"><code>DECLARE
+    l_params apex_exec.t_parameters;
+BEGIN
+    apex_exec.add_parameter( l_params, 'ENAME', :P2_ENAME );
+    apex_exec.add_parameter( l_params, 'EMPNO', :P2_EMPNO );
+    apex_exec.add_parameter( l_params, 'SAL',   :P2_SAL   );
+    apex_exec.add_parameter( l_params, 'JOB',   :P2_JOB   );
+
+    apex_exec.execute_web_source(
+        p_module_static_id =&gt; 'ORDS_EMP',
+        p_operation        =&gt; 'POST',
+        p_parameters       =&gt; l_params );
+
+    :P2_RESPONSE := apex_exec.get_parameter_clob(l_params,'RESPONSE');
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_EXEC.html#GUID-3CF1D2DD-AEA4-4982-9857-548567AB7169">APEX_EXEC</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

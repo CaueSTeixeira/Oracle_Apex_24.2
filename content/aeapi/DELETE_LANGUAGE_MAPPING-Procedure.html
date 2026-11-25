@@ -1,0 +1,166 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="DELETE_LANGUAGE_MAPPING Procedure">
+      <meta name="DC.subject" content="DELETE_LANGUAGE_MAPPING procedure, APEX_LANG">
+      <meta name="keywords" content="DELETE_LANGUAGE_MAPPING procedure, APEX_LANG">
+      <meta name="DC.Relation" scheme="URI" content="APEX_LANG.html#GUID-68DF9D22-3C3A-418A-B27A-868A569BD990">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-9BFEA551-139B-4784-89CD-CE9ECC5504EE">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>DELETE_LANGUAGE_MAPPING Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_LANG.CREATE_MESSAGE-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="DELETE_MESSAGE-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"DELETE_LANGUAGE_MAPPING Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_LANG.CREATE_MESSAGE-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="DELETE_MESSAGE-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-9BFEA551-139B-4784-89CD-CE9ECC5504EE" name="GUID-9BFEA551-139B-4784-89CD-CE9ECC5504EE"></a><a id="AEAPI29553"></a><a id="AEAPI29554"></a><a id="AEAPI29555"></a><a id="AEAPI29556"></a><a id="AEAPI29552"></a>
+         
+         <h2 id="AEAPI-GUID-9BFEA551-139B-4784-89CD-CE9ECC5504EE" class="sect2"><span class="enumeration_section">39.4 </span>DELETE_LANGUAGE_MAPPING Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>Use this procedure to delete the language mapping for the translation of an application. This procedure deletes all translated strings in the translation repository for the specified language and mapping. Translated applications are published as new applications, but are not directly editable in the <span>App Builder</span>.
+                  </p>
+                  <div class="infoboxnote" id="GUID-9BFEA551-139B-4784-89CD-CE9ECC5504EE__GUID-0A24E4AA-5802-4FE9-A0C4-AE8503F8E061">
+                     <p class="notep1">Note:</p>
+                     <p>This procedure is available in <span>Oracle APEX</span> release 4.2.3 and later.
+                     </p>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-9BFEA551-139B-4784-89CD-CE9ECC5504EE__GUID-145E9B36-2499-4B28-A470-EE09F0FC8079">Syntax</p><pre class="pre codeblock"><code>APEX_LANG.DELETE_LANGUAGE_MAPPING (
+    p_application_id    IN NUMBER,
+    p_language          IN VARCHAR2 )</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-9BFEA551-139B-4784-89CD-CE9ECC5504EE__GUID-0CD6A113-E760-4B97-AE97-0FE8BABBDC80">Parameters</p>
+                  <div class="tblformal" id="GUID-9BFEA551-139B-4784-89CD-CE9ECC5504EE__GUID-6925B113-AEB7-4D8D-A1FC-80C3CEA06F85">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="32%" id="d193476e83">Parameter</th>
+                              <th align="left" valign="bottom" width="68%" id="d193476e85">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="32%" id="d193476e89" headers="d193476e83 "><code class="codeph">p_application_id</code></td>
+                              <td align="left" valign="top" width="68%" headers="d193476e89 d193476e85 ">The ID of the application for which you want to delete the language mapping. This is the ID of the primary language application.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="32%" id="d193476e95" headers="d193476e83 "><code class="codeph">p_language</code></td>
+                              <td align="left" valign="top" width="68%" headers="d193476e95 d193476e85 ">The IANA language code for the existing mapping. Examples include <code class="codeph">en-us</code>, <code class="codeph">fr-ca</code>, <code class="codeph">ja</code>, <code class="codeph">he</code>.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-9BFEA551-139B-4784-89CD-CE9ECC5504EE__GUID-3FB68844-276D-46BE-8C90-EE258D94F0CD">Example</p>
+                  <p>The following example demonstrates the deletion of the language mapping for an existing <span>APEX</span> application and existing translation mapping.
+                  </p><pre class="pre codeblock"><code>begin
+    --
+    -- If running from <span>SQLcl</span>, we need to set the environment
+    -- for the <span>Oracle APEX</span> workspace associated with this schema.
+    -- The call to apex_util.set_security_group_id is not necessary
+    -- if you're running within the context of the App Builder
+    -- or an <span>APEX</span> application.
+    --
+    for c1 in (select workspace_id
+                 from apex_workspaces) loop
+        apex_util.set_security_group_id( c1.workspace_id );
+        exit;
+     end loop;
+    -- Now, delete the language mapping
+    apex_lang.delete_language_mapping(
+        p_application_id =&gt; 63969,
+        p_language =&gt; 'ja' );
+    commit;
+    --
+    -- Print what we just updated to confirm
+    --
+    for c1 in (select count(*) thecount
+                 from apex_application_trans_map
+                where primary_application_id = 63969) loop
+        dbms_output.put_line( 'Translation mappings found: ' || c1.thecount );
+    end loop;
+end;
+/</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_LANG.html#GUID-68DF9D22-3C3A-418A-B27A-868A569BD990">APEX_LANG</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

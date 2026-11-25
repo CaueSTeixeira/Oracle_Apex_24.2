@@ -1,0 +1,893 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Creating Applications with Data Loading Capability">
+      <meta name="abstract" content="Create applications with data loading capability to enable end users to dynamically import data into a table within any schema to which they have access.">
+      <meta name="description" content="Create applications with data loading capability to enable end users to dynamically import data into a table within any schema to which they have access.">
+      <meta name="DC.subject" content="data loading, adding, Data Load page, adding to application, application, adding Data Load page, Data Load Definition, about creating, Data Load Wizard, creating, creating Data Load page, editing, copying from current app, subscribing to, copying copying from another app">
+      <meta name="keywords" content="data loading, adding, Data Load page, adding to application, application, adding Data Load page, Data Load Definition, about creating, Data Load Wizard, creating, creating Data Load page, editing, copying from current app, subscribing to, copying copying from another app">
+      <meta name="DC.Relation" scheme="URI" content="managing-application-data.html#GUID-32A38938-FAEC-4535-B944-1C1E50315F02">
+      <meta name="DC.Relation" scheme="URI" content="creating-applications-with-data-loading-capability.html#GUID-98EDCC39-2ECD-425A-ABDF-F686BAB167B0">
+      <meta name="DC.Relation" scheme="URI" content="creating-applications-with-data-loading-capability.html#GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB">
+      <meta name="DC.Relation" scheme="URI" content="creating-applications-with-data-loading-capability.html#GUID-2D0E355F-982A-4784-9552-3809AD4F85E2">
+      <meta name="DC.Relation" scheme="URI" content="creating-applications-with-data-loading-capability.html#GUID-9475D0A8-CBF2-491B-A09A-EACE5864AEA6">
+      <meta name="DC.Relation" scheme="URI" content="creating-applications-with-data-loading-capability.html#GUID-AB5E8072-A003-4579-9057-70AD8FF2AC71">
+      <meta name="DC.Relation" scheme="URI" content="creating-applications-with-data-loading-capability.html#GUID-407C1184-286B-4580-844B-F4B295B57CA9">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-B0173334-15DD-4EDC-9842-9F661B5C657B">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Create applications with data loading capability to enable end users to dynamically import data into a table within any schema to which they have access.">
+      <meta name="description" content="Create applications with data loading capability to enable end users to dynamically import data into a table within any schema to which they have access.">
+      <title>Creating Applications with Data Loading Capability</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Create applications with data loading capability to enable end users to dynamically import data into a table within any schema to which they have access.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-application-data.html" title="Previous" type="text/html">
+      <link rel="next" href="about-using-collections.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Creating Applications with Data Loading Capability","description":"Create applications with data loading capability to enable end users to dynamically import data into a table within any schema to which they have access.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-application-data.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="about-using-collections.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-B0173334-15DD-4EDC-9842-9F661B5C657B" name="GUID-B0173334-15DD-4EDC-9842-9F661B5C657B"></a><a id="4000:1800"></a><a id="4000:1808"></a><a id="4000:1810"></a><a id="4000:1811"></a><a id="4000:1812"></a><a id="4000:1815"></a><a id="4000:1816"></a><a id="4000:1817"></a><a id="4000:1820"></a><a id="4000:1821"></a>
+         
+         <h2 id="HTMDB-GUID-B0173334-15DD-4EDC-9842-9F661B5C657B" class="sect2"><span class="enumeration_section">18.1 </span>Creating Applications with Data Loading Capability
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Create applications with data loading capability to enable end users to
+        dynamically import data into a table within any schema to which they have
+        access.</p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="creating-applications-with-data-loading-capability.html#GUID-98EDCC39-2ECD-425A-ABDF-F686BAB167B0">About Creating a Page with Data Loading Capability</a><br>Add data loading capability to an application by creating a Data Load Definition and         then a Data Load page.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-applications-with-data-loading-capability.html#GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB">Creating a Data Load Definition</a><br>Create a Data Load Definition in Shared Components.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-applications-with-data-loading-capability.html#GUID-2D0E355F-982A-4784-9552-3809AD4F85E2">Creating a Data Loading Page Using the Create Page Wizard</a><br>If a Data Load Definition exists, run the Create Page Wizard to add a         Data Loading page. 
+                  </li>
+                  <li class="ulchildlink"><a href="creating-applications-with-data-loading-capability.html#GUID-9475D0A8-CBF2-491B-A09A-EACE5864AEA6">Editing a Data Load Definition</a><br>Edit a Data Load Definition in Shared Components.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-applications-with-data-loading-capability.html#GUID-AB5E8072-A003-4579-9057-70AD8FF2AC71">Copying or Subscribing to a Data Load Definition</a><br>Copy a Data Load Definition from another application. When copying a Data         Load Definition from another app, you can also subscribe to it.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-applications-with-data-loading-capability.html#GUID-407C1184-286B-4580-844B-F4B295B57CA9">Example: Log Errors to a DML Error Log</a><br>Edit the Data Load Definition so that errors are logged into a DML error         log.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-B0173334-15DD-4EDC-9842-9F661B5C657B__GUID-536103C7-A25C-48EB-B304-D5D24AC2F07D">
+                  <p class="notep1">See Also:</p><a href="managing-legacy-data-loading-capability.html#GUID-951F611B-BCCF-4256-BFAF-ABE96CA56CDB" title="Applications with legacy data loading capability enable end users to dynamically import data into a table within any schema to which they have access.">Managing Applications with Legacy Data Loading Capability</a></div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-application-data.html#GUID-32A38938-FAEC-4535-B944-1C1E50315F02">Managing Application Data</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-98EDCC39-2ECD-425A-ABDF-F686BAB167B0" name="GUID-98EDCC39-2ECD-425A-ABDF-F686BAB167B0"></a><h3 id="HTMDB-GUID-98EDCC39-2ECD-425A-ABDF-F686BAB167B0" class="sect3"><span class="enumeration_section">18.1.1 </span>About Creating a Page with Data Loading
+        Capability
+               </h3>
+               <div>
+                  <p>Add data loading capability to an application by creating a Data Load Definition and
+        then a Data Load page.</p>
+                  <div class="infobox-tip" id="GUID-98EDCC39-2ECD-425A-ABDF-F686BAB167B0__GUID-D9DB5AB8-A6EA-4635-A1CF-646351D8AC86">
+                     <p class="notep1">Tip:</p>To see Data Load Definition examples, install the <span class="italic">Sample Data
+                Loading</span> app from the Gallery. See <a href="using-the-app-gallery.html#GUID-C47C1EB2-1D40-4DB0-A890-F7F64F8A39EE" title="Use the App Gallery to install Sample Apps, Starter Apps, Custom Apps, and Utility Apps.">Using the App Gallery</a>.
+                  </div>
+                  <p>A Data Load Definition is comprised of a Data Load Definition, Data Profile, and Data
+            Profile Columns. Data can be loaded either to an existing table in your schema or to a
+            collection. You can define SQL Expression, SQL Query, Lookups, or Transformation Rules
+            for each data profile column. These definitions are used in the Native Data Loading page
+            process type.</p>
+                  <p>When you create a Data Load Definition, the wizard prompts you to add a Data
+            Loading page in your application. However, if a Data Load definition exists, you can
+            also add a Data Loading page later by running the Create Page Wizard. A Data Loading
+            page consists of a single page with a Native Data Loading page process which enables
+            users to upload data from a file or by copy and paste, preview the data, and then upload
+            the data. </p>
+                  <p>Key features of application new data loading include: </p>
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        
+                        <p>New application data loading supports <code class="codeph">CSV</code>,
+                        <code class="codeph">XLSX</code>, <code class="codeph">XML</code>, and <code class="codeph">JSON</code>
+                    formats.
+                        </p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>Column mapping occurs at design time, removing the burden for end
+                    users.</p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>Flexible column mappings based on simple names or regular
+                    expressions.</p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>Data conversion with transformation rules or lookup queries.</p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>Easy work flow for end users: upload the file, verify the preview,
+                    and load data.</p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p><code class="codeph">CSV</code>, <code class="codeph">XLSX</code>, <code class="codeph">XML</code>,
+                    and <code class="codeph">JSON</code> data formats can be loaded to tables or
+                    collections.
+                        </p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>Configure data loading to Append, Merge or Replace data, with or
+                    without Error Handling.</p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>Simple new Process Type Data Loading: Customize Data Loading pages as
+                    you wish.</p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>
+                           <code class="codeph">APEX_DATA_LOADING</code> PL/SQL API available for custom
+                    processing.
+                        </p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>Maximum number of columns to load is 300. Note that Legacy data load
+                    supports up to 45.</p>
+                        
+                     </li>
+                  </ul>
+                  <div class="infoboxnote" id="GUID-98EDCC39-2ECD-425A-ABDF-F686BAB167B0__GUID-022DBEBD-6ECD-4A99-833C-1A03297C1F02">
+                     <p class="notep1">Note:</p>
+                     
+                     <p>A Data Load Wizard is not designed or intended to load hundreds of
+                thousands of rows of data. While it is possible to use a Data Load Wizard to load
+                this high volume of data, you may encounter performance issues with both
+                transmitting and loading large data files. Tools like Oracle SQL Developer and
+                Oracle SQL*Loader are better suited to loading large volumes of data.</p>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-98EDCC39-2ECD-425A-ABDF-F686BAB167B0__GUID-ACAEDEAA-53A4-44A5-822C-994B34EDC092">Supported Data Types</p>
+                     <p>New Data Load supported data types:</p>
+                     <ul style="list-style-type: disc;">
+                        <li>
+                           <p><code class="codeph">VARCHAR2</code></p>
+                        </li>
+                        <li>
+                           
+                           <p><code class="codeph">NUMBER</code></p>
+                           
+                        </li>
+                        <li>
+                           <p><code class="codeph">DATE</code></p>
+                        </li>
+                        <li>
+                           <p><code class="codeph">TIMESTAMP</code></p>
+                        </li>
+                        <li>
+                           
+                           <p><code class="codeph">TIMESTAMP WITH LOCAL TIMEZONE</code></p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><code class="codeph">TIMESTAMP WITH TIMEZONE</code></p>
+                           
+                        </li>
+                        <li>
+                           <p><code class="codeph">CLOB</code></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-98EDCC39-2ECD-425A-ABDF-F686BAB167B0__GUID-300B41E2-476D-49A0-90CE-2466CB0617F0">
+                     <p class="notep1">See Also:</p><a href="managing-legacy-data-loading-capability.html#GUID-3149BC0B-35BF-46C3-8398-B92BE59442E7" title="To create a legacy Data Load Wizard, a developer creates a Data Load page with the Create Page Wizard.">Creating a Legacy Data Load Page</a></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-applications-with-data-loading-capability.html#GUID-B0173334-15DD-4EDC-9842-9F661B5C657B" title="Create applications with data loading capability to enable end users to dynamically import data into a table within any schema to which they have access.">Creating Applications with Data Loading Capability</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB" name="GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB"></a><h3 id="HTMDB-GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB" class="sect3"><span class="enumeration_section">18.1.2 </span>Creating a Data Load Definition
+               </h3>
+               <div>
+                  <p>Create a Data Load Definition in Shared Components.</p>
+                  <div class="p">When you create a Data Load Definition, the wizard prompts you to create a Data Loading page. You can also create it later by running the Create Page Wizard later as described in <a href="creating-applications-with-data-loading-capability.html#GUID-2D0E355F-982A-4784-9552-3809AD4F85E2" title="If a Data Load Definition exists, run the Create Page Wizard to add a Data Loading page.">Creating a Data Loading Page Using the Create Page Wizard</a>.
+                  </div>
+                  <div class="section">
+                     
+                     <p>The Create Data Load definition wizard supports uploading of the
+                following sample file formats: <code class="codeph">CSV</code>, <code class="codeph">XLSX</code>,
+                    <code class="codeph">XML</code> or <code class="codeph">JSON</code>. The uploaded file format is saved
+                as data load definition data profile format. This format dictates the type of file
+                end users can upload. For example, if you create a data load definition using a CSV
+                sample file, only <code class="codeph">TXT</code> or <code class="codeph">CSV</code> file types can be
+                uploaded from a page using the data load definition. Similarly, if you create a data
+                load definition using a <code class="codeph">XLSX</code> sample file, only
+                    <code class="codeph">XLSX</code> file types can be uploaded from a page using the data load
+                definition. The following task includes sample images in which the Data Load
+                Definition is created on the <code class="codeph">EMP</code> table using <code class="codeph">EMP</code>
+                        <code class="codeph">.csv</code> file.
+                     </p>
+                     
+                     <div class="infoboxnote" id="GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB__GUID-A9C57489-E9A4-4334-B93C-747FA282829B">
+                        <p class="notep1">Note:</p>You can load this sample table by
+                installing the <code class="codeph">EMP/ DEPT</code> Sample Dataset. See <a href="../aeutl/using-sample-datasets.html#AEUTL-GUID-FCBF7637-0FF9-4135-98FB-EC7155334EB4" target="_blank">Using Sample Datasets</a> in <span><cite>Oracle APEX SQL Workshop
+                                        Guide</cite></span></div>
+                     
+                  </div>
+                  <div class="section">
+                     <p>To create a Data Load Definition:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Create a new application.</span></li>
+                     <li class="stepexpand"><span>Navigate to the Data Load Definitions page:</span><ol type="a" id="GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB__SUBSTEPS_HX2_ZGB_FPB">
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>The Shared Components page appears.</div>
+                           </li>
+                           <li class="substepexpand"><span>Under <span class="uicontrol bold">Other Components</span>, click <span class="uicontrol bold">Data
+                                Load Definitions</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create</span>.</span></li>
+                     <li class="stepexpand"><span>On Method:</span><ol type="a" id="GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB__SUBSTEPS_J1R_X3B_FPB">
+                           <li class="substepexpand"><span>Create Data Load - Select the method by which you would like to create the Data Load Definition. Options include: <span class="uicontrol bold">From Scratch</span> and <span class="uicontrol bold">As a copy of an existing Data Load Definition</span>. </span><div>This task assumes you select <span class="uicontrol bold">From Scratch</span>.
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On Target: </span><ol type="a">
+                           <li class="substepexpand"><span>Name - Enter a name for the Data Load Definition.</span></li>
+                           <li class="substepexpand"><span>Target Type - Specify whether the data will be uploaded to a table or an <span>APEX</span> collection (for example, select <span class="uicontrol bold">Table</span>).</span></li>
+                           <li class="substepexpand"><span>Table Owner - Specify the owner of the table to load data. If nothing is selected, the application parsing schema is used.</span></li>
+                           <li class="substepexpand"><span>Table Name - Select the table to which the data will be loaded (for example, select <code class="codeph">EMP</code>). </span><div>If entering the table name manually, the table name is case sensitive.</div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On Sample Data:</span><ol type="a" id="GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB__SUBSTEPS_D1L_H4H_KJB">
+                           <li class="substepexpand"><span>Source Type - Select how the sample data will be uploaded from a file. The Source Type you select determines what appears next.</span><div>
+                                 <p>Options include:</p>
+                                 <ul style="list-style-type: disc;" id="GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB__UL_QPF_2VN_FPB">
+                                    <li>
+                                       <p>If <span class="uicontrol bold">Upload a File</span> - Drag and drop or click Choose File to navigate to the file. Supported formats include CSV, XLSX, XML or JSON.
+                                       </p>
+                                    </li>
+                                    <li>
+                                       <p>If <span class="uicontrol bold">Copy and Paste</span> - Copy and paste delimited text data.
+                                       </p>
+                                    </li>
+                                 </ul><img id="GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB__IMAGE_ZL2_YGP_FPB" height="535" width="730" src="img/sample_data_load.png" alt="Description of sample_data_load.png follows" title="Description of sample_data_load.png follows" longdesc="img_text/sample_data_load.html"><br><a href="img_text/sample_data_load.html">Description of the illustration sample_data_load.png</a><p>Note that <code class="codeph">EMP.csv</code> displays in the center of region indicating the <code class="codeph">EMP.csv</code> sample file has been uploaded.
+                                 </p>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On Map Columns - Column mapping is done automatically by matching the Sample
+                    Data columns with the table column. Accept the defaults. </span><div><img id="GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB__IMAGE_AQM_MHP_FPB" height="539" width="899" src="img/data_load_map_columns.png" alt="Description of data_load_map_columns.png follows" title="Description of data_load_map_columns.png follows" longdesc="img_text/data_load_map_columns.html"><br><a href="img_text/data_load_map_columns.html">Description of the illustration data_load_map_columns.png</a><p>In the previous example, note that <span class="uicontrol bold">Primary
+                            Key</span> is selected for the <code class="codeph">EMPNO</code> column.
+                           </p>
+                           <p>Determine whether to create just the Data Load Definition or the
+                        Data Load Definition and the Data Load page. Click one of the following
+                        buttons:</p>
+                           <ul style="list-style-type: disc;" id="GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB__UL_NM5_X5B_FPB">
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Create Data Load</span> - Creates just
+                                the Data Load Definition. If you select this option, you can create
+                                a Data Load page later by running the Create Page Wizard.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Create and Add Page</span> - Creates the Data Load Definition and then prompts you to create the Data Load page. 
+                                 </p>
+                                 
+                                 <p>This task assumes you select <span class="uicontrol bold">Create and Add Page</span>.
+                                 </p>
+                                 
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>For Page Definition:</span><ol type="a" id="GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB__SUBSTEPS_P41_TVB_FPB">
+                           <li><span>Page Number - Displays the page number which is an integer value that identifies a page within an application.</span></li>
+                           <li><span>Name - Specify a text name for this page. This name is visible only during the application development process.</span></li>
+                           <li><span>Page Mode - Identify the page mode. To learn more, see field-level Help.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Data Load Attributes:</span><ol type="a" id="GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB__SUBSTEPS_AH5_MWB_FPB">
+                           <li><span>Data Load - Select the data load definition to use.</span></li>
+                           <li><span>Upload Data From - Select if application users will provide data by uploading files or by using copy and paste of delimited text data.</span></li>
+                           <li><span>Maximum File Size ( MB ) - Enter the maximum file size (in MB) that should be accepted for the file upload.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Navigation:</span><ol type="a" id="GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB__SUBSTEPS_DX4_CWB_FPB">
+                           <li><span>Breadcrumb - Select whether you want to use a breadcrumb navigation control on your page and which breadcrumb navigation control you want to use.</span></li>
+                           <li><span>Select how you want this page integrated into the Navigation Menu. To learn more, see field-level Help.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Page</span>.</span><div>Page Designer appears displaying the new page.</div>
+                     </li>
+                     <li class="stepexpand"><span>Test the new page:</span><ol type="a" id="GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB__SUBSTEPS_UJ4_4H4_FPB">
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Save and Run Page</span>.</span><div>
+                                 <p>The new Data Load page appears.</p><img id="GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB__IMAGE_XMK_G3P_FPB" height="469" width="794" src="img/test_data_load_page.png" alt="Description of test_data_load_page.png follows" title="Description of test_data_load_page.png follows" longdesc="img_text/test_data_load_page.html"><br><a href="img_text/test_data_load_page.html">Description of the illustration test_data_load_page.png</a></div>
+                           </li>
+                           <li class="substepexpand"><span>Upload a sample file. Drag and Drop a file or click <span class="uicontrol bold">Choose
+                                File</span>.</span><div>
+                                 <p>A Preview page appears.</p><img id="GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB__IMAGE_IRX_J3P_FPB" height="548" width="777" src="img/test_data_load_preview.png" alt="Description of test_data_load_preview.png follows" title="Description of test_data_load_preview.png follows" longdesc="img_text/test_data_load_preview.html"><br><a href="img_text/test_data_load_preview.html">Description of the illustration test_data_load_preview.png</a></div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Load Data</span>. The sample data is loaded into
+                            the target  table with Merge loading method.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB__GUID-96754164-6F4B-4419-AFAD-770D3A6607EB">
+                     <p class="notep1">See Also:</p><a href="creating-applications.html#GUID-F09AF2EB-F452-4CC1-A3B7-8B0DA9FF94B0" title="An application is a collection of pages linked together using navigation menus, tabs, buttons, or hypertext links. Application pages share a common session state and authentication.">Creating Applications</a></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-applications-with-data-loading-capability.html#GUID-B0173334-15DD-4EDC-9842-9F661B5C657B" title="Create applications with data loading capability to enable end users to dynamically import data into a table within any schema to which they have access.">Creating Applications with Data Loading Capability</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-2D0E355F-982A-4784-9552-3809AD4F85E2" name="GUID-2D0E355F-982A-4784-9552-3809AD4F85E2"></a><h3 id="HTMDB-GUID-2D0E355F-982A-4784-9552-3809AD4F85E2" class="sect3"><span class="enumeration_section">18.1.3 </span>Creating a Data Loading Page Using the
+        Create Page Wizard
+               </h3>
+               <div>
+                  <p>If a Data Load Definition exists, run the Create Page Wizard to add a
+        Data Loading page. </p>
+                  <div class="p">When you create a Data Load Definition, the wizard prompts you create
+            Data Loading page. You can also create it later by running the Create Page
+            Wizard.</div>
+                  <div class="section">The Create Page Wizard creates a single page with a Native Data Loading
+            page process to provide the ability to upload data from a file or copy and paste. The
+            copy and paste option is available only if selected data load definition data profile
+            format is <code class="codeph">CSV</code>. The type of file users can upload depends on the data
+            load definition data profile format.
+                  </div>
+                  <div class="section">
+                     <p>To create a Data Loading page by running the Create Page Wizard:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Create a Data Load Definition as described in <a href="creating-applications-with-data-loading-capability.html#GUID-7212DD2B-4770-4CD0-BBDF-4B77A0506ABB" title="Create a Data Load Definition in Shared Components.">Creating a Data Load Definition</a>.</span></li>
+                     <li class="stepexpand"><span>Run the Create Page Wizard:</span><ol type="a" id="GUID-2D0E355F-982A-4784-9552-3809AD4F85E2__SUBSTEPS_ZV4_ZF1_FPB">
+                           <li class="substepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li class="substepexpand"><span>Select the application.</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Create Page</span>.</span><div>
+                                 
+                                 <p><span class="uicontrol bold">Create a Page</span> appears and
+                                features three tabs: <span class="uicontrol bold">Component</span>,
+                                    <span class="uicontrol bold">Feature</span>, and <span class="uicontrol bold">Legacy
+                                    Pages</span>.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Component, select <span class="uicontrol bold">Data Loading</span>.</span></li>
+                     <li class="stepexpand"><span>Page Definition:</span><ol type="a" id="GUID-2D0E355F-982A-4784-9552-3809AD4F85E2__SUBSTEPS_HXR_CK4_FPB">
+                           <li class="substepexpand"><span>Page Number - Displays the page number which is an integer value that
+                            identifies a page within an application.</span></li>
+                           <li class="substepexpand"><span>Name - Specify a text name for this page. This name is visible only
+                            during the application development process.</span><div>
+                                 
+                                 <div class="infobox-tip" id="GUID-2D0E355F-982A-4784-9552-3809AD4F85E2__GUID-14EC44EA-AD00-4B87-A9CF-3267B698C966">
+                                    <p class="notep1">Tip:</p>
+                                    
+                                    <p>This text is also used for page
+                                        <span class="uicontrol bold">Title</span>. After page creation, you can
+                                    modify the <span class="uicontrol bold">Title</span> in Page Designer.
+                                    </p>
+                                    
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Page Mode - Identify the page mode. To learn more, see field-level Help.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Data Load Attributes:</span><ol type="a" id="GUID-2D0E355F-982A-4784-9552-3809AD4F85E2__SUBSTEPS_VBX_KK4_FPB">
+                           <li><span>Data Load - Select the data load definition to use.</span></li>
+                           <li><span>Upload Data From - Select if application users will provide data by
+                            uploading files or by using copy and paste of delimited text data.</span></li>
+                           <li><span>Maximum File Size ( MB ) - Enter the maximum file size (in MB) that
+                            should be accepted for the file upload.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span id="GUID-2D0E355F-982A-4784-9552-3809AD4F85E2__d4145e159">Navigation - Expand the region and enable or disable navigation. If either flag is enabled, additional attributes appear. To learn more about an attribute, see field-level Help.</span><ol type="a" id="GUID-2D0E355F-982A-4784-9552-3809AD4F85E2__d4145e161">
+                           <li id="GUID-2D0E355F-982A-4784-9552-3809AD4F85E2__d4145e162"><span>Use Breadcrumb - Enable to create a breadcrumb entry for this page. By default, the page name is used as breadcrumb entry name.</span></li>
+                           <li id="GUID-2D0E355F-982A-4784-9552-3809AD4F85E2__d4145e165"><span>Use Navigation - Enable to create a navigation menu entry for this page. By default, the page name is used as navigation menu name.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Page</span>.</span><div>Page Designer appears displaying the new page.</div>
+                     </li>
+                     <li class="stepexpand"><span>Test the new page:</span><ol type="a" id="GUID-2D0E355F-982A-4784-9552-3809AD4F85E2__SUBSTEPS_FKP_VK4_FPB">
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Save and Run Page</span>.</span><div>
+                                 
+                                 <p>The new Data Load page appears.</p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Upload a sample file. Drag and Drop a file or click <span class="uicontrol bold">Choose
+                                File</span>.</span><div>
+                                 
+                                 <p>A Preview page appears.</p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Load Data</span>. The sample data is loaded into
+                            the target  table with Merge loading method.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-applications-with-data-loading-capability.html#GUID-B0173334-15DD-4EDC-9842-9F661B5C657B" title="Create applications with data loading capability to enable end users to dynamically import data into a table within any schema to which they have access.">Creating Applications with Data Loading Capability</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB28983"></a><div class="props_rev_3"><a id="GUID-9475D0A8-CBF2-491B-A09A-EACE5864AEA6" name="GUID-9475D0A8-CBF2-491B-A09A-EACE5864AEA6"></a><h3 id="HTMDB-GUID-9475D0A8-CBF2-491B-A09A-EACE5864AEA6" class="sect3"><span class="enumeration_section">18.1.4 </span>Editing a Data Load Definition
+               </h3>
+               <div>
+                  <p>Edit a Data Load Definition in Shared Components.</p>
+                  <div class="section">
+                     
+                     <p>A Data Load Definition is comprised of a target data load table, loading
+                method, error handling attributes, and data profile.</p>
+                     
+                     <p>To edit a Data Load Definition:</p>
+                     
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Select the application associated with the Data Load Definition.</span><ol type="a" id="GUID-9475D0A8-CBF2-491B-A09A-EACE5864AEA6__SUBSTEPS_ZV4_ZF1_FPB">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select the application.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Navigate to the Data Load Definitions page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>The Shared Components page appears.</div>
+                           </li>
+                           <li class="substepexpand"><span>Under <span class="uicontrol bold">Other Components</span>, click <span class="uicontrol bold">Data
+                                Load Definitions</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click the Data Load Definition you want to edit.</span><div>
+                           
+                           <p>The Data Load Definition Details page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>For Data Load:</span><ol type="a" id="GUID-9475D0A8-CBF2-491B-A09A-EACE5864AEA6__SUBSTEPS_FNF_1RN_FPB">
+                           <li><span>Name - Defines the name for the data load definition.</span></li>
+                           <li><span>Static ID - Use the Static ID to reference the Data Load definition in
+                            API Calls.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Target:</span><ol type="a" id="GUID-9475D0A8-CBF2-491B-A09A-EACE5864AEA6__SUBSTEPS_YWW_2RN_FPB">
+                           <li><span>Target Type - Select whether data is to be loaded into a table or an
+                                <span>APEX</span> collection.</span></li>
+                           <li><span>Table Owner - Defines the owner of the table into which the data is
+                            loaded.</span></li>
+                           <li><span>Table Name - Defines the name of the table into which the data is
+                            loaded.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Settings:</span><ol type="a" id="GUID-9475D0A8-CBF2-491B-A09A-EACE5864AEA6__SUBSTEPS_QLL_LRN_FPB">
+                           <li class="substepexpand"><span>Loading Method - Specifies the loading method to use. Options
+                            include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-9475D0A8-CBF2-491B-A09A-EACE5864AEA6__UL_PM5_NRN_FPB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Append</span> - Append rows to the table or
+                                        collection. If one or more primary key columns are defined
+                                        in the Data Profile, existing rows are not changed and new
+                                        rows are appended. If the data profile has no primary key
+                                        definition, all rows will be simply appended.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Merge</span> - Merge rows into the table. To use this option, the data profile must have a Primary Key defined. If a row for the given primary key value exists, the row is updated. Otherwise the row will be created. This option is only available for loading data into tables. 
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Replace</span> - Existing data in the target
+                                        table or collection is removed before new data is
+                                        loaded.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Commit Interval - Specify the commit interval to use during data load.
+                            If no commit interval is specified, the whole data load is one
+                            transaction, with a commit after the last row. If an interval is
+                            specified, <span>APEX</span> commits each time after the specified amount of rows have been
+                            processed.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Error Handling:</span><ol type="a" class="single-step" id="GUID-9475D0A8-CBF2-491B-A09A-EACE5864AEA6__SUBSTEPS_GKY_XRN_FPB">
+                           <li class="substepexpand"><span>When on Error - Specify how to handle errors during data load. Options
+                            include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-9475D0A8-CBF2-491B-A09A-EACE5864AEA6__UL_PDM_ZRN_FPB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Ignore</span> - The error rows are silently
+                                        ignored and Data Loading simply continues.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Stop</span> - Data loading stops on the first
+                                        error and raises an error message.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Log Error into Collection</span> - Error rows are logged into an <span>APEX</span> collection.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Log into Error Log</span> - Error rows are
+                                        logged into a DML error logging table using the DML Error
+                                        Logging database functionality. This is only available when
+                                        loading into a table and only if the Append method is used
+                                        without a primary key.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Data Profile - Displays the Data Profile format and number of columns. Click
+                        <span class="uicontrol bold">Edit Profile</span> to view and edit the Data Profile.</span><div>
+                           
+                           <p>Data Profiles describe how Data Source format are being parsed and converted
+                        to rows and columns. For XML or JSON data format, the Row Selector attribute
+                        stores an XML or JSON path expression pointing to the node containing the
+                        collection of rows. Data Profile Columns determine how one row is parsed and
+                        converted to multiple columns.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Subscription - Lists the Data Load Definitions that subscribe to this definition.</span></li>
+                     <li class="stepexpand"><span>Comments - Add comments that describe this Data Load Definition. Comments only
+                    display within App Builder and never display when running the application.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-applications-with-data-loading-capability.html#GUID-B0173334-15DD-4EDC-9842-9F661B5C657B" title="Create applications with data loading capability to enable end users to dynamically import data into a table within any schema to which they have access.">Creating Applications with Data Loading Capability</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-AB5E8072-A003-4579-9057-70AD8FF2AC71" name="GUID-AB5E8072-A003-4579-9057-70AD8FF2AC71"></a><h3 id="HTMDB-GUID-AB5E8072-A003-4579-9057-70AD8FF2AC71" class="sect3"><span class="enumeration_section">18.1.5 </span>Copying or Subscribing to a Data Load Definition
+               </h3>
+               <div>
+                  <p>Copy a Data Load Definition from another application. When copying a Data
+        Load Definition from another app, you can also subscribe to it.</p>
+                  <div class="section">
+                     
+                     <div class="infobox-tip" id="GUID-AB5E8072-A003-4579-9057-70AD8FF2AC71__GUID-80757627-CBFF-49A1-A106-0D954C81C1E8">
+                        <p class="notep1">Tip:</p>Subscriptions enable developers to reuse shared components across
+                several applications in a workspace. To learn more about subscriptions, see <a href="using-shared-component-subscriptions.html#GUID-24D34103-5C45-4DC6-A7BF-228744B04AAE" title="Use subscriptions to reuse shared components across several applications in a workspace.">Using Shared Component Subscriptions</a>.
+                     </div>
+                     
+                     <p>To copy copy or subscribe to Data Load Definition:</p>
+                     
+                  </div>
+                  <ol>
+                     <li><span>Navigate to the Data Load Definitions page:</span><ol type="a" id="GUID-AB5E8072-A003-4579-9057-70AD8FF2AC71__SUBSTEPS_ZV4_ZF1_FPB">
+                           <li class="substepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Shared Components</span>.</span></li>
+                           <li class="substepexpand"><span>Under <span class="uicontrol bold">Other Components</span>, click <span class="uicontrol bold">Data
+                                Load Definitions</span>.</span><div>
+                                 
+                                 <p>The Data Load Definitions page appears. Note that the
+                                report includes the following columns: Subscribed From, Subscription
+                                Status, and Subscribers.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>From the Tasks list, select <span class="uicontrol bold">Copy from another app</span>. </span></li>
+                     <li><span>Copy From:</span><ol type="a" id="GUID-AB5E8072-A003-4579-9057-70AD8FF2AC71__SUBSTEPS_AP3_XBR_41C">
+                           <li><span>Copy From Application - Select an application from which to copy the
+                            data load definition.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Copy:</span><ol type="a" id="GUID-AB5E8072-A003-4579-9057-70AD8FF2AC71__SUBSTEPS_YWW_2RN_FPB">
+                           <li class="substepexpand"><span>To Name - Optionally edit the name of the Data Load Definition.</span></li>
+                           <li class="substepexpand"><span>Action - Select an Action:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-AB5E8072-A003-4579-9057-70AD8FF2AC71__UL_Y4W_KRF_N1C">
+                                    <li><span class="uicontrol bold">Yes</span> - Copy the Data Load
+                                    Definition.
+                                    </li>
+                                    <li><span class="uicontrol bold">No</span> - Do not copy the Data
+                                    Load Definition.
+                                    </li>
+                                    <li><span class="uicontrol bold">Copy and Subscribe</span> - Copy
+                                    and subscribe to the Data Load Definition. Subscribing to a Data
+                                    Load Definition adds a copy of it in your application and sets
+                                    the Data Load Definition master reference.
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Copy Data Load Definition</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-applications-with-data-loading-capability.html#GUID-B0173334-15DD-4EDC-9842-9F661B5C657B" title="Create applications with data loading capability to enable end users to dynamically import data into a table within any schema to which they have access.">Creating Applications with Data Loading Capability</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-407C1184-286B-4580-844B-F4B295B57CA9" name="GUID-407C1184-286B-4580-844B-F4B295B57CA9"></a><h3 id="HTMDB-GUID-407C1184-286B-4580-844B-F4B295B57CA9" class="sect3"><span class="enumeration_section">18.1.6 </span>Example: Log Errors to a DML Error Log
+               </h3>
+               <div>
+                  <p>Edit the Data Load Definition so that errors are logged into a DML error
+        log.</p>
+                  <div class="section">
+                     
+                     
+                     <p>The following example demonstrates how to edit a Data Load Definition
+                that loads data into the <code class="codeph">EMP</code> table. If the data load fails, errors
+                are logged into a DML error log named <code class="codeph">ERR$_EMP</code>.
+                     </p>
+                     
+                     <p>To edit the Data Load Definition and log errors are logged into a DML
+                error log:</p>
+                     
+                  </div>
+                  <p>Create a DML error log:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Create a DML error log table in SQL commands:</span><ol type="a" id="GUID-407C1184-286B-4580-844B-F4B295B57CA9__SUBSTEPS_TMS_TXF_FPB">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span class="uicontrol bold">SQL Workshop</span>
+                            and then <span class="uicontrol bold">SQL Commands</span>.</span></li>
+                           <li class="substepexpand"><span>In the Command Editor, enter the SQL command to create a DML error log
+                            named <code class="codeph">ERR$_EMP</code>. For example: </span><div>
+                                 <pre class="pre codeblock"><code>begin
+    dbms_errlog.create_error_log( dml_table_name =&gt; 'EMP' );
+end;</code></pre>
+                                 </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Run</span> (Ctrl+Enter) to execute the
+                            command.</span></li>
+                        </ol>
+                        <div>The results appear in the Results pane. 
+                           <div class="infobox-tip" id="GUID-407C1184-286B-4580-844B-F4B295B57CA9__GUID-D80FE724-2C09-4C2F-B2AD-5B703323FAA9">
+                              <p class="notep1">Tip:</p>The table
+                            <code class="codeph">ERR$_EMP</code> now appears in Object
+                    Browser.
+                           </div>
+                        </div>
+                     </li>
+                  </ol>
+                  <p>Edit the Data Load Definition and change the Loading Method and define the
+                Error Handling:</p>
+                  <ol start="2">
+                     <li class="stepexpand"><span>Navigate to the Data Load Definitions page:</span><ol type="a">
+                           <li class="substepexpand"><span>Select the application associated with the Data Load Definition.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>The Shared Components page appears.</div>
+                           </li>
+                           <li class="substepexpand"><span>Under <span class="uicontrol bold">Other Components</span>, click <span class="uicontrol bold">Data
+                                Load Definitions</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click the Data Load Definition you want to edit.</span><div>Data Load Definition Details page appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Change the Loading Method and specify the Error Handling:</span><ol type="a" id="GUID-407C1184-286B-4580-844B-F4B295B57CA9__SUBSTEPS_UHD_ZM4_FPB">
+                           <li><span>Settings, Loading Method - Click <span class="uicontrol bold">Replace</span>.</span></li>
+                           <li><span>Error Handling, When on Error - Select <span class="uicontrol bold">Log into Error
+                                Log</span>.</span></li>
+                           <li><span>Error Handling, Error Logging Table - Select the DML error log table (for example, <code class="codeph">ERR$_EMP (TABLE)</code>.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+                  <p>Create another Data Loading page:</p>
+                  <ol start="5">
+                     <li class="stepexpand"><span>Run the Create Page Wizard:</span><ol type="a" id="GUID-407C1184-286B-4580-844B-F4B295B57CA9__SUBSTEPS_QJV_PXG_FPB">
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Edit Page X</span> in the toolbar in the header region (where <span class="uicontrol bold">X</span> represents the page number).</span><div>Page Designer appears.</div>
+                           </li>
+                           <li class="substepexpand"><span>Select the <span class="uicontrol bold">Create</span> menu in the Page Designer
+                            toolbar and select <span class="uicontrol bold">Page</span>.</span><div>The Create Page Wizard appears.</div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On Create a Page, select <span class="uicontrol bold">Data Loading</span>.</span></li>
+                     <li class="stepexpand"><span>For Page Definition:</span><ol type="a" id="GUID-407C1184-286B-4580-844B-F4B295B57CA9__SUBSTEPS_JWF_WZG_FPB">
+                           <li><span>Page Number - Displays the page number which is an integer value that identifies a page within an application.</span></li>
+                           <li><span>Name - Specify a text name for this page. This name is visible only during the application development process.</span></li>
+                           <li><span>Page Mode - Identify the page mode. To learn more, see field-level Help.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Data Load Attributes:</span><ol type="a" id="GUID-407C1184-286B-4580-844B-F4B295B57CA9__SUBSTEPS_P5P_B1H_FPB">
+                           <li><span>Data Load - Select the data load definition you edited previously.</span></li>
+                           <li><span>Upload Data From - Select if users will provide data by uploading a file, or by using copy and paste of delimited text data. For this example, select <span class="uicontrol bold">File</span>.</span></li>
+                           <li><span>Maximum File Size ( MB ) - Enter the maximum file size (in MB) that should be accepted for the file upload.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span id="GUID-407C1184-286B-4580-844B-F4B295B57CA9__d4145e159">Navigation - Expand the region and enable or disable navigation. If either flag is enabled, additional attributes appear. To learn more about an attribute, see field-level Help.</span><ol type="a" id="GUID-407C1184-286B-4580-844B-F4B295B57CA9__d4145e161">
+                           <li id="GUID-407C1184-286B-4580-844B-F4B295B57CA9__d4145e162"><span>Use Breadcrumb - Enable to create a breadcrumb entry for this page. By default, the page name is used as breadcrumb entry name.</span></li>
+                           <li id="GUID-407C1184-286B-4580-844B-F4B295B57CA9__d4145e165"><span>Use Navigation - Enable to create a navigation menu entry for this page. By default, the page name is used as navigation menu name.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Page</span>.</span><div>Page Designer appears displaying the new page.</div>
+                     </li>
+                     <li class="stepexpand"><span>Test the new page:</span><ol type="a" id="GUID-407C1184-286B-4580-844B-F4B295B57CA9__SUBSTEPS_PPD_4P4_FPB">
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Save and Run Page</span>.</span><div>
+                                 
+                                 <p>The new Data Load page appears.</p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span> Upload a sample file that fails loading to see the error log report.
+                            For example, load string value for the <code class="codeph">SAL</code> column where
+                            a <code class="codeph">NUMBER</code> column type is expected. Drag and drop a file,
+                            or click <span class="uicontrol bold">Choose File</span>.</span><div>
+                                 
+                                 <p>A Preview page appears.</p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Load Data</span>. </span></li>
+                        </ol>
+                        <div>
+                           <p>An error message appears and the errors display
+                        at the bottom of the page as shown in the following
+                        example.</p><img id="GUID-407C1184-286B-4580-844B-F4B295B57CA9__IMAGE_JN4_1JP_FPB" height="665" width="959" src="img/test_data_load_error.png" alt="Description of test_data_load_error.png follows" title="Description of test_data_load_error.png follows" longdesc="img_text/test_data_load_error.html"><br><a href="img_text/test_data_load_error.html">Description of the illustration test_data_load_error.png</a></div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-applications-with-data-loading-capability.html#GUID-B0173334-15DD-4EDC-9842-9F661B5C657B" title="Create applications with data loading capability to enable end users to dynamically import data into a table within any schema to which they have access.">Creating Applications with Data Loading Capability</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

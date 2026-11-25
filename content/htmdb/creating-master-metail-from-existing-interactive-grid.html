@@ -1,0 +1,384 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Creating Master Detail from an Existing Interactive Grid">
+      <meta name="abstract" content="Create a single page master detail which includes two editable interactive grids based on two related tables or views.">
+      <meta name="description" content="Create a single page master detail which includes two editable interactive grids based on two related tables or views.">
+      <meta name="DC.subject" content="interactive grids, creating master detail form">
+      <meta name="keywords" content="interactive grids, creating master detail form">
+      <meta name="DC.Relation" scheme="URI" content="managing-interactive-grids.html#GUID-82BA760D-2142-4FED-99D7-0DE98B852079">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-20319811-CA35-4A8A-9698-4963E91E1DAA">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Create a single page master detail which includes two editable interactive grids based on two related tables or views.">
+      <meta name="description" content="Create a single page master detail which includes two editable interactive grids based on two related tables or views.">
+      <title>Creating Master Detail from an Existing Interactive Grid</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Create a single page master detail which includes two editable interactive grids based on two related tables or views.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="creating-an-interactive-grid-using-the-create-page-wizard.html" title="Previous" type="text/html">
+      <link rel="next" href="managing-interactive-grid-region-attributes.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Creating Master Detail from an Existing Interactive Grid","description":"Create a single page master detail which includes two editable interactive grids based on two related tables or views.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="creating-an-interactive-grid-using-the-create-page-wizard.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="managing-interactive-grid-region-attributes.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-20319811-CA35-4A8A-9698-4963E91E1DAA" name="GUID-20319811-CA35-4A8A-9698-4963E91E1DAA"></a>
+         
+         <h2 id="HTMDB-GUID-20319811-CA35-4A8A-9698-4963E91E1DAA" class="sect2"><span class="enumeration_section">8.8.5 </span>Creating Master Detail from an Existing Interactive Grid
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Create a single page master detail which includes two editable interactive grids
+        based on two related tables or views.</p>
+               <div class="section">
+                  
+                  <p>You can define any number of master detail relationships on a single
+                page by simply adding a related interactive grid to the page. If you have an
+                existing interactive grid, you can add another related interactive grid by doing the
+                following:</p>
+                  
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        
+                        <p>Create the parent interactive grid.</p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>Define the primary key (if needed).</p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>Create the child interactive grid.</p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p>For the child interactive grid, specify the Master Region and
+                        Master Column.</p>
+                        
+                     </li>
+                  </ul>
+                  
+                  <p>The following example demonstrates how to create an interactive grid on
+                the departments table, <code class="codeph">OEHR_DEPARTMENTS</code> by running the Create Page
+                Wizard. This wizard creates the parent interactive grid and enables you to define
+                the primary key. Then, you create a child interactive grid on the employees table,
+                    <code class="codeph">OEHR_EMPLOYEES</code>. The <code class="codeph">OEHR_DEPARTMENTS</code> and
+                    <code class="codeph">OEHR_EMPLOYEES</code> tables are available in the sample data set, HR
+                Data.
+                  </p>
+                  
+               </div>
+               <p>To add a related interactive grid below an existing
+                grid:</p>
+               <ol>
+                  <li class="stepexpand"><span>Create an application.</span></li>
+                  <li class="stepexpand"><span>Create the first interactive grid on the <code class="codeph">OEHR_DEPARTMENTS</code>
+                    table:</span><ol type="a" id="GUID-20319811-CA35-4A8A-9698-4963E91E1DAA__SUBSTEPS_GXT_2JN_VSB">
+                        <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Create
+                            Page</span></span></li>
+                        <li class="substepexpand"><span>Under Component, select <span class="uicontrol bold">Interactive Grid</span>.</span></li>
+                        <li class="substepexpand"><span>Name - Specify a text name for this page (for example,
+                                <kbd class="userinput">Departments</kbd>).</span><div>
+                              
+                              <div class="infobox-tip" id="GUID-20319811-CA35-4A8A-9698-4963E91E1DAA__GUID-A22F8490-128C-40FE-BC4E-B318D9782340">
+                                 <p class="notep1">Tip:</p>This text is also used for report region Title. After
+                                page creation, you can modify the Title in Page Designer.
+                              </div>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Page Mode - Select <span class="uicontrol bold">Normal</span>.</span></li>
+                        <li class="substepexpand"><span>Include Form Page - Disable this flag.</span></li>
+                        <li class="substepexpand"><span>Data Source - Select <span class="uicontrol bold">Local Database</span>.</span></li>
+                        <li class="substepexpand"><span>Source Type - Select <span class="uicontrol bold">Table</span>.</span></li>
+                        <li class="substepexpand"><span>Table /View Name - Select <span class="uicontrol bold">OEHR_DEPARTMENTS
+                                (table)</span>.</span></li>
+                        <li class="substepexpand"><span>Editing Enabled - Enable this flag to make this interactive grid
+                            editable.</span></li>
+                        <li class="substepexpand"><span>Navigation - Expand the region and enable or disable navigation. If
+                            either flag is enabled, additional attributes appear. To learn more
+                            about an attribute, see field-level Help. </span></li>
+                        <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Primary Key Column 1 - Accept the default.</span></li>
+                  <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Page</span>.</span></li>
+                  <li class="stepexpand"><span>Click <span class="uicontrol bold">Save and Run Page</span> to view a rendered version of
+                    the parent interactive grid.</span><div>
+                        <p>This following image shows an editable
+                        interactive grid created on the <code class="codeph">OEHR_DEPARTMENTS</code>
+                        table.
+                        </p><img id="GUID-20319811-CA35-4A8A-9698-4963E91E1DAA__IMAGE_YZF_4RH_D3B" height="462" width="881" src="img/master_detail_parent.png" alt="Description of master_detail_parent.png follows" title="Description of master_detail_parent.png follows" longdesc="img_text/master_detail_parent.html"><br><a href="img_text/master_detail_parent.html">Description of the illustration master_detail_parent.png</a></div>
+                  </li>
+                  <li class="stepexpand"><span>Return to Page Designer. Click <span class="uicontrol bold">Page X</span> on the Runtime
+                    Developer toolbar, where <span class="italic">X</span> is the page number.</span></li>
+                  <li class="stepexpand"><span>Create the child interactive grid on the <code class="codeph">OEHR_EMPLOYEES</code>
+                    table:</span><ol type="a">
+                        <li><span>In the Gallery, locate the Regions tab.</span></li>
+                        <li><span>Under Regions, find and then right-click <span class="uicontrol bold">Interactive
+                                Grid</span>.</span></li>
+                        <li><span>Select <span class="uicontrol bold">Add To</span>, <span class="uicontrol bold">Body</span>, the
+                            region, <span class="uicontrol bold">Departments</span>, and then
+                                <span class="uicontrol bold">After</span>.</span></li>
+                     </ol>
+                     <div>
+                        
+                        <p>The Rendering tab and Layout tab both display the new region.</p>
+                        
+                        <div class="figure" id="GUID-20319811-CA35-4A8A-9698-4963E91E1DAA__FIG_BZ3_BRH_D3B"><img id="GUID-20319811-CA35-4A8A-9698-4963E91E1DAA__IMAGE_CZ3_BRH_D3B" height="438" width="1047" src="img/master_detail_new_child_region.png" alt="Description of master_detail_new_child_region.png follows" title="Description of master_detail_new_child_region.png follows" longdesc="img_text/master_detail_new_child_region.html"><br><a href="img_text/master_detail_new_child_region.html">Description of the illustration master_detail_new_child_region.png</a></div>
+                        
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>Edit the New child region:</span><ol type="a">
+                        <li class="substepexpand"><span>In the Rendering tab, select the <span class="uicontrol bold">New</span> region (if
+                            not already selected).</span></li>
+                        <li class="substepexpand"><span>In the Property Editor, edit the region attributes:</span><div>
+                              
+                              <div class="infoboxnote" id="GUID-20319811-CA35-4A8A-9698-4963E91E1DAA__GUID-7C400B5B-DD04-41A3-8D3F-CD8CA7FEB55F">
+                                 <p class="notep1">Note:</p>
+                                 
+                                 <p>To find a group or attribute, enter keywords in the
+                                    Filter field.&nbsp;The Property Editor displays the group or
+                                    attributes.&nbsp;To return to the default display, delete the
+                                    keywords.</p>
+                                 
+                              </div>
+                              
+                              <ul style="list-style-type: disc;">
+                                 <li>
+                                    
+                                    <p>Identification, Name - Enter
+                                            <kbd class="userinput">Employees</kbd>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Source, Type - Select <span class="uicontrol bold">SQL
+                                            Query</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Source, SQL Query - Enter the query:</p>
+                                    <pre class="pre codeblock"><code>select OEHR_EMPLOYEES.EMPLOYEE_ID as EMPLOYEE_ID,
+    OEHR_EMPLOYEES.FIRST_NAME as FIRST_NAME,
+    OEHR_EMPLOYEES.LAST_NAME as LAST_NAME,
+    OEHR_EMPLOYEES.HIRE_DATE as HIRE_DATE,
+    OEHR_EMPLOYEES.EMAIL as EMAIL,
+    OEHR_EMPLOYEES.PHONE_NUMBER as PHONE_NUMBER,
+    OEHR_EMPLOYEES.JOB_ID as JOB_ID,
+    OEHR_EMPLOYEES.SALARY as SALARY,
+    OEHR_EMPLOYEES.DEPARTMENT_ID as DEPARTMENT_ID 
+ from OEHR_EMPLOYEES</code></pre>
+                                    </li>
+                                 <li>
+                                    
+                                    <p>Layout, Start New Row - Select
+                                            <span class="uicontrol bold">On</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Appearance, Template - Select
+                                            <span class="uicontrol bold">Standard</span></p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Master Detail, Master Region - Select the
+                                        region, <span class="uicontrol bold">Departments</span>.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>For the child interactive grid, Employees, define <code class="codeph">DEPARTMENTS</code>
+                    as the Master Column:</span><ol type="a">
+                        <li class="substepexpand"><span>In the Rendering tab, under the child interactive grid,
+                                <span class="uicontrol bold">Employees</span>, expand the Columns node and select
+                                <span class="uicontrol bold">DEPARTMENT_ID</span>.</span></li>
+                        <li class="substepexpand"><span>In Property Editor, edit the following:</span><div>
+                              
+                              <ul style="list-style-type: disc;">
+                                 <li>
+                                    
+                                    <p>Find <span class="uicontrol bold">Master Detail</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>For Master Column, select
+                                            <span class="uicontrol bold">DEPARTMENT_ID</span>.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span>. To run the page, click <span class="uicontrol bold">Save and
+                        Run Page</span>.</span><div>
+                        
+                        <div class="figure" id="GUID-20319811-CA35-4A8A-9698-4963E91E1DAA__FIG_ZYS_TRH_D3B"><img id="GUID-20319811-CA35-4A8A-9698-4963E91E1DAA__IMAGE_AZS_TRH_D3B" height="546" width="896" src="img/master_detail_run.png" alt="Description of master_detail_run.png follows" title="Description of master_detail_run.png follows" longdesc="img_text/master_detail_run.html"><br><a href="img_text/master_detail_run.html">Description of the illustration master_detail_run.png</a></div>
+                        
+                        <p>Note that parent the parent report,
+                            <span class="uicontrol bold">Department</span>, filters the results in
+                            <span class="uicontrol bold">Employees</span>, the child report.
+                        </p>
+                        
+                        <p>Next, make the child report, Employees, editable.</p>
+                        
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>Make Employees report editable:</span><ol type="a">
+                        <li class="substepexpand"><span>Access Page Designer. Click <span class="uicontrol bold">Page X</span> on the
+                            Runtime Developer toolbar, where <span class="italic">X</span> is the page number.</span></li>
+                        <li class="substepexpand"><span>In the Rendering tab, select the <span class="uicontrol bold">Employees</span>
+                            region. </span></li>
+                        <li class="substepexpand"><span>In the Property Editor, click the <span class="uicontrol bold">Attributes</span>
+                            tab.</span></li>
+                        <li class="substepexpand"><span>In the Property Editor, edit the following:</span><div>
+                              
+                              <ul style="list-style-type: disc;">
+                                 <li>
+                                    
+                                    <p>Edit, Enabled - Select
+                                        <span class="uicontrol bold">On</span>. 
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Allowed Operations - Verify the following
+                                        operations are enabled: <span class="uicontrol bold">Add Row</span>,
+                                            <span class="uicontrol bold">Update Row</span>, and <span class="uicontrol bold">Delete
+                                            Row</span>.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Define the <code class="codeph">EMPLOYEE_ID</code> column as the Primary Key Column:</span><ol type="a">
+                        <li><span>In the Rendering tab, under <span class="uicontrol bold">Employees</span>, expand
+                                <span class="uicontrol bold">Columns</span> and select
+                                <span class="uicontrol bold">EMPLOYEE_ID</span>.</span></li>
+                        <li><span>In the Property Editor, find <span class="uicontrol bold">Source</span>, and turn
+                                <span class="uicontrol bold">Primary Key</span> to
+                            <span class="uicontrol bold">On</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span>. To run the page, click <span class="uicontrol bold">Save and
+                        Run Page</span>. </span><div>
+                        
+                        <p>The child interactive grid, Employees, is now editable</p>
+                        
+                        <div class="figure" id="GUID-20319811-CA35-4A8A-9698-4963E91E1DAA__FIG_UVT_ZRH_D3B"><img id="GUID-20319811-CA35-4A8A-9698-4963E91E1DAA__IMAGE_VVT_ZRH_D3B" height="525" width="875" src="img/master_detail_editable.png" alt="Description of master_detail_editable.png follows" title="Description of master_detail_editable.png follows" longdesc="img_text/master_detail_editable.html"><br><a href="img_text/master_detail_editable.html">Description of the illustration master_detail_editable.png</a></div>
+                        
+                     </div>
+                  </li>
+               </ol>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-interactive-grids.html#GUID-82BA760D-2142-4FED-99D7-0DE98B852079" title="An interactive grid presents data in a searchable, customizable report. Includes similar customization capabilities available in interactive reports plus the ability to rearrange the report interactively using the mouse or keyboard.">Managing Interactive Grids</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

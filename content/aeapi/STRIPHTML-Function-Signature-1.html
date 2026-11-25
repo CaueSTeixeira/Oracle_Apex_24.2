@@ -1,0 +1,171 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="STRIPHTML Function Signature 1">
+      <meta name="DC.subject" content="STRIPHTML function signature 1, APEX_ESCAPE">
+      <meta name="keywords" content="STRIPHTML function signature 1, APEX_ESCAPE">
+      <meta name="DC.Relation" scheme="URI" content="APEX_ESCAPE.html#GUID-889DE8EF-ED8C-4E52-A3CE-7DA9A9A79B88">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-347F8DAD-5CC4-444C-A2C0-B102D1CC95FD">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>STRIPHTML Function Signature 1</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="SET_HTML_ESCAPING_MODE-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="STRIPHTML-Function-Signature-2.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"STRIPHTML Function Signature 1","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="SET_HTML_ESCAPING_MODE-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="STRIPHTML-Function-Signature-2.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-347F8DAD-5CC4-444C-A2C0-B102D1CC95FD" name="GUID-347F8DAD-5CC4-444C-A2C0-B102D1CC95FD"></a>
+         
+         <h2 id="AEAPI-GUID-347F8DAD-5CC4-444C-A2C0-B102D1CC95FD" class="sect2"><span class="enumeration_section">26.26 </span>STRIPHTML Function Signature 1
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function returns <code class="codeph">p_string</code> (VARCHAR2) removing HTML tags, leaving plain text.
+                  </p>
+                  <p>This function removes all HTML attributes regardless of the type of HTML content. For example, it preserves content such as JavaScript and CSS, but removes script and CSS HTML tags.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-347F8DAD-5CC4-444C-A2C0-B102D1CC95FD__GUID-4BACA0A5-CA13-4765-914C-C9A5F5275A82">Syntax</p>
+                  <pre class="pre codeblock"><code>APEX_ESCAPE.STRIPHTML (
+    p_string    IN VARCHAR2 )
+    RETURN VARCHAR2 deterministic;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-347F8DAD-5CC4-444C-A2C0-B102D1CC95FD__GUID-2118C338-643E-4828-B981-F63B51FF8CA0">Parameters</p>
+                  <div class="tblformal" id="GUID-347F8DAD-5CC4-444C-A2C0-B102D1CC95FD__GUID-AFEF5317-38DA-4552-89F3-FCB6A18A7292">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="42%" id="d106403e75">Parameter</th>
+                              <th align="left" valign="bottom" width="58%" id="d106403e77">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d106403e81" headers="d106403e75 "><code class="codeph">p_string</code></td>
+                              <td align="left" valign="top" width="58%" headers="d106403e81 d106403e77 ">The input text string.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-347F8DAD-5CC4-444C-A2C0-B102D1CC95FD__GUID-BD217647-FAFB-4D84-A2E1-4DCBBD38D3C9">Example</p>
+                  <pre class="pre codeblock"><code>begin
+    sys.htp.p(apex_escape.striphtml(
+        q'[&lt;p id="greeting"&gt;Hello &lt;b&gt;Joe&lt;/b&gt;&lt;/p&gt;]'
+    ));
+end;
+
+Result:
+---------------------------------------------------------------------------
+Hello Joe
+---------------------------------------------------------------------------
+
+    begin
+        sys.htp.p(apex_escape.striphtml(q'[
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;title&gt;Web Page&lt;/title&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;h1&gt;Page Title&lt;/h1&gt;
+                &lt;p&gt;
+                    This is some text.
+                &lt;/p&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+        ]'));
+    end;
+
+Result:
+---------------------------------------------------------------------------
+
+
+
+                Web Page
+
+
+                Page Title
+               
+                    This is some text.
+
+
+
+</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_ESCAPE.html#GUID-889DE8EF-ED8C-4E52-A3CE-7DA9A9A79B88">APEX_ESCAPE</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

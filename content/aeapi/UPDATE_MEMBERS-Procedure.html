@@ -1,0 +1,190 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="UPDATE_MEMBERS Procedure">
+      <meta name="DC.subject" content="UPDATE_MEMBERS procedure, APEX_COLLECTION">
+      <meta name="keywords" content="UPDATE_MEMBERS procedure, APEX_COLLECTION">
+      <meta name="DC.Relation" scheme="URI" content="APEX_COLLECTION.html#GUID-859B488C-2628-44D7-969F-50872C685B76">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-DD03C9D6-884F-425C-91DC-72C407ABCA6C">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>UPDATE_MEMBERS Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="UPDATE_MEMBER-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="UPDATE_MEMBER_ATTRIBUTE-Procedure-Signature-1.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"UPDATE_MEMBERS Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="UPDATE_MEMBER-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="UPDATE_MEMBER_ATTRIBUTE-Procedure-Signature-1.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-DD03C9D6-884F-425C-91DC-72C407ABCA6C" name="GUID-DD03C9D6-884F-425C-91DC-72C407ABCA6C"></a><a id="AEAPI813"></a><a id="AEAPI814"></a><a id="AEAPI815"></a><a id="AEAPI816"></a><a id="AEAPI812"></a>
+         
+         <h2 id="AEAPI-GUID-DD03C9D6-884F-425C-91DC-72C407ABCA6C" class="sect2"><span class="enumeration_section">15.31 </span>UPDATE_MEMBERS Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>Updates the array of members for the given named collection.</p>
+                  <p>If a collection does not exist with the specified name for the current user in the same session and for the current application ID, an application error occurs.</p>
+                  <p>The count of elements in the <code class="codeph">p_seq</code> PL/SQL table is used as the total number of items across all PL/SQL tables. If <code class="codeph">p_seq.count = 2</code> and <code class="codeph">p_c001.count = 10</code>, only two members are updated.
+                  </p>
+                  <p>If <code class="codeph">p_seq</code> is NULL, an application error occurs.
+                  </p>
+                  <p>If the member specified by sequence ID <code class="codeph">p_seq</code> does not exist, an application error occurs. 
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-DD03C9D6-884F-425C-91DC-72C407ABCA6C__GUID-6620A807-E4CE-416B-B568-882476CF9706">Syntax</p><pre class="pre codeblock"><code>APEX_COLLECTION.UPDATE_MEMBERS (
+    p_collection_name IN VARCHAR2,
+    p_seq             IN apex_application_global.vc_arr2 DEFAULT empty_vc_arr,
+    p_c001            IN apex_application_global.vc_arr2 DEFAULT empty_vc_arr,
+    p_c002            IN apex_application_global.vc_arr2 DEFAULT empty_vc_arr,
+    p_c003            IN apex_application_global.vc_arr2 DEFAULT empty_vc_arr,
+    ...
+    p_c050            IN apex_application_global.vc_arr2 DEFAULT empty_vc_arr,
+    p_n001            IN apex_application_global.n_arr   DEFAULT empty_n_arr,
+    p_n002            IN apex_application_global.n_arr   DEFAULT empty_n_arr,
+    p_n003            IN apex_application_global.n_arr   DEFAULT empty_n_arr,
+    p_n004            IN apex_application_global.n_arr   DEFAULT empty_n_arr,
+    p_n005            IN apex_application_global.n_arr   DEFAULT empty_n_arr,
+    p_d001            IN apex_application_global.d_arr   DEFAULT empty_d_arr,
+    p_d002            IN apex_application_global.d_arr   DEFAULT empty_d_arr,
+    p_d003            IN apex_application_global.d_arr   DEFAULT empty_d_arr,
+    p_d004            IN apex_application_global.d_arr   DEFAULT empty_d_arr,
+    p_d005            IN apex_application_global.d_arr   DEFAULT empty_d_arr )</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-DD03C9D6-884F-425C-91DC-72C407ABCA6C__GUID-9F7E3600-1928-4698-9B79-B1C5151180C2">Parameters</p>
+                  <div class="infoboxnote" id="GUID-DD03C9D6-884F-425C-91DC-72C407ABCA6C__GUID-680EEE40-58BF-4A6B-877F-C6F2BE730B63">
+                     <p class="notep1">Note:</p>
+                     <p>Any character attribute exceeding 4,000 characters is truncated to 4,000 characters. Also, the number of members added is based on the number of elements in the first array.</p>
+                  </div>
+                  <div class="tblformal" id="GUID-DD03C9D6-884F-425C-91DC-72C407ABCA6C__CJAIECGG">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="31%" id="d62854e100">Parameter</th>
+                              <th align="left" valign="bottom" width="69%" id="d62854e102">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d62854e106" headers="d62854e100 "><code class="codeph">p_collection_name</code></td>
+                              <td align="left" valign="top" width="69%" headers="d62854e106 d62854e102 ">The name of the collection to update. Maximum length is 255 bytes. Collection names are not case-sensitive and are converted to upper case.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d62854e112" headers="d62854e100 "><code class="codeph">p_seq</code></td>
+                              <td align="left" valign="top" width="69%" headers="d62854e112 d62854e102 ">Array of member sequence IDs to be updated. The count of the <code class="codeph">p_seq</code> array is used across all arrays.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d62854e121" headers="d62854e100 "><code class="codeph">p_c001 through p_c050</code></td>
+                              <td align="left" valign="top" width="69%" headers="d62854e121 d62854e102 ">Array of attribute values to be updated. </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d62854e127" headers="d62854e100 "><code class="codeph">p_n001 through p_n005</code></td>
+                              <td align="left" valign="top" width="69%" headers="d62854e127 d62854e102 ">Array of numeric attribute values to be updated.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d62854e133" headers="d62854e100 "><code class="codeph">p_d001</code> through <code class="codeph">p_d005</code></td>
+                              <td align="left" valign="top" width="69%" headers="d62854e133 d62854e102 ">Array of date attribute values to be updated.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-DD03C9D6-884F-425C-91DC-72C407ABCA6C__GUID-69198521-D186-4D63-8700-AC384383DDD8">Example</p><pre class="pre codeblock"><code>DECLARE
+    l_seq   apex_application_global.vc_arr2;
+    l_carr  apex_application_global.vc_arr2;
+    l_narr  apex_application_global.n_arr;
+    l_darr  apex_application_global.d_arr;
+BEGIN
+    l_seq(1)  := 10;
+    l_seq(2)  := 15;
+    l_carr(1) := 'Apples';
+    l_carr(2) := 'Grapes';
+    l_narr(1) := 100;
+    l_narr(2) := 150;
+    l_darr(1) := sysdate;
+    l_darr(2) := sysdate;
+ 
+    APEX_COLLECTION.UPDATE_MEMBERS (
+        p_collection_name =&gt; 'Groceries',
+        p_seq  =&gt; l_seq,
+        p_c001 =&gt; l_carr,
+        p_n001 =&gt; l_narr,
+        p_d001 =&gt; l_darr);
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_COLLECTION.html#GUID-859B488C-2628-44D7-969F-50872C685B76">APEX_COLLECTION</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

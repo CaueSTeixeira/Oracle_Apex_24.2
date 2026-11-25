@@ -1,0 +1,392 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Creating a REST Data Source">
+      <meta name="abstract" content="Create a REST Data Source from Shared Components.">
+      <meta name="description" content="Create a REST Data Source from Shared Components.">
+      <meta name="DC.subject" content="REST Data Sources, creating">
+      <meta name="keywords" content="REST Data Sources, creating">
+      <meta name="DC.Relation" scheme="URI" content="managing-REST-data-sources.html#GUID-93D7A596-03A9-48AF-9FC9-6538BCC25DED">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-9C3E5EDC-2D98-4271-97C5-52A2F2B19A5C">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Create a REST Data Source from Shared Components.">
+      <meta name="description" content="Create a REST Data Source from Shared Components.">
+      <title>Creating a REST Data Source</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Create a REST Data Source from Shared Components.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="understanding-rest-data-sources.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-example-rest-data-source-on-sql-query.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Creating a REST Data Source","description":"Create a REST Data Source from Shared Components.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="understanding-rest-data-sources.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-example-rest-data-source-on-sql-query.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-9C3E5EDC-2D98-4271-97C5-52A2F2B19A5C" name="GUID-9C3E5EDC-2D98-4271-97C5-52A2F2B19A5C"></a><a id="4000:1905"></a><a id="4000:1908"></a><a id="4000:1909"></a><a id="4000:1910"></a><a id="4000:1911"></a><a id="4000:1941"></a><a id="4000:1942"></a><a id="4000:1945"></a>
+         
+         <h2 id="HTMDB-GUID-9C3E5EDC-2D98-4271-97C5-52A2F2B19A5C" class="sect2"><span class="enumeration_section">18.4.2 </span>Creating a REST Data Source
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Create a REST Data Source from Shared Components.</p>
+               <p>To create a REST Data Source:</p>
+               <ol>
+                  <li class="stepexpand"><span>Navigate to the REST Data Sources page:</span><ol type="a">
+                        <li><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                        <li><span>Select an application.</span></li>
+                        <li><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span> in the center of the page.</span></li>
+                        <li><span>Under Data Sources, select <span class="uicontrol bold">REST Data Sources</span>.
+                        </span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>On the REST Data Sources page, click <span class="uicontrol bold">Create</span>.</span></li>
+                  <li class="stepexpand"><span>Create REST Data Source - Select <span class="uicontrol bold">From Scratch</span> and click
+                        <span class="uicontrol bold">Next</span>.</span><div>
+                        
+                        <div class="infobox-tip" id="GUID-9C3E5EDC-2D98-4271-97C5-52A2F2B19A5C__GUID-E9587BAE-942D-48EB-8C86-091BE3667FA2">
+                           <p class="notep1">Tip:</p>If you select
+                            <span class="uicontrol bold">As copy of an existing REST Data Source</span>, select
+                        the application to copy from and follow the on-screen instructions.
+                        </div>
+                        
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>General:</span><ol type="a" id="GUID-9C3E5EDC-2D98-4271-97C5-52A2F2B19A5C__SUBSTEPS_BKP_JTQ_3MB">
+                        <li class="substepexpand"><span>REST Data Source Type - Select the REST Data Source type, which is
+                            either a built-in type or a type defined by a REST Source Plug-In. To
+                            learn more, review item Help for more details or see <a href="understanding-rest-data-sources.html#GUID-D9CA8CD7-2AB2-4412-8143-0991734EEAB1" title="Use REST Data Sources to access to REST services or generic JSON data feeds in applications and use the data Oracle APEX components.">About REST Data Source Types</a>.</span><div>
+                              
+                              <p>The <span class="uicontrol bold">REST Data Source Type</span>
+                                determines what appears next. This example assumes, REST Data Source
+                                Type is set to <span class="uicontrol bold">Simple HTTP</span>.
+                              </p>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Name - Enter a descriptive name for this REST Data Source.</span></li>
+                        <li class="substepexpand"><span>URL Endpoint - Enter the Endpoint URL (starting with
+                                <code class="codeph">http://</code> or <code class="codeph">https://</code>) for this REST
+                            Data Source.</span><div>
+                              
+                              <div class="infobox-tip" id="GUID-9C3E5EDC-2D98-4271-97C5-52A2F2B19A5C__GUID-A1E5472A-E0FF-4FBD-BB52-BA4C1077437A">
+                                 <p class="notep1">Tip:</p>
+                                 
+                                 <p>Do not add query string parameters by appending
+                                        <code class="codeph">?name1=value&amp;name2=value</code>. These are
+                                    configured on the Advanced wizard page after you configure
+                                    Authentication.
+                                 </p>
+                                 
+                              </div>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Open API URL - Enter the URL where the OpenAPI information is
+                            available. If populated, the REST Data Source uses OpenAPI/Swagger for
+                            discovery.</span></li>
+                        <li class="substepexpand"><span>HTTPS Host Name - The host name to be matched against the common name
+                            (CN) of the remote server's certificate for an HTTPS request. It can
+                            also be a domain name like <code class="codeph">*.example.com</code>. If NULL, the
+                            host name in the given URL is used.</span></li>
+                        <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Remote Server:</span><ol type="a">
+                        <li class="substepexpand"><span>Remote Server - Choose an existing Remote Server object. The HTTP
+                            Endpoint URL of a REST Data Source consists of the remote server (Base
+                            URL) and the service specific part. Remote Servers are stored as
+                            separate Entities. When multiple REST Data Sources share the same remote
+                            server, they can easily be redirected to another physical location (for
+                            example, from test to production) by just changing the base URL within
+                            the Remote Server definition..</span></li>
+                        <li class="substepexpand"><span>Base URL - This is the Base URL of the chosen Remote Server object. The
+                            HTTP Endpoint URL of this REST Data Source is made up from the Base URL
+                            and the service-specific path suffix below.</span><div>
+                              
+                              <p>For example:</p>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-9C3E5EDC-2D98-4271-97C5-52A2F2B19A5C__UL_IPF_WCY_DRB">
+                                 <li>
+                                    
+                                    <p><code class="codeph">http://api.example.com:8080/myservices/test/</code></p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p><code class="codeph">https://api.example.com/ords/scott/</code></p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Service URL Path - Enter the service-specific URL Path for this REST
+                            Data Source. The HTTP Endpoint URL is built by appending this to the
+                            Base URL specified in the Remote Server object. </span><div>
+                              
+                              <p>For example:</p>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-9C3E5EDC-2D98-4271-97C5-52A2F2B19A5C__UL_WFK_WTQ_3MB">
+                                 <li>
+                                    
+                                    <p><code class="codeph">/services/customers/</code></p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p><code class="codeph">/products/4711/details</code></p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>If <span class="uicontrol bold">REST Data Source Type</span> is <span class="uicontrol bold">Simple
+                        HTTP</span>, under <span class="uicontrol bold">Settings</span>, select one of the
+                    following:</span><ol type="a" id="GUID-9C3E5EDC-2D98-4271-97C5-52A2F2B19A5C__SUBSTEPS_FTM_K4M_2XB">
+                        <li class="substepexpand"><span><span class="uicontrol bold">Pagination Type</span> - Select one of the
+                            following:</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-9C3E5EDC-2D98-4271-97C5-52A2F2B19A5C__UL_ABP_LDY_DRB">
+                                 <li><span class="uicontrol bold">No Pagination</span></li>
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Page Size and Fetch
+                                            Offset</span> - Flexible pagination where the REST
+                                        API allows the request a specific set of rows, using page
+                                        size and offset ("start at row") parameters.
+                                    </p>
+                                    
+                                    <p>The following shows typical URL. In this
+                                        example, the URL requests page number 2 with a page size of
+                                        100, which leads to rows 101 to 200 being returned.</p>
+                                    
+                                    <p><code class="codeph">http://hostname.domain.com/path/to/rest_api?limit=100&amp;offset=20</code></p>
+                                    
+                                    <p>In the previous example, note that the parameters
+                                        named <code class="codeph">limit</code> and <code class="codeph">offset</code> can
+                                        be arbitrary and depend upon the REST API being used.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Page Size and Page Number</span>
+                                        - Pagination where the REST API allows the request a set of
+                                        rows, using page size and page number parameters. 
+                                    </p>
+                                    
+                                    <p>URLs typically look like the following example
+                                        which requests page number 2 with a page size of 100, which
+                                        leads to rows 101 to 200 being returned. </p>
+                                    
+                                    <p><code class="codeph">http://hostname.domain.com/path/to/rest_api?size=100&amp;page=2</code></p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Page Number</span> - Pagination
+                                        where the REST API allows to request a set of rows, using a
+                                        page parameter. The Page Size is fixed and determined by the
+                                        REST API. 
+                                    </p>
+                                    
+                                    <p>URLs typically look like the following example
+                                        which requests page number 2. If the REST API uses a fixed
+                                        page size of 20, rows 21 to 40 will be returned.</p>
+                                    
+                                    <p><code class="codeph">http://hostname.domain.com/path/to/rest_api?page=2</code></p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Page Size and Page Token</span>
+                                        - Pagination where the REST API allows to request a set of
+                                        rows, using a combination of a <strong class="term">page token</strong> and
+                                            <strong class="term">page size</strong> parameters. The token is used to
+                                        retrieve the next set of rows, and is returned in the
+                                        response body of the previous request. The page size
+                                        determines the number of rows to return in each request. 
+                                    </p>
+                                    
+                                    <p>URLs typically look like the following example,
+                                        which requests the next set of rows using the token
+                                            <code class="codeph">ApEx=</code> and a page size of
+                                            <code class="codeph">100</code>.
+                                    </p>
+                                    
+                                    <p><code class="codeph">http://hostname.example.com/path/to/rest_api?token=ApEx=&amp;limit=100</code></p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                              <p>The UI changes based on Pagination Type you select. See
+                                field-level Help for more information on specific attributes.</p>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Authentication Required - Choose whether the new REST Data Source requires
+                    Authentication.</span><div>
+                        
+                        <div class="infobox-tip" id="GUID-9C3E5EDC-2D98-4271-97C5-52A2F2B19A5C__GUID-17476E2F-5CEE-45AD-B6CC-BF64F3BF7E59">
+                           <p class="notep1">Tip:</p>
+                           
+                           <p>To learn more about authentication, see <a href="understanding-web-credentials.html#GUID-39085D26-BD3C-472B-93F9-A1D24267098B__GUID-9D8DB405-EFB9-4E03-A7C7-1D0596D0DC73">About Supported Authentication Types</a> in <a href="understanding-web-credentials.html#GUID-39085D26-BD3C-472B-93F9-A1D24267098B" title="Protect Web credentials by adding valid URLs.">Protecting Web Credentials by Defining Valid URLs</a></p>
+                           
+                        </div>
+                        
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>To proceed, select one of the following:</span><ul>
+                        <li><span class="uicontrol bold">Create REST Source Manually</span> - This option does not include Discovery mode. Based on the previously entered information, a REST Data Source is created with a few sample operations and a sample data profile. This option creates an <span class="italic">incomplete</span> REST Data Source that is unusable with an <span>APEX</span> component. To correctly reflect the external web service, you will need to edit the operations and the data profile.
+                        </li>
+                        <li><span class="uicontrol bold">Advanced</span> - Presents advanced parameters for the Data Profile. Use <span class="uicontrol bold">Response Sample</span> to upload a sample JSON (or XML) response. Once a file is uploaded, <span>APEX</span> performs a Data Profile Discovery on the uploaded file.
+                        </li>
+                        <li><span class="uicontrol bold">Discover</span> - Starts Discovery mode. <span>APEX</span> executes multiple HTTP requests in order to get information about the
+                        external Web service. One of these multiple HTTP requests can be an HTTP
+                        request to get the OpenAPI information about the Web service. <span>APEX</span> samples the data (JSON or XML) returned by the Web service and derives a
+                        Data Profile (consisting of metadata about the JSON attributes). Discovery
+                        results then display and confirms whether to create the REST Data
+                        Source.
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="stepexpand"><span>If you click <span class="uicontrol bold">Advanced</span>, the Parameter page appears. </span><div>Use the Parameters page to configure initial REST Data Source parameters
+                    which might be required for discovery. Some REST Data Sources may require you
+                    set specific HTTP Headers (for example, <code class="codeph">User-Agent</code>). After
+                    setting advanced parameters, select either&nbsp;<span class="uicontrol bold">Create REST Source
+                        Manually</span> or <span class="uicontrol bold">Discover</span>.
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>If you click <span class="uicontrol bold">Discover</span>, <span>APEX</span> invokes the REST service URL and a Preview appears. From the JSON response,
+                        <span>APEX</span> derives attributes and their data types and uses this to create a Data
+                    Profile. </span><div>
+                        
+                        <p>The information that displays depends upon the complexity of the
+                        target service. For simple HTTP services or ORDS services which do not
+                        provide metadata about their JSON response attributes, <span>APEX</span> investigates the JSON or XML response, samples the data, and creates a
+                        proposal for a data profile. The Data tab displays the sample response data,
+                        formatted as a report. 
+                        </p>
+                        
+                        <p>The columns tab shows information about the data profile columns
+                            <span>APEX</span> has found during discovery. Use this tab to verify whether the column
+                        data types are correct.
+                        </p>
+                        
+                        <p>If you wish to remove a named column you can navigate with the TAB key to the
+                        remove column and press Enter, or simply by using the mouse by pressing the
+                            <span class="uicontrol bold">X</span> icon.
+                        </p>
+                        
+                        <p>The Response Body tab shows information about the response body structure <span>APEX</span> has found during discovery. Use this tab to verify  the complexity of the
+                        structure in the  response body that will be returned depending on the type
+                        of response received in discovery.
+                        </p>
+                        
+                        <p>Click <span class="uicontrol bold">More Detail</span> to view additional
+                        detailed information about the REST Data Source response, such as the
+                        response body, response headers and the REST Data Source operations.
+                        </p>
+                        
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>Click <span class="uicontrol bold">Create REST Data Source</span>.</span><div>The REST Data Source is created.</div>
+                  </li>
+               </ol>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-REST-data-sources.html#GUID-93D7A596-03A9-48AF-9FC9-6538BCC25DED" title="Oracle APEX REST Data Sources enable developers to access to REST services or generic JSON data feeds in applications.">Managing REST Data Sources</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

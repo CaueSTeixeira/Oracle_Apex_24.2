@@ -1,0 +1,213 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="Filter Parameters for Query By Example and Parent and Child Use Cases">
+      <meta name="abstract" content="Learn about filter parameters for Query By Example (QBE) and parent and child use cases.">
+      <meta name="description" content="Learn about filter parameters for Query By Example (QBE) and parent and child use cases.">
+      <meta name="DC.subject" content="BOSS REST Data Source, about building Query By Example use cases, cascading list use case, Query by Example page use case">
+      <meta name="keywords" content="BOSS REST Data Source, about building Query By Example use cases, cascading list use case, Query by Example page use case">
+      <meta name="DC.Relation" scheme="URI" content="working-with-oracle-cloud-applications-boss-rest-services.html#GUID-F93EB097-52C9-476F-9585-B45CA4429DC3">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Reference">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-F7A7A1B6-AB3D-449F-9B4E-8337CA1E433A">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about filter parameters for Query By Example (QBE) and parent and child use cases.">
+      <meta name="description" content="Learn about filter parameters for Query By Example (QBE) and parent and child use cases.">
+      <title>Filter Parameters for Query By Example and Parent and Child Use Cases</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Learn about filter parameters for Query By Example (QBE) and parent and child use cases.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="validation-errors-display-as-apex-errors-automatically.html" title="Previous" type="text/html">
+      <link rel="next" href="best-practices-for-configuring-boss-rest-service-base-url.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Filter Parameters for Query By Example and Parent and Child Use Cases","description":"Learn about filter parameters for Query By Example (QBE) and parent and child use cases.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="validation-errors-display-as-apex-errors-automatically.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="best-practices-for-configuring-boss-rest-service-base-url.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-F7A7A1B6-AB3D-449F-9B4E-8337CA1E433A" name="GUID-F7A7A1B6-AB3D-449F-9B4E-8337CA1E433A"></a>
+         
+         <h2 id="HTMDB-GUID-F7A7A1B6-AB3D-449F-9B4E-8337CA1E433A" class="sect2"><span class="enumeration_section">18.4.8.5 </span>Filter Parameters for Query By Example and
+        Parent and Child Use Cases
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Learn about filter parameters for Query By Example (QBE) and parent and
+        child use cases.</p>
+               <div class="section">
+                  <p class="subhead1" id="GUID-F7A7A1B6-AB3D-449F-9B4E-8337CA1E433A__GUID-4263900C-D9E3-42F6-9407-79C639249359">About Building Query By Example Use Cases</p>
+                  
+                  
+                  <p>To easily build a cascading select list and Query By Example (QBE) use cases, a BOSS
+                REST Data Source enables you define filter parameters on the <code class="codeph">GET</code>
+                operation related to the <code class="codeph">Fetch rows</code> database action. These are URL
+                Pattern parameters with a specially formulated parameter name that declaratively
+                configures three aspects of runtime behavior:
+                  </p>
+                  
+                  <ul style="list-style-type: disc;" id="GUID-F7A7A1B6-AB3D-449F-9B4E-8337CA1E433A__UL_RFR_PRG_NDC">
+                     <li>
+                        
+                        <p>The case-sensitive name of the attribute to filter. For example:</p>
+                        
+                        <p><code class="codeph">someAttr</code></p>
+                        
+                     </li>
+                     <li>The filter operator to use:
+                        <ul style="list-style-type: disc;" id="GUID-F7A7A1B6-AB3D-449F-9B4E-8337CA1E433A__UL_TSQ_TRG_NDC">
+                           <li>equals (<code class="codeph">eq</code>)
+                           </li>
+                           <li>case-insensitive contains (<code class="codeph">contains</code>)
+                           </li>
+                           <li>case-insensitive starts-with (<code class="codeph">startswith</code>)
+                           </li>
+                        </ul>
+                     </li>
+                     <li>The desired behavior when the parameter’s value is null:
+                        <ul style="list-style-type: disc;" id="GUID-F7A7A1B6-AB3D-449F-9B4E-8337CA1E433A__UL_VTK_XRG_NDC">
+                           <li>Ignore the filter if the parameter value is null
+                                (<code class="codeph">ignoreifnull</code>)
+                           </li>
+                           <li>Return no rows if the parameter value is null
+                                (<code class="codeph">norowsifnull</code>)
+                           </li>
+                           <li>Match a null value (<code class="codeph">matchifnull</code>)
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+                  
+                  <p>The filter parameter name has this format:</p>
+                  
+                  <p><code class="codeph">attrName_operator$behavior</code></p>
+                  
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-F7A7A1B6-AB3D-449F-9B4E-8337CA1E433A__GUID-D7C90726-EFFA-4AFB-9B77-951C09914B8F">Cascading List Use Case</p>
+                  <p>For example, on a data source named <code class="codeph">SubcomponentsForComponent</code> to
+                filter on the parent attribute named <code class="codeph">componentId</code> using the
+                    <code class="codeph">equals</code> operator and <code class="codeph">return no rows</code> if its
+                value is null, the filter parameter name to define is:
+                  </p>
+                  
+                  <p><code class="codeph">componentId_eq$norowsifnull</code></p>
+                  
+                  <p>When building a page with cascading select lists for <code class="codeph">P3_COMPONENT_ID</code>
+                and <code class="codeph">P3_SUBCOMPONENT_ID</code>, the latter can be a select list page item
+                based on a shared component LOV that uses the
+                    <code class="codeph">SubcomponentsForComponent</code> BOSS REST Data Source. This LOV can
+                assign the value of the data source’s <code class="codeph">componentId_eq$norowsifnull</code>
+                parameter to the value of page item <code class="codeph">P3_COMPONENT_ID</code>. Then,
+                configure <code class="codeph">P3_COMPONENT_ID</code> as the Parent Item of the
+                    <code class="codeph">P3_SUBCOMPONENT_ID</code> select list page item in the Page Designer
+                and your cascading lists will work as expected.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-F7A7A1B6-AB3D-449F-9B4E-8337CA1E433A__GUID-A5AC9B6C-A929-4991-8D5A-B994444C65C8">Query by Example Page Use Case</p>
+                  <p>Suppose you have a data source named <code class="codeph">People</code>. To perform
+                case-insensitive contains matching on the  <code class="codeph">firstName</code> and
+                    <code class="codeph">lastName</code> attributes, ignoring the respective filter if its
+                value is null, the two filter parameter names to define are:
+                  </p>
+                  
+                  <ul style="list-style-type: disc;" id="GUID-F7A7A1B6-AB3D-449F-9B4E-8337CA1E433A__UL_YWX_H5G_NDC">
+                     <li><code class="codeph">firstName_contains$ignoreifnull</code></li>
+                     <li><code class="codeph">lastName_contains$ignoreifnull</code></li>
+                  </ul>
+                  
+                  <p>On the query by example page, you can define page items
+                    <code class="codeph">P4_FIRST_NAME</code> and <code class="codeph">P4_LAST_NAME</code> and configure
+                the two REST Data Source parameters above to get their value from the respective
+                page items. After making sure the <code class="codeph">P4_FIRST_NAME</code> and
+                    <code class="codeph">P4_LAST_NAME</code> are mentioned in the search results region’s
+                    <span class="uicontrol bold">Page Items to Submit</span> property, you have a working query
+                by example page.
+                  </p>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="working-with-oracle-cloud-applications-boss-rest-services.html#GUID-F93EB097-52C9-476F-9585-B45CA4429DC3" title="Learn about using APEX REST Data Sources for Oracle Cloud Applications (BOSS) REST Services.">Working with Oracle Cloud Applications BOSS REST Services</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

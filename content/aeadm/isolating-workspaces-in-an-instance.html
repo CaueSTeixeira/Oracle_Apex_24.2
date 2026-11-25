@@ -1,0 +1,296 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Isolating All Workspaces in an Instance">
+      <meta name="abstract" content="Instance administrators can configure limits to isolate all workspaces and prevent browser attacks. Workspace administrators can override these default values at the workspace-level.">
+      <meta name="description" content="Instance administrators can configure limits to isolate all workspaces and prevent browser attacks. Workspace administrators can override these default values at the workspace-level.">
+      <meta name="DC.subject" content="workspace isolation, configuring for workspace, all workspaces, isloating to prevent browser attacks, instance, preventing browser attacks">
+      <meta name="keywords" content="workspace isolation, configuring for workspace, all workspaces, isloating to prevent browser attacks, instance, preventing browser attacks">
+      <meta name="DC.Relation" scheme="URI" content="configuring-security.html#GUID-5EC277A4-20BD-47CF-9448-46680C75593E">
+      <meta name="DC.Relation" scheme="URI" content="isolating-workspaces-in-an-instance.html#GUID-5BF852BC-3924-4CB9-93FB-C0F2647573D5">
+      <meta name="DC.Relation" scheme="URI" content="isolating-workspaces-in-an-instance.html#GUID-F66B9B79-3A68-49A9-A0D8-8363BDB56474">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-B3BD09CF-D003-4837-A7D2-91A6E756D72E">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Instance administrators can configure limits to isolate all workspaces and prevent browser attacks. Workspace administrators can override these default values at the workspace-level.">
+      <meta name="description" content="Instance administrators can configure limits to isolate all workspaces and prevent browser attacks. Workspace administrators can override these default values at the workspace-level.">
+      <title>Isolating All Workspaces in an Instance</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Instance administrators can configure limits to isolate all workspaces and prevent browser attacks. Workspace administrators can override these default values at the workspace-level.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="configuiring-session-timeout.html" title="Previous" type="text/html">
+      <link rel="next" href="defining-excluded-domains-for-regions-and-web-services.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Isolating All Workspaces in an Instance","description":"Instance administrators can configure limits to isolate all workspaces and prevent browser attacks. Workspace administrators can override these default values at the workspace-level.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="configuiring-session-timeout.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="defining-excluded-domains-for-regions-and-web-services.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-B3BD09CF-D003-4837-A7D2-91A6E756D72E" name="GUID-B3BD09CF-D003-4837-A7D2-91A6E756D72E"></a><a id="AEADM29232"></a>
+         
+         <h2 id="AEADM-GUID-B3BD09CF-D003-4837-A7D2-91A6E756D72E" class="sect2"><span class="enumeration_section">3.4.6 </span>Isolating All Workspaces in an Instance
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Instance administrators can configure limits to isolate all workspaces and
+        prevent browser attacks. Workspace administrators can override these default values at the
+        workspace-level.</p>
+               <div class="infoboxnote" id="GUID-B3BD09CF-D003-4837-A7D2-91A6E756D72E__GUID-4DC52486-BF9E-4BA1-958A-75DBFCED6A32">
+                  <p class="notep1">Note:</p>To ensure the security and performance
+                                of your development environment, some administration functionality
+                                is not available in Oracle APEX instances running in Oracle
+                                Cloud.
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="isolating-workspaces-in-an-instance.html#GUID-5BF852BC-3924-4CB9-93FB-C0F2647573D5">About Isolating Workspaces to Prevent Browser Attacks</a><br>Isolating workspaces is an effective approach to preventing browser attacks.
+                  </li>
+                  <li class="ulchildlink"><a href="isolating-workspaces-in-an-instance.html#GUID-F66B9B79-3A68-49A9-A0D8-8363BDB56474">Configuring Instance-Level Workspace Isolation Attributes</a><br>Configure isolation and resource limitation default values for all         workspaces in an instance.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="configuring-security.html#GUID-5EC277A4-20BD-47CF-9448-46680C75593E" title="Instance administrators can configure instance security, including service-level security, configuring support for Real Application Security, configuring session time out, preventing browser attacks by isolating workspaces, excluding domains from regions and Web services, configuring authentication controls, creating strong password policies, and managing authorized URLs.">Configuring Security</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="AEADM29233"></a><div class="props_rev_3"><a id="GUID-5BF852BC-3924-4CB9-93FB-C0F2647573D5" name="GUID-5BF852BC-3924-4CB9-93FB-C0F2647573D5"></a><h3 id="AEADM-GUID-5BF852BC-3924-4CB9-93FB-C0F2647573D5" class="sect3"><span class="enumeration_section">3.4.6.1 </span>About Isolating Workspaces to Prevent Browser Attacks
+               </h3>
+               <div>
+                  <p>Isolating workspaces is an effective approach to preventing browser attacks.</p>
+                  <p>The only way to truly isolate a workspace is to enforce different domains in
+            the URL by configuring the Allow Hostnames attribute. When the URLs of the attacker and
+            the victim have different domains and hostnames, the browser's same-origin policy
+            prevents attacks.</p>
+                  <p>Workspace isolation by configuring Allow Hostnames is a counter measure against client
+            side attacks that attempt to cross workspace boundaries. This security measure is not
+            necessary if you trust all applications that are accessible using the instance's host
+            which includes applications that are written in other frameworks and languages such as
+            Oracle Application Development Framework (ADF) and Java.</p>
+                  <p>Instance administrators can configure the Allow Hostnames attribute at the instance-level. Workspace administrators can override the instance-level setting for a specific workspace.</p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-5BF852BC-3924-4CB9-93FB-C0F2647573D5__GUID-B7AEB21C-1CC5-4383-9C05-69092C6181A3">
+                     <p class="notep1">See Also:</p>
+                     
+                     <p><a href="isolating-workspace-to-prevent-browser-attacks.html#GUID-8BF9FF41-1CA7-44E7-A82E-42B927F42CF9" title="Workspace administrators can prevent browser attacks by isolating a specific workspace. Workspace-level settings override those configured for an entire instance.">Isolating a Workspace to Prevent Browser Attacks</a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="isolating-workspaces-in-an-instance.html#GUID-B3BD09CF-D003-4837-A7D2-91A6E756D72E" title="Instance administrators can configure limits to isolate all workspaces and prevent browser attacks. Workspace administrators can override these default values at the workspace-level.">Isolating All Workspaces in an Instance</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29235"></a><a id="AEADM29234"></a><div class="props_rev_3"><a id="GUID-F66B9B79-3A68-49A9-A0D8-8363BDB56474" name="GUID-F66B9B79-3A68-49A9-A0D8-8363BDB56474"></a><h3 id="AEADM-GUID-F66B9B79-3A68-49A9-A0D8-8363BDB56474" class="sect3"><span class="enumeration_section">3.4.6.2 </span>Configuring Instance-Level Workspace Isolation Attributes
+               </h3>
+               <div>
+                  <p>Configure isolation and resource limitation default values for all
+        workspaces in an instance.</p>
+                  <div class="section">
+                     
+                     <div class="infobox-tip" id="GUID-F66B9B79-3A68-49A9-A0D8-8363BDB56474__GUID-5DA0C262-0139-409A-BFDC-623A3155D62E">
+                        <p class="notep1">Tip:</p>Workspace administrators can override these default values at the workspace-level. See <a href="isolating-workspace-to-prevent-browser-attacks.html#GUID-8BF9FF41-1CA7-44E7-A82E-42B927F42CF9" title="Workspace administrators can prevent browser attacks by isolating a specific workspace. Workspace-level settings override those configured for an entire instance.">Isolating a Workspace to Prevent Browser Attacks</a>.
+                     </div>
+                     
+                  </div>
+                  <div class="section">
+                     <p>To configure instance-level Workspace Isolation attributes:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                     <li class="stepexpand"><span>Under Workspace Isolation, configure the following attributes:</span><div>
+                           <div class="infobox-tip" id="GUID-F66B9B79-3A68-49A9-A0D8-8363BDB56474__GUID-F4726D80-275C-45ED-BA58-08A74C297419">
+                              <p class="notep1">Tip:</p>
+                              <p>To learn more about an attribute, see field-level Help.</p>
+                           </div>
+                           <div class="tblformal" id="GUID-F66B9B79-3A68-49A9-A0D8-8363BDB56474__BABEHDGA">
+                              <table cellpadding="4" cellspacing="0" class="Formal" title summary="Workspace Isolation attributes." width="90%" frame="hsides" border="1" rules="rows">
+                                 <thead>
+                                    <tr align="left" valign="top">
+                                       <th align="left" valign="bottom" width="33%" id="d29227e264">Attribute</th>
+                                       <th align="left" valign="bottom" width="67%" id="d29227e266">Description</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="33%" id="d29227e270" headers="d29227e264 ">
+                                          <p>Allow Hostnames </p><a id="d29227e273" class="indexterm-anchor"></a><a id="d29227e275" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="67%" headers="d29227e270 d29227e266 ">
+                                          <p>Enter a comma separated list of hostnames that can be used to access this instance. This attribute can be used to specify which DNS aliases of the web server can be used with applications. You can configure specific values that override this one at workspace level. If you enter one or more hostnames, the incoming HTTP request URL's hostname part must match one of the listed hostnames.</p>
+                                          
+                                          <p>For example, you can register the DNS alias
+                                                <code class="codeph">hr.example.com</code> for your web server
+                                                <code class="codeph">www.example.com</code>. The instance value
+                                            of Allowed Hostnames can be set to
+                                                <code class="codeph">www.example.com</code>. If you then set
+                                            the HR workspace's Allow Hostnames to
+                                                <code class="codeph">hr.example.com</code>, users have to
+                                            access HR applications using
+                                                <code class="codeph">hr.example.com</code> and all other
+                                            applications of this instance using
+                                                <code class="codeph">www.example.com</code>. With this
+                                            configuration, the browser's Same Origin security policy
+                                            provides a client-side barrier between HR applications
+                                            and other applications of the instance, which run in
+                                            another browser tab or window.
+                                          </p>
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="33%" id="d29227e305" headers="d29227e264 ">
+                                          <p>Resource Consumer Group</p><a id="d29227e308" class="indexterm-anchor"></a><a id="d29227e310" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="67%" headers="d29227e305 d29227e266 ">
+                                          <p>Specify the Database Resource Manager consumer group to be used for all page events
+                                            on the instance. The Resource Consumer Group provides
+                                            more control of hardware resources such as CPU and I/O
+                                            requests. Workspace-level settings override
+                                            instance-level settings to enable administrators to
+                                            provide more or less resources depending on the needs or
+                                            importance of a workspace.</p>
+                                          
+                                          <p>At the beginning of every request, the <span>APEX</span> engine switches the current consumer group of the current database session to the consumer group that is defined at workspace or instance-level. This applies to both executing applications and any of the applications used within the <span>APEX</span> development environment.
+                                          </p>
+                                          
+                                          <p>These limitations apply to all page requests where application code executes using the <span>APEX</span> engine which enables the assigned Resource Manager settings. However, these limitations do not apply to Oracle Scheduler jobs that workspace developers create, or to ORDS REST requests, where <span>APEX</span> is not in the code path.
+                                          </p>
+                                          
+                                          <p>A call to set the workspace, such as <code class="codeph">apex_util.set_workspace('MY_WORKSPACE');</code> at the beginning of the scheduler job, enables the right consumer group. However, there is often no reason for developers to add this type call. Therefore, administrators should apply the Resource Manager consumer groups to both the <span>APEX</span> workspaces and to the workspace schemas (that is, the underlying database users). 
+                                          </p>
+                                          
+                                          <p>You must grant privilege to switch to a consumer group to either <code class="codeph">PUBLIC</code> or the <span>APEX</span> schema. This privilege is typically granted using the procedure <code class="codeph">DBMS_RESOURCE_MANAGER_PRIVS.GRANT_SWITCH_CONSUMER_GROUP</code>.
+                                          </p>
+                                          
+                                          <p><span class="bold">See Also</span>: <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeadm&id=ADMIN-GUID-2BEF5482-CF97-4A85-BD90-9195E41E74EF" target="_blank">Managing Resources with Oracle Database Resource Manager</a> in <span><cite>Oracle Database
+                                        Administrator’s Guide</cite></span></p>
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="33%" id="d29227e369" headers="d29227e264 ">
+                                          <p>Maximum Concurrent Workspace Requests</p><a id="d29227e372" class="indexterm-anchor"></a><a id="d29227e374" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="67%" headers="d29227e369 d29227e266 ">
+                                          <p>Enter the maximum number of concurrent page events that <span>APEX</span> supports for all applications. You can configure a specific value at the workspace-level. Instead of processing a page event, <span>APEX</span> shows an error message when the limit is already reached.
+                                          </p>
+                                          <p><span>APEX</span> keeps track of workspace requests by querying the <code class="codeph">CLIENT_INFO</code> column of <code class="codeph">GV$SESSION</code>. This tracking will not work if developers overwrite <code class="codeph">CLIENT_INFO</code>, for example, with a call to <code class="codeph">DBMS_APPLICATION_INFO.SET_CLIENT_INFO</code>.
+                                          </p>
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="33%" id="d29227e404" headers="d29227e264 ">
+                                          <p>Maximum Concurrent Session Requests</p><a id="d29227e407" class="indexterm-anchor"></a><a id="d29227e409" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="67%" headers="d29227e404 d29227e266 ">
+                                          <p>Enter the maximum number of concurrent page events that <span>APEX</span> supports for each session for applications in this instance. You can configure a specific value at the workspace-level. Instead of processing a new page event, <span>APEX</span> shows an error message when the limit is already reached. Alternatively, you can use the Concurrent Session Requests Kill Timeout attribute to kill an active database session, to process the new page event.
+                                          </p>
+                                          <p><span>APEX</span> keeps track of session requests by querying the <code class="codeph">CLIENT_IDENTIFIER</code> column of <code class="codeph">GV$SESSION</code>. This tracking will not work if developers overwrite <code class="codeph">CLIENT_IDENTIFIER</code>, for example, with a call to <code class="codeph">DBMS_SESSION.SET_IDENTIFIER</code>.
+                                          </p>
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="33%" id="d29227e439" headers="d29227e264 ">
+                                          <p>Concurrent Session Requests Kill Timeout</p><a id="d29227e442" class="indexterm-anchor"></a><a id="d29227e444" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="67%" headers="d29227e439 d29227e266 ">
+                                          <p>If a new page event comes in that is outside the limits of Maximum Concurrent Session Requests, <span>APEX</span> can execute <code class="codeph">alter system kill session</code> on the oldest active database session which processes another page event for this <span>APEX</span> session. The Concurrent Session Requests Kill Timeout attribute specifies the number of seconds a database process has to be active, before it can be killed. If you leave this attribute empty, <span>APEX</span> will not kill any database sessions.
+                                          </p>
+                                          <p><span class="bold">Warning</span>: Killing sessions can cause problems with the application server's database session pool.
+                                          </p>
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="33%" id="d29227e468" headers="d29227e264 ">
+                                          <p>Maximum Size of Files in Workspace</p><a id="d29227e471" class="indexterm-anchor"></a><a id="d29227e473" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="67%" headers="d29227e468 d29227e266 ">
+                                          <p>Enter the total size (in bytes) of all files that can be uploaded to a workspace. You can configure a specific value at the workspace-level.</p>
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="33%" id="d29227e481" headers="d29227e264 ">
+                                          <p>Maximum Web Service Requests</p><a id="d29227e484" class="indexterm-anchor"></a><a id="d29227e486" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="67%" headers="d29227e481 d29227e266 ">
+                                          
+                                          <p>Enter the maximum number of web service requests, within
+                                            a rolling 24-hour period, that <span>APEX</span> supports for each workspace in this instance. You can
+                                            configure a more specific value at the
+                                            workspace-level.
+                                          </p>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="isolating-workspaces-in-an-instance.html#GUID-B3BD09CF-D003-4837-A7D2-91A6E756D72E" title="Instance administrators can configure limits to isolate all workspaces and prevent browser attacks. Workspace administrators can override these default values at the workspace-level.">Isolating All Workspaces in an Instance</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,818 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Creating Plug-ins">
+      <meta name="abstract" content="Create plug-ins by navigating to Shared Components and running the Create Plug-in Wizard.">
+      <meta name="description" content="Create plug-ins by navigating to Shared Components and running the Create Plug-in Wizard.">
+      <meta name="DC.subject" content="plug-ins, creating, Item, Standard Attributes, copying">
+      <meta name="keywords" content="plug-ins, creating, Item, Standard Attributes, copying">
+      <meta name="DC.Relation" scheme="URI" content="implementing-plug-ins.html#GUID-B158814B-C3FC-4030-AF25-D14208DB1E27">
+      <meta name="DC.Relation" scheme="URI" content="creating-plug-ins.html#GUID-2025E2A8-53E8-4101-86A6-D73DA1579A0D">
+      <meta name="DC.Relation" scheme="URI" content="creating-plug-ins.html#GUID-FD29626A-462D-45EE-B0A5-AC988D27F27F">
+      <meta name="DC.Relation" scheme="URI" content="creating-plug-ins.html#GUID-29BBBAD7-D9F5-40CF-AF22-795C493C410A">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-35DE391B-AE85-4688-9556-1CA2AD6A32A6">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Create plug-ins by navigating to Shared Components and running the Create Plug-in Wizard.">
+      <meta name="description" content="Create plug-ins by navigating to Shared Components and running the Create Plug-in Wizard.">
+      <title>Creating Plug-ins</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Create plug-ins by navigating to Shared Components and running the Create Plug-in Wizard.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="understanding-plug-ins.html" title="Previous" type="text/html">
+      <link rel="next" href="editing-plug-ins.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Creating Plug-ins","description":"Create plug-ins by navigating to Shared Components and running the Create Plug-in Wizard.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="understanding-plug-ins.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="editing-plug-ins.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-35DE391B-AE85-4688-9556-1CA2AD6A32A6" name="GUID-35DE391B-AE85-4688-9556-1CA2AD6A32A6"></a><a id="4000:4403"></a><a id="4000:4404"></a><a id="4000:4405"></a><a id="4000:4406"></a><a id="4000:4415"></a><a id="4000:4416"></a><a id="4000:4450"></a>
+         
+         <h2 id="HTMDB-GUID-35DE391B-AE85-4688-9556-1CA2AD6A32A6" class="sect2"><span class="enumeration_section">19.2.2 </span>Creating Plug-ins
+         </h2>
+         <div class="ind">
+            <p>Create plug-ins by navigating to Shared Components and running the Create Plug-in Wizard.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="creating-plug-ins.html#GUID-2025E2A8-53E8-4101-86A6-D73DA1579A0D">Creating a Plug-in from Scratch</a><br>Create a plug-in from scratch by running the Create Plug-in         Wizard
+                  </li>
+                  <li class="ulchildlink"><a href="creating-plug-ins.html#GUID-FD29626A-462D-45EE-B0A5-AC988D27F27F">Standard Attributes for Item Type Plug-ins</a><br>Review Standard Attributes for Item type plug-ins.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-plug-ins.html#GUID-29BBBAD7-D9F5-40CF-AF22-795C493C410A">Copying a Plug-in</a><br>Create a plug-in by copying an existing plug-in from another         application.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="implementing-plug-ins.html#GUID-B158814B-C3FC-4030-AF25-D14208DB1E27" title="Create plug-ins to declaratively extend, share, and reuse the built-in types available in APEX.">Implementing Plug-ins</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB27009"></a><div class="props_rev_3"><a id="GUID-2025E2A8-53E8-4101-86A6-D73DA1579A0D" name="GUID-2025E2A8-53E8-4101-86A6-D73DA1579A0D"></a><h3 id="HTMDB-GUID-2025E2A8-53E8-4101-86A6-D73DA1579A0D" class="sect3"><span class="enumeration_section">19.2.2.1 </span>Creating a Plug-in from Scratch
+               </h3>
+               <div>
+                  <p>Create a plug-in from scratch by running the Create Plug-in
+        Wizard</p>
+                  <div class="section">
+                     <div class="infobox-tip" id="GUID-2025E2A8-53E8-4101-86A6-D73DA1579A0D__GUID-7DEBEA3B-DA45-4F13-BF01-7264133BFC42">
+                        <p class="notep1">Tip:</p>
+                        <p>To learn more about an attributes described in this section see field-level Help. </p>
+                     </div>
+                  </div>
+                  <p>To create a plug-in from scratch:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                 <p>The Shared Components page appears. </p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Other Components, click <span class="uicontrol bold">Plug-ins</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create</span>.</span><div>
+                           <p>The Create Plug-in wizard appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Create Plug-in - Select <span class="uicontrol bold">From Scratch</span> and click
+                        <span class="uicontrol bold">Next</span>. </span></li>
+                     <li class="stepexpand"><span>Name:</span><ol type="a">
+                           <li class="substepexpand"><span>Name - Enter name of the plug-in.</span></li>
+                           <li class="substepexpand"><span>Internal Name - Enter the internal name of the plug-in. This name must
+                            be unique within the current application.</span><div>
+                                 
+                                 <p>To insure the internal name is a globally unique name
+                                worldwide, Oracle recommends that your organization domain name be
+                                used as a prefix to internal plug-in names. For example, a domain
+                                name of <code class="codeph">example.com.com</code> prefixed to a plug-in named
+                                    <code class="codeph">Slider</code>, would result in an internal name of
+                                    <code class="codeph">COM.EXAMPLE.SLIDER</code>.
+                                 </p>
+                                 
+                                 <p>The internal name of a Template Component type plug-in as part of a
+                                theme will always be prefixed with <code class="codeph">THEME$</code>, for
+                                example, <code class="codeph">THEME$COM.MYCOMPANY.BADGE</code>. Use this
+                                internal name to apply a Template Component manually where
+                                server-side template directives are supported.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Type - Select the type of component that can use this plug-in. Options
+                            include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-2025E2A8-53E8-4101-86A6-D73DA1579A0D__UL_K44_HZ5_SWB">
+                                    <li><span class="uicontrol bold">Authentication Scheme Type</span> -
+                                    Used to establish each user's identity before accessing an
+                                    application.
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Authorization Scheme Type</span> - Checks if
+                                        a user can access a page, process, or component.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Dynamic Actions</span> - Adds new actions
+                                        and/or functionality that can by called dynamically on the
+                                        client-side.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Item</span> - Adds new item types
+                                        to <span>APEX</span>.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Process</span> - Adds an application and/or
+                                        page processes.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">REST Data Source</span> - Used for certain
+                                        REST Data Sources without further configuration or
+                                        programming.
+                                       </p>
+                                       
+                                    </li>
+                                    <li><span class="uicontrol bold">Region</span> - Plug-in used to add
+                                    new region types to <span>APEX</span>.
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Template Component</span> -
+                                        Plug-ins based on HTML templates which support Template
+                                        Directives. See  <a href="template-directives.html#GUID-6AF393C3-688C-4F9E-8E54-10FE0933F6C0" title="Template directives are special tokens in a template that control how the text around them is processed.">Template Directives</a>. 
+                                       </p>
+                                       
+                                       <p>Enables support for adding new region types to
+                                            <span>APEX</span> which are not based on PL/SQL. These new region types can
+                                        be used as regions, as reports, or as columns in interactive
+                                        reports.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                                 <p>Depending upon the plug-in type you select, the UI
+                                changes. For example, the options that display under Callbacks and
+                                Standard Attributes may differ. </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Category - Only displays if the selected type is Dynamic Action. Select
+                            the category the plug-in is displayed under on the user interface.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Source:</span><ol type="a">
+                           <li><span>PL/SQL Code - Enter a PL/SQL anonymous block of code that contains the
+                            procedures for rendering, validating, executing, and performing Ajax
+                            callbacks for this plug-in. For performance reasons you can also store
+                            this code in a PL/SQL package in the database.</span></li>
+                           <li><span>Do not validate PL/SQL code (parse PL/SQL code at runtime only) -
+                            Select this option to parse the PL/SQL code at runtime only. Otherwise,
+                            the code is parsed when the plug-in is created.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Callbacks - Configure that appropriate attributes. The attributes that display
+                    depend upon the plug-in type. To learn more about an attribute and view
+                    examples, see field-level Help.</span><div>
+                           
+                           <div class="infobox-tip" id="GUID-2025E2A8-53E8-4101-86A6-D73DA1579A0D__GUID-CE9F2B15-3AF3-4E8C-9734-B3F35AF40BC6">
+                              <p class="notep1">Tip:</p>
+                              
+                              <p>All Callback function names can reference a function of the
+                            anonymous PL/SQL code block, a function within a package or a standalone
+                            function in the database.</p>
+                              
+                           </div>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Standard Attributes - Select the attributes that apply to this plug-in.
+                    Standard Attributes do not display for some plug-ins. </span><div>
+                           
+                           <p>To learn more about Standard Attributes that apply only to Item
+                        type plug-ins, see <a href="creating-plug-ins.html#GUID-FD29626A-462D-45EE-B0A5-AC988D27F27F" title="Review Standard Attributes for Item type plug-ins.">Standard Attributes for Item Type Plug-ins</a>.
+                           </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Information: </span><ol type="a">
+                           <li><span>Version - Enter a string to identify the plug-in version.</span></li>
+                           <li><span>About URL - Enter a URL to the plug-in authors home page or to
+                            additional information about the plug-in.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Help Text, enter help text used by the user to understand how the plug-in works.</span></li>
+                     <li class="stepexpand"><span>For Comments, enter comments and notes that never display when the application is running.</span><div>
+                           <p>To learn more about each option, see field-level Help.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Plug-in</span>.</span><div>
+                           
+                           <p>Now that the plug-in is created, you can edit it to specify
+                        additional custom attributes, upload files such as image, CSS, and
+                        JavaScript files to associate with your plug-in, and add events.</p>
+                           
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-plug-ins.html#GUID-35DE391B-AE85-4688-9556-1CA2AD6A32A6" title="Create plug-ins by navigating to Shared Components and running the Create Plug-in Wizard.">Creating Plug-ins</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-FD29626A-462D-45EE-B0A5-AC988D27F27F" name="GUID-FD29626A-462D-45EE-B0A5-AC988D27F27F"></a><h3 id="HTMDB-GUID-FD29626A-462D-45EE-B0A5-AC988D27F27F" class="sect3"><span class="enumeration_section">19.2.2.2 </span>Standard Attributes for Item Type Plug-ins 
+               </h3>
+               <div>
+                  <p>Review Standard Attributes for Item type plug-ins.</p>
+                  <div class="section">
+                     
+                     <div class="tblformal" id="GUID-FD29626A-462D-45EE-B0A5-AC988D27F27F__TABLE_RPN_LHT_SWB">
+                        <table cellpadding="4" cellspacing="0" class="Formal" title summary="Standard Attributes for Item type plug-ins." frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="0%" id="d279639e564">
+                                Item Type Standard Attributes
+                            </th>
+                                 <th align="left" valign="bottom" width="0%" id="d279639e569">
+                                Description
+                            </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e576" headers="d279639e564 ">
+                                    
+                                    <p>Is Visible Widget</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e576 d279639e569 ">
+                                    
+                                    <p>The widget is visible.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e587" headers="d279639e564 ">
+                                    
+                                    <p>Standard Form Element</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e587 d279639e569 ">
+                                    
+                                    <p>The widget renders as a HTML form element (for
+                                    example, input, select or textarea). If not checked,
+                                        <code class="codeph">APEX_PLUGIN_UTIL.GET_ELEMENT_ATTRIBUTES</code>
+                                    will automatically add <code class="codeph">ARIA-LABELLEDBY</code> to allow
+                                    the non-standard form element to be labeled appropriately, so as
+                                    to be accessible to screen readers.
+                                    </p>
+                                    
+                                    <p><span class="uicontrol bold">Note</span>: This relies on the
+                                        <code class="codeph">#LABEL_ID#</code> substitution being defined in
+                                    the item's corresponding label template. The <span class="uicontrol bold">Is
+                                        Visible Widget</span> attribute must also be
+                                    checked
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e615" headers="d279639e564 ">
+                                    
+                                    <p>Session State Changeable</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e615 d279639e569 ">
+                                    
+                                    <p>The value for an item can be changed in session
+                                    state. The <span class="uicontrol bold">Is Visible Widget</span> attribute
+                                    must be checked.
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e629" headers="d279639e564 ">
+                                    
+                                    <p>Has Read Only Attribute</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e629 d279639e569 ">
+                                    
+                                    <p> The user can specify a <span class="uicontrol bold">Read
+                                        Only</span> condition for the item. The <span class="uicontrol bold">Is
+                                        Visible Widget</span> attribute must be checked for
+                                    this attribute to be enabled
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e646" headers="d279639e564 ">
+                                    
+                                    <p>Has Escape Special Characters Attribute</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e646 d279639e569 ">
+                                    
+                                    <p>The item has the <span class="uicontrol bold">Escape special
+                                        characters</span> field in the Security section when
+                                    the item is edited. The <span class="uicontrol bold">Is Visible Widget</span>
+                                    attribute must be checked.
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e663" headers="d279639e564 ">
+                                    
+                                    <p>Has Quick Pick Attributes</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e663 d279639e569 ">
+                                    
+                                    <p>The item has quick pick attributes. The
+                                        <span class="uicontrol bold">Is Visible Widget</span> attribute must be
+                                    checked.
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e677" headers="d279639e564 ">
+                                    
+                                    <p>Has Source Attributes</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e677 d279639e569 ">
+                                    
+                                    <p>The item has source related attributes such as
+                                        <span class="uicontrol bold">Source Used</span>, <span class="uicontrol bold">Source
+                                        Type</span>, and <span class="uicontrol bold">Format
+                                    Mask</span>.
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e697" headers="d279639e564 ">
+                                    
+                                    <p>Format Mask Date Only</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e697 d279639e569 ">
+                                    
+                                    <p>For items that handle date information, the
+                                        <span class="uicontrol bold">Format Mask</span> field popup restricts the
+                                    date selections by displaying date values to select from. The
+                                        <span class="uicontrol bold">Has Source Attributes</span> must be
+                                    checked.
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e714" headers="d279639e564 ">
+                                    
+                                    <p>Format Mask Number Only</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e714 d279639e569 ">
+                                    
+                                    <p>For items that handle numeric information, the
+                                        <span class="uicontrol bold">Format Mask</span> field popup restricts the
+                                    numeric selections by displaying numeric values to select
+                                    from.
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e728" headers="d279639e564 ">
+                                    
+                                    <p>Has Element Attributes</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e728 d279639e569 ">
+                                    
+                                    <p>The item has element attributes such as
+                                        <span class="uicontrol bold">Horizontal/Vertical Alignment</span>,
+                                        <span class="uicontrol bold">HTML Form Element Attributes</span>, and
+                                        <span class="uicontrol bold">Pre/Post Element Text</span>.
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e748" headers="d279639e564 ">
+                                    
+                                    <p>Has Width Attributes</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e748 d279639e569 ">
+                                    
+                                    <p>The item width can be controlled.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e760" headers="d279639e564 ">
+                                    
+                                    <p>Has Height Attribute</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e760 d279639e569 ">
+                                    
+                                    <p>The item height can be controlled.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e771" headers="d279639e564 ">
+                                    
+                                    <p>Has Element Option Attribute</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e771 d279639e569 ">
+                                    
+                                    <p>The item allows specification of additional option
+                                    attributes when rendering multi-selection elements such as radio
+                                    groups of check boxes.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e782" headers="d279639e564 ">
+                                    
+                                    <p>Has Placeholder Attribute </p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e782 d279639e569 ">
+                                    
+                                    <p>The item supports the specification of placeholder
+                                    text, which gets displayed in the element.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e793" headers="d279639e564 ">
+                                    
+                                    <p>Has Icon Attribute</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e793 d279639e569 ">
+                                    
+                                    <p>Enables users to select an icon in Page Designer for an item
+                                    plug-in. That icon then displays on the item at runtime.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e804" headers="d279639e564 ">
+                                    
+                                    <p>Has Encrypt Session State Attribute</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e804 d279639e569 ">
+                                    
+                                    <p>When editing the item, the Store value encrypted in
+                                    session state displays under the Security region.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e815" headers="d279639e564 ">
+                                    
+                                    <p>Has List of Values</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e815 d279639e569 ">
+                                    
+                                    <p>The item has an associated list of values. The
+                                        <span class="uicontrol bold">Is Visible Widget</span> attribute must be
+                                    checked.
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e829" headers="d279639e564 ">
+                                    
+                                    <p>List of Values Required</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e829 d279639e569 ">
+                                    
+                                    <p>For items that handle lists of values, a list of
+                                    values must be defined. The <span class="uicontrol bold">Has List of
+                                        Values</span> attribute must be checked.
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e843" headers="d279639e564 ">
+                                    
+                                    <p>Has LOV Display Null Attributes</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e843 d279639e569 ">
+                                    
+                                    <p>The item is associated with a list of values that is
+                                    allowed to include null values. The <span class="uicontrol bold">Has List of
+                                        Values</span> attribute must be checked.
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e857" headers="d279639e564 ">
+                                    
+                                    <p>Has Cascading LOV Attributes</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e857 d279639e569 ">
+                                    
+                                    <p>The item has cascading LOV related attributes. The
+                                        <span class="uicontrol bold">Has List of Values</span> attribute must be
+                                    checked.
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e871" headers="d279639e564 ">
+                                    
+                                    <p>Join LOV for Column Display</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e871 d279639e569 ">
+                                    
+                                    <p>The item can be a part of a Join statement for the
+                                    LOV source. The Has List of Values attribute must be
+                                    checked.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e882" headers="d279639e564 ">
+                                    
+                                    <p>Optional Multiple Values</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e882 d279639e569 ">
+                                    
+                                    <p>(Optional) Applicable to items where multiple values
+                                    are at the developer's discretion.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e894" headers="d279639e564 ">
+                                    
+                                    <p>Always Multiple Values</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e894 d279639e569 ">
+                                    
+                                    <p>(Always) Designed for items like shuttles or
+                                    checkboxes, which inherently support multiple values.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e905" headers="d279639e564 ">
+                                    
+                                    <p>Has Filter</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e905 d279639e569 ">
+                                    
+                                    <p>Controls if the Page Designer shows the Column
+                                    Filter - Enabled attribute of an interactive grid column.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e916" headers="d279639e564 ">
+                                    
+                                    <p>Has Link</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e916 d279639e569 ">
+                                    
+                                    <p>Controls if the Page Designer shows the Link -
+                                    Target attribute of an interactive grid column.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e927" headers="d279639e564 ">
+                                    
+                                    <p>Has "'Initialization JavaScript Code" Attribute</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e927 d279639e569 ">
+                                    
+                                    <p>Component configuration can be controlled by a
+                                    provided JavaScript function.</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d279639e938" headers="d279639e564 ">
+                                    
+                                    <p>Session State Supports CLOB</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d279639e938 d279639e569 ">
+                                    
+                                    <p>Controls if the Page Designer will show Session
+                                    State Group for the particular item.</p>
+                                    
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-plug-ins.html#GUID-35DE391B-AE85-4688-9556-1CA2AD6A32A6" title="Create plug-ins by navigating to Shared Components and running the Create Plug-in Wizard.">Creating Plug-ins</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-29BBBAD7-D9F5-40CF-AF22-795C493C410A" name="GUID-29BBBAD7-D9F5-40CF-AF22-795C493C410A"></a><h3 id="HTMDB-GUID-29BBBAD7-D9F5-40CF-AF22-795C493C410A" class="sect3"><span class="enumeration_section">19.2.2.3 </span>Copying a Plug-in
+               </h3>
+               <div>
+                  <p>Create a plug-in by copying an existing plug-in from another
+        application.</p>
+                  <div class="section">
+                     <div class="infobox-tip" id="GUID-29BBBAD7-D9F5-40CF-AF22-795C493C410A__GUID-7DEBEA3B-DA45-4F13-BF01-7264133BFC42">
+                        <p class="notep1">Tip:</p>To learn more about plug-in
+                attributes, see field-level Help. 
+                     </div>
+                  </div>
+                  <p>To copy a plug-in:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                 <p>The Shared Components page appears. </p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Other Components, click <span class="uicontrol bold">Plug-ins</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create</span>.</span><div>
+                           <p>The Create Plug-in wizard appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Create Plug-in - Select <span class="uicontrol bold">As a Copy of an Existing Plug-in</span>
+                    and click <span class="uicontrol bold">Next</span>. </span></li>
+                     <li class="stepexpand"><span>Copy From:</span><ol type="a" id="GUID-29BBBAD7-D9F5-40CF-AF22-795C493C410A__SUBSTEPS_LBS_SNV_SWB">
+                           <li><span>Copy From Application - Select an application from which to copy
+                            plug-ins.</span></li>
+                           <li><span>Theme - Identify the theme from which you wish to copy templates.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Copy:</span><ol type="a" class="single-step" id="GUID-29BBBAD7-D9F5-40CF-AF22-795C493C410A__SUBSTEPS_ACH_14V_SWB">
+                           <li class="substepexpand"><span>Identify the Plug-in to be copied and select the copy option. Options
+                            include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-29BBBAD7-D9F5-40CF-AF22-795C493C410A__UL_RPK_B4V_SWB">
+                                    <li><span class="uicontrol bold">Yes</span> - Copy the Plug-in.
+                                    </li>
+                                    <li><span class="uicontrol bold">No</span> - Do not copy this Plug-in.
+                                    </li>
+                                    <li><span class="uicontrol bold">Copy and Subscribe</span> - Subscribingto a
+                                    Plug-in puts a copy of it in your application and sets the
+                                    plugin master reference.
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Copy Plug-ins</span>.</span><div>
+                           
+                           <p>Now that the plug-in is created, you can edit it to specify
+                        additional custom attributes, upload files such as image, CSS, and
+                        JavaScript files to associate with your plug-in, and add events.</p>
+                           
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-plug-ins.html#GUID-35DE391B-AE85-4688-9556-1CA2AD6A32A6" title="Create plug-ins by navigating to Shared Components and running the Create Plug-in Wizard.">Creating Plug-ins</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Accessing SQL Developer Web Directly from APEX">
+      <meta name="abstract" content="Access SQL Developer Web from the SQL Workshop menu.">
+      <meta name="description" content="Access SQL Developer Web from the SQL Workshop menu.">
+      <meta name="DC.subject" content="SQL Workshop menu, , SQL Developer Web, access from, APEX">
+      <meta name="keywords" content="SQL Workshop menu, , SQL Developer Web, access from, APEX">
+      <meta name="DC.Relation" scheme="URI" content="using-restful-services.html#GUID-9EF9F122-554D-40C3-B14D-70C3ACF1A48D">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Neil Fernandez">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Synders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="January2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-9DA2CDE0-7679-4106-B901-6E127D996005">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Access SQL Developer Web from the SQL Workshop menu.">
+      <meta name="description" content="Access SQL Developer Web from the SQL Workshop menu.">
+      <title>Accessing SQL Developer Web Directly from APEX</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="SQL Workshop Guide">
+      <meta property="og:description" content="Access SQL Developer Web from the SQL Workshop menu.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="SQL Workshop Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-sql-workshop-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-01-14T12:14:06-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2008, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12911-01">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-resource-handlers.html" title="Previous" type="text/html">
+      <link rel="next" href="book-index.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX SQL Workshop Guide">
+    <meta name="dcterms.isVersionOf" content="AEUTL">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","name":"Accessing SQL Developer Web Directly from APEX","description":"Access SQL Developer Web from the SQL Workshop menu.","datePublished":"2025-01-14 CST","dateModified":"2025-01-14 CST"} </script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-resource-handlers.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="book-index.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article>
+         <header>
+            <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Workshop Guide</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-restful-services.html" property="item" typeof="WebPage"><span property="name">Enabling Data Exchange with RESTful
+                        Services</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">Accessing SQL Developer Web Directly from APEX</li>
+            </ol>
+            <a id="GUID-9DA2CDE0-7679-4106-B901-6E127D996005" name="GUID-9DA2CDE0-7679-4106-B901-6E127D996005"></a>
+            
+            <h2 id="AEUTL-GUID-9DA2CDE0-7679-4106-B901-6E127D996005" class="sect2"><span class="enumeration_section">7.9 </span>Accessing <span>SQL Developer Web</span> Directly from <span>APEX</span></h2>
+         </header>
+         <div class="ind">
+            <div>
+               <p>Access  <span>SQL Developer Web</span>  from the <span>SQL Workshop</span> menu.
+               </p>
+               <div class="section">
+                  
+                  <p><span>SQL Developer Web</span> (also known as Database Actions) provides a web-based interface that enables you
+                to execute queries and scripts, create database objects, load data, build data
+                models, and monitor database performance.
+                  </p>
+                  
+                  <p>Users with Developer rights and access to <span>SQL Workshop</span> can open a <span>SQL Developer Web</span> session for any database schema associated with the current workspace directly from <span>APEX</span> using the <span>SQL Developer Web</span> option on the <span>SQL Workshop</span> menu in the menu bar.
+                  </p>
+                  
+               </div>
+               <!-- class="section" -->
+               <div class="p">
+                  
+                  <p>Requirements for enabling the <span>SQL Developer Web</span> menu option include:
+                  </p>
+                  
+                  <ul style="list-style-type: disc;" id="GUID-9DA2CDE0-7679-4106-B901-6E127D996005__UL_ZFK_CMD_RWB">
+                     <li><span>Oracle REST Data
+                                        Services</span> release 23.1.0, running in HTTPS mode.
+                     </li>
+                     <li>An instance administrator must select the <span class="uicontrol bold">Enable SQL Developer Web</span> attribute in Administration Services.
+                     </li>
+                  </ul>
+                  
+               </div>
+               <!-- class="section" -->
+               <p>To open a <span>SQL Developer Web</span> session from  <span>APEX</span>:
+               </p>
+               <ol id="GUID-9DA2CDE0-7679-4106-B901-6E127D996005__STEPS_GDX_4MD_RWB">
+                  <li class="stepexpand"><span>Select the Enable SQL Developer Web attribute in Administration Services:</span><ol type="a" id="GUID-9DA2CDE0-7679-4106-B901-6E127D996005__SUBSTEPS_LTD_5FJ_RWB">
+                        <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                        <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                        <li><span>Under Instance Settings, click <span class="uicontrol bold">Feature
+                                Configuration</span>.</span></li>
+                        <li><span>Locate the <span class="uicontrol bold">SQL Workshop</span> section and select
+                                <span class="uicontrol bold">Enable SQL Developer Web</span>.</span></li>
+                        <li><span>Sign out of  Administration Services.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Sign in to your <span>APEX</span> workspace. </span></li>
+                  <li class="stepexpand"><span>Click the  <span><span class="uicontrol bold">SQL
+                                        Workshop</span></span> menu.</span><div>
+                        
+                        <p>Note the <span>SQL Workshop</span> menu now includes a <span>SQL Developer Web</span> menu option.
+                        </p>
+                        
+                        <div class="figure" id="GUID-9DA2CDE0-7679-4106-B901-6E127D996005__FIG_IBZ_3WD_RWB"><img id="GUID-9DA2CDE0-7679-4106-B901-6E127D996005__IMAGE_JBZ_3WD_RWB" height="406" width="847" src="img/sql_developer_web.png" alt="Description of sql_developer_web.png follows" title="Description of sql_developer_web.png follows" longdesc="img_text/sql_developer_web.html"><br><a href="img_text/sql_developer_web.html">Description of the illustration sql_developer_web.png</a></div>
+                        <!-- class="figure" -->
+                        
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>Clicking the <span><span class="uicontrol bold">SQL Developer
+                                                Web</span></span> menu results in two behaviors:</span><div>
+                        
+                        <ul style="list-style-type: disc;" id="GUID-9DA2CDE0-7679-4106-B901-6E127D996005__UL_AKH_MXD_RWB">
+                           <li>
+                              
+                              <p>If there is only one schema associated with the current workspace and
+                                that schema already is REST-enabled, a new browser tab with a <span>SQL Developer Web</span> session displays.
+                              </p>
+                              
+                           </li>
+                           <li>
+                              
+                              <p>If there are multiple schemas associated with the current workspace,
+                                a dialog displays showing the schemas and indicates if they are
+                                REST-enabled. </p>
+                              
+                              <p>Selecting a schema that is not currently REST-enabled,
+                                displays the RESTful Services page and prompts you to register the
+                                schema as described in <a href="accessing-restful-services.html#GUID-DE5D8763-A650-4FBA-9CC5-17E141C8406C" title="If you are accessing ORDS Restful Services in a new workspace, you must register the schema with ORDS RESTful Data Services.">Registering Schema with ORDS</a>. Once the schema is registered, a new browser tab
+                                with a <span>SQL Developer Web</span> session displays.
+                              </p>
+                              
+                           </li>
+                        </ul>
+                        
+                        <div class="infoboxnote" id="GUID-9DA2CDE0-7679-4106-B901-6E127D996005__GUID-8A57DEFC-162A-44B4-B1BC-DFD0111064DE">
+                           <p class="notep1">Note:</p>Opening a new browser tab with <span>SQL Developer Web</span>  invalidates and ends any other open <span>SQL Developer Web</span> sessions for the that browser.
+                        </div>
+                        
+                     </div>
+                  </li>
+               </ol>
+               <div class="section">
+                  
+                  <div class="infoboxnotealso" id="GUID-9DA2CDE0-7679-4106-B901-6E127D996005__GUID-7D4CD73A-97F4-4894-A523-A5D4E816AE5B">
+                     <p class="notep1">See Also:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-9DA2CDE0-7679-4106-B901-6E127D996005__UL_VQR_212_RWB">
+                        <li><a href="../aeadm/configuring-features.html#AEADM-GUID-1F994F8E-112D-4D6B-AE4C-D8F7647493A6" target="_blank">Configuring SQL Workshop</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                        <li><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeutl&id=SDWAD-GUID-AF7601F9-7713-4ECC-8EC9-FB0296002C69" target="_blank">About Database Actions</a> in <span><cite>Using Oracle Database
+                                        Actions</cite></span></li>
+                     </ul>
+                     
+                  </div>
+                  
+               </div>
+               <!-- class="section" -->
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="using-restful-services.html#GUID-9EF9F122-554D-40C3-B14D-70C3ACF1A48D" title="RESTful Services enable the declarative specification of RESTful services used to access the database.">Enabling Data Exchange with RESTful Services</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

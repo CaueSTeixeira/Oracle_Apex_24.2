@@ -1,0 +1,737 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Session State Values">
+      <meta name="abstract" content="Manage session state to store and retrieve values for a user as the user navigates between different application pages.">
+      <meta name="description" content="Manage session state to store and retrieve values for a user as the user navigates between different application pages.">
+      <meta name="DC.subject" content="session state values, managing, session state, referencing, setting with form submission, setting with bind variable, setting with computation, session state, setting with f?p syntax, setting with f?p syntax, clearing, clearing cache by item, clearing cache by page, clearing report regions, clearing application cache, resetting an application completely, clearing cache for current user session, bind variables, syntax, using in regions, using in regions based on PL/SQL, session cloning, enabling">
+      <meta name="keywords" content="session state values, managing, session state, referencing, setting with form submission, setting with bind variable, setting with computation, session state, setting with f?p syntax, setting with f?p syntax, clearing, clearing cache by item, clearing cache by page, clearing report regions, clearing application cache, resetting an application completely, clearing cache for current user session, bind variables, syntax, using in regions, using in regions based on PL/SQL, session cloning, enabling">
+      <meta name="DC.Relation" scheme="URI" content="application-builder-concepts.html#GUID-6D22E307-6D48-49BC-9FDC-A7D8B037E46A">
+      <meta name="DC.Relation" scheme="URI" content="managing-session-state-values.html#GUID-AC0C208D-61DF-40F6-8CC9-F3D59D24E5D0">
+      <meta name="DC.Relation" scheme="URI" content="managing-session-state-values.html#GUID-48081ADE-FADA-43C6-A273-EB30694360DF">
+      <meta name="DC.Relation" scheme="URI" content="managing-session-state-values.html#GUID-985BE4F8-4C7F-46DD-8803-6C7DD18F6F08">
+      <meta name="DC.Relation" scheme="URI" content="managing-session-state-values.html#GUID-A052DC04-0D04-4DEA-BDEF-4DCBFF489E07">
+      <meta name="DC.Relation" scheme="URI" content="managing-session-state-values.html#GUID-1F0B7342-DDAF-49D5-B9E8-EA229660E11B">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-EF798946-9E8A-430E-94F5-C2AF6EABE264">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Manage session state to store and retrieve values for a user as the user navigates between different application pages.">
+      <meta name="description" content="Manage session state to store and retrieve values for a user as the user navigates between different application pages.">
+      <title>Managing Session State Values</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Manage session state to store and retrieve values for a user as the user navigates between different application pages.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="hiding-the-session-ID-on-public-pages.html" title="Previous" type="text/html">
+      <link rel="next" href="using-substitution-strings.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Managing Session State Values","description":"Manage session state to store and retrieve values for a user as the user navigates between different application pages.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="hiding-the-session-ID-on-public-pages.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="using-substitution-strings.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-EF798946-9E8A-430E-94F5-C2AF6EABE264" name="GUID-EF798946-9E8A-430E-94F5-C2AF6EABE264"></a><a id="HTMDB03011"></a>
+         
+         <h2 id="HTMDB-GUID-EF798946-9E8A-430E-94F5-C2AF6EABE264" class="sect2"><span class="enumeration_section">3.9 </span>Managing Session State Values
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Manage session state to store and retrieve values for a user as the user navigates between different application pages.</p>
+               <p>When building interactive, data-driven web applications, the ability to access and manage session state values is critical. In <span>Oracle APEX</span>, session state is automatically managed for every page and easily referenced in static HTML or logic controls such as processes or validations.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="managing-session-state-values.html#GUID-AC0C208D-61DF-40F6-8CC9-F3D59D24E5D0">About Referencing Session State</a><br>Reference item values stored in session state in regions, computations,         processes, validations, and branches. An item can be a field, a text area, a password, a         select list, or a checkbox.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-session-state-values.html#GUID-48081ADE-FADA-43C6-A273-EB30694360DF">About Setting Session State</a><br>Set session state using form submissions, bind variables, computations, or         f?p syntax. Session state can also be set using the <code class="codeph">APEX_SESSION_STATE.SET</code>         APIs.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-session-state-values.html#GUID-985BE4F8-4C7F-46DD-8803-6C7DD18F6F08">Clearing Session State</a><br>Clearing a cached value resets the value to null. You can clear the cached value for specific items, all items on a page, all pages in an application, or the current user session.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-session-state-values.html#GUID-A052DC04-0D04-4DEA-BDEF-4DCBFF489E07">Referencing Session State Using Bind Variable Syntax</a><br>Use bind variable syntax anywhere where you are using SQL or PL/SQL to reference session state of a specified item.&nbsp;
+                  </li>
+                  <li class="ulchildlink"><a href="managing-session-state-values.html#GUID-1F0B7342-DDAF-49D5-B9E8-EA229660E11B">About Session Cloning</a><br>Use session cloning to open a new browser window in an <span>Oracle APEX</span> application and have it generate a new distinct session identifier and copy the session values from the original <span>APEX</span> session to the new one.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-EF798946-9E8A-430E-94F5-C2AF6EABE264__GUID-B02B44B0-1DD5-49FC-AC6D-F25DE2F04C11">
+                  <p class="notep1">See Also:</p>
+                  <p><a href="understanding-session-state-management.html#GUID-CE2A38B5-75B7-4C43-ACB0-685E16C6ACF9" title="Oracle APEX transparently maintains session state and provides developers with the ability to get and set session state values from any page in the application.">Understanding Session State Management</a> and <a href="understanding-page-items.html#GUID-207E66F9-C8A6-4FD1-B2F4-12D4BB302D31" title="You can reference item values stored in session state in regions, computations, processes, validation, and branches.">Referencing Item Values</a></p>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="application-builder-concepts.html#GUID-6D22E307-6D48-49BC-9FDC-A7D8B037E46A" title="To efficiently use App Builder, developers must understand some key concepts including managing user interface design, viewing rendered application pages, understanding page processing and rendering, managing session state, understanding URL syntax, managing session state values, and using built-in substitution strings.">App Builder Concepts</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB28054"></a><a id="HTMDB03012"></a><div class="props_rev_3"><a id="GUID-AC0C208D-61DF-40F6-8CC9-F3D59D24E5D0" name="GUID-AC0C208D-61DF-40F6-8CC9-F3D59D24E5D0"></a><h3 id="HTMDB-GUID-AC0C208D-61DF-40F6-8CC9-F3D59D24E5D0" class="sect3"><span class="enumeration_section">3.9.1 </span>About Referencing Session State
+               </h3>
+               <div>
+                  <p>Reference item values stored in session state in regions, computations,
+        processes, validations, and branches. An item can be a field, a text area, a password, a
+        select list, or a checkbox.</p>
+                  <p>The following table describes the supported syntax for referencing item values.</p>
+                  <div class="tblformalwide" id="GUID-AC0C208D-61DF-40F6-8CC9-F3D59D24E5D0__BEIIJCEA">
+                     <table cellpadding="4" cellspacing="0" class="FormalWide" title summary="Syntax for referencing item values." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="17%" id="d28790e270">Type</th>
+                              <th align="left" valign="bottom" width="29%" id="d28790e272">Syntax</th>
+                              <th align="left" valign="bottom" width="54%" id="d28790e274">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="17%" id="d28790e278" headers="d28790e270 ">SQL</td>
+                              <td align="left" valign="top" width="29%" headers="d28790e278 d28790e272 ">
+                                 <p>Standard item syntax:</p>
+                                 <p><code class="codeph">:MY_ITEM</code></p>
+                                 <p>Syntax for items containing special characters:</p>
+                                 <p><code class="codeph">:"MY_ITEM"</code></p>
+                              </td>
+                              <td align="left" valign="top" width="54%" headers="d28790e278 d28790e274 ">
+                                 <p>For items whose names are no longer than 30 characters, precede the item name with a colon (:). Use this syntax for references within a SQL query and within PL/SQL.</p>
+                                 <p>To reference page items containing special, multibyte, or unicode characters, wrap the page item name in double quotation marks.</p>
+                                 
+                                 <p>The data type of the bind variable is the
+                                                  Session State Data Type of the item. Most items
+                                                  are <code class="codeph">VARCHAR2</code> by default, but
+                                                  certain item types can be set to
+                                                  <code class="codeph">CLOB</code>.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="17%" id="d28790e306" headers="d28790e270 ">PL/SQL</td>
+                              <td align="left" valign="top" width="29%" headers="d28790e306 d28790e272 ">
+                                 <p><code class="codeph">V('MY_ITEM')</code> or
+                                                  <code class="codeph">APEX_SESSION_STATE.GET_VARCHAR2('MY_ITEM')</code></p>
+                              </td>
+                              <td align="left" valign="top" width="54%" headers="d28790e306 d28790e274 ">
+                                 <p>Use PL/SQL syntax to reference an item value using the <a id="d28790e318" class="indexterm-anchor"></a><code class="codeph">V</code> function.
+                                                  You can use the shorthand, <code class="codeph">V</code>
+                                                  function, in place of
+                                                  <code class="codeph">APEX_SESSION_STATE.GET_VARCHAR2</code>. 
+                                 </p>
+                                 <p>Use this syntax when utilizing <span>Oracle APEX</span> variables directly within an Oracle database object, such as a function, trigger, or Oracle Data Redaction policy.
+                                 </p>
+                                 
+                                 <p><span class="bold">Tip</span>: When using <code class="codeph">V('MY_ITEM')</code>,
+                  <code class="codeph">apex_session_state.get_clob('MY_ITEM')</code> or similar in a SQL query,
+                Oracle recommends using Fast Dual functionality <code class="codeph">=&gt; (select v('my_item')
+                  from dual)</code> to improve performance.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="17%" id="d28790e349" headers="d28790e270 ">PL/SQL</td>
+                              <td align="left" valign="top" width="29%" headers="d28790e349 d28790e272 "><code class="codeph">APEX_SESSION_STATE.GET_CLOB('MY_CLOB_ITEM')</code></td>
+                              <td align="left" valign="top" width="54%" headers="d28790e349 d28790e274 ">
+                                 <p>This function returns the value of a <code class="codeph">CLOB</code> page item.
+                                 </p>
+                                 
+                                 <p><span class="bold">Tip</span>: When using <code class="codeph">V('MY_ITEM')</code>,
+                  <code class="codeph">apex_session_state.get_clob('MY_ITEM')</code> or similar in a SQL query,
+                Oracle recommends using Fast Dual functionality <code class="codeph">=&gt; (select v('my_item')
+                  from dual)</code> to improve performance.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="17%" id="d28790e375" headers="d28790e270 ">PL/SQL</td>
+                              <td align="left" valign="top" width="29%" headers="d28790e375 d28790e272 "><code class="codeph">APEX_SESSION_STATE.GET_NUMBER('MY_NUMERIC_ITEM')</code></td>
+                              <td align="left" valign="top" width="54%" headers="d28790e375 d28790e274 ">
+                                 
+                                 <p>This function returns the value of
+                                                  a page item as a <code class="codeph">NUMBER</code>. The
+                                                  item's Format Mask is used to perform the
+                                                  conversion.
+                                 </p>
+                                 
+                                 <p><span class="bold">Tip</span>: When using <code class="codeph">V('MY_ITEM')</code>,
+                  <code class="codeph">apex_session_state.get_clob('MY_ITEM')</code> or similar in a SQL query,
+                Oracle recommends using Fast Dual functionality <code class="codeph">=&gt; (select v('my_item')
+                  from dual)</code> to improve performance.
+                                 </p>
+                                 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="17%" id="d28790e403" headers="d28790e270 ">PL/SQL</td>
+                              <td align="left" valign="top" width="29%" headers="d28790e403 d28790e272 "><code class="codeph">APEX_SESSION_STATE.GET_TIMESTAMP('MY_NUMERIC_ITEM')</code></td>
+                              <td align="left" valign="top" width="54%" headers="d28790e403 d28790e274 ">
+                                 
+                                 <p>This function returns the value of a page item
+                                                  as a <code class="codeph">TIMESTAMP</code>. The item's Format
+                                                  Mask is used to perform the conversion.
+                                 </p>
+                                 
+                                 <p><span class="bold">Tip</span>: When using <code class="codeph">V('MY_ITEM')</code>,
+                  <code class="codeph">apex_session_state.get_clob('MY_ITEM')</code> or similar in a SQL query,
+                Oracle recommends using Fast Dual functionality <code class="codeph">=&gt; (select v('my_item')
+                  from dual)</code> to improve performance.
+                                 </p>
+                                 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="17%" id="d28790e431" headers="d28790e270 ">Static text (exact)</td>
+                              <td align="left" valign="top" width="29%" headers="d28790e431 d28790e272 ">
+                                 <p>Standard item syntax:</p>
+                                 <p><code class="codeph">&amp;MY_ITEM.</code></p>
+                                 <p>Syntax for items containing special characters:</p>
+                                 <p><code class="codeph">&amp;"MY_ITEM".</code></p>
+                              </td>
+                              <td align="left" valign="top" width="54%" headers="d28790e431 d28790e274 ">
+                                 <p>For static text or an exact substitution, use the convention <code class="codeph">&amp;ITEM_NAME</code> followed by a period (.).
+                                 </p>
+                                 <p>To reference page items containing special, multibyte, or unicode characters, wrap the page item name in double quotation marks.</p>
+                                 
+                                 <p>Page items of Session State Data
+                Type <code class="codeph">CLOB</code> cannot be references via this syntax. A different output
+                mechanism must be used to fetch their values, such as a page item in Read Only mode,
+                a Display Only page item, or its manual output using a Dynamic Content region.
+                                 </p>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-AC0C208D-61DF-40F6-8CC9-F3D59D24E5D0__GUID-595A1009-E7AF-4400-9B56-95C4FEABFC6B">
+                     <p class="notep1">See Also:</p><a href="../aeapi/changes-in-this-release.html#AEAPI-GUID-0BFAF7C6-872E-4D11-A5E9-5D114A3F53C0" target="_blank">Changes in Oracle APEX API
+                                Reference</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-session-state-values.html#GUID-EF798946-9E8A-430E-94F5-C2AF6EABE264" title="Manage session state to store and retrieve values for a user as the user navigates between different application pages.">Managing Session State Values</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29191"></a><div class="props_rev_3"><a id="GUID-48081ADE-FADA-43C6-A273-EB30694360DF" name="GUID-48081ADE-FADA-43C6-A273-EB30694360DF"></a><h3 id="HTMDB-GUID-48081ADE-FADA-43C6-A273-EB30694360DF" class="sect3"><span class="enumeration_section">3.9.2 </span>About Setting Session State
+               </h3>
+               <div>
+                  <p>Set session state using form submissions, bind variables, computations, or
+        f?p syntax. Session state can also be set using the <code class="codeph">APEX_SESSION_STATE.SET</code>
+        APIs.
+                  </p>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-48081ADE-FADA-43C6-A273-EB30694360DF__GUID-A52DB32B-D4C6-4D92-9C84-24B85489C53E">Methods for Setting Session
+                State</p>
+                     
+                     <div class="infoboxnotealso" id="GUID-48081ADE-FADA-43C6-A273-EB30694360DF__GUID-16B3C416-4B3D-4EB7-B1FC-B57A06518FA6">
+                        <p class="notep1">See Also:</p><a href="../aeapi/changes-in-this-release.html#AEAPI-GUID-0BFAF7C6-872E-4D11-A5E9-5D114A3F53C0" target="_blank">Changes in Oracle APEX API Reference</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></div>
+                     
+                     
+                     <p>You can set the value of a page item in your application and therefore
+                set session state using the following methods:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-48081ADE-FADA-43C6-A273-EB30694360DF__UL_FY3_1YK_1HB">
+                        <li>Form submission. See the next section.</li>
+                        <li>Bind variable. See <a href="managing-session-state-values.html#GUID-A052DC04-0D04-4DEA-BDEF-4DCBFF489E07" title="Use bind variable syntax anywhere where you are using SQL or PL/SQL to reference session state of a specified item.&nbsp;">Referencing Session State Using Bind Variable Syntax</a>.
+                        </li>
+                        <li>Computation. See <a href="understanding-application-computations.html#GUID-878AE4EE-0CF2-43BD-93E9-877F9B349F10" title="Create an application computation to set the value of a single page or application-level item. Application computations run at the same point across multiple pages in an application.">Understanding Application Computations</a>.
+                        </li>
+                        <li>f?p syntax. See <a href="understanding-legacy-url-syntax.html#GUID-D5510BFC-AF94-4AAD-8B82-FF780A47601D" title="Create links between application page using f?p syntax.">About Using f?p Syntax to Link Pages</a>.
+                        </li>
+                     </ul>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-48081ADE-FADA-43C6-A273-EB30694360DF__ABOUTSETTINGSESSIONSTATEWITHAFORMSU-FD0712C2">About Setting Session State with a Form Submission</p>
+                     <p>When a user submits a page, the <span>Oracle APEX</span> engine automatically stores values typed into fields (items) in session state. For example, suppose you have an application containing two pages. The first page of the application contains a form in which a user can enter a phone number. You defined this form by creating an item named <span class="italic"><code class="codeph">P1_PHONENO</code></span>. On the second page, you want to display the information the user enters in the form. 
+                     </p>
+                     <p>When the page is submitted, <span>APEX</span> captures the value entered in the phone number field and stores the value for
+                future use. On the second page, the phone number entered by the user can then be
+                retrieved from session state using the name <code class="codeph">P1_PHONE_NO</code> with the
+                appropriate syntax described in <a href="managing-session-state-values.html#GUID-AC0C208D-61DF-40F6-8CC9-F3D59D24E5D0" title="Reference item values stored in session state in regions, computations, processes, validations, and branches. An item can be a field, a text area, a password, a select list, or a checkbox.">About Referencing Session State</a>.
+                     </p>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-48081ADE-FADA-43C6-A273-EB30694360DF__GUID-8EE753E1-CD1F-4C1A-8971-C6C2F4203F56">About Controlling How Items Write Session State</p>
+                     
+                     
+                     <p>You can control whether a page item writes its session state into persistent (disk)
+                session state or just into memory by configuring the item attribute,
+                    <span class="uicontrol bold">Maintain Session State</span>. Available Maintain Session State
+                options include:
+                     </p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-48081ADE-FADA-43C6-A273-EB30694360DF__UL_QSX_ZNK_1HB">
+                        <li><span class="uicontrol bold">Per Request (Memory Only)</span> - Do not save state in the
+                    database. State is only available when processing the current request. When AJAX
+                    requests need to use an item, make sure to pass the item name using the Page
+                    Items To Submit attribute.
+                        </li>
+                        <li><span class="uicontrol bold">Per Session (Disk)</span> - Maintain for each session by storing
+                    the value in the database, to access it across requests.
+                        </li>
+                        <li><span class="uicontrol bold">Per User (Disk)</span> - Value is saved in a user attribute
+                    repository and it is also available for later APEX sessions.
+                        </li>
+                     </ul>
+                     
+                     <div class="infoboxnote" id="GUID-48081ADE-FADA-43C6-A273-EB30694360DF__GUID-200286A3-E155-4897-9741-2A2C0414BEC2">
+                        <p class="notep1">Note:</p>When creating database items that work with a Form region (for example as part of
+                a wizard), <span class="uicontrol bold">Per Request (Memory Only)</span> is the default. Per
+                    <span class="uicontrol bold">User (Disk)</span> is not available for these items.
+                     </div>
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-48081ADE-FADA-43C6-A273-EB30694360DF__GUID-C3372AAC-6EA1-4918-9658-5A0D5C5B19F0">
+                     <p class="notep1">See Also:</p><a href="editing-page-items.html#GUID-583BB298-4F51-4F65-9991-BAF0FAB7EFDF" title="Control how a page item maintains session state by configuring the Session State, Storage attribute.">Controlling How Page Items Write Session State</a></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-session-state-values.html#GUID-EF798946-9E8A-430E-94F5-C2AF6EABE264" title="Manage session state to store and retrieve values for a user as the user navigates between different application pages.">Managing Session State Values</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB03014"></a><div class="props_rev_3"><a id="GUID-985BE4F8-4C7F-46DD-8803-6C7DD18F6F08" name="GUID-985BE4F8-4C7F-46DD-8803-6C7DD18F6F08"></a><h3 id="HTMDB-GUID-985BE4F8-4C7F-46DD-8803-6C7DD18F6F08" class="sect3"><span class="enumeration_section">3.9.3 </span>Clearing Session State
+               </h3>
+               <p>Clearing a cached value resets the value to null. You can clear the cached value for specific items, all items on a page, all pages in an application, or the current user session.</p>
+               <div>
+                  <ul class="ullinks">
+                     <li class="ulchildlink"><a href="managing-session-state-values.html#GUID-C47A1707-E05D-4613-A35C-AC75C2A4DC00">About Clearing Cache for an Item</a><br>View examples for clearing cache for a single item.
+                     </li>
+                     <li class="ulchildlink"><a href="managing-session-state-values.html#GUID-D6418083-C979-4671-BEC1-C86EF96EDB5B">About Clearing Cache for All Page Items</a><br>View examples for clearing cache for all page items.
+                     </li>
+                     <li class="ulchildlink"><a href="managing-session-state-values.html#GUID-A7D4E717-FEE2-4E21-B06B-40286225B95F">About Clearing Report Regions</a><br>Learn about clearing report cache.
+                     </li>
+                     <li class="ulchildlink"><a href="managing-session-state-values.html#GUID-013CC96F-1375-403C-A9FC-CA4C6B188524">Clearing Cache for an Entire Application</a><br>View an eample of clearing cache for an application.
+                     </li>
+                     <li class="ulchildlink"><a href="managing-session-state-values.html#GUID-B77C4457-C90D-435E-905C-DCBFF69686DA">About Resetting an Application Completely</a><br>Learn about resetting an application completely.
+                     </li>
+                     <li class="ulchildlink"><a href="managing-session-state-values.html#GUID-2DE91B83-CE32-4C6C-8CC6-5373763935F9">About Clearing Cache for the Current User Session</a><br>View an example of clearing application cache for the current user         session.
+                     </li>
+                  </ul>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-session-state-values.html#GUID-EF798946-9E8A-430E-94F5-C2AF6EABE264" title="Manage session state to store and retrieve values for a user as the user navigates between different application pages.">Managing Session State Values</a></p>
+                     </div>
+                  </div>
+               </div>
+               <a id="HTMDB25023"></a><div class="props_rev_3"><a id="GUID-C47A1707-E05D-4613-A35C-AC75C2A4DC00" name="GUID-C47A1707-E05D-4613-A35C-AC75C2A4DC00"></a><h4 id="HTMDB-GUID-C47A1707-E05D-4613-A35C-AC75C2A4DC00" class="sect4"><span class="enumeration_section">3.9.3.1 </span>About Clearing Cache for an Item
+                  </h4>
+                  <div>
+                     <p>View examples for clearing cache for a single item.</p>
+                     <p>Clearing cache for a single item resets the value of the item to null. For example,
+            you might use this approach to make sure a specific item's value is null when a page is
+            prepared for rendering. </p>
+                     <div class="example" id="GUID-C47A1707-E05D-4613-A35C-AC75C2A4DC00__GUID-2EF0F40B-8EE0-465C-82B9-C5CCD725C7D3">
+                        <p class="titleinexample">Example 3-4 Example: Clearing Cache for an Item</p>
+                        <p>The following example uses standard <code class="codeph">f?p</code> syntax to clear the cache for an item. This example calls page 5 of application 100. Placing <code class="codeph">MY_ITEM</code> in the <code class="codeph">ClearCache</code> position of the <code class="codeph">f?p</code> syntax resets the value of <code class="codeph">MY_ITEM</code> to <code class="codeph">NULL</code>. 
+                        </p><pre class="oac_no_warn" dir="ltr">f?p=100:5:&amp;APP_SESSION.::NO:MY_ITEM
+</pre><p>The following example resets the value of the items <code class="codeph">THE_EMPNO</code> and <code class="codeph">THE_DEPTNO</code>:
+                        </p><pre class="oac_no_warn" dir="ltr">f?p=100:5:&amp;APP_SESSION.::NO:THE_EMPNO,THE_DEPTNO
+</pre></div>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="managing-session-state-values.html#GUID-985BE4F8-4C7F-46DD-8803-6C7DD18F6F08" title="Clearing a cached value resets the value to null. You can clear the cached value for specific items, all items on a page, all pages in an application, or the current user session.">Clearing Session State</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="sect3"><a id="GUID-D6418083-C979-4671-BEC1-C86EF96EDB5B" name="GUID-D6418083-C979-4671-BEC1-C86EF96EDB5B"></a><h4 id="HTMDB-GUID-D6418083-C979-4671-BEC1-C86EF96EDB5B" class="sect4"><span class="enumeration_section">3.9.3.2 </span>About Clearing Cache for All Page Items
+                  </h4>
+                  <div>
+                     <p>View examples for clearing cache for all page items.</p>
+                     <p>Caching application items is an effective way to maintain session state. However, there are occasions when you may want to clear the cache for all items on a page. For example, suppose you needed to clear all fields on a page when a user clicks a link that creates a new order. By clearing the cache for an entire page, you set the value of all items on the page to null. </p>
+                     <div class="example" id="GUID-D6418083-C979-4671-BEC1-C86EF96EDB5B__GUID-9B51679B-7412-4776-B70A-F5EF0D547335">
+                        <p class="titleinexample">Example 3-5 Example: Clearing Cache for Two Pages and Resetting Pagination</p>
+                        <p>This example clears the session cache for two pages and resets pagination.</p><pre class="oac_no_warn" dir="ltr">f?p=6000:6003:&amp;APP_SESSION.::NO:RP,6004,6014 
+</pre><p>This example: </p>
+                        <ul style="list-style-type: disc;">
+                           <li>
+                              <p>Runs page 6003 of application 6000 and uses the current session ID.</p>
+                           </li>
+                           <li>
+                              <p>Indicates to not show debug information (<code class="codeph">NO</code>).
+                              </p>
+                           </li>
+                           <li>
+                              <p>Clears all values maintained by the current session's cache for items of pages 6004 and 6014.</p>
+                           </li>
+                           <li>
+                              <p>Resets region pagination (<code class="codeph">RP</code>) on page 6003 (the requested page).
+                              </p>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="example" id="GUID-D6418083-C979-4671-BEC1-C86EF96EDB5B__GUID-D2E39DD4-A448-4D43-9422-2B5DF5E4943F">
+                        <p class="titleinexample">Example 3-6 Example: Clearing Cache on a Page and Passing an Item Value</p>
+                        <p>This example shows how to implement an update form. It clears existing information and sets the item's value (typically a primary key). </p><pre class="oac_no_warn" dir="ltr">f?p=6000:6003:&amp;APP_SESSION.::NO:6003:MY_ITEM:1234 
+</pre><p>This example:</p>
+                        <ul style="list-style-type: disc;">
+                           <li>
+                              <p>Runs page 6003 of application 6000 and uses the current session ID </p>
+                           </li>
+                           <li>
+                              <p>Indicates to not show debug information (<code class="codeph">NO</code>)
+                              </p>
+                           </li>
+                           <li>
+                              <p>Clears all values maintained by the current session's cache for items on page 6003</p>
+                           </li>
+                           <li>
+                              <p>Sets the session state of an item called <code class="codeph">MY_ITEM</code> to the value <code class="codeph">1234</code></p>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="example" id="GUID-D6418083-C979-4671-BEC1-C86EF96EDB5B__GUID-5B03C8A5-BF2F-490A-BB69-989C0D3F1DC2">
+                        <p class="titleinexample">Example 3-7 Example: Clearing Session Cache on a Page and Passing Values to Multiple Items</p>
+                        <p>This example demonstrates how to implement an update form. It clears existing information, sets the item's value (typically a primary key), and passes values to multiple items. </p><pre class="oac_no_warn" dir="ltr">f?p=6000:6004:&amp;APP_SESSION.::NO:6003:MY_ITEM1,MY_ITEM2,MY_ITEM3:1234,,5678 
+</pre><p>This example:</p>
+                        <ul style="list-style-type: disc;">
+                           <li>
+                              <p>Runs page 6004 of application 6000 and uses the current session ID </p>
+                           </li>
+                           <li>
+                              <p>Clears the current session's cache for items on page 6003</p>
+                           </li>
+                           <li>
+                              <p>Indicates to not show debug information (<code class="codeph">NO</code>)
+                              </p>
+                           </li>
+                           <li>
+                              <p>Sets the value of <code class="codeph">MY_ITEM1</code> to 1234, sets the value of <code class="codeph">MY_ITEM2</code> to null (indicated by the comma used as placeholder), and sets the value of <code class="codeph">MY_ITEM3</code> to 5678
+                              </p>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="managing-session-state-values.html#GUID-985BE4F8-4C7F-46DD-8803-6C7DD18F6F08" title="Clearing a cached value resets the value to null. You can clear the cached value for specific items, all items on a page, all pages in an application, or the current user session.">Clearing Session State</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="sect3"><a id="GUID-A7D4E717-FEE2-4E21-B06B-40286225B95F" name="GUID-A7D4E717-FEE2-4E21-B06B-40286225B95F"></a><h4 id="HTMDB-GUID-A7D4E717-FEE2-4E21-B06B-40286225B95F" class="sect4"><span class="enumeration_section">3.9.3.3 </span>About Clearing Report
+        Regions
+                  </h4>
+                  <div>
+                     <p>Learn about clearing report cache.</p>
+                     <p>Report settings can be cached. Depending on the report types, different settings are
+            cached. Use the following to clear report cache settings:</p>
+                     <ul style="list-style-type: disc;" id="GUID-A7D4E717-FEE2-4E21-B06B-40286225B95F__UL_QBS_DCS_ZKB">
+                        <li><code class="codeph">RR</code> - Resets interactive report, interactive grids, or
+                classic report and also resets report pagination. If the target page contains
+                interactive report or interactive grids, the report is returned to the default
+                report settings specified by the developer or saved by the user. If the target page
+                contains classic report, the report sorting resets to developer defined
+                sorting.
+                        </li>
+                        <li><code class="codeph">CR</code> - This applies only to interactive report. <code class="codeph">CR</code> clears interactive report and resets report pagination. This clears all of the session report settings such as control break, aggregate, flashback, chart, number of rows to display, filter, highlight, computation, group by, and pivot.
+                        </li>
+                        <li><code class="codeph">RP</code> - Resets interactive report or classic report pagination.
+                        </li>
+                     </ul>
+                     <div class="example" id="GUID-A7D4E717-FEE2-4E21-B06B-40286225B95F__GUID-7D5C8014-6F21-4F15-971C-E95794C574E3">
+                        <p class="titleinexample">Example 3-8 Resetting Report Settings and Pagination</p>
+                        
+                        
+                        <p>This example resets report settings and pagination of the target page report
+                regions:</p>
+                        <pre class="pre codeblock"><code>f?p=6000:6003:&amp;APP_SESSION.::NO:RR</code></pre>
+                        <div class="infoboxnote" id="GUID-A7D4E717-FEE2-4E21-B06B-40286225B95F__GUID-BF6D1CA4-F7DD-4D4A-BF6A-9264FEA12046">
+                           <p class="notep1">Note:</p>
+                           
+                           <p>Starting with <span>Oracle APEX</span> release 2.1, you do not need to define separate clear cache syntax to reset report and reset pagination. <code class="codeph">RR</code> will handle both. 
+                           </p>
+                           
+                        </div>
+                        
+                     </div>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="managing-session-state-values.html#GUID-985BE4F8-4C7F-46DD-8803-6C7DD18F6F08" title="Clearing a cached value resets the value to null. You can clear the cached value for specific items, all items on a page, all pages in an application, or the current user session.">Clearing Session State</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div><a id="HTMDB25028"></a><div class="props_rev_3"><a id="GUID-013CC96F-1375-403C-A9FC-CA4C6B188524" name="GUID-013CC96F-1375-403C-A9FC-CA4C6B188524"></a><h4 id="HTMDB-GUID-013CC96F-1375-403C-A9FC-CA4C6B188524" class="sect4"><span class="enumeration_section">3.9.3.4 </span>Clearing Cache for an Entire Application
+                  </h4>
+                  <div>
+                     <p>View an eample of clearing cache for an application.</p>
+                     <div class="section">
+                        <p>This example clears the application's cache by using <code class="codeph">f?p</code> syntax and creating a <code class="codeph">Clear Cache </code>argument using the keyword <span class="italic">APP</span>. 
+                        </p><pre class="oac_no_warn" dir="ltr">f?p=App:Page:Session::NO:APP
+</pre></div>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="managing-session-state-values.html#GUID-985BE4F8-4C7F-46DD-8803-6C7DD18F6F08" title="Clearing a cached value resets the value to null. You can clear the cached value for specific items, all items on a page, all pages in an application, or the current user session.">Clearing Session State</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div><a id="HTMDB29193"></a><div class="props_rev_3"><a id="GUID-B77C4457-C90D-435E-905C-DCBFF69686DA" name="GUID-B77C4457-C90D-435E-905C-DCBFF69686DA"></a><h4 id="HTMDB-GUID-B77C4457-C90D-435E-905C-DCBFF69686DA" class="sect4"><span class="enumeration_section">3.9.3.5 </span>About Resetting an Application Completely
+                  </h4>
+                  <div>
+                     <p>Learn about resetting an application completely.</p>
+                     <p>Resetting the cache for an entire application does not restore the application to a completely reset state. For example, if an application includes on-new instance computations or on-new instance processes, the <span>Oracle APEX</span> engine runs these computations and processes when the application session is created. Then, it processes the clear cache request and displays the requested page. 
+                     </p>
+                     <p>To reset an application completely without a session ID (if no cookie is used to track the session ID), you must request it using a URL without a session ID, or by calling <code class="codeph">APEX_UTIL</code>.<code class="codeph">CLEAR_APP_CACHE</code> from another application. If the session ID is tracked using a cookie, you must logout to reset the state. 
+                     </p>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="managing-session-state-values.html#GUID-985BE4F8-4C7F-46DD-8803-6C7DD18F6F08" title="Clearing a cached value resets the value to null. You can clear the cached value for specific items, all items on a page, all pages in an application, or the current user session.">Clearing Session State</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div><a id="HTMDB25029"></a><div class="props_rev_3"><a id="GUID-2DE91B83-CE32-4C6C-8CC6-5373763935F9" name="GUID-2DE91B83-CE32-4C6C-8CC6-5373763935F9"></a><h4 id="HTMDB-GUID-2DE91B83-CE32-4C6C-8CC6-5373763935F9" class="sect4"><span class="enumeration_section">3.9.3.6 </span>About Clearing Cache for the Current User Session
+                  </h4>
+                  <div>
+                     <p>View an example of clearing application cache for the current user
+        session.</p>
+                     <p>Another approach to clearing an application's cache is to create a <code class="codeph">Clear Cache </code>argument using the keyword <code class="codeph">SESSION</code>. For example: 
+                     </p><pre class="oac_no_warn" dir="ltr">f?p=6000:6004:12507785108488427528::NO:SESSION
+</pre></div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="managing-session-state-values.html#GUID-985BE4F8-4C7F-46DD-8803-6C7DD18F6F08" title="Clearing a cached value resets the value to null. You can clear the cached value for specific items, all items on a page, all pages in an application, or the current user session.">Clearing Session State</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div><a id="HTMDB03015"></a><div class="props_rev_3"><a id="GUID-A052DC04-0D04-4DEA-BDEF-4DCBFF489E07" name="GUID-A052DC04-0D04-4DEA-BDEF-4DCBFF489E07"></a><h3 id="HTMDB-GUID-A052DC04-0D04-4DEA-BDEF-4DCBFF489E07" class="sect3"><span class="enumeration_section">3.9.4 </span>Referencing Session State Using Bind Variable Syntax
+               </h3>
+               <p>Use bind variable syntax anywhere where you are using SQL or PL/SQL to reference session state of a specified item.&nbsp;</p>
+               <div>
+                  <ul class="ullinks">
+                     <li class="ulchildlink"><a href="managing-session-state-values.html#GUID-A1C724F8-2819-4887-A746-6E26BDEF34EE">About Using Bind Variable Syntax</a><br>Learn about bind variable syntax.
+                     </li>
+                     <li class="ulchildlink"><a href="managing-session-state-values.html#GUID-D4B01E13-7A41-4E75-BD7E-97170A541A54">About Using Bind Variables in Regions Based on a SQL Query or LOV</a><br>Learn about using bind variables in regions defined as a SQL Query, SQL Query (plsql         function body returning SQL query), or list of values (LOV).
+                     </li>
+                     <li class="ulchildlink"><a href="managing-session-state-values.html#GUID-3E727255-EB3F-481B-BDB6-E77B0B89F0D7">About Using Bind Variables in Regions Based on PL/SQL</a><br>Learn about using bind variables in regions based on PL/SQL.
+                     </li>
+                  </ul>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-session-state-values.html#GUID-EF798946-9E8A-430E-94F5-C2AF6EABE264" title="Manage session state to store and retrieve values for a user as the user navigates between different application pages.">Managing Session State Values</a></p>
+                     </div>
+                  </div>
+               </div>
+               <a id="HTMDB29194"></a><div class="props_rev_3"><a id="GUID-A1C724F8-2819-4887-A746-6E26BDEF34EE" name="GUID-A1C724F8-2819-4887-A746-6E26BDEF34EE"></a><h4 id="HTMDB-GUID-A1C724F8-2819-4887-A746-6E26BDEF34EE" class="sect4"><span class="enumeration_section">3.9.4.1 </span>About Using Bind Variable Syntax
+                  </h4>
+                  <div>
+                     <p>Learn about bind variable syntax.</p>
+                     <p>In the following example, the search string is a page item.</p><pre class="oac_no_warn" dir="ltr">SELECT * FROM employees WHERE last_name like '%' || :SEARCH_STRING || '%'
+</pre><p>If the region type is defined as SQL Query, you can reference the value using standard SQL bind variable syntax. Using bind variables ensures that parsed representations of SQL queries are reused by the database, optimizing memory usage by the server.</p>
+                     <p>When using bind variable syntax, remember the following rules:</p>
+                     <ul style="list-style-type: disc;">
+                        <li>
+                           <p>Bind variable names must correspond to an item name.</p>
+                        </li>
+                        <li>
+                           <p>Bind variable names are not case-sensitive.</p>
+                        </li>
+                        <li>
+                           
+                           <p>Bind variable names cannot be longer than 30 characters (that is,
+                    they must be a valid Oracle identifier). </p>
+                           
+                           <p>Although page item and application item names can be up to 255
+                    characters, if you intend to use an application item within SQL using bind
+                    variable syntax, the item name must be 30 characters or less. </p>
+                           
+                        </li>
+                        <li>
+                           <p>The data type of bind variables is always <code class="codeph">VARCHAR2</code>. When a bind
+                    variable semantically contains a datetime or numeric value, you must perform an
+                    explicit conversion to the appropriate data type. For example:
+                           </p>
+                           <pre class="pre codeblock"><code>SELECT * FROM employees WHERE start_date &lt; to_date(:DATE_STRING, 'DD-MON-YYYY')</code></pre></li>
+                     </ul>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="managing-session-state-values.html#GUID-A052DC04-0D04-4DEA-BDEF-4DCBFF489E07" title="Use bind variable syntax anywhere where you are using SQL or PL/SQL to reference session state of a specified item.&nbsp;">Referencing Session State Using Bind Variable Syntax</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div><a id="HTMDB25030"></a><div class="props_rev_3"><a id="GUID-D4B01E13-7A41-4E75-BD7E-97170A541A54" name="GUID-D4B01E13-7A41-4E75-BD7E-97170A541A54"></a><h4 id="HTMDB-GUID-D4B01E13-7A41-4E75-BD7E-97170A541A54" class="sect4"><span class="enumeration_section">3.9.4.2 </span>About Using Bind Variables in Regions Based on
+        a SQL Query or LOV
+                  </h4>
+                  <div>
+                     <p>Learn about using bind variables in regions defined as a SQL Query, SQL Query (plsql
+        function body returning SQL query), or list of values (LOV).</p>
+                     <p>If your region type is defined as a SQL Query, SQL Query (plsql function body returning SQL query), or list of values (LOV), you can reference session state using the following syntax:</p><pre class="oac_no_warn" dir="ltr">:MY_ITEM
+</pre><p>One common way to do this is to incorporate a session state variable in a <code class="codeph">WHERE</code> clause. The following example shows how to bind the value of the item <code class="codeph">THE_DEPTNO</code> into a region defined from a SQL Query.
+                     </p><pre class="oac_no_warn" dir="ltr">SELECT last_name, job_id, salary
+FROM employees
+WHERE department_id = :THE_DEPTNO
+</pre></div>
+                  <div>
+                     <div class="infoboxnotealso" id="GUID-D4B01E13-7A41-4E75-BD7E-97170A541A54__GUID-93C5674D-A8E0-4388-8655-B94C6BF18EB1">
+                        <p class="notep1">See Also:</p>
+                        <p><a href="about-regions.html#GUID-D137BFE6-2F3A-4C63-9083-56D862B8C556" title="Learn how regions function as a container for content on an application page.">About Regions</a> for information about creating regions
+                        </p>
+                     </div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="managing-session-state-values.html#GUID-A052DC04-0D04-4DEA-BDEF-4DCBFF489E07" title="Use bind variable syntax anywhere where you are using SQL or PL/SQL to reference session state of a specified item.&nbsp;">Referencing Session State Using Bind Variable Syntax</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div><a id="HTMDB25031"></a><div class="props_rev_3"><a id="GUID-3E727255-EB3F-481B-BDB6-E77B0B89F0D7" name="GUID-3E727255-EB3F-481B-BDB6-E77B0B89F0D7"></a><h4 id="HTMDB-GUID-3E727255-EB3F-481B-BDB6-E77B0B89F0D7" class="sect4"><span class="enumeration_section">3.9.4.3 </span>About Using Bind Variables in Regions Based on PL/SQL
+                  </h4>
+                  <div>
+                     <p>Learn about using bind variables in regions based on PL/SQL.</p>
+                     <p>For region types, processes, computations, validations, conditions, and so on that are defined as PL/SQL dynamic content, regions are constructed using PL/SQL anonymous block syntax. In other words, the beginning and ending keywords are used to enclose the PL/SQL block. For example:</p><pre class="oac_no_warn" dir="ltr"><code class="codeph">IF</code> :P1_JOB IS NOT NULL THEN
+  INSERT INTO employees (employee_id, first_name, job_id) 
+  VALUES (:<code class="codeph">P1_EMP_ID</code>, :P1_NAME, :P1_JOB)
+end if;
+</pre><p>In this example, the values of the <code class="codeph">employee_id</code>, <code class="codeph">first_name</code>, and <code class="codeph">job_id</code> are populated by the values of <code class="codeph">P1_EMP_ID</code>, <code class="codeph">P1_NAME</code>, and <code class="codeph">P1_JOB</code>.
+                     </p>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="managing-session-state-values.html#GUID-A052DC04-0D04-4DEA-BDEF-4DCBFF489E07" title="Use bind variable syntax anywhere where you are using SQL or PL/SQL to reference session state of a specified item.&nbsp;">Referencing Session State Using Bind Variable Syntax</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+            <div class="props_rev_3"><a id="GUID-1F0B7342-DDAF-49D5-B9E8-EA229660E11B" name="GUID-1F0B7342-DDAF-49D5-B9E8-EA229660E11B"></a><h3 id="HTMDB-GUID-1F0B7342-DDAF-49D5-B9E8-EA229660E11B" class="sect3"><span class="enumeration_section">3.9.5 </span>About Session Cloning
+               </h3>
+               <div>
+                  <p>Use session cloning to open a new browser window in an <span>Oracle APEX</span> application and have it generate a new distinct session identifier and copy the session values from the original <span>APEX</span> session to the new one.
+                  </p>
+                  <p>In previous releases, opening multiple windows (or browser tabs) in the same <span>APEX</span> application resulted in a number of issues. Typically, all the browser tabs shared
+            the same session and session state which resulted in unpredictable and undesirable
+            results. 
+                  </p>
+                  <p>To use session cloning, the developer must provide a method for end user to open a new browser tab and specify the <code class="codeph">REQUEST</code> value of <code class="codeph">APEX_CLONE_SESSION</code>. The following is an example URL:
+                  </p>
+                  <p><code class="codeph">f?p=&amp;APP_ID.:&amp;APP_PAGE_ID.:&amp;APP_SESSION.:APEX_CLONE_SESSION</code></p>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-1F0B7342-DDAF-49D5-B9E8-EA229660E11B__GUID-0E3AC04B-678E-4ADD-9DE4-D334A231702E">Best Practices When Using Session Cloning</p>
+                     <p>When using this session cloning, developers should remember:</p>
+                     <ul style="list-style-type: disc;">
+                        <li>The idle time associated with the <span>Oracle APEX</span>  session would be affected by any of the <span>APEX</span> sessions, original or cloned ones.
+                        </li>
+                        <li>When a user logs out of one session (original or cloned), all other associated sessions will be logged out.</li>
+                        <li>The maximum session duration would be a function of the original <span>APEX</span> session and when it was created.
+                        </li>
+                        <li>An administrative user can enable or disable this feature using the procedure:<pre class="pre codeblock"><code>apex_instance_admin.set_parameter(
+    p_parameter =&gt; 'CLONE_SESSION_ENABLED',
+    p_value     =&gt; 'Y');</code></pre></li>
+                     </ul>
+                  </div>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-1F0B7342-DDAF-49D5-B9E8-EA229660E11B__GUID-91ECFBDE-FA0C-4C60-A6C5-72BC69EE2DFB">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="../aeapi/SET_PARAMETER-Procedure.html#AEAPI-GUID-A6D8CA93-798D-4582-97B9-C7D3ED709AC5" target="_blank"><span><cite>Oracle APEX API
+                                        Reference</cite></span></a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-session-state-values.html#GUID-EF798946-9E8A-430E-94F5-C2AF6EABE264" title="Manage session state to store and retrieve values for a user as the user navigates between different application pages.">Managing Session State Values</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="PARSE Function">
+      <meta name="DC.subject" content="PARSE function, APEX_DATA_PARSER">
+      <meta name="keywords" content="PARSE function, APEX_DATA_PARSER">
+      <meta name="DC.Relation" scheme="URI" content="APEX_DATA_PARSER.html#GUID-07E9397C-DF26-40F7-AC73-F46961E1088A">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-B815CF74-C469-4F78-9433-643D1339E930">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>PARSE Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_DATA_PARSER.JSON_TO_PROFILE-Function.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_DATA_PARSER.SET_PARSER_FLAGS-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"PARSE Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_DATA_PARSER.JSON_TO_PROFILE-Function.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_DATA_PARSER.SET_PARSER_FLAGS-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-B815CF74-C469-4F78-9433-643D1339E930" name="GUID-B815CF74-C469-4F78-9433-643D1339E930"></a>
+         
+         <h2 id="AEAPI-GUID-B815CF74-C469-4F78-9433-643D1339E930" class="sect2"><span class="enumeration_section">22.10 </span>PARSE Function
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function enables you to parse XML, XLSX, CSV, or JSON files and returns a generic table of the following structure: </p><pre class="pre codeblock"><code>LINE_NUMBER COL001 COL002 COL003 COL004 ... COL300</code></pre><p>Values are generally returned in <code class="codeph">VARCHAR2</code> format. A returned table row can have a maximum of 300 columns. The maximum length for a VARCHAR2 table column is 4000 bytes; there is no line length maximum. 20 out of the 300 supported columns can be handled as a CLOB.
+                  </p>
+                  <p>File parsing happens on-the-fly as this function is invoked. Data does not write to a collection nor to a temporary table.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B815CF74-C469-4F78-9433-643D1339E930__GUID-B63ACF60-3EED-488C-8ABD-F68627A169EA">About Parsing File Profiles</p>
+                  <p>If the <code class="codeph">p_file_profile</code> parameter is not passed, the function computes a file profile with column information during parsing.
+                  </p>
+                  <p>If <code class="codeph">p_detect_data_types</code> is passed as <code class="codeph">Y</code> (default), the function also detects column data types during parsing. Retrieve the computed file profile using <code class="codeph">GET_FILE_PROFILE</code> after the function finishes:
+                  </p>
+                  <ol id="GUID-B815CF74-C469-4F78-9433-643D1339E930__OL_LKL_ML5_M3B">
+                     <li>Invoke <code class="codeph">PARSE</code> - Use this table function to parse the files and get rows and columns in order to display a data preview.
+                     </li>
+                     <li>Invoke <code class="codeph">GET_FILE_PROFILE</code> - Retrieve file profile information in JSON format.
+                     </li>
+                     <li>Process the data - Generate a SQL query based on the data profile to perform custom processing.</li>
+                  </ol>
+                  <div class="infoboxnote" id="GUID-B815CF74-C469-4F78-9433-643D1339E930__GUID-C257BB29-CEF5-417C-AF91-07D70A250FDD">
+                     <p class="notep1">Note:</p>XLSX parsing occurs in phases:
+                     <ol id="GUID-B815CF74-C469-4F78-9433-643D1339E930__OL_YK4_1NC_SQB">
+                        <li>First, <code class="codeph">APEX_ZIP</code> extracts individual XML files from the XLSX archive.
+                        </li>
+                        <li>Then, the <code class="codeph">XMLTABLE SQL</code> function parses the actual XLSX.
+                        </li>
+                     </ol>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B815CF74-C469-4F78-9433-643D1339E930__GUID-9AC71836-72A5-4AF8-9AA4-3EECA5D9CBF7">About CLOB Support</p>
+                  <p>Starting with <span>APEX</span> release 19.2, this package supports string values larger than 4,000 bytes. 20 out of the 300 supported columns can be handled as a <code class="codeph">CLOB</code>. The level of <code class="codeph">CLOB</code> support depends upon the file type being parsed.
+                  </p>
+                  <p><span class="bold">CSV and XLSX</span></p>
+                  <ul style="list-style-type: disc;" id="GUID-B815CF74-C469-4F78-9433-643D1339E930__UL_UKX_1L5_M3B">
+                     <li><code class="codeph">CLOB</code> values are supported up to 32K.
+                     </li>
+                     <li><code class="codeph">CLOB</code> columns can be detected during discovery.
+                     </li>
+                     <li>When the data profile is discovered, values below 4000 bytes are normally returned as <code class="codeph">COLNNN</code>. <code class="codeph">CLOB</code> values are returned in the <code class="codeph">CLOBNN</code> column and the first 1000 characters are returned as <code class="codeph">COLNNN</code>. If a data profile is passed in and that has <code class="codeph">CLOB</code> column defined, all values are returned in the <code class="codeph">CLOBNN</code> column only.
+                     </li>
+                  </ul>
+                  <p><span class="bold">XML</span></p>
+                  <ul style="list-style-type: disc;" id="GUID-B815CF74-C469-4F78-9433-643D1339E930__UL_XC3_DL5_M3B">
+                     <li><code class="codeph">CLOB</code> values with more than 32K are supported.
+                     </li>
+                     <li><code class="codeph">CLOB</code> columns can be detected during discovery.
+                     </li>
+                     <li>When the data profile is discovered, values below 4000 bytes are normally returned as <code class="codeph">COLNNN</code>. <code class="codeph">CLOB</code> values are returned in the <code class="codeph">CLOBNN</code> column and the first 1000 characters are returned as <code class="codeph">COLNNN</code>. If a data profile is passed in and that has <code class="codeph">CLOB</code> column defined, all values are returned in the <code class="codeph">CLOBNN</code> column only.
+                     </li>
+                  </ul>
+                  <p><span class="bold">JSON</span></p>
+                  <ul style="list-style-type: disc;" id="GUID-B815CF74-C469-4F78-9433-643D1339E930__UL_M4M_DL5_M3B">
+                     <li><code class="codeph">CLOB</code> values with more than 32K are supported.
+                     </li>
+                     <li><code class="codeph">CLOB</code> columns are <span class="bold">not</span> detected during discovery; <code class="codeph">CLOB</code> support is only active if a file profile containing <code class="codeph">CLOB</code> column is passed in as the <code class="codeph">p_file_profile</code> parameter.
+                     </li>
+                     <li>Since <code class="codeph">JSON_TABLE</code> does not support CLOBs on 12c databases, the parser uses XMLTYPE-based processing if a file profile with CLOB columns is passed in. Processing will be significantly slower.
+                     </li>
+                  </ul>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B815CF74-C469-4F78-9433-643D1339E930__GUID-BCC78E50-B587-476B-B929-C2380A163800">About Large CSV Files</p>
+                  <p>If the BLOB passed to <code class="codeph">APEX_DATA_PARSER.PARSE</code> is less than 50 MB, <span>Oracle APEX</span> copies the BLOB to an <span class="italic">internal, cached</span> temporary LOB. Thus all CSV parsing is done in memory. For larger BLOBs, <span>APEX</span> does CSV parsing on the original BLOB locator. If it is selected from a table, CSV parsing can happen on disk but might be significantly slower. Note that a performance degradation may occur when parsed CSV files grow beyond 50 MB.
+                  </p>
+                  <p>However, developers can also use the <code class="codeph">DBMS_LOB.CREATETEMPORARY</code> (passing <code class="codeph">CACHE =&gt; TRUE</code> ) and <code class="codeph">DBMS_LOB.COPY</code> procedures in order to explicitly create a cached temporary LOB, even for a larger file. Instead of the original BLOB, the cached temporary LOB can be passed to <code class="codeph">APEX_DATA_PARSER.PARSE</code>. This approach also enables in-memory parsing for files larger than 50 MB.
+                  </p>
+               </div>
+               <div class="section">
+                  <div class="infoboxnotealso" id="GUID-B815CF74-C469-4F78-9433-643D1339E930__GUID-56CD277E-877E-4EED-B16B-B46F90AC7525">
+                     <p class="notep1">See Also:</p><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeapi&id=ARPLS-GUID-5F805F47-FC30-4E5E-B3C5-EDCB9AF62899" target="_blank">CREATETEMPORARY Procedures</a> and <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeapi&id=ARPLS-GUID-092C14BA-5738-4471-BCD8-10CD4CBCD499" target="_blank">COPY Procedures</a> in <span><cite>Oracle Database PL/SQL
+                                        Packages and Types Reference</cite></span>.
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B815CF74-C469-4F78-9433-643D1339E930__GUID-8FE94E45-3979-4867-B82A-ABB8EE1DDFEF">Syntax</p>
+               </div>
+               <div class="section"><pre class="pre codeblock"><code>APEX_DATA_PARSER.PARSE (
+    p_content                      IN BLOB,
+    p_file_name                    IN VARCHAR2     DEFAULT NULL,
+    p_file_type                    in t_file_type  DEFAULT NULL,
+    p_file_profile                 IN CLOB         DEFAULT NULL,
+    --
+    p_detect_data_types            IN VARCHAR2     DEFAULT 'Y',
+    p_decimal_char                 IN VARCHAR2     DEFAULT NULL,
+    --
+    p_xlsx_sheet_name              IN VARCHAR2     DEFAULT NULL,
+    --
+    p_row_selector                 IN VARCHAR2     DEFAULT NULL,
+    --
+    p_csv_row_delimiter            IN VARCHAR2     DEFAULT LF,
+    p_csv_col_delimiter            IN VARCHAR2     DEFAULT NULL,
+    p_csv_enclosed                 IN VARCHAR2     DEFAULT '"',
+    --
+    p_skip_rows                    IN PLS_INTEGER  DEFAULT NULL,
+    p_add_headers_row              IN VARCHAR2     DEFAULT 'N',
+    --
+    p_nullif                       IN VARCHAR2     DEFAULT NULL,
+    p_force_trim_whitespace        IN VARCHAR2     DEFAULT 'N',
+    --
+    p_file_charset                 IN VARCHAR2     DEFAULT 'AL32UTF8',
+    p_max_rows                     IN NUMBER       DEFAULT NULL,
+    p_return_rows                  IN NUMBER       DEFAULT NULL,
+    --
+    p_store_profile_to_collection  IN VARCHAR2     DEFAULT NULL,
+    p_xml_namespaces               IN VARCHAR2     DEFAULT NULL,
+    --
+    p_fix_excel_precision          IN VARCHAR2     DEFAULT 'N' )
+    RETURN apex_t_parser_table pipelined;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B815CF74-C469-4F78-9433-643D1339E930__GUID-97DEA74F-5C9B-449B-B11D-6DBC85B7DCC5">Parameters</p>
+                  <div class="tblformal" id="GUID-B815CF74-C469-4F78-9433-643D1339E930__BABJFIBC">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="34%" id="d79944e278">Parameter</th>
+                              <th align="left" valign="bottom" width="66%" id="d79944e280">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e284" headers="d79944e278 "><code class="codeph">p_content</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e284 d79944e280 ">The file content to be parsed as a BLOB.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e290" headers="d79944e278 "><code class="codeph">p_file_name</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e290 d79944e280 ">The name of the file; only used to derive the file type. Either <code class="codeph">p_file_name</code>, <code class="codeph">p_file_type</code> or <code class="codeph">p_file_profile</code> must be passed in.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e305" headers="d79944e278 "><code class="codeph">p_file_type</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e305 d79944e280 ">The type of the file to be parsed. Use this to explicitly pass the file type in. Either <code class="codeph">p_file_name</code>, <code class="codeph">p_file_type</code> or <code class="codeph">p_file_profile</code> must be passed in.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e320" headers="d79944e278 "><code class="codeph">p_file_profile</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e320 d79944e280 ">File profile to be used for parsing. The file profile might have been computed in a previous <code class="codeph">parse()</code> or <code class="codeph">discover()</code> invocation. If passed in again, the function skips some profile detection logic and use the passed in profile in order to improve performance.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e332" headers="d79944e278 "><code class="codeph">p_detect_data_types</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e332 d79944e280 ">
+                                 <p>Whether to detect data types (<code class="codeph">NUMBER, DATE, TIMESTAMP</code>) during parsing.
+                                 </p>
+                                 <p>If <code class="codeph">Y</code> (default), the function computes the file profile and also add data type information to it.
+                                 </p>
+                                 <p>If <code class="codeph">N</code>, all columns are <code class="codeph">VARCHAR2</code>.
+                                 </p>
+                                 <p> When no data types are detected, all columns are reported as <code class="codeph">VARCHAR2(4000)</code>.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e360" headers="d79944e278 "><code class="codeph">p_decimal_char</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e360 d79944e280 ">Use this decimal character when trying to detect <code class="codeph">NUMBER</code> data types. If not specified,the procedure will auto-detect the decimal character.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e369" headers="d79944e278 "><code class="codeph">p_xlsx_sheet_name</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e369 d79944e280 ">For XLSX workbooks. The name of the worksheet to parse. If omitted, the function uses the first worksheet found.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e375" headers="d79944e278 "><code class="codeph">p_row_selector</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e375 d79944e280 ">
+                                 <p>For JSON and XML files. Pointer to the array / list of rows within the JSON or XML file. If omitted, the function will: </p>
+                                 <ul style="list-style-type: disc;" id="GUID-B815CF74-C469-4F78-9433-643D1339E930__UL_HFX_L1Y_PGB">
+                                    <li>For XML files: Use <code class="codeph">/*/*</code> (first tag under the root tag) as the row selector.
+                                    </li>
+                                    <li>For JSON files: Look for a JSON array and use the first array found.</li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e390" headers="d79944e278 "><code class="codeph">p_csv_row_delimiter</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e390 d79944e280 ">Override the default row delimiter for CSV parsing. Limited to one character and defaults to Linefeed (LF). Note that the Linefeed row delimiter also handles <span class="q">"Carriage Return/Linefeed"</span> (CRLF).
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e399" headers="d79944e278 "><code class="codeph">p_csv_col_delimiter</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e399 d79944e280 ">Use a specific CSV column delimiter. If omitted, the function will detect the column delimiter based on the first row contents.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e405" headers="d79944e278 "><code class="codeph">p_csv_enclosed</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e405 d79944e280 ">Override the default enclosure character for CSV parsing.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e412" headers="d79944e278 "><code class="codeph">p_skip_rows</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e412 d79944e280 ">Skip the first N rows when parsing.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e418" headers="d79944e278 "><code class="codeph">p_add_headers_row</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e418 d79944e280 ">For XML, JSON: Emit the column headers (tag, attr names) as the first row.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e424" headers="d79944e278 "><code class="codeph">p_nullif</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e424 d79944e280 ">Similar to SQL <code class="codeph">NULLIF</code> function. If the column has this value, return <code class="codeph">NULL</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e436" headers="d79944e278 "><code class="codeph">p_force_trim_whitespace</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e436 d79944e280 ">Whether to force trim enquoted whitespace from parsed values.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e442" headers="d79944e278 "><code class="codeph">p_file_charset</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e442 d79944e280 ">Encoding of the file to parse. Defaults to <code class="codeph">AL32UTF8</code> if omitted or <code class="codeph">NULL</code> is explicitly passed in.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e454" headers="d79944e278 "><code class="codeph">p_max_rows</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e454 d79944e280 ">Stop parsing after <code class="codeph">p_max_rows</code> have been returned.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e463" headers="d79944e278 "><code class="codeph">p_return_rows</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e463 d79944e280 ">Amount of rows to return. This is useful when the parser parses more rows (for data type detection) than it is supposed to return. When the specified amount of rows have been emitted, the function will continue parsing (and refining the detected data types) until <code class="codeph">p_max_rows</code> has been reached, or until the <code class="codeph">rownum</code> &lt; x clause of the SQL query kicks in and stops execution.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e475" headers="d79944e278 "><code class="codeph">p_store_profile_to_collection</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e475 d79944e280 ">Store the File profile which has been computed during parse into a collection. The collection will be cleared, if it exists. Only be used for computed profiles.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e481" headers="d79944e278 "><code class="codeph">p_xml_namespaces</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e481 d79944e280 ">XML namespaces to use when parsing XML files.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="34%" id="d79944e487" headers="d79944e278 "><code class="codeph">p_fix_excel_precision</code></td>
+                              <td align="left" valign="top" width="66%" headers="d79944e487 d79944e280 ">
+                                 <p>Whether to round numbers in XLSX files to 15 significant digits. This is useful for XLSX files generated by Microsoft Excel. Excel stores numeric values as floating point numbers with a maximum of 15 significant digits. For calculation results, this can lead to rounding issues, which are fixed using this parameter.</p>
+                                 <p>See also: <a href="https://learn.microsoft.com/en-us/office/troubleshoot/excel/floating-point-arithmetic-inaccurate-result" target="_blank">Floating-point arithmetic may give inaccurate results in Excel</a> at <span class="italic">Microsoft 365</span>.
+                                 </p>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B815CF74-C469-4F78-9433-643D1339E930__GUID-E491CB2E-7EFD-4955-9224-2C8437AC5F62">Returns</p>
+                  <p>Returns rows of the <code class="codeph">apex_t_parser_row</code> type.
+                  </p><pre class="pre codeblock"><code>LINE_NUMBER COL001 COL002 COL003 COL004 ... COL300</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B815CF74-C469-4F78-9433-643D1339E930__GUID-51C0EC26-463F-4244-AF94-03333D4E41CC">Example</p><pre class="pre codeblock"><code>select line_number, col001,col002,col003,col004,col005,col006,col007,col008
+   from table( 
+              apex_data_parser.parse(
+                  p_content         =&gt; {BLOB containing XLSX spreadsheet},
+                  p_file_name       =&gt; 'test.xlsx',
+                  p_xlsx_sheet_name =&gt; 'sheet1.xml') ) ;
+
+LINE_NUMBER COL001   COL002       COL003       COL004   COL005          COL006   COL007       COL008 
+----------- -------- ------------ ------------ -------- --------------- -------- ------------ --------
+          1 0        First Name   Last Name    Gender   Country         Age      Date         Id
+          2 1        Dulce        Abril        Female   United States   32       15/10/2017   1562
+          3 2        Mara         Hashimoto    Female   Great Britain   25       16/08/2016   1582
+          4 3        Philip       Gent         Male     France          36       21/05/2015   2587
+          5 4        Kathleen     Hanner       Female   United States   25       15/10/2017   3549
+          6 5        Nereida      Magwood      Female   United States   58       16/08/2016   2468
+          7 6        Gaston       Brumm        Male     United States   24       21/05/2015   2554
+          8 7        Etta         Hurn         Female   Great Britain   56       15/10/2017   3598
+          9 8        Earlean      Melgar       Female   United States   27       16/08/2016   2456
+         10 9        Vincenza     Weiland      Female   United States   40       21/05/2015   6548
+          : :        :            :            :        :               :        :            :
+
+select line_number, col001,col002,col003,col004,col005,col006,col007,col008
+   from table( 
+              apex_data_parser.parse(
+                  p_content         =&gt; {BLOB containing JSON file},
+                  p_file_name       =&gt; 'test.json') ) ;
+
+LINE_NUMBER COL001    COL002   COL003                                COL004          COL005
+----------- --------- ---------------------------------------------- --------------- --------------
+          1 Feature   1.5      41km E of Cape Yakataga, Alaska       1536513727239   1536514117117
+          2 Feature   0.21     11km ENE of Aguanga, CA               1536513299520   1536513521231
+          3 Feature   1.84     5km SSW of Pahala, Hawaii             1536513262940   1536513459610
+          4 Feature   2.55     9km W of Volcano, Hawaii              1536513100890   1536513446680
+          5 Feature   1.3      62km ESE of Cape Yakataga, Alaska     1536512917361   1536513322236
+          6 Feature   1.79     7km SW of Tiptonville, Tennessee      1536512379690   1536512668010
+          7 Feature   1.9      126km NNW of Arctic Village, Alaska   1536512346186   1536512846567
+          8 Feature   1.4      105km NW of Arctic Village, Alaska    1536512140162   1536512846334</code></pre></div>
+               <div class="section">
+                  <div class="infoboxnotealso" id="GUID-B815CF74-C469-4F78-9433-643D1339E930__GUID-761B1A8F-3A3D-40C4-8F1B-91F2DE9EC7FE">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-B815CF74-C469-4F78-9433-643D1339E930__UL_WXG_LF4_3CC">
+                        <li><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeapi&id=ARPLS-GUID-5F805F47-FC30-4E5E-B3C5-EDCB9AF62899" target="_blank">CREATETEMPORARY Procedures</a> in <span><cite>Oracle Database PL/SQL
+                                        Packages and Types Reference</cite></span></li>
+                        <li><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeapi&id=ARPLS-GUID-092C14BA-5738-4471-BCD8-10CD4CBCD499" target="_blank">COPY Procedures</a> in <span><cite>Oracle Database PL/SQL
+                                        Packages and Types Reference</cite></span></li>
+                        <li><a href="https://learn.microsoft.com/en-us/office/troubleshoot/excel/floating-point-arithmetic-inaccurate-result" target="_blank">Floating-point arithmetic may give inaccurate results in Excel</a> at <span class="italic">Microsoft 365</span></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_DATA_PARSER.html#GUID-07E9397C-DF26-40F7-AC73-F46961E1088A">APEX_DATA_PARSER</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

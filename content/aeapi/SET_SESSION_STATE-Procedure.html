@@ -1,0 +1,157 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="SET_SESSION_STATE Procedure">
+      <meta name="DC.subject" content="APEX_UTIL, SET_SESSION_STATE procedure, session state, setting">
+      <meta name="keywords" content="APEX_UTIL, SET_SESSION_STATE procedure, session state, setting">
+      <meta name="DC.Relation" scheme="URI" content="APEX_UTIL.html#GUID-5ECE5C10-1A88-4D37-8A7D-C51925ADB2B9">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-ECF66FA6-91DF-4463-A7DC-EFFB3E49A5D1">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>SET_SESSION_STATE Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="SET_SESSION_SCREEN_READER_ON-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="SET_SESSION_TERRITORY-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"SET_SESSION_STATE Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="SET_SESSION_SCREEN_READER_ON-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="SET_SESSION_TERRITORY-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-ECF66FA6-91DF-4463-A7DC-EFFB3E49A5D1" name="GUID-ECF66FA6-91DF-4463-A7DC-EFFB3E49A5D1"></a><a id="AEAPI1866"></a><a id="AEAPI1867"></a><a id="AEAPI1868"></a><a id="AEAPI1869"></a><a id="AEAPI181"></a>
+         
+         <h2 id="AEAPI-GUID-ECF66FA6-91DF-4463-A7DC-EFFB3E49A5D1" class="sect2"><span class="enumeration_section">59.139 </span>SET_SESSION_STATE Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This procedure sets session state for a current <span>Oracle APEX</span> session.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-ECF66FA6-91DF-4463-A7DC-EFFB3E49A5D1__GUID-6C80F26A-8C9C-4235-80B5-BA923B7D957E">Syntax</p><pre class="pre codeblock"><code>APEX_UTIL.SET_SESSION_STATE (
+    p_name     IN    VARCHAR2 DEFAULT NULL,
+    p_value    IN    VARCHAR2 DEFAULT NULL
+    p_commit   IN    BOOLEAN  DEFAULT TRUE );</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-ECF66FA6-91DF-4463-A7DC-EFFB3E49A5D1__GUID-C84EAE80-F5B0-4474-948A-885D416EC1C3">Parameters</p>
+                  <div class="tblformal" id="GUID-ECF66FA6-91DF-4463-A7DC-EFFB3E49A5D1__GUID-EE0294FE-CEEC-42E4-BE0D-115AE0A14F20">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="41%" id="d288098e81">Parameter</th>
+                              <th align="left" valign="bottom" width="59%" id="d288098e83">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="41%" id="d288098e87" headers="d288098e81 "><code class="codeph">p_name</code></td>
+                              <td align="left" valign="top" width="59%" headers="d288098e87 d288098e83 ">Name of the application-level or page-level item for which you are setting sessions state.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="41%" id="d288098e93" headers="d288098e81 "><code class="codeph">p_value</code></td>
+                              <td align="left" valign="top" width="59%" headers="d288098e93 d288098e83 ">Value of session state to set.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="41%" id="d288098e99" headers="d288098e81 "><code class="codeph">p_commit</code></td>
+                              <td align="left" valign="top" width="59%" headers="d288098e99 d288098e83 ">
+                                 <p>If TRUE (default), commit after modifying session state.</p>
+                                 <p>If FALSE or if the existing value in session state equals <code class="codeph">p_value</code>, no commit.
+                                 </p>
+                                 <p>This parameter is ignored when the application's Session State Changes attribute is set to <code class="codeph">End Of Request</code>.
+                                 </p>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-ECF66FA6-91DF-4463-A7DC-EFFB3E49A5D1__GUID-92EFA785-E28F-4BF4-8967-5236A998A0DC">Example</p>
+                  <p>The following example uses the <code class="codeph">SET_SESSION_STATE</code> procedure to change the value of the item <code class="codeph">my_item</code> to <code class="codeph">myvalue</code> in the current session.
+                  </p><pre class="pre codeblock"><code>BEGIN
+    APEX_UTIL.SET_SESSION_STATE('my_item','myvalue');
+END;</code></pre></div>
+               <div class="section">
+                  <div class="infoboxnotealso" id="GUID-ECF66FA6-91DF-4463-A7DC-EFFB3E49A5D1__GUID-559C04A9-3FCC-4159-B4EA-3A7CAF5A320A">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-ECF66FA6-91DF-4463-A7DC-EFFB3E49A5D1__UL_PV3_3G5_MCC">
+                        <li><a href="GET_NUMERIC_SESSION_STATE-Function.html#GUID-98F76BFB-F2A2-47B5-A024-081DC6CD094A">GET_NUMERIC_SESSION_STATE Function</a></li>
+                        <li><a href="GET_SESSION_STATE-Function.html#GUID-8BB0C252-C4DB-4300-AA34-9E1FF3B2DAA7">GET_SESSION_STATE Function</a></li>
+                        <li><a href="../htmdb/understanding-session-state-management.html#HTMDB-GUID-CE2A38B5-75B7-4C43-ACB0-685E16C6ACF9" target="_blank">Understanding Session State Management</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_UTIL.html#GUID-5ECE5C10-1A88-4D37-8A7D-C51925ADB2B9">APEX_UTIL</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

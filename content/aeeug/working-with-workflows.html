@@ -1,0 +1,385 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Working with Workflows">
+      <meta name="abstract" content="View workflow instances in the workflow console. Use the workflow details page to act on specific workflow instances.">
+      <meta name="description" content="View workflow instances in the workflow console. Use the workflow details page to act on specific workflow instances.">
+      <meta name="DC.subject" content=", workflows, suspending, resuming, canceling, terminating, retrying, workflow variables, updating, viewing workflow diagram, audit history, viewing for workflows, viewing for workflow activities">
+      <meta name="keywords" content=", workflows, suspending, resuming, canceling, terminating, retrying, workflow variables, updating, viewing workflow diagram, audit history, viewing for workflows, viewing for workflow activities">
+      <meta name="DC.Relation" scheme="URI" content="using-workflows.html#GUID-24CA8D50-4593-434A-B3C2-2B0EA142812E">
+      <meta name="DC.Relation" scheme="URI" content="working-with-workflows.html#GUID-7E96F54E-1222-4E27-B483-BFD6E72EA58A">
+      <meta name="DC.Relation" scheme="URI" content="working-with-workflows.html#GUID-F102CC38-316C-4B0E-8C5D-D240E91B0A52">
+      <meta name="DC.Relation" scheme="URI" content="working-with-workflows.html#GUID-9E583B30-C6AE-49AB-97B6-51C4846056F3">
+      <meta name="DC.Relation" scheme="URI" content="working-with-workflows.html#GUID-7CE50EEA-3598-4A80-94FD-BD37C8153989">
+      <meta name="DC.Relation" scheme="URI" content="working-with-workflows.html#GUID-77916D7F-1F39-49A4-911F-FB7B1FCEF767">
+      <meta name="DC.Relation" scheme="URI" content="working-with-workflows.html#GUID-7B3E0033-6885-4FC7-9E91-119E0BF5B074">
+      <meta name="DC.Relation" scheme="URI" content="working-with-workflows.html#GUID-615A4C64-2F8F-415A-9D17-75486E135504">
+      <meta name="DC.Relation" scheme="URI" content="working-with-workflows.html#GUID-90DEC248-47B7-47B8-9673-5E9CAB991199">
+      <meta name="DC.Contributor" content="John Godfrey">
+      <meta name="DC.Contributor" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="CM Dietrich, Terri Jennings">
+      <meta name="DC.Publisher" content="January2025">
+      <meta name="template" content="Orientation">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-0AC98A77-C6C6-407D-8D78-CEC7F1556008">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="View workflow instances in the workflow console. Use the workflow details page to act on specific workflow instances.">
+      <meta name="description" content="View workflow instances in the workflow console. Use the workflow details page to act on specific workflow instances.">
+      <title>Working with Workflows</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="End User's Guide ">
+      <meta property="og:description" content="View workflow instances in the workflow console. Use the workflow details page to act on specific workflow instances.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="End User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-end-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-01-14T11:31:07-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2012, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12914-01">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="about-workflows.html" title="Previous" type="text/html">
+      <link rel="next" href="workflow-faqs.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX End User's Guide">
+    <meta name="dcterms.isVersionOf" content="AEEUG">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","name":"Working with Workflows","description":"View workflow instances in the workflow console. Use the workflow details page to act on specific workflow instances.","datePublished":"2025-01-14 CST","dateModified":"2025-01-14 CST"} </script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="about-workflows.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="workflow-faqs.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article>
+         <header>
+            <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">End User's Guide </span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-workflows.html" property="item" typeof="WebPage"><span property="name">Using Workflows</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">Working with Workflows</li>
+            </ol>
+            <a id="GUID-0AC98A77-C6C6-407D-8D78-CEC7F1556008" name="GUID-0AC98A77-C6C6-407D-8D78-CEC7F1556008"></a>
+            
+            <h2 id="AEEUG-GUID-0AC98A77-C6C6-407D-8D78-CEC7F1556008" class="sect2"><span class="enumeration_section">6.2 </span>Working with Workflows
+            </h2>
+         </header>
+         <div class="ind">
+            <div>
+               <p>View workflow instances in the workflow console. Use the workflow details page to act on specific workflow instances.</p>
+               <p>Your ability to perform operations on workflows depends on the role you have in the workflow, the state the workflow is in, and the way the specific application is configured.</p>
+               <p>In general, accessing the <strong class="term">Workflow Console</strong> page gives you a list of all the workflows you can participate in. Clicking on a specific workflow to get the <strong class="term">Workflow Details</strong> page gives you a list of actions you can take with that workflow. If a <strong class="term">Workflow Dashboard</strong> page is configured for your application, the dashboard contains analytics for the workflow. For more on these pages, see <a href="about-workflows.html#GUID-AA1C9628-6C42-4D2D-AF55-44DA120AD05C" title="The workflow console is a summary of workflows for an application. Select a workflow from the workflow console to view details about that specific workflow. If configured, use the workflow dashboard to view analytics for workflows.">About the Workflow Console, Workflow Details, and Workflow Dashboard</a>.
+               </p>
+               <p>If a developer updates your application, any running workflow instances automatically become <strong class="term">Suspended</strong>, and must be resumed or terminated by a workflow administrator.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="working-with-workflows.html#GUID-7E96F54E-1222-4E27-B483-BFD6E72EA58A">Suspending a Workflow</a><br>Suspend a workflow by clicking <span class="uicontrol bold">Suspend</span> on the workflow details page.
+                  </li>
+                  <li class="ulchildlink"><a href="working-with-workflows.html#GUID-F102CC38-316C-4B0E-8C5D-D240E91B0A52">Resuming a Workflow</a><br>Resume a workflow by clicking <span class="uicontrol bold">Resume</span> on the workflow details page.
+                  </li>
+                  <li class="ulchildlink"><a href="working-with-workflows.html#GUID-9E583B30-C6AE-49AB-97B6-51C4846056F3">Terminating a Workflow</a><br>Cancel a workflow by clicking <span class="uicontrol bold">Terminate</span> on the workflow details page.
+                  </li>
+                  <li class="ulchildlink"><a href="working-with-workflows.html#GUID-7CE50EEA-3598-4A80-94FD-BD37C8153989">Retrying a Workflow</a><br>Retry a workflow by clicking <span class="uicontrol bold">Retry</span> on the workflow details page.
+                  </li>
+                  <li class="ulchildlink"><a href="working-with-workflows.html#GUID-77916D7F-1F39-49A4-911F-FB7B1FCEF767">Updating Workflow Variables</a><br>Update workflow variables with the <span class="uicontrol bold">Edit</span> link in the workflow details page.
+                  </li>
+                  <li class="ulchildlink"><a href="working-with-workflows.html#GUID-7B3E0033-6885-4FC7-9E91-119E0BF5B074">Viewing the Workflow Diagram</a><br>View a visual representation of the workflow instance in the workflow details page.
+                  </li>
+                  <li class="ulchildlink"><a href="working-with-workflows.html#GUID-615A4C64-2F8F-415A-9D17-75486E135504">Viewing the Workflow Audit History</a><br>View the audit history of a workflow by expanding the History section in the workflow details page.
+                  </li>
+                  <li class="ulchildlink"><a href="working-with-workflows.html#GUID-90DEC248-47B7-47B8-9673-5E9CAB991199">Viewing the Activity Audit History</a><br>View the audit history of a workflow activity by clicking on the activity in the workflow details page.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="using-workflows.html#GUID-24CA8D50-4593-434A-B3C2-2B0EA142812E" title="Learn about using workflows.">Using Workflows</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-7E96F54E-1222-4E27-B483-BFD6E72EA58A" name="GUID-7E96F54E-1222-4E27-B483-BFD6E72EA58A"></a><h3 id="AEEUG-GUID-7E96F54E-1222-4E27-B483-BFD6E72EA58A" class="sect3"><span class="enumeration_section">6.2.1 </span>Suspending a Workflow
+               </h3>
+               <div>
+                  <p>Suspend a workflow by clicking <span class="uicontrol bold">Suspend</span> on the workflow details page.
+                  </p>
+                  <div class="section">Suspending a workflow pauses the execution of a running (active) workflow.</div>
+                  <!-- class="section" -->
+                  <div class="p">You must be the <strong class="term">Workflow Administrator</strong> to suspend a workflow.
+                  </div>
+                  <!-- class="section" -->
+                  <ol id="GUID-7E96F54E-1222-4E27-B483-BFD6E72EA58A__STEPS_UBC_MZB_YYB">
+                     <li><span>Open the application.</span></li>
+                     <li><span>Open the appropriate Workflow Console. The name of the page varies depending on the application, but the report context is <span class="uicontrol bold">Admin Workflows</span>.</span></li>
+                     <li><span>Locate the workflow you want to suspend, and click on the workflow name to open the workflow details page.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Suspend</span> to suspend the workflow.</span></li>
+                  </ol>
+                  <div class="section">The workflow instance suspends, and no further operations are possible. You must <strong class="term">resume</strong> the workflow in order for the workflow to continue.
+                  </div>
+                  <!-- class="section" -->
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="working-with-workflows.html#GUID-0AC98A77-C6C6-407D-8D78-CEC7F1556008" title="View workflow instances in the workflow console. Use the workflow details page to act on specific workflow instances.">Working with Workflows</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-F102CC38-316C-4B0E-8C5D-D240E91B0A52" name="GUID-F102CC38-316C-4B0E-8C5D-D240E91B0A52"></a><h3 id="AEEUG-GUID-F102CC38-316C-4B0E-8C5D-D240E91B0A52" class="sect3"><span class="enumeration_section">6.2.2 </span>Resuming a Workflow
+               </h3>
+               <div>
+                  <p>Resume a workflow by clicking <span class="uicontrol bold">Resume</span> on the workflow details page.
+                  </p>
+                  <div class="section">Resuming a workflow resumes the execution of a suspended workflow.</div>
+                  <!-- class="section" -->
+                  <div class="p">You must be the <strong class="term">Workflow Administrator</strong> to resume a workflow. You can only resume suspended workflows.
+                  </div>
+                  <!-- class="section" -->
+                  <ol id="GUID-F102CC38-316C-4B0E-8C5D-D240E91B0A52__STEPS_UBC_MZB_YYB">
+                     <li><span>Open the application.</span></li>
+                     <li><span>Open the appropriate Workflow Console. The name of the page varies depending on the application, but the report context is <span class="uicontrol bold">Admin Workflows</span>.</span></li>
+                     <li><span>Locate the workflow you want to resume, and click on the workflow name to open the workflow details page.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Resume</span> to resume the workflow.</span></li>
+                  </ol>
+                  <div class="section">The workflow instance resumes at the same activity where it was suspended unless a developer configures the workflow for additional functionality. Resuming the workflow brings it back to an <strong class="term">active</strong> state.
+                     <div class="infobox-tip" id="GUID-F102CC38-316C-4B0E-8C5D-D240E91B0A52__GUID-A8EDABD0-323E-4A95-A804-70469DF266EC">
+                        <p class="notep1">Tip:</p>For more information on developer options for enhancing the <strong class="term">Resume</strong> functionality, see <a href="../htmdb/using-workflows-in-page-processes.html#HTMDB-GUID-F7BFC1DF-A554-4486-984B-0AADA60E21B5" target="_blank">Resuming Suspended Workflows</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span>.
+                     </div>
+                  </div>
+                  <!-- class="section" -->
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="working-with-workflows.html#GUID-0AC98A77-C6C6-407D-8D78-CEC7F1556008" title="View workflow instances in the workflow console. Use the workflow details page to act on specific workflow instances.">Working with Workflows</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-9E583B30-C6AE-49AB-97B6-51C4846056F3" name="GUID-9E583B30-C6AE-49AB-97B6-51C4846056F3"></a><h3 id="AEEUG-GUID-9E583B30-C6AE-49AB-97B6-51C4846056F3" class="sect3"><span class="enumeration_section">6.2.3 </span>Terminating a Workflow
+               </h3>
+               <div>
+                  <p>Cancel a workflow by clicking <span class="uicontrol bold">Terminate</span> on the workflow details page.
+                  </p>
+                  <div class="section">Terminating a workflow cancels the workflow.</div>
+                  <!-- class="section" -->
+                  <div class="p">You must be the <strong class="term">Workflow Owner</strong>, <strong class="term">Workflow Administrator</strong>, or <strong class="term">Workflow Initiator</strong> to terminate a workflow. You can terminate a workflow instance regardless of whether it is active, suspended, or faulted.
+                  </div>
+                  <!-- class="section" -->
+                  <ol id="GUID-9E583B30-C6AE-49AB-97B6-51C4846056F3__STEPS_UBC_MZB_YYB">
+                     <li class="stepexpand"><span>Open the application.</span></li>
+                     <li class="stepexpand"><span>Open the appropriate Workflow Console. The name of the page varies depending on the application, but depending on your role, the report context is <span class="uicontrol bold">Initiated by Me</span>, <span class="uicontrol bold">My Workflows</span>, or <span class="uicontrol bold">Admin Workflows</span>.</span></li>
+                     <li class="stepexpand"><span>Locate the workflow you want to terminate, and click on the workflow name to open the workflow details page.</span><div>
+                           <div class="infobox-tip" id="GUID-9E583B30-C6AE-49AB-97B6-51C4846056F3__GUID-E521F045-B9CF-46EF-8D72-A687B4E59DDE">
+                              <p class="notep1">Tip:</p>You can also terminate a workflow from the Workflow Console by clicking <span class="uicontrol bold">Terminate</span>.
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Terminate</span> to cancel the workflow.</span><div>If the workflow was waiting on an action or approval task activity, the task is also canceled. If the workflow was waiting on a custom Process Type Plugin activity, the termination function defined for that process is executed. To learn more about how developers can configure termination functions for process type plugins, see <a href="../htmdb/creating-workflow-activities.html#HTMDB-GUID-8BD3A85D-2A76-4CA6-B90B-ECBBCAE72D9F" target="_blank">Adding a Custom Process Type Plugin</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span>.
+                        </div>
+                        <div>Terminating a workflow that was invoked from another workflow also terminates the parent workflow if the parent workflow is configured to wait for the current workflow to complete.</div>
+                     </li>
+                  </ol>
+                  <div class="section">The workflow instance is canceled. There are no further operations possible for this workflow instance.</div>
+                  <!-- class="section" -->
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="working-with-workflows.html#GUID-0AC98A77-C6C6-407D-8D78-CEC7F1556008" title="View workflow instances in the workflow console. Use the workflow details page to act on specific workflow instances.">Working with Workflows</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-7CE50EEA-3598-4A80-94FD-BD37C8153989" name="GUID-7CE50EEA-3598-4A80-94FD-BD37C8153989"></a><h3 id="AEEUG-GUID-7CE50EEA-3598-4A80-94FD-BD37C8153989" class="sect3"><span class="enumeration_section">6.2.4 </span>Retrying a Workflow
+               </h3>
+               <div>
+                  <p>Retry a workflow by clicking <span class="uicontrol bold">Retry</span> on the workflow details page.
+                  </p>
+                  <div class="section">When a workflow instance faults, you can retry the workflow.</div>
+                  <!-- class="section" -->
+                  <div class="p">You must be the <strong class="term">Workflow Owner</strong> or <strong class="term">Workflow Administrator</strong> to retry a workflow.
+                  </div>
+                  <!-- class="section" -->
+                  <ol id="GUID-7CE50EEA-3598-4A80-94FD-BD37C8153989__STEPS_UBC_MZB_YYB">
+                     <li><span>Open the application.</span></li>
+                     <li><span>Open the appropriate Workflow Console. The name of the page varies depending on the application, but depending on your role, the report context could be <span class="uicontrol bold">My Workflows</span> or <span class="uicontrol bold">Admin Workflows</span>.</span></li>
+                     <li><span>Locate the workflow you want to retry, and click on the workflow name to open the workflow details page.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Retry</span> to retry the workflow.</span></li>
+                  </ol>
+                  <div class="section">
+                     <div class="p">The workflow instance attempts to run again by retrying the faulted activity.
+                        <div class="infobox-tip" id="GUID-7CE50EEA-3598-4A80-94FD-BD37C8153989__GUID-113BFF62-C80D-432A-AAD4-B70B0649275E">
+                           <p class="notep1">Tip:</p>If the faulted workflow was invoked from a parent workflow, the behavior defined in the parent workflow determines the retry point. The invoked workflow may be terminated and started again from the beginning, or the invoked workflow may be retried from the faulted activity.
+                        </div>
+                     </div>
+                  </div>
+                  <!-- class="section" -->
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="working-with-workflows.html#GUID-0AC98A77-C6C6-407D-8D78-CEC7F1556008" title="View workflow instances in the workflow console. Use the workflow details page to act on specific workflow instances.">Working with Workflows</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-77916D7F-1F39-49A4-911F-FB7B1FCEF767" name="GUID-77916D7F-1F39-49A4-911F-FB7B1FCEF767"></a><h3 id="AEEUG-GUID-77916D7F-1F39-49A4-911F-FB7B1FCEF767" class="sect3"><span class="enumeration_section">6.2.5 </span>Updating Workflow Variables
+               </h3>
+               <div>
+                  <p>Update workflow variables with the <span class="uicontrol bold">Edit</span> link in the workflow details page.
+                  </p>
+                  <div class="section">Updating a workflow variable updates the value of a workflow variable in a running workflow instance.</div>
+                  <!-- class="section" -->
+                  <div class="p">You must be a <strong class="term">Workflow Administrator</strong> to update workflow variables.
+                     <div class="infoboxnote" id="GUID-77916D7F-1F39-49A4-911F-FB7B1FCEF767__GUID-15A5AF92-2B5E-4E78-98EB-ADBA714C8101">
+                        <p class="notep1">Note:</p>If the workflow variable is a <code class="codeph">CLOB</code> datatype and the value exceeds the <code class="codeph">VARCHAR2</code> limit, use the <code class="codeph">apex_workflow.update_variables()</code> API instead of the details page.
+                     </div>
+                  </div>
+                  <!-- class="section" -->
+                  <ol id="GUID-77916D7F-1F39-49A4-911F-FB7B1FCEF767__STEPS_UBC_MZB_YYB">
+                     <li class="stepexpand"><span>Open the application.</span></li>
+                     <li class="stepexpand"><span>Open the appropriate Workflow Console. The name of the page varies depending on the application, but the report context is <span class="uicontrol bold">Admin Workflows</span>.</span></li>
+                     <li class="stepexpand"><span>Locate the workflow you want to retry, and click on the workflow name to open the workflow details page.</span></li>
+                     <li class="stepexpand"><span>Click the dropdown arrow on <span class="uicontrol bold">Variables</span> to open the variables section.</span><div>The variables section opens, and displays all workflow variables for the workflow instance.</div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Edit</span> next to a variable.</span></li>
+                     <li class="stepexpand"><span>Edit the variable, and click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section">The workflow variable updates. If the workflow is suspended or faulted, you can resume or retry the workflow with the updated workflow variable. For more information, see <a href="working-with-workflows.html#GUID-F102CC38-316C-4B0E-8C5D-D240E91B0A52" title="Resume a workflow by clicking Resume on the workflow details page.">Resuming a Workflow</a> or <a href="working-with-workflows.html#GUID-7CE50EEA-3598-4A80-94FD-BD37C8153989" title="Retry a workflow by clicking Retry on the workflow details page.">Retrying a Workflow</a>.
+                  </div>
+                  <!-- class="section" -->
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="working-with-workflows.html#GUID-0AC98A77-C6C6-407D-8D78-CEC7F1556008" title="View workflow instances in the workflow console. Use the workflow details page to act on specific workflow instances.">Working with Workflows</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-7B3E0033-6885-4FC7-9E91-119E0BF5B074" name="GUID-7B3E0033-6885-4FC7-9E91-119E0BF5B074"></a><h3 id="AEEUG-GUID-7B3E0033-6885-4FC7-9E91-119E0BF5B074" class="sect3"><span class="enumeration_section">6.2.6 </span>Viewing the Workflow Diagram
+               </h3>
+               <div>
+                  <p>View a visual representation of the workflow instance in the workflow details page.</p>
+                  <ol id="GUID-7B3E0033-6885-4FC7-9E91-119E0BF5B074__STEPS_UBC_MZB_YYB">
+                     <li class="stepexpand"><span>Open the application.</span></li>
+                     <li class="stepexpand"><span>Open the appropriate Workflow Console, and then select a workflow instance.</span><div>The workflow diagram displays. If the workflow diagram is not visible, contact your application developer.</div>
+                     </li>
+                     <li class="stepexpand"><span>To navigate around the diagram:</span><ul id="GUID-7B3E0033-6885-4FC7-9E91-119E0BF5B074__CHOICES_DXV_BHG_Z1C">
+                           <li>Click and hold the diagram, and then drag to change the visible area.</li>
+                           <li>Use the arrow keys.</li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>To change the zoom level:</span><ul id="GUID-7B3E0033-6885-4FC7-9E91-119E0BF5B074__CHOICES_E44_DHG_Z1C">
+                           <li>Click the <span class="uicontrol bold">Zoom In</span> and <span class="uicontrol bold">Zoom Out</span> buttons in the toolbar.
+                           </li>
+                           <li>Use <code class="codeph">Ctrl+Plus sign</code> to zoom in, <code class="codeph">Ctrl+Minus sign</code> to zoom out, and <code class="codeph">Ctrl+0</code> to reset the zoom level.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>To toggle the navigator, click <span class="uicontrol bold">Navigator</span>.</span><div>The navigator button may not be visible depending on the specific configuration of your application.</div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="working-with-workflows.html#GUID-0AC98A77-C6C6-407D-8D78-CEC7F1556008" title="View workflow instances in the workflow console. Use the workflow details page to act on specific workflow instances.">Working with Workflows</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-615A4C64-2F8F-415A-9D17-75486E135504" name="GUID-615A4C64-2F8F-415A-9D17-75486E135504"></a><h3 id="AEEUG-GUID-615A4C64-2F8F-415A-9D17-75486E135504" class="sect3"><span class="enumeration_section">6.2.7 </span>Viewing the Workflow Audit History
+               </h3>
+               <div>
+                  <p>View the audit history of a workflow by expanding the History section in the workflow details page.</p>
+                  <div class="section">The workflow history is a list of the actions for a workflow instance.</div>
+                  <!-- class="section" -->
+                  <div class="p"></div>
+                  <!-- class="section" -->
+                  <ol id="GUID-615A4C64-2F8F-415A-9D17-75486E135504__STEPS_UBC_MZB_YYB">
+                     <li><span>Open the application.</span></li>
+                     <li><span>Open the appropriate Workflow Console. The name of the page varies depending on the application, but depending on your role, the report context could be <span class="uicontrol bold">Initiated by Me</span>, <span class="uicontrol bold">My Workflows</span> or <span class="uicontrol bold">Admin Workflows</span>.</span></li>
+                     <li><span>Locate the workflow and click on the workflow name to open the workflow details page.</span></li>
+                     <li><span>Click the dropdown arrow on <span class="uicontrol bold">History</span> to open the history section.</span></li>
+                  </ol>
+                  <div class="section">The workflow audit history displays.</div>
+                  <!-- class="section" -->
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="working-with-workflows.html#GUID-0AC98A77-C6C6-407D-8D78-CEC7F1556008" title="View workflow instances in the workflow console. Use the workflow details page to act on specific workflow instances.">Working with Workflows</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-90DEC248-47B7-47B8-9673-5E9CAB991199" name="GUID-90DEC248-47B7-47B8-9673-5E9CAB991199"></a><h3 id="AEEUG-GUID-90DEC248-47B7-47B8-9673-5E9CAB991199" class="sect3"><span class="enumeration_section">6.2.8 </span>Viewing the Activity Audit History
+               </h3>
+               <div>
+                  <p>View the audit history of a workflow activity by clicking on the activity in the workflow details page.</p>
+                  <div class="section">The activity audit history is an audit history for specific actions in a workflow instance.</div>
+                  <!-- class="section" -->
+                  <div class="p"></div>
+                  <!-- class="section" -->
+                  <ol id="GUID-90DEC248-47B7-47B8-9673-5E9CAB991199__STEPS_UBC_MZB_YYB">
+                     <li class="stepexpand"><span>Open the application.</span></li>
+                     <li class="stepexpand"><span>Open the appropriate Workflow Console. The name of the page varies depending on the application, but depending on your role, the report context could be <span class="uicontrol bold">Initiated by Me</span>, <span class="uicontrol bold">My Workflows</span> or <span class="uicontrol bold">Admin Workflows</span>.</span></li>
+                     <li class="stepexpand"><span>Locate the workflow and click on the workflow name to open the workflow details page.</span></li>
+                     <li class="stepexpand"><span>Click the specific activity you are interested in the <span class="uicontrol bold">Activities</span> section.</span><div>For Invoke Workflow activities, clicking on the activity opens the details page of the invoked workflow. Click <span class="uicontrol bold">To Parent Workflow</span> to navigate back to the details parent of the parent workflow.
+                        </div>
+                     </li>
+                  </ol>
+                  <div class="section">The activity's audit history displays.</div>
+                  <!-- class="section" -->
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="working-with-workflows.html#GUID-0AC98A77-C6C6-407D-8D78-CEC7F1556008" title="View workflow instances in the workflow console. Use the workflow details page to act on specific workflow instances.">Working with Workflows</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

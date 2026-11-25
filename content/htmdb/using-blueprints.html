@@ -1,0 +1,273 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Using Application Blueprints">
+      <meta name="abstract" content="Each iteration of the Create Application Wizard saves an application blueprint which you can use to start adding pages to an application, or edit the application definition as a JSON document.">
+      <meta name="description" content="Each iteration of the Create Application Wizard saves an application blueprint which you can use to start adding pages to an application, or edit the application definition as a JSON document.">
+      <meta name="DC.subject" content="application, using blueprint, blueprint, using, application blueprint, viewing app blueprint, about, loading application blueprint, loading, viewing application blueprint, viewing">
+      <meta name="keywords" content="application, using blueprint, blueprint, using, application blueprint, viewing app blueprint, about, loading application blueprint, loading, viewing application blueprint, viewing">
+      <meta name="DC.Relation" scheme="URI" content="creating-applications.html#GUID-F09AF2EB-F452-4CC1-A3B7-8B0DA9FF94B0">
+      <meta name="DC.Relation" scheme="URI" content="using-blueprints.html#GUID-F502ADFB-9D2A-4144-A9DF-A29C2F09CDF4">
+      <meta name="DC.Relation" scheme="URI" content="using-blueprints.html#GUID-E1B4FA6E-F1AA-4FFF-86A8-0279C8EB0E0B">
+      <meta name="DC.Relation" scheme="URI" content="using-blueprints.html#GUID-89402EC2-86BB-451A-8A18-E077795AFF73">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-80752E99-4216-44FB-B7FE-7FA9B2B0EAEA">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Each iteration of the Create Application Wizard saves an application blueprint which you can use to start adding pages to an application, or edit the application definition as a JSON document.">
+      <meta name="description" content="Each iteration of the Create Application Wizard saves an application blueprint which you can use to start adding pages to an application, or edit the application definition as a JSON document.">
+      <title>Using Application Blueprints</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Each iteration of the Create Application Wizard saves an application blueprint which you can use to start adding pages to an application, or edit the application definition as a JSON document.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="integrating-apex-with-fusion-applications.html" title="Previous" type="text/html">
+      <link rel="next" href="copying-an-application.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Using Application Blueprints","description":"Each iteration of the Create Application Wizard saves an application blueprint which you can use to start adding pages to an application, or edit the application definition as a JSON document.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="integrating-apex-with-fusion-applications.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="copying-an-application.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-80752E99-4216-44FB-B7FE-7FA9B2B0EAEA" name="GUID-80752E99-4216-44FB-B7FE-7FA9B2B0EAEA"></a>
+         
+         <h2 id="HTMDB-GUID-80752E99-4216-44FB-B7FE-7FA9B2B0EAEA" class="sect2"><span class="enumeration_section">5.7 </span>Using Application Blueprints
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Each iteration of the Create Application Wizard saves an application
+        blueprint which you can use to start adding pages to an application, or edit the application
+        definition as a JSON document.</p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="using-blueprints.html#GUID-F502ADFB-9D2A-4144-A9DF-A29C2F09CDF4">What Is an Application Blueprint?</a><br>View or load an application blueprint by running the Create Application         Wizard.
+                  </li>
+                  <li class="ulchildlink"><a href="using-blueprints.html#GUID-E1B4FA6E-F1AA-4FFF-86A8-0279C8EB0E0B">Loading an Application Blueprint</a><br>Load an application blueprint by running the Create Application Wizard and clicking         the Load Blueprint link at the top of the Create Application Wizard.
+                  </li>
+                  <li class="ulchildlink"><a href="using-blueprints.html#GUID-89402EC2-86BB-451A-8A18-E077795AFF73">Viewing an Application Blueprint</a><br>View an application blueprint by running the Create Application Wizard and clicking         the View Blueprint link at the top of the Create Application Wizard.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-80752E99-4216-44FB-B7FE-7FA9B2B0EAEA__GUID-AC1B1DCD-5FE5-40E1-B189-28E925EA30A5">
+                  <p class="notep1">See Also:</p>
+                  <p>To learn more about JSON, see <a href="https://www.json.org/" target="_blank">https://www.json.org/</a></p>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="creating-applications.html#GUID-F09AF2EB-F452-4CC1-A3B7-8B0DA9FF94B0" title="An application is a collection of pages linked together using navigation menus, tabs, buttons, or hypertext links. Application pages share a common session state and authentication.">Creating Applications</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-F502ADFB-9D2A-4144-A9DF-A29C2F09CDF4" name="GUID-F502ADFB-9D2A-4144-A9DF-A29C2F09CDF4"></a><h3 id="HTMDB-GUID-F502ADFB-9D2A-4144-A9DF-A29C2F09CDF4" class="sect3"><span class="enumeration_section">5.7.1 </span>What Is an Application Blueprint?
+               </h3>
+               <div>
+                  <p>View or load an application blueprint by running the Create Application
+        Wizard.</p>
+                  <p>You can view the application blueprint by running the Create Application Wizard and clicking the<span class="uicontrol bold"> View Blueprint</span> link at the top of the Create Application Wizard. The Application Blueprint window transforms and displays the current application definition as a JSON document. Edit the document to update application properties and then click <span class="uicontrol bold">Apply Blueprint</span> to change the current application details.
+                  </p>
+                  <p>If you need to create a large number of similar pages you can copy the relevant JSON code for one page, paste it numerous times, and then make small adjustments to the JSON. This approach can be significantly quicker than manually clicking the&nbsp;<span class="uicontrol bold">Add Page</span>&nbsp;button for each page in the wizard.
+                  </p>
+                  <p>You can also replace the blueprint with the definition from a previously generated application. Click&nbsp;<span class="uicontrol bold">Load a Previous Blueprint</span>&nbsp;to replace the blueprint with the definition from a previously generated application. This approach is a simple way to iterate the application design by adding additional pages, changing the features, or tweaking the settings, before generating the application again.
+                  </p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="using-blueprints.html#GUID-80752E99-4216-44FB-B7FE-7FA9B2B0EAEA" title="Each iteration of the Create Application Wizard saves an application blueprint which you can use to start adding pages to an application, or edit the application definition as a JSON document.">Using Application Blueprints</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-E1B4FA6E-F1AA-4FFF-86A8-0279C8EB0E0B" name="GUID-E1B4FA6E-F1AA-4FFF-86A8-0279C8EB0E0B"></a><h3 id="HTMDB-GUID-E1B4FA6E-F1AA-4FFF-86A8-0279C8EB0E0B" class="sect3"><span class="enumeration_section">5.7.2 </span>Loading an Application Blueprint
+               </h3>
+               <div>
+                  <p>Load an application blueprint by running the Create Application Wizard and clicking
+        the Load Blueprint link at the top of the Create Application Wizard.</p>
+                  <p>
+                     </p><p>To load an application blueprint:</p>
+                  <p></p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Use Create App Wizard</span>.</span><div>
+                           
+                           <p>The Create an Application page reappears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>At the top of the page, click the <span class="uicontrol bold">Load Blueprint</span> link.</span><div>
+                           <p>The Load Blueprint page appears.</p><img id="GUID-E1B4FA6E-F1AA-4FFF-86A8-0279C8EB0E0B__IMAGE_F2B_CHJ_WKB" height="334" width="575" src="img/load_blueprint.png" alt="Description of load_blueprint.png follows" title="Description of load_blueprint.png follows" longdesc="img_text/load_blueprint.html"><br><a href="img_text/load_blueprint.html">Description of the illustration load_blueprint.png</a></div>
+                     </li>
+                     <li class="stepexpand"><span>On Load Blueprint, you can:</span><ul>
+                           <li><span class="bold">Load a new blueprint</span>. Locate the application and
+                        click <span class="uicontrol bold">Load</span>.
+                           </li>
+                           <li><span class="bold">Delete a blueprint</span>. Locate the application and the
+                            <span class="uicontrol bold">Delete Blue</span> icon.
+                           </li>
+                        </ul>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="using-blueprints.html#GUID-80752E99-4216-44FB-B7FE-7FA9B2B0EAEA" title="Each iteration of the Create Application Wizard saves an application blueprint which you can use to start adding pages to an application, or edit the application definition as a JSON document.">Using Application Blueprints</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-89402EC2-86BB-451A-8A18-E077795AFF73" name="GUID-89402EC2-86BB-451A-8A18-E077795AFF73"></a><h3 id="HTMDB-GUID-89402EC2-86BB-451A-8A18-E077795AFF73" class="sect3"><span class="enumeration_section">5.7.3 </span>Viewing an Application Blueprint
+               </h3>
+               <div>
+                  <p>View an application blueprint by running the Create Application Wizard and clicking
+        the View Blueprint link at the top of the Create Application Wizard.</p>
+                  <p>
+                     </p><p>To view an application blueprint:</p>
+                  <p></p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Use Create App Wizard</span>.</span></li>
+                     <li class="stepexpand"><span>At the top of the page, click the <span class="uicontrol bold">Load Blueprint</span>
+                    link.</span><div>
+                           
+                           <p>The Load Blueprint page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>On Load Blueprint, find the application and click
+                    <span class="uicontrol bold">Load</span>.</span><div>
+                           
+                           <p>The Create an Application page reappears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>At the top of the page, click <span class="uicontrol bold">View Blueprint</span>.</span><div>
+                           <p>The Application Blueprint window appears
+                        displaying the application definition in JSON format.</p><img id="GUID-89402EC2-86BB-451A-8A18-E077795AFF73__IMAGE_ISV_XZ3_WKB" height="589" width="721" src="img/app_blueprint.png" alt="Description of app_blueprint.png follows" title="Description of app_blueprint.png follows" longdesc="img_text/app_blueprint.html"><br><a href="img_text/app_blueprint.html">Description of the illustration app_blueprint.png</a></div>
+                     </li>
+                     <li class="stepexpand"><span>To edit the document:</span><ol type="a">
+                           <li class="substepexpand"><span>Update application definition.</span><div>
+                                 <p>The following buttons display at the top of the Script Editor:</p>
+                                 <ul style="list-style-type: disc;">
+                                    <li>
+                                       <p><span class="uicontrol bold">Undo - Ctrl+Z</span> — Removes, or undoes, the most recent line edit made in the Script Editor. 
+                                       </p>
+                                    </li>
+                                    <li>
+                                       <p><span class="uicontrol bold">Redo - Ctrl+Y</span> — Repeats the most recent line edit made in the Script Editor.
+                                       </p>
+                                    </li>
+                                    <li>
+                                       <p><span class="uicontrol bold">Find - Ctrl+F</span> — <span class="uicontrol bold">Find</span> resembles a magnifying glass. Click <span class="uicontrol bold">Find</span> to perform a basic search.
+                                       </p>
+                                    </li>
+                                    <li>
+                                       <p><span class="uicontrol bold">Replace - Ctrl+Shift+F</span> — <span class="uicontrol bold">Replace</span> resembles a two-sided arrow. Click <span class="uicontrol bold">Replace</span> to search and replace existing code.
+                                       </p>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span> Click <span class="uicontrol bold">Apply Blueprint</span> to change the current application definition.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>To replace the blueprint with the definition from a previously generated application:</span><ol type="a">
+                           <li><span>Click <span class="uicontrol bold">Load Previous Blueprint</span>.</span></li>
+                           <li><span> On Load Blueprint, locate the blueprint and click
+                                <span class="uicontrol bold">Select</span>.</span></li>
+                           <li><span> Click <span class="uicontrol bold">Apply Blueprint</span> to change the current application details.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="using-blueprints.html#GUID-80752E99-4216-44FB-B7FE-7FA9B2B0EAEA" title="Each iteration of the Create Application Wizard saves an application blueprint which you can use to start adding pages to an application, or edit the application definition as a JSON document.">Using Application Blueprints</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

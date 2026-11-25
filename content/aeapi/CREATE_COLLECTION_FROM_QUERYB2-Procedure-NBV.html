@@ -1,0 +1,165 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="CREATE_COLLECTION_FROM_QUERYB2 Procedure (No bind version)">
+      <meta name="DC.subject" content="CREATE_COLLECTION_FROM_QUERYB2 procedure (no bind version), APEX_COLLECTION">
+      <meta name="keywords" content="CREATE_COLLECTION_FROM_QUERYB2 procedure (no bind version), APEX_COLLECTION">
+      <meta name="DC.Relation" scheme="URI" content="APEX_COLLECTION.html#GUID-859B488C-2628-44D7-969F-50872C685B76">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-A5F61B56-DFEA-48B1-BBE3-B4DF37551D8C">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>CREATE_COLLECTION_FROM_QUERYB2 Procedure (No bind version)</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="CREATE_COLLECTION_FROM_QUERYB2-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="CREATE_OR_TRUNCATE_COLLECTION-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"CREATE_COLLECTION_FROM_QUERYB2 Procedure (No bind version)","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="CREATE_COLLECTION_FROM_QUERYB2-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="CREATE_OR_TRUNCATE_COLLECTION-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-A5F61B56-DFEA-48B1-BBE3-B4DF37551D8C" name="GUID-A5F61B56-DFEA-48B1-BBE3-B4DF37551D8C"></a>
+         
+         <h2 id="AEAPI-GUID-A5F61B56-DFEA-48B1-BBE3-B4DF37551D8C" class="sect2"><span class="enumeration_section">15.14 </span>CREATE_COLLECTION_FROM_QUERYB2 Procedure (No bind version)
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>Creates a collection from a supplied query using bulk operations.</p>
+                  <p>This method offers significantly faster performance than the <code class="codeph">CREATE_COLLECTION_FROM_QUERY_2</code> method. The query is parsed as the application owner. If a collection exists with the same name for the current user in the same session for the current application ID, an application error occurs.
+                  </p>
+                  <p>This procedure is identical to <code class="codeph">CREATE_COLLECTION_FROM_QUERY_B</code> except the first five columns of the <code class="codeph">SELECT</code> clause must be numeric and the next five columns must be a date. After the date columns, there can be up to 50 character columns in the <code class="codeph">SELECT</code> clause.
+                  </p>
+                  <p>This procedure uses bulk dynamic SQL to perform the fetch and insert operations into the named collection. Two limitations are imposed by this procedure:</p>
+                  <ol id="GUID-A5F61B56-DFEA-48B1-BBE3-B4DF37551D8C__OL_VVJ_PBD_BNB">
+                     <li>The MD5 checksum for the member data is not computed.</li>
+                     <li>No column value in query <code class="codeph">p_query</code> can exceed 2,000 bytes. If a row is encountered that has a column value of more than 2,000 bytes, an error is raised during execution. In <span>Oracle
+                                        Database</span> 11g Release 2 (11.2.0.1) or later, this column limit is 4,000 bytes.
+                     </li>
+                  </ol>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-A5F61B56-DFEA-48B1-BBE3-B4DF37551D8C__GUID-1B1D7282-80A4-46C7-A64B-9FEC1163B75D">Syntax</p><pre class="pre codeblock"><code>APEX_COLLECTION.CREATE_COLLECTION_FROM_QUERYB2 (
+    p_collection_name   IN VARCHAR2,
+    p_query             IN VARCHAR2,
+    p_max_row_count     IN NUMBER   DEFAULT )</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-A5F61B56-DFEA-48B1-BBE3-B4DF37551D8C__GUID-8EC304EE-D76A-4712-8854-470B3EFEF0F8">Parameters</p>
+               </div>
+               <div class="tblformal" id="GUID-A5F61B56-DFEA-48B1-BBE3-B4DF37551D8C__CACEJAJJ">
+                  <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                     <thead>
+                        <tr align="left" valign="top">
+                           <th align="left" valign="bottom" width="31%" id="d59475e98">Parameter</th>
+                           <th align="left" valign="bottom" width="69%" id="d59475e100">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr align="left" valign="top">
+                           <td align="left" valign="top" width="31%" id="d59475e104" headers="d59475e98 "><code class="codeph">p_collection_name</code></td>
+                           <td align="left" valign="top" width="69%" headers="d59475e104 d59475e100 ">The name of the collection. The maximum length is 255 characters. An error is returned if this collection exists with the specified name of the current user and in the same session.</td>
+                        </tr>
+                        <tr align="left" valign="top">
+                           <td align="left" valign="top" width="31%" id="d59475e110" headers="d59475e98 "><code class="codeph">p_query</code></td>
+                           <td align="left" valign="top" width="69%" headers="d59475e110 d59475e100 ">Query to execute to populate the members of the collection.</td>
+                        </tr>
+                        <tr align="left" valign="top">
+                           <td align="left" valign="top" width="31%" id="d59475e116" headers="d59475e98 "><code class="codeph">p_max_row_count</code></td>
+                           <td align="left" valign="top" width="69%" headers="d59475e116 d59475e100 ">Maximum number of rows returned from the query in <code class="codeph">p_query</code> to be added to the collection.
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-A5F61B56-DFEA-48B1-BBE3-B4DF37551D8C__GUID-952C7309-B138-4C05-9DD6-EEB3F89439A4">Example</p>
+                  <p>The following example creates a collection named <code class="codeph">EMPLOYEES</code> and populates it with data from the <code class="codeph">EMP</code> table. The first five columns (mgr, sal, comm, deptno, and null) are all numeric and the next five are all dates. Because <code class="codeph">p_generate_md5</code> is <code class="codeph">NO</code>, the <code class="codeph">MD5</code> checksum is not computed.
+                  </p><pre class="pre codeblock"><code>DECLARE
+&nbsp;&nbsp;  l_query varchar2(4000);
+BEGIN
+    l_query := 'select empno, sal, comm, deptno, null, hiredate, null,
+        null, null, null, ename, job, mgr from emp where deptno = 10';
+    APEX_COLLECTION.CREATE_COLLECTION_FROM_QUERYB2 (
+        p_collection_name =&gt; 'EMPLOYEES',
+                  p_query =&gt; l_query);
+END;</code></pre></div>
+               <div class="section">
+                  <div class="infoboxnotealso" id="GUID-A5F61B56-DFEA-48B1-BBE3-B4DF37551D8C__GUID-3E412DD2-70BD-4AFB-AA5B-6C81D494E473">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-A5F61B56-DFEA-48B1-BBE3-B4DF37551D8C__UL_KTV_YB1_3CC">
+                        <li><a href="GET_MEMBER_MD5-Function.html#GUID-A456F18D-10D5-48F6-B75F-FD9534FD91FD">GET_MEMBER_MD5 Function</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_COLLECTION.html#GUID-859B488C-2628-44D7-969F-50872C685B76">APEX_COLLECTION</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

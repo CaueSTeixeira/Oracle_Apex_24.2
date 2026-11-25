@@ -1,0 +1,296 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="Data Types">
+      <meta name="DC.subject" content="data types, APEX_EXEC">
+      <meta name="keywords" content="data types, APEX_EXEC">
+      <meta name="DC.Relation" scheme="URI" content="APEX_EXEC.html#GUID-3CF1D2DD-AEA4-4982-9857-548567AB7169">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-8BE94A0F-E511-4CB5-831F-46B5E2FCC4A3">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Data Types</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_EXEC.Global-Constants.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_EXEC.ADD_COLUMN-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Data Types","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_EXEC.Global-Constants.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_EXEC.ADD_COLUMN-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-8BE94A0F-E511-4CB5-831F-46B5E2FCC4A3" name="GUID-8BE94A0F-E511-4CB5-831F-46B5E2FCC4A3"></a>
+         
+         <h2 id="AEAPI-GUID-8BE94A0F-E511-4CB5-831F-46B5E2FCC4A3" class="sect2"><span class="enumeration_section">27.3 </span>Data Types
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>The APEX_EXEC package uses the following data types.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-8BE94A0F-E511-4CB5-831F-46B5E2FCC4A3__GUID-5C9BE627-2817-46AD-8315-A62EF669A748">Generic</p><pre class="pre codeblock"><code>subtype t_column_name is varchar2(32767);
+
+type t_value is record (
+    varchar2_value      varchar2(32767),
+    number_value        number,
+    binary_number_value binary_double,
+    date_value          date,
+    timestamp_value     timestamp,
+    timestamp_tz_value  timestamp with time zone,
+    timestamp_ltz_value timestamp with local time zone,
+    interval_y2m_value  yminterval_unconstrained,
+    interval_d2s_value  dsinterval_unconstrained,
+    blob_value          blob,
+    bfile_value         bfile,
+    clob_value          clob,
+    sdo_geometry_value  mdsys.sdo_geometry,
+    anydata_value       sys.anydata );
+
+type t_values is table of t_value index by pls_integer;</code></pre><div class="infoboxnote" id="GUID-8BE94A0F-E511-4CB5-831F-46B5E2FCC4A3__GUID-FA261DC0-4D87-4874-AC88-21C2D7CF9049">
+                     <p class="notep1">Note:</p><code class="codeph">sdo_geometry_value</code> is <span class="bold">only</span> available when SDO_GEOMETRY is installed in the database.
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-8BE94A0F-E511-4CB5-831F-46B5E2FCC4A3__GUID-DF572FE6-C15E-4642-87ED-47F957A2AFE7">Bind variables</p><pre class="pre codeblock"><code>type t_parameter is record (
+    name      t_column_name,
+    data_type t_data_type,
+    value     t_value );
+
+type t_parameters is table of t_parameter index by pls_integer;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-8BE94A0F-E511-4CB5-831F-46B5E2FCC4A3__GUID-BFA9ACDA-0F82-4910-A19F-D9EEC4E83349">Filters</p><pre class="pre codeblock"><code>subtype t_filter_type          is pls_integer range 1..27;
+subtype t_filter_interval_type is varchar2(2);
+
+type t_filter is record (
+    column_name       t_column_name,
+    data_type         t_data_type,
+    filter_type       t_filter_type,
+    filter_values     t_values,
+    sql_expression    varchar2(32767),
+    search_columns    t_columns,
+    null_result       boolean default false,
+    is_case_sensitive boolean default true );
+
+type t_filters is table of t_filter index by pls_integer;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-8BE94A0F-E511-4CB5-831F-46B5E2FCC4A3__GUID-08F6977C-2D8A-4A42-963B-27C8A9FF0CBE">Order Bys</p><pre class="pre codeblock"><code>subtype t_order_direction is pls_integer range 1..2;
+subtype t_order_nulls     is pls_integer range 1..2;
+
+type t_order_by is record (
+    column_name   t_column_name,  
+    direction     t_order_direction, 
+    order_nulls   t_order_nulls );
+
+type t_order_bys is table of t_order_by index by pls_integer;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-8BE94A0F-E511-4CB5-831F-46B5E2FCC4A3__GUID-247010D4-4512-4E29-9E51-8EC0D49830CD">Columns</p><pre class="pre codeblock"><code>type t_column is record (
+    name                t_column_name,
+    sql_expression      varchar2(4000),
+    --
+    data_type           t_data_type,
+    data_type_length    pls_integer,
+    format_mask         varchar2(4000),
+    --
+    is_required         boolean default false,
+    is_primary_key      boolean default false,
+    is_query_only       boolean default false,
+    is_checksum         boolean default false,
+    is_returning        boolean default false );
+
+type t_columns is table of t_column index by pls_integer;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-8BE94A0F-E511-4CB5-831F-46B5E2FCC4A3__GUID-0F5572AE-B3DE-49BA-834A-6A903F0B982B">Context Handle</p><pre class="pre codeblock"><code>subtype t_context is pls_integer;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-8BE94A0F-E511-4CB5-831F-46B5E2FCC4A3__GUID-6E913ADC-B843-4EF1-A2CF-E40281FB4284">Data Source Capabilities</p>
+                  <div class="infoboxnote" id="GUID-8BE94A0F-E511-4CB5-831F-46B5E2FCC4A3__GUID-2BDD7AEB-1E86-4C5E-B65E-88449580AF71">
+                     <p class="notep1">Note:</p>The data source capabilities <code class="codeph">filter_*</code> and <code class="codeph">orderby_*</code> are deprecated and will be removed in a future release.
+                  </div><pre class="pre codeblock"><code>type t_source_capabilities is record (
+    location               t_location,
+    --
+    pagination             boolean default false,
+    page_size_is_stable    boolean default false,
+    --
+    allow_fetch_all_rows   boolean default false,
+    --
+    filtering              boolean default false,
+    order_by               boolean default false,
+    group_by               boolean default false,
+    --
+    orderby_nulls_as       t_supports_orderby_nulls_as,
+    --
+    -- the following filter_* attributes are deprecated, do not use.
+    --
+    filter_eq              boolean default false,
+    filter_not_eq          boolean default false,
+    filter_gt              boolean default false,
+    filter_gte             boolean default false,
+    filter_lt              boolean default false,
+    filter_lte             boolean default false,
+    filter_null            boolean default false,
+    filter_not_null        boolean default false,
+    filter_contains        boolean default false,
+    filter_not_contains    boolean default false,
+    filter_like            boolean default false,
+    filter_not_like        boolean default false,
+    filter_starts_with     boolean default false,
+    filter_not_starts_with boolean default false,
+    filter_between         boolean default false,
+    filter_not_between     boolean default false,
+    filter_in              boolean default false,
+    filter_not_in          boolean default false,
+    filter_regexp          boolean default false,
+    filter_last            boolean default false,
+    filter_not_last        boolean default false,
+    filter_next            boolean default false,
+    filter_not_next        boolean default false,
+    --
+    -- the following orderby_* attributes are deprecated, do not use.
+    --
+    orderby_asc            boolean default false,
+    orderby_desc           boolean default false,
+    orderby_nulls          boolean default false );</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-8BE94A0F-E511-4CB5-831F-46B5E2FCC4A3__GUID-02AB861E-32AD-4AFC-8E05-03A0D0295FB6">Column Meta Data</p>
+                  <div class="tblformal" id="GUID-8BE94A0F-E511-4CB5-831F-46B5E2FCC4A3__TABLE_EG1_BX3_SBC">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Attributes for columns." frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="0%" id="d108078e114">Attribute</th>
+                              <th align="left" valign="bottom" width="0%" id="d108078e116">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d108078e120" headers="d108078e114 "><code class="codeph">name</code></td>
+                              <td align="left" valign="top" width="0%" headers="d108078e120 d108078e116 ">Column Name or Alias.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d108078e126" headers="d108078e114 "><code class="codeph">parent_column_position</code></td>
+                              <td align="left" valign="top" width="0%" headers="d108078e126 d108078e116 ">stores the reference to the parent column</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d108078e132" headers="d108078e114 "><code class="codeph">data_type</code></td>
+                              <td align="left" valign="top" width="0%" headers="d108078e132 d108078e116 ">Data Type: Use constants c_data_type_*.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d108078e138" headers="d108078e114 "><code class="codeph">data_type_length</code></td>
+                              <td align="left" valign="top" width="0%" headers="d108078e138 d108078e116 ">Data Type Length for VARCHAR2 columns.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d108078e144" headers="d108078e114 "><code class="codeph">sql_expression</code></td>
+                              <td align="left" valign="top" width="0%" headers="d108078e144 d108078e116 ">SQL Expression for derived columns.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d108078e150" headers="d108078e114 "><code class="codeph">format_mask</code></td>
+                              <td align="left" valign="top" width="0%" headers="d108078e150 d108078e116 ">Format Mask for NUMBER, DATE or TIMESTAMP columns.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d108078e156" headers="d108078e114 "><code class="codeph">is_required</code></td>
+                              <td align="left" valign="top" width="0%" headers="d108078e156 d108078e116 ">Whether the column is required (NOT NULL)</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d108078e162" headers="d108078e114 "><code class="codeph">is_primary_key</code></td>
+                              <td align="left" valign="top" width="0%" headers="d108078e162 d108078e116 ">Whether the column is part of the table primary key</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d108078e168" headers="d108078e114 "><code class="codeph">is_query_only</code></td>
+                              <td align="left" valign="top" width="0%" headers="d108078e168 d108078e116 ">Query Only columns are not part of DML operations.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d108078e174" headers="d108078e114 "><code class="codeph">is_checksum</code></td>
+                              <td align="left" valign="top" width="0%" headers="d108078e174 d108078e116 ">Whether the column is designated as the Row Version column.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="0%" id="d108078e180" headers="d108078e114 "><code class="codeph">is_returning</code></td>
+                              <td align="left" valign="top" width="0%" headers="d108078e180 d108078e116 ">Whether the new value is to be returned after a DML operation.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div><pre class="pre codeblock"><code>type t_column is record (
+    name                      t_column_name,
+    --
+    parent_column_position    pls_integer,
+    --
+    data_type                 t_data_type,
+    data_type_length          pls_integer,
+    --
+    sql_expression            varchar2(32767),
+    --
+    format_mask               varchar2(4000),
+    is_required               boolean default false,
+    is_primary_key            boolean default false,
+    is_query_only             boolean default false,
+    is_checksum               boolean default false,
+    is_returning              boolean default false );</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_EXEC.html#GUID-3CF1D2DD-AEA4-4982-9857-548567AB7169">APEX_EXEC</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,504 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Using Component Groups">
+      <meta name="abstract" content="Use component groups to easily copy or subscribe to a collection of shared components.">
+      <meta name="description" content="Use component groups to easily copy or subscribe to a collection of shared components.">
+      <meta name="DC.subject" content="shared components, component groups, about, creating, subscribing to, copying, component group, refreshing, publishing, unsubscribing from, deleting">
+      <meta name="keywords" content="shared components, component groups, about, creating, subscribing to, copying, component group, refreshing, publishing, unsubscribing from, deleting">
+      <meta name="DC.Relation" scheme="URI" content="managing-shared-components.html#GUID-04D43728-0539-4817-9FBB-DEFFA616E916">
+      <meta name="DC.Relation" scheme="URI" content="using-component-groups.html#GUID-2EE5719D-1CD0-41BA-9CC5-C9FE0ADD9DF7">
+      <meta name="DC.Relation" scheme="URI" content="using-component-groups.html#GUID-E6615C7B-2818-4600-8A5B-BDD95F2CB45A">
+      <meta name="DC.Relation" scheme="URI" content="using-component-groups.html#GUID-43B32A28-563E-4D49-8435-D179FD1E92AF">
+      <meta name="DC.Relation" scheme="URI" content="using-component-groups.html#GUID-10F4E091-85B6-4ED2-88AF-AC757E0F9AD8">
+      <meta name="DC.Relation" scheme="URI" content="using-component-groups.html#GUID-DFCE9489-7E80-4539-9311-D44A1A28D5C6">
+      <meta name="DC.Relation" scheme="URI" content="using-component-groups.html#GUID-57CCC679-1FBF-4ABA-ACA1-147915A2540C">
+      <meta name="DC.Relation" scheme="URI" content="using-component-groups.html#GUID-3678780E-86D2-4C0B-82F6-67F75B36AA7E">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-3089EA1A-5217-4F9E-BA69-DA5B2D8187A9">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Use component groups to easily copy or subscribe to a collection of shared components.">
+      <meta name="description" content="Use component groups to easily copy or subscribe to a collection of shared components.">
+      <title>Using Component Groups</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Use component groups to easily copy or subscribe to a collection of shared components.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="using-shortcuts.html" title="Previous" type="text/html">
+      <link rel="next" href="managing-email-templates.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Using Component Groups","description":"Use component groups to easily copy or subscribe to a collection of shared components.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="using-shortcuts.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="managing-email-templates.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-3089EA1A-5217-4F9E-BA69-DA5B2D8187A9" name="GUID-3089EA1A-5217-4F9E-BA69-DA5B2D8187A9"></a><a id="4000:6200"></a><a id="4000:6201"></a><a id="4000:6202"></a><a id="4000:6203"></a><a id="4000:6204"></a><a id="4000:6205"></a><a id="4000:6206"></a>
+         
+         <h2 id="HTMDB-GUID-3089EA1A-5217-4F9E-BA69-DA5B2D8187A9" class="sect2"><span class="enumeration_section">16.11 </span>Using Component Groups
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Use component groups to easily copy or subscribe to a collection of shared components.</p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="using-component-groups.html#GUID-2EE5719D-1CD0-41BA-9CC5-C9FE0ADD9DF7">About Component Groups</a><br>Learn about component groups.
+                  </li>
+                  <li class="ulchildlink"><a href="using-component-groups.html#GUID-E6615C7B-2818-4600-8A5B-BDD95F2CB45A">Creating a Component Group</a><br>Create a component group by assigning components to the group.
+                  </li>
+                  <li class="ulchildlink"><a href="using-component-groups.html#GUID-43B32A28-563E-4D49-8435-D179FD1E92AF">Copying and Subscribing to a Component Group</a><br>Copy a component group from the current application or from another application. When copying a component group from another application, you can also subscribe to it.
+                  </li>
+                  <li class="ulchildlink"><a href="using-component-groups.html#GUID-10F4E091-85B6-4ED2-88AF-AC757E0F9AD8">Refreshing a Subscribed Component Group</a><br>Access changes in a master component group by refreshing the subscribed component group.
+                  </li>
+                  <li class="ulchildlink"><a href="using-component-groups.html#GUID-DFCE9489-7E80-4539-9311-D44A1A28D5C6">Publishing a Component Group</a><br>Publish a component group to push changes to all subscribing component groups. 
+                  </li>
+                  <li class="ulchildlink"><a href="using-component-groups.html#GUID-57CCC679-1FBF-4ABA-ACA1-147915A2540C">Unsubscribing from a Component Group</a><br>Unsubscribe from a component group on the Component Group Details page.
+                  </li>
+                  <li class="ulchildlink"><a href="using-component-groups.html#GUID-3678780E-86D2-4C0B-82F6-67F75B36AA7E">Deleting a Component Group</a><br>Learn how to delete a component group.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-shared-components.html#GUID-04D43728-0539-4817-9FBB-DEFFA616E916" title="Shared components can display or be applied on any page within an application. Developers can use the tools and wizards on the Shared Components page either at the application-level or on specific pages.">Managing Shared Components</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-2EE5719D-1CD0-41BA-9CC5-C9FE0ADD9DF7" name="GUID-2EE5719D-1CD0-41BA-9CC5-C9FE0ADD9DF7"></a><h3 id="HTMDB-GUID-2EE5719D-1CD0-41BA-9CC5-C9FE0ADD9DF7" class="sect3"><span class="enumeration_section">16.11.1 </span>About Component Groups
+               </h3>
+               <div>
+                  <p>Learn about component groups.</p>
+                  <p>A <strong class="term">Component Group</strong> is a collection of other shared components. Use component groups to bulk copy, subscribe, and refresh the components in the group. You can copy and/or subscribe component groups from one application to another.
+                  </p>
+                  <p>The following shared components can be part of a component group:</p>
+                  <ul style="list-style-type: disc;">
+                     <li>Application Items</li>
+                     <li>Application Processes</li>
+                     <li>Application Computations</li>
+                     <li>Application Settings</li>
+                     <li>Build Options</li>
+                     <li>Lists</li>
+                     <li>Search Configurations</li>
+                     <li>Data Load Definitions</li>
+                     <li>REST Data Sources</li>
+                     <li>Authentication Schemes</li>
+                     <li>Authorization Schemes</li>
+                     <li>Application Access Control roles</li>
+                     <li>Email Templates</li>
+                     <li>Lists of Values</li>
+                     <li>Plug-ins</li>
+                     <li>Component Settings (native components only)</li>
+                     <li>Shortcuts</li>
+                     <li>Map Backgrounds</li>
+                     <li>Report Layouts</li>
+                     <li>Text Messages</li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="using-component-groups.html#GUID-3089EA1A-5217-4F9E-BA69-DA5B2D8187A9" title="Use component groups to easily copy or subscribe to a collection of shared components.">Using Component Groups</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-E6615C7B-2818-4600-8A5B-BDD95F2CB45A" name="GUID-E6615C7B-2818-4600-8A5B-BDD95F2CB45A"></a><h3 id="HTMDB-GUID-E6615C7B-2818-4600-8A5B-BDD95F2CB45A" class="sect3"><span class="enumeration_section">16.11.2 </span>Creating a Component Group
+               </h3>
+               <div>
+                  <p>Create a component group by assigning components to the group.</p>
+                  <div class="p">The components you plan to add to the component group must already exist in the application.</div>
+                  <p>To create a component group:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Access the Component Groups page:</span><ol type="a">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span></li>
+                           <li><span>Under Other Components, click <span class="uicontrol bold">Component Groups</span>.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Create</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Name and Comments:</span><ol type="a">
+                           <li><span>Name - Enter the name of the component group. The component group name must be unique within the application.</span></li>
+                           <li><span>Comments - Enter a brief description of this component group.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Create</span>.</span></li>
+                        </ol>
+                        <div>The <strong class="term">Component Group Details</strong> screen appears.
+                        </div>
+                     </li>
+                  </ol>
+                  <p>To add components to the component group:</p>
+                  <ol start="3">
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Assign Components</span>.</span></li>
+                     <li class="stepexpand"><span>Select the <span class="uicontrol bold">Component Type</span> from the available options.</span></li>
+                     <li class="stepexpand"><span>From the available components, select components for the component group using <span class="uicontrol bold">Reset</span>, <span class="uicontrol bold">Move All</span>, <span class="uicontrol bold">Move</span>, <span class="uicontrol bold">Remove</span>, and <span class="uicontrol bold">Remove All</span>.</span><div>
+                           <div class="infoboxnotewarn" id="GUID-E6615C7B-2818-4600-8A5B-BDD95F2CB45A__GUID-9BBD3A6E-FC87-4A7D-B677-98687AE8A49A">
+                              <p class="notep1">WARNING:</p>Once you select components for the component group, you <span class="bold">must</span> assign them to the group before switching the desired component type. If you select components and then switch the component type without assigning the selected components, the components are <span class="bold">not</span> added to the group.
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Assign the components to the component group:</span><ul id="GUID-E6615C7B-2818-4600-8A5B-BDD95F2CB45A__CHOICES_Z33_QC3_CBC">
+                           <li>Click <span class="uicontrol bold">Assign and Assign More</span> to assign the selected components, and then continue selecting more components of a different component type.
+                           </li>
+                           <li>Click <span class="uicontrol bold">Assign</span> to assign the selected components and return to the component group details screen.
+                           </li>
+                           <li>Click <span class="uicontrol bold">Cancel</span> to return to the component group details screen.
+                           </li>
+                        </ul>
+                     </li>
+                  </ol>
+                  <p>To remove components from the component group:</p>
+                  <ol start="7">
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Unassign from Component Group</span>.</span></li>
+                  </ol>
+                  <p>To save the component group:</p>
+                  <ol start="8">
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="using-component-groups.html#GUID-3089EA1A-5217-4F9E-BA69-DA5B2D8187A9" title="Use component groups to easily copy or subscribe to a collection of shared components.">Using Component Groups</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-43B32A28-563E-4D49-8435-D179FD1E92AF" name="GUID-43B32A28-563E-4D49-8435-D179FD1E92AF"></a><h3 id="HTMDB-GUID-43B32A28-563E-4D49-8435-D179FD1E92AF" class="sect3"><span class="enumeration_section">16.11.3 </span>Copying and Subscribing to a Component Group
+               </h3>
+               <div>
+                  <p>Copy a component group from the current application or from another application. When copying a component group from another application, you can also subscribe to it.</p>
+                  <div class="section">
+                     
+                     <div class="infobox-tip" id="GUID-43B32A28-563E-4D49-8435-D179FD1E92AF__GUID-221CCC8D-CC84-4183-914E-EB6EFB23AA8C">
+                        <p class="notep1">Tip:</p>Subscriptions enable developers to reuse shared components across
+                several applications in a workspace. To learn more about subscriptions, see <a href="using-shared-component-subscriptions.html#GUID-24D34103-5C45-4DC6-A7BF-228744B04AAE" title="Use subscriptions to reuse shared components across several applications in a workspace.">Using Shared Component Subscriptions</a>.
+                     </div>
+                     
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components, Component Groups page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                 <p>The Shared Components page appears. </p>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Under Other Components, select <span class="uicontrol bold">Component Groups</span>.</span><div>
+                                 <p>The Component Groups page appears. Note that the report includes the following columns: Subscribed From, Subscription Status, and Subscribers.</p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                  </ol>
+                  <p>To copy a component group within the current application:</p>
+                  <ol start="2">
+                     <li class="stepexpand"><span>Search for the component group and click <span class="uicontrol bold">Copy</span> in the Copy column.</span><div>The Copy Component Group Wizard appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>New Component Group Name - Enter the name of the component group. The component group name must be unique within the application.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Copy Component Group</span>.</span></li>
+                  </ol>
+                  <p>To copy a component group from another application:</p>
+                  <ol start="5">
+                     <li class="stepexpand"><span>From the Tasks region on the Component Groups page, click <span class="uicontrol bold">Copy from another app</span>.</span><div>The Copy Component Group Wizard appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Application - Select the application from which you want to copy.</span></li>
+                     <li class="stepexpand"><span>Component Group - Select the component group to copy.</span></li>
+                     <li class="stepexpand"><span>Subscribe - Set this flag to <span class="uicontrol bold">On</span> to subscribe to the component group.</span><div>
+                           <div class="infobox-tip" id="GUID-43B32A28-563E-4D49-8435-D179FD1E92AF__GUID-43EC52EC-6632-4537-AA86-5DE52EEF6968">
+                              <p class="notep1">Tip:</p>You cannot subscribe to a component group once it is copied to the new application. You can only subscribe during this step of the copy process.
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                     <li class="stepexpand"><span>Review the actions column for each component.</span><div>
+                           <ul style="list-style-type: disc;" id="GUID-43B32A28-563E-4D49-8435-D179FD1E92AF__UL_NKG_ZR3_CBC">
+                              <li>Add: A new component will be added to the target application.</li>
+                              <li>Refresh: An existing component will be reused after refresh.</li>
+                              <li>Replace: An existing component will be replaced with the master component.</li>
+                              <li>Reuse: An existing component will be reused.</li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Copy Component Group</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="using-component-groups.html#GUID-3089EA1A-5217-4F9E-BA69-DA5B2D8187A9" title="Use component groups to easily copy or subscribe to a collection of shared components.">Using Component Groups</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-10F4E091-85B6-4ED2-88AF-AC757E0F9AD8" name="GUID-10F4E091-85B6-4ED2-88AF-AC757E0F9AD8"></a><h3 id="HTMDB-GUID-10F4E091-85B6-4ED2-88AF-AC757E0F9AD8" class="sect3"><span class="enumeration_section">16.11.4 </span>Refreshing a Subscribed Component Group
+               </h3>
+               <div>
+                  <p>Access changes in a master component group by refreshing the subscribed component group.</p>
+                  <div class="p">This procedure discusses refreshing an entire component group. To refresh an individual item in a component group, see <a href="using-shared-component-subscriptions.html#GUID-32D65A73-A98E-475B-995E-F5B1E850F30D" title="Access changes in a master shared component by refreshing the subscribed shared component.">Refreshing a Subscribed Shared Component</a>.
+                  </div>
+                  <div class="section">
+                     
+                     <p>If a master component group or any of the components that are part of the component group have changes, subscribed component groups have a Subscription Status of <code class="codeph">Needs refresh</code>, and a <span class="uicontrol bold">Refresh</span> button appears on the component group edit page. When you refresh a component group, all the components assigned to the component group with an individual component subscription status of <code class="codeph">Needs refresh</code> are refreshed. The <span class="uicontrol bold">Refresh</span> button does not appear if the subscription status is <code class="codeph">Up to date</code>.
+                     </p>
+                     
+                     <p>You can refresh a subscribed component group on the component group edit page.</p>
+                     
+                  </div>
+                  <p>To refresh a subscribed component group:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components, Component Groups page:</span><ol type="a" id="GUID-10F4E091-85B6-4ED2-88AF-AC757E0F9AD8__SUBSTEPS_OVK_ZY2_3BC">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                 <p>The Shared Components page appears. </p>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Under Other Components, select <span class="uicontrol bold">Component Groups</span>.</span><div>
+                                 <p>The Component Groups page appears. Note that the report includes the following columns: Subscribed From, Subscription Status, and Subscribers.</p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Refresh the component group subscription:</span><ol type="a" id="GUID-10F4E091-85B6-4ED2-88AF-AC757E0F9AD8__SUBSTEPS_Z2C_XSP_1ZB">
+                           <li class="substepexpand"><span>Find and access the edit page of the component group. </span><div>
+                                 <p>If there are new changes in the master component group, the Subscription Status is <code class="codeph">Needs refresh</code>.
+                                 </p>
+                                 <p>To access the edit page, click the component group name.</p>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>On the component group edit page, find the <span class="uicontrol bold">Subscription</span> region and click the <span class="uicontrol bold">Refresh</span> button.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Review the actions column for each component.</span><div>
+                           <ul style="list-style-type: disc;" id="GUID-10F4E091-85B6-4ED2-88AF-AC757E0F9AD8__UL_NKG_ZR3_CBC">
+                              <li>Add: A new component will be added to the target application and assigned to the component group.</li>
+                              <li>Refresh: An existing component will be refreshed.</li>
+                              <li>Refresh and Assign: An existing component will be refreshed and assigned to the component group.</li>
+                              <li>Replace: An existing component will be replaced with the master component and assigned to the component group.</li>
+                              <li>Reuse: An existing component will be assigned to the component group.</li>
+                              <li>Unassign: This component will be unassigned from the component group.</li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Refresh</span> to update the component group.</span></li>
+                  </ol>
+                  <div class="section">The component group refreshes.</div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="using-component-groups.html#GUID-3089EA1A-5217-4F9E-BA69-DA5B2D8187A9" title="Use component groups to easily copy or subscribe to a collection of shared components.">Using Component Groups</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-DFCE9489-7E80-4539-9311-D44A1A28D5C6" name="GUID-DFCE9489-7E80-4539-9311-D44A1A28D5C6"></a><h3 id="HTMDB-GUID-DFCE9489-7E80-4539-9311-D44A1A28D5C6" class="sect3"><span class="enumeration_section">16.11.5 </span>Publishing a Component Group
+               </h3>
+               <div>
+                  <p>Publish a component group to push changes to all subscribing component groups. </p>
+                  <div class="p">In order to publish a component group, you must have already made changes to one or more of the components in the component group.</div>
+                  <p>To publish a component group:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a" id="GUID-DFCE9489-7E80-4539-9311-D44A1A28D5C6__SUBSTEPS_IL1_VYX_1ZB">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select the application containing the master component group.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>
+                                 
+                                 <p>The Shared Components page appears. </p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Other Components, click <span class="uicontrol bold">Component Groups</span>.</span></li>
+                     <li class="stepexpand"><span>Find and access the edit page of the master component group.</span><div>By default, each component group displays as a report. To access the edit page, click the component group name.</div>
+                     </li>
+                     <li class="stepexpand"><span>(Optional) Assign or unassign components from the component group.</span><div>For more on assigning and unassigning components, see <a href="using-component-groups.html#GUID-E6615C7B-2818-4600-8A5B-BDD95F2CB45A" title="Create a component group by assigning components to the group.">Creating a Component Group</a>.
+                        </div>
+                     </li>
+                  </ol>
+                  <p>To push the changes to subscribed component groups:</p>
+                  <ol start="5">
+                     <li class="stepexpand"><span>Under Subscription, click <span class="uicontrol bold">Publish</span>.</span></li>
+                     <li class="stepexpand"><span>Review the actions column for each component.</span><div>
+                           <ul style="list-style-type: disc;" id="GUID-DFCE9489-7E80-4539-9311-D44A1A28D5C6__UL_NKG_ZR3_CBC">
+                              <li>Add: A new component will be added to the target application and assigned to the component group.</li>
+                              <li>Refresh: An existing component will be refreshed.</li>
+                              <li>Refresh and Assign: An existing component will be refreshed and assigned to the component group.</li>
+                              <li>Replace: An existing component will be replaced with the master component and assigned to the component group.</li>
+                              <li>Reuse: An existing component will be assigned to the component group.</li>
+                              <li>Unassign: This component will be unassigned from the component group.</li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>In the Confirm Publish dialog, click <span class="uicontrol bold">Publish</span>
+                    again.</span><div>The following confirmation message appears:
+                           <p><code class="codeph">All subscribing component groups are refreshed.</code></p>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="using-component-groups.html#GUID-3089EA1A-5217-4F9E-BA69-DA5B2D8187A9" title="Use component groups to easily copy or subscribe to a collection of shared components.">Using Component Groups</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-57CCC679-1FBF-4ABA-ACA1-147915A2540C" name="GUID-57CCC679-1FBF-4ABA-ACA1-147915A2540C"></a><h3 id="HTMDB-GUID-57CCC679-1FBF-4ABA-ACA1-147915A2540C" class="sect3"><span class="enumeration_section">16.11.6 </span>Unsubscribing from a Component Group
+               </h3>
+               <div>
+                  <p>Unsubscribe from a component group on the Component Group Details page.</p>
+                  <div class="section">Unsubscribing from a component group automatically unsubscribes all the individual components in that group.</div>
+                  <p>To unsubscribe from a component group:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Component Groups page:</span><ol type="a" id="GUID-57CCC679-1FBF-4ABA-ACA1-147915A2540C__SUBSTEPS_KJS_TGT_M1C">
+                           <li class="substepexpand"><span>Navigate to the Workspace home page.</span></li>
+                           <li class="substepexpand"><span>Click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span></li>
+                           <li class="substepexpand"><span>Under Other Components, click <span class="uicontrol bold">Component Groups</span>.</span><div>The Component Groups page appears. Note that the report includes the following columns: Subscribed From, Subscription Status, and Subscribers.</div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Select a component group that is currently subscribed from an application.</span><div>
+                           <div class="infoboxnote" id="GUID-57CCC679-1FBF-4ABA-ACA1-147915A2540C__GUID-5F3805BE-7BAF-4CC1-8D36-A1CFE27FC93D">
+                              <p class="notep1">Note:</p>When a component group is subscribed, the <span class="uicontrol bold">Subscribed From</span> column indicates the application number of the master component group.
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>In the <span class="uicontrol bold">Subscription</span> region, click <span class="uicontrol bold">Unsubscribe</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="using-component-groups.html#GUID-3089EA1A-5217-4F9E-BA69-DA5B2D8187A9" title="Use component groups to easily copy or subscribe to a collection of shared components.">Using Component Groups</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-3678780E-86D2-4C0B-82F6-67F75B36AA7E" name="GUID-3678780E-86D2-4C0B-82F6-67F75B36AA7E"></a><h3 id="HTMDB-GUID-3678780E-86D2-4C0B-82F6-67F75B36AA7E" class="sect3"><span class="enumeration_section">16.11.7 </span>Deleting a Component Group
+               </h3>
+               <div>
+                  <p>Learn how to delete a component group.</p>
+                  <div class="section">Deleting a component group does not delete the individual shared components that make up the group. Deleting a component group deletes the group and the assignment of components to the group.</div>
+                  <p>To delete a component group: </p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                 <p>The Shared Components page appears. </p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under <span class="uicontrol bold">Other Components</span>, select <span class="uicontrol bold">Component Groups</span>.</span><div>
+                           <p>The Component Groups page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click the name of the component group to be deleted.</span></li>
+                     <li class="stepexpand"><span>On the Edit page, click <span class="uicontrol bold">Delete</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Delete</span> to confirm.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="using-component-groups.html#GUID-3089EA1A-5217-4F9E-BA69-DA5B2D8187A9" title="Use component groups to easily copy or subscribe to a collection of shared components.">Using Component Groups</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

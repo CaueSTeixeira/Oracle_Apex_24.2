@@ -1,0 +1,494 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Editing Charts">
+      <meta name="abstract" content="You can alter how a chart displays by editing chart attributes in Page Designer.">
+      <meta name="description" content="You can alter how a chart displays by editing chart attributes in Page Designer.">
+      <meta name="DC.subject" content="charts, managing in Page Designer, editing attributes, altering display, chart type, switching in page designer, automatic refresh attribute, enabling, chart synchronous update, creating refresh dynamic action, custom JavaScript">
+      <meta name="keywords" content="charts, managing in Page Designer, editing attributes, altering display, chart type, switching in page designer, automatic refresh attribute, enabling, chart synchronous update, creating refresh dynamic action, custom JavaScript">
+      <meta name="DC.Relation" scheme="URI" content="creating-charts.html#GUID-50985225-4C89-489B-B019-E2D91E61428A">
+      <meta name="DC.Relation" scheme="URI" content="editing-charts.html#GUID-074BD7C2-52EA-4EB7-8A42-7E596F992C74">
+      <meta name="DC.Relation" scheme="URI" content="editing-charts.html#GUID-583A485F-997D-4942-8483-08EDF31058BC">
+      <meta name="DC.Relation" scheme="URI" content="editing-charts.html#GUID-CBDBA8F0-243C-4938-809C-7D4383717A6F">
+      <meta name="DC.Relation" scheme="URI" content="editing-charts.html#GUID-35846E09-4A6A-4C75-ACE1-B14306A853BA">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-F083C022-B8BE-4AA1-8314-D53A0917D883">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="You can alter how a chart displays by editing chart attributes in Page Designer.">
+      <meta name="description" content="You can alter how a chart displays by editing chart attributes in Page Designer.">
+      <title>Editing Charts</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="You can alter how a chart displays by editing chart attributes in Page Designer.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="adding-chart-in-page-designer.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-maps.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Editing Charts","description":"You can alter how a chart displays by editing chart attributes in Page Designer.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="adding-chart-in-page-designer.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-maps.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-F083C022-B8BE-4AA1-8314-D53A0917D883" name="GUID-F083C022-B8BE-4AA1-8314-D53A0917D883"></a>
+         
+         <h2 id="HTMDB-GUID-F083C022-B8BE-4AA1-8314-D53A0917D883" class="sect2"><span class="enumeration_section">10.3.7 </span>Editing Charts
+         </h2>
+         <div class="ind">
+            <div>
+               <p>You can alter how a chart displays by editing chart attributes in Page Designer.</p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="editing-charts.html#GUID-074BD7C2-52EA-4EB7-8A42-7E596F992C74">Editing Chart Attributes</a><br>Learn about editing chart Region attributes, chart Attributes, and Series         attributes.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-charts.html#GUID-583A485F-997D-4942-8483-08EDF31058BC">Switching Chart Type</a><br>Change the chart type by editing chart Attributes.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-charts.html#GUID-CBDBA8F0-243C-4938-809C-7D4383717A6F">Enabling Automatic Refresh</a><br>Monitor chart information by enabling the Automatic Refresh, Interval attribute, or         by using a dynamic action with the Refresh action.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-charts.html#GUID-35846E09-4A6A-4C75-ACE1-B14306A853BA">Using Custom JavaScript with Charts</a><br>Control the look and feel of a chart by adding custom JavaScript.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-F083C022-B8BE-4AA1-8314-D53A0917D883__GUID-8E17DB98-A979-4E64-863C-E6B4C8F08650">
+                  <p class="notep1">See Also:</p>
+                  <p><a href="working-with-page-designer.html#GUID-D96934D4-BDA6-40D9-9FCD-00573D158249" title="To view a page in Page Designer, select an application and then a page.">Viewing a Page in Page Designer</a></p>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="creating-charts.html#GUID-50985225-4C89-489B-B019-E2D91E61428A" title="Create charts in App Builder by running a built-in wizard or by creating them manually in Page Designer.">Creating Charts</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-074BD7C2-52EA-4EB7-8A42-7E596F992C74" name="GUID-074BD7C2-52EA-4EB7-8A42-7E596F992C74"></a><h3 id="HTMDB-GUID-074BD7C2-52EA-4EB7-8A42-7E596F992C74" class="sect3"><span class="enumeration_section">10.3.7.1 </span>Editing Chart Attributes 
+               </h3>
+               <div>
+                  <p>Learn about editing chart Region attributes, chart Attributes, and Series
+        attributes.</p>
+                  <div class="section">Charts have three types of attributes: <strong class="term">Region
+                attributes</strong>, <strong class="term">chart Attributes</strong>, and <strong class="term">Series attributes</strong>. When you select a chart in the Rendering tab,
+            the Property Editor displays two tabs: <span class="uicontrol bold">Region</span> (which contains
+            Region attributes) and <span class="uicontrol bold">Attributes</span> (which contains chart
+            Attributes). <span class="uicontrol bold">Series</span> attributes display in the Rendering tab under
+            the chart.
+                  </div>
+                  <p>To edit chart attributes:</p>
+                  <ol>
+                     <li class="stepexpand"><span>View the page containing the calendar in Page Designer:</span><ol type="a" id="GUID-074BD7C2-52EA-4EB7-8A42-7E596F992C74__SUBSTEPS_IQX_V5Z_4MB">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>
+                           
+                           <p>Page Designer appears.</p>
+                           
+                           <p>The Property Editor in the right pane displays displays two
+                        tabs: <span class="uicontrol bold">Region</span> and <span class="uicontrol bold">Attributes</span>.
+                        Attributes are organized in groups. To view help for an attribute, select
+                        the attribute in the Property Editor and click the
+                            <span class="uicontrol bold">Help</span> tab in the central pane.
+                           </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>To edit the Region attributes.</span><ol type="a" id="GUID-074BD7C2-52EA-4EB7-8A42-7E596F992C74__SUBSTEPS_G4M_X5Z_4MB">
+                           <li class="substepexpand"><span>In the left pane (or Rendering tab), select the chart.</span><div>The Property Editor, <span class="uicontrol bold">Region</span>
+                            tab displays the region attributes
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Review and edit the region attributes in the Property Editor.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>To edit the chart Attributes.</span><ol type="a" id="GUID-074BD7C2-52EA-4EB7-8A42-7E596F992C74__SUBSTEPS_XQD_Y5Z_4MB">
+                           <li><span>In the left pane (or Rendering tab), select the chart.</span></li>
+                           <li><span>In the Property Editor, select the <span class="uicontrol bold">Attributes</span>
+                            tab.</span></li>
+                           <li><span>Review and edit the chart Attributes in the Property Editor.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>To edit the Series:</span><ol type="a" id="GUID-074BD7C2-52EA-4EB7-8A42-7E596F992C74__SUBSTEPS_HJX_DVZ_4MB">
+                           <li><span>In the Rendering tab under the chart, select the
+                                <span class="uicontrol bold">Series</span>.</span></li>
+                           <li><span>Review and edit the Series attributes in the Property Editor.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-charts.html#GUID-F083C022-B8BE-4AA1-8314-D53A0917D883" title="You can alter how a chart displays by editing chart attributes in Page Designer.">Editing Charts</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-583A485F-997D-4942-8483-08EDF31058BC" name="GUID-583A485F-997D-4942-8483-08EDF31058BC"></a><h3 id="HTMDB-GUID-583A485F-997D-4942-8483-08EDF31058BC" class="sect3"><span class="enumeration_section">10.3.7.2 </span>Switching Chart Type
+               </h3>
+               <div>
+                  <p>Change the chart type by editing chart Attributes.</p>
+                  <p>To switch a chart type:</p>
+                  <ol>
+                     <li class="stepexpand"><span>View the page containing the chart in Page Designer. </span></li>
+                     <li class="stepexpand"><span>In the left pane (or Rendering tab), select the chart.</span><div>The Property Editor (right pane) displays two tabs. </div>
+                     </li>
+                     <li class="stepexpand"><span>Edit the chart Attributes and select a new chart type:</span><ol type="a" id="GUID-583A485F-997D-4942-8483-08EDF31058BC__SUBSTEPS_HJQ_FXZ_4MB">
+                           <li class="substepexpand"><span>In the Property Editor, select the <span class="uicontrol bold">Attributes</span>
+                            tab.</span><div>The Property Editor displays chart Attributes.
+                            Attributes are organized in groups. To view help for an attribute,
+                            select the attribute in the Property Editor and click the
+                                <span class="uicontrol bold">Help</span> tab in the central pane.
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Chart</span>, <span class="uicontrol bold">Type</span> - Select the
+                            chart type you want to switch to. For example,
+                                <span class="uicontrol bold">Combination</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Edit the Series:</span><ol type="a" id="GUID-583A485F-997D-4942-8483-08EDF31058BC__SUBSTEPS_FZ2_PXZ_4MB">
+                           <li class="substepexpand"><span>In the Rendering tab under the chart, select the
+                                <span class="uicontrol bold">Series</span>.</span><div>The <span class="uicontrol bold">Series</span> tab appears in
+                            the Property Editor.
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Column Mapping</span> - Ensure all required Column
+                            Mapping columns have been defined.</span><div>
+                                 
+                                 <div class="infoboxnote" id="GUID-583A485F-997D-4942-8483-08EDF31058BC__GUID-86604634-87E9-4C3E-82FB-C3F796BBCC50">
+                                    <p class="notep1">Note:</p>
+                                    
+                                    <p>Column mappings may differ for different chart types,
+                                    so you must ensure all required column mappings are defined for
+                                    the selected chart type.</p>
+                                    
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Type</span> - Select the chart series type. For
+                            example, <span class="uicontrol bold">Bar Range</span>.</span><div>Only certain chart types support combining different types of
+                            series on the same data plot. The Series Type attribute only displays
+                            for chart types <span class="uicontrol bold">Combination</span>,
+                                <span class="uicontrol bold">Polar</span>, <span class="uicontrol bold">Radar</span>, and
+                                <span class="uicontrol bold">Range</span>.
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="bold">Save</span> or <span class="bold">Save and Run Page</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-charts.html#GUID-F083C022-B8BE-4AA1-8314-D53A0917D883" title="You can alter how a chart displays by editing chart attributes in Page Designer.">Editing Charts</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-CBDBA8F0-243C-4938-809C-7D4383717A6F" name="GUID-CBDBA8F0-243C-4938-809C-7D4383717A6F"></a><h3 id="HTMDB-GUID-CBDBA8F0-243C-4938-809C-7D4383717A6F" class="sect3"><span class="enumeration_section">10.3.7.3 </span>Enabling Automatic Refresh
+               </h3>
+               <div>
+                  <p>Monitor chart information by enabling the Automatic Refresh, Interval attribute, or
+        by using a dynamic action with the Refresh action.</p>
+                  <p><a id="d149578e626" class="indexterm-anchor"></a><a id="d149578e630" class="indexterm-anchor"></a></p>
+               </div>
+               <div>
+                  <ul class="ullinks">
+                     <li class="ulchildlink"><a href="editing-charts.html#GUID-F17A479E-CF7C-4403-BE57-464E11F8C9F7">Enabling the Automatic Refresh Attribute</a><br>Enabling the Automatic Refresh attribute updates the chart to reflect changes in the     underlying data within a specified time interval.
+                     </li>
+                     <li class="ulchildlink"><a href="editing-charts.html#GUID-81CF7582-AED4-449E-A322-DC06D3035FE7">Creating a Refresh Dynamic Action</a><br>Learn about creating a Refresh dynamic action.
+                     </li>
+                  </ul>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-charts.html#GUID-F083C022-B8BE-4AA1-8314-D53A0917D883" title="You can alter how a chart displays by editing chart attributes in Page Designer.">Editing Charts</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="props_rev_3"><a id="GUID-F17A479E-CF7C-4403-BE57-464E11F8C9F7" name="GUID-F17A479E-CF7C-4403-BE57-464E11F8C9F7"></a><h4 id="HTMDB-GUID-F17A479E-CF7C-4403-BE57-464E11F8C9F7" class="sect4"><span class="enumeration_section">10.3.7.3.1 </span>Enabling the Automatic Refresh Attribute
+                  </h4>
+                  <div>
+                     <p>Enabling the Automatic Refresh attribute updates the chart to reflect changes in the
+    underlying data within a specified time interval.</p>
+                     <p>To enable automatic refresh
+                                                  updates:</p>
+                     <ol>
+                        <li class="stepexpand"><span>View the page containing the chart in Page
+                                                  Designer. </span></li>
+                        <li class="stepexpand"><span>In the left pane (or Rendering tab), select
+                                                  the chart.</span></li>
+                        <li class="stepexpand"><span>In the Property Editor, select the
+                                                  <span class="uicontrol bold">Attributes</span> tab.</span></li>
+                        <li class="stepexpand"><span>Find <span class="uicontrol bold">Automatic
+                                                  Refresh</span>.</span></li>
+                        <li class="stepexpand"><span>In <span class="uicontrol bold">Automatic Refresh</span>,
+                                                  <span class="uicontrol bold">Interval</span> - Enter the
+                                                  interval in seconds between chart updates.</span><div>Very small updates intervals, such as
+                                                  2 seconds, are discouraged since they may cause
+                                                  serious database performance issues.</div>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="editing-charts.html#GUID-CBDBA8F0-243C-4938-809C-7D4383717A6F" title="Monitor chart information by enabling the Automatic Refresh, Interval attribute, or by using a dynamic action with the Refresh action.">Enabling Automatic Refresh</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="props_rev_3"><a id="GUID-81CF7582-AED4-449E-A322-DC06D3035FE7" name="GUID-81CF7582-AED4-449E-A322-DC06D3035FE7"></a><h4 id="HTMDB-GUID-81CF7582-AED4-449E-A322-DC06D3035FE7" class="sect4"><span class="enumeration_section">10.3.7.3.2 </span>Creating a Refresh Dynamic Action
+                  </h4>
+                  <div>
+                     <p>Learn about creating a Refresh dynamic action.</p>
+                     <p>To create a Refresh dynamic action:</p>
+                     <ol>
+                        <li class="stepexpand"><span>View the page containing the chart in Page Designer. </span></li>
+                        <li class="stepexpand"><span>Click the <span class="bold">Dynamic Actions</span> tab in the left pane.</span></li>
+                        <li class="stepexpand"><span>Under Dynamic Actions, right-click <span class="bold">Events</span> and select <span class="bold">Create Dynamic Action</span>.</span></li>
+                        <li class="stepexpand"><span>Page Designer indicates what to do next. If there is an error, the Show
+                    Messages icon displays in the Page Developer toolbar.</span><ol type="a" id="GUID-81CF7582-AED4-449E-A322-DC06D3035FE7__SUBSTEPS_L54_FCN_QMB">
+                              <li class="substepexpand"><span>Click the <span class="uicontrol bold">Show Messages</span> icon on the Page
+                            Designer toolbar.</span><div>The Messages dialog displays errors that must be
+                            addressed.</div>
+                              </li>
+                              <li class="substepexpand"><span>Select an error to highlight the associated attribute in the Property
+                            Editor.</span></li>
+                           </ol>
+                        </li>
+                        <li class="stepexpand"><span>In the Property Editor, edit the following Dynamic Action attributes:</span><ol type="a" id="GUID-81CF7582-AED4-449E-A322-DC06D3035FE7__SUBSTEPS_TG3_4V1_PMB">
+                              <li><span><span class="uicontrol bold">Identification</span>, <span class="uicontrol bold">Name</span> -
+                            Enter a name of the dynamic action.</span></li>
+                              <li><span>
+                                    <span class="uicontrol bold">Execution</span>, <span class="uicontrol bold">Sequence</span> -
+                            Specify the sequence for this component. The sequence determines the
+                            order of evaluation.</span></li>
+                              <li><span>
+                                    <span class="uicontrol bold">Execution</span>, <span class="uicontrol bold">Event Scope</span> -
+                            Review the scope of the event. Scope determines when the event is
+                            evaluated a second or successive time.</span></li>
+                              <li><span>
+                                    <span class="uicontrol bold">Execution</span>, <span class="uicontrol bold">Type</span> - Choose
+                            the type of execution method for the Dynamic Action. Options include
+                                <span class="uicontrol bold">Immediate</span> (default),
+                                <span class="uicontrol bold">Debounce</span>, and
+                            <span class="uicontrol bold">Throttle</span>. </span></li>
+                              <li><span>
+                                    <span class="uicontrol bold">When</span>, <span class="uicontrol bold">Event</span> - Specify the
+                            event that causes the dynamic action to fire.</span></li>
+                              <li><span>
+                                    <span class="uicontrol bold">When</span>, <span class="uicontrol bold">Selection Type</span> -
+                            Select the type of page element or construct to be used to trigger the
+                            event. What displays next, depends upon selected element or
+                            construct.</span></li>
+                           </ol>
+                           <div>
+                              <div class="infobox-tip" id="GUID-81CF7582-AED4-449E-A322-DC06D3035FE7__GUID-7579CD18-FAA2-42C8-A3FD-31BD32D125DD">
+                                 <p class="notep1">Tip:</p>
+                                 <p>To learn more about an attribute, select the attribute in the Property Editor and
+                            click the <span class="uicontrol bold">Help</span> tab in the center pane.
+                                 </p>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>In the Rendering tab, select the first action under <span class="uicontrol bold">True</span>
+                    and edit the attributes:</span><ol type="a" id="GUID-81CF7582-AED4-449E-A322-DC06D3035FE7__SUBSTEPS_C5P_YV1_PMB">
+                              <li><span>
+                                    <span class="uicontrol bold">Identification</span>, <span class="uicontrol bold">Name</span> -
+                            Enter the name of the action to identify what the action does (for
+                            example, select <span class="uicontrol bold">Refresh Chart</span>).</span></li>
+                              <li><span>
+                                    <span class="uicontrol bold">Identification</span>, <span class="uicontrol bold">Action</span> -
+                            Specify which action you want to perform (for example, select
+                                <span class="uicontrol bold">Refresh</span>).</span></li>
+                              <li><span>
+                                    <span class="uicontrol bold">Affected Elements</span>, <span class="uicontrol bold">Selection
+                                Type</span> - Select the type of page components to be affected
+                            when this action executes (for example, select
+                                <span class="uicontrol bold">Region</span>).</span></li>
+                              <li><span>
+                                    <span class="uicontrol bold">Affected Elements</span>, <span class="uicontrol bold">Region</span>
+                            - Select the region containing the chart.</span></li>
+                              <li><span>
+                                    <span class="uicontrol bold">Execution</span>, <span class="uicontrol bold">Sequence</span> -
+                            Review the sequence for this component. The sequence determines the
+                            order of execution.</span></li>
+                              <li><span>
+                                    <span class="uicontrol bold">Execution</span>, <span class="uicontrol bold">Event</span> - Review
+                            the selected dynamic action event (for example, <span class="uicontrol bold">Refresh
+                                Chart</span>).</span></li>
+                              <li><span>
+                                    <span class="uicontrol bold">Execution</span>, <span class="uicontrol bold">Fire When Event Result
+                                Is</span> - Specifies the selected dynamic action event (for
+                            example, <span class="uicontrol bold">Refresh Chart</span>).</span></li>
+                              <li><span>
+                                    <span class="uicontrol bold">Execution</span>, <span class="uicontrol bold">Fire on
+                                Initialization</span> - Enable this option. For a refresh
+                            dynamic action, this option causes the dynamic action to fire when the
+                            page loads. </span></li>
+                           </ol>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="bold">Save</span>.</span></li>
+                     </ol>
+                     <div class="section">
+                        
+                        
+                     </div>
+                  </div>
+                  <div>
+                     <div class="infoboxnotealso" id="GUID-81CF7582-AED4-449E-A322-DC06D3035FE7__GUID-C06096D2-7858-4975-961F-1626C558DC73">
+                        <p class="notep1">See Also:</p>
+                        
+                        <p><a href="managing-dynamic-actions.html#GUID-7E564715-E963-44AA-B620-5FFB5EFA62EE" title="Dynamic actions enable developers to define complex client-side behavior declaratively without the need for JavaScript.">Managing Dynamic Actions</a></p>
+                        
+                     </div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="editing-charts.html#GUID-CBDBA8F0-243C-4938-809C-7D4383717A6F" title="Monitor chart information by enabling the Automatic Refresh, Interval attribute, or by using a dynamic action with the Refresh action.">Enabling Automatic Refresh</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+            <div class="props_rev_3"><a id="GUID-35846E09-4A6A-4C75-ACE1-B14306A853BA" name="GUID-35846E09-4A6A-4C75-ACE1-B14306A853BA"></a><h3 id="HTMDB-GUID-35846E09-4A6A-4C75-ACE1-B14306A853BA" class="sect3"><span class="enumeration_section">10.3.7.4 </span>Using Custom JavaScript with Charts
+               </h3>
+               <div>
+                  <p>Control the look and feel of a chart by adding custom JavaScript.</p>
+                  <div class="section">Control the look and feel of a chart by adding custom JavaScript.</div>
+                  <p>To use custom JavaScript:</p>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><div>Page Designer appears. </div>
+                     </li>
+                     <li class="stepexpand"><span>In the left pane (or Rendering tab), select the chart.</span></li>
+                     <li class="stepexpand"><span>In the Property Editor, select the <span class="uicontrol bold">Attributes</span> tab.</span></li>
+                     <li class="stepexpand"><span>Find <span class="uicontrol bold">Advanced</span>.</span></li>
+                     <li class="stepexpand"><span>In <span class="uicontrol bold">Advanced</span>, <span class="uicontrol bold">JavaScript Initialization
+                        Code</span>, enter the code to customize your chart.</span><div>
+                           
+                           <div class="p">For
+                        example:<pre class="pre codeblock"><code>function( options ){
+    // Setup a callback function which gets called 
+   // when data is retrieved, it allows to manipulate the series
+    options.dataFilter = function( data ) {
+
+        // e.g Set the first series of chart to the colour red
+        data.series[ 0 ].color = "red";
+        return data;
+    };
+    // Set chart initialization options
+    // e.g. Set chart type to Line
+    options.type = "line";
+    return options;
+}</code></pre></div>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span><div>
+                           <div class="infobox-tip" id="GUID-35846E09-4A6A-4C75-ACE1-B14306A853BA__GUID-618BD7BD-838B-405C-AA4C-CF218CD0AE23">
+                              <p class="notep1">Tip:</p>
+                              <p>For more information on supported chart options, see <a href="http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.ojChart.html" target="_blank">ojChart</a> in JSDoc pages for the Oracle JavaScript Extension Toolkit (JET).
+                              </p>
+                           </div>
+                        </div>
+                     </li>
+                  </ol>
+                  <div class="section">
+                     
+                     <div class="infoboxnote" id="GUID-35846E09-4A6A-4C75-ACE1-B14306A853BA__GUID-395D950F-2491-4759-AA8C-4B82C0ADF562">
+                        <p class="notep1">Note:</p>The <span class="italic">Sample Charts</span> sample app contains a number of examples of using custom JavaScript with chart. To learn more, see <a href="https://apex.oracle.com/samples/" target="_blank">Sample Apps</a> and <a href="using-the-app-gallery.html#GUID-BA858DEB-1828-4FCE-8955-D14CC3D1F29C" title="Install Sample and Starter Apps directly from the Gallery by clicking Install.">Installing Apps from the Gallery</a>.
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-charts.html#GUID-F083C022-B8BE-4AA1-8314-D53A0917D883" title="You can alter how a chart displays by editing chart attributes in Page Designer.">Editing Charts</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

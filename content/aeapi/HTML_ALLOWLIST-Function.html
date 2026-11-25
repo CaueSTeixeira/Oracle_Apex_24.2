@@ -1,0 +1,146 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="HTML_ALLOWLIST Function">
+      <meta name="DC.subject" content="HTML_ALLOWLIST function, APEX_ESCAPE">
+      <meta name="keywords" content="HTML_ALLOWLIST function, APEX_ESCAPE">
+      <meta name="DC.Relation" scheme="URI" content="APEX_ESCAPE.html#GUID-889DE8EF-ED8C-4E52-A3CE-7DA9A9A79B88">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-AB0E2A42-D232-4AC6-9881-FE9437B9373E">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>HTML_ALLOWLIST Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="HTML-Function.html" title="Previous" type="text/html">
+      <link rel="next" href="HTML_ALLOWLIST_CLOB-Function.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"HTML_ALLOWLIST Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="HTML-Function.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="HTML_ALLOWLIST_CLOB-Function.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-AB0E2A42-D232-4AC6-9881-FE9437B9373E" name="GUID-AB0E2A42-D232-4AC6-9881-FE9437B9373E"></a>
+         
+         <h2 id="AEAPI-GUID-AB0E2A42-D232-4AC6-9881-FE9437B9373E" class="sect2"><span class="enumeration_section">26.8 </span>HTML_ALLOWLIST Function
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>The <code class="codeph">HTML_ALLOWLIST</code> function performs HTML escape on all characters in the input text except the specified allowlist tags. This function can be useful if the input text contains simple html markup but a developer wants to ensure that an attacker cannot use malicious tags for cross-site scripting.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-AB0E2A42-D232-4AC6-9881-FE9437B9373E__GUID-566F66B0-4E40-4CC5-8C2F-1E9E716300AA">Syntax</p><pre class="pre codeblock"><code>APEX_ESCAPE.HTML_ALLOWLIST (
+    p_html           IN VARCHAR2,
+    p_allowlist_tags IN VARCHAR2 DEFAULT c_html_allowlist_tags )
+    RETURN VARCHAR2 deterministic;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-AB0E2A42-D232-4AC6-9881-FE9437B9373E__GUID-1E4FDBA3-D8CE-4479-B453-0F7A864E97B2">Parameters</p>
+                  <div class="tblformal" id="GUID-AB0E2A42-D232-4AC6-9881-FE9437B9373E__BABEJJCA">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="31%" id="d102246e72">Parameter</th>
+                              <th align="left" valign="bottom" width="69%" id="d102246e74">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d102246e78" headers="d102246e72 "><code class="codeph">p_html</code></td>
+                              <td align="left" valign="top" width="69%" headers="d102246e78 d102246e74 ">The text string that is filtered.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d102246e84" headers="d102246e72 "><code class="codeph">p_allowlist_tags</code></td>
+                              <td align="left" valign="top" width="69%" headers="d102246e84 d102246e74 ">The comma separated list of tags that stays in <code class="codeph">p_html</code>.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-AB0E2A42-D232-4AC6-9881-FE9437B9373E__GUID-8ABBAC88-E300-4D0C-87C3-7569F1489CE2">Example</p>
+                  <p>This example shows how to use <code class="codeph">HTML_ALLOWLIST</code> to remove unwanted html markup from a string, while preserving allowlisted tags.
+                  </p><pre class="pre codeblock"><code>BEGIN
+     sys.htp.p(apex_escape.html_allowlist(
+         '&lt;h1&gt;Hello&lt;script&gt;alert("XSS");&lt;/script&gt;&lt;/h1&gt;'));
+END;</code></pre></div>
+               <div class="section">
+                  <div class="infoboxnotealso" id="GUID-AB0E2A42-D232-4AC6-9881-FE9437B9373E__GUID-A3E7B619-E511-496E-890B-6C559396FCD3">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-AB0E2A42-D232-4AC6-9881-FE9437B9373E__UL_R1S_FZT_FNB">
+                        <li><a href="SET_HTML_ESCAPING_MODE-Procedure.html#GUID-29152A21-03A9-4607-A03E-2D6F8BEBFFFA">SET_HTML_ESCAPING_MODE Procedure</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_ESCAPE.html#GUID-889DE8EF-ED8C-4E52-A3CE-7DA9A9A79B88">APEX_ESCAPE</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

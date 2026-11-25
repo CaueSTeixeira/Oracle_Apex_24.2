@@ -1,0 +1,505 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Understanding Plug-ins">
+      <meta name="abstract" content="Learn about plug-ins and how to find examples.">
+      <meta name="description" content="Learn about plug-ins and how to find examples.">
+      <meta name="DC.subject" content="plug-ins, understanding, about, Template Component, Template Component plug-ins, examples, GitHub repository examples, apex.world examples">
+      <meta name="keywords" content="plug-ins, understanding, about, Template Component, Template Component plug-ins, examples, GitHub repository examples, apex.world examples">
+      <meta name="DC.Relation" scheme="URI" content="implementing-plug-ins.html#GUID-B158814B-C3FC-4030-AF25-D14208DB1E27">
+      <meta name="DC.Relation" scheme="URI" content="understanding-plug-ins.html#GUID-9E88C6E3-4C17-489B-A378-E7340D955C08">
+      <meta name="DC.Relation" scheme="URI" content="understanding-plug-ins.html#GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B">
+      <meta name="DC.Relation" scheme="URI" content="understanding-plug-ins.html#GUID-281B25BD-8564-401E-850A-8BB6AFD8C839">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Topic">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-291C0F90-DE7A-43D5-AE30-26119CE5E490">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about plug-ins and how to find examples.">
+      <meta name="description" content="Learn about plug-ins and how to find examples.">
+      <title>Understanding Plug-ins</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Learn about plug-ins and how to find examples.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="implementing-plug-ins.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-plug-ins.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Understanding Plug-ins","description":"Learn about plug-ins and how to find examples.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="implementing-plug-ins.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-plug-ins.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-291C0F90-DE7A-43D5-AE30-26119CE5E490" name="GUID-291C0F90-DE7A-43D5-AE30-26119CE5E490"></a>
+         
+         <h2 id="HTMDB-GUID-291C0F90-DE7A-43D5-AE30-26119CE5E490" class="sect2"><span class="enumeration_section">19.2.1 </span>Understanding Plug-ins
+         </h2>
+         <div class="ind">
+            <p>Learn about plug-ins and how to find examples.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="understanding-plug-ins.html#GUID-9E88C6E3-4C17-489B-A378-E7340D955C08">About Plug-ins</a><br>A plug-in is an extension to the built-in types available <span>APEX</span>.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-plug-ins.html#GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B">About Template Component Type Plug-ins</a><br>Template Components are reusable UI components that work in Page Designer         like any plug-in. 
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-plug-ins.html#GUID-281B25BD-8564-401E-850A-8BB6AFD8C839">Example Plug-ins</a><br>View plug-in examples on apex.world and the Oracle APEX GitHub         repository.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="implementing-plug-ins.html#GUID-B158814B-C3FC-4030-AF25-D14208DB1E27" title="Create plug-ins to declaratively extend, share, and reuse the built-in types available in APEX.">Implementing Plug-ins</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-9E88C6E3-4C17-489B-A378-E7340D955C08" name="GUID-9E88C6E3-4C17-489B-A378-E7340D955C08"></a><h3 id="HTMDB-GUID-9E88C6E3-4C17-489B-A378-E7340D955C08" class="sect3"><span class="enumeration_section">19.2.1.1 </span>About Plug-ins
+               </h3>
+               <div>
+                  <p>A plug-in is an extension to the built-in types available <span>APEX</span>.
+                  </p>
+                  <div class="section">
+                     
+                     <p>Create plug-ins for declarative use of new item, region, process and
+                dynamic action types in your application.</p>
+                     
+                     <p><span>APEX</span> supports a set group of authentication scheme, authorization scheme, item,
+                region, dynamic action, and process types. Plug-ins offer a means of augmenting
+                these built-in types by declaratively creating and using new types in your
+                application. Because plug-ins are designed for reuse, developers can export and
+                import them to other workspaces and also share them with the <span>Oracle APEX</span> Plug-in community by using the Plug-in Repository. 
+                     </p>
+                     
+                     <p>The process of implementing a plug-in involves the following steps:</p>
+                     
+                     <ol id="GUID-9E88C6E3-4C17-489B-A378-E7340D955C08__OL_WYQ_TQW_SWB">
+                        <li>Create a plug-in or import a plug-in into your application
+                    workspace.</li>
+                        <li>Edit or create an authorization scheme, item, region, process, or
+                    dynamic action type to use the plug-in.</li>
+                        <li>Run your application to test the plug-in.</li>
+                     </ol>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-plug-ins.html#GUID-291C0F90-DE7A-43D5-AE30-26119CE5E490" title="Learn about plug-ins and how to find examples.">Understanding Plug-ins</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B" name="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B"></a><h3 id="HTMDB-GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B" class="sect3"><span class="enumeration_section">19.2.1.2 </span>About Template Component Type Plug-ins
+               </h3>
+               <div>
+                  <p>Template Components are reusable UI components that work in Page Designer
+        like any plug-in. </p>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B__GUID-29833800-7C30-457A-B2FE-3890B066DF29">About Template Components</p>
+                     
+                     
+                     <p>Template Components enable developers to create templates with placeholders,
+                including action positions and action templates. <span>APEX</span> exposes the placeholders in the templates as custom plug-in attributes.
+                     </p>
+                     
+                     <p>Use Template Components to add new region types to <span>APEX</span> which are not based on PL/SQL. Template Components support template directives,
+                Actions and Menu buttons with row-level conditions, and both CSS and JS files.
+                     </p>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B__GUID-2E4A4A54-17A3-4A27-BF46-51BAD52A2FEF">About Creating Template Components</p>
+                     
+                     
+                     <p>To create a Template Component, create a new plug-in and specify the
+                Type as <span class="uicontrol bold">Template Component</span>. Under
+                    <span class="uicontrol bold">Templates</span>, enter markup for the template. You specify how
+                the plug-in displays and where it can be used by configuring the
+                    <span class="uicontrol bold">Available as</span> attribute:
+                     </p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B__UL_T2Z_Z4F_BXB">
+                        <li>
+                           
+                           <p><span class="uicontrol bold">Multiple (Report)</span> - Use the Template
+                        Component for a region to show multiple rows with pagination options.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="uicontrol bold">Single (Partial)</span> - Use the Template
+                        Component for an interactive report column or for a region to show a single
+                        row.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="uicontrol bold">Region Only</span> - When checked, the Template
+                        Component can be used as a region showing static values. The provided HTML
+                        template is displayed without any wrapping HTML elements around it. The
+                        region has a limited number of attributes in Page Designer (excludes Region
+                        Template, Header text, Footer text). Oracle recommends including the
+                            <code class="codeph">APEX$DOM_ID</code> substitution as an ID attribute of an
+                        element in within the template, to ensure that existing <span>APEX</span> functionality works with this component.
+                           </p>
+                           
+                           <p>Template Components can always be used in server-side Template Directives
+                        using <code class="codeph">{with/}</code> and <code class="codeph">{apply/}</code> syntax without
+                        checking any of the checkboxes. For example:
+                           </p>
+                           <pre class="pre codeblock"><code>{with/}
+PLACEHOLDER1:=Some value
+PLACEHOLDER2:=Some value
+{apply INTERNAL_NAME/}</code></pre>
+                           </li>
+                     </ul>
+                     
+                     <div class="infobox-tip" id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B__GUID-467D0356-B431-45BD-A99B-A73637D3C2DD">
+                        <p class="notep1">Tip:</p>Template Component Type
+                plug-in include support for template directives. To learn more, see <a href="using-template-directives.html#GUID-596537AB-1697-4704-9193-102658452399" title="Use template directives to control how attributes that support substitution strings are processed.">Using Template Directives</a>.
+                     </div>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B__GUID-FB7587B1-C467-4191-8208-FEF8D41D709B">Row Selection</p>
+                     
+                     
+                     <p>To enable selection support for a given Template Component plug-in, under Standard
+                Attributes, select <span class="uicontrol bold">Has Row Selection Support</span> on the plug-in
+                Create or Edit page. You can also use the placeholder <code class="codeph">APEX$SELECTOR</code>
+                inside a row or partial html template. This placeholder will be rendered as a radio
+                input per row (single selection) or a checkbox input per row (multiple
+                selection).
+                     </p>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B__GUID-F803782F-A83F-4C96-9D85-DF80F74DE2BE">Custom Attributes</p>
+                     
+                     
+                     <p>To reference the Static IDs, edit the plug-in and add Custom Attributes
+                with a Scope of <span class="uicontrol bold">Component</span> and use the
+                    <code class="codeph">#STATIC_ID#</code> placeholder syntax. You can quickly synchronize all
+                placeholders as Custom Attributes using clicking the <span class="uicontrol bold">Synchronize from
+                    Templates</span> button on the plug-in Edit page. These Custom Attributes
+                are used by Page Designer to assign values to placeholders.
+                     </p>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B__GUID-473C45D5-A9FD-4334-8741-BDC04888772A">Action Positions and Action
+                Templates</p>
+                     
+                     
+                     <p>Editing a plug-in and adding Actions enables end users to interact with
+                the Template Component. The <strong class="term">Action Template</strong> defines if the
+                template is a simple Button or displays a Menu button. The <strong class="term">Action
+                    Position</strong> defines the position of the button within the template. You
+                specify in Page Designer which action to perform on a click of the button.
+                     </p>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B__GUID-16815ADA-E434-4EF4-A3D3-F543EE260BEA">Slots</p>
+                     
+                     
+                     <div class="infobox-tip" id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B__GUID-AB9C7E14-B598-4444-8F47-9F52E630BCFE">
+                        <p class="notep1">Tip:</p>In earlier releases,
+                    <strong class="term">slots</strong> were known as <span class="uicontrol bold">Display
+                    Points</span> and later renamed to <span class="uicontrol bold">Positions</span>.
+                     </div>
+                     
+                     <p><strong class="term">Slots</strong> are placeholders in a template component markup where you can
+                place page components, such as regions, items, and buttons. By configuring which
+                page component is supported, you can use slots to restrict the placement of regions,
+                items and buttons in a template component. 
+                     </p>
+                     
+                     <p>Template component slots:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B__UL_XJ1_TY5_2BC">
+                        <li>Suport nesting of multiple components which is essential for creating more
+                    advanced template components using layered UI designs.</li>
+                        <li>Give developers the ability to limit what type of components are
+                    allowed in a template component slot, thereby providing strong template
+                    guardrails for consistent appearance.</li>
+                     </ul>
+                     
+                     <p>Impacts in Page Designer when using slots:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B__UL_EGV_31V_2BC">
+                        <li>
+                           
+                           <p>Item Control - If a slot has item control, for example, it only
+                        allows Checkbox or Radio item types:</p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B__UL_LMM_23V_2BC">
+                              <li>
+                                 
+                                 <p>An item created in the slot will default to checkbox (first
+                                available).</p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>In the Rendering tree and Layout tab, developers will be
+                                unable to drop unsupported item types. </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>In the Property Editor, unsupported item types ARE hidden under the
+                                Unsupported flag. Developers can view full list of all available
+                                item types by clicking the <span class="uicontrol bold">Type</span> select list
+                                and selecting <span class="uicontrol bold">Show Unsupported</span>.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>Developers can move unsupported item types into a slot from the
+                                Property Editor (a soft restriction).</p>
+                                 
+                              </li>
+                           </ul>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>Region Control - If a slot has region control, for example, it
+                        only allows Avatar or Static Content region types.</p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B__UL_TXS_23V_2BC">
+                              <li>
+                                 
+                                 <p>A region created in the slot will default to avatar (first
+                                available).</p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>In the Rendering tree and Layout tab, developers will be unable to
+                                move unsupported regions. </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>In the Property Editor, unsupported regions will be
+                                hidden under the Unsupported flag. Developers can view full list of
+                                all available regions by clicking the <span class="uicontrol bold">Type</span>
+                                select list and selecting <span class="uicontrol bold">Show
+                                Unsupported</span>.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>Developers can move unsupported regions in a slot from the Property
+                                Editor (a soft restriction).</p>
+                                 
+                              </li>
+                           </ul>
+                           
+                        </li>
+                     </ul>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B__GUID-A72D2EBF-8E7A-4671-A092-568BE4D7C83F">Nested Templates</p>
+                     
+                     
+                     <p><span>Oracle APEX</span> enables you to embed another Template Component within a current Template
+                Component. Nesting Template Components is a way to break templates into smaller
+                reusable components. To nest a Template Component use the use the
+                    <code class="codeph">{with/}</code> and <code class="codeph">{apply/}</code> syntax of template
+                directives.
+                     </p>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B__GUID-87AF5EAE-9774-4B96-956C-8E587A06EDEA">Viewing Template Component Examples</p>
+                     
+                     
+                     <p>The Universal Theme includes several Template Component Type
+                plug-ins:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B__UL_TFQ_11K_3XB">
+                        <li><span class="uicontrol bold">Comments</span> - Based on the classic report Comments template.
+                    Displays user comments and status updates declaratively using custom region
+                    attributes. Supports avatars.
+                        </li>
+                        <li><span class="uicontrol bold">Content Row</span> - Based on the classic report Content Row
+                    template. Displays region content and layout as a content row using custom
+                    region attributes. Supports avatars and badges.
+                        </li>
+                        <li><span class="uicontrol bold">Media List</span> - Based on the classic report Media List
+                    template. Displays region content and layout as a media list using custom region
+                    attributes. Supports avatars and badges.
+                        </li>
+                        <li><span class="uicontrol bold">Timeline</span> - Based on the classic report Timeline template.
+                    Displays a series of events by declaratively setting custom region
+                    attributes.
+                        </li>
+                     </ul>
+                     
+                     <p>To view Template Component Type plug-ins available in the go to
+                    <span class="uicontrol bold">Shared Components</span>, <span class="uicontrol bold">Templates</span>, and
+                then sort by <span class="uicontrol bold">Type</span>, <span class="uicontrol bold">Template
+                Component</span>.
+                     </p>
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B__GUID-21C0AC17-5D2B-41EF-90BB-AFAB0B9618FA">
+                     <p class="notep1">See Also:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B__UL_TN1_VQF_BXB">
+                        <li><a href="managing-templates.html#GUID-CB49179C-8D0C-4F55-962C-25CFC40DDEFF" title="View templates on the Templates page in Shared Components">Viewing Templates on the Templates Page</a></li>
+                        <li><a href="creating-plug-ins.html#GUID-2025E2A8-53E8-4101-86A6-D73DA1579A0D" title="Create a plug-in from scratch by running the Create Plug-in Wizard">Creating a Plug-in from Scratch</a></li>
+                        <li><a href="editing-plug-ins.html#GUID-E7CEF4E6-175B-466C-9068-EDB99941F909" title="Add Custom Attributes by editing the plug-in.">Adding Custom Attributes to a Plug-in</a></li>
+                        <li><a href="using-template-directives.html#GUID-596537AB-1697-4704-9193-102658452399" title="Use template directives to control how attributes that support substitution strings are processed.">Using Template Directives</a></li>
+                        <li><a href="understanding-plug-ins.html#GUID-CC88AA04-FB4D-44EB-AC4C-384188A5086B" title="Template Components are reusable UI components that work in Page Designer like any plug-in.">About Template Component Type Plug-ins</a></li>
+                     </ul>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-plug-ins.html#GUID-291C0F90-DE7A-43D5-AE30-26119CE5E490" title="Learn about plug-ins and how to find examples.">Understanding Plug-ins</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-281B25BD-8564-401E-850A-8BB6AFD8C839" name="GUID-281B25BD-8564-401E-850A-8BB6AFD8C839"></a><h3 id="HTMDB-GUID-281B25BD-8564-401E-850A-8BB6AFD8C839" class="sect3"><span class="enumeration_section">19.2.1.3 </span>Example Plug-ins
+               </h3>
+               <div>
+                  <p>View plug-in examples on apex.world and the Oracle APEX GitHub
+        repository.</p>
+                  <div class="section">
+                     
+                     <p>You can view plug-in implementation examples in the following
+                locations:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-281B25BD-8564-401E-850A-8BB6AFD8C839__UL_RVF_41D_PTB">
+                        <li>
+                           
+                           <p>Explore <a href="https://apex.world/ords/f?p=100:700" target="_blank">APEX World
+                        Plug-ins</a>.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>View Sample Plug-in in the <span>Oracle APEX</span> GitHub repository:
+                           </p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-281B25BD-8564-401E-850A-8BB6AFD8C839__UL_WK2_1CD_PTB">
+                              <li>
+                                 
+                                 <p>Go to <a href="https://github.com/oracle/apex" target="_blank">https://github.com/oracle/apex</a>.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>Under <span class="uicontrol bold">Branches</span>, select a release,
+                                and then <span class="uicontrol bold">Plug-ins</span>.
+                                 </p>
+                                 
+                              </li>
+                           </ul>
+                           
+                        </li>
+                     </ul>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-plug-ins.html#GUID-291C0F90-DE7A-43D5-AE30-26119CE5E490" title="Learn about plug-ins and how to find examples.">Understanding Plug-ins</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

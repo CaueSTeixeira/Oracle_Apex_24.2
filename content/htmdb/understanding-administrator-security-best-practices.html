@@ -1,0 +1,161 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Understanding Administrator Security Best Practices">
+      <meta name="abstract" content="Learn about security best practices for Oracle APEX administrators.">
+      <meta name="description" content="Learn about security best practices for Oracle APEX administrators.">
+      <meta name="DC.subject" content="security best practices, for administrators">
+      <meta name="keywords" content="security best practices, for administrators">
+      <meta name="DC.Relation" scheme="URI" content="managing-application-security.html#GUID-417EAE67-7A36-4AE0-816B-D28716829F96">
+      <meta name="DC.Relation" scheme="URI" content="administrator-roles.html#GUID-B5F12A10-5684-4207-BC19-0B5007B4827B">
+      <meta name="DC.Relation" scheme="URI" content="web-server-security-considerations.html#GUID-ADC526DE-7AC5-4100-9095-948D8FD712B1">
+      <meta name="DC.Relation" scheme="URI" content="manging-instance-security.html#GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17">
+      <meta name="DC.Relation" scheme="URI" content="configuring-instance-settings.html#GUID-C0DCB552-9C3E-4D7F-8F17-C693A1876F50">
+      <meta name="DC.Relation" scheme="URI" content="configuring-workspace-purge-settings.html#GUID-13D6C999-7CA6-4505-A4FE-A75520D19060">
+      <meta name="DC.Relation" scheme="URI" content="understanding-workspace-management.html#GUID-05BA697E-2C9C-4FCB-89FF-B7A6AECD0CD3">
+      <meta name="DC.Relation" scheme="URI" content="integrating-with-oracle-bi-publisher.html#GUID-8D183976-E168-486D-90B2-37F461FF0D57">
+      <meta name="DC.Relation" scheme="URI" content="advantages-of-runtime-environment.html#GUID-BB0415C2-19F4-4613-A286-46617B621298">
+      <meta name="DC.Relation" scheme="URI" content="enabling-network-services.html#GUID-8D125731-989A-4A51-AFFE-00181729F87F">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-F7EF538E-D12A-4623-A68C-6F8E6523B6B8">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about security best practices for Oracle APEX administrators.">
+      <meta name="description" content="Learn about security best practices for Oracle APEX administrators.">
+      <title>Understanding Administrator Security Best Practices</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Learn about security best practices for Oracle APEX administrators.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-application-security.html" title="Previous" type="text/html">
+      <link rel="next" href="administrator-roles.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Understanding Administrator Security Best Practices","description":"Learn about security best practices for Oracle APEX administrators.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-application-security.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="administrator-roles.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-F7EF538E-D12A-4623-A68C-6F8E6523B6B8" name="GUID-F7EF538E-D12A-4623-A68C-6F8E6523B6B8"></a><a id="HTMDB25965"></a>
+         
+         <h2 id="HTMDB-GUID-F7EF538E-D12A-4623-A68C-6F8E6523B6B8" class="sect2"><span class="enumeration_section">21.1 </span>Understanding Administrator Security Best Practices
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Learn about security best practices for <span>Oracle APEX</span> administrators.
+               </p>
+               <div class="infoboxnote" id="GUID-F7EF538E-D12A-4623-A68C-6F8E6523B6B8__GUID-6A90803B-2620-426A-93C8-759FF7223D35">
+                  <p class="notep1">Note:</p>To ensure the security and performance
+                                of your development environment, some administration functionality
+                                is not available in Oracle APEX instances running in Oracle
+                                Cloud.
+               </div>
+               <p>This section references many settings in the <span>APEX</span> Administration Services application.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="administrator-roles.html#GUID-B5F12A10-5684-4207-BC19-0B5007B4827B">About Oracle APEX Administrator Roles</a><br><span>Oracle APEX</span> includes two different types of administrators: Workspace administrators and Instance administrators.
+                  </li>
+                  <li class="ulchildlink"><a href="web-server-security-considerations.html#GUID-ADC526DE-7AC5-4100-9095-948D8FD712B1">Web Server Security Considerations</a><br>Review Oracle REST Data Services security considerations.
+                  </li>
+                  <li class="ulchildlink"><a href="manging-instance-security.html#GUID-E5BC7027-8FB5-429D-87B8-B4406629AC17">Managing Instance Security</a><br>Learn about security best practices when managing an <span>Oracle APEX</span> instance. 
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-instance-settings.html#GUID-C0DCB552-9C3E-4D7F-8F17-C693A1876F50">Configuring Instance Settings</a><br>Security best practices when configuring an <span>Oracle APEX</span> instance include determining whether to automate the creation workspaces., enabling and configuring email, configuring storage options, and creating wallets.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-workspace-purge-settings.html#GUID-13D6C999-7CA6-4505-A4FE-A75520D19060">About Configuring Workspace Purge Settings</a><br>Save storage space and improve system performance by purging inactive workspaces.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-workspace-management.html#GUID-05BA697E-2C9C-4FCB-89FF-B7A6AECD0CD3">Understanding Workspace Management</a><br>Instance administrators can define associations between workspaces and schemas. Administrators can manage developers and users at the workspace or instance-level and control user access to key components such App Builder, Team Development, and SQL Workshop, and PL/SQL editing.
+                  </li>
+                  <li class="ulchildlink"><a href="integrating-with-oracle-bi-publisher.html#GUID-8D183976-E168-486D-90B2-37F461FF0D57">About Integrating with Oracle BI Publisher</a><br>Oracle recommends that you employ Secure Sockets Layer (SSL) when integrating <span>Oracle APEX</span> with Oracle BI Publisher. Once SSL (HTTPS protocol) is configured for your Oracle BI Publisher server, you must create a wallet and specify the HTTPS protocol for the Report Server in the internal administration Environment Settings. 
+                  </li>
+                  <li class="ulchildlink"><a href="advantages-of-runtime-environment.html#GUID-BB0415C2-19F4-4613-A286-46617B621298">About the Advantages of the Oracle APEX Runtime Environment</a><br>An <span>Oracle APEX</span> runtime environment enables you to run applications, but does not provide a web interface         for administration or direct development of these applications.
+                  </li>
+                  <li class="ulchildlink"><a href="enabling-network-services.html#GUID-8D125731-989A-4A51-AFFE-00181729F87F">Enabling Network Services in Oracle Database</a><br>Database administrators must enable network services in <span>Oracle                                         Database</span> to send outbound mail, invoke web services, or use template-based PDF report printing with external print servers in <span>Oracle APEX</span>.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-F7EF538E-D12A-4623-A68C-6F8E6523B6B8__GUID-F5A8AB79-ECFB-4ECC-A148-AD7803454D1F">
+                  <p class="notep1">See Also:</p>
+                  <p> <a href="understanding-developer-security-best-practices.html#GUID-CC6B3716-C74D-4769-AA14-CE92D1E2B841" title="Learn about security best practices for Oracle APEX developers.">Understanding Developer Security Best Practices</a></p>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-application-security.html#GUID-417EAE67-7A36-4AE0-816B-D28716829F96" title="Administrators are primarily responsible for ensuring the security of the Oracle APEX installation and developers are responsible for building secure applications. Learn about how to implement best practices for APEX application security.">Managing Application Security</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

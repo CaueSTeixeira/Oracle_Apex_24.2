@@ -1,0 +1,409 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Understanding Remote Servers">
+      <meta name="abstract" content="Create a Remote Server object to store REST Data Source server information.">
+      <meta name="description" content="Create a Remote Server object to store REST Data Source server information.">
+      <meta name="DC.subject" content="Remote Server, understanding, about, Endpoint URL, populating with callback procedure, Configuration Procedure attribute, configuring, exporting, importing">
+      <meta name="keywords" content="Remote Server, understanding, about, Endpoint URL, populating with callback procedure, Configuration Procedure attribute, configuring, exporting, importing">
+      <meta name="DC.Relation" scheme="URI" content="managing-remote-server-objects.html#GUID-0CD0245A-65BD-434C-B21D-9DD82EE73C18">
+      <meta name="DC.Relation" scheme="URI" content="understanding-remote-servers.html#GUID-32BADE76-6388-4A54-8F64-15DD50D51F3A">
+      <meta name="DC.Relation" scheme="URI" content="understanding-remote-servers.html#GUID-F8CCA024-3D5E-4893-9500-900A9C1455A2">
+      <meta name="DC.Relation" scheme="URI" content="understanding-remote-servers.html#GUID-5634BD29-D41D-4D22-8E3F-023B95954239">
+      <meta name="DC.Relation" scheme="URI" content="understanding-remote-servers.html#GUID-8196BA4B-5F06-446A-A017-339D1B738E21">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-B4C8D605-832F-40D6-BC39-B2DC6A70C4A3">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Create a Remote Server object to store REST Data Source server information.">
+      <meta name="description" content="Create a Remote Server object to store REST Data Source server information.">
+      <title>Understanding Remote Servers</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Create a Remote Server object to store REST Data Source server information.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-remote-server-objects.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-a-remote-server.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Understanding Remote Servers","description":"Create a Remote Server object to store REST Data Source server information.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-remote-server-objects.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-a-remote-server.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-B4C8D605-832F-40D6-BC39-B2DC6A70C4A3" name="GUID-B4C8D605-832F-40D6-BC39-B2DC6A70C4A3"></a>
+         
+         <h2 id="HTMDB-GUID-B4C8D605-832F-40D6-BC39-B2DC6A70C4A3" class="sect2"><span class="enumeration_section">18.6.1 </span>Understanding Remote Servers
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Create a Remote Server object to store REST Data Source server
+        information.</p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="understanding-remote-servers.html#GUID-32BADE76-6388-4A54-8F64-15DD50D51F3A">About Remote Servers</a><br>Create a Remote Server object to store REST Data Source server information. 
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-remote-servers.html#GUID-F8CCA024-3D5E-4893-9500-900A9C1455A2">How APEX Stores REST Data Source Information</a><br>Learn how <span>Oracle APEX</span> stores REST Data Source information.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-remote-servers.html#GUID-5634BD29-D41D-4D22-8E3F-023B95954239">About Flexible Remote Servers</a><br>A Flexible Remote Server enables you to populate the server portion of         the Endpoint URL dynamically using a callback procedure you specify in the Configuration         Procedure attribute. 
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-remote-servers.html#GUID-8196BA4B-5F06-446A-A017-339D1B738E21">Exporting and Importing Remote Server Information</a><br>Learn about exporting and importing Remote Server information.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-B4C8D605-832F-40D6-BC39-B2DC6A70C4A3__AND-3445B3B3">
+                  <p class="notep1">See Also:</p>
+                  
+                  <p><a href="managing-REST-data-sources.html#GUID-93D7A596-03A9-48AF-9FC9-6538BCC25DED" title="Oracle APEX REST Data Sources enable developers to access to REST services or generic JSON data feeds in applications.">Managing REST Data Sources</a></p>
+                  
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-remote-server-objects.html#GUID-0CD0245A-65BD-434C-B21D-9DD82EE73C18" title="Store REST Data Source server information as a Remote Server object.">Managing Remote Servers</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-32BADE76-6388-4A54-8F64-15DD50D51F3A" name="GUID-32BADE76-6388-4A54-8F64-15DD50D51F3A"></a><h3 id="HTMDB-GUID-32BADE76-6388-4A54-8F64-15DD50D51F3A" class="sect3"><span class="enumeration_section">18.6.1.1 </span>About Remote Servers
+               </h3>
+               <div>
+                  <p>Create a Remote Server object to store REST Data Source server information. </p>
+                  <div class="section">
+                     
+                     <p><span>Oracle APEX</span> stores REST Data Source server information (for example, REST APIs) as a Remote Server object. Remote Servers can be shared among multiple REST Data Sources. Changing Remote Server properties affects all REST Sources referencing that object. For example, you can change a Remote Server's Base URL to move all associated REST Sources from a test to a production system. Since Remote Servers are stored at the workspace-level, Remote Servers are visible in all applications in a workspace.
+                     </p>
+                     
+                     <p>When you create a Remote Server you select one of the following Sever
+                Types:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-32BADE76-6388-4A54-8F64-15DD50D51F3A__UL_GCM_FVP_5MB">
+                        <li>
+                           
+                           <p><span class="uicontrol bold">REST Data Source</span> - A Remote Server for
+                        consuming a remote REST API.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="uicontrol bold">Authentication</span> -  A Remote Server used for
+                        authentication.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="uicontrol bold">Print Server</span> - A Remote Server for an
+                        external print server. You can create a Print Server in your workspace and
+                        use it in an application. By default, the print server configuration at
+                        instance level is used.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="uicontrol bold">File Server</span> - A Remote Server for remote
+                        file storage.
+                           </p>
+                           
+                        </li>
+                     </ul>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-remote-servers.html#GUID-B4C8D605-832F-40D6-BC39-B2DC6A70C4A3" title="Create a Remote Server object to store REST Data Source server information.">Understanding Remote Servers</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-F8CCA024-3D5E-4893-9500-900A9C1455A2" name="GUID-F8CCA024-3D5E-4893-9500-900A9C1455A2"></a><h3 id="HTMDB-GUID-F8CCA024-3D5E-4893-9500-900A9C1455A2" class="sect3"><span class="enumeration_section">18.6.1.2 </span>How <span>APEX</span> Stores REST Data Source Information
+               </h3>
+               <div>
+                  <p>Learn how <span>Oracle APEX</span> stores REST Data Source information.
+                  </p>
+                  <p><span>Oracle APEX</span> splits the endpoint URL of a REST Data Source into two parts. The first part is the
+            server-specific&nbsp;part and is stored as a separate entity called the <strong class="term">Remote Server</strong>. You can reuse a Remote Server with multiple REST Data Sources
+            if each one uses the same server, port, and URL Path Prefix (context root). Remote
+            Servers are stored at the workspace-level and therefore visible in all applications.
+                  </p>
+                  <p>The second part of the endpoint URL and is specific to the REST Data Source.
+            Multiple REST Data Sources can share one Remote Server, thus sharing information such
+            as&nbsp;the Base URL and Authentication. If you change Remote Server attributes, the change
+            impacts all REST Data Sources using the Remote Server. Remote Servers make it easy to
+            move a collection of REST Data Source. For example, you can move from a test system to a
+            production system by changing the URL within the Remote Server object.</p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-remote-servers.html#GUID-B4C8D605-832F-40D6-BC39-B2DC6A70C4A3" title="Create a Remote Server object to store REST Data Source server information.">Understanding Remote Servers</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-5634BD29-D41D-4D22-8E3F-023B95954239" name="GUID-5634BD29-D41D-4D22-8E3F-023B95954239"></a><h3 id="HTMDB-GUID-5634BD29-D41D-4D22-8E3F-023B95954239" class="sect3"><span class="enumeration_section">18.6.1.3 </span>About Flexible Remote Servers
+               </h3>
+               <div>
+                  <p>A Flexible Remote Server enables you to populate the server portion of
+        the Endpoint URL dynamically using a callback procedure you specify in the Configuration
+        Procedure attribute. </p>
+                  <div class="section">
+                     
+                     <p>Flexible Remote Server works as follows:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-5634BD29-D41D-4D22-8E3F-023B95954239__UL_SLP_4S2_HDC">
+                        <li>When the REST Data Source is invoked, the <span>APEX</span> Engine evaluates the Remote Server, Configuration Procedure attribute.
+                        </li>
+                        <li>If the Configuration Procedure attribute has a value, either stored
+                    in the database or in an anonymous block in the <span class="uicontrol bold">PL/SQL
+                        Code</span> attribute, the <span>APEX</span> Engine executes the procedure to fetch a collection of substitution
+                    parameters that are then used to change the Endpoint URL.
+                        </li>
+                     </ul>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-5634BD29-D41D-4D22-8E3F-023B95954239__GUID-1726312E-EA9C-4DE7-9F9E-148C73D7C51D">Flexible Remote Server Use Cases</p>
+                     
+                     
+                     <p>Common use cases for using a Flexible Remote Server include:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-5634BD29-D41D-4D22-8E3F-023B95954239__UL_NLS_2TJ_HDC">
+                        <li>
+                           
+                           <p><span class="bold">Environment dependencies</span> - A Flexible Remote Server is a
+                        good choice when the environment is dependent upon where the server or
+                        application is deployed (for example, in production, test or development
+                        instances). Instead of manually changing the Endpoint URL attribute on the
+                        Edit Remote Server page for each environment, you can use an API to change
+                        it dynamically. 
+                           </p>
+                           
+                           <div class="infobox-tip" id="GUID-5634BD29-D41D-4D22-8E3F-023B95954239__GUID-66B99F31-6401-4372-8123-641836F24F1F">
+                              <p class="notep1">Tip:</p>You can also use
+                            <code class="codeph">APPLICATION_ADMIN.SET_REMOTE_SERVER</code> procedure to change
+                        the Endpoint URL in a deployment script. See <a href="../aeapi/APEX_APPLICATION_ADMIN.SET_REMOTE_SERVER-Procedure.html#AEAPI-GUID-6D3B66D3-824A-4E01-900C-BE91C7F2BCF2" target="_blank">SET_REMOTE_SERVER
+                            Procedure</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></div>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="bold">Application data or the application user dependencies</span> - A
+                        Flexible Remote Server enables you to use the Configuration Procedure
+                        attribute to change the Endpoint URL at runtime depending on dynamic
+                        parameters. These dynamic parameters are flexible and can be based on a
+                        configuration table, items in Session State, Application Items or
+                        Substitution Items.
+                           </p>
+                           
+                           <p>The results of the Configuration Procedure are cached and reused within the
+                        same request (page view or page processing).</p>
+                           
+                        </li>
+                     </ul>
+                     
+                     <div class="infoboxnote" id="GUID-5634BD29-D41D-4D22-8E3F-023B95954239__GUID-9F377F97-EC09-4E3E-A8B2-2A006A5A3266">
+                        <p class="notep1">Note:</p>Flexible Remote Servers are only supported for <span class="uicontrol bold">REST Data
+                    Source</span> and <span class="uicontrol bold">Authentication</span> Server Types or
+                Remote Servers used in REST Enabled SQL.
+                     </div>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-5634BD29-D41D-4D22-8E3F-023B95954239__GUID-A41C5216-3969-4401-928A-06A50A29CE88">Configuring a Flexible Remote
+                Server</p>
+                     
+                     
+                     <p>To configure a Flexible Remote Server, edit the Remote Server and enter a
+                procedure name in the <span class="uicontrol bold">Configuration Procedure</span> attribute. This
+                procedure can be the name of a procedure stored in the database, stored in a
+                database package procedure, or a procedure stored in the <span class="uicontrol bold">PL/SQL
+                    Code</span> attribute. 
+                     </p>
+                     
+                     <p>This signature of the procedure must have two parameters of type:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-5634BD29-D41D-4D22-8E3F-023B95954239__UL_E2Z_LWJ_HDC">
+                        <li><code class="codeph">p_info in apex_plugin.t_remote_server_info</code></li>
+                        <li><code class="codeph">p_config in out
+                    apex_plugin.t_remote_server_config</code></li>
+                     </ul>
+                     
+                     <p>The parameter <code class="codeph">p_config</code> has two optional attributes which
+                can be changed in the configuration procedure: 
+                     </p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-5634BD29-D41D-4D22-8E3F-023B95954239__UL_PTX_QHK_HDC">
+                        <li><code class="codeph">p_config.base_url</code> -
+                        <code class="codeph"><span class="codeinlineitalic">base_url</span></code> changes the Endpoint URL.
+                        </li>
+                        <li><code class="codeph">p_config.substitutions</code> -
+                            <code class="codeph"><span class="codeinlineitalic">substitutions</span></code> assigns name/value pairs using
+                        <code class="codeph">apex_t_varchar2</code>. <span>Oracle APEX</span> substitutes each <code class="codeph">#<span class="codeinlineitalic">NAME</span>#</code> in the base url or Endpoint
+                    URL. 
+                        </li>
+                     </ul>
+                     
+                     <p>Together these two attributes determine the actual Endpoint URL the
+                Remote Server uses. </p>
+                     
+                     <div class="infobox-tip" id="GUID-5634BD29-D41D-4D22-8E3F-023B95954239__GUID-B41C58CB-2BD6-4CB3-9102-EBD4C6243491">
+                        <p class="notep1">Tip:</p>To view Configuration
+                Procedure examples, see item Help for the <span class="uicontrol bold">Configuration
+                    Procedure</span> attribute. 
+                     </div>
+                     
+                     <p>The following example changes the base URL if the application ID is
+                100:</p>
+                     <pre class="pre codeblock"><code>procedure my_server_config(
+  p_info    in  apex_plugin.t_remote_server_info,
+  p_config  out apex_plugin.t_remote_server_config )
+is
+begin
+  if v('APP_ID') = 100 then
+    p_config.base_url := 'http://example100.com';
+  else
+    p_config.base_url := 'http://example.com';
+  end if;
+end;
+</code></pre>
+                     <p>You can also can use placeholders by enclosing the "<span class="italic">name</span>" with the
+                number symbol (#) and use substitutions to replace the value in those placeholders.
+                Consider the following example:
+                     </p>
+                     <pre class="pre codeblock"><code>procedure my_server_config(
+  p_info in apex_plugin.t_remote_server_info,
+  p_config out apex_plugin.t_remote_server_config )
+is
+begin
+  p_config.base_url := 'http://example#app_id#/#tenant#.com';
+  p_config.substitutions := apex_t_varchar2();
+  apex_string.plist_put( p_config.substitutions, 'app_id', v('APP_ID') );
+  apex_string.plist_put( p_config.substitutions, 'tenant', v('TENANT') );
+end;
+</code></pre>
+                     
+                     </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-5634BD29-D41D-4D22-8E3F-023B95954239__GUID-F90716F9-10DC-4A7A-8CB3-CB52CA72B304">
+                     <p class="notep1">See Also:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-5634BD29-D41D-4D22-8E3F-023B95954239__UL_FTM_LZL_HDC">
+                        <li><a href="creating-a-remote-server.html#GUID-0C0E46FD-654A-45ED-B233-8BF7C89CFDC0" title="Create a Remote Server from Shared Components.">Creating a Remote Server</a></li>
+                        <li><a href="editing-or-deleting-a-remote-server.html#GUID-14B3F27F-E706-4654-BC85-3E8F7E7DF24C" title="Edit or delete a Remote Server from Shared Components.">Editing or Deleting a Remote Server</a></li>
+                     </ul>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-remote-servers.html#GUID-B4C8D605-832F-40D6-BC39-B2DC6A70C4A3" title="Create a Remote Server object to store REST Data Source server information.">Understanding Remote Servers</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-8196BA4B-5F06-446A-A017-339D1B738E21" name="GUID-8196BA4B-5F06-446A-A017-339D1B738E21"></a><h3 id="HTMDB-GUID-8196BA4B-5F06-446A-A017-339D1B738E21" class="sect3"><span class="enumeration_section">18.6.1.4 </span>Exporting and Importing Remote Server
+        Information
+               </h3>
+               <div>
+                  <p>Learn about exporting and importing Remote Server information.</p>
+                  <div class="section">
+                     
+                     <p>When you export an application, referenced Remote Servers are added to
+                the export file. When you import the application into another workspace, <span>APEX</span> checks whether the target workspace already contains Remote Servers with the
+                    same&nbsp;<span class="bold">static ID</span>. If a Remote Server already exists, the application uses
+                it. Otherwise the Remote Servers from the import file are created in the target
+                workspace.
+                     </p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-remote-servers.html#GUID-B4C8D605-832F-40D6-BC39-B2DC6A70C4A3" title="Create a Remote Server object to store REST Data Source server information.">Understanding Remote Servers</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

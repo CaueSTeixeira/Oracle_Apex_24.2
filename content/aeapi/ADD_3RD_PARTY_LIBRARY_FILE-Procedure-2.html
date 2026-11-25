@@ -1,0 +1,167 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="ADD_3RD_PARTY_LIBRARY_FILE Procedure (Deprecated)">
+      <meta name="DC.subject" content="ADD_3RD_PARTY_LIBRARY_FILE procedure, APEX_JAVASCRIPT">
+      <meta name="keywords" content="ADD_3RD_PARTY_LIBRARY_FILE procedure, APEX_JAVASCRIPT">
+      <meta name="DC.Relation" scheme="URI" content="APEX_JAVASCRIPT.html#GUID-D43D6DA7-9A22-4B53-8138-AC97C00C7622">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-8A31D19C-A21C-417D-B1E2-9333818BD913">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>ADD_3RD_PARTY_LIBRARY_FILE Procedure (Deprecated)</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_JAVASCRIPT.html" title="Previous" type="text/html">
+      <link rel="next" href="ADD_ATTRIBUTE-Function-Signature-1.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"ADD_3RD_PARTY_LIBRARY_FILE Procedure (Deprecated)","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_JAVASCRIPT.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="ADD_ATTRIBUTE-Function-Signature-1.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-8A31D19C-A21C-417D-B1E2-9333818BD913" name="GUID-8A31D19C-A21C-417D-B1E2-9333818BD913"></a><a id="AEAPI29395"></a><a id="AEAPI29396"></a><a id="AEAPI29397"></a><a id="AEAPI29398"></a><a id="AEAPI29394"></a>
+         
+         <h2 id="AEAPI-GUID-8A31D19C-A21C-417D-B1E2-9333818BD913" class="sect2"><span class="enumeration_section">36.1 </span>ADD_3RD_PARTY_LIBRARY_FILE Procedure (Deprecated)
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <div class="infobox-caution" id="GUID-8A31D19C-A21C-417D-B1E2-9333818BD913__GUID-ECB63076-933D-4647-9689-4C99A5B7CFF3">
+                     <p class="notep1">Caution:</p>
+                     <p>This API is deprecated and will be
+                                        removed in a future release.</p>
+                  </div>
+                  <p>This procedure adds the script tag to load a third-party JavaScript library file and also takes into account the specified CDN (content delivery network) for the application.</p>
+                  <p>Supported libraries include:</p>
+                  <ul style="list-style-type: disc;">
+                     <li>jQuery</li>
+                     <li>jQueryUI</li>
+                  </ul>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-8A31D19C-A21C-417D-B1E2-9333818BD913__GUID-CFA08CAD-E007-4E63-B805-DD3C490D1B98">Syntax</p><pre class="pre codeblock"><code>APEX_JAVASCRIPT.ADD_3RD_PARTY_LIBRARY_FILE ( 
+    p_library    IN VARCHAR2, 
+    p_file_name  IN VARCHAR2 DEFAULT NULL, 
+    p_directory  IN VARCHAR2 DEFAULT NULL, 
+    p_version    IN VARCHAR2 DEFAULT NULL,
+    p_attributes IN VARCHAR2 DEFAULT NULL );</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-8A31D19C-A21C-417D-B1E2-9333818BD913__GUID-693A56BB-28C2-4020-83D5-DF34A28CBBDA">Parameters</p>
+                  <div class="tblformal" id="GUID-8A31D19C-A21C-417D-B1E2-9333818BD913__BCEGBIBE">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="48%" id="d173724e84">Parameters</th>
+                              <th align="left" valign="bottom" width="52%" id="d173724e86">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="48%" id="d173724e90" headers="d173724e84 "><code class="codeph">p_library</code></td>
+                              <td align="left" valign="top" width="52%" headers="d173724e90 d173724e86 ">Use one of the <code class="codeph">c_library_*</code> constants.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="48%" id="d173724e99" headers="d173724e84 "><code class="codeph">p_file_name</code></td>
+                              <td align="left" valign="top" width="52%" headers="d173724e99 d173724e86 ">Specifies the file name excluding version, <code class="codeph">.min</code>, and <code class="codeph">.js</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="48%" id="d173724e111" headers="d173724e84 "><code class="codeph">p_directory</code></td>
+                              <td align="left" valign="top" width="52%" headers="d173724e111 d173724e86 ">(Optional) Directory where the file <code class="codeph">p_file_name</code> is located.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="48%" id="d173724e120" headers="d173724e84 "><code class="codeph">p_version</code></td>
+                              <td align="left" valign="top" width="52%" headers="d173724e120 d173724e86 ">(Optional) If no value is provided, then uses the same version shipped with <span>APEX</span>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="48%" id="d173724e129" headers="d173724e84 "><code class="codeph">p_attributes</code></td>
+                              <td align="left" valign="top" width="52%" headers="d173724e129 d173724e86 ">
+                                 <p>Extra attributes to add to the script tag.</p>
+                                 <div class="infoboxnote" id="GUID-8A31D19C-A21C-417D-B1E2-9333818BD913__GUID-EB26DEB8-C8F1-4C6E-8892-FEA141BDDC2B">
+                                    <p class="notep1">Note:</p>Callers are responsible for escaping this parameter.
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-8A31D19C-A21C-417D-B1E2-9333818BD913__GUID-4735FB33-2D4A-4D8B-804F-E7B02490F8FF">Example</p>
+                  <p>This example loads the JavaScript file of the Draggable feature of jQuery UI.</p><pre class="pre codeblock"><code>apex_javascript.add_3rd_party_library_file (
+     p_library   =&gt; apex_javascript.c_library_jquery_ui,
+     p_file_name =&gt; 'jquery.ui.draggable' )</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_JAVASCRIPT.html#GUID-D43D6DA7-9A22-4B53-8138-AC97C00C7622">APEX_JAVASCRIPT</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

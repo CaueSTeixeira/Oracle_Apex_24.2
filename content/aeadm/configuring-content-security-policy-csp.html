@@ -1,0 +1,123 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Configuring Content Security Policy (CSP)">
+      <meta name="abstract" content="Learn about how Content Security Policy (CSP) can help prevent or minimize the risk of certain types of security threats.">
+      <meta name="description" content="Learn about how Content Security Policy (CSP) can help prevent or minimize the risk of certain types of security threats.">
+      <meta name="DC.subject" content="security settings, configure Content Security Policy (CSP), Content Security Policy (CSP), configuring">
+      <meta name="keywords" content="security settings, configure Content Security Policy (CSP), Content Security Policy (CSP), configuring">
+      <meta name="DC.Relation" scheme="URI" content="configuring-security.html#GUID-5EC277A4-20BD-47CF-9448-46680C75593E">
+      <meta name="DC.Relation" scheme="URI" content="about-content-security-policy-csp.html#GUID-FC337E0B-1A1E-4843-A88D-86591A4206E5">
+      <meta name="DC.Relation" scheme="URI" content="types-of-csp-violations.html#GUID-E67B854E-0E8E-4D4A-B6DD-346ACEB46C8B">
+      <meta name="DC.Relation" scheme="URI" content="what-is-a-nonce.html#GUID-3F38BDC2-AEA9-44AB-9869-B32DD94C4242">
+      <meta name="DC.Relation" scheme="URI" content="using-csp-in-apex.html#GUID-FE0C8DA2-B654-423D-ABCE-D164BD3F0C20">
+      <meta name="DC.Relation" scheme="URI" content="understanding-the-csp-header.html#GUID-03BA154B-6BB7-4843-9DCE-FF2A6D4D0D51">
+      <meta name="DC.Relation" scheme="URI" content="best-practices-for-csp-compliant-development.html#GUID-60A5AA1E-94FF-4D58-8FC1-912343AEC654">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="template" content="Topic">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-B82B66C4-84AF-40DF-ABF1-F0910F35E6E1">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about how Content Security Policy (CSP) can help prevent or minimize the risk of certain types of security threats.">
+      <meta name="description" content="Learn about how Content Security Policy (CSP) can help prevent or minimize the risk of certain types of security threats.">
+      <title>Configuring Content Security Policy (CSP)</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Learn about how Content Security Policy (CSP) can help prevent or minimize the risk of certain types of security threats.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="configuring-http-attributes.html" title="Previous" type="text/html">
+      <link rel="next" href="about-content-security-policy-csp.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Configuring Content Security Policy (CSP)","description":"Learn about how Content Security Policy (CSP) can help prevent or minimize the risk of certain types of security threats.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="configuring-http-attributes.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="about-content-security-policy-csp.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-B82B66C4-84AF-40DF-ABF1-F0910F35E6E1" name="GUID-B82B66C4-84AF-40DF-ABF1-F0910F35E6E1"></a>
+         
+         <h2 id="AEADM-GUID-B82B66C4-84AF-40DF-ABF1-F0910F35E6E1" class="sect2"><span class="enumeration_section">3.4.3 </span>Configuring Content Security Policy
+        (CSP)
+         </h2>
+         <div class="ind">
+            <p>Learn about how Content Security Policy (CSP) can help prevent or minimize
+                the risk of certain types of security threats.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="about-content-security-policy-csp.html#GUID-FC337E0B-1A1E-4843-A88D-86591A4206E5">About Content Security Policy (CSP)</a><br>Learn about Content Security Policy (CSP).
+                  </li>
+                  <li class="ulchildlink"><a href="types-of-csp-violations.html#GUID-E67B854E-0E8E-4D4A-B6DD-346ACEB46C8B">Types of CSP Violations</a><br>Learn about types of CSP violations.
+                  </li>
+                  <li class="ulchildlink"><a href="what-is-a-nonce.html#GUID-3F38BDC2-AEA9-44AB-9869-B32DD94C4242">What is a Nonce?</a><br>Learn about a nonce and how it works.
+                  </li>
+                  <li class="ulchildlink"><a href="using-csp-in-apex.html#GUID-FE0C8DA2-B654-423D-ABCE-D164BD3F0C20">Using Content Security Policy (CSP) in APEX</a><br>Learn how to configure CSP for an application.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-the-csp-header.html#GUID-03BA154B-6BB7-4843-9DCE-FF2A6D4D0D51">Understanding the CSP Header</a><br>A CSP header is structured into directives that specify which sources are         allowed for different types of resources.
+                  </li>
+                  <li class="ulchildlink"><a href="best-practices-for-csp-compliant-development.html#GUID-60A5AA1E-94FF-4D58-8FC1-912343AEC654">Best Practices for CSP Compliant Development</a><br>Learn about best practices for CSP compliance.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="configuring-security.html#GUID-5EC277A4-20BD-47CF-9448-46680C75593E" title="Instance administrators can configure instance security, including service-level security, configuring support for Real Application Security, configuring session time out, preventing browser attacks by isolating workspaces, excluding domains from regions and Web services, configuring authentication controls, creating strong password policies, and managing authorized URLs.">Configuring Security</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

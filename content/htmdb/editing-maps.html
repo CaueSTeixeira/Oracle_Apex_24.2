@@ -1,0 +1,834 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Editing Maps">
+      <meta name="abstract" content="Edit map region components in Page Designer.">
+      <meta name="description" content="Edit map region components in Page Designer.">
+      <meta name="DC.subject" content="maps, viewing in Page Designer, editing map region, adding layer to existing map, controlling layer visibility, connecting map and report">
+      <meta name="keywords" content="maps, viewing in Page Designer, editing map region, adding layer to existing map, controlling layer visibility, connecting map and report">
+      <meta name="DC.Relation" scheme="URI" content="creating-maps.html#GUID-ACA5ED1C-7031-42BF-90B1-98938FB6DC17">
+      <meta name="DC.Relation" scheme="URI" content="editing-maps.html#GUID-4798DF71-064C-4730-B559-93D4D4E8C144">
+      <meta name="DC.Relation" scheme="URI" content="editing-maps.html#GUID-65B7E052-A10A-4E9A-A36F-0348572AADCE">
+      <meta name="DC.Relation" scheme="URI" content="editing-maps.html#GUID-EDD99C3F-9497-4687-A831-4738B75CD59E">
+      <meta name="DC.Relation" scheme="URI" content="editing-maps.html#GUID-4FD96B1D-1E14-42CB-AE19-583109945640">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-977B6B35-E7C8-4703-A69E-EF7E286066FB">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Edit map region components in Page Designer.">
+      <meta name="description" content="Edit map region components in Page Designer.">
+      <title>Editing Maps</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Edit map region components in Page Designer.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="adding-map-to-new-page.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-custom-map-backgrounds.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Editing Maps","description":"Edit map region components in Page Designer.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="adding-map-to-new-page.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-custom-map-backgrounds.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-977B6B35-E7C8-4703-A69E-EF7E286066FB" name="GUID-977B6B35-E7C8-4703-A69E-EF7E286066FB"></a>
+         
+         <h2 id="HTMDB-GUID-977B6B35-E7C8-4703-A69E-EF7E286066FB" class="sect2"><span class="enumeration_section">10.4.6 </span>Editing Maps
+         </h2>
+         <div class="ind">
+            <p>Edit map region components in Page Designer.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="editing-maps.html#GUID-4798DF71-064C-4730-B559-93D4D4E8C144">Viewing and Editing a Map in Page Designer</a><br>View and edit the components that comprise a map by viewing attributes in         Page Designer.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-maps.html#GUID-65B7E052-A10A-4E9A-A36F-0348572AADCE">Adding a New Layer to an Existing Map</a><br>Edit the map region defintion to add more spatial geometry         objects.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-maps.html#GUID-EDD99C3F-9497-4687-A831-4738B75CD59E">Controlling Layer Visibility</a><br>Control layer visibility by editing attributes in Page Designer.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-maps.html#GUID-4FD96B1D-1E14-42CB-AE19-583109945640">Connecting a Map Region with a Report Region</a><br>Connect a map region with a classic report region.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="creating-maps.html#GUID-ACA5ED1C-7031-42BF-90B1-98938FB6DC17" title="Create maps that visualize location data (real coordinates) based on data in a table.">Creating Maps</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-4798DF71-064C-4730-B559-93D4D4E8C144" name="GUID-4798DF71-064C-4730-B559-93D4D4E8C144"></a><h3 id="HTMDB-GUID-4798DF71-064C-4730-B559-93D4D4E8C144" class="sect3"><span class="enumeration_section">10.4.6.1 </span>Viewing and Editing a Map in Page
+        Designer
+               </h3>
+               <div>
+                  <p>View and edit the components that comprise a map by viewing attributes in
+        Page Designer.</p>
+                  <div class="section">A map features a map region which contains spatial geometry layers.
+            This topic explores an earthquake map built on a local table named
+                <code class="codeph">EARTHQUAKE_TABLE</code> which features a Heat Map spatial geometry layer. 
+                  </div>
+                  <div class="section">To view or edit a map in Page Designer:</div>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a" id="GUID-4798DF71-064C-4730-B559-93D4D4E8C144__SUBSTEPS_GFN_GSP_GJB">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears displaying Page attributes in the
+                    Property Editor (right pane).</div>
+                     </li>
+                     <li class="stepexpand"><span>Review the map region.</span><ol type="a" id="GUID-4798DF71-064C-4730-B559-93D4D4E8C144__SUBSTEPS_Z3Y_PCR_BPB">
+                           <li class="substepexpand"><span>In the Rendering tab select the Map region. The Property Editor (right
+                            pane) displays two tabs: <span class="uicontrol bold">Region</span> and
+                                <span class="uicontrol bold">Attributes</span>. </span><div><img id="GUID-4798DF71-064C-4730-B559-93D4D4E8C144__IMAGE_MQY_31Z_BPB" height="520" width="1044" src="img/map_region_attributes.png" alt="Description of map_region_attributes.png follows" title="Description of map_region_attributes.png follows" longdesc="img_text/map_region_attributes.html"><br><a href="img_text/map_region_attributes.html">Description of the illustration map_region_attributes.png</a><p>In the previous example, note that
+                                Identification, Name indicates the map is named
+                                    <span class="uicontrol bold">Earthquake Map</span> and the Type is
+                                    <span class="uicontrol bold">Map</span>.
+                                 </p>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>In the Property Editor, click the <span class="uicontrol bold">Attributes</span>
+                            tab.</span><div><img id="GUID-4798DF71-064C-4730-B559-93D4D4E8C144__IMAGE_ZL4_ZBZ_BPB" height="592" width="991" src="img/map_attributes.png" alt="Description of map_attributes.png follows" title="Description of map_attributes.png follows" longdesc="img_text/map_attributes.html"><br><a href="img_text/map_attributes.html">Description of the illustration map_attributes.png</a><p>Map Attributes determine basic map
+                                characteristics. In the previous example, note the attributes under
+                                    <span class="uicontrol bold">Controls</span>. Controls determine the various
+                                ways users can change the map display at runtime, for
+                                example:
+                                 </p>
+                                 <ul style="list-style-type: disc;" id="GUID-4798DF71-064C-4730-B559-93D4D4E8C144__UL_DVT_32F_JPB">
+                                    <li>
+                                       
+                                       <p>Navigation Bar - Options include <span class="uicontrol bold">None</span>,
+                                            <span class="uicontrol bold">Zoom Only</span> and <span class="uicontrol bold">Zoom and
+                                            Compass</span>.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Navigation Bar Position - <span class="uicontrol bold">Start</span>
+                                        positions the navigation bar on the starting position
+                                        (typically to the left side) of the map.
+                                            <span class="uicontrol bold">End</span> positions the navigation bar
+                                        on the ending position (typically to the right side) of the
+                                        map.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Mousewheel Zoom - Zoom in or out by using the mouse
+                                        wheel.</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Rectangle Zoom - Zoom the map to an area by drawing a
+                                        rectangle onto the map.</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Scale Bar - Display a scale bar on the map.</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Overview Map - Display an overview map in the lower
+                                        right.</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Infinite Map - Enables infinite map scrolling.</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Get Browser - Displays the user's current location from their
+                                        browser.</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Circle Tool - Enables end users to draw a circle onto the
+                                        map. When finished, an event is triggered, so that the
+                                        circle can be processed by Dynamic Actions or JavaScript
+                                        code.</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Distance Tool - Enables end users to measure distances
+                                        between points on the map.</p>
+                                       
+                                    </li>
+                                 </ul>
+                                 <p>Note that in the previous example only some of these controls
+                                are enabled.</p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Review the map <span class="uicontrol bold">Layers</span>. Maps have spatial geometry
+                    objects (or layers) which are drawn on the map based on data in a table.</span><ol type="a" class="single-step" id="GUID-4798DF71-064C-4730-B559-93D4D4E8C144__SUBSTEPS_FPX_XCR_BPB">
+                           <li class="substepexpand"><span>In the Rendering tab, select the Layer, <span class="uicontrol bold">Earthquake
+                                Map</span>.</span><div>
+                                 <p>Note that the following example has a Heat
+                                Map layer which is sourced from a local database using a SQL Query.
+                                </p><img id="GUID-4798DF71-064C-4730-B559-93D4D4E8C144__IMAGE_QWK_ZCZ_BPB" height="609" width="1001" src="img/map_layer_att_source.png" alt="Description of map_layer_att_source.png follows" title="Description of map_layer_att_source.png follows" longdesc="img_text/map_layer_att_source.html"><br><a href="img_text/map_layer_att_source.html">Description of the illustration map_layer_att_source.png</a></div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Review the Column Mappings. In the Property Editor, scroll down to Column
+                    Mappings.</span><div><img id="GUID-4798DF71-064C-4730-B559-93D4D4E8C144__IMAGE_IXG_NNZ_BPB" height="507" width="1003" src="img/map_layer_att_columns.png" alt="Description of map_layer_att_columns.png follows" title="Description of map_layer_att_columns.png follows" longdesc="img_text/map_layer_att_columns.html"><br><a href="img_text/map_layer_att_columns.html">Description of the illustration map_layer_att_columns.png</a><p>In the previous example, note that the Column Mapping
+                        attributes indicate the Geometry Column Data Type is
+                            <span class="uicontrol bold">SDO_GEOMETRY</span> and the Geometry Column is
+                            <span class="uicontrol bold">GEOMETRY</span>.
+                           </p>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-maps.html#GUID-977B6B35-E7C8-4703-A69E-EF7E286066FB" title="Edit map region components in Page Designer.">Editing Maps</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-65B7E052-A10A-4E9A-A36F-0348572AADCE" name="GUID-65B7E052-A10A-4E9A-A36F-0348572AADCE"></a><h3 id="HTMDB-GUID-65B7E052-A10A-4E9A-A36F-0348572AADCE" class="sect3"><span class="enumeration_section">10.4.6.2 </span>Adding a New Layer to an Existing Map
+               </h3>
+               <div>
+                  <p>Edit the map region defintion to add more spatial geometry
+        objects.</p>
+                  <div class="section">Maps have spatial geometry objects which are drawn on the map based on data in
+            a table. This topic demonstates how to add a polygon object layer to an existing map
+            that identifies the county. This topic includes an example which adds an object layer
+            named Countries sourced from a local table named <code class="codeph">COUNTRIES_TABLE</code> and
+            mapped to the <code class="codeph">GEOMETRY</code> column.
+                  </div>
+                  <div class="section">To add a new object layer to an existing map:</div>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a" id="GUID-65B7E052-A10A-4E9A-A36F-0348572AADCE__SUBSTEPS_GFN_GSP_GJB">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears displaying Page attributes in the
+                    Property Editor (right pane).</div>
+                     </li>
+                     <li class="stepexpand"><span>Add a spatial geometry layer. In the Rendering tab, right-click
+                        <span class="uicontrol bold">Layers</span> and select <span class="uicontrol bold">Create
+                    Layer</span>.</span></li>
+                     <li class="stepexpand"><span>Page Designer indicates what to do next. If there is an error, the Show
+                    Messages icon displays in the Page Developer toolbar.</span><ol type="a" id="GUID-65B7E052-A10A-4E9A-A36F-0348572AADCE__SUBSTEPS_L54_FCN_QMB">
+                           <li class="substepexpand"><span>Click the <span class="uicontrol bold">Show Messages</span> icon on the Page
+                            Designer toolbar.</span><div>The Messages dialog displays errors that must be
+                            addressed.</div>
+                           </li>
+                           <li class="substepexpand"><span>Select an error to highlight the associated attribute in the Property
+                            Editor.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Edit the Identification attributes: </span><ol type="a" id="GUID-65B7E052-A10A-4E9A-A36F-0348572AADCE__SUBSTEPS_DKP_CXR_BPB">
+                           <li><span>Identification, Name - Enter a descriptive name (for example,
+                                <span class="uicontrol bold">Countries</span>).</span></li>
+                           <li><span>Identification, Layer Type - Select spatial geometry type (for example,
+                                <span class="uicontrol bold">Polygons</span>).</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Edit the Source attributes.</span><ol type="a" id="GUID-65B7E052-A10A-4E9A-A36F-0348572AADCE__SUBSTEPS_YD1_FCS_BPB">
+                           <li><span>Source, Location - Determines the location of the date (for example,
+                                <span class="uicontrol bold">Local Database</span>.</span></li>
+                           <li><span>Source, Type  - Select how the data is queried (for example,
+                                <span class="uicontrol bold">Table / View</span>.</span></li>
+                           <li><span>Source, Table Name - Select the table (for example,
+                                <code class="codeph">COUNTRIES_TABLE</code>).</span></li>
+                        </ol>
+                        <div><img id="GUID-65B7E052-A10A-4E9A-A36F-0348572AADCE__IMAGE_XQ4_LTZ_BPB" height="516" width="1056" src="img/map_edit_region_source.png" alt="Description of map_edit_region_source.png follows" title="Description of map_edit_region_source.png follows" longdesc="img_text/map_edit_region_source.html"><br><a href="img_text/map_edit_region_source.html">Description of the illustration map_edit_region_source.png</a></div>
+                     </li>
+                     <li class="stepexpand"><span>Edit the Column Mapping attributes:</span><ol type="a" id="GUID-65B7E052-A10A-4E9A-A36F-0348572AADCE__SUBSTEPS_OYC_HXR_BPB">
+                           <li><span>Column Mapping, Geometry Column Data Type - Select the data type of the
+                            geometry column (for example,
+                            <span class="uicontrol bold">SDO_GEOMETRY</span>).</span></li>
+                           <li><span>Column Mapping, Geometry Column - Select the data type of the geometry
+                            column (for example, <span class="uicontrol bold">GEOMETRY</span>).</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Edit the Appearance attributes:</span><ol type="a" id="GUID-65B7E052-A10A-4E9A-A36F-0348572AADCE__SUBSTEPS_TXS_GXR_BPB">
+                           <li><span>Appearance, Use Color Scheme - Specify whether to use a Color Scheme
+                            for this layer. A color scheme is a list of colors. Based on a value and
+                            the minimum and maximum values, the map widget will pick the actual
+                            display color for this object from the list. In the example that
+                            follows, this option is disabled.</span></li>
+                           <li><span>Appearance, Fill Color - Specify the fill color.</span></li>
+                           <li><span>Appearance, Fill Opacity - Specify fill opacity. Ranges from zero
+                            (fully transparent) to 1.0 (opaque).</span></li>
+                           <li><span>Appearance, Stroke Color - Specify the stroke color.</span></li>
+                        </ol>
+                        <div><img id="GUID-65B7E052-A10A-4E9A-A36F-0348572AADCE__IMAGE_SDS_R5Z_BPB" height="505" width="1046" src="img/map_edit_region_column.png" alt="Description of map_edit_region_column.png follows" title="Description of map_edit_region_column.png follows" longdesc="img_text/map_edit_region_column.html"><br><a href="img_text/map_edit_region_column.html">Description of the illustration map_edit_region_column.png</a></div>
+                     </li>
+                     <li class="stepexpand"><span>Configure the Tool Tip. The Tooltip displays when the user's mouse hovers over
+                    a polygon. The following example uses an HTML expression with column
+                    substitutions. However, you can also use the Template Directives, as with the
+                    Cards Region type.</span><ol type="a" id="GUID-65B7E052-A10A-4E9A-A36F-0348572AADCE__SUBSTEPS_D1M_TYR_BPB">
+                           <li class="substepexpand"><span>Tooltip, Advanced Formatting - Specify whether the tooltip displays
+                            using a column or advanced formatting using HTML expressions and
+                            supported substitution strings. This example enables <span class="uicontrol bold">Advanced
+                                Formatting</span>.</span></li>
+                           <li class="substepexpand"><span>Appearance, HTML Expression - Enter HTML expressions to be shown as
+                            tooltip when hovering over an object on the map. Use
+                                <code class="codeph">&amp;COLUMN.</code> syntax to show column values in HTML.
+                            For example:</span><div>
+                                 <pre class="pre codeblock"><code>Country Name&lt;br&gt;
+&lt;b&gt;&amp;COUNTRY_NAME. (&amp;ISO_A2.)&lt;/b&gt;</code></pre>
+                                 </div>
+                           </li>
+                        </ol>
+                        <div>
+                           
+                           <div class="infobox-tip" id="GUID-65B7E052-A10A-4E9A-A36F-0348572AADCE__GUID-7FBE4A5A-F4DD-4C01-B18E-13B4B970BC9A">
+                              <p class="notep1">Tip:</p>For more
+                        information on the supported Template Directives, see <a href="https://docs.oracle.com/en/database/oracle/apex/22.1/aexjs/apex.util.html#.applyTemplate" target="_blank">applyTemplate</a> in <span><cite>Oracle APEX JavaScript
+                                        API Reference</cite></span>.
+                           </div>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Legend, Enable to Hide - Determines whether layer visibility can be toggled by
+                    clicking layer name in the legend. Prevent the legend from hiding the country
+                    polygons. Disable <span class="uicontrol bold">Enable to Hide</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save and Run Page</span>.</span><div>
+                           <p>The map appears showing two layers: Earthquake
+                        Heat Map and Countries.</p><img id="GUID-65B7E052-A10A-4E9A-A36F-0348572AADCE__IMAGE_UVK_X5Z_BPB" height="471" width="882" src="img/sample_map_two_layers.png" alt="Description of sample_map_two_layers.png follows" title="Description of sample_map_two_layers.png follows" longdesc="img_text/sample_map_two_layers.html"><br><a href="img_text/sample_map_two_layers.html">Description of the illustration sample_map_two_layers.png</a></div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-maps.html#GUID-977B6B35-E7C8-4703-A69E-EF7E286066FB" title="Edit map region components in Page Designer.">Editing Maps</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-EDD99C3F-9497-4687-A831-4738B75CD59E" name="GUID-EDD99C3F-9497-4687-A831-4738B75CD59E"></a><h3 id="HTMDB-GUID-EDD99C3F-9497-4687-A831-4738B75CD59E" class="sect3"><span class="enumeration_section">10.4.6.3 </span>Controlling Layer Visibility
+               </h3>
+               <div>
+                  <p>Control layer visibility by editing attributes in Page Designer.</p>
+                  <div class="p">This topic assumes you have a map that has two spatial geometry objects layers:
+            Countries and Earthquake Map. The Countries layer is based on a local table named
+                <code class="codeph">COUNTRIES_TABLE</code>.  Earthquake Map is sourced from a local table
+            named <code class="codeph">EARTHQUAKE_TABLE</code> and  features a Heat Map spatial geometry
+            layer.
+                  </div>
+                  <div class="section">This task demonstrates how to attributes in Page Designer and control the
+            visibility of the Earthquake Map object layer. In this topic you specify zoom levels and
+            add a server-side condition that specifies that only earthquakes with a magnitude of
+            greater than two display. </div>
+                  <div class="section">To control layer visibility:</div>
+                  <ol>
+                     <li class="stepexpand"><span>View the map page in Page Designer:</span><div>
+                           <p>Page Designer appears. In the following example,
+                        the map has two spatial geometry objects layers: Countries and Earthquake
+                        Map.</p><img id="GUID-EDD99C3F-9497-4687-A831-4738B75CD59E__IMAGE_EPZ_JFM_LPB" height="458" width="987" src="img/quake_map_2_layers.png" alt="Description of quake_map_2_layers.png follows" title="Description of quake_map_2_layers.png follows" longdesc="img_text/quake_map_2_layers.html"><br><a href="img_text/quake_map_2_layers.html">Description of the illustration quake_map_2_layers.png</a></div>
+                        <div> </div>
+                     </li>
+                     <li class="stepexpand"><span>In the Rendering tab (left pane), under <span class="uicontrol bold">Layers</span>, select
+                        <span class="uicontrol bold">Earthquake Map</span>.</span><div>Layer attributes display in the Property
+                    Editor.</div>
+                     </li>
+                     <li class="stepexpand"><span>In the Property Editor, edit Zoom Levels attributes: </span><div>
+                           
+                           <p>Zoom Levels must have a Minimum value of 1 and a Maximum value of 18.</p>
+                           
+                        </div>
+                        <ol type="a" id="GUID-EDD99C3F-9497-4687-A831-4738B75CD59E__SUBSTEPS_DKP_CXR_BPB">
+                           <li class="substepexpand"><span>Zoom Levels, Minimum - Specify the Minimum zoom level for this layer to
+                            become visible ( for example, enter <code class="codeph">1</code>).</span></li>
+                           <li class="substepexpand"><span>Zoom Levels, Maximum - Specify the Maximum zoom level for this layer to
+                            become visible (for example, enter <code class="codeph">8</code>).</span><div><img id="GUID-EDD99C3F-9497-4687-A831-4738B75CD59E__IMAGE_I54_NFM_LPB" height="542" width="987" src="img/quake_map_zoom.png" alt="Description of quake_map_zoom.png follows" title="Description of quake_map_zoom.png follows" longdesc="img_text/quake_map_zoom.html"><br><a href="img_text/quake_map_zoom.html">Description of the illustration quake_map_zoom.png</a><p>These settings decrease the available zoom
+                                levels from the default (1 to 18) to 1 to 8. When the user zooms
+                                outside of specified Zoom Levels, the layer disappears.</p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Create a server-side condition:</span><ol type="a" id="GUID-EDD99C3F-9497-4687-A831-4738B75CD59E__SUBSTEPS_KDY_5XL_LPB">
+                           <li class="substepexpand"><span>Server-side Condition, Type - Select
+                            <span class="uicontrol bold">Expression</span>.</span></li>
+                           <li class="substepexpand"><span>Server-side Condition, PL/SQL Expression - Enter <code class="codeph">:MAG &gt;
+                                2</code></span></li>
+                           <li class="substepexpand"><span>Server-side Condition, Execute Condition - Select <span class="uicontrol bold">For Each
+                                Row</span>.</span><div><img id="GUID-EDD99C3F-9497-4687-A831-4738B75CD59E__IMAGE_MGW_QFM_LPB" height="540" width="982" src="img/quake_map_server_condition.png" alt="Description of quake_map_server_condition.png follows" title="Description of quake_map_server_condition.png follows" longdesc="img_text/quake_map_server_condition.html"><br><a href="img_text/quake_map_server_condition.html">Description of the illustration quake_map_server_condition.png</a></div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save and Run Page</span> to view the application runtime.
+                    and only eight zoom levels are available.</span><div>The map appears. Only eight zoom levels are available and
+                    only earthquakes with a magnitude greater than 2 display.</div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-maps.html#GUID-977B6B35-E7C8-4703-A69E-EF7E286066FB" title="Edit map region components in Page Designer.">Editing Maps</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640" name="GUID-4FD96B1D-1E14-42CB-AE19-583109945640"></a><h3 id="HTMDB-GUID-4FD96B1D-1E14-42CB-AE19-583109945640" class="sect3"><span class="enumeration_section">10.4.6.4 </span>Connecting a Map Region with a Report
+        Region
+               </h3>
+               <div>
+                  <p>Connect a map region with a classic report region.</p>
+                  <div class="section">
+                     
+                     <p>This topic explains how to connect a map region with a classic report so that whenever the map region changes (that is, moves or zooms in or out), the report region refreshes to reflect the change. In order to connect a map region with a report region, this example creates a page which includes the following:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__UL_AWS_3SH_KPB">
+                        <li>A map containing an object layer named <code class="codeph">Earthquake Map</code> sourced from a local table named <code class="codeph">EARTHQUAKE_TABLE</code>.
+                        </li>
+                        <li>A classic report based on a SQL query also based on <code class="codeph">EARTHQUAKE_TABLE</code>.
+                        </li>
+                        <li>To sync the map with the report, a hidden page item used to maintain the current map status (also known as a <strong class="term">bounding box</strong>). A bounding box (usually shortened to <strong class="term">bbox</strong>) is an area defined by two longitudes and two latitudes.
+                        </li>
+                        <li>A dynamic action to refresh the report as the map display changes.</li>
+                     </ul>
+                     
+                  </div>
+                  <div class="p">
+                     
+                     <div class="infoboxnote" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__GUID-6AA16D03-996B-4B15-88B9-8DBCFF9C92CC">
+                        <p class="notep1">Note:</p> Because of a restrictions within Oracle Spatial, this example only works if the map shows less than half of the earth. Therefore, the report will not refresh for zoom levels 1 and 2 of the map. See <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmdb&id=SPATL-GUID-C3573533-1E3E-42BC-9C43-45AA09EDE150" target="_blank">Coordinate Systems (Spatial Reference Systems)</a> in <span><cite>Oracle Spatial Developer's
+                                        Guide</cite></span>.
+                     </div>
+                     
+                  </div>
+                  <p>To connect map with a report region:</p>
+                  <ol id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__STEPS_VPM_CF3_KPB">
+                     <li class="stepexpand"><span>Run the Create Application Wizard and create an application.</span></li>
+                     <li class="stepexpand"><span>Run the Create Page Wizard and create a new map page:</span><ol type="a" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__SUBSTEPS_P2F_PF3_KPB">
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Create
+                            Page</span>.</span><div><span class="uicontrol bold">Create a Page</span> appears and features
+                            three tabs: <span class="uicontrol bold">Component</span>,
+                                <span class="uicontrol bold">Feature</span>, and <span class="uicontrol bold">Legacy
+                                Pages</span>.
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Under Component, select <span class="uicontrol bold">Map</span>.</span></li>
+                           <li class="substepexpand"><span>Page Definition:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__UL_QM3_FT3_M5B">
+                                    <li>Name - Specify a text name for this page (for example,
+                                        <code class="codeph">Earthquake Map</code>).
+                                    </li>
+                                    <li>Page Mode - Accept the default
+                                    <span class="uicontrol bold">Normal</span>.
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Data Source:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__UL_TBW_VMJ_KPB">
+                                    <li>Data Source - Select a Data Source for the page (for
+                                    example, <span class="uicontrol bold">Local Database</span>).
+                                    </li>
+                                    <li>Source Type - Specify the source of the new page
+                                    (for example, <span class="uicontrol bold">Table</span>).
+                                    </li>
+                                    <li>Table/View Name - Select a table on which to build
+                                    the map (for example,
+                                    <span class="uicontrol bold">EARTHQUAKE_TABLE</span>).
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Navigation - Expand the region and enable or disable navigation. If
+                            either flag is enabled, additional attributes appear. To learn more
+                            about an attribute, see field-level Help.</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                           <li class="substepexpand"><span>Map Style - Select the spatial geometry layer type (for example,
+                                <span class="uicontrol bold">Points</span>).</span></li>
+                           <li class="substepexpand"><span>Map Attributes:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__UL_V5V_WF3_KPB">
+                                    <li>Geometry Column Type - Select how spatial objects are
+                                    sourced. (for example, <span class="uicontrol bold">Geometry
+                                    Column</span>).
+                                    </li>
+                                    <li>Geometry Column - Pick the spatial geometry column
+                                    (for example, <span class="uicontrol bold">GEOMETRY</span>).
+                                    </li>
+                                    <li>Tooltip Column - Select the column to be used as
+                                    tooltip (for example, <span class="uicontrol bold">MAG</span>).
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Create Page</span>.</span></li>
+                           <li class="substepexpand"><span>If you run the page, an earthquake map appears. </span><div><img id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__IMAGE_R3L_5ZP_KPB" height="505" width="919" src="img/quake_map.png" alt="Description of quake_map.png follows" title="Description of quake_map.png follows" longdesc="img_text/quake_map.html"><br><a href="img_text/quake_map.html">Description of the illustration quake_map.png</a></div>
+                           </li>
+                           <li class="substepexpand"><span>Return to Page Designer. Click <span class="uicontrol bold">Page X</span> on the
+                            Runtime Developer toolbar, where <span class="italic">X</span> is the page number.</span></li>
+                        </ol>
+                        <div>Page Designer appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Add a classic report adjacent to the map:</span><ol type="a" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__SUBSTEPS_HGB_PR3_KPB">
+                           <li class="substepexpand"><span>In the Rendering tab, select <span class="uicontrol bold">Earthquake Map</span>
+                            region.</span></li>
+                           <li class="substepexpand"><span>In the Gallery, Regions tab at the bottom of the central pane, locate
+                                <span class="uicontrol bold">Classic Report</span>. </span></li>
+                           <li class="substepexpand"><span>Right-click <span class="uicontrol bold">Classic Report</span> and select
+                                <span class="uicontrol bold">Add To</span>, <span class="uicontrol bold">Body</span>,
+                                <span class="uicontrol bold">Earthquake Map</span>, and then <span class="uicontrol bold">Column
+                                after</span>.</span><div>A New Classic Report region appears next to the
+                            Earthquake Map in the Layout tab.</div>
+                           </li>
+                           <li class="substepexpand"><span>In the Property Editor, edit the following Region attributes:</span><div>
+                                 <ul style="list-style-type: disc;" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__UL_B5Z_HZ3_KPB">
+                                    <li>Identification, Title - Enter <code class="codeph">Earthquake Table</code></li>
+                                    <li>Source, Type - Select <span class="uicontrol bold">SQL Query</span>.
+                                    </li>
+                                    <li>Source, SQL Query - Enter:<pre class="pre codeblock"><code>select id, title, mag
+from earthquake_table
+where mag &gt; 3</code></pre></li>
+                                    <li>Layout, Sequence - Enter <code class="codeph">20</code></li>
+                                 </ul><img id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__IMAGE_UC2_T1Q_KPB" height="630" width="1048" src="img/quake_rpt_region_att.png" alt="Description of quake_rpt_region_att.png follows" title="Description of quake_rpt_region_att.png follows" longdesc="img_text/quake_rpt_region_att.html"><br><a href="img_text/quake_rpt_region_att.html">Description of the illustration quake_rpt_region_att.png</a></div>
+                           </li>
+                           <li class="substepexpand"><span>Edit the Classic Report region Attributes:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__UL_YSB_ZZ3_KPB">
+                                    <li>Click the <span class="uicontrol bold">Attributes</span> tab.
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Messages, When No Data Found - Enter:</p>
+                                       
+                                       <p><code class="codeph">No features on the map. If you're zoomed
+                                            out to the whole earth, zoom in to see
+                                        data.</code></p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Save and Run Page</span>.</span><div>
+                                 <p>The new classic report displays to the
+                                right of the earthquake map.</p><img id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__IMAGE_QHH_X1Q_KPB" height="737" width="1033" src="img/quake_map_rpt.png" alt="Description of quake_map_rpt.png follows" title="Description of quake_map_rpt.png follows" longdesc="img_text/quake_map_rpt.html"><br><a href="img_text/quake_map_rpt.html">Description of the illustration quake_map_rpt.png</a></div>
+                           </li>
+                           <li class="substepexpand"><span>Return to Page Designer. Click <span class="uicontrol bold">Page X</span> on the
+                            Runtime Developer toolbar, where <span class="italic">X</span> is the page number.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Add a hidden page item to maintain the current map status (also known as a
+                        <strong class="term">bounding box</strong>).</span><ol type="a" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__SUBSTEPS_ABR_KFJ_KPB">
+                           <li class="substepexpand"><span>In the Rendering tab, right-click <span class="uicontrol bold">Earthquake
+                                Table</span> and select <span class="uicontrol bold">Create Page Item
+                                Below</span>.</span></li>
+                           <li class="substepexpand"><span>Edit the following Page Item attributes in the Property Editor:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__UL_RRC_5FJ_KPB">
+                                    <li>Identification, Name - Enter
+                                        <code class="codeph">PX_BBOX</code>, where <span class="italic">X</span> is the page
+                                    number.
+                                    </li>
+                                    <li>Identification, Type - Select <span class="uicontrol bold">Hidden</span>.
+                                    </li>
+                                    <li>Settings, Value Protected - Disable this option.</li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Update the Earthquake Map region:</span><ol type="a" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__SUBSTEPS_FVT_HGJ_KPB">
+                           <li><span>In the Rendering tab, select the <span class="uicontrol bold">Earthquake Map</span>
+                            region.</span></li>
+                           <li><span>In the Property Editor, click <span class="uicontrol bold">Attributes</span>.</span></li>
+                           <li><span>Advanced, Bounding Box Item - Select <span class="uicontrol bold">PX_BBOX</span> ,
+                            where <span class="italic">X</span> is the page number.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Update the SQL query that defines the classic report to include the spatial
+                    filter:</span><ol type="a" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__SUBSTEPS_UVQ_HHJ_KPB">
+                           <li class="substepexpand"><span>In the Rendering tab, select the <span class="uicontrol bold">Earthquake
+                                Table</span> region.</span></li>
+                           <li class="substepexpand"><span>In the Property Editor, update the following:</span><div>
+                                 <ul style="list-style-type: disc;" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__UL_GPB_SHJ_KPB">
+                                    <li>
+                                       
+                                       <p>Source, SQL Query - Enter:</p>
+                                       <pre class="pre codeblock"><code>select id, title, mag
+  from earthquake_table
+ where (mag &gt; 3)
+   and sdo_anyinteract (geometry,
+                        sdo_util.from_geojson ( :P<span class="italic">X</span>_BBOX)) = 'TRUE'</code></pre>
+                                       <p>Where <span class="italic">X</span> in <span class="uicontrol bold">PX_BBOX</span> is the page
+                                        number.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Source, Page Items to Submit - Select
+                                            <span class="uicontrol bold">PX_BBOX</span> , where <span class="italic">X</span> is the
+                                        page number.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul><img id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__IMAGE_GLS_CCQ_KPB" height="623" width="1048" src="img/update_quake_rpt_source.png" alt="Description of update_quake_rpt_source.png follows" title="Description of update_quake_rpt_source.png follows" longdesc="img_text/update_quake_rpt_source.html"><br><a href="img_text/update_quake_rpt_source.html">Description of the illustration update_quake_rpt_source.png</a></div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Add a dynamic action to refresh the report as the map display changes:</span><ol type="a" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__SUBSTEPS_TN2_MNJ_KPB">
+                           <li class="substepexpand"><span>In the Rendering tab, right-click the map region, <span class="uicontrol bold">Earthquake
+                                Map</span> and select <span class="uicontrol bold">Create Dynamic
+                                Action</span>.</span></li>
+                           <li class="substepexpand"><span>In the Property Editor, edit the following Dynamic Action
+                            attributes:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__UL_ALW_P4J_KPB">
+                                    <li>Identification, Name - Enter a name for this dynamic action (for example, <code class="codeph">Map Change</code>).
+                                    </li>
+                                    <li>When, Event - Select <span class="uicontrol bold">Map Changed [Map]</span>.
+                                    </li>
+                                    <li>Client-side Condition, Type - Select <span class="uicontrol bold">Item is not null</span>.
+                                    </li>
+                                    <li>Client-side Condition, Items - Select <span class="uicontrol bold">PX_BBOX</span> , where <span class="italic">X</span> is the page number.
+                                    </li>
+                                 </ul>
+                                 
+                                 <p>Next, add TRUE actions.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Add a Set Value Action which resets the P<span class="italic">X</span>_BBOX item (which is set by
+                    the map region) to NULL, if the current zoom level is below 3. </span><ol type="a" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__SUBSTEPS_DJP_VQJ_KPB">
+                           <li class="substepexpand"><span>In the Rendering tab, select the existing True action,
+                                <span class="uicontrol bold">Show</span>.</span></li>
+                           <li class="substepexpand"><span>Edit the following attributes in the Property Editor:</span><div>
+                                 <ul style="list-style-type: disc;" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__UL_EJP_VQJ_KPB">
+                                    <li>Identification, Name - Enter the name of the action
+                                    (for example, <code class="codeph">NULL if zoom &lt; 3</code>).
+                                    </li>
+                                    <li>Identification, Action - Select <span class="uicontrol bold">Set Value</span>.
+                                    </li>
+                                    <li>Settings, Set Type - Select <span class="uicontrol bold">Static Assignment</span>.
+                                    </li>
+                                    <li>Affected Elements, Item(s) - Select <span class="uicontrol bold">PX_BBOX</span> , where <span class="italic">X</span> is the page number.
+                                    </li>
+                                    <li>Client-side Condition, Type - Select <span class="uicontrol bold">JavaScript expression</span>.
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Client-side Condition, JavaScript expression -
+                                        Enter:</p>
+                                       
+                                       <p><code class="codeph">this.data &amp;&amp; this.data.zoom &lt;
+                                            3</code></p>
+                                       
+                                    </li>
+                                 </ul><img id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__IMAGE_WTT_JCQ_KPB" height="632" width="1052" src="img/set_value_action.png" alt="Description of set_value_action.png follows" title="Description of set_value_action.png follows" longdesc="img_text/set_value_action.html"><br><a href="img_text/set_value_action.html">Description of the illustration set_value_action.png</a></div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Add a Show Action to show the report region if P<span class="italic">X</span>_BBOX is not NULL. This
+                    action in combination with the Set Value action will hide the report for zoom
+                    levels 0, 1 and 2.</span><ol type="a" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__SUBSTEPS_ETQ_TRJ_KPB">
+                           <li class="substepexpand"><span>In the Rendering tab, select the <span class="uicontrol bold">Map Change</span>
+                            dynamic action and select <span class="uicontrol bold">Create TRUE
+                            Action</span>.</span></li>
+                           <li class="substepexpand"><span>Edit the following attributes in the Property Editor:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__UL_FTQ_TRJ_KPB">
+                                    <li>Identification, Name - Enter the name of the action
+                                    (for example, <span class="uicontrol bold">Hide if zoom 0, 1, 2</span>).
+                                    </li>
+                                    <li>Identification, Action - Select <span class="uicontrol bold">Show</span>.
+                                    </li>
+                                    <li>Affected Elements, Selection Type - Select <span class="uicontrol bold">Region</span>.
+                                    </li>
+                                    <li>Affected Elements, Region - Select <span class="uicontrol bold">Earthquake Table</span>.
+                                    </li>
+                                    <li>Client-side Condition, Type - Select <span class="uicontrol bold">Item is not null</span>.
+                                    </li>
+                                    <li>Client-side Condition, Item - Select <span class="uicontrol bold">PX_BBOX</span> , where <span class="italic">X</span> is the page number.
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Add Hide Action to hide the classic report if P<span class="italic">X</span>_BBOX is NULL.</span><ol type="a" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__SUBSTEPS_XQ5_YR4_KPB">
+                           <li class="substepexpand"><span>In the Rendering tab, right-click the <span class="uicontrol bold">Map Change</span>
+                            dynamic action and select <span class="uicontrol bold">Create TRUE
+                            Action</span>.</span></li>
+                           <li class="substepexpand"><span>Edit the following attributes in the Property Editor:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__UL_VS1_BS4_KPB">
+                                    <li>Identification, Name - Enter the name of the action
+                                    (for example, <span class="uicontrol bold">Hide if BBOX NULL</span>).
+                                    </li>
+                                    <li>Identification, Action - Select <span class="uicontrol bold">Hide</span>.
+                                    </li>
+                                    <li>Affected Elements, Selection Type - Select <span class="uicontrol bold">Region</span>.
+                                    </li>
+                                    <li>Affected Elements, Region - Select <span class="uicontrol bold">Earthquake Table</span>.
+                                    </li>
+                                    <li>Client-side Condition, Type - Select <span class="uicontrol bold">Item is null</span>.
+                                    </li>
+                                    <li>Client-side Condition, Item - Select <span class="uicontrol bold">PX_BBOX</span> , where <span class="italic">X</span> is the page number.
+                                    </li>
+                                    <li>Click <span class="uicontrol bold">Save</span>.
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Add Refresh Action to refresh the classic report if it is visible (that is, if
+                        P<span class="italic">X</span>_BBOX is not NULL). </span><ol type="a" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__SUBSTEPS_VBV_YRJ_KPB">
+                           <li class="substepexpand"><span>In the Rendering tab, right-click the <span class="uicontrol bold">Map Change</span>
+                            dynamic action and select <span class="uicontrol bold">Create TRUE
+                            Action</span>.</span></li>
+                           <li class="substepexpand"><span>Edit the following attributes in the Property Editor:</span><div>
+                                 <ul style="list-style-type: disc;" id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__UL_WBV_YRJ_KPB">
+                                    <li>Identification, Name - Enter the name of the action
+                                    (for example, <span class="uicontrol bold">Refresh  report</span>).
+                                    </li>
+                                    <li>Identification, Action - Select
+                                        <span class="uicontrol bold">Refresh</span>.
+                                    </li>
+                                    <li>Affected Elements, Selection Type - Select
+                                        <span class="uicontrol bold">Region</span>.
+                                    </li>
+                                    <li>Affected Elements, Region - Select
+                                        <span class="uicontrol bold">Earthquake Table</span>.
+                                    </li>
+                                    <li>Client-side Condition, Type - Select <span class="uicontrol bold">Item
+                                        is not null</span>.
+                                    </li>
+                                    <li>Client-side Condition, Item - Select
+                                        <span class="uicontrol bold">PX_BBOX</span> , where <span class="italic">X</span> is the page
+                                    number.
+                                    </li>
+                                    <li>Click <span class="uicontrol bold">Save</span>.
+                                    </li>
+                                 </ul><img id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__IMAGE_H1V_PCQ_KPB" height="607" width="1045" src="img/refresh_action.png" alt="Description of refresh_action.png follows" title="Description of refresh_action.png follows" longdesc="img_text/refresh_action.html"><br><a href="img_text/refresh_action.html">Description of the illustration refresh_action.png</a></div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save and Run Page</span>.</span><div>
+                           
+                           <p>Initially, the report does not appear.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Reposition the map over North America and click <span class="uicontrol bold">Zoom</span> (+)
+                    twice.</span><div>
+                           <p>The Earthquake Table appears.</p><img id="GUID-4FD96B1D-1E14-42CB-AE19-583109945640__IMAGE_GD5_5CQ_KPB" height="806" width="1032" src="img/quake_map_final.png" alt="Description of quake_map_final.png follows" title="Description of quake_map_final.png follows" longdesc="img_text/quake_map_final.html"><br><a href="img_text/quake_map_final.html">Description of the illustration quake_map_final.png</a><p>If you reposition the map, Earthquake Table updates as
+                        well.</p>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-maps.html#GUID-977B6B35-E7C8-4703-A69E-EF7E286066FB" title="Edit map region components in Page Designer.">Editing Maps</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

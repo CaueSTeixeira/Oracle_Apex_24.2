@@ -1,0 +1,442 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Creating a List Search">
+      <meta name="abstract" content="Create a List search of an APEX List.">
+      <meta name="description" content="Create a List search of an APEX List.">
+      <meta name="DC.subject" content="list search, creating, application search, creating list search, creating a list, create search configuration, list search, creating search page, search page, creating, search, creating List search page">
+      <meta name="keywords" content="list search, creating, application search, creating list search, creating a list, create search configuration, list search, creating search page, search page, creating, search, creating List search page">
+      <meta name="DC.Relation" scheme="URI" content="adding-search-to-an-application.html#GUID-505C95D2-4F04-48FA-8BBD-95D87AAD51EF">
+      <meta name="DC.Relation" scheme="URI" content="creating-a-list-search.html#GUID-4568290B-BD3F-4664-88F6-FFFDA3CA303B">
+      <meta name="DC.Relation" scheme="URI" content="creating-a-list-search.html#GUID-437FB881-61D9-4C3A-89B6-FF83C5B4D84A">
+      <meta name="DC.Relation" scheme="URI" content="creating-a-list-search.html#GUID-C89CC70F-E34C-4742-B215-2280C513E543">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Topic">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-A9B33847-BB95-4C06-9E30-60B9EF9C7FD0">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Create a List search of an APEX List.">
+      <meta name="description" content="Create a List search of an APEX List.">
+      <title>Creating a List Search</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Create a List search of an APEX List.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="creating-an-oracle-text-search.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-a-ubiquitous-search.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Creating a List Search","description":"Create a List search of an APEX List.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="creating-an-oracle-text-search.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-a-ubiquitous-search.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-A9B33847-BB95-4C06-9E30-60B9EF9C7FD0" name="GUID-A9B33847-BB95-4C06-9E30-60B9EF9C7FD0"></a>
+         
+         <h2 id="HTMDB-GUID-A9B33847-BB95-4C06-9E30-60B9EF9C7FD0" class="sect2"><span class="enumeration_section">16.9.5 </span>Creating a List Search
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Create a List search of an <span>APEX</span> List.
+               </p>
+               <p>This topic demonstrates how create a search page based on an <span>APEX</span> list of search pages. 
+               </p>
+               <div class="infoboxnote" id="GUID-A9B33847-BB95-4C06-9E30-60B9EF9C7FD0__GUID-92BCDD9F-5353-4397-B151-904B89A2A0FD">
+                  <p class="notep1">Note:</p>This example assumes you have already created the search pages in <a href="creating-a-standard-search.html#GUID-1A5697E2-079C-4616-9644-15FBC9BCBEB4" title="Create a Search page by running the Create Page Wizard.">Creating a Standard Search Page</a> and <a href="creating-an-oracle-text-search.html#GUID-2688ECDF-3758-4558-B3BE-31947B408C36" title="Create an Oracle TEXT search on table that has an Oracle TEXT index.">Creating an Oracle Text Search</a>.
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="creating-a-list-search.html#GUID-4568290B-BD3F-4664-88F6-FFFDA3CA303B">Creating an APEX List</a><br>Create an <span>APEX</span> list in Shared Components.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-a-list-search.html#GUID-437FB881-61D9-4C3A-89B6-FF83C5B4D84A">Creating a List Search Configuration</a><br>Create a List search configuration.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-a-list-search.html#GUID-C89CC70F-E34C-4742-B215-2280C513E543">Creating a List Search Page</a><br>Create a List Search page by running the Create Page Wizard.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="adding-search-to-an-application.html#GUID-505C95D2-4F04-48FA-8BBD-95D87AAD51EF" title="Add declarative searches to an application by creating a search configuration and then a search page that displays the search results.">Adding Search to an Application</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-4568290B-BD3F-4664-88F6-FFFDA3CA303B" name="GUID-4568290B-BD3F-4664-88F6-FFFDA3CA303B"></a><h3 id="HTMDB-GUID-4568290B-BD3F-4664-88F6-FFFDA3CA303B" class="sect3"><span class="enumeration_section">16.9.5.1 </span>Creating an <span>APEX</span> List
+               </h3>
+               <div>
+                  <p>Create an <span>APEX</span> list in Shared Components.
+                  </p>
+                  <div class="section">The following task demonstrates how to create a list on which to base a List
+            search.</div>
+                  <div class="p">
+                     
+                     <div class="infoboxnotealso" id="GUID-4568290B-BD3F-4664-88F6-FFFDA3CA303B__GUID-2FE34F32-D4F7-4C3A-A473-ECD896EECD8A">
+                        <p class="notep1">See Also:</p><a href="creating-static-lists.html#GUID-6D10ADF5-4A23-4496-8654-9C9CC2A6A0DF" title="A static list is based on predefined display and return values.">Creating Static Lists</a></div>
+                     
+                  </div>
+                  <p>To create a static list:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Access the Create List Wizard:</span><ol type="a" id="GUID-4568290B-BD3F-4664-88F6-FFFDA3CA303B__SUBSTEPS_Y2T_QKQ_P5B">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span></li>
+                           <li><span>Under Navigation and Search, click <span class="uicontrol bold">Lists</span>.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Create</span>.</span></li>
+                        </ol>
+                        <div>The Create List Wizard appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>For Name and Type:</span><ol type="a" id="GUID-4568290B-BD3F-4664-88F6-FFFDA3CA303B__SUBSTEPS_UM5_CMQ_P5B">
+                           <li><span>Name - Enter a numeric or alphanumeric name for the list (for example,
+                                <code class="codeph"> Project Pages List</code>).</span></li>
+                           <li><span>Type - Select <span class="uicontrol bold">Static</span>.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Query or Static Values - Enter the labels and target pages. For
+                    example:</span><ol type="a" id="GUID-4568290B-BD3F-4664-88F6-FFFDA3CA303B__SUBSTEPS_QNX_CLQ_P5B">
+                           <li class="substepexpand"><span>Row 1:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-4568290B-BD3F-4664-88F6-FFFDA3CA303B__UL_CB3_LLQ_P5B">
+                                    <li>List Entry Label - <span class="uicontrol bold">Search Projects -
+                                        Standard</span></li>
+                                    <li>Target Page ID or custom URL -
+                                        <span class="uicontrol bold">6</span></li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Row 2:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-4568290B-BD3F-4664-88F6-FFFDA3CA303B__UL_G14_RLQ_P5B">
+                                    <li>List Entry Label - <span class="uicontrol bold">Search Tasks -
+                                        TEXT</span></li>
+                                    <li>Target Page ID or custom URL -
+                                        <span class="uicontrol bold">7</span></li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create List</span>.</span></li>
+                     <li class="stepexpand"><span>Click the <span class="uicontrol bold">Application ID</span> breadcrumb to return to the
+                    Application home page.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-a-list-search.html#GUID-A9B33847-BB95-4C06-9E30-60B9EF9C7FD0" title="Create a List search of an APEX List.">Creating a List Search</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-437FB881-61D9-4C3A-89B6-FF83C5B4D84A" name="GUID-437FB881-61D9-4C3A-89B6-FF83C5B4D84A"></a><h3 id="HTMDB-GUID-437FB881-61D9-4C3A-89B6-FF83C5B4D84A" class="sect3"><span class="enumeration_section">16.9.5.2 </span>Creating a List Search Configuration
+               </h3>
+               <div>
+                  <p>Create a List search configuration.</p>
+                  <div class="section">
+                     
+                     <p>A search configuration contains information about searchable data
+                source. This task creates a search configuration using the list you created in <a href="creating-a-list-search.html#GUID-4568290B-BD3F-4664-88F6-FFFDA3CA303B" title="Create an APEX list in Shared Components.">Creating an APEX List</a>.
+                     </p>
+                     
+                  </div>
+                  <p>To create a List search configurations:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Access the Search Configurations page:</span><ol type="a" id="GUID-437FB881-61D9-4C3A-89B6-FF83C5B4D84A__SUBSTEPS_LFC_DJZ_N5B">
+                           <li class="substepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span></li>
+                           <li class="substepexpand"><span>Under Navigation and Search, click <span class="uicontrol bold">Search
+                                Configurations</span>.</span><div>The Search Configurations page appears.</div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On the Search Configurations page, click <span class="uicontrol bold">Create</span>.</span><div>The Create Search Configuration Wizard appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Detail:</span><ol type="a" id="GUID-437FB881-61D9-4C3A-89B6-FF83C5B4D84A__SUBSTEPS_ZL4_JGR_P5B">
+                           <li class="substepexpand"><span>Name - Enter a name for the search configuration (for example,
+                                <code class="codeph">Search Project Page - List</code>).</span></li>
+                           <li class="substepexpand"><span>Search Type - Select a type of search. Options include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-437FB881-61D9-4C3A-89B6-FF83C5B4D84A__UL_HNB_LGR_P5B">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Standard</span> - Defines a
+                                        searchable data source such as a table, SQL Query, or REST
+                                        Data Source. Searches is executed by a SQL Query using
+                                            <code class="codeph">LIKE</code> expressions.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Oracle TEXT</span> - Define a
+                                        searchable table or SQL Query which already has an Oracle
+                                        TEXT index created. Search is executed by using Oracle TEXT
+                                        functionality, which provides linguistic and fuzzy search
+                                        capabilities.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Oracle Ubiquitous Search</span>
+                                        - Search using an Oracle ubiquitous search index (requires
+                                        Oracle Database <span>23ai</span> or later). The index must be located in the parsing
+                                        schema of the application.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">List</span> - Search within a
+                                        selected List from Shared Components.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                                 <p>For this example, select <span class="uicontrol bold">List</span>. 
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>List - Select this list you previously created (for example,
+                                <span class="uicontrol bold">Project Pages List</span>).</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Column Mapping:</span><ol type="a" id="GUID-437FB881-61D9-4C3A-89B6-FF83C5B4D84A__SUBSTEPS_VJM_1HR_P5B">
+                           <li class="substepexpand"><span>Primary Key Column - Select the primary key column for the search
+                            configuration Data Source (for example,
+                                <span class="uicontrol bold">LIST_ENTRY_ID</span>).</span></li>
+                           <li class="substepexpand"><span>Title Column - Select the column to be used as title (for example,
+                                <span class="uicontrol bold">ENTRY_TARGET</span>).</span></li>
+                           <li class="substepexpand"><span>Description Column - Select the column to be used as the description
+                            (for example, <span class="uicontrol bold">ENTRY_TEXT</span>).</span></li>
+                           <li class="substepexpand"><span>Icon Source - Configure the icon that displays in the header of the
+                            search result. Options include: </span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-437FB881-61D9-4C3A-89B6-FF83C5B4D84A__UL_BX1_CHR_P5B">
+                                    <li><span class="uicontrol bold">Initials</span> - Use the Title
+                                    column to display the icon as initials.
+                                    </li>
+                                    <li><span class="uicontrol bold">CSS Classes</span> - Use the entered
+                                    CSS classes to display the icon.
+                                    </li>
+                                    <li><span class="uicontrol bold">Class Column</span></li>
+                                 </ul>
+                                 
+                                 <p>For this example, accept the default,
+                                    <span class="uicontrol bold">Initials</span>.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Search Configuration</span>.</span><div>
+                           
+                           <p>The search configuration is created and the Search Configuration,
+                        Edit page appears and displays the message <code class="codeph">Search configuration
+                            created</code>.
+                           </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click the <span class="uicontrol bold">Application ID</span> breadcrumb to return to the
+                    Application home page.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-a-list-search.html#GUID-A9B33847-BB95-4C06-9E30-60B9EF9C7FD0" title="Create a List search of an APEX List.">Creating a List Search</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-C89CC70F-E34C-4742-B215-2280C513E543" name="GUID-C89CC70F-E34C-4742-B215-2280C513E543"></a><h3 id="HTMDB-GUID-C89CC70F-E34C-4742-B215-2280C513E543" class="sect3"><span class="enumeration_section">16.9.5.3 </span>Creating a List Search Page
+               </h3>
+               <div>
+                  <p>Create a List Search page by running the Create Page Wizard.</p>
+                  <div class="section">
+                     
+                     <p>A Search page features a Search field and a Search Results region. In
+                Page Designer, the Search Results region contains <strong class="term">Search
+                    Sources</strong> which map to the search configurations defined in Shared
+                Components.
+                     </p>
+                     
+                     <p>When you create a search page with the Create Page Wizard, the wizard
+                creates a Search field for you and prompts you to select search configurations. You
+                can also add additional search configurations later in Page Designer.</p>
+                     
+                  </div>
+                  <p>To create a search page by running the Create Page Wizard: </p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Application home page:</span><ol type="a" id="GUID-C89CC70F-E34C-4742-B215-2280C513E543__SUBSTEPS_OFZ_D2X_45B">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select the application. </span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On the Application home page, click <span class="uicontrol bold">Create Page</span>.</span><div><span class="uicontrol bold">Create a Page</span> appears and features three
+                    tabs: <span class="uicontrol bold">Component</span>, <span class="uicontrol bold">Feature</span>, and
+                        <span class="uicontrol bold">Legacy Pages</span>.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under Component, select <span class="uicontrol bold">Search Page</span>.</span></li>
+                     <li class="stepexpand"><span>Page Definition:</span><ol type="a" id="GUID-C89CC70F-E34C-4742-B215-2280C513E543__SUBSTEPS_FGJ_DD2_P5B">
+                           <li class="substepexpand"><span>Page Number - The page number is an integer value that identifies a
+                            page within an application. </span></li>
+                           <li class="substepexpand"><span>Name - Specify a text name for this page (for example, <code class="codeph">Search
+                                Project Pages List</code>).</span><div>
+                                 
+                                 <p>This text is also used for page
+                                    <span class="uicontrol bold">Title</span>. After page creation, you can
+                                modify the <span class="uicontrol bold">Title</span> in Page Designer.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Page Mode - Identify the page mode. Accept the default,
+                                <span class="uicontrol bold">Normal</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Search Configurations - Select the search configuration to be used by this page
+                    (for example, select <span class="uicontrol bold">Search Project Page - List</span>). </span><div>
+                           
+                           <div class="figure" id="GUID-C89CC70F-E34C-4742-B215-2280C513E543__FIG_STB_NHL_W5B"><img id="GUID-C89CC70F-E34C-4742-B215-2280C513E543__IMAGE_TTB_NHL_W5B" height="601" width="801" src="img/list_create_search_page.png" alt="Description of list_create_search_page.png follows" title="Description of list_create_search_page.png follows" longdesc="img_text/list_create_search_page.html"><br><a href="img_text/list_create_search_page.html">Description of the illustration list_create_search_page.png</a></div>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Navigation - Accept the default and enable <span class="uicontrol bold">Use
+                        Breadcrumb</span> and <span class="uicontrol bold">Use Navigation</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Page</span>.</span><div>
+                           
+                           <p>Page Designer appears.</p>
+                           
+                           <div class="figure" id="GUID-C89CC70F-E34C-4742-B215-2280C513E543__FIG_RGC_B3L_W5B"><img id="GUID-C89CC70F-E34C-4742-B215-2280C513E543__IMAGE_SGC_B3L_W5B" height="508" width="1020" src="img/list_search_page_created.png" alt="Description of list_search_page_created.png follows" title="Description of list_search_page_created.png follows" longdesc="img_text/list_search_page_created.html"><br><a href="img_text/list_search_page_created.html">Description of the illustration list_search_page_created.png</a></div>
+                           
+                           <p>In the Rendering tab, notice the page item,
+                            <span class="uicontrol bold">P8_SEARCH</span> and the <span class="uicontrol bold">Search
+                            Results</span> region. <span class="uicontrol bold">P8_SEARCH</span> is the
+                        search field which enables users to submit search terms. The
+                            <span class="uicontrol bold">Search Results</span> region contains both the search
+                        results and the Search Source (<span class="uicontrol bold">Search Project Page -
+                            List</span>) which maps to search configurations maintained in
+                        Shared Components. You can further refine and control the search display and
+                        behavior by editing attributes in the Property Editor.
+                           </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Run and test the page:</span><ol type="a" id="GUID-C89CC70F-E34C-4742-B215-2280C513E543__SUBSTEPS_TRL_YLW_45B">
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Save and Run Page</span>.</span><div>The search page appears.</div>
+                           </li>
+                           <li class="substepexpand"><span>In the search field, enter a search (for example, <code class="codeph">bug</code>)
+                            and press <span class="uicontrol bold">Enter</span>.</span></li>
+                        </ol>
+                        <div>
+                           
+                           <p>The search results appear.</p>
+                           
+                           <div class="figure" id="GUID-C89CC70F-E34C-4742-B215-2280C513E543__FIG_HCJ_FJL_W5B"><img id="GUID-C89CC70F-E34C-4742-B215-2280C513E543__IMAGE_ICJ_FJL_W5B" height="412" width="1024" src="img/list_search_runtime.png" alt="Description of list_search_runtime.png follows" title="Description of list_search_runtime.png follows" longdesc="img_text/list_search_runtime.html"><br><a href="img_text/list_search_runtime.html">Description of the illustration list_search_runtime.png</a></div>
+                           
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-a-list-search.html#GUID-A9B33847-BB95-4C06-9E30-60B9EF9C7FD0" title="Create a List search of an APEX List.">Creating a List Search</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

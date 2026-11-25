@@ -1,0 +1,165 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="ATTACH Procedure">
+      <meta name="DC.subject" content="ATTACH procedure, APEX_SESSION">
+      <meta name="keywords" content="ATTACH procedure, APEX_SESSION">
+      <meta name="DC.Relation" scheme="URI" content="APEX_SESSION.html#GUID-710E9F4F-157C-4EBA-BBA9-3E0B9EE4002A">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-27465355-B6EB-412A-BFAC-F63FCDB396E0">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>ATTACH Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_SESSION.html" title="Previous" type="text/html">
+      <link rel="next" href="CREATE_SESSION-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"ATTACH Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_SESSION.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="CREATE_SESSION-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-27465355-B6EB-412A-BFAC-F63FCDB396E0" name="GUID-27465355-B6EB-412A-BFAC-F63FCDB396E0"></a>
+         
+         <h2 id="AEAPI-GUID-27465355-B6EB-412A-BFAC-F63FCDB396E0" class="sect2"><span class="enumeration_section">51.1 </span>ATTACH Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This procedure sets the environment and runs the Initialization PL/SQL Code based on the given application and current session.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-27465355-B6EB-412A-BFAC-F63FCDB396E0__GUID-141CF56E-E090-41B4-A554-CCE9F40275F9">Syntax</p><pre class="pre codeblock"><code>APEX_SESSION.ATTACH (
+    p_app_id        IN  NUMBER,
+    p_page_id       IN  NUMBER,
+    p_session_id    IN  NUMBER );</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-27465355-B6EB-412A-BFAC-F63FCDB396E0__GUID-AF351DD4-9AB4-44DE-AD73-B6DAA3EFE2EB">Parameters</p>
+                  <div class="tblformal" id="GUID-27465355-B6EB-412A-BFAC-F63FCDB396E0__GUID-783D0918-5F07-4305-9510-997578E94597">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" id="d232686e69">Parameters</th>
+                              <th align="left" valign="bottom" id="d232686e71">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d232686e75" headers="d232686e69 "><code class="codeph">p_app_id</code></td>
+                              <td align="left" valign="top" headers="d232686e75 d232686e71 ">The application ID.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d232686e81" headers="d232686e69 "><code class="codeph">p_page_id</code></td>
+                              <td align="left" valign="top" headers="d232686e81 d232686e71 ">The application page.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d232686e87" headers="d232686e69 "><code class="codeph">p_session_id</code></td>
+                              <td align="left" valign="top" headers="d232686e87 d232686e71 ">The session ID.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-27465355-B6EB-412A-BFAC-F63FCDB396E0__GUID-101581EF-8F4F-4C9F-92D3-B6C5D7441FD1">Raises</p>
+                  <ul style="list-style-type: disc;" id="GUID-27465355-B6EB-412A-BFAC-F63FCDB396E0__UL_ZV5_SV2_3TB">
+                     <li><code class="codeph">WWV_FLOW.APP_NOT_FOUND_ERR</code>: Application does not exist or caller has no access to the workspace.
+                     </li>
+                     <li><code class="codeph">APEX.SESSION.EXPIRED</code>: Your session has ended.
+                     </li>
+                     <li><code class="codeph">SECURITY_GROUP_ID_INVALID</code>: Security Group ID (your workspace identity) is invalid.
+                     </li>
+                  </ul>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-27465355-B6EB-412A-BFAC-F63FCDB396E0__GUID-F5DF40CF-B2DC-4BB5-8F30-AE294CB14131">Example </p>
+                  <p>Attach to session <code class="codeph">12345678</code> for application <code class="codeph">100</code> page <code class="codeph">1</code>, then print the app ID and session ID.
+                  </p>
+               </div>
+               <div class="section"><pre class="pre codeblock"><code>begin
+    apex_session.attach (
+        p_app_id     =&gt; 100,
+        p_page_id    =&gt; 1,
+        p_session_id =&gt; 12345678 );
+    sys.dbms_output.put_line (
+        'App is '||v('APP_ID')||', session is '||v('APP_SESSION'));
+end;</code></pre><div class="infoboxnotealso" id="GUID-27465355-B6EB-412A-BFAC-F63FCDB396E0__GUID-E338E019-B74B-413F-8BFC-AB8378B8BDF1">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-27465355-B6EB-412A-BFAC-F63FCDB396E0__UL_AW5_SV2_3TB">
+                        <li><a href="CREATE_SESSION-Procedure.html#GUID-348C879F-3B45-4F4E-8641-518C711CE76F">CREATE_SESSION Procedure</a></li>
+                        <li><a href="DELETE_SESSION-Procedure.html#GUID-E37F7000-633D-466C-BA8F-0051EDB7A0CC">DELETE_SESSION Procedure</a></li>
+                        <li><a href="DETACH-Procedure.html#GUID-95C1F12F-7B2A-4E86-B244-A9801B95BB72">DETACH Procedure</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_SESSION.html#GUID-710E9F4F-157C-4EBA-BBA9-3E0B9EE4002A">APEX_SESSION</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

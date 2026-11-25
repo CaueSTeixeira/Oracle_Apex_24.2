@@ -1,0 +1,158 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Working with Oracle Cloud Applications BOSS REST Services">
+      <meta name="abstract" content="Learn about using APEX REST Data Sources for Oracle Cloud Applications (BOSS) REST Services.">
+      <meta name="description" content="Learn about using APEX REST Data Sources for Oracle Cloud Applications (BOSS) REST Services.">
+      <meta name="DC.subject" content="Oracle Cloud Apps BOSS REST Service, working with, BOSS REST Data Source, working with, REST Data Sources, Oracle Cloud Apps BOSS REST Service">
+      <meta name="keywords" content="Oracle Cloud Apps BOSS REST Service, working with, BOSS REST Data Source, working with, REST Data Sources, Oracle Cloud Apps BOSS REST Service">
+      <meta name="DC.Relation" scheme="URI" content="managing-REST-data-sources.html#GUID-93D7A596-03A9-48AF-9FC9-6538BCC25DED">
+      <meta name="DC.Relation" scheme="URI" content="about-oracle-cloud-applications-boss-rest-services.html#GUID-3BD15B01-4DB6-42CE-A97A-6BBF30CCE307">
+      <meta name="DC.Relation" scheme="URI" content="creating-a-boss-rest-data-source.html#GUID-2B3555AE-CEE7-4667-87DC-F2D3DA5EC176">
+      <meta name="DC.Relation" scheme="URI" content="about-the-boss-rest-data-source-definition.html#GUID-4097A726-55B0-4CB5-8AFA-9A6023151173">
+      <meta name="DC.Relation" scheme="URI" content="boss-rest-data-source-runtime-features.html#GUID-B4F16108-FA57-4650-AF55-C39D1E515DFD">
+      <meta name="DC.Relation" scheme="URI" content="filter-parameters-for-query-by-example.html#GUID-F7A7A1B6-AB3D-449F-9B4E-8337CA1E433A">
+      <meta name="DC.Relation" scheme="URI" content="best-practices-for-configuring-boss-rest-service-base-url.html#GUID-0D51014F-2F3E-447F-B8DD-2A2E612F184A">
+      <meta name="DC.Relation" scheme="URI" content="working-with-parent-and-child-data-in-regions.html#GUID-AD7ADD35-0AD4-4E21-A74A-DF74E8E9744F">
+      <meta name="DC.Relation" scheme="URI" content="using-boss-rest-data-sources-in-pl-sql.html#GUID-FBEF66E2-8E90-4336-B2C4-94C6CA691285">
+      <meta name="DC.Relation" scheme="URI" content="performing-dml-operations-on-objects-with-etags.html#GUID-AD3B03A1-6092-45A4-8E81-A38D15FD333F">
+      <meta name="DC.Relation" scheme="URI" content="reading-business-objects-with-nested-collections.html#GUID-CAB5CE29-9105-4634-B93F-71EC3BCD4DA3">
+      <meta name="DC.Relation" scheme="URI" content="writing-business-objects-with-nested-collections.html#GUID-35A8E539-D0C9-48EF-A112-3E734EA85973">
+      <meta name="DC.Relation" scheme="URI" content="invoking-boss-business-object-custom-actions.html#GUID-D86D1D3F-9B12-4C65-8D23-21D49C740C81">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Topic">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-F93EB097-52C9-476F-9585-B45CA4429DC3">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about using APEX REST Data Sources for Oracle Cloud Applications (BOSS) REST Services.">
+      <meta name="description" content="Learn about using APEX REST Data Sources for Oracle Cloud Applications (BOSS) REST Services.">
+      <title>Working with Oracle Cloud Applications BOSS REST Services</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Learn about using APEX REST Data Sources for Oracle Cloud Applications (BOSS) REST Services.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="example-creating-rest-data-source-against-fusion-apps-endpoint.html" title="Previous" type="text/html">
+      <link rel="next" href="about-oracle-cloud-applications-boss-rest-services.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Working with Oracle Cloud Applications BOSS REST Services","description":"Learn about using APEX REST Data Sources for Oracle Cloud Applications (BOSS) REST Services.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="example-creating-rest-data-source-against-fusion-apps-endpoint.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="about-oracle-cloud-applications-boss-rest-services.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-F93EB097-52C9-476F-9585-B45CA4429DC3" name="GUID-F93EB097-52C9-476F-9585-B45CA4429DC3"></a>
+         
+         <h2 id="HTMDB-GUID-F93EB097-52C9-476F-9585-B45CA4429DC3" class="sect2"><span class="enumeration_section">18.4.8 </span>Working with Oracle Cloud Applications BOSS
+        REST Services
+         </h2>
+         <div class="ind">
+            <p>Learn about using <span>APEX</span> REST Data Sources for Oracle Cloud Applications (BOSS) REST Services.
+            </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="about-oracle-cloud-applications-boss-rest-services.html#GUID-3BD15B01-4DB6-42CE-A97A-6BBF30CCE307">About Oracle Cloud Applications BOSS REST Services</a><br>Learn about REST Data Source support for Oracle Cloud Applications                 BOSS REST Services.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-a-boss-rest-data-source.html#GUID-2B3555AE-CEE7-4667-87DC-F2D3DA5EC176">Creating a BOSS REST Data Source</a><br>Learn about creating a BOSS REST Data Source.
+                  </li>
+                  <li class="ulchildlink"><a href="about-the-boss-rest-data-source-definition.html#GUID-4097A726-55B0-4CB5-8AFA-9A6023151173">About the BOSS REST Data Source Definition</a><br>Learn about the BOSS REST Data Source definition.
+                  </li>
+                  <li class="ulchildlink"><a href="boss-rest-data-source-runtime-features.html#GUID-B4F16108-FA57-4650-AF55-C39D1E515DFD">BOSS REST Data Source Runtime Features</a><br>Learn about BOSS REST Data Source runtime features.
+                  </li>
+                  <li class="ulchildlink"><a href="filter-parameters-for-query-by-example.html#GUID-F7A7A1B6-AB3D-449F-9B4E-8337CA1E433A">Filter Parameters for Query By Example and Parent and Child Use Cases</a><br>Learn about filter parameters for Query By Example (QBE) and parent and         child use cases.
+                  </li>
+                  <li class="ulchildlink"><a href="best-practices-for-configuring-boss-rest-service-base-url.html#GUID-0D51014F-2F3E-447F-B8DD-2A2E612F184A">Best Practices for Configuring BOSS REST Service Base URL</a><br>Learn about best practices fo configuring BOSS REST Service Base         URL
+                  </li>
+                  <li class="ulchildlink"><a href="working-with-parent-and-child-data-in-regions.html#GUID-AD7ADD35-0AD4-4E21-A74A-DF74E8E9744F">Working with Parent and Child Data in Regions</a><br>Learn about working with parent and child data in regions.
+                  </li>
+                  <li class="ulchildlink"><a href="using-boss-rest-data-sources-in-pl-sql.html#GUID-FBEF66E2-8E90-4336-B2C4-94C6CA691285">Using BOSS REST Data Sources in PL/SQL</a><br>Use BOSS REST Data Sources to show data in any <span>APEX</span> region
+                  </li>
+                  <li class="ulchildlink"><a href="performing-dml-operations-on-objects-with-etags.html#GUID-AD3B03A1-6092-45A4-8E81-A38D15FD333F">Performing DML Operations on Objects with ETags</a><br>Learn about performing DML operations on objects with         <code class="codeph">ETags</code>.
+                  </li>
+                  <li class="ulchildlink"><a href="reading-business-objects-with-nested-collections.html#GUID-CAB5CE29-9105-4634-B93F-71EC3BCD4DA3">Reading Business Objects with Nested Collections</a><br>Define REST Data Source profile columns of type Array to work         programmatically with nested collections of BOSS business objects.
+                  </li>
+                  <li class="ulchildlink"><a href="writing-business-objects-with-nested-collections.html#GUID-35A8E539-D0C9-48EF-A112-3E734EA85973">Writing Business Objects with Nested Collections</a><br>Use the <code class="codeph">APEX_EXEC</code> package to programmatically write a                 parent object and its nested child objects in a single payload.
+                  </li>
+                  <li class="ulchildlink"><a href="invoking-boss-business-object-custom-actions.html#GUID-D86D1D3F-9B12-4C65-8D23-21D49C740C81">Invoking BOSS Business Object Custom Actions</a><br>Learn about support for BOSS business object custom actions.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-REST-data-sources.html#GUID-93D7A596-03A9-48AF-9FC9-6538BCC25DED" title="Oracle APEX REST Data Sources enable developers to access to REST services or generic JSON data feeds in applications.">Managing REST Data Sources</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

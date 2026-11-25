@@ -1,0 +1,526 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Creating an Oracle Vector Search">
+      <meta name="abstract" content="Create an Oracle Vector Search to search both structured and unstructured data by semantics or meaning, and by values, enabling ultra-sophisticated AI search applications.">
+      <meta name="description" content="Create an Oracle Vector Search to search both structured and unstructured data by semantics or meaning, and by values, enabling ultra-sophisticated AI search applications.">
+      <meta name="DC.subject" content="search configuration, creating Oracle Vector Search, about Oracle Vector Search, Oracle Vector Search configuration, creating, adding a VECTOR column, retrieving embeddings, Oracle Vector Search, Vector Search, creating search page, search page, creating, search, creating vector search page">
+      <meta name="keywords" content="search configuration, creating Oracle Vector Search, about Oracle Vector Search, Oracle Vector Search configuration, creating, adding a VECTOR column, retrieving embeddings, Oracle Vector Search, Vector Search, creating search page, search page, creating, search, creating vector search page">
+      <meta name="DC.Relation" scheme="URI" content="adding-search-to-an-application.html#GUID-505C95D2-4F04-48FA-8BBD-95D87AAD51EF">
+      <meta name="DC.Relation" scheme="URI" content="creating-an-oracle-vector-search.html#GUID-A8288FDE-284F-4021-BEBC-E2E790F0D29B">
+      <meta name="DC.Relation" scheme="URI" content="creating-an-oracle-vector-search.html#GUID-A3939A28-5310-4F7B-B5D3-8A8625DA1218">
+      <meta name="DC.Relation" scheme="URI" content="creating-an-oracle-vector-search.html#GUID-0F007A0D-726A-4447-A46E-17A54264B406">
+      <meta name="DC.Relation" scheme="URI" content="creating-an-oracle-vector-search.html#GUID-9F7BB07E-D803-4007-8021-F8AF0591E18D">
+      <meta name="DC.Relation" scheme="URI" content="creating-an-oracle-vector-search.html#GUID-C0BEB835-CC6F-4499-B8EB-0334AE646F0C">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Topic">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-09E724EA-DF07-4AF8-83E7-5876A414C9BF">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Create an Oracle Vector Search to search both structured and unstructured data by semantics or meaning, and by values, enabling ultra-sophisticated AI search applications.">
+      <meta name="description" content="Create an Oracle Vector Search to search both structured and unstructured data by semantics or meaning, and by values, enabling ultra-sophisticated AI search applications.">
+      <title>Creating an Oracle Vector Search</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Create an Oracle Vector Search to search both structured and unstructured data by semantics or meaning, and by values, enabling ultra-sophisticated AI search applications.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="creating-a-ubiquitous-search.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-a-search-page-manually.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Creating an Oracle Vector Search","description":"Create an Oracle Vector Search to search both structured and unstructured data by semantics or meaning, and by values, enabling ultra-sophisticated AI search applications.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="creating-a-ubiquitous-search.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-a-search-page-manually.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-09E724EA-DF07-4AF8-83E7-5876A414C9BF" name="GUID-09E724EA-DF07-4AF8-83E7-5876A414C9BF"></a>
+         
+         <h2 id="HTMDB-GUID-09E724EA-DF07-4AF8-83E7-5876A414C9BF" class="sect2"><span class="enumeration_section">16.9.7 </span>Creating an Oracle Vector Search
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Create an Oracle Vector Search to search both structured and unstructured
+        data by semantics or meaning, and by values, enabling ultra-sophisticated AI search
+        applications.</p>
+               <div class="infoboxnote" id="GUID-09E724EA-DF07-4AF8-83E7-5876A414C9BF__GUID-E9F44AA6-BA49-4512-9350-8A964AB3640E">
+                  <p class="notep1">Note:</p>Oracle Vector Search requires Oracle
+            Database 23ai or later.
+               </div>
+               <p>This topic demonstrates how to create a Oracle Vector Search on the
+                <code class="codeph">EBA_PROJECT_MILESTONES</code> table available in the sample dataset,
+            Project Data. This example assumes you have already installed the sample, dataset,
+            Project Data.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="creating-an-oracle-vector-search.html#GUID-A8288FDE-284F-4021-BEBC-E2E790F0D29B">About Oracle Vector Search Configurations</a><br>Learn about Oracle Vector Search configurations.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-an-oracle-vector-search.html#GUID-A3939A28-5310-4F7B-B5D3-8A8625DA1218">Adding a Vector Column</a><br>Learn how to add a <code class="codeph">VECTOR</code> column to a table.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-an-oracle-vector-search.html#GUID-0F007A0D-726A-4447-A46E-17A54264B406">Retrieving the Vector Embeddings from a Vector Provider</a><br>Retrieve vector embeddings from a Vector Provider.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-an-oracle-vector-search.html#GUID-9F7BB07E-D803-4007-8021-F8AF0591E18D">Creating an Oracle Vector Search Configuration</a><br>Create an Oracle Vector Search configuration.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-an-oracle-vector-search.html#GUID-C0BEB835-CC6F-4499-B8EB-0334AE646F0C">Creating an Oracle Vector Search Page</a><br>Create a Search page by running the Create Page Wizard.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-09E724EA-DF07-4AF8-83E7-5876A414C9BF__GUID-111DE97F-F79F-450E-95EF-AAAD5AF51570">
+                  <p class="notep1">See Also:</p><a href="../aeutl/using-sample-datasets.html#AEUTL-GUID-FCBF7637-0FF9-4135-98FB-EC7155334EB4" target="_blank">Using Sample Datasets</a> in <span><cite>Oracle APEX SQL Workshop
+                                        Guide</cite></span></div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="adding-search-to-an-application.html#GUID-505C95D2-4F04-48FA-8BBD-95D87AAD51EF" title="Add declarative searches to an application by creating a search configuration and then a search page that displays the search results.">Adding Search to an Application</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-A8288FDE-284F-4021-BEBC-E2E790F0D29B" name="GUID-A8288FDE-284F-4021-BEBC-E2E790F0D29B"></a><h3 id="HTMDB-GUID-A8288FDE-284F-4021-BEBC-E2E790F0D29B" class="sect3"><span class="enumeration_section">16.9.7.1 </span>About Oracle Vector Search
+        Configurations
+               </h3>
+               <div>
+                  <p>Learn about Oracle Vector Search configurations.</p>
+                  <p>Starting with Oracle Database 23ai, you can use the <code class="codeph">VECTOR</code> data
+            type  to store vector embeddings alongside business data in the database. Using
+            embedding models, you can transform unstructured data into vector embeddings that can
+            then be used for semantic queries on business data.
+                  </p>
+                  <p>The process of creating an Oracle Vector Search configuration involves the
+            following general steps:</p>
+                  <ol id="GUID-A8288FDE-284F-4021-BEBC-E2E790F0D29B__OL_US1_2PS_KDC">
+                     <li>Add a column with a data type of <code class="codeph">VECTOR</code> to your
+                table.
+                     </li>
+                     <li>Create a Vector Provider to create vector embeddings for text strings.
+                See <a href="managing-vector-providers.html#GUID-3EFC4B7F-0408-400D-88AD-6385621BE066" title="Utilize Vector Providers to create vector embeddings for a text string.">Managing Vector Providers</a>.
+                     </li>
+                     <li>Retrieve the embeddings from a Vector Provider using the
+                    <code class="codeph">GET_VECTOR_EMBEDDINGS</code> function in <code class="codeph">APEX_AI</code>
+                package. See <a href="creating-an-oracle-vector-search.html#GUID-0F007A0D-726A-4447-A46E-17A54264B406" title="Retrieve vector embeddings from a Vector Provider.">Retrieving the Vector Embeddings from a Vector Provider</a></li>
+                     <li>Create a Search Configuration based on your Vector Provider and your
+                    <code class="codeph">VECTOR</code> column. See <a href="creating-an-oracle-vector-search.html#GUID-9F7BB07E-D803-4007-8021-F8AF0591E18D" title="Create an Oracle Vector Search configuration.">Creating an Oracle Vector Search Configuration</a>.
+                     </li>
+                     <li>Create an Oracle Vector Search page. <a href="creating-an-oracle-vector-search.html#GUID-0F007A0D-726A-4447-A46E-17A54264B406" title="Retrieve vector embeddings from a Vector Provider.">Retrieving the Vector Embeddings from a Vector Provider</a>.
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-A8288FDE-284F-4021-BEBC-E2E790F0D29B__GUID-0A0ED14C-B90D-4A9B-97EB-7E97FA22FEDB">
+                     <p class="notep1">See Also:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-A8288FDE-284F-4021-BEBC-E2E790F0D29B__UL_H5N_NRM_RDC">
+                        <li><code class="codeph">GET_VECTOR_EMBEDDINGS</code> function in <a href="../aeapi/APEX_AI.html#AEAPI-GUID-9451C383-56B9-411D-8BAF-37F437B95FB1" target="_blank">APEX_AI</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></li>
+                        <li><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmdb&id=VECSE-GUID-107FCC1B-EF68-4966-83CE-B7C4244E47A2" target="_blank">Overview</a> in <span><cite>Oracle Database AI Vector Search User's
+                                Guide</cite></span></li>
+                     </ul>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-an-oracle-vector-search.html#GUID-09E724EA-DF07-4AF8-83E7-5876A414C9BF" title="Create an Oracle Vector Search to search both structured and unstructured data by semantics or meaning, and by values, enabling ultra-sophisticated AI search applications.">Creating an Oracle Vector Search</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-A3939A28-5310-4F7B-B5D3-8A8625DA1218" name="GUID-A3939A28-5310-4F7B-B5D3-8A8625DA1218"></a><h3 id="HTMDB-GUID-A3939A28-5310-4F7B-B5D3-8A8625DA1218" class="sect3"><span class="enumeration_section">16.9.7.2 </span>Adding a Vector Column
+               </h3>
+               <div>
+                  <p>Learn how to add a <code class="codeph">VECTOR</code> column to a table.
+                  </p>
+                  <div class="p">
+                     
+                     <p>The following examples uses the <code class="codeph">EBA_PROJECT_MILESTONES</code>
+                table which is available in sample dataset, Project Data.
+                     </p>
+                     
+                  </div>
+                  <p>To add a <code class="codeph">VECTOR</code> column to a
+                table:
+                  </p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click <span class="uicontrol bold">SQL Workshop</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">SQL Commands</span>.</span><div>
+                           
+                           <p>The SQL Commands home page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Enter the following SQL command  in the command editor:</span><div>
+                           <pre class="pre codeblock"><code>ALTER TABLE eba_project_milestones ADD (vector_column vector);
+</code></pre>
+                           </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Run</span> (<span class="uicontrol bold">Ctrl+Enter</span>) to execute
+                    the command.</span><div>
+                           
+                           <p>The results appear in the Results pane.</p>
+                           
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-an-oracle-vector-search.html#GUID-09E724EA-DF07-4AF8-83E7-5876A414C9BF" title="Create an Oracle Vector Search to search both structured and unstructured data by semantics or meaning, and by values, enabling ultra-sophisticated AI search applications.">Creating an Oracle Vector Search</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-0F007A0D-726A-4447-A46E-17A54264B406" name="GUID-0F007A0D-726A-4447-A46E-17A54264B406"></a><h3 id="HTMDB-GUID-0F007A0D-726A-4447-A46E-17A54264B406" class="sect3"><span class="enumeration_section">16.9.7.3 </span>Retrieving the Vector Embeddings from a Vector Provider
+               </h3>
+               <div>
+                  <p>Retrieve vector embeddings from a Vector Provider.</p>
+                  <div class="section">
+                     
+                     <p>A Vector provider enables you to convert text into an embedding. The
+                functionality can be covered by an AI Service, but also locally by an ONNX model in
+                the database or a user-defined PL/SQL function.</p>
+                     
+                  </div>
+                  <div class="p">
+                     
+                     <p>The following example assumes you have created Vector Provider and are
+                retrieving the embeddings from the <code class="codeph">EBA_PROJECT_MILESTONES</code> table
+                using the <code class="codeph">GET_VECTOR_EMBEDDINGS</code> function in
+                    <code class="codeph">APEX_AI</code> package.
+                     </p>
+                     
+                  </div>
+                  <p>To retrieve vector embeddings from a Vector
+                Provider:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click <span class="uicontrol bold">SQL Workshop</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">SQL Commands</span>.</span><div>
+                           
+                           <p>The SQL Commands home page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Enter the following SQL command  in the command editor:</span><div>
+                           <pre class="pre codeblock"><code>UPDATE eba_project_milestones
+   SET vector_column = apex_ai.get_vector_embeddings(
+                           p_value             =&gt; name || ' ' || description,
+                           p_service_static_id =&gt; 'VP_OCI_EMBEDDING' )</code></pre>
+                           </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Run</span> (<span class="uicontrol bold">Ctrl+Enter</span>) to execute
+                    the command.</span><div>
+                           
+                           <p>The results appear in the Results pane.</p>
+                           
+                        </div>
+                     </li>
+                  </ol>
+                  <div class="section">
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-0F007A0D-726A-4447-A46E-17A54264B406__GUID-14D8C3CA-8C8D-4F49-AEF0-BB3DF2357DFB">
+                     <p class="notep1">See Also:</p><code class="codeph">GET_VECTOR_EMBEDDINGS</code> functions in <a href="../aeapi/APEX_AI.html#AEAPI-GUID-9451C383-56B9-411D-8BAF-37F437B95FB1" target="_blank">APEX_AI</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-an-oracle-vector-search.html#GUID-09E724EA-DF07-4AF8-83E7-5876A414C9BF" title="Create an Oracle Vector Search to search both structured and unstructured data by semantics or meaning, and by values, enabling ultra-sophisticated AI search applications.">Creating an Oracle Vector Search</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-9F7BB07E-D803-4007-8021-F8AF0591E18D" name="GUID-9F7BB07E-D803-4007-8021-F8AF0591E18D"></a><h3 id="HTMDB-GUID-9F7BB07E-D803-4007-8021-F8AF0591E18D" class="sect3"><span class="enumeration_section">16.9.7.4 </span>Creating an Oracle Vector Search
+        Configuration
+               </h3>
+               <div>
+                  <p>Create an Oracle Vector Search configuration.</p>
+                  <div class="p">
+                     
+                     <div class="infoboxnote" id="GUID-9F7BB07E-D803-4007-8021-F8AF0591E18D__GUID-06777D0E-8C54-4575-93E0-A9BEF0D726A1">
+                        <p class="notep1">Note:</p>An Oracle Vector Search
+                configuration requires Oracle Database 23ai or later. Before you can create an
+                Oracle Vector Search configuration, you must complete all the steps described in
+                    <a href="creating-an-oracle-vector-search.html#GUID-A8288FDE-284F-4021-BEBC-E2E790F0D29B" title="Learn about Oracle Vector Search configurations.">About Oracle Vector Search Configurations</a>.
+                     </div>
+                     
+                  </div>
+                  <div class="section">
+                     
+                     <p>A <strong class="term">search configuration</strong> contains information
+                about searchable data source. 
+                     </p>
+                     
+                  </div>
+                  <p>To create a Oracle Vector Search configuration:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Access the Search Configurations page:</span><ol type="a" id="GUID-9F7BB07E-D803-4007-8021-F8AF0591E18D__SUBSTEPS_MDK_KQT_KDC">
+                           <li class="substepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span></li>
+                           <li class="substepexpand"><span>Under Navigation and Search, click <span class="uicontrol bold">Search
+                                Configurations</span>.</span><div>The Search Configurations page appears.</div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On the Search Configurations page, click <span class="uicontrol bold">Create</span>.</span><ol type="a" id="GUID-9F7BB07E-D803-4007-8021-F8AF0591E18D__SUBSTEPS_PHP_LQT_KDC">
+                           <li><span>Name - Enter a name for the search configuration (for example,
+                                <code class="codeph">Search Milestones - Vector</code>).</span></li>
+                           <li><span>Search Type - Select a type of search. Select <span class="uicontrol bold">Oracle Vector
+                                Search</span>: </span></li>
+                           <li><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Source:</span><ol type="a" id="GUID-9F7BB07E-D803-4007-8021-F8AF0591E18D__SUBSTEPS_XFJ_DP5_KDC">
+                           <li><span>Vector Provider - Select a Vector Provider used to get an embedding for
+                            a given search term. The search term must be converted using the same
+                            embedding model as the dataset in your table. </span></li>
+                           <li><span>Source Type - Specify the source of the search configuration. Oracle
+                            Vector search configuration can be based on a Table or SQL Query.</span></li>
+                           <li><span>Table / View Owner - Select the owner of the table that contains the
+                            vector column to be used for the search configuration (for example,
+                                <span class="uicontrol bold">Table</span>).</span></li>
+                           <li><span>Table / View Name - Select the table that contains the vector column to
+                            be used for the search configuration (for example,
+                                <code class="codeph">EBA_PROJECT_MILESTONES</code>).</span></li>
+                           <li><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Column Mapping:</span><ol type="a" id="GUID-9F7BB07E-D803-4007-8021-F8AF0591E18D__SUBSTEPS_AMX_F4D_P5B">
+                           <li class="substepexpand"><span>Primary Key Column - Select the primary key column for the Search
+                            Configuration Data Source (for example, <span class="uicontrol bold">ID
+                            Number</span>).</span></li>
+                           <li class="substepexpand"><span>Vector Column - Select the vector column. For similarity searches
+                            through the approximate method, there must be a vector index for this
+                            column (for example, <span class="uicontrol bold">VECTOR_COLUMN
+                            (Vector)</span>).</span></li>
+                           <li class="substepexpand"><span>Title Column - Select the column to be used as title (for example,
+                                <span class="uicontrol bold">NAME (Varchar2)</span>).</span></li>
+                           <li class="substepexpand"><span>Description Column - Select the column to be used as the description
+                            (for example, <span class="uicontrol bold">DESCRIPTION (Varchar2)</span>).</span></li>
+                           <li class="substepexpand"><span>Icon Source - Configure the icon that displays in the header of the
+                            search result. Options include: </span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-9F7BB07E-D803-4007-8021-F8AF0591E18D__UL_JGK_3Q5_KDC">
+                                    <li><span class="uicontrol bold">Initials</span> - The Title column to be used to
+                                    display the icon as initials.
+                                    </li>
+                                    <li><span class="uicontrol bold">CSS Classes</span> - The entered CSS classes to
+                                    be used to display the icon.
+                                    </li>
+                                    <li><span class="uicontrol bold">Class Column</span> - The selected column
+                                    containing the icon CSS class to be used to display the
+                                    icon.
+                                    </li>
+                                 </ul>
+                                 
+                                 <p>For this example, accept the default,
+                                    <span class="uicontrol bold">Initials</span>.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Search Configuration</span>.</span><div>
+                           
+                           <p>The search configuration is created. The Search Configuration,
+                        Edit page appears and displays the message <code class="codeph">Search configuration
+                            created</code>.
+                           </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Edit the search configuration to link to a report:</span><ol type="a" id="GUID-9F7BB07E-D803-4007-8021-F8AF0591E18D__SUBSTEPS_H5J_422_P5B">
+                           <li class="substepexpand"><span>Link, Link Type - Select the type of link (for example,
+                                <span class="uicontrol bold">Redirect to Page in this Application</span>).</span></li>
+                           <li class="substepexpand"><span>Page - Select or enter the page to redirect to (for example,
+                                <span class="uicontrol bold">2</span>).</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span><div>The Search Configurations page appears with the
+                            message <code class="codeph">Search Configuration updated</code>.
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click the <span class="uicontrol bold">Application ID</span> breadcrumb to return to the
+                    Application home page.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-an-oracle-vector-search.html#GUID-09E724EA-DF07-4AF8-83E7-5876A414C9BF" title="Create an Oracle Vector Search to search both structured and unstructured data by semantics or meaning, and by values, enabling ultra-sophisticated AI search applications.">Creating an Oracle Vector Search</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-C0BEB835-CC6F-4499-B8EB-0334AE646F0C" name="GUID-C0BEB835-CC6F-4499-B8EB-0334AE646F0C"></a><h3 id="HTMDB-GUID-C0BEB835-CC6F-4499-B8EB-0334AE646F0C" class="sect3"><span class="enumeration_section">16.9.7.5 </span>Creating an Oracle Vector Search Page
+               </h3>
+               <div>
+                  <p>Create a Search page by running the Create Page Wizard.</p>
+                  <div class="section">
+                     
+                     <p>The Create Page Wizard creates a Search field for you and prompts you to
+                select search configurations. Note that you can also add additional search
+                configurations later in Page Designer.</p>
+                     
+                     <p>A Search page features a Search field and a Search Results region. In
+                Page Designer, the Search Results region contains <strong class="term">Search
+                    Sources</strong> which map to the search configurations defined in Shared
+                Components.
+                     </p>
+                     
+                  </div>
+                  <p>To create a search page by running the Create Page Wizard: </p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Application home page:</span><ol type="a" id="GUID-C0BEB835-CC6F-4499-B8EB-0334AE646F0C__SUBSTEPS_D3G_255_ZYB">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select the application. </span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On the Application home page, click <span class="uicontrol bold">Create Page</span>.</span><div><span class="uicontrol bold">Create a Page</span> appears and features three
+                    tabs: <span class="uicontrol bold">Component</span>, <span class="uicontrol bold">Feature</span>, and
+                        <span class="uicontrol bold">Legacy Pages</span>.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under Component, select <span class="uicontrol bold">Search Page</span>.</span></li>
+                     <li class="stepexpand"><span>Page Definition:</span><ol type="a">
+                           <li class="substepexpand"><span>Page Number - The page number is an integer value that identifies a
+                            page within an application. </span></li>
+                           <li class="substepexpand"><span>Name - Specify a text name for this page (for example, <code class="codeph">Search
+                                Projects - Vector</code>).</span><div>
+                                 
+                                 <p>This text is also used for page
+                                    <span class="uicontrol bold">Title</span>. After page creation, you can
+                                modify the <span class="uicontrol bold">Title</span> in Page Designer.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Page Mode - Identify the page mode. Accept the default,
+                                <span class="uicontrol bold">Normal</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Search Configurations - Select the search configuration to be used by this page
+                    (for example, select <span class="uicontrol bold">Search Page - Vector</span>).</span></li>
+                     <li class="stepexpand"><span>Navigation - Accept the default and enable <span class="uicontrol bold">Use
+                        Breadcrumb</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Page</span>.</span><div>
+                           
+                           <p>Page Designer appears.</p>
+                           
+                           <p>In the Rendering tab, notice the page item,
+                            <code class="codeph">P<span class="codeinlineitalic">X</span>_SEARCH</code> (where <span class="italic">X</span> is the page number)
+                        and the Search Results region. <code class="codeph">P<span class="codeinlineitalic">X</span>_SEARCH</code> is the
+                        search field which enables users to submit search terms. The Search Results
+                        region contains both the search results and the Search Source which maps to
+                        search configurations maintained in Shared Components. You can further
+                        refine and control the search display and behavior by editing attributes in
+                        the Property Editor.
+                           </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Run and test the page:</span><ol type="a" id="GUID-C0BEB835-CC6F-4499-B8EB-0334AE646F0C__SUBSTEPS_QBX_W55_ZYB">
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Save and Run Page</span>.</span><div>The search page appears.</div>
+                           </li>
+                           <li class="substepexpand"><span>In the search field, enter a search (for example, <code class="codeph">bug</code>)
+                            and press <span class="uicontrol bold">Enter</span>.</span></li>
+                        </ol>
+                        <div>
+                           
+                           <p>The search results appear.</p>
+                           
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-an-oracle-vector-search.html#GUID-09E724EA-DF07-4AF8-83E7-5876A414C9BF" title="Create an Oracle Vector Search to search both structured and unstructured data by semantics or meaning, and by values, enabling ultra-sophisticated AI search applications.">Creating an Oracle Vector Search</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Creating an Application from a Generated SQL Script">
+      <meta name="abstract" content="Create an application from a saved script in SQL Scripts.">
+      <meta name="description" content="Create an application from a saved script in SQL Scripts.">
+      <meta name="DC.Relation" scheme="URI" content="using-quick-sql.html#GUID-21EE36C2-F814-48C0-90EA-7D464E9014FD">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Neil Fernandez">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Synders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="January2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-2193ECBE-5EFB-41A7-AF0B-3F6C46D836C6">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Create an application from a saved script in SQL Scripts.">
+      <meta name="description" content="Create an application from a saved script in SQL Scripts.">
+      <title>Creating an Application from a Generated SQL Script</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="SQL Workshop Guide">
+      <meta property="og:description" content="Create an application from a saved script in SQL Scripts.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="SQL Workshop Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-sql-workshop-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-01-14T12:14:06-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2008, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12911-01">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-quick-sql-models-and-scripts.html" title="Previous" type="text/html">
+      <link rel="next" href="configuring-quick-sql-settings.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX SQL Workshop Guide">
+    <meta name="dcterms.isVersionOf" content="AEUTL">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","name":"Creating an Application from a Generated SQL Script","description":"Create an application from a saved script in SQL Scripts.","datePublished":"2025-01-14 CST","dateModified":"2025-01-14 CST"} </script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-quick-sql-models-and-scripts.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="configuring-quick-sql-settings.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article>
+         <header>
+            <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Workshop Guide</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-sql-workshop-utilities.html" property="item" typeof="WebPage"><span property="name"> Using SQL Workshop Utilities</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-quick-sql.html" property="item" typeof="WebPage"><span property="name">Using Quick SQL</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">Creating an Application from a Generated SQL Script</li>
+            </ol>
+            <a id="GUID-2193ECBE-5EFB-41A7-AF0B-3F6C46D836C6" name="GUID-2193ECBE-5EFB-41A7-AF0B-3F6C46D836C6"></a>
+            
+            <h2 id="AEUTL-GUID-2193ECBE-5EFB-41A7-AF0B-3F6C46D836C6" class="sect2"><span class="enumeration_section">5.4.8 </span>Creating an Application from a Generated SQL Script
+            </h2>
+         </header>
+         <div class="ind">
+            <div>
+               <p>Create an application from a saved script in SQL Scripts.</p>
+               <div class="section">When you save a script, you can view, run, and modify the script in SQL Scripts. After you run the saved script, you can run the Create Application Wizard from SQL Scripts page. The wizard recognizes any tables and adds report and form pages for each table.</div>
+               <!-- class="section" -->
+               <p>To create an application from saved SQL script:</p>
+               <ol>
+                  <li class="stepexpand"><span>Save generated SQL as a script as described in <a href="managing-quick-sql-models-and-scripts.html#GUID-6E4A8B72-D439-428A-9C99-A3C545D86220" title="Save generated SQL as a script in SQL Scripts.">Saving a Generated SQL Script</a>.</span></li>
+                  <li class="stepexpand"><span>Click <span class="uicontrol bold">SQL Workshop</span> and then <span class="uicontrol bold">SQL
+          Scripts</span>.</span><div>The SQL Script page appears.</div>
+                  </li>
+                  <li class="stepexpand"><span>Run the saved script:</span><ol type="a" id="GUID-2193ECBE-5EFB-41A7-AF0B-3F6C46D836C6__SUBSTEPS_PMH_NV4_PHB">
+                        <li class="substepexpand"><span>Locate the script and click
+                                                  <span class="uicontrol bold">Run</span>.</span><div>
+                              
+                              <div class="figure" id="GUID-2193ECBE-5EFB-41A7-AF0B-3F6C46D836C6__FIG-132331-6D07D7FE"><img id="GUID-2193ECBE-5EFB-41A7-AF0B-3F6C46D836C6__IMAGE_AQN_4V4_PHB" height="359" width="1202" src="img/run_script.png" alt="Description of run_script.png follows" title="Description of run_script.png follows" longdesc="img_text/run_script.html"><br><a href="img_text/run_script.html">Description of the illustration run_script.png</a></div>
+                              <!-- class="figure" -->
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>On Run Script, click <span class="uicontrol bold">Run
+                                                  Now</span>.</span><div>
+                              
+                              <p>The Results page appears.</p>
+                              
+                           </div>
+                        </li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>To create an application, click <span class="uicontrol bold">Create App</span>.</span><div>
+                        <p>The Create Application Wizard appears.</p>
+                        <div class="infoboxnote" id="GUID-2193ECBE-5EFB-41A7-AF0B-3F6C46D836C6__GUID-276C64EA-BCC1-44F1-80E3-F29FB75D0A3A">
+                           <p class="notep1">Note:</p>Creating a database application is a multiple step process. Once you specify the application name and appearance, you add pages, select features, and configure application settings.
+                        </div>
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>On the Create an Application page:</span><ol type="a" id="GUID-2193ECBE-5EFB-41A7-AF0B-3F6C46D836C6__SUBSTEPS_D5L_HC3_TSB">
+                        <li><span>Enter the application name, select an appearance, add pages, select features, and
+              configure application settings.</span></li>
+                        <li><span>Click <span class="uicontrol bold">Create Application</span>.</span></li>
+                     </ol>
+                  </li>
+               </ol>
+               <div class="section">
+                  <div class="infoboxnotealso" id="GUID-2193ECBE-5EFB-41A7-AF0B-3F6C46D836C6__GUID-23E61112-E079-4F8F-A6CD-615E9F3F9B64">
+                     <p class="notep1">See Also:</p><a href="../htmdb/running-the-create-app-wizard.html#HTMDB-GUID-8EE3A07B-452F-4C55-8B50-36691813AD97" target="_blank">Running the Create Application Wizard</a> and <a href="../htmdb/page-types-features-settings.html#HTMDB-GUID-22A203E5-96CC-4A11-8DA3-97E1375203E5" target="_blank">Understanding Page Types, Features, and Settings</a> in the <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></div>
+               </div>
+               <!-- class="section" -->
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="using-quick-sql.html#GUID-21EE36C2-F814-48C0-90EA-7D464E9014FD" title="Rapidly design and prototype data models using a markdown-like shorthand syntax that expands to standards-based Oracle SQL.">Using Quick SQL</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

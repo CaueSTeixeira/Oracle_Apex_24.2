@@ -1,0 +1,507 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Understanding Object Browser">
+      <meta name="abstract" content="Use Object Browser to create, browse, and edit database objects in your workspace.">
+      <meta name="description" content="Use Object Browser to create, browse, and edit database objects in your workspace.">
+      <meta name="DC.subject" content="Object Browser, Object Tree, Object Detail View, selecting objects, viewing object details, filtering objects, hiding Object Tree, Collapse control, Restore control, Code Editor, creating objects">
+      <meta name="keywords" content="Object Browser, Object Tree, Object Detail View, selecting objects, viewing object details, filtering objects, hiding Object Tree, Collapse control, Restore control, Code Editor, creating objects">
+      <meta name="DC.Relation" scheme="URI" content="managing-db-objects-with-object-browser.html#GUID-04321951-FD96-4930-8F44-0D8441E8B731">
+      <meta name="DC.Relation" scheme="URI" content="understanding-object-browser.html#GUID-DA85CC70-98CC-4FF9-A209-8CA7641D62BC">
+      <meta name="DC.Relation" scheme="URI" content="understanding-object-browser.html#GUID-E477F0B2-A364-45CA-B186-B9E3D6B932B8">
+      <meta name="DC.Relation" scheme="URI" content="understanding-object-browser.html#GUID-EB1B927F-1BA6-4CAA-9990-8E280A3EA886">
+      <meta name="DC.Relation" scheme="URI" content="understanding-object-browser.html#GUID-86DC4829-C6CD-40D5-9EE6-1DF5ECBEF576">
+      <meta name="DC.Relation" scheme="URI" content="understanding-object-browser.html#GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE">
+      <meta name="DC.Relation" scheme="URI" content="understanding-object-browser.html#GUID-B8426B42-53FC-4373-B654-B34C0B25776C">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Neil Fernandez">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Synders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="January2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-8505D114-4C47-4CA9-82D4-A4F930424152">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Use Object Browser to create, browse, and edit database objects in your workspace.">
+      <meta name="description" content="Use Object Browser to create, browse, and edit database objects in your workspace.">
+      <title>Understanding Object Browser</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="SQL Workshop Guide">
+      <meta property="og:description" content="Use Object Browser to create, browse, and edit database objects in your workspace.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="SQL Workshop Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-sql-workshop-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-01-14T12:14:06-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2008, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12911-01">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="accessing-object-browser.html" title="Previous" type="text/html">
+      <link rel="next" href="managing-tables.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX SQL Workshop Guide">
+    <meta name="dcterms.isVersionOf" content="AEUTL">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","name":"Understanding Object Browser","description":"Use Object Browser to create, browse, and edit database objects in your workspace.","datePublished":"2025-01-14 CST","dateModified":"2025-01-14 CST"} </script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="accessing-object-browser.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="managing-tables.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article>
+         <header>
+            <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Workshop Guide</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="managing-db-objects-with-object-browser.html" property="item" typeof="WebPage"><span property="name"> Managing Database Objects with Object Browser </span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">Understanding Object
+        Browser</li>
+            </ol>
+            <a id="GUID-8505D114-4C47-4CA9-82D4-A4F930424152" name="GUID-8505D114-4C47-4CA9-82D4-A4F930424152"></a>
+            
+            <h2 id="AEUTL-GUID-8505D114-4C47-4CA9-82D4-A4F930424152" class="sect2"><span class="enumeration_section">3.2 </span>Understanding Object
+        Browser
+            </h2>
+         </header>
+         <div class="ind">
+            <p>Use <span>Object Browser</span> to create, browse, and edit database objects in your workspace.
+            </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="understanding-object-browser.html#GUID-DA85CC70-98CC-4FF9-A209-8CA7641D62BC">About Object Tree and Object Detail View</a><br>Learn about the Object Tree and Object Detail View.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-object-browser.html#GUID-E477F0B2-A364-45CA-B186-B9E3D6B932B8">Selecting Objects and Viewing Object Details</a><br>You can view the details of an object by selecting it from the Object Tree         and then clicking the different object detail tabs.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-object-browser.html#GUID-EB1B927F-1BA6-4CAA-9990-8E280A3EA886">Filtering Objects in the Object Tree</a><br>Filter objects by entering a search term in the filter above the Object Tree.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-object-browser.html#GUID-86DC4829-C6CD-40D5-9EE6-1DF5ECBEF576">Hiding or Resizing the Object Tree</a><br>Hide or restore the Object Tree clicking the Collapse and Restore         controls.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-object-browser.html#GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE">Code Editor in Object Browser</a><br>Learn about the Code Editor available  <span>Object Browser</span>.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-object-browser.html#GUID-B8426B42-53FC-4373-B654-B34C0B25776C">Creating Database Objects</a><br>Use the Create dialog to create database objects in <span>Object Browser</span>.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-db-objects-with-object-browser.html#GUID-04321951-FD96-4930-8F44-0D8441E8B731" title="Object Browser enables developers to browse, create, and edit objects in the Oracle Database.">Managing Database Objects with Object Browser</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-DA85CC70-98CC-4FF9-A209-8CA7641D62BC" name="GUID-DA85CC70-98CC-4FF9-A209-8CA7641D62BC"></a><h3 id="AEUTL-GUID-DA85CC70-98CC-4FF9-A209-8CA7641D62BC" class="sect3"><span class="enumeration_section">3.2.1 </span>About Object Tree and Object Detail
+        View
+               </h3>
+               <div>
+                  <p>Learn about the Object Tree and Object Detail View.</p>
+                  <div class="section">
+                     
+                     <p><span>Object Browser</span> is divided into two panes: 
+                     </p>
+                     
+                     <ul style="list-style-type: disc;">
+                        <li>
+                           
+                           <p><strong class="term">Object Tree</strong> - The Object Tree displays
+                        database objects of a selected type within the current schema. To view
+                        specific objects, expand the object type and select the object in the tree. 
+                           </p>
+                           
+                           <p>To change the current schema, select a new schema from the
+                            <span class="uicontrol bold">Schema</span> list.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><strong class="term">Object Detail View</strong> - Selecting an object type in the Object Tree populates the Object Detail View. The Object Detail View displays tabs specific to the object type. Each tab displays actions appropriate for the object.
+                           </p>
+                           
+                           <p>In the following example, <span class="uicontrol bold">Views</span> is expanded and
+                        displays six views.
+                           </p>
+                           
+                        </li>
+                     </ul>
+                     
+                     <div class="figure" id="GUID-DA85CC70-98CC-4FF9-A209-8CA7641D62BC__GUID-A22C2D22-A419-4C0F-8C10-F6E4E6B4C4BE"><img height="583" width="1040" src="img/obj_b_pane.png" alt="Description of obj_b_pane.png follows" title="Description of obj_b_pane.png follows" longdesc="img_text/obj_b_pane.html"><br><a href="img_text/obj_b_pane.html">Description of the illustration obj_b_pane.png</a></div>
+                     <!-- class="figure" -->
+                     
+                  </div>
+                  <!-- class="section" -->
+                  <div class="section">
+                     <p class="subhead2" id="GUID-DA85CC70-98CC-4FF9-A209-8CA7641D62BC__GUID-0022A736-EBF6-427D-8336-DFAE5A80FB7F">About the Object Tree Context
+                Menus</p>
+                     
+                     
+                     <p>Right-clicking an object type, displays a context menu with the
+                following controls:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-DA85CC70-98CC-4FF9-A209-8CA7641D62BC__UL_SQ4_1P1_HXB">
+                        <li><span class="uicontrol bold">Create</span> <span class="italic">object</span> - Launches the appropriate Create <span class="italic">Object</span> dialog.
+                        </li>
+                        <li><span class="uicontrol bold">Refresh</span> - Refreshes the current view.
+                        </li>
+                        <li><span class="uicontrol bold">Expand All</span> - Expands all nodes in the Object
+                    Tree.
+                        </li>
+                        <li><span class="uicontrol bold">Collapse All</span> - Collapses all nodes in the Object Tree.
+                        </li>
+                     </ul>
+                     
+                  </div>
+                  <!-- class="section" -->
+                  <div class="section">
+                     <p class="subhead2" id="GUID-DA85CC70-98CC-4FF9-A209-8CA7641D62BC__GUID-D6E24036-ED2C-4F07-90DF-E06275E11135">Common  <span>Object Browser</span> Behaviors
+                     </p>
+                     
+                     
+                     <p>Other common <span>Object Browser</span> behaviors include:
+                     </p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-DA85CC70-98CC-4FF9-A209-8CA7641D62BC__UL_CQG_GJB_HXB">
+                        <li>Invalid objects display in red in the Object Tree and an Invalid
+                    flag appears in the Object Detail View.</li>
+                        <li><span>Object Browser</span> remembers the last viewed object. If you exit <span>Object Browser</span> and return later, the last viewed object and the line position displays.
+                        </li>
+                        <li>When modifying objects, such as adding a column to a table, the Create dialog displays the SQL it creates in the dialog. Developers can use this as a learning tool or copy and paste it for later use.</li>
+                     </ul>
+                     
+                  </div>
+                  <!-- class="section" -->
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-object-browser.html#GUID-8505D114-4C47-4CA9-82D4-A4F930424152" title="Use Object Browser to create, browse, and edit database objects in your workspace.">Understanding Object Browser</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-E477F0B2-A364-45CA-B186-B9E3D6B932B8" name="GUID-E477F0B2-A364-45CA-B186-B9E3D6B932B8"></a><h3 id="AEUTL-GUID-E477F0B2-A364-45CA-B186-B9E3D6B932B8" class="sect3"><span class="enumeration_section">3.2.2 </span>Selecting Objects and Viewing Object Details
+               </h3>
+               <div>
+                  <p>You can view the details of an object by selecting it from the Object Tree
+        and then clicking the different object detail tabs.</p>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-E477F0B2-A364-45CA-B186-B9E3D6B932B8__GUID-FF78B73F-AF16-4DA5-9285-385D63268C90">Object Detail View</p>
+                     <p>In <span>Object Browser</span>, expand an object type in the Object Tree and select an object. The object
+                details (also called the <strong class="term">Object Detail View</strong>) appears. 
+                     </p>
+                     
+                     <div class="figure" id="GUID-E477F0B2-A364-45CA-B186-B9E3D6B932B8__FIG_GD3_XTQ_HXB"><img id="GUID-E477F0B2-A364-45CA-B186-B9E3D6B932B8__IMAGE_HD3_XTQ_HXB" height="448" width="1028" src="img/obj_b_column_tab.png" alt="Description of obj_b_column_tab.png follows" title="Description of obj_b_column_tab.png follows" longdesc="img_text/obj_b_column_tab.html"><br><a href="img_text/obj_b_column_tab.html">Description of the illustration obj_b_column_tab.png</a></div>
+                     <!-- class="figure" -->
+                     <p>Note the various tabs available for the object. The specific tabs available varies
+                depending upon the object type. In the previous example, the <code class="codeph">DEPT</code>
+                table is selected and includes the following tabs: <span class="uicontrol bold">Columns</span>,
+                    <span class="uicontrol bold">Data</span>, <span class="uicontrol bold">Indexes</span>,
+                    <span class="uicontrol bold">Constraints</span>, <span class="uicontrol bold">Grants</span>,
+                    <span class="uicontrol bold">Statistics</span>, <span class="uicontrol bold">Triggers</span>,
+                    <span class="uicontrol bold">Dependencies</span>, <span class="uicontrol bold">DDL</span>, and
+                    <span class="uicontrol bold">Sample Queries</span>. In this example, the
+                    <span class="uicontrol bold">Columns</span> tab is selected.
+                     </p>
+                  </div>
+                  <!-- class="section" -->
+                  <div class="section">
+                     <p class="subhead2" id="GUID-E477F0B2-A364-45CA-B186-B9E3D6B932B8__GUID-F01E8316-8A8D-4A48-9600-21FE4BC68285">Object Tabs and Actions</p>
+                     
+                     
+                     <p>The next example shows <span>Object Browser</span> with the <code class="codeph">DEPT</code> table and <span class="uicontrol bold">Data</span> tab
+                selected. You can view and edit the table data using the <span class="uicontrol bold">Data</span>
+                tab. The <span class="uicontrol bold">Data</span> tab includes the following Actions:
+                    <span class="uicontrol bold">Insert Row</span>, <span class="uicontrol bold">Columns</span>,
+                    <span class="uicontrol bold">Filter</span>, <span class="uicontrol bold">Count Rows</span>,
+                    <span class="uicontrol bold">Load Data</span>, <span class="uicontrol bold">Download</span>, and
+                    <span class="uicontrol bold">Refresh</span>.
+                     </p>
+                     
+                     <div class="figure" id="GUID-E477F0B2-A364-45CA-B186-B9E3D6B932B8__FIG_PMS_C5Q_HXB"><img id="GUID-E477F0B2-A364-45CA-B186-B9E3D6B932B8__IMAGE_QMS_C5Q_HXB" height="562" width="1123" src="img/obj_b_data_tab.png" alt="Description of obj_b_data_tab.png follows" title="Description of obj_b_data_tab.png follows" longdesc="img_text/obj_b_data_tab.html"><br><a href="img_text/obj_b_data_tab.html">Description of the illustration obj_b_data_tab.png</a></div>
+                     <!-- class="figure" -->
+                     
+                     <p>You can view and edit the table data from the Data tab. For example, to add a table
+                row:</p>
+                     
+                     <ol id="GUID-E477F0B2-A364-45CA-B186-B9E3D6B932B8__OL_GFT_WMR_YXB">
+                        <li>
+                           
+                           <p>Click the <span class="uicontrol bold">Data</span> tab.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>Click the <span class="uicontrol bold">Insert Row</span> action.
+                           </p>
+                           
+                           <p>Clicking an action displays a dialog box. </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>Edit the row details and click <span class="uicontrol bold">Create</span>.
+                           </p>
+                           
+                        </li>
+                     </ol>
+                     
+                     <div class="infoboxnote" id="GUID-E477F0B2-A364-45CA-B186-B9E3D6B932B8__GUID-39EA1555-3F32-4E4D-840F-5B03470BE9CB">
+                        <p class="notep1">Note:</p>To learn more about editing table data see <a href="managing-tables.html#GUID-0D2188B8-1623-48CC-A689-3D942A52C10E" title="Select a table from the Object Tree and click the Data tab.">Editing Table Data</a>. 
+                     </div>
+                     
+                  </div>
+                  <!-- class="section" -->
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-object-browser.html#GUID-8505D114-4C47-4CA9-82D4-A4F930424152" title="Use Object Browser to create, browse, and edit database objects in your workspace.">Understanding Object Browser</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-EB1B927F-1BA6-4CAA-9990-8E280A3EA886" name="GUID-EB1B927F-1BA6-4CAA-9990-8E280A3EA886"></a><h3 id="AEUTL-GUID-EB1B927F-1BA6-4CAA-9990-8E280A3EA886" class="sect3"><span class="enumeration_section">3.2.3 </span>Filtering Objects in the Object Tree
+               </h3>
+               <div>
+                  <p>Filter objects by entering a search term in the filter above the Object Tree.</p>
+                  <div class="section">
+                     
+                     <p>In the example that follows, the search term <code class="codeph">PROJECTS</code> displays in the filter. Within the Object Tree only objects that include that search term appear. Filters created in <span>Object Browser</span> are persistent and are preserved within the <span>APEX</span> session.
+                     </p>
+                     
+                     <div class="figure" id="GUID-EB1B927F-1BA6-4CAA-9990-8E280A3EA886__FIG_Y4V_L5Q_HXB"><img id="GUID-EB1B927F-1BA6-4CAA-9990-8E280A3EA886__IMAGE_Z4V_L5Q_HXB" height="514" width="1026" src="img/obj_b_filter_data.png" alt="Description of obj_b_filter_data.png follows" title="Description of obj_b_filter_data.png follows" longdesc="img_text/obj_b_filter_data.html"><br><a href="img_text/obj_b_filter_data.html">Description of the illustration obj_b_filter_data.png</a></div>
+                     <!-- class="figure" -->
+                     
+                  </div>
+                  <!-- class="section" -->
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-object-browser.html#GUID-8505D114-4C47-4CA9-82D4-A4F930424152" title="Use Object Browser to create, browse, and edit database objects in your workspace.">Understanding Object Browser</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-86DC4829-C6CD-40D5-9EE6-1DF5ECBEF576" name="GUID-86DC4829-C6CD-40D5-9EE6-1DF5ECBEF576"></a><h3 id="AEUTL-GUID-86DC4829-C6CD-40D5-9EE6-1DF5ECBEF576" class="sect3"><span class="enumeration_section">3.2.4 </span>Hiding or Resizing the Object Tree
+               </h3>
+               <div>
+                  <p>Hide or restore the Object Tree clicking the Collapse and Restore
+        controls.</p>
+                  <div class="section">
+                     <p>If the Object Tree displays, clicking the <span class="uicontrol bold">Collapse</span> control
+                hides it. Similarly, if the Object Tree is hidden, selecting
+                    <span class="uicontrol bold">Restore</span> causes the Object Tree to reappear. You can also
+                adjust the size of the panes manually by selecting and dragging the horizontal
+                splitter. 
+                     </p>
+                     <div class="figure" id="GUID-86DC4829-C6CD-40D5-9EE6-1DF5ECBEF576__GUID-3854416A-2C6C-404A-BE38-02C52D3EFE60"><img height="522" width="1041" src="img/obj_b_hide.png" alt="Description of obj_b_hide.png follows" title="Description of obj_b_hide.png follows" longdesc="img_text/obj_b_hide.html"><br><a href="img_text/obj_b_hide.html">Description of the illustration obj_b_hide.png</a></div>
+                     <!-- class="figure" -->
+                  </div>
+                  <!-- class="section" -->
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-object-browser.html#GUID-8505D114-4C47-4CA9-82D4-A4F930424152" title="Use Object Browser to create, browse, and edit database objects in your workspace.">Understanding Object Browser</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE" name="GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE"></a><h3 id="AEUTL-GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE" class="sect3"><span class="enumeration_section">3.2.5 </span> Code Editor in <span>Object Browser</span></h3>
+               <div>
+                  <p>Learn about the Code Editor available  <span>Object Browser</span>.
+                  </p>
+                  <div class="section">
+                     <p>Many tabs in Object Detail View feature a fully functional Code Editor. The following
+                example shows the <span class="uicontrol bold">DDL</span> tab for the <code class="codeph">DEPT</code>
+                table.
+                     </p>
+                     
+                     <div class="figure" id="GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE__FIG_RJT_SNY_YXB"><img id="GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE__IMAGE_SJT_SNY_YXB" height="560" width="1068" src="img/code_editor_ddl_tab.png" alt="Description of code_editor_ddl_tab.png follows" title="Description of code_editor_ddl_tab.png follows" longdesc="img_text/code_editor_ddl_tab.html"><br><a href="img_text/code_editor_ddl_tab.html">Description of the illustration code_editor_ddl_tab.png</a></div>
+                     <!-- class="figure" -->
+                     <div class="infobox-tip" id="GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE__GUID-6A4B82F1-5273-4BC5-848C-8467BD285436">
+                        <p class="notep1">Tip:</p>
+                        <p>If you have configured Generative AI for your workspace, <span>Oracle APEX</span> includes integrated AI Chat capability (called <span>APEX</span> Assistant) in all all Code Editors. To learn more, see <a href="../htmdb/managing-generative-ai-in-apex.html#HTMDB-GUID-FDA021EF-D1A4-42AB-886F-617BE89B2557" target="_blank">Managing Generative AI in APEX</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span>.
+                        </p>
+                     </div>
+                     
+                     <p>Code Editor controls include:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE__UL_G5V_WYR_FXB">
+                        <li><img id="GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE__IMAGE_VM4_SWX_5QB" height="40" width="37" src="img/code_editor_undo.png" alt="Undo - Ctrl+Z" title="Undo - Ctrl+Z"><p>Undo - Ctrl+Z</p>
+                        </li>
+                        <li><img id="GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE__IMAGE_PPN_3SX_5QB" height="39" width="34" src="img/code_editor_redo.png" alt="Redo - Ctrl+Shift+Z" title="Redo - Ctrl+Shift+Z"><p>Redo - Ctrl+Shift+Z</p>
+                        </li>
+                        <li><img id="GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE__IMAGE_B5L_4SX_5QB" height="37" width="36" src="img/code_editor_find.png" alt="Find - Ctrl+F" title="Find - Ctrl+F"><p>Find - Ctrl+F</p>
+                        </li>
+                        <li><img id="GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE__IMAGE_UXR_XSX_5QB" height="36" width="35" src="img/code_editor_auto_complete.png" alt="Auto Complete - Ctrl+Space" title="Auto Complete - Ctrl+Space"><p>Auto Complete - Ctrl+Space</p>
+                        </li>
+                        <li>
+                           
+                           <p>Context Menu - Right-click and select one of the following:</p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE__UL_DML_K1F_CNB">
+                              <li>Change All Occurrences (Ctrl+F2) - Right-click and select
+                                <span class="uicontrol bold">Change All Occurrences</span> from the context menu. 
+                              </li>
+                              <li>Cut</li>
+                              <li>Copy</li>
+                              <li>Paste</li>
+                              <li>Command Palette (F1) - Displays the Command Palette.</li>
+                           </ul>
+                           
+                        </li>
+                     </ul>
+                  </div>
+                  <!-- class="section" -->
+                  <div class="section">
+                     <p class="subhead2" id="GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE__GUID-4A2B9855-4584-4B4D-B758-48E46ACBC644">Command Palette</p>
+                     
+                     
+                     <p>Right click to display a context menu and select <span class="uicontrol bold">Command
+                    Palette</span>. The Command Palette includes over 80 commands
+                including:
+                     </p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE__UL_TSJ_DZR_FXB">
+                        <li>Replace (Ctrl+H)</li>
+                        <li>Replace with Next Value (Ctrl+Shift+.)</li>
+                        <li>Replace with Previous Value (Ctrl+Shift+,)</li>
+                     </ul>
+                     
+                     <div class="infoboxnotealso" id="GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE__GUID-8A2609DC-A65E-4197-9CD2-B68A605DCE86">
+                        <p class="notep1">See Also:</p><a href="../aeacc/accessing-oracle-apex-using-a-keyboard.html#AEACC-GUID-164D2ADD-0699-4E6F-843C-29CD71C90B2C" target="_blank">Code Editor Keyboard Shortcuts</a> in <span><cite>Oracle APEX Accessibility
+                                        Guide</cite></span></div>
+                     
+                  </div>
+                  <!-- class="section" -->
+                  <div class="section">
+                     <p class="subhead2" id="GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE__GUID-61A35CED-15E2-4BFD-A5A2-0FD6F02D78D3">Settings Menu</p><img id="GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE__IMAGE_A2M_1VX_5QB" height="38" width="39" src="img/code_editor_settings.png" alt="Settings Menu" title="Settings Menu"><p>The <span class="uicontrol bold">Settings</span> menu displays on the right
+                side and includes the following options:
+                     </p>
+                     <ul style="list-style-type: disc;" id="GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE__UL_R3F_JKL_GXB">
+                        <li>Indentation - Options include: Tab Inserts Spaces, Tab Size, and
+                    Indent Size</li>
+                        <li>Themes - Options include: Automatic, Light, Dark, and High Contrast
+                    Dark</li>
+                        <li>Minimap - Options include: On, Off, Only when &gt;100 lines.</li>
+                        <li>Accessibility Mode</li>
+                        <li>Show Line Numbers</li>
+                        <li>Show Ruler</li>
+                        <li>Show Suggestions</li>
+                        <li>Show Whitespace</li>
+                        <li>Bracket Pair Colorization</li>
+                     </ul>
+                  </div>
+                  <!-- class="section" -->
+                  <div class="section"></div>
+                  <!-- class="section" -->
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE__GUID-3700F307-6680-471B-8321-3E2ABE6DDFFB">
+                     <p class="notep1">See Also:</p><a href="../htmdb/managing-generative-ai-in-apex.html#HTMDB-GUID-FDA021EF-D1A4-42AB-886F-617BE89B2557" target="_blank">Managing Generative AI in APEX</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-object-browser.html#GUID-8505D114-4C47-4CA9-82D4-A4F930424152" title="Use Object Browser to create, browse, and edit database objects in your workspace.">Understanding Object Browser</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-B8426B42-53FC-4373-B654-B34C0B25776C" name="GUID-B8426B42-53FC-4373-B654-B34C0B25776C"></a><h3 id="AEUTL-GUID-B8426B42-53FC-4373-B654-B34C0B25776C" class="sect3"><span class="enumeration_section">3.2.6 </span>Creating Database Objects
+               </h3>
+               <div>
+                  <p>Use the Create dialog to create database objects in <span>Object Browser</span>.
+                  </p>
+                  <div class="p">
+                     <p>The following options enable you to quickly create objects in <span>Object Browser</span>:
+                     </p>
+                     <ul style="list-style-type: disc;" id="GUID-B8426B42-53FC-4373-B654-B34C0B25776C__UL_RD4_LFD_KXB">
+                        <li>Create Database Objects menu ( + )</li>
+                        <li>Context menu of a tree node (right-click)</li>
+                        <li><span>Object Browser</span> cards landing page containing shortcuts to the Create dialog for each object type
+                        </li>
+                     </ul>
+                     <p>Each method opens a Create dialog for the specified object type.</p>
+                  </div>
+                  <!-- class="section" -->
+                  <div class="section">
+                     <p>To create an object in <span>Object Browser</span> with the Create Database Objects menu:
+                     </p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>Click the <span class="uicontrol bold">Create Database Objects</span> menu ( <img id="GUID-B8426B42-53FC-4373-B654-B34C0B25776C__IMAGE_U4B_FWS_YXB" height="32" width="49" src="img/create_database_obj_button.png" alt="Create Database Objects menu" title="Create Database Objects menu"> ) and select an object type.</span><div>
+                           
+                           <div class="infobox-tip" id="GUID-B8426B42-53FC-4373-B654-B34C0B25776C__GUID-4B61BEDB-E3C7-494C-8F9D-9B12327CEBB3">
+                              <p class="notep1">Tip:</p>To create new objects from the Object
+                                Tree, right-click the object and select the
+                                        <span class="uicontrol bold">Create</span> option.
+                           </div>
+                           
+                           <p>The appropriate Create <span class="italic">Object</span> dialog appears.
+                           </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Follow the on-screen instructions.</span><div>
+                           <p><span>APEX</span> automatically converts the names of objects to uppercase and replaces spaces with underscores. To name objects in mixed case, use SQL Commands to create the objects manually.
+                           </p>
+                           <p>See <a href="using-command-editor.html#GUID-9A30095A-1FBF-42EE-B56E-0A6B96805A8A" title="You use the command editor in SQL Commands to execute SQL commands within Oracle APEX.">Using the Command Editor</a>.
+                           </p>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-object-browser.html#GUID-8505D114-4C47-4CA9-82D4-A4F930424152" title="Use Object Browser to create, browse, and edit database objects in your workspace.">Understanding Object Browser</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

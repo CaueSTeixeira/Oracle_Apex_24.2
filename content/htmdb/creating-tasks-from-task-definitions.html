@@ -1,0 +1,163 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Creating Tasks from Task Definitions">
+      <meta name="abstract" content="Create tasks in an Oracle APEX application from existing task definitions.">
+      <meta name="description" content="Create tasks in an Oracle APEX application from existing task definitions.">
+      <meta name="DC.subject" content="tasks, creating with page process">
+      <meta name="keywords" content="tasks, creating with page process">
+      <meta name="DC.Relation" scheme="URI" content="managing-workflows-and-tasks.html#GUID-C2149600-4A1C-4CC5-A149-DB5C6963A599">
+      <meta name="DC.Relation" scheme="URI" content="creating-tasks-example.html#GUID-CAFABAA3-6F24-41ED-BE3B-69A1729EAC41">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-942D166E-C71D-4667-90A6-92FAEDB4FD7F">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Create tasks in an Oracle APEX application from existing task definitions.">
+      <meta name="description" content="Create tasks in an Oracle APEX application from existing task definitions.">
+      <title>Creating Tasks from Task Definitions</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Create tasks in an Oracle APEX application from existing task definitions.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-unified-task-lists.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-tasks-example.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Creating Tasks from Task Definitions","description":"Create tasks in an Oracle APEX application from existing task definitions.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-unified-task-lists.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-tasks-example.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-942D166E-C71D-4667-90A6-92FAEDB4FD7F" name="GUID-942D166E-C71D-4667-90A6-92FAEDB4FD7F"></a>
+         
+         <h2 id="HTMDB-GUID-942D166E-C71D-4667-90A6-92FAEDB4FD7F" class="sect2"><span class="enumeration_section">20.16 </span>Creating Tasks from Task Definitions
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Create tasks in an <span>Oracle APEX</span> application from existing task definitions.
+               </p>
+               <div class="p">For <span>APEX</span> to create tasks, you must define a <strong class="term">Human Task - Create</strong> page process. When the page process runs, <span>APEX</span> creates a new task based on the task definition. In order to be able to use this process, at least one Task Definition must exist as a shared component in the application.
+               </div>
+               <p>To add a Human Task - Create page process to a page:</p>
+               <ol id="GUID-942D166E-C71D-4667-90A6-92FAEDB4FD7F__STEPS_PPP_WGZ_SSB">
+                  <li class="stepexpand"><span>View the page in Page Designer.</span><ol type="a" id="GUID-942D166E-C71D-4667-90A6-92FAEDB4FD7F__SUBSTEPS_KSD_RG2_ZSB">
+                        <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                        <li><span>Select an application.</span></li>
+                        <li><span>Select a page.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>In either the Rendering or Processing tab, locate the node where the process will occur. Right-click and select <span class="uicontrol bold">Create Process</span>.</span></li>
+                  <li class="stepexpand"><span>Under Identification:</span><ol type="a" id="GUID-942D166E-C71D-4667-90A6-92FAEDB4FD7F__SUBSTEPS_IKH_GJ2_ZSB">
+                        <li><span>Name - Specify the name of the process.</span></li>
+                        <li><span>Type - Select <span class="uicontrol bold">Human Task - Create</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Under Settings:</span><ol type="a" id="GUID-942D166E-C71D-4667-90A6-92FAEDB4FD7F__SUBSTEPS_GKJ_NJ2_ZSB">
+                        <li class="substepexpand"><span>Definition - Select the Task Definition.</span></li>
+                        <li class="substepexpand"><span>Subject - If specified here, this will override the subject in the task definition.</span></li>
+                        <li class="substepexpand"><span>Priority - If specified here, this will override the priority in the task definition.</span></li>
+                        <li class="substepexpand"><span>(Approval tasks only) Initiator Can Complete - If specified here, this will override the value in the task definition.</span></li>
+                        <li class="substepexpand"><span>Initiator Item - The page item whose value can be used to specify who initiates the task. By default, the logged-in user running the page will be the initiator. This value can be specified to override the logged-in user, allowing a user to initiate a task on behalf of another user.</span></li>
+                        <li class="substepexpand"><span>Task ID Item - When specified, this saves the internal id of the task created when the page is run.</span></li>
+                        <li class="substepexpand"><span>Details Primary Key Item - When specified, this allows <span>Oracle APEX</span> to uniquely identify a record from the table or query that is specified as the Actions Source in the task definition.</span><div>For example, in the <strong class="term">Sample Workflows, Approvals, and Tasks </strong> app, entering <code class="codeph">P4_EMPNO</code> associates the task with the corresponding record in the <code class="codeph">EBA_DEMO_APPR_EMP</code> table. When the actual owner approves the Job Change Request, <span>APEX</span> updates the table with the new information from the task.
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Due Date Item - An optional page item representing the task's due date. When specified, this value overrides the due date calculated from the associated task definition.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Configure the rest of the Process.</span><div>For more information, see <a href="creating-a-page-processes.html#GUID-E8BFFB8B-F80A-42BB-A9EE-1BBD5A4D4947" title="Create a page process in Page Designer.">Creating Page Processes</a>.
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>Set the Page Process Parameters.</span><div>If the Task Definition has parameters specified, these appear in the Process Tree on the page. Parameters can be set to static values or page items. If a parameter is not required, it can be left as <code class="codeph">Null</code>. If a parameter is marked <code class="codeph">Required</code> in the Task Definition, it must be set in the process or there will be an error when saving the page.
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+               </ol>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="creating-tasks-example.html#GUID-CAFABAA3-6F24-41ED-BE3B-69A1729EAC41">Example: Creating a Human Task from a Form Submission</a><br>You can configure both approval and action tasks, collectively known as <strong class="term">human tasks</strong>, as page processes that can run upon submission of a form.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-workflows-and-tasks.html#GUID-C2149600-4A1C-4CC5-A149-DB5C6963A599" title="Learn about workflows (including designing workflows and using the workflow diagram builder) and tasks (including approval tasks and action tasks).">Managing Workflows and Tasks</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

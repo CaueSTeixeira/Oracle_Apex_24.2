@@ -1,0 +1,389 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="concept">
+      <meta name="DC.Title" content="States and Transitions">
+      <meta name="abstract" content="Learn about states and transitions for workflows and for workflow activities.">
+      <meta name="description" content="Learn about states and transitions for workflows and for workflow activities.">
+      <meta name="DC.subject" content="workflows, states, transitions, activities, workflow activities">
+      <meta name="keywords" content="workflows, states, transitions, activities, workflow activities">
+      <meta name="DC.Relation" scheme="URI" content="about-workflows.html#GUID-81DF621C-4AA0-4656-9507-AFF2B3FD162E">
+      <meta name="DC.Relation" scheme="URI" content="states-and-transitions.html#GUID-BB295C48-64CA-4291-8365-AF80D725344F">
+      <meta name="DC.Relation" scheme="URI" content="states-and-transitions.html#GUID-B641AEE6-64B1-497D-84C4-8C7B3E7635CD">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Concept">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-CBADB539-01CF-4DBD-9D8C-C7F5D8D18C8C">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about states and transitions for workflows and for workflow activities.">
+      <meta name="description" content="Learn about states and transitions for workflows and for workflow activities.">
+      <title>States and Transitions</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Learn about states and transitions for workflows and for workflow activities.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="about-workflow-runtime-engine.html" title="Previous" type="text/html">
+      <link rel="next" href="example-workflows.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"States and Transitions","description":"Learn about states and transitions for workflows and for workflow activities.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="about-workflow-runtime-engine.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="example-workflows.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-CBADB539-01CF-4DBD-9D8C-C7F5D8D18C8C" name="GUID-CBADB539-01CF-4DBD-9D8C-C7F5D8D18C8C"></a>
+         
+         <h2 id="HTMDB-GUID-CBADB539-01CF-4DBD-9D8C-C7F5D8D18C8C" class="sect2"><span class="enumeration_section">20.1.6 </span>States and Transitions
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Learn about states and transitions for workflows and for workflow activities.</p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="states-and-transitions.html#GUID-BB295C48-64CA-4291-8365-AF80D725344F">Workflow States and Transitions</a><br>Learn about available workflow states and potential transitions.
+                  </li>
+                  <li class="ulchildlink"><a href="states-and-transitions.html#GUID-B641AEE6-64B1-497D-84C4-8C7B3E7635CD">Activity States and Transitions</a><br>Learn about available activity states and potential transitions.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="about-workflows.html#GUID-81DF621C-4AA0-4656-9507-AFF2B3FD162E" title="Oracle APEX Workflow provides basic workflow capabilities for APEX developers.">About Workflows</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-BB295C48-64CA-4291-8365-AF80D725344F" name="GUID-BB295C48-64CA-4291-8365-AF80D725344F"></a><h3 id="HTMDB-GUID-BB295C48-64CA-4291-8365-AF80D725344F" class="sect3"><span class="enumeration_section">20.1.6.1 </span>Workflow States and Transitions
+               </h3>
+               <div>
+                  <p>Learn about available workflow states and potential transitions.</p>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-BB295C48-64CA-4291-8365-AF80D725344F__GUID-BA1AC276-5F26-4B62-833A-2703D6622D82">Workflow States</p>
+                     <div class="p">A <strong class="term">workflow state</strong> is the current state of a workflow instance. There are five separate workflow states, and a workflow may only be in one state at a time.
+                        <dl>
+                           <dt class="dlterm"><a name="GUID-BB295C48-64CA-4291-8365-AF80D725344F__GUID-4935B5F9-E339-4CBB-A4A5-CFD42B6FFADC">
+                                 <!-- --></a>Active
+                           </dt>
+                           <dd>
+                              <p>A workflow that is currently running.</p>
+                           </dd>
+                           <dt class="dlterm"><a name="GUID-BB295C48-64CA-4291-8365-AF80D725344F__GUID-471D060B-5E5A-4009-8DFC-5624B94CD17E">
+                                 <!-- --></a>Suspended
+                           </dt>
+                           <dd>
+                              <p>A workflow that is currently suspended at a particular activity. A suspended workflow can be resumed by the <strong class="term">Workflow Administrator</strong>.
+                              </p>
+                           </dd>
+                           <dt class="dlterm"><a name="GUID-BB295C48-64CA-4291-8365-AF80D725344F__GUID-EB77F510-E868-483E-AA4D-5C200D85B249">
+                                 <!-- --></a>Completed
+                           </dt>
+                           <dd>
+                              <p>A workflow that has reached an end activity and completed successfully.</p>
+                           </dd>
+                           <dt class="dlterm"><a name="GUID-BB295C48-64CA-4291-8365-AF80D725344F__GUID-D53DDD98-2644-4FA2-B1FC-3D1FA99EE413">
+                                 <!-- --></a>Terminated
+                           </dt>
+                           <dd>
+                              <p>A workflow that has been stopped by the <strong class="term">Workflow Owner</strong> or <strong class="term">Workflow Administrator</strong> or a workflow that has reached an end activity with the state attribute set to terminated.
+                              </p>
+                           </dd>
+                           <dt class="dlterm"><a name="GUID-BB295C48-64CA-4291-8365-AF80D725344F__GUID-CD706BDB-BCCC-4E49-8325-C5237F711D4F">
+                                 <!-- --></a>Faulted
+                           </dt>
+                           <dd>
+                              <p>A workflow that produced an error at one of its activities. The <strong class="term">Workflow Administrator</strong> can retry or stop a faulted workflow.
+                              </p>
+                           </dd>
+                        </dl>
+                     </div>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-BB295C48-64CA-4291-8365-AF80D725344F__GUID-FA86F0AA-86BD-4B03-9953-BEB9A9EE96BD">Workflow State Transitions</p>
+                     <p>A <strong class="term">workflow transition</strong> describes a workflow moving from one state to another. Workflow state transitions happen either by the workflow engine itself, by appropriate APIs, or as a result of a user action. For example, a workflow may transition from <strong class="term">Active</strong> to <strong class="term">Completed</strong> after a user approves a task.
+                     </p>
+                     <div class="tblformal" id="GUID-BB295C48-64CA-4291-8365-AF80D725344F__TABLE_VRX_TK2_GZB">
+                        <table cellpadding="4" cellspacing="0" class="Formal" title summary="Workflow state transitions." frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="0%" id="d290021e278">Initial State</th>
+                                 <th align="left" valign="bottom" width="0%" id="d290021e280">Category</th>
+                                 <th align="left" valign="bottom" width="0%" id="d290021e282">Possible Transitions</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d290021e286" headers="d290021e278 "><strong class="term">Active</strong></td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e286 d290021e280 ">Normal</td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e286 d290021e282 ">
+                                    <ul style="list-style-type: disc;" id="GUID-BB295C48-64CA-4291-8365-AF80D725344F__UL_LGH_YR2_GZB">
+                                       <li><strong class="term">Completed</strong>, when the workflow reaches an end activity.
+                                       </li>
+                                       <li><strong class="term">Faulted</strong>, when the creation of the workflow instance fails due to parameters that cannot be handled correctly, if there is more than one start activity, or if there is no start activity.
+                                       </li>
+                                       <li><strong class="term">Suspended</strong>, per API or user request.
+                                       </li>
+                                       <li><strong class="term">Terminated</strong>, per API or user request, or because the workflow reaches an end activity that moves the workflow to a terminated state.
+                                       </li>
+                                    </ul>
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d290021e310" headers="d290021e278 "><strong class="term">Completed</strong></td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e310 d290021e280 ">Normal</td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e310 d290021e282 ">None.</td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d290021e318" headers="d290021e278 "><strong class="term">Faulted</strong></td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e318 d290021e280 ">Exception
+                                    <div class="infobox-tip" id="GUID-BB295C48-64CA-4291-8365-AF80D725344F__GUID-C0AAB232-EE20-4555-AFE0-0827AC677569">
+                                       <p class="notep1">Tip:</p>Workflows transition to faulted if an activity cannot run successfully or if there is an error in the workflow itself due to a failure to retrieve workflow variables or a system error.
+                                       <p>Faulted workflows can be retried after modifying variables, or terminated if the user wants to end the workflow instance and no longer run the workflow.</p>
+                                    </div>
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e318 d290021e282 ">
+                                    <ul style="list-style-type: disc;" id="GUID-BB295C48-64CA-4291-8365-AF80D725344F__UL_OH4_RS2_GZB">
+                                       <li><strong class="term">Active</strong>, when the workflow is retried by API or user request and retrying successfully brings the workflow back into a normal state of operation.
+                                       </li>
+                                       <li><strong class="term">Suspended</strong>, per API or user request.
+                                       </li>
+                                       <li><strong class="term">Terminated</strong>, per API or user request.
+                                       </li>
+                                    </ul>
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d290021e342" headers="d290021e278 "><strong class="term">Suspended</strong></td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e342 d290021e280 ">Normal
+                                    <div class="infobox-tip" id="GUID-BB295C48-64CA-4291-8365-AF80D725344F__GUID-9201252A-3C5A-42BD-8344-7CBDC2DB4743">
+                                       <p class="notep1">Tip:</p>Typically, a workflow is suspended due to a Wait activity.
+                                    </div>
+                                    <div class="infobox-tip" id="GUID-BB295C48-64CA-4291-8365-AF80D725344F__GUID-1D7DFC2A-90AD-4F3B-B614-48CB536CF065">
+                                       <p class="notep1">Tip:</p>By default, workflows resume at the current activity. Use <code class="codeph">APEX_WORKFLOW.RESUME</code> to resume the workflow at any activity.
+                                    </div>
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e342 d290021e282 ">
+                                    <ul style="list-style-type: disc;" id="GUID-BB295C48-64CA-4291-8365-AF80D725344F__UL_X5L_RV2_GZB">
+                                       <li><strong class="term">Active</strong>, when the workflow is resumed by API or user request.
+                                       </li>
+                                       <li><strong class="term">Faulted</strong>, when an outstanding (asynchronous) activity returns with an error and the activity and workflow instance transition to faulted.
+                                       </li>
+                                       <li><strong class="term">Terminated</strong>, by API or user request.
+                                       </li>
+                                    </ul>
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d290021e369" headers="d290021e278 "><strong class="term">Terminated</strong></td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e369 d290021e280 ">Exception
+                                    <div class="infobox-tip" id="GUID-BB295C48-64CA-4291-8365-AF80D725344F__GUID-B082D3C7-18A2-4353-B53B-921E5F396EA2">
+                                       <p class="notep1">Tip:</p>A terminated workflow instance cannot be retried.
+                                    </div>
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e369 d290021e282 ">None.</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="states-and-transitions.html#GUID-CBADB539-01CF-4DBD-9D8C-C7F5D8D18C8C" title="Learn about states and transitions for workflows and for workflow activities.">States and Transitions</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-B641AEE6-64B1-497D-84C4-8C7B3E7635CD" name="GUID-B641AEE6-64B1-497D-84C4-8C7B3E7635CD"></a><h3 id="HTMDB-GUID-B641AEE6-64B1-497D-84C4-8C7B3E7635CD" class="sect3"><span class="enumeration_section">20.1.6.2 </span>Activity States and Transitions
+               </h3>
+               <div>
+                  <p>Learn about available activity states and potential transitions.</p>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-B641AEE6-64B1-497D-84C4-8C7B3E7635CD__GUID-BA1AC276-5F26-4B62-833A-2703D6622D82">Activity States</p>
+                     <div class="p">An <strong class="term">activity state</strong> is the current state of an activity. An activity can only be in one state at a time.
+                        <dl>
+                           <dt class="dlterm"><a name="GUID-B641AEE6-64B1-497D-84C4-8C7B3E7635CD__GUID-4935B5F9-E339-4CBB-A4A5-CFD42B6FFADC">
+                                 <!-- --></a>Active
+                           </dt>
+                           <dd>
+                              <p>An activity that is currently running.</p>
+                           </dd>
+                           <dt class="dlterm"><a name="GUID-B641AEE6-64B1-497D-84C4-8C7B3E7635CD__GUID-471D060B-5E5A-4009-8DFC-5624B94CD17E">
+                                 <!-- --></a>Waiting
+                           </dt>
+                           <dd>
+                              <p>An activity that is currently waiting for a result. For example, an activity might be waiting on approval from a task, or waiting for an invoked workflow to run.</p>
+                           </dd>
+                           <dt class="dlterm"><a name="GUID-B641AEE6-64B1-497D-84C4-8C7B3E7635CD__GUID-EB77F510-E868-483E-AA4D-5C200D85B249">
+                                 <!-- --></a>Completed
+                           </dt>
+                           <dd>
+                              <p>An activity that completed successfully.</p>
+                           </dd>
+                           <dt class="dlterm"><a name="GUID-B641AEE6-64B1-497D-84C4-8C7B3E7635CD__GUID-D53DDD98-2644-4FA2-B1FC-3D1FA99EE413">
+                                 <!-- --></a>Terminated
+                           </dt>
+                           <dd>
+                              <p>An activity that was in active state when the workflow was stopped.</p>
+                           </dd>
+                           <dt class="dlterm"><a name="GUID-B641AEE6-64B1-497D-84C4-8C7B3E7635CD__GUID-CD706BDB-BCCC-4E49-8325-C5237F711D4F">
+                                 <!-- --></a>Faulted
+                           </dt>
+                           <dd>
+                              <p>An activity that fails to run.</p>
+                           </dd>
+                        </dl>
+                     </div>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-B641AEE6-64B1-497D-84C4-8C7B3E7635CD__GUID-FA86F0AA-86BD-4B03-9953-BEB9A9EE96BD">Activity State Transitions</p>
+                     <p>An <strong class="term">activity transition</strong> describes an activity moving from one state to another.
+                     </p>
+                     <div class="tblformal" id="GUID-B641AEE6-64B1-497D-84C4-8C7B3E7635CD__TABLE_VRX_TK2_GZB">
+                        <table cellpadding="4" cellspacing="0" class="Formal" title summary="Activity state transitions." frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="0%" id="d290021e543">Initial State</th>
+                                 <th align="left" valign="bottom" width="0%" id="d290021e545">Category</th>
+                                 <th align="left" valign="bottom" width="0%" id="d290021e547">Possible Transitions</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d290021e551" headers="d290021e543 "><strong class="term">Active</strong></td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e551 d290021e545 ">Normal</td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e551 d290021e547 ">
+                                    <ul style="list-style-type: disc;" id="GUID-B641AEE6-64B1-497D-84C4-8C7B3E7635CD__UL_LGH_YR2_GZB">
+                                       <li><strong class="term">Completed</strong>, when the activity completes successfully and the workflow continues.
+                                       </li>
+                                       <li><strong class="term">Faulted</strong>, when the activity fails to run, either because the activity itself faulted, or because something leading into or out of the activity faulted.
+                                       </li>
+                                       <li><strong class="term">Terminated</strong>, when the workflow instance is terminated.
+                                       </li>
+                                       <li><strong class="term">Waiting</strong>, when the activity is waiting for a result to come back. For example, asynchronous activities or approval activities may move into a waiting state.
+                                       </li>
+                                    </ul>
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d290021e575" headers="d290021e543 "><strong class="term">Completed</strong></td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e575 d290021e545 ">Normal</td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e575 d290021e547 ">None.</td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d290021e583" headers="d290021e543 "><strong class="term">Faulted</strong></td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e583 d290021e545 ">Exception</td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e583 d290021e547 ">
+                                    <ul style="list-style-type: disc;" id="GUID-B641AEE6-64B1-497D-84C4-8C7B3E7635CD__UL_OH4_RS2_GZB">
+                                       <li><strong class="term">Active</strong>, when the workflow instance is retried by API or user request. Any faulted activities move to an <strong class="term">active</strong> state and the workflow runtime engine attempts to execute the activity again.
+                                       </li>
+                                    </ul>
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d290021e598" headers="d290021e543 "><strong class="term">Terminated</strong></td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e598 d290021e545 ">Exception</td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e598 d290021e547 ">None.</td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d290021e606" headers="d290021e543 "><strong class="term">Waiting</strong></td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e606 d290021e545 ">Normal</td>
+                                 <td align="left" valign="top" width="0%" headers="d290021e606 d290021e547 ">
+                                    <ul style="list-style-type: disc;" id="GUID-B641AEE6-64B1-497D-84C4-8C7B3E7635CD__UL_ZQN_2BF_GZB">
+                                       <li><strong class="term">Active</strong>, when the activity operation is complete and signals to the workflow that it is okay to continue. The duration of this transition may be very short, so the user may never experience an activity in <strong class="term">waiting</strong> state, even when there is a pause in the workflow.
+                                       </li>
+                                       <li><strong class="term">Faulted</strong>, when the activity processing fails.
+                                       </li>
+                                       <li><strong class="term">Terminated</strong>, when the workflow instance is terminated.
+                                       </li>
+                                    </ul>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="states-and-transitions.html#GUID-CBADB539-01CF-4DBD-9D8C-C7F5D8D18C8C" title="Learn about states and transitions for workflows and for workflow activities.">States and Transitions</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

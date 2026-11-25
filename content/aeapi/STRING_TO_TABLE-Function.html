@@ -1,0 +1,159 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="STRING_TO_TABLE Function (Deprecated)">
+      <meta name="DC.subject" content="STRING_TO_TABLE function (deprecated), APEX_UTIL">
+      <meta name="keywords" content="STRING_TO_TABLE function (deprecated), APEX_UTIL">
+      <meta name="DC.Relation" scheme="URI" content="APEX_UTIL.html#GUID-5ECE5C10-1A88-4D37-8A7D-C51925ADB2B9">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-67FBC2AB-5E0A-447D-8FF6-0512512210AC">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>STRING_TO_TABLE Function (Deprecated)</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="SHOW_SCREEN_READER_MODE_TOGGLE-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="STRONG_PASSWORD_CHECK-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"STRING_TO_TABLE Function (Deprecated)","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="SHOW_SCREEN_READER_MODE_TOGGLE-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="STRONG_PASSWORD_CHECK-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-67FBC2AB-5E0A-447D-8FF6-0512512210AC" name="GUID-67FBC2AB-5E0A-447D-8FF6-0512512210AC"></a><a id="AEAPI1886"></a><a id="AEAPI1887"></a><a id="AEAPI1888"></a><a id="AEAPI1889"></a><a id="AEAPI185"></a>
+         
+         <h2 id="AEAPI-GUID-67FBC2AB-5E0A-447D-8FF6-0512512210AC" class="sect2"><span class="enumeration_section">59.146 </span>STRING_TO_TABLE Function (Deprecated)
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <div class="infoboxnote" id="GUID-67FBC2AB-5E0A-447D-8FF6-0512512210AC__GUID-E0DDF5D9-56AF-46B5-A65A-9FE874D63220">
+                     <p class="notep1">Note:</p>
+                     <p>This function is deprecated. Oracle recommends <code class="codeph">APEX_STRING.STRING_TO_TABLE</code> instead.
+                     </p>
+                     <p>See <a href="STRING_TO_TABLE-1-Function.html#GUID-8EE18F03-968D-4141-B5B9-149B12F4F6CF">STRING_TO_TABLE Function</a>.
+                     </p>
+                  </div>
+                  <p>Given a string, this function returns a PL/SQL array of type <code class="codeph">APEX_APPLICATION_GLOBAL.VC_ARR2</code>. This array is a <code class="codeph">VARCHAR2(32767)</code> table.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-67FBC2AB-5E0A-447D-8FF6-0512512210AC__GUID-E7973371-CFA3-46FE-A75E-D9668202AE85">Syntax</p><pre class="pre codeblock"><code>APEX_UTIL.STRING_TO_TABLE (
+    p_string       IN VARCHAR2,
+    p_separator    IN VARCHAR2 DEFAULT ':' ) 
+    RETURN APEX_APPLICATION_GLOBAL.VC_ARR2;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-67FBC2AB-5E0A-447D-8FF6-0512512210AC__GUID-98C6069F-6F7F-46D9-AE98-FA31A4367B16">Parameters</p>
+                  <div class="tblformal" id="GUID-67FBC2AB-5E0A-447D-8FF6-0512512210AC__GUID-F1C5964F-9E6C-4647-A4BB-79BA9831DB6F">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="41%" id="d289436e91">Parameter</th>
+                              <th align="left" valign="bottom" width="59%" id="d289436e93">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="41%" id="d289436e97" headers="d289436e91 "><code class="codeph">p_string</code></td>
+                              <td align="left" valign="top" width="59%" headers="d289436e97 d289436e93 ">String to be converted into a PL/SQL table of type <code class="codeph">APEX_APPLICATION_GLOBAL.VC_ARR2</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="41%" id="d289436e106" headers="d289436e91 "><code class="codeph">p_separator</code></td>
+                              <td align="left" valign="top" width="59%" headers="d289436e106 d289436e93 ">String separator. The default is a colon.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-67FBC2AB-5E0A-447D-8FF6-0512512210AC__GUID-FBBB5D0E-B05C-4ADD-906B-35C35798F9CE">Example</p>
+                  <p>The following example demonstrates how the function is passed the string <code class="codeph">One:Two:Three</code> in the <code class="codeph">p_string</code> parameter and returns a PL/SQL array of type <code class="codeph">APEX_APPLICATION_GLOBAL.VC_ARR2</code> containing three elements: the element at position <code class="codeph">1</code> contains the value <code class="codeph">One</code>, position <code class="codeph">2</code> contains the value <code class="codeph">Two</code>, and position 3 contains the value <code class="codeph">Three</code>. This is then output using the HTP.P function call.
+                  </p><pre class="pre codeblock"><code>DECLARE
+    l_vc_arr2    APEX_APPLICATION_GLOBAL.VC_ARR2;
+BEGIN
+    l_vc_arr2 := APEX_UTIL.STRING_TO_TABLE('One:Two:Three');
+    FOR z IN 1..l_vc_arr2.count LOOP
+        htp.p(l_vc_arr2(z));
+    END LOOP;
+END;</code></pre><div class="infoboxnotealso" id="GUID-67FBC2AB-5E0A-447D-8FF6-0512512210AC__GUID-2E4F57A5-7BA6-4415-B650-D6ADA7ED1A41">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="STRING_TO_TABLE-1-Function.html#GUID-8EE18F03-968D-4141-B5B9-149B12F4F6CF">STRING_TO_TABLE Function</a></li>
+                        <li><a href="TABLE_TO_STRING-Function.html#GUID-4F4C59D1-E8B7-4CC1-87C7-DCFD5AF4DCC0">TABLE_TO_STRING Function (Deprecated)</a></li>
+                        <li><a href="SPLIT-Function-Signature-1.html#GUID-3BE7FF37-E54F-4503-91B8-94F374E243E6">SPLIT Function Signature 1</a></li>
+                        <li><a href="SPLIT-Function-Signature-2.html#GUID-A476D7F6-902E-450E-9287-CBA0D046AED8">SPLIT Function Signature 2</a></li>
+                        <li><a href="SPLIT_NUMBERS-Function.html#GUID-729E046F-4E95-45DF-8B9F-5FBEA0C08DE5">SPLIT_NUMBERS Function</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_UTIL.html#GUID-5ECE5C10-1A88-4D37-8A7D-C51925ADB2B9">APEX_UTIL</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

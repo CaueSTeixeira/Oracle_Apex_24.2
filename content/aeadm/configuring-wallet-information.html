@@ -1,0 +1,359 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Configuring Wallet Information">
+      <meta name="abstract" content="Configure wallet information (which store authentication and signing credentials) for an APEX instance.">
+      <meta name="description" content="Configure wallet information (which store authentication and signing credentials) for an APEX instance.">
+      <meta name="DC.subject" content="wallet, configuring, instance settings, configuring a wallet, Secure Sockets Layer (SSL), about, configuring in full development instance, configuring in runtime instance, determining settings in runtime instance">
+      <meta name="keywords" content="wallet, configuring, instance settings, configuring a wallet, Secure Sockets Layer (SSL), about, configuring in full development instance, configuring in runtime instance, determining settings in runtime instance">
+      <meta name="DC.Relation" scheme="URI" content="configuring-instance-settings.html#GUID-0DE7FA26-7FF5-409A-9CED-2BFD218CFE14">
+      <meta name="DC.Relation" scheme="URI" content="configuring-wallet-information.html#GUID-E00D7BBF-AB22-4FBA-ABAB-54DBC1791D84">
+      <meta name="DC.Relation" scheme="URI" content="configuring-wallet-information.html#GUID-C1A28223-ABA9-4461-B4A1-357C91770550">
+      <meta name="DC.Relation" scheme="URI" content="configuring-wallet-information.html#GUID-40E8504D-7F96-4253-8A21-67740AC1CE02">
+      <meta name="DC.Relation" scheme="URI" content="configuring-wallet-information.html#GUID-708FF898-DB65-4745-9299-0F6DBC35D3AC">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-BBE43F61-DA0B-4517-AC5E-D06C4C69D526">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Configure wallet information (which store authentication and signing credentials) for an APEX instance.">
+      <meta name="description" content="Configure wallet information (which store authentication and signing credentials) for an APEX instance.">
+      <title>Configuring Wallet Information</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Configure wallet information (which store authentication and signing credentials) for an APEX instance.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="configuring-email.html" title="Previous" type="text/html">
+      <link rel="next" href="configuring-report-printing-for-an-instance.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Configuring Wallet Information","description":"Configure wallet information (which store authentication and signing credentials) for an APEX instance.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="configuring-email.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="configuring-report-printing-for-an-instance.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-BBE43F61-DA0B-4517-AC5E-D06C4C69D526" name="GUID-BBE43F61-DA0B-4517-AC5E-D06C4C69D526"></a><a id="AEADM214"></a>
+         
+         <h2 id="AEADM-GUID-BBE43F61-DA0B-4517-AC5E-D06C4C69D526" class="sect2"><span class="enumeration_section">3.5.5 </span>Configuring Wallet Information
+         </h2>
+         <div class="ind">
+            <p>Configure wallet information (which store authentication and signing credentials) for an <span>APEX</span> instance.
+            </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="configuring-wallet-information.html#GUID-E00D7BBF-AB22-4FBA-ABAB-54DBC1791D84">About SSL and Wallet Creation</a><br>A wallet is a password-protected container that stores authentication and signing credentials (including private keys, certificates, and trusted certificates) needed by SSL.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-wallet-information.html#GUID-C1A28223-ABA9-4461-B4A1-357C91770550">Configuring a Wallet in a Full Development Environment</a><br>Configure wallet settings a full development environment on the Instance Settings page.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-wallet-information.html#GUID-40E8504D-7F96-4253-8A21-67740AC1CE02">Configuring a Wallet in a Runtime Environment</a><br>Configure wallet settings a runtime environment by starting <span>SQLcl</span> and running the following SQL statements.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-wallet-information.html#GUID-708FF898-DB65-4745-9299-0F6DBC35D3AC">Determining Wallet Settings in a Runtime Environment</a><br>Configure wallet settings in a runtime environment by starting <span>SQLcl</span> and running the following SQL statements.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="configuring-instance-settings.html#GUID-0DE7FA26-7FF5-409A-9CED-2BFD218CFE14" title="Control a variety of general settings for an Oracle APEX development instance including configuring workspace provisioning behavior, email provisioning, storage, email, wallet information, report printing, workflow settings, Application Gallery settings, Help menu, workspace size options, application ID ranges, and background jobs.">Configuring Instance Settings</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="AEADM29177"></a><div class="props_rev_3"><a id="GUID-E00D7BBF-AB22-4FBA-ABAB-54DBC1791D84" name="GUID-E00D7BBF-AB22-4FBA-ABAB-54DBC1791D84"></a><h3 id="AEADM-GUID-E00D7BBF-AB22-4FBA-ABAB-54DBC1791D84" class="sect3"><span class="enumeration_section">3.5.5.1 </span>About SSL and Wallet Creation
+               </h3>
+               <div>
+                  <p>A wallet is a password-protected container that stores authentication and signing credentials (including private keys, certificates, and trusted certificates) needed by SSL.</p>
+                  <p>Secure Sockets Layer (SSL) is an industry standard protocol that uses RSA public key cryptography with symmetric key cryptography to provide authentication, encryption, and data integrity. When SSL is enabled, <code class="codeph">https</code> displays in the URL.
+                  </p>
+                  <p>You must create a wallet if you:</p>
+                  <ul style="list-style-type: disc;" id="GUID-E00D7BBF-AB22-4FBA-ABAB-54DBC1791D84__UL_TY4_DBW_1TB">
+                     <li>
+                        <p>Call a SSL-enabled URL (for example, by invoking a Web service).</p>
+                     </li>
+                     <li>
+                        <p>Create a region of type URL that is SSL-enabled.</p>
+                     </li>
+                     <li>
+                        <p>Configure secure SMTP, by setting the Use SSL/TLS attribute to <span class="bold">Yes</span>.
+                        </p>
+                     </li>
+                     <li>
+                        <p>Have applications with LDAP authentication schemes that are configured to use SSL with Authentication.</p>
+                     </li>
+                  </ul>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-E00D7BBF-AB22-4FBA-ABAB-54DBC1791D84__GUID-770E2F93-65F7-4E7B-8F25-807BCE519E5D">Overview of Creating a Wallet</p>
+                     <p>To create a wallet:</p>
+                     <ol id="GUID-E00D7BBF-AB22-4FBA-ABAB-54DBC1791D84__OL_UY4_DBW_1TB">
+                        <li>
+                           <p>The database administrator must create a wallet on the <span>APEX</span> database instance.
+                           </p>
+                        </li>
+                        <li>
+                           <p>The instance administrator configures the Wallet attributes on the Instance Settings page to specify the file system path to the wallet and the wallet password (if required).</p>
+                        </li>
+                     </ol>
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-E00D7BBF-AB22-4FBA-ABAB-54DBC1791D84__GUID-A17CAAC3-BD6C-4FA9-8F84-A5EDA11667A0">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-E00D7BBF-AB22-4FBA-ABAB-54DBC1791D84__UL_VY4_DBW_1TB">
+                        <li><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeadm&id=DBIMI-GUID-D0AA8373-B0AC-4DD8-9FA9-403E345E5A71" target="_blank">Using Oracle Wallet Manager</a> in <span><cite>Oracle Database Enterprise
+                                        User Security Administrator's Guide</cite></span></li>
+                        <li><a href="../htmdb/implementing-web-services.html#HTMDB-GUID-16D20E78-7884-4CFB-A7E9-75D952AD0B4F" target="_blank">About Working with SSL Enabled Web Services</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-wallet-information.html#GUID-BBE43F61-DA0B-4517-AC5E-D06C4C69D526" title="Configure wallet information (which store authentication and signing credentials) for an APEX instance.">Configuring Wallet Information</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM216"></a><div class="props_rev_3"><a id="GUID-C1A28223-ABA9-4461-B4A1-357C91770550" name="GUID-C1A28223-ABA9-4461-B4A1-357C91770550"></a><h3 id="AEADM-GUID-C1A28223-ABA9-4461-B4A1-357C91770550" class="sect3"><span class="enumeration_section">3.5.5.2 </span>Configuring a Wallet in a Full Development Environment
+               </h3>
+               <div>
+                  <p>Configure wallet settings a full development environment on the Instance Settings page.</p>
+                  <p>To specify wallet settings in a full development environment:</p>
+                  <ol>
+                     <li><span>Sign in to Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Instance Settings</span>.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Wallet</span>.</span></li>
+                     <li><span>Under Wallet:</span><ol type="a">
+                           <li class="substepexpand"><span>Wallet Path - Enter the path on the file system where the wallet is located using the following format:</span><div><code class="codeph">file:<span class="codeinlineitalic">directory-path</span></code></div>
+                              <div>
+                                 <p>Examples: </p>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-C1A28223-ABA9-4461-B4A1-357C91770550__UL_LVP_TXW_SZB">
+                                    <li>
+                                       
+                                       <p>Windows-based system:</p>
+                                       
+                                       <p><code class="codeph">file:c:\WINNT\Profiles\<span class="codeinlineitalic">&lt;username&gt;</span>\WALLETS</code>
+                                          
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>UNIX-based system:</p>
+                                       
+                                       <p><code class="codeph">file:/home/<span class="codeinlineitalic">&lt;username&gt;</span>/wallets</code></p>
+                                       
+                                    </li>
+                                 </ul>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Auto-login Wallet - Select this option if
+                                                  your Oracle wallet is an auto-login wallet.
+                                                  Auto-login wallets do not require a password to
+                                                  open. If you enable this option, <span class="uicontrol bold">Wallet
+                                                  Password</span> and <span class="uicontrol bold">Confirm Wallet
+                                                  Password</span> are disabled.</span></li>
+                           <li class="substepexpand"><span>Wallet Password - Enter the password needed
+                                                  to open the wallet.</span></li>
+                           <li class="substepexpand"><span>Confirm Wallet Password - Enter the wallet
+                                                  password again to confirm. </span></li>
+                        </ol>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-wallet-information.html#GUID-BBE43F61-DA0B-4517-AC5E-D06C4C69D526" title="Configure wallet information (which store authentication and signing credentials) for an APEX instance.">Configuring Wallet Information</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM407"></a><a id="AEADM217"></a><div class="props_rev_3"><a id="GUID-40E8504D-7F96-4253-8A21-67740AC1CE02" name="GUID-40E8504D-7F96-4253-8A21-67740AC1CE02"></a><h3 id="AEADM-GUID-40E8504D-7F96-4253-8A21-67740AC1CE02" class="sect3"><span class="enumeration_section">3.5.5.3 </span>Configuring a Wallet in a Runtime Environment
+               </h3>
+               <div>
+                  <p>Configure wallet settings a runtime environment by starting <span>SQLcl</span> and running the following SQL statements.
+                  </p>
+                  <p>To specify wallet settings in a runtime environment:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Start <span>SQLcl</span> and connect to the database where <span>APEX</span> is installed as <code class="codeph">SYS</code>. For example:</span><div>
+                           
+                           <ul style="list-style-type: disc;">
+                              <li>
+                                 
+                                 <p>On Windows:</p>
+                                 <pre class="oac_no_warn" dir="ltr"><span class="italic">SYSTEM_DRIVE:</span>\ <span>sql</span> /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span>
+</pre>
+                                 </li>
+                              <li>
+                                 
+                                 <p>On UNIX and Linux:</p>
+                                 <pre class="oac_no_warn" dir="ltr">$ <span>sql</span> /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span>
+</pre>
+                                 </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Run the following statement:</span><div><pre class="oac_no_warn" dir="ltr">BEGIN
+    APEX_INSTANCE_ADMIN.SET_PARAMETER(<span class="italic">PARAMETER_NAME</span>, <span class="italic">PARAMETER_VALUE</span>);
+    COMMIT;
+END;</pre><p>See the table that follows for a description of wallet parameters.</p>
+                           <div class="tblformal" id="GUID-40E8504D-7F96-4253-8A21-67740AC1CE02__BABJFBEI">
+                              <p class="titleintable">Table 3-2 Wallet Parameters</p>
+                              <table cellpadding="4" cellspacing="0" class="Formal" title="Wallet Parameters" summary="This table describes wallet parameter names and descriptions." width="90%" frame="hsides" border="1" rules="rows">
+                                 <thead>
+                                    <tr align="left" valign="top">
+                                       <th align="left" valign="bottom" width="31%" id="d36168e520">Parameter Name</th>
+                                       <th align="left" valign="bottom" width="69%" id="d36168e523">Description</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="31%" id="d36168e528" headers="d36168e520 ">
+                                          <p><code class="codeph">WALLET_PATH</code></p>
+                                       </td>
+                                       <td align="left" valign="top" width="69%" headers="d36168e528 d36168e523 ">
+                                          <p>The path to the wallet on the file system, for example: </p><pre class="oac_no_warn" dir="ltr">file:/home/<span class="italic"><code class="codeph">username</code></span>/wallets
+</pre></td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="31%" id="d36168e542" headers="d36168e520 ">
+                                          <p><code class="codeph">WALLET_PWD</code></p>
+                                       </td>
+                                       <td align="left" valign="top" width="69%" headers="d36168e542 d36168e523 ">
+                                          <p>The password associated with the wallet. Use an empty/null value for auto-login
+                                            wallets.</p>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </div>
+                     </li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-40E8504D-7F96-4253-8A21-67740AC1CE02__GUID-7BF850F2-D450-4D53-AA1B-2120CC3CD726">
+                     <p class="notep1">See Also:</p><a href="../aeapi/SET_PARAMETER-Procedure.html#AEAPI-GUID-A6D8CA93-798D-4582-97B9-C7D3ED709AC5" target="_blank">SET_PARAMETER Procedure</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-wallet-information.html#GUID-BBE43F61-DA0B-4517-AC5E-D06C4C69D526" title="Configure wallet information (which store authentication and signing credentials) for an APEX instance.">Configuring Wallet Information</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM218"></a><div class="props_rev_3"><a id="GUID-708FF898-DB65-4745-9299-0F6DBC35D3AC" name="GUID-708FF898-DB65-4745-9299-0F6DBC35D3AC"></a><h3 id="AEADM-GUID-708FF898-DB65-4745-9299-0F6DBC35D3AC" class="sect3"><span class="enumeration_section">3.5.5.4 </span>Determining Wallet Settings in a Runtime Environment
+               </h3>
+               <div>
+                  <p>Configure wallet settings in a runtime environment by starting <span>SQLcl</span> and running the following SQL statements.
+                  </p>
+                  <div class="section">
+                     <p>To determine wallet settings in a runtime environment:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Start <span>SQLcl</span> and connect to the database where <span>Oracle APEX</span> is installed as <code class="codeph">SYS</code>, for example:</span><div>
+                           
+                           <ul style="list-style-type: disc;">
+                              <li>
+                                 
+                                 <p>On Windows:</p>
+                                 <pre class="oac_no_warn" dir="ltr"><span class="italic">SYSTEM_DRIVE:</span>\ <span>sql</span> /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span>
+</pre>
+                                 </li>
+                              <li>
+                                 
+                                 <p>On UNIX and Linux:</p>
+                                 <pre class="oac_no_warn" dir="ltr">$ <span>sql</span> /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span>
+</pre>
+                                 </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Run the following statement:</span><div><pre class="oac_no_warn" dir="ltr">SELECT 
+APEX_INSTANCE_ADMIN.GET_PARAMETER(<span class="italic">PARAMETER_NAME</span>) 
+FROM DUAL;
+</pre><p>For a description of wallet parameters, see <a href="configuring-wallet-information.html#GUID-40E8504D-7F96-4253-8A21-67740AC1CE02__BABJFBEI" title="This table describes wallet parameter names and descriptions.">Table 3-2</a>.
+                           </p>
+                        </div>
+                     </li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-708FF898-DB65-4745-9299-0F6DBC35D3AC__GUID-2CBE17B5-A568-4C00-A29D-8DC9BE5B173D">
+                     <p class="notep1">See Also:</p> <a href="../aeapi/SET_PARAMETER-Procedure.html#AEAPI-GUID-A6D8CA93-798D-4582-97B9-C7D3ED709AC5" target="_blank">SET_PARAMETER Procedure</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-wallet-information.html#GUID-BBE43F61-DA0B-4517-AC5E-D06C4C69D526" title="Configure wallet information (which store authentication and signing credentials) for an APEX instance.">Configuring Wallet Information</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

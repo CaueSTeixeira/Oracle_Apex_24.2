@@ -1,0 +1,154 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="App Builder Concepts">
+      <meta name="abstract" content="To efficiently use App Builder, developers must understand some key concepts including managing user interface design, viewing rendered application pages, understanding page processing and rendering, managing session state, understanding URL syntax, managing session state values, and using built-in substitution strings.">
+      <meta name="description" content="To efficiently use App Builder, developers must understand some key concepts including managing user interface design, viewing rendered application pages, understanding page processing and rendering, managing session state, understanding URL syntax, managing session state values, and using built-in substitution strings.">
+      <meta name="DC.Relation" scheme="URI" content="understanding-applications.html#GUID-C11E4BFB-DE98-48CB-809E-51CBDD6A2C14">
+      <meta name="DC.Relation" scheme="URI" content="running-an-application-or-page.html#GUID-F841CB11-E615-4BA9-ABE9-B37ED12879CA">
+      <meta name="DC.Relation" scheme="URI" content="how-does-page-processing-and-page-rendering-work.html#GUID-570F6C98-8AEA-433B-A83C-3139C7214E1A">
+      <meta name="DC.Relation" scheme="URI" content="about-enabling-support-for-bookmarks.html#GUID-EBF9369E-EDF5-4749-8FF3-6E766A5007DC">
+      <meta name="DC.Relation" scheme="URI" content="how-oracle-apex-uses-templates.html#GUID-49ED7978-7D2C-48BB-B83C-6C4A09BB810D">
+      <meta name="DC.Relation" scheme="URI" content="understanding-session-state-management.html#GUID-CE2A38B5-75B7-4C43-ACB0-685E16C6ACF9">
+      <meta name="DC.Relation" scheme="URI" content="managing-session-state.html#GUID-B6AE1653-A700-43A2-BDB2-AFC1B8D3E38E">
+      <meta name="DC.Relation" scheme="URI" content="understanding-url-syntax.html#GUID-F9B81EAF-D33F-401D-8349-3952DEDA5460">
+      <meta name="DC.Relation" scheme="URI" content="managing-session-state-values.html#GUID-EF798946-9E8A-430E-94F5-C2AF6EABE264">
+      <meta name="DC.Relation" scheme="URI" content="using-substitution-strings.html#GUID-A896A94B-DF69-4D53-B422-3256C09AE464">
+      <meta name="DC.Relation" scheme="URI" content="using-template-directives.html#GUID-596537AB-1697-4704-9193-102658452399">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-6D22E307-6D48-49BC-9FDC-A7D8B037E46A">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="To efficiently use App Builder, developers must understand some key concepts including managing user interface design, viewing rendered application pages, understanding page processing and rendering, managing session state, understanding URL syntax, managing session state values, and using built-in substitution strings.">
+      <meta name="description" content="To efficiently use App Builder, developers must understand some key concepts including managing user interface design, viewing rendered application pages, understanding page processing and rendering, managing session state, understanding URL syntax, managing session state values, and using built-in substitution strings.">
+      <title>App Builder Concepts</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="To efficiently use App Builder, developers must understand some key concepts including managing user interface design, viewing rendered application pages, understanding page processing and rendering, managing session state, understanding URL syntax, managing session state values, and using built-in substitution strings.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="using-the-app-gallery.html" title="Previous" type="text/html">
+      <link rel="next" href="understanding-applications.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"App Builder Concepts","description":"To efficiently use App Builder, developers must understand some key concepts including managing user interface design, viewing rendered application pages, understanding page processing and rendering, managing session state, understanding URL syntax, managing session state values, and using built-in substitution strings.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="using-the-app-gallery.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="understanding-applications.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-6D22E307-6D48-49BC-9FDC-A7D8B037E46A" name="GUID-6D22E307-6D48-49BC-9FDC-A7D8B037E46A"></a>
+         
+         <h2 id="HTMDB-GUID-6D22E307-6D48-49BC-9FDC-A7D8B037E46A" class="sect2"><span class="enumeration_chapter">3 </span> <span>App Builder</span> Concepts
+         </h2>
+         <div class="ind">
+            <div>
+               <p>To efficiently use <span>App Builder</span>, developers must understand some key concepts including managing user interface design,
+        viewing rendered application pages, understanding page processing and rendering, managing
+        session state, understanding URL syntax, managing session state values, and using built-in
+        substitution strings.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="understanding-applications.html#GUID-C11E4BFB-DE98-48CB-809E-51CBDD6A2C14">Understanding Applications</a><br>An <span>Oracle APEX</span> application is an HTML interface that exists on top of database objects such as tables or procedures. 
+                  </li>
+                  <li class="ulchildlink"><a href="running-an-application-or-page.html#GUID-F841CB11-E615-4BA9-ABE9-B37ED12879CA">Running an Application or Page</a><br>To view a rendered version of your application, you run or submit it to the <span>Oracle APEX</span> engine. The <span>APEX</span> engine dynamically renders and processes pages based on data stored in database tables.
+                  </li>
+                  <li class="ulchildlink"><a href="how-does-page-processing-and-page-rendering-work.html#GUID-570F6C98-8AEA-433B-A83C-3139C7214E1A">How Does Page Processing and Page Rendering Work?</a><br>Learn how the <span>Oracle APEX</span> engine renders and processes pages, when <span>APEX</span> issues implicit commits, how conditional rendering and processing works, and how to verify user identity or control access to controls and components.
+                  </li>
+                  <li class="ulchildlink"><a href="about-enabling-support-for-bookmarks.html#GUID-EBF9369E-EDF5-4749-8FF3-6E766A5007DC">About Enabling Support for Bookmarks</a><br>Developers can assist users who bookmark application pages by either using zero as the session ID, or enabling <strong class="term">Rejoin Sessions</strong>.
+                  </li>
+                  <li class="ulchildlink"><a href="how-oracle-apex-uses-templates.html#GUID-49ED7978-7D2C-48BB-B83C-6C4A09BB810D">How Oracle APEX Uses Templates</a><br>Learn how <span>Oracle APEX</span> uses templates to construct the appearance of application                         pages.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-session-state-management.html#GUID-CE2A38B5-75B7-4C43-ACB0-685E16C6ACF9">Understanding Session State Management</a><br><span>Oracle APEX</span> transparently maintains session state and provides developers with the ability to get and set session state values from any page in the application.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-session-state.html#GUID-B6AE1653-A700-43A2-BDB2-AFC1B8D3E38E">Managing Session State</a><br>View session state and manage session state overrides from the Runtime Developer toolbar which displays at the bottom of any editable page at runtime.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-url-syntax.html#GUID-F9B81EAF-D33F-401D-8349-3952DEDA5460">Understanding URL Syntax</a><br><span>Oracle APEX</span> applications support two types of URL syntax: <strong class="term">Friendly URL Syntax</strong> and <strong class="term">f?p Syntax</strong>.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-session-state-values.html#GUID-EF798946-9E8A-430E-94F5-C2AF6EABE264">Managing Session State Values</a><br>Manage session state to store and retrieve values for a user as the user navigates between different application pages.
+                  </li>
+                  <li class="ulchildlink"><a href="using-substitution-strings.html#GUID-A896A94B-DF69-4D53-B422-3256C09AE464">Using Substitution Strings</a><br>Use substitution strings within templates, region source, or any attribute         to pass information and replace a character string with another value.
+                  </li>
+                  <li class="ulchildlink"><a href="using-template-directives.html#GUID-596537AB-1697-4704-9193-102658452399">Using Template Directives</a><br>Use template directives to control how attributes that support substitution         strings are processed.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-6D22E307-6D48-49BC-9FDC-A7D8B037E46A__GUID-F9612CB2-99A3-43FF-AEB3-900D66B150DF">
+                  <p class="notep1">See Also:</p>
+                  <p><a href="understanding-app-builder.html#GUID-A6905AD9-DBCC-4795-861B-A0294C4A3E47" title="Developers use App Builder to create and manage applications and application pages.">Understanding App Builder</a></p>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

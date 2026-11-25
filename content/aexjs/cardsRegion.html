@@ -1,0 +1,4527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Interface: cardsRegion</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+
+    <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+    <meta name="dcterms.created" content="2025-01-14T20:03:42+00:00">
+    <meta name="dcterms.title" content="Oracle APEX JavaScript API Reference">
+    <meta name="dcterms.category" content="database">
+    <meta name="dcterms.isVersionOf" content="AEXJS">
+    <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+    <meta name="dcterms.identifier" content="G12908-01">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script id="ssot-metadata" type="application/json"> {"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}} </script>
+    <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","name":"JSDoc: Interface: cardsRegion","datePublished":"2025-01-14 CST","dateModified":"2025-01-14 CST"} </script>
+    </head>
+
+<body>
+<a href="#main-content" id="skipToContent">Skip to Main Content</a>
+
+<nav id="nav" data-current-item="nav_24">
+    <h2 id="navIndex"><a href="index.html">Index</a></h2><h3>Namespaces</h3><ul><li id="nav_0"><a href="apex.html">apex</a></li><li id="nav_1"><a href="apex.actions.html">apex.actions</a></li><li id="nav_2"><a href="apex.da.html">apex.da</a></li><li id="nav_3"><a href="apex.date.html">apex.date</a></li><li id="nav_4"><a href="apex.debug.html">apex.debug</a></li><li id="nav_5"><a href="apex.event.html">apex.event</a></li><li id="nav_6"><a href="apex.item.html">apex.item</a></li><li id="nav_7"><a href="apex.lang.html">apex.lang</a></li><li id="nav_8"><a href="apex.locale.html">apex.locale</a></li><li id="nav_9"><a href="apex.message.html">apex.message</a></li><li id="nav_10"><a href="apex.model.html">apex.model</a></li><li id="nav_11"><a href="apex.navigation.html">apex.navigation</a></li><li id="nav_12"><a href="apex.navigation.dialog.html">apex.navigation.dialog</a></li><li id="nav_13"><a href="apex.navigation.popup.html">apex.navigation.popup</a></li><li id="nav_14"><a href="apex.page.html">apex.page</a></li><li id="nav_15"><a href="apex.pwa.html">apex.pwa</a></li><li id="nav_16"><a href="apex.region.html">apex.region</a></li><li id="nav_17"><a href="apex.server.html">apex.server</a></li><li id="nav_18"><a href="apex.storage.html">apex.storage</a></li><li id="nav_19"><a href="apex.theme.html">apex.theme</a></li><li id="nav_20"><a href="apex.util.html">apex.util</a></li><li id="nav_21"><a href="apex.util.delayLinger.html">apex.util.delayLinger</a></li><li id="nav_22"><a href="apex.widget.html">apex.widget</a></li></ul><h3>Interfaces</h3><ul><li id="nav_23"><a href="actions.html">actions</a></li><li id="nav_24"><a href="cardsRegion.html">cardsRegion</a></li><li id="nav_25"><a href="facetsRegion.html">facetsRegion</a></li><li id="nav_26"><a href="htmlBuilder.html">htmlBuilder</a></li><li id="nav_27"><a href="interactiveGridView.html">interactiveGridView</a></li><li id="nav_28"><a href="item.html">item</a></li><li id="nav_29"><a href="mapRegion.html">mapRegion</a></li><li id="nav_30"><a href="model.html">model</a></li><li id="nav_31"><a href="numberFieldItem.html">numberFieldItem</a></li><li id="nav_32"><a href="region.html">region</a></li><li id="nav_33"><a href="templateReportRegion.html">templateReportRegion</a></li><li id="nav_34"><a href="treeNodeAdapter.html">treeNodeAdapter</a></li></ul><h3>Widgets</h3><ul><li id="nav_35"><a href="grid.html">grid</a></li><li id="nav_36"><a href="iconList.html">iconList</a></li><li id="nav_37"><a href="interactiveGrid.html">interactiveGrid</a></li><li id="nav_38"><a href="menu.html">menu</a></li><li id="nav_39"><a href="menuButton.html">menuButton</a></li><li id="nav_40"><a href="recordView.html">recordView</a></li><li id="nav_41"><a href="tableModelView.html">tableModelView</a></li><li id="nav_42"><a href="tableModelViewBase.html">tableModelViewBase</a></li><li id="nav_43"><a href="treeView.html">treeView</a></li></ul><h3><a href="global.html">Non-namespace APIs</a></h3>
+</nav>
+
+<div id="main">
+
+
+
+    <h1 class="page-title">Interface: cardsRegion</h1>
+
+    
+
+
+
+
+<section id="quick-nav">
+    <header><h2>QuickNav</h2></header>
+    
+    <div class="quick-nav-section">
+        <h3> <a href="#members-section">Properties</a></h3>
+        <ul class="subList">
+            
+                <li><a href="#element">element</a></li>
+            
+                <li><a href="#filterRegionId">filterRegionId</a></li>
+            
+                <li><a href="#type">type</a></li>
+            
+                <li><a href="#widgetName">widgetName</a></li>
+            
+        </ul>
+    </div>
+    
+    
+
+    
+    <div class="quick-nav-section">
+        <h3><a href="#methods-section">Methods</a></h3>
+        <ul class="subList">
+            
+                <li><a href="#call">call</a></li>
+            
+                <li><a href="#firstPage">firstPage</a></li>
+            
+                <li><a href="#focus">focus</a></li>
+            
+                <li><a href="#getCurrentItem">getCurrentItem</a></li>
+            
+                <li><a href="#getCurrentItemValue">getCurrentItemValue</a></li>
+            
+                <li><a href="#getModel">getModel</a></li>
+            
+                <li><a href="#getPageInfo">getPageInfo</a></li>
+            
+                <li><a href="#getRecords">getRecords</a></li>
+            
+                <li><a href="#getSelectedRecords">getSelectedRecords</a></li>
+            
+                <li><a href="#getSelectedValues">getSelectedValues</a></li>
+            
+                <li><a href="#getSelection">getSelection</a></li>
+            
+                <li><a href="#gotoPage">gotoPage</a></li>
+            
+                <li><a href="#lastPage">lastPage</a></li>
+            
+                <li><a href="#loadMore">loadMore</a></li>
+            
+                <li><a href="#nextPage">nextPage</a></li>
+            
+                <li><a href="#off">off</a></li>
+            
+                <li><a href="#on">on</a></li>
+            
+                <li><a href="#previousPage">previousPage</a></li>
+            
+                <li><a href="#refresh">refresh</a></li>
+            
+                <li><a href="#refreshView">refreshView</a></li>
+            
+                <li><a href="#selectAll">selectAll</a></li>
+            
+                <li><a href="#setCurrentItem">setCurrentItem</a></li>
+            
+                <li><a href="#setCurrentItemValue">setCurrentItemValue</a></li>
+            
+                <li><a href="#setSelectedRecords">setSelectedRecords</a></li>
+            
+                <li><a href="#setSelectedValues">setSelectedValues</a></li>
+            
+                <li><a href="#setSelection">setSelection</a></li>
+            
+                <li><a href="#widget">widget</a></li>
+            
+        </ul>
+    </div>
+    
+
+    
+</section>
+
+
+<section id="main-content">
+
+<header>
+    
+    
+        <h2>cardsRegion</h2>
+        
+            <div class="class-description"><p>The cardsRegion interface is used to access the properties and methods of Cards regions.
+You get access to the cardsRegion interface with the <a href="apex.region.html">apex.region</a> function when passed
+the regionId (static ID) of a Cards region.
+</p>
+<p>Cards is a client rendered region using <a href="model.html">model</a> for the data layer and <a href="tableModelView.html">tableModelView</a>
+widget for the view layer. This interface is a convenient wrapper for most of the methods
+of <a href="tableModelView.html">tableModelView</a>. The cards in the report are called items
+(not to be confused with APEX Page Items or Column Items).
+See <a href="tableModelView.html">tableModelView</a> for information about report markup requirements.</p></div>
+        
+    
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since"><ul class="dummy"><li>24.1</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="region.html">region</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+        <div class="hw">
+        <h3 id="members-section" class="subsection-title">
+            Properties
+        </h3>
+            <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark Properties" href="#members-section"></a>
+        </div>
+
+        
+            
+<div class="hw">
+<h4 class="name" id="element"><span class="type-signature"></span>element<span class="type-signature"> :jQuery</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark element" href="#element"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>The jQuery object for the region element.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">jQuery</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="region.html#element">region#element</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get option element after initialization.</p>
+    
+        <pre class="prettyprint"><code>var value = apex.region( "myRegionId" ).element;</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="filterRegionId"><span class="type-signature"></span>filterRegionId<span class="type-signature"> :string</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark filterRegionId" href="#filterRegionId"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>For region plug-ins which support Faceted Search / Smart Filters it is possible to pass in the DOM ID of the 
+<a href="facetsRegion.html">facetsRegion</a> region in order for APEX to bind the two together. If provided, the region will be automatically refreshed as the filters change.
+Further, if the region's refresh callback returns a Promise, APEX will also automatically perform the appropriate locking and unlocking
+of the <a href="facetsRegion.html">facetsRegion</a> region during refresh.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="region.html#filterRegionId">region#filterRegionId</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="type"><span class="type-signature"></span>type<span class="type-signature"> :string</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark type" href="#type"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>The cardsRegion type is "Cards".</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="region.html#type">region#type</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="widgetName"><span class="type-signature"></span>widgetName<span class="type-signature"> :string</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark widgetName" href="#widgetName"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>For regions that are implemented with a jQuery UI style widget, this is the name of the widget. For other
+widget implementations it is null. It is used internally by the <a href="region.html#call">region#call</a>, <a href="region.html#on">region#on</a> and
+<a href="region.html#off">region#off</a> methods.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="region.html#widgetName">region#widgetName</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get option widgetName after initialization.</p>
+    
+        <pre class="prettyprint"><code>var value = apex.region( "myRegionId" ).widgetName;</code></pre>
+    
+
+
+        
+    
+
+    
+
+    
+        <div class="hw">
+        <h3 id="methods-section" class="subsection-title">
+            Methods
+        </h3>
+        <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark Methods" href="#methods-section"></a>
+        </div>
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="call"><span class="type-signature"></span>call<span class="signature">(pMethod, &hellip;args)</span><span class="type-signature"> &rarr; {*}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark call(pMethod, ...args) returns {*}" href="#call"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Calls a method on the widget associated with the region. This method only applies to
+regions that are implemented with a jQuery UI style widget.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params" aria-label="Parameters for call">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+        <th scope="col">Attributes</th>
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pMethod</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The string name of the widget method.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>args</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Any number of arguments to be passed to the widget method.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="region.html#call">region#call</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The return value depends on the method called.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">*</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">The call method is a shorthand for calling methods on a widget. The following example
+shows an Interactive Grid region with Static ID <code class="prettyprint">emp</code> and two equivalent ways of invoking the
+<code>getSelectedRecords</code> method.</p>
+    
+        <pre class="prettyprint"><code>var records1 = apex.region( "emp" ).call( "getSelectedRecords" );
+// same result as above but this is more verbose
+var records2 = apex.region( "emp" ).widget().interactiveGrid( "getSelectedRecords" );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="firstPage"><span class="type-signature"></span>firstPage<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark firstPage() returns {boolean}" href="#firstPage"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Display the first page of items. If option <code class="prettyprint">pagination.scroll</code>
+is true simply scrolls to the top of the viewport
+and a new page of items is added if needed. If <code class="prettyprint">pagination.scroll</code>
+is false and not already on the first page the view is refreshed and shows the first page.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    true for success, false if a page is currently being rendered.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example goes to the first page.</p>
+    
+        <pre class="prettyprint"><code>apex.region( "regionStaticId" ).firstPage();</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="focus"><span class="type-signature"></span>focus<span class="signature">()</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark focus()" href="#focus"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Set focus to the cards region if possible. If the view supports selection or focus
+then the last focused (current) item will be focused. Otherwise, the first focusable
+element within the report, if any, will be focused.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="region.html#focus">region#focus</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example puts focus in the report.</p>
+    
+        <pre class="prettyprint"><code>apex.region( "regionStaticId" ).focus();</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="getCurrentItem"><span class="type-signature"></span>getCurrentItem<span class="signature">()</span><span class="type-signature"> &rarr; {jQuery}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark getCurrentItem() returns {jQuery}" href="#getCurrentItem"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Returns the current item as a jQuery object.
+The current item is the item that has or last had focus.</p>
+
+<p>This is only applicable if the <a href="tableModelView.html#itemNavigationMode">tableModelView#itemNavigationMode</a> option is "select"
+or "focus". See also <a href="cardsRegion.html#setCurrentItem">cardsRegion#setCurrentItem</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The current item or null if not supported.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">jQuery</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example get the current item in the report.</p>
+    
+        <pre class="prettyprint"><code>var currentItem$ = apex.region( "regionStaticId" ).getCurrentItem();
+console.log( "make use of current item", currentItem$ );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="getCurrentItemValue"><span class="type-signature"></span>getCurrentItemValue<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark getCurrentItemValue() returns {string}" href="#getCurrentItemValue"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Returns the value of the current item.
+The current item is the item that has or last had focus.
+The value of an item is its unique identifier as returned by <a href="model.html#getRecordId">model#getRecordId</a>.</p>
+
+<p>This is only applicable if the <a href="tableModelView.html#itemNavigationMode">tableModelView#itemNavigationMode</a> option is "focus"
+or "select". See also <a href="cardsRegion.html#setCurrentItemValue">cardsRegion#setCurrentItemValue</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The current item value or null if not supported.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="getModel"><span class="type-signature"></span>getModel<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="model.html">model</a>}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark getModel() returns {model}" href="#getModel"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Return the model currently being used by this view.
+The model can change over time so the returned model should not be saved and used later.
+If you need to store a reference to the model use <a href="apex.model.html#.get">apex.model.get</a> and release it with
+<a href="apex.model.html#.release">apex.model.release</a>.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The current <a href="model.html">model</a>.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="model.html">model</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="getPageInfo"><span class="type-signature"></span>getPageInfo<span class="signature">()</span><span class="type-signature"> &rarr; (nullable) {<a href="tableModelViewBase.html#.pageInfo">tableModelViewBase.pageInfo</a>}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark getPageInfo() returns (nullable) {tableModelViewBase.pageInfo}" href="#getPageInfo"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Return information about the current pagination state of the view.
+Returns null if there is no data in the report.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="tableModelViewBase.html#.pageInfo">tableModelViewBase.pageInfo</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example logs to the console the current page and total number of pages
+The Cards region pagination type must be Page and Show Total Count must be on.</p>
+    
+        <pre class="prettyprint"><code>var info = apex.region( "regionStaticId" ).getPageInfo();
+console.log("current and total pages", info.currentPage, info.totalPages );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="getRecords"><span class="type-signature"></span>getRecords<span class="signature">(pElements$)</span><span class="type-signature"> &rarr; {Array.&lt;<a href="model.html#.Record">model.Record</a>>}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark getRecords(pElements$) returns {Array.&lt;model.Record>}" href="#getRecords"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Given a jQuery object with one or more item elements return the corresponding model records.
+For this to work the elements must have a <code class="prettyprint">data-id</code>
+attribute with the value of the record id.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params" aria-label="Parameters for getRecords">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pElements$</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">jQuery</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A jQuery object of item elements such as returned
+  by <a href="cardsRegion.html#getSelection">cardsRegion#getSelection</a>.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Array of records from the model corresponding to the item elements.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array.&lt;<a href="model.html#.Record">model.Record</a>></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="getSelectedRecords"><span class="type-signature"></span>getSelectedRecords<span class="signature">()</span><span class="type-signature"> &rarr; (nullable) {Array.&lt;<a href="model.html#.Record">model.Record</a>>}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark getSelectedRecords() returns (nullable) {Array.&lt;model.Record>}" href="#getSelectedRecords"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Return the underlying data model records corresponding to the current selection.</p>
+<p>This is only applicable if the <a href="tableModelView.html#itemNavigationMode">tableModelView#itemNavigationMode</a> option is "select".</p>
+
+<p>When using virtual scroll pagination and <a href="tableModelView.html#persistSelection">tableModelView#persistSelection</a> is
+true it is possible for the user to select a range of records or all records when the model
+does not yet contain all the selected records. In this case the selection is incomplete
+and only the records currently in the model will be returned. See option
+<a href="tableModelView.html#loadIncompleteSelection">tableModelView#loadIncompleteSelection</a> for how an incomplete selection is handled.</p>
+<p>See also <a href="cardsRegion.html#setSelectedRecords">cardsRegion#setSelectedRecords</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Array of records from the model corresponding to the selected items.
+Returns null if selection is not supported.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array.&lt;<a href="model.html#.Record">model.Record</a>></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="getSelectedValues"><span class="type-signature"></span>getSelectedValues<span class="signature">()</span><span class="type-signature"> &rarr; (nullable) {Array.&lt;string>}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark getSelectedValues() returns (nullable) {Array.&lt;string>}" href="#getSelectedValues"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Returns the value for each record returned by <a href="cardsRegion.html#getSelectedRecords">cardsRegion#getSelectedRecords</a>.
+The value of a record is its unique identifier as returned by <a href="model.html#getRecordId">model#getRecordId</a>.</p>
+
+<p>This is only applicable if the <a href="tableModelView.html#itemNavigationMode">tableModelView#itemNavigationMode</a> option is "select".</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Array of selected record values.
+Returns null if selection is not supported.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array.&lt;string></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="getSelection"><span class="type-signature"></span>getSelection<span class="signature">()</span><span class="type-signature"> &rarr; (nullable) {jQuery}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark getSelection() returns (nullable) {jQuery}" href="#getSelection"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Return the currently selected items as a jQuery collection.</p>
+
+<p>This is only applicable if the <a href="tableModelView.html#itemNavigationMode">tableModelView#itemNavigationMode</a> option is "select".</p>
+<p>Because this returns a jQuery collection it can only return selected items that are
+currently in the DOM. When using virtual scroll pagination and <a href="tableModelView.html#persistSelection">tableModelView#persistSelection</a> is
+true it is better to use <a href="cardsRegion.html#getSelectedRecords">cardsRegion#getSelectedRecords</a></p>
+<p>See also <a href="cardsRegion.html#setSelection">cardsRegion#setSelection</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The selected item elements as a jQuery collection.
+Returns null if selection isn't supported or the report is not initialized.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">jQuery</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="gotoPage"><span class="type-signature"></span>gotoPage<span class="signature">(pPageNumber)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark gotoPage(pPageNumber) returns {boolean}" href="#gotoPage"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Go to the specified page number. This should only be used when
+<code class="prettyprint">pagination.scroll</code> is false and the model knows the total number of records.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params" aria-label="Parameters for gotoPage">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pPageNumber</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">zero based page number</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    true for success, false if a page is currently being rendered.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example goes to 4th page. Note that the page numbers are zero based.
+If there are not that many pages then nothing happens.</p>
+    
+        <pre class="prettyprint"><code>apex.region( "regionStaticId" ).gotoPage( 3 );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="lastPage"><span class="type-signature"></span>lastPage<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark lastPage() returns {boolean}" href="#lastPage"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Display the last page of items. If <code class="prettyprint">pagination.scroll</code>
+is true simply scrolls to the bottom of the viewport
+and a new page of items is added if needed. If <code class="prettyprint">pagination.scroll</code>
+is false and not already on the last page the view is refreshed and shows the last page.
+This method only works correctly if the model knows the total number of rows.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    true for success, false if a page is currently being rendered.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example goes to the last page.</p>
+    
+        <pre class="prettyprint"><code>apex.region( "regionStaticId" ).lastPage();</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="loadMore"><span class="type-signature"></span>loadMore<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark loadMore() returns {boolean}" href="#loadMore"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Load more records into the view. If option <code class="prettyprint">pagination.scroll</code>
+is true this adds a new page of items to the end.
+If <code class="prettyprint">pagination.scroll</code> is false this is the same as
+<code class="prettyprint">nextPage</code>.
+This is intended to be used when <code class="prettyprint">pagination.loadMore</code> is true.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    true for success, false if a page is currently being rendered.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="nextPage"><span class="type-signature"></span>nextPage<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark nextPage() returns {boolean}" href="#nextPage"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Display the next page of items. If <code class="prettyprint">pagination.scroll</code>
+is true the viewport scrolls down one page and
+records are added if needed. If <code class="prettyprint">pagination.scroll</code>
+is false and not on the last page refresh the view to show the next page.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    true for success, false if a page is currently being rendered.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example goes to the next page.</p>
+    
+        <pre class="prettyprint"><code>apex.region( "regionStaticId" ).nextPage();</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="off"><span class="type-signature"></span>off<span class="signature">(events, &hellip;args)</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark off(events, ...args)" href="#off"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Removes an event handler from the widget element associated with this region. This method only applies to
+regions that are implemented with a jQuery UI style widget. This means that <a href="region.html#widgetName">region#widgetName</a>
+property must be defined and the <a href="region.html#widget">region#widget</a> method returns a value.</p>
+
+<p>This is a shortcut for calling <code class="prettyprint">apex.region(id).widget().off(...)</code>.
+Unlike the jQuery object <code class="prettyprint">off</code> method this does not return the
+jQuery object and therefore is not chainable. See the jQuery documentation for details.</p>
+
+<p>See also <a href="region.html#on">region#on</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params" aria-label="Parameters for off">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+        <th scope="col">Attributes</th>
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>events</code></th>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">One or more space-separated event types and optional namespaces as defined by the
+  jQuery <code class="prettyprint">off</code> method. For events defined by this region widget the
+  event name prefix can be omitted.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>args</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Other arguments to be passed to the widget's jQuery object
+  <code class="prettyprint">off</code> method such as selector, data, and handler.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="region.html#off">region#off</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example removes all event handlers for the selectionChange event of an
+Interactive Grid region. Note that the short event name "selectionChange" can be
+used rather than the full name "interactivegridselectionchange".
+See also <a href="interactiveGrid.html#event:selectionchange">interactiveGrid#event:selectionchange</a>.</p>
+    
+        <pre class="prettyprint"><code>apex.region( interactiveGridRegionId ).off( "selectionChange" );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="on"><span class="type-signature"></span>on<span class="signature">(events, &hellip;args)</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark on(events, ...args)" href="#on"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Attaches an event handler to the widget element associated with this region. This method only applies to
+regions that are implemented with a jQuery UI style widget. This means that <a href="region.html#widgetName">region#widgetName</a>
+property must be defined and the <a href="region.html#widget">region#widget</a> method returns a value.</p>
+
+<p>This is a shortcut for calling <code class="prettyprint">apex.region(id).widget().on(...)</code>.
+Unlike the jQuery object <code class="prettyprint">on</code> method this does not return the
+jQuery object and therefore is not chainable. See the jQuery documentation for details.</p>
+
+<p>See also <a href="region.html#off">region#off</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params" aria-label="Parameters for on">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+        <th scope="col">Attributes</th>
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>events</code></th>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">One or more space-separated event types and optional namespaces as defined by the
+  jQuery <code class="prettyprint">on</code> method. For events defined by this region widget the
+  event name prefix can be omitted.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>args</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Other arguments to be passed to the widget's jQuery object
+  <code class="prettyprint">on</code> method such as selector, data, and handler.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="region.html#on">region#on</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example handles the selectionChange event of an Interactive Grid
+region by logging a message to the console. Note that the short event name "selectionChange" can be
+used rather than the full name "interactivegridselectionchange".
+See also <a href="interactiveGrid.html#event:selectionchange">interactiveGrid#event:selectionchange</a></p>
+    
+        <pre class="prettyprint"><code>apex.region( interactiveGridRegionId ).on( "selectionChange", function(event, data) {
+    console.log("Selection changed; # records selected is", data.selectedRecords.length );
+} );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="previousPage"><span class="type-signature"></span>previousPage<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark previousPage() returns {boolean}" href="#previousPage"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Display the previous page of items. If <code class="prettyprint">pagination.scroll</code>
+is true the viewport scrolls up one page and
+records are added if needed. If <code class="prettyprint">pagination.scroll</code>
+is false and not on the first page refresh the view to show the previous page.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    true for success, false if a page is currently being rendered.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example goes to the previous page.</p>
+    
+        <pre class="prettyprint"><code>apex.region( "regionStaticId" ).previousPage();</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="refresh"><span class="type-signature"></span>refresh<span class="signature">()</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark refresh() returns {Promise}" href="#refresh"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Refreshes the report with new data from the server.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="region.html#refresh">region#refresh</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A promise that is resolved with no arguments when the refresh is complete.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="refreshView"><span class="type-signature"></span>refreshView<span class="signature">()</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark refreshView()" href="#refreshView"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Refreshes the view (re-renders the DOM) without fetching new data from the server.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="selectAll"><span class="type-signature"></span>selectAll<span class="signature">(pFocus<span class="signature-attributes">opt, nullable</span>, pNoNotify<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark selectAll(pFocus, pNoNotify)" href="#selectAll"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Select all the items in the report that can be selected. Triggers the
+<a href="tableModelView.html#event:selectionchange">tableModelView#event:selectionchange</a> event and the
+<a href="apex.html#.event:apexselectionchange">apex.event:apexselectionchange</a> event if the selection
+changes unless <code class="prettyprint">pNoNotify</code> is true.</p>
+
+<p>This is only applicable if the <a href="tableModelView.html#itemNavigationMode">tableModelView#itemNavigationMode</a> option is "select"
+and <a href="tableModelView.html#multiple">tableModelView#multiple</a> and <a href="tableModelView.html#selectAll1">tableModelView#selectAll(1)</a> options are both true.</p>
+
+<p>This only applies to the current page or what has been rendered so far unless the selection
+state is persisted in the model.
+See <a href="tableModelView.html#selectAll1">tableModelView#selectAll(1)</a> for details about how pagination settings and
+<a href="tableModelView.html#persistSelection">tableModelView#persistSelection</a> affect the meaning of "all items".</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params" aria-label="Parameters for selectAll">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+        <th scope="col">Attributes</th>
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pFocus</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                    &lt;nullable><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">If true the first selected item is given focus.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pNoNotify</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">If true the selection change notification will be suppressed.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example selects all the items in the report.</p>
+    
+        <pre class="prettyprint"><code>apex.region( "regionStaticId" ).selectAll();</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="setCurrentItem"><span class="type-signature"></span>setCurrentItem<span class="signature">(pItem$, pFocus<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark setCurrentItem(pItem$, pFocus)" href="#setCurrentItem"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Sets the last focused item to the given pItem$. If pItem$ is not an item
+or not in the report container the current item is not changed.</p>
+
+<p>This is only applicable if the <a href="tableModelView.html#itemNavigationMode">tableModelView#itemNavigationMode</a> option is "select"
+or "focus". See also <a href="cardsRegion.html#getCurrentItem">cardsRegion#getCurrentItem</a>.</p>
+
+<p>The <a href="tableModelView.html#event:currentitemchange">tableModelView#event:currentitemchange</a> event
+and the <a href="apex.html#.event:apexcurrentrowchange">apex.event:apexcurrentrowchange</a> event are triggered any time the current item changes.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params" aria-label="Parameters for setCurrentItem">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+        <th scope="col">Attributes</th>
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pItem$</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">jQuery</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The item to make current.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pFocus</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">If true also focus the item.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example finds a particular item using jQuery and then makes it the
+current item and sets focus to it. In this example report items have class "my-item".</p>
+    
+        <pre class="prettyprint"><code>var currentItem$ = $( "#regionStaticId .my-item" ).first();
+apex.region( "regionStaticId" ).setCurrentItem( currentItem$, true );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="setCurrentItemValue"><span class="type-signature"></span>setCurrentItemValue<span class="signature">(pItemValue, pFocus<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark setCurrentItemValue(pItemValue, pFocus)" href="#setCurrentItemValue"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Sets the last focused item to the one with the given pItemValue. If no item has the given value
+the current item is not changed. The item must be rendered in order to be made the current item.</p>
+
+<p>This is only applicable if the <a href="tableModelView.html#itemNavigationMode">tableModelView#itemNavigationMode</a> option is "select"
+or "focus". See also <a href="cardsRegion.html#getCurrentItemValue">cardsRegion#getCurrentItemValue</a>.</p>
+
+<p>The <a href="tableModelView.html#event:currentitemchange">tableModelView#event:currentitemchange</a> event
+and the <a href="apex.html#.event:apexcurrentrowchange">apex.event:apexcurrentrowchange</a> event are triggered any time the current item changes.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params" aria-label="Parameters for setCurrentItemValue">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+        <th scope="col">Attributes</th>
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pItemValue</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The value of an item.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pFocus</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">If true also focus the item.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="setSelectedRecords"><span class="type-signature"></span>setSelectedRecords<span class="signature">(pRecords, pFocus<span class="signature-attributes">opt</span>, pNoNotify<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark setSelectedRecords(pRecords, pFocus, pNoNotify) returns {number}" href="#setSelectedRecords"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Selects the report items that correspond to the given data model records.
+Triggers the <a href="tableModelView.html#event:selectionchange">tableModelView#event:selectionchange</a> event
+and the <a href="apex.html#.event:apexselectionchange">apex.event:apexselectionchange</a> event if the selection
+changes unless <code class="prettyprint">pNoNotify</code> is true.</p>
+
+<p>This is only applicable if the <a href="tableModelView.html#itemNavigationMode">tableModelView#itemNavigationMode</a> option is "select".</p>
+<p>See also <a href="cardsRegion.html#getSelectedRecords">cardsRegion#getSelectedRecords</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params" aria-label="Parameters for setSelectedRecords">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+        <th scope="col">Attributes</th>
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pRecords</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;<a href="model.html#.Record">model.Record</a>></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Array of data model records to select.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pFocus</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">If true the first record of the selection is given focus.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pNoNotify</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">If true the selection change event will be suppressed.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Count of the items actually selected or -1 if called before the report is initialized or
+there is no data or selection is not supported.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="setSelectedValues"><span class="type-signature"></span>setSelectedValues<span class="signature">(pValues, pFocus<span class="signature-attributes">opt</span>, pNoNotify<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark setSelectedValues(pValues, pFocus, pNoNotify) returns {number}" href="#setSelectedValues"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Selects the report items that correspond to the given values.
+The value of an item is the unique identifier of the corresponding model record
+as returned by <a href="model.html#getRecordId">model#getRecordId</a>
+and also the value of the item's <code class="prettyprint">data-id</code> attribute.
+Triggers the <a href="tableModelView.html#event:selectionchange">tableModelView#event:selectionchange</a> event
+and the <a href="apex.html#.event:apexselectionchange">apex.event:apexselectionchange</a> event if the selection
+changes unless <code class="prettyprint">pNoNotify</code> is true.</p>
+
+<p>This is only applicable if the <a href="tableModelView.html#itemNavigationMode">tableModelView#itemNavigationMode</a> option is "select".</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params" aria-label="Parameters for setSelectedValues">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+        <th scope="col">Attributes</th>
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pValues</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Array of item/record values to select.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pFocus</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">If true the first record of the selection is given focus.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pNoNotify</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">If true the selection change event will be suppressed.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Count of the items actually selected or -1 if called before the report is initialized or
+there is no data or selection is not supported.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="setSelection"><span class="type-signature"></span>setSelection<span class="signature">(pElements$, pFocus<span class="signature-attributes">opt</span>, pNoNotify<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark setSelection(pElements$, pFocus, pNoNotify)" href="#setSelection"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Set the selected items. Triggers the <a href="tableModelView.html#event:selectionchange">tableModelView#event:selectionchange</a> event
+and the <a href="apex.html#.event:apexselectionchange">apex.event:apexselectionchange</a> event if the selection
+changes unless <code class="prettyprint">pNoNotify</code> is true.</p>
+
+<p>This is only applicable if the <a href="tableModelView.html#itemNavigationMode">tableModelView#itemNavigationMode</a> option is "select".</p>
+<p>See also <a href="cardsRegion.html#getSelection">cardsRegion#getSelection</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params" aria-label="Parameters for setSelection">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+        <th scope="col">Attributes</th>
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pElements$</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">jQuery</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">A jQuery object with item elements such as the return value of
+  <a href="cardsRegion.html#getSelection">cardsRegion#getSelection</a>.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pFocus</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">If true the first item element of the selection is given focus.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pNoNotify</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">If true the selection change event will be suppressed.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example finds a particular item using jQuery and then selects it
+and sets focus to it. In this example report items have class "my-item".</p>
+    
+        <pre class="prettyprint"><code>var item$ = $( "#regionStaticId .my-item" ).first();
+apex.region( "regionStaticId" ).setSelection( item$, true );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="widget"><span class="type-signature"></span>widget<span class="signature">()</span><span class="type-signature"> &rarr; {jQuery|null}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark widget() returns {jQuery|null}" href="#widget"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Returns the widget associated with the region or null if the region isn't implemented with a widget.
+Some advanced region types such as Calendar, Interactive Grid, or Tree are implemented using a widget.
+This function provides access to the widget typically by returning a jQuery object for the widget element.
+You can then call widget methods on the jQuery object. See also the <a href="region.html#call">region#call</a> method.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="region.html#widget">region#widget</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    jQuery object or null if there is no widget associated with the region.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">jQuery</span>
+|
+
+<span class="param-type">null</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">The following adds a row to an Interactive Grid by using the region widget method to
+access the interactiveGrid widget <a href="interactiveGrid.html#getActions">interactiveGrid#getActions</a> method and then invoking the
+<code class="prettyprint">selection-add-row</code> action.</p>
+    
+        <pre class="prettyprint"><code>apex.region( "myGridRegion" ).widget().interactiveGrid( "getActions" ).invoke( "selection-add-row" );</code></pre>
+    
+
+
+        
+    
+
+    
+
+</article>
+
+</section>
+
+
+
+
+
+    <footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.3</a> on Wed Nov 27 2024 04:42:15 GMT+0000 (Coordinated Universal Time)
+      <br>
+      <span class="product-docs-footer">Oracle APEX Release 24.2, JavaScript API Reference</span>
+      <br>
+      <span class="product-docs-footer">Copyright &copy; 2003, 2025, Oracle and/or its affiliates. All rights reserved.</span>
+    </footer>
+</div>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+<script>
+(function() {
+    // make skip link work for mobile browsers
+    document.getElementById("skipToContent").addEventListener("click", function(e) {
+        var target = document.getElementById("main-content");
+        e.preventDefault();
+        target.setAttribute("tabindex", "-1");
+        target.addEventListener("blur", function(e) {
+            target.removeAttribute("tabindex");
+        });
+        target.focus();
+    });
+
+    var nav = document.getElementById("nav");
+    var currentId = nav.getAttribute("data-current-item");
+    if (!currentId) {
+        return;
+    }
+    var link = document.getElementById(currentId);
+    if (!link) {
+        return;
+    }
+    link.className = link.className ? link.className + " current-nav-item" : "current-nav-item";
+    nav.scrollTop = link.offsetTop + (link.offsetHeight - nav.offsetHeight)/2;
+})();
+</script>
+
+</body>
+</html>

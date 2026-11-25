@@ -1,0 +1,163 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="TRUNCATE_LOG Procedure">
+      <meta name="DC.subject" content="TRUNCATE_LOG procedure, APEX_INSTANCE_ADMIN">
+      <meta name="keywords" content="TRUNCATE_LOG procedure, APEX_INSTANCE_ADMIN">
+      <meta name="DC.Relation" scheme="URI" content="APEX_INSTANCE_ADMIN.html#GUID-1A894D25-A884-466B-9B88-B10888B2FFEA">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-D3DA33E1-F5BC-4674-822D-90C8463D3733">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>TRUNCATE_LOG Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="SET_WORKSPACE_PARAMETER.html" title="Previous" type="text/html">
+      <link rel="next" href="UNLOCK_USER-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"TRUNCATE_LOG Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="SET_WORKSPACE_PARAMETER.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="UNLOCK_USER-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-D3DA33E1-F5BC-4674-822D-90C8463D3733" name="GUID-D3DA33E1-F5BC-4674-822D-90C8463D3733"></a><a id="AEAPI29333"></a><a id="AEAPI29334"></a><a id="AEAPI29335"></a><a id="AEAPI29336"></a><a id="AEAPI29332"></a>
+         
+         <h2 id="AEAPI-GUID-D3DA33E1-F5BC-4674-822D-90C8463D3733" class="sect2"><span class="enumeration_section">32.35 </span>TRUNCATE_LOG Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>Truncates the log entries specified by the input parameter.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-D3DA33E1-F5BC-4674-822D-90C8463D3733__GUID-8BD212FD-6F62-49FA-9617-03EDE132197C">Syntax</p><pre class="pre codeblock"><code>APEX_INSTANCE_ADMIN.TRUNCATE_LOG (
+    p_log     IN VARCHAR2 )</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-D3DA33E1-F5BC-4674-822D-90C8463D3733__GUID-5327E0CA-74D6-4AA0-B560-D16356B0F374">Parameters</p>
+                  <div class="tblformal" id="GUID-D3DA33E1-F5BC-4674-822D-90C8463D3733__CHDFGJJA">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="23%" id="d155273e74">Parameter</th>
+                              <th align="left" valign="bottom" width="77%" id="d155273e76">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="23%" id="d155273e80" headers="d155273e74 "><code class="codeph">p_log</code></td>
+                              <td align="left" valign="top" width="77%" headers="d155273e80 d155273e76 ">
+                                 <p>This parameter can have one of the following values:</p>
+                                 <ul style="list-style-type: disc;" id="GUID-D3DA33E1-F5BC-4674-822D-90C8463D3733__UL_R54_4HW_YSB">
+                                    <li><code class="codeph">ACTIVITY</code> - removes all entries that record page access.
+                                    </li>
+                                    <li><code class="codeph">AUTOMATION</code> - removes all entries from the automation logs.
+                                    </li>
+                                    <li><code class="codeph">CLICKS</code> - removes all entries that record clicks tracked to external sites.
+                                    </li>
+                                    <li><code class="codeph">DEBUG</code> - removes all entries captured during debug sessions.
+                                    </li>
+                                    <li><code class="codeph">FILE</code> - removes all entries that record automatic file purge activity.
+                                    </li>
+                                    <li><code class="codeph">LOCK_INSTALL_SCRIPT</code> - removes all entries that record developer locking of supporting objects script.
+                                    </li>
+                                    <li><code class="codeph">LOCK_PAGE</code> - removes all entries that record developer locking of pages.
+                                    </li>
+                                    <li><code class="codeph">MAIL</code> - removes all entries that record mail sent.
+                                    </li>
+                                    <li><code class="codeph">PURGE</code> - removes all entries that record automatic workspace purge activity.
+                                    </li>
+                                    <li><code class="codeph">REST_SYNCHRONIZATION</code> - removes all entries to record REST Source Synchronizations.
+                                    </li>
+                                    <li><code class="codeph">SCRIPT</code> - removes all entries that record results of SQL scripts executed in SQL Workshop.
+                                    </li>
+                                    <li><code class="codeph">SQL</code> - removes all entries that record the history of commands executed in SQL Workshop SQL Commands
+                                    </li>
+                                    <li><code class="codeph">USER_ACCESS</code> - removes all entries that record user login.
+                                    </li>
+                                    <li><code class="codeph">WEB_SERVICES</code> - removes all entries that record web service calls initiated from this <span>APEX</span> instance.
+                                    </li>
+                                    <li><code class="codeph">WORKSPACE_HIST</code> - removes all entries that record daily workspace summary.
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-D3DA33E1-F5BC-4674-822D-90C8463D3733__GUID-C4BB8241-137C-4877-A46B-5CB4410BE0AC">Example</p>
+                  <p>The following example demonstrates how to use the <code class="codeph">TRUNCATE_LOG</code> procedure to remove all log entries that record access to <span>APEX</span> application pages.
+                  </p><pre class="pre codeblock"><code>BEGIN
+  APEX_INSTANCE_ADMIN.TRUNCATE_LOG('ACTIVITY');
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_INSTANCE_ADMIN.html#GUID-1A894D25-A884-466B-9B88-B10888B2FFEA">APEX_INSTANCE_ADMIN</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

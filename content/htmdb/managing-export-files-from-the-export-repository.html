@@ -1,0 +1,405 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Export Files from the Export Repository">
+      <meta name="abstract" content="Import, install, or delete export files stored in the Export Repository.">
+      <meta name="description" content="Import, install, or delete export files stored in the Export Repository.">
+      <meta name="DC.subject" content="Export Repository, managing export files, using, installing application export, installing, application files, deployment, installing application export, installing application export, installing export files, export files, installing files, deleting export files">
+      <meta name="keywords" content="Export Repository, managing export files, using, installing application export, installing, application files, deployment, installing application export, installing application export, installing export files, export files, installing files, deleting export files">
+      <meta name="DC.Relation" scheme="URI" content="exporting-and-importing-from-app-builder.html#GUID-F89C2B8C-68B7-404F-8CC9-FE0A99AB34C0">
+      <meta name="DC.Relation" scheme="URI" content="managing-export-files-from-the-export-repository.html#GUID-29967B4B-FF5A-4778-8E3A-6830E3093D2F">
+      <meta name="DC.Relation" scheme="URI" content="managing-export-files-from-the-export-repository.html#GUID-D59F133C-51EE-4EEC-9C85-96DAE8164EEE">
+      <meta name="DC.Relation" scheme="URI" content="managing-export-files-from-the-export-repository.html#GUID-C0C1AC70-10F7-488A-9E9E-2E5F5C6F53A8">
+      <meta name="DC.Relation" scheme="URI" content="managing-export-files-from-the-export-repository.html#GUID-AAC7F70E-1142-44F3-8813-76BAB0EC9B88">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-B552F865-2AD5-4CD7-ACEA-EB2E7EEC2AB1">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Import, install, or delete export files stored in the Export Repository.">
+      <meta name="description" content="Import, install, or delete export files stored in the Export Repository.">
+      <title>Managing Export Files from the Export Repository</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Import, install, or delete export files stored in the Export Repository.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="importing-export-files.html" title="Previous" type="text/html">
+      <link rel="next" href="how-to-create-a-custom-packaged-application.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Managing Export Files from the Export Repository","description":"Import, install, or delete export files stored in the Export Repository.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="importing-export-files.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="how-to-create-a-custom-packaged-application.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-B552F865-2AD5-4CD7-ACEA-EB2E7EEC2AB1" name="GUID-B552F865-2AD5-4CD7-ACEA-EB2E7EEC2AB1"></a><a id="HTMDB11007"></a><a id="4000:73"></a>
+         
+         <h2 id="HTMDB-GUID-B552F865-2AD5-4CD7-ACEA-EB2E7EEC2AB1" class="sect2"><span class="enumeration_section">25.3.4 </span>Managing Export Files from the Export
+        Repository
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Import, install, or delete export files stored in the Export
+            Repository.</p>
+               <div class="infobox-tip" id="GUID-B552F865-2AD5-4CD7-ACEA-EB2E7EEC2AB1__GUID-FEF49F5F-DD28-4FF7-98E0-6E7A81C3701D">
+                  <p class="notep1">Tip:</p>You can also import an export file from the Export Repository. Navigate to
+            the Export Repository and click the <span class="uicontrol bold">Import File</span> and then go to
+            step 3 in <a href="importing-export-files.html#GUID-D01CF7A6-A593-4ACD-A92C-C94CAC100D61" title="Import an Application Export on the Import page.">Importing an Application Export</a>.
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="managing-export-files-from-the-export-repository.html#GUID-29967B4B-FF5A-4778-8E3A-6830E3093D2F">About Installing Export Files</a><br>When you import Export Files into a target <span>Oracle APEX</span> instance, the files are stored in the Export Repository. From the Export Repository, you can import, install, or delete Export Files.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-export-files-from-the-export-repository.html#GUID-D59F133C-51EE-4EEC-9C85-96DAE8164EEE">Installing an Application Export from the Export Repository</a><br>If you did not install your Application Export after importing, you can         install it in the Export Repository.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-export-files-from-the-export-repository.html#GUID-C0C1AC70-10F7-488A-9E9E-2E5F5C6F53A8">Installing Other Files from the Export Repository</a><br>If you did not install your Export Files after importing, you can         install them in the Export Repository.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-export-files-from-the-export-repository.html#GUID-AAC7F70E-1142-44F3-8813-76BAB0EC9B88">Deleting Files from the Export Repository</a><br>Delete export files from the Export Repository.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-B552F865-2AD5-4CD7-ACEA-EB2E7EEC2AB1__GUID-9CEB81E2-EDD1-4243-8C7C-82FFB4A67DA6">
+                  <p class="notep1">See Also:</p>
+                  
+                  <ul style="list-style-type: disc;" id="GUID-B552F865-2AD5-4CD7-ACEA-EB2E7EEC2AB1__UL_GMR_XCJ_CTB">
+                     <li>
+                        
+                        <p><a href="understanding-the-export-and-import-process.html#GUID-6FF01286-ADFB-4E45-81AC-B29915F260BA" title="Move a workspace, application, or related files by creating an export script file and then importing and installing it into another APEX instance.">Understanding the Export and Import Process</a></p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p><a href="how-to-create-a-custom-packaged-application.html#GUID-A50AB849-243B-4F50-BAB4-0D7FF386B926" title="Simplify the steps needed to deploy an application by creating a custom application using the Supporting Objects utility.">How to Create a Custom Application</a></p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p><a href="../aeadm/exporting-and-importing-from-a-command-line.html#AEADM-GUID-2B31CB5D-D450-47C8-A796-0F44B57CE669" target="_blank">Exporting and Importing from
+                            a Command Line</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                        
+                     </li>
+                  </ul>
+                  
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="exporting-and-importing-from-app-builder.html#GUID-F89C2B8C-68B7-404F-8CC9-FE0A99AB34C0" title="Move a workspace, an application, application components, or related files by creating an export script file and then importing and installing it into another APEX instance.">Exporting and Importing from App Builder</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB29437"></a><div class="props_rev_3"><a id="GUID-29967B4B-FF5A-4778-8E3A-6830E3093D2F" name="GUID-29967B4B-FF5A-4778-8E3A-6830E3093D2F"></a><h3 id="HTMDB-GUID-29967B4B-FF5A-4778-8E3A-6830E3093D2F" class="sect3"><span class="enumeration_section">25.3.4.1 </span>About Installing Export Files
+               </h3>
+               <div>
+                  <p>When you import Export Files into a target <span>Oracle APEX</span> instance, the files are stored in the Export Repository. From the Export Repository, you can import, install, or delete Export Files.
+                  </p>
+                  <p>After you create an Export File, you can install it in the following ways:</p>
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        
+                        <p><span class="bold">After Importing</span>:
+                        </p>
+                        
+                        <p>After you import the Export Files, you can install them by clicking
+                    the <span class="uicontrol bold">Next</span> button.
+                        </p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p><span class="bold">From the Export Repository</span>:
+                        </p>
+                        
+                        <p>Import the Export Files and then install the files from the Export
+                    Repository.</p>
+                        
+                     </li>
+                     <li><span class="bold">From <span>Oracle SQL Developer Command Line</span> (<span>SQLcl</span>)</span>:
+                        <p>Install the export files from <span>SQLcl</span>.
+                        </p>
+                     </li>
+                  </ul>
+                  <div class="infobox-tip" id="GUID-29967B4B-FF5A-4778-8E3A-6830E3093D2F__GUID-FB6A0164-86BC-4C83-B935-6ADECB343907">
+                     <p class="notep1">Tip:</p>
+                     <p>You can simplify the steps needed to deploy an application by creating a custom application.</p>
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-29967B4B-FF5A-4778-8E3A-6830E3093D2F__GUID-3E22F595-949E-46E7-9A8D-80F972CB4AA6">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="how-to-create-a-custom-packaged-application.html#GUID-A50AB849-243B-4F50-BAB4-0D7FF386B926" title="Simplify the steps needed to deploy an application by creating a custom application using the Supporting Objects utility.">How to Create a Custom Application</a></li>
+                        <li><a href="exporting-workspaces-apps-and-app-components.html#GUID-8D046D43-C033-4165-9C2B-6AB33A99CF75" title="Export a workspace, application, application components, or related file by creating an export script file.">Exporting Workspaces, Applications, and App Components</a></li>
+                        <li><a href="importing-export-files.html#GUID-16650312-4E36-489E-8012-940924ADF2E9" title="After you create Export files, you then import them into the target Oracle APEX instance.">Importing Export Files</a></li>
+                        <li><a href="../aeadm/installing-exported-applications-in-a-runtime-environment.html#AEADM-GUID-C29240A9-08A4-4F90-A9C9-738146F9CAB5" target="_blank">Installing Exported Applications in a Runtime Environment</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-export-files-from-the-export-repository.html#GUID-B552F865-2AD5-4CD7-ACEA-EB2E7EEC2AB1" title="Import, install, or delete export files stored in the Export Repository.">Managing Export Files from the Export Repository</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25841"></a><div class="props_rev_3"><a id="GUID-D59F133C-51EE-4EEC-9C85-96DAE8164EEE" name="GUID-D59F133C-51EE-4EEC-9C85-96DAE8164EEE"></a><h3 id="HTMDB-GUID-D59F133C-51EE-4EEC-9C85-96DAE8164EEE" class="sect3"><span class="enumeration_section">25.3.4.2 </span>Installing an Application Export from the
+        Export Repository
+               </h3>
+               <div>
+                  <p>If you did not install your Application Export after importing, you can
+        install it in the Export Repository.</p>
+                  <p>To install an Application Export from the Export Repository: </p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Export Repository:</span><ol type="a" id="GUID-D59F133C-51EE-4EEC-9C85-96DAE8164EEE__SUBSTEPS_U4P_CCW_KKB">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>On the Application home page, click
+                            <span class="uicontrol bold">Utilities</span>.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Export Repository</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Find the application export and click <span class="uicontrol bold">Install</span> in the
+                    Action column.</span><div>
+                           
+                           <p>The Install Application Wizard appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>To install the file:</span><ol type="a" id="GUID-D59F133C-51EE-4EEC-9C85-96DAE8164EEE__SUBSTEPS_SHC_MGW_KKB">
+                           <li class="substepexpand"><span><span class="uicontrol bold">Parsing Schema</span> - Select a schema. After the
+                            installation finishes successfully, this will be used to set the owner
+                            of the application.</span></li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Build Status</span> - Set the build status of the
+                            application. Options include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-D59F133C-51EE-4EEC-9C85-96DAE8164EEE__UL_THC_MGW_KKB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Run Application Only</span> -
+                                        Users can only run an application.
+                                       </p>
+                                       
+                                       <p>Selecting <span class="uicontrol bold">Run Application
+                                            Only</span> is an effective way to protect an
+                                        application from modifications from other developers. 
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Run and Build Application</span>
+                                        - Users can run an application and developers can both run
+                                        and edit an application.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                              <div>
+                                 
+                                 <div class="infobox-tip" id="GUID-D59F133C-51EE-4EEC-9C85-96DAE8164EEE__GUID-827EE5B8-1479-4BDC-B0E2-8B1D4BAFD33A">
+                                    <p class="notep1">Tip:</p>If you
+                                select <span class="uicontrol bold">Run Application Only</span>, you can only
+                                change this setting after you import the application by signing in
+                                to Administration Services.
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Install As Application</span> - Options include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-D59F133C-51EE-4EEC-9C85-96DAE8164EEE__UL_UHC_MGW_KKB">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Auto Assign New Application
+                                            ID</span> - A new application ID will be created
+                                        for you.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Reuse Application ID XX From Imported
+                                            Application</span> - The existing application ID
+                                        will be used. When you install an application with the same
+                                        ID as an existing application in the current workspace, the
+                                        existing application is deleted and then replaced by the new
+                                        application.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Change Application ID</span> -
+                                        Specify a new application ID.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                              <div>
+                                 
+                                 <p>You must specify an application ID that is unique across
+                                all <span>APEX</span> workspaces.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Install Application</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>If Credentials or Remote Servers are detected, follow the on-screen
+                    instructions to set up the Credentials or Remote Servers for your workspace.
+                </span></li>
+                     <li class="stepexpand"><span>If supporting objects are detected, the wizard guides you through the
+                    installation process. Click <span class="uicontrol bold">Install Supporting Objects</span>
+                    and follow the on-screen instructions.</span></li>
+                     <li class="stepexpand"><span>On the confirmation page, select the appropriate button:</span><ul id="GUID-D59F133C-51EE-4EEC-9C85-96DAE8164EEE__CHOICES_M44_Y13_KKB">
+                           <li><span class="uicontrol bold">Install Summary</span></li>
+                           <li><span class="uicontrol bold">Edit Application</span></li>
+                           <li><span class="uicontrol bold">Run Application</span></li>
+                        </ul>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-export-files-from-the-export-repository.html#GUID-B552F865-2AD5-4CD7-ACEA-EB2E7EEC2AB1" title="Import, install, or delete export files stored in the Export Repository.">Managing Export Files from the Export Repository</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25843"></a><div class="props_rev_3"><a id="GUID-C0C1AC70-10F7-488A-9E9E-2E5F5C6F53A8" name="GUID-C0C1AC70-10F7-488A-9E9E-2E5F5C6F53A8"></a><h3 id="HTMDB-GUID-C0C1AC70-10F7-488A-9E9E-2E5F5C6F53A8" class="sect3"><span class="enumeration_section">25.3.4.3 </span>Installing Other Files from the Export Repository
+               </h3>
+               <div>
+                  <p>If you did not install your Export Files after importing, you can
+        install them in the Export Repository.</p>
+                  <p>To install other Export Files stored in the Export Repository: </p>
+                  <ol>
+                     <li><span>Navigate to the Export Repository:</span><ol type="a" id="GUID-C0C1AC70-10F7-488A-9E9E-2E5F5C6F53A8__SUBSTEPS_U4P_CCW_KKB">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>On the Application home page, click
+                            <span class="uicontrol bold">Utilities</span>.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Export Repository</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Select the file to be installed and click <span class="uicontrol bold">Install</span> in the Action column.</span></li>
+                     <li><span>Follow the on-screen instructions. The steps differ slightly depending upon the
+                    export type.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-export-files-from-the-export-repository.html#GUID-B552F865-2AD5-4CD7-ACEA-EB2E7EEC2AB1" title="Import, install, or delete export files stored in the Export Repository.">Managing Export Files from the Export Repository</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25844"></a><div class="props_rev_3"><a id="GUID-AAC7F70E-1142-44F3-8813-76BAB0EC9B88" name="GUID-AAC7F70E-1142-44F3-8813-76BAB0EC9B88"></a><h3 id="HTMDB-GUID-AAC7F70E-1142-44F3-8813-76BAB0EC9B88" class="sect3"><span class="enumeration_section">25.3.4.4 </span>Deleting Files from the Export Repository
+               </h3>
+               <div>
+                  <p>Delete export files from the Export Repository.</p>
+                  <p>To delete export files stored in the Export
+                Repository:</p>
+                  <ol>
+                     <li><span>Navigate to the Export Repository:</span><ol type="a" id="GUID-AAC7F70E-1142-44F3-8813-76BAB0EC9B88__SUBSTEPS_U4P_CCW_KKB">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>On the Application home page, click
+                            <span class="uicontrol bold">Utilities</span>.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Export Repository</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Select the file to be deleted and click <span class="uicontrol bold">Delete Checked</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-export-files-from-the-export-repository.html#GUID-B552F865-2AD5-4CD7-ACEA-EB2E7EEC2AB1" title="Import, install, or delete export files stored in the Export Repository.">Managing Export Files from the Export Repository</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

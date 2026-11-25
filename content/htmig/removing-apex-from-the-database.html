@@ -1,0 +1,124 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Removing APEX from the Database">
+      <meta name="abstract" content="Start SQLcl and connect to the database where Oracle APEX is installed as SYS specifying the SYSDBA role and execute the SQL&gt; @apxremov.sql command.">
+      <meta name="description" content="Start SQLcl and connect to the database where Oracle APEX is installed as SYS specifying the SYSDBA role and execute the SQL&gt; @apxremov.sql command.">
+      <meta name="DC.Relation" scheme="URI" content="cleaning-up-after-failed-installation.html#GUID-872260A2-2BF5-42F8-A9D5-B7A40EF9345C">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="David Bliss">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Salim Hlayel">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vlad Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-A16032EF-3440-4D7A-B8A2-193A49D0BB30">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Start SQLcl and connect to the database where Oracle APEX is installed as SYS specifying the SYSDBA role and execute the SQL&gt; @apxremov.sql command.">
+      <meta name="description" content="Start SQLcl and connect to the database where Oracle APEX is installed as SYS specifying the SYSDBA role and execute the SQL&gt; @apxremov.sql command.">
+      <title>Removing APEX from the Database</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Installation Guide ">
+      <meta property="og:description" content="Start SQLcl and connect to the database where Oracle APEX is installed as SYS specifying the SYSDBA role and execute the SQL&gt; @apxremov.sql command.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Installation Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-installation-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:41:45-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12910-03">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="removing-the-apex-release-schema.html" title="Previous" type="text/html">
+      <link rel="next" href="images-displaying-incorrectly.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Installation Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="HTMIG">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Removing APEX from the Database","description":"Start SQLcl and connect to the database where Oracle APEX is installed as SYS specifying the SYSDBA role and execute the SQL&gt; @apxremov.sql command.","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="removing-the-apex-release-schema.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="images-displaying-incorrectly.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-A16032EF-3440-4D7A-B8A2-193A49D0BB30" name="GUID-A16032EF-3440-4D7A-B8A2-193A49D0BB30"></a><a id="HTMIG270"></a>
+         
+         <h2 id="HTMIG-GUID-A16032EF-3440-4D7A-B8A2-193A49D0BB30" class="sect2"><span class="enumeration_section">C.3.2 </span>Removing <span>APEX</span> from the Database
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Start <span>SQLcl</span> and connect to the database where <span>Oracle APEX</span> is installed as <code class="codeph">SYS</code> specifying the <code class="codeph">SYSDBA</code> role and execute the <code class="codeph">SQL&gt; @apxremov.sql</code> command.
+               </p>
+               <div class="section">
+                  <p>This section describes how to remove the <span>APEX</span> schema, synonyms, and users from the database without deleting the database. 
+                  </p>
+                  <div class="infoboxnote" id="GUID-A16032EF-3440-4D7A-B8A2-193A49D0BB30__GUID-BEC058D8-637C-4506-A9EF-1AA06494C2D3">
+                     <p class="notep1">Note:</p>Do NOT follow these steps if you have upgraded your database from a prior release, and still want to use the prior release of <span>APEX</span>. For information about reverting to a prior release, see <a href="reverting-to-a-previous-release.html#GUID-A1FA25CA-1537-4158-B92F-11AECC7D2731" title="Learn how to revert to a previous release Oracle APEX.">Reverting to a Previous Release</a>. If you are not sure whether you have completed a new installation or an upgrade installation, review <a href="cleaning-up-after-failed-installation.html#GUID-872260A2-2BF5-42F8-A9D5-B7A40EF9345C" title="Learn about best practices for troubleshooting and cleaning up after a failed installation.">Cleaning Up After a Failed Installation</a> to verify if a previous release of <span>APEX</span> exists in the database.
+                  </div>
+                  <p>To remove <span>APEX</span> from the database:
+                  </p>
+               </div>
+               <ol>
+                  <li class="stepexpand"><span>Change your working directory to the <code class="codeph">apex</code> directory where you unzipped the <span>APEX</span> software.</span></li>
+                  <li class="stepexpand"><span>Start <span>SQLcl</span> and connect to the database where <span>APEX</span> is installed as <code class="codeph">SYS</code> specifying the <code class="codeph">SYSDBA</code> role:</span><ul id="GUID-A16032EF-3440-4D7A-B8A2-193A49D0BB30__CHOICES_L2N_D1H_XWB">
+                        <li>
+                           <p>On Windows:</p><pre class="pre codeblock"><code><span class="italic">SYSTEM_DRIVE:\</span> sql /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span></code></pre></li>
+                        <li>
+                           <p>On UNIX and Linux:</p><pre class="pre codeblock"><code>$ sql /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span></code></pre></li>
+                     </ul>
+                  </li>
+                  <li class="stepexpand"><span>Execute the following command:</span><div><pre class="pre codeblock"><code>SQL&gt; @apxremov.sql</code></pre></div>
+                  </li>
+                  <li class="stepexpand"><span>After successfully removing <span>APEX</span> using <code class="codeph">apxremov.sql</code>, you must exit your current <span>SQLcl</span> session and reconnect before attempting another install using <code class="codeph">apexins.sql</code>.</span></li>
+               </ol>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="cleaning-up-after-failed-installation.html#GUID-872260A2-2BF5-42F8-A9D5-B7A40EF9345C" title="Learn about best practices for troubleshooting and cleaning up after a failed installation.">Cleaning Up After a Failed Installation</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

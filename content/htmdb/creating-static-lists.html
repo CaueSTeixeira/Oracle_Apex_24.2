@@ -1,0 +1,707 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Creating Static Lists">
+      <meta name="abstract" content="A static list is based on predefined display and return values.">
+      <meta name="description" content="A static list is based on predefined display and return values.">
+      <meta name="DC.subject" content="list, about static, static list, about, about creating, adding list entries, adding sublists, creating from scratch, using Create List Wizard, adding entries, copying entries, reparenting entries, managing orphaned list entries, resequencing entries">
+      <meta name="keywords" content="list, about static, static list, about, about creating, adding list entries, adding sublists, creating from scratch, using Create List Wizard, adding entries, copying entries, reparenting entries, managing orphaned list entries, resequencing entries">
+      <meta name="DC.Relation" scheme="URI" content="creating-lists.html#GUID-0ABE095F-AE4D-438C-840E-3B47915E6109">
+      <meta name="DC.Relation" scheme="URI" content="creating-static-lists.html#GUID-FEAF00A6-3752-4CA4-9BDA-4AE1746DE89B">
+      <meta name="DC.Relation" scheme="URI" content="creating-static-lists.html#GUID-45F64859-7928-44DF-92FF-166BAD828A1B">
+      <meta name="DC.Relation" scheme="URI" content="creating-static-lists.html#GUID-DD1EB27B-6CCE-4BA4-B2CD-CCDCE0269D52">
+      <meta name="DC.Relation" scheme="URI" content="creating-static-lists.html#GUID-E6680578-3675-42D0-8DCE-07098F29947A">
+      <meta name="DC.Relation" scheme="URI" content="creating-static-lists.html#GUID-04489CA2-98A7-4D3B-8909-62BA816B2931">
+      <meta name="DC.Relation" scheme="URI" content="creating-static-lists.html#GUID-1B3CC542-1E79-4879-A096-6578DF36651F">
+      <meta name="DC.Relation" scheme="URI" content="creating-static-lists.html#GUID-025B2F94-E84D-4EA1-8EC3-D65D1B339A41">
+      <meta name="DC.Relation" scheme="URI" content="creating-static-lists.html#GUID-6CDA2970-9389-4545-B670-A5F1A51E2416">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-6D10ADF5-4A23-4496-8654-9C9CC2A6A0DF">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="A static list is based on predefined display and return values.">
+      <meta name="description" content="A static list is based on predefined display and return values.">
+      <title>Creating Static Lists</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="A static list is based on predefined display and return values.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="about-static-and-dynamic-lists.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-dynamic-lists.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Creating Static Lists","description":"A static list is based on predefined display and return values.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="about-static-and-dynamic-lists.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-dynamic-lists.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-6D10ADF5-4A23-4496-8654-9C9CC2A6A0DF" name="GUID-6D10ADF5-4A23-4496-8654-9C9CC2A6A0DF"></a><a id="HTMDB25520"></a><a id="4000:2222"></a><a id="4000:712"></a><a id="4000:536"></a>
+         
+         <h2 id="HTMDB-GUID-6D10ADF5-4A23-4496-8654-9C9CC2A6A0DF" class="sect2"><span class="enumeration_section">16.8.2 </span>Creating Static Lists
+         </h2>
+         <div class="ind">
+            <p>A static list is based on predefined display and return
+            values.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="creating-static-lists.html#GUID-FEAF00A6-3752-4CA4-9BDA-4AE1746DE89B">About Creating a Static List</a><br>Learn about the steps involved in creating a static list.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-static-lists.html#GUID-45F64859-7928-44DF-92FF-166BAD828A1B">About Adding Entries and Sublists to a Static List</a><br>Once you create a list, you must add entries to it. 
+                  </li>
+                  <li class="ulchildlink"><a href="creating-static-lists.html#GUID-DD1EB27B-6CCE-4BA4-B2CD-CCDCE0269D52">Creating a Static List from Scratch</a><br>Create a static list from scratch by running the Create List Wizard.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-static-lists.html#GUID-E6680578-3675-42D0-8DCE-07098F29947A">Adding Entries or Sublists Manually</a><br>Add list entries or sublists from the List Details page.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-static-lists.html#GUID-04489CA2-98A7-4D3B-8909-62BA816B2931">Copying Static List Entries Between Lists</a><br>Copy static list entries from one list to another.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-static-lists.html#GUID-1B3CC542-1E79-4879-A096-6578DF36651F">Reparenting Static List Entries</a><br>Reparent static list entries to manage the list entry hierarchy.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-static-lists.html#GUID-025B2F94-E84D-4EA1-8EC3-D65D1B339A41">Managing Orphaned Static List Entries</a><br>Manage orphaned list entries by removing the parent entry.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-static-lists.html#GUID-6CDA2970-9389-4545-B670-A5F1A51E2416">Resequencing Static List Entries</a><br> Resequence list entries in increments of 10 on the Clean Up page.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="creating-lists.html#GUID-0ABE095F-AE4D-438C-840E-3B47915E6109" title="Add a shared collection of links (or a list) to an application. To add a list to a page, create a region and specify the region type as List. You control the appearance of a list through list templates.">Creating Lists</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB29341"></a><div class="props_rev_3"><a id="GUID-FEAF00A6-3752-4CA4-9BDA-4AE1746DE89B" name="GUID-FEAF00A6-3752-4CA4-9BDA-4AE1746DE89B"></a><h3 id="HTMDB-GUID-FEAF00A6-3752-4CA4-9BDA-4AE1746DE89B" class="sect3"><span class="enumeration_section">16.8.2.1 </span>About Creating a Static List
+               </h3>
+               <div>
+                  <p>Learn about the steps involved in creating a static list.</p>
+                  <p>A <strong class="term">static list</strong> is based on predefined display and
+            return values. When you create a static list you define a list entry label and a target
+            (either a page or URL). You can add list entries when you create the list, by copying
+            existing entries, or by adding the list entries. You can control when list entries
+            display by defining display conditions.
+                  </p>
+                  <p>The process of creating a static list involves the following steps:</p>
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        
+                        <p><span class="uicontrol bold">Step 1</span>: Create the static list by either:
+                        </p>
+                        
+                        <ul style="list-style-type: disc;" id="GUID-FEAF00A6-3752-4CA4-9BDA-4AE1746DE89B__UL_GFC_3QM_5SB">
+                           <li>
+                              
+                              <p>Creating a list from scratch by running the Create List
+                            Wizard. When prompted enter the list name and select the list type,
+                                <span class="uicontrol bold">Static</span>.
+                              </p>
+                              
+                           </li>
+                           <li>
+                              
+                              <p>Copying an existing static list by running the Copy List
+                            Wizard.</p>
+                              
+                           </li>
+                        </ul>
+                        
+                        <p>Each list element has a display condition, which enables you to
+                    control when it displays. You can define a list element to be <span class="italic">current</span> for
+                    a specific page or for multiple pages.
+                        </p>
+                        
+                     </li>
+                     <li>
+                        <p><span class="bold">Step 2:</span> Add list entries. You can add list entries:
+                        </p>
+                        
+                        <ul style="list-style-type: disc;" id="GUID-FEAF00A6-3752-4CA4-9BDA-4AE1746DE89B__UL_GYV_XXQ_5SB">
+                           <li>
+                              
+                              <p>When running the Create List Wizard.</p>
+                              
+                           </li>
+                           <li>
+                              
+                              <p> By copying entries from within an existing list. If you copy
+                            an entire list, you also copy all of its list entries.</p>
+                              
+                           </li>
+                           <li>
+                              
+                              <p>By adding list entries manually.</p>
+                              
+                           </li>
+                        </ul>
+                     </li>
+                     <li>
+                        <p><span class="bold">Step 3: </span>Add the list to a page by creating a List region. 
+                        </p>
+                     </li>
+                  </ul>
+                  <p>How you perform these steps is a personal preference. You can perform all of these
+            steps when you run the Create List Wizard. Alternatively, you can perform these steps
+            one at a time.</p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-FEAF00A6-3752-4CA4-9BDA-4AE1746DE89B__GUID-8EF3A937-C8BF-4BCF-B207-FD424170444A">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li>
+                           <p><a href="adding-list-to-page.html#GUID-4F80A2AE-F91B-40E4-86B0-4094C7D70A2A" title="Once you create a list and list entries, the next step is to add it to a page by creating a list region.">Adding a List to a Page</a></p>
+                        </li>
+                        <li>
+                           <p><a href="editing-list-attributes.html#GUID-7644D8AD-0B99-4153-8C7D-E13BC65E8B1C" title="Edit a dynamic list by selecting it on the Lists page in Shared Components.">Editing a Dynamic List</a></p>
+                        </li>
+                        <li>
+                           <p><a href="accessing-list-reports.html#GUID-041B67D2-B700-4641-A0B9-C981B921CC3D" title="View reports on the Lists by clicking the following tabs: Unused, Conditional Entries, Utilization, and History. View List Details to access a Grid Edit of all list entries.">Accessing List Reports</a></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-static-lists.html#GUID-6D10ADF5-4A23-4496-8654-9C9CC2A6A0DF" title="A static list is based on predefined display and return values.">Creating Static Lists</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25523"></a><div class="props_rev_3"><a id="GUID-45F64859-7928-44DF-92FF-166BAD828A1B" name="GUID-45F64859-7928-44DF-92FF-166BAD828A1B"></a><h3 id="HTMDB-GUID-45F64859-7928-44DF-92FF-166BAD828A1B" class="sect3"><span class="enumeration_section">16.8.2.2 </span>About Adding Entries and Sublists to a Static List 
+               </h3>
+               <div>
+                  <p>Once you create a list, you must add entries to it. </p>
+                  <p>You can add list entries when running the Create List Wizard, copying a list entry
+                                    from within a list, or copying existing entries from one list to
+                                    another.</p>
+                  <p>You can also create hierarchical lists that contain sublists. To create a hierarchical list, you must:</p>
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        <p>Select a list template that supports hierarchical lists.</p>
+                        
+                        <div class="infobox-tip" id="GUID-45F64859-7928-44DF-92FF-166BAD828A1B__GUID-F1252F97-D4ED-4743-A927-DF32D95E8AAB">
+                           <p class="notep1">Tip:</p>To determine if a list template
+                                                  supports hierarchical lists, go to Shared
+                                                  Components, Templates. On the Templates page, find
+                                                  and click the list template name. The
+                                                  <span class="uicontrol bold">List Template Current with Sublist
+                                                  Items</span> attribute on the Edit List
+                                                  Template page determines whether the list template
+                                                  supports hierarchical lists. If this attribute is
+                                                  not null, the list template supports hierarchical
+                                                  lists. If this attribute is null, then the list
+                                                  template does not support hierarchical
+                                                  lists.
+                        </div>
+                     </li>
+                     <li>
+                        <p>Select a Parent List Item when you create each list entry.</p>
+                     </li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-45F64859-7928-44DF-92FF-166BAD828A1B__GUID-F75743C9-8BEE-4940-8A9E-7AAA9ABB7E89">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li>
+                           
+                           <p><a href="managing-templates.html#GUID-8F3258EE-8025-45DB-AF27-AB76D9746F50" title="Manage templates by navigating to the Templates page in Shared Components.">Managing Templates</a></p>
+                           
+                        </li>
+                        <li>
+                           <p><a href="creating-custom-themes.html#GUID-CB755CDA-67EA-4CF8-943D-80E2CDCC2E3E" title="Create a custom theme by modifying existing templates.">Creating Custom Themes</a></p>
+                        </li>
+                        <li>
+                           <p><a href="list-templates.html#GUID-E0A12319-17C3-4D3D-AE8F-5331E3A26DEB" title="Control the appearance of a list using list templates.">List Templates</a></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-static-lists.html#GUID-6D10ADF5-4A23-4496-8654-9C9CC2A6A0DF" title="A static list is based on predefined display and return values.">Creating Static Lists</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25521"></a><div class="props_rev_3"><a id="GUID-DD1EB27B-6CCE-4BA4-B2CD-CCDCE0269D52" name="GUID-DD1EB27B-6CCE-4BA4-B2CD-CCDCE0269D52"></a><h3 id="HTMDB-GUID-DD1EB27B-6CCE-4BA4-B2CD-CCDCE0269D52" class="sect3"><span class="enumeration_section">16.8.2.3 </span>Creating a Static List from Scratch
+               </h3>
+               <div>
+                  <p>Create a static list from scratch by running the Create List Wizard.</p>
+                  <p>To create a static list by running the Create List Wizard:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Access the Create List Wizard:</span><ol type="a">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span></li>
+                           <li><span>Under Navigation and Search, click <span class="uicontrol bold">Lists</span>.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Create</span>.</span></li>
+                        </ol>
+                        <div>The Create List Wizard appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>For Name and Type:</span><ol type="a">
+                           <li><span>Name - Enter a numeric or alphanumeric name for the list.</span></li>
+                           <li><span>Type - Select <span class="uicontrol bold">Static</span>.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Query or Static Values:</span><ol type="a">
+                           <li><span>List Entry Label - Enter a numeric or alphanumeric name for the
+                            list.</span></li>
+                           <li><span>Target Page ID or custom URL - Select a target page or enter a custom
+                            URL.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Confirm:</span><ol type="a">
+                           <li class="substepexpand"><span>Create List Regions - Select whether to create a list region. Options
+                            include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;">
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Do not create list
+                                            region(s)</span></p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Create list region on current
+                                            page</span></p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="uicontrol bold">Create list region for each target
+                                            page</span></p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Region Position - If creating a new region, select the region
+                            position.</span></li>
+                           <li class="substepexpand"><span>Region Template - If creating a new region, select a region
+                            template.</span></li>
+                           <li class="substepexpand"><span>List Template - Select the list template to use to control the
+                            appearance of your list.</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Create List</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-static-lists.html#GUID-6D10ADF5-4A23-4496-8654-9C9CC2A6A0DF" title="A static list is based on predefined display and return values.">Creating Static Lists</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25524"></a><div class="props_rev_3"><a id="GUID-E6680578-3675-42D0-8DCE-07098F29947A" name="GUID-E6680578-3675-42D0-8DCE-07098F29947A"></a><h3 id="HTMDB-GUID-E6680578-3675-42D0-8DCE-07098F29947A" class="sect3"><span class="enumeration_section">16.8.2.4 </span>Adding Entries or Sublists Manually
+               </h3>
+               <div>
+                  <p>Add list entries or sublists from the List Details page.</p>
+                  <p>To add an entry or sublist manually:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Lists page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span></li>
+                           <li class="substepexpand"><span>Under Navigation and Search, click <span class="uicontrol bold">Lists</span>.</span><div>
+                                 
+                                 <p>The Lists page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Select a list.</span><div>
+                           <p>The List Details page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Entry</span>.</span></li>
+                     <li class="stepexpand"><span>Under Entry:</span><ol type="a">
+                           <li class="substepexpand"><span>Parent List Entry - If applicable, select the parent for this list entry. Use this attribute if you are creating a hierarchical list that contains a sublist. </span><div>
+                                 <p>Note this attribute does not appear if you are creating the parent list entry.</p>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Sequence - Indicate the order in which list the list entry appears. The sequence determines the order of evaluation.</span></li>
+                           <li class="substepexpand"><span>Image/Class - Identify an image file name or the the icon class for the
+                            icon associated with this list entry. </span><div>
+                                 
+                                 <p>Most Universal Theme apps use the Font APEX icon library. To pick an
+                                icon, use the built-in icon picker and select an icon from the popup
+                                window. See examples below:</p>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-E6680578-3675-42D0-8DCE-07098F29947A__UL_HVJ_MZQ_5SB">
+                                    <li>
+                                       
+                                       <p><code class="codeph">fa-cloud</code> - Displays the cloud icon.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><code class="codeph">fa-exclamation-circle u-danger-text</code> -
+                                        Displays a red exclamation icon.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                                 <p> To learn more, see field-level Help.</p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Attributes - Identify the image attributes (such as <code class="codeph">width="12" height="12"</code>) for the list element image. </span><div>
+                                 <p>Use the <code class="codeph">#LIST_LABEL#</code> substitution string to reference the list label text. This substitution string enables the title image attribute to be automatically set based on the value of the list label text. For example: 
+                                 </p>
+                                 <p><code class="codeph">title="#LIST_LABEL#"
+</code></p>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Alt Attribute - Identify the image alt attribute for the list element image. </span><div>
+                                 <p>Use the <code class="codeph">#LIST_LABEL#</code> substitution string to reference the list label text. This substitution string enables the Alt attribute to be automatically set based on the value of the list label text. For example:
+                                 </p>
+                                 <p><code class="codeph">...alt="#LIST_LABEL#"...
+</code></p>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>List Entry Label - Enter the label text for this link.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Specify a target type. Options include: <span class="uicontrol bold">URL</span> or <span class="uicontrol bold">Page in this Application</span>.</span><div>
+                           <p>If the target location is a <span class="uicontrol bold">URL</span>, specify the following:
+                           </p>
+                        </div>
+                        <ol type="a">
+                           <li class="substepexpand"><span>Target Type - Select <span class="uicontrol bold">URL</span>.</span></li>
+                           <li class="substepexpand"><span>URL Target - Enter a URL. For example:</span><div>
+                                 <p>http://www.example.com
+</p>
+                              </div>
+                           </li>
+                        </ol>
+                        <div>
+                           <p>If the target location is a page:</p>
+                        </div>
+                        <ol type="a">
+                           <li class="substepexpand"><span>Target Type - Select <span class="uicontrol bold">Page in this Application</span>.</span></li>
+                           <li class="substepexpand"><span>Page - Specify the target page number. </span><div>
+                                 <p>Other options include:</p>
+                                 <ul style="list-style-type: disc;">
+                                    <li>
+                                       <p><span class="uicontrol bold">reset pagination for this page</span> - Select this option to have the page to return to the first set of data meeting a user's new query.
+                                       </p>
+                                    </li>
+                                    <li>
+                                       <p><span class="uicontrol bold">Printer Friendly</span> - This option displays the target page using the application's Printer Friendly template. Printer friendly templates optimize a page for printing.
+                                       </p>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Request - Enter text to set the built-in application item <code class="codeph">REQUEST</code>. This is also the item that is set with the name of a button that was clicked.</span></li>
+                           <li class="substepexpand"><span>Clear Cache - Enter the page numbers, separated by commas, for which you would like the user's session state to be cleared. To learn more, see field-level Help. </span></li>
+                           <li class="substepexpand"><span>To set session state (that is, give a listed item a value):</span><div>
+                                 <ul style="list-style-type: disc;">
+                                    <li>
+                                       <p>Set these items - Enter a comma-delimited list of item names for which you would like to set session state. </p>
+                                    </li>
+                                    <li>
+                                       <p>With these values - Enter a comma-delimited list of values for the items specified in the previous step.</p>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div>
+                                 <p>You can specify static values or substitution syntax (for example, <code class="codeph">&amp;APP_ITEM_NAME.</code>). Note that item values passed to <code class="codeph">f?p=</code> in the URL cannot contain a colon. Additionally, item values cannot contain commas unless you enclose the entire value in backslashes (for example, <code class="codeph">\1234,56\</code>). 
+                                 </p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Current List Entry:</span><ol type="a">
+                           <li class="substepexpand"><span>List Entry Current for Pages Type - Specify when this list entry should be current based on the page type. </span><div>
+                                 <p>List items can be current or non-current. Current list items use the current template; non-current list items use the non-current list item template. The actual condition and templates are defined in subsequent attributes.</p>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>List Entry Current for Condition - Displays conditionally. Based on the selection above, define a condition to evaluate. When this condition is true, then the list item becomes current. To learn more, see field-level Help.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Conditions, specify the appropriate information to make the list entry conditional. </span></li>
+                     <li class="stepexpand"><span>Under Authorization, you can specify an authorization scheme. </span><div>
+                           <p>This authorization scheme must evaluate to TRUE in order for this component to be rendered or otherwise processed.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under Configuration, select a build option for this component. </span><div>
+                           <p>Build options are predefined settings that determine whether components within an application are enabled.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under Click Counting, specify if you want the list entries to be included in the click count.</span><div>
+                           <p>If this is a link to an external page, you can count clicks.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>In User Defined Attributes, specify additional attributes.  To learn more, see
+                    field-level Help. </span></li>
+                     <li class="stepexpand"><span>When you are finished defining list attributes, click <span class="uicontrol bold">Create List
+                        Entry</span>.</span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-E6680578-3675-42D0-8DCE-07098F29947A__GUID-C23DFEC5-924C-41B4-A01E-3245C0782AFD">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li>
+                           <p><a href="editing-themes.html#GUID-5292D822-470D-48EA-8F80-D9FAC85EDBF7" title="Review or edit a theme by updating theme attributes.">Editing Themes</a></p>
+                        </li>
+                        <li>
+                           <p><a href="optimizing-a-page-for-printing.html#GUID-952C9D91-BA76-4EB3-8B4C-4064B6EB74C2" title="You can optimize a page for printing by creating a specific Printer Friendly template and selecting that template on the Create/Edit Theme page.">Optimizing a Page for Printing</a></p>
+                        </li>
+                        <li>
+                           <p><a href="../aeapi/COUNT_CLICK-Procedure.html#AEAPI-GUID-EAC385E4-B686-481C-B95E-2FD6BB997388" target="_blank">COUNT_CLICK Procedure</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-static-lists.html#GUID-6D10ADF5-4A23-4496-8654-9C9CC2A6A0DF" title="A static list is based on predefined display and return values.">Creating Static Lists</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB28464"></a><div class="props_rev_3"><a id="GUID-04489CA2-98A7-4D3B-8909-62BA816B2931" name="GUID-04489CA2-98A7-4D3B-8909-62BA816B2931"></a><h3 id="HTMDB-GUID-04489CA2-98A7-4D3B-8909-62BA816B2931" class="sect3"><span class="enumeration_section">16.8.2.5 </span>Copying Static List Entries Between Lists
+               </h3>
+               <div>
+                  <p>Copy static list entries from one list to another.</p>
+                  <p>To copy list entries between lists:</p>
+                  <ol>
+                     <li><span>Navigate to the Lists page.</span><ol type="a">
+                           <li class="substepexpand"><span>Navigate to the Workspace home page.</span></li>
+                           <li class="substepexpand"><span>Click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span></li>
+                           <li class="substepexpand"><span>Under Navigation and Search, click <span class="uicontrol bold">Lists</span>.</span><div>
+                                 
+                                 <p>The Lists page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Select the list.</span></li>
+                     <li><span>From the Tasks region on the side bar, click <span class="uicontrol bold">Copy List Entries from
+                        one List to Another</span>.</span></li>
+                     <li><span>On Copy List Entries:</span><ol type="a" id="GUID-04489CA2-98A7-4D3B-8909-62BA816B2931__SUBSTEPS_NYC_HGR_5SB">
+                           <li><span>Copy List Entries  Select the list to copy.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Copy List Entries</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-static-lists.html#GUID-6D10ADF5-4A23-4496-8654-9C9CC2A6A0DF" title="A static list is based on predefined display and return values.">Creating Static Lists</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB28466"></a><div class="props_rev_3"><a id="GUID-1B3CC542-1E79-4879-A096-6578DF36651F" name="GUID-1B3CC542-1E79-4879-A096-6578DF36651F"></a><h3 id="HTMDB-GUID-1B3CC542-1E79-4879-A096-6578DF36651F" class="sect3"><span class="enumeration_section">16.8.2.6 </span>Reparenting Static List Entries
+               </h3>
+               <div>
+                  <p>Reparent static list entries to manage the list entry hierarchy.</p>
+                  <p>To reparent list entries:</p>
+                  <ol>
+                     <li><span>Navigate to the Lists page.</span><ol type="a">
+                           <li class="substepexpand"><span>Navigate to the Workspace home page.</span></li>
+                           <li class="substepexpand"><span>Click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span></li>
+                           <li class="substepexpand"><span>Under Navigation and Search, click <span class="uicontrol bold">Lists</span>.</span><div>
+                                 
+                                 <p>The Lists page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Select the list.</span></li>
+                     <li><span>From the Tasks region on the side bar, click <span class="uicontrol bold">Reparent List Entries
+                        within this List</span>.</span></li>
+                     <li><span>Use the navigation bar to customize the display and click
+                        <span class="uicontrol bold">Go</span>.</span><ul id="GUID-1B3CC542-1E79-4879-A096-6578DF36651F__CHOICES_FWG_ZHR_5SB">
+                           <li>List -  Select the list you would like to edit.</li>
+                           <li>Start With - Restrict your view to a subset of the
+                        hierarchy.</li>
+                        </ul>
+                     </li>
+                     <li><span>To reparent entries:</span><ol type="a" id="GUID-1B3CC542-1E79-4879-A096-6578DF36651F__SUBSTEPS_XXN_2WY_5SB">
+                           <li><span>Select entries to reparent.</span></li>
+                           <li><span>Reparent To - Select a new parent.</span></li>
+                           <li><span>Select the entries to move and click <span class="uicontrol bold">Reparent Checked
+                                Entries</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-static-lists.html#GUID-6D10ADF5-4A23-4496-8654-9C9CC2A6A0DF" title="A static list is based on predefined display and return values.">Creating Static Lists</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB28467"></a><div class="props_rev_3"><a id="GUID-025B2F94-E84D-4EA1-8EC3-D65D1B339A41" name="GUID-025B2F94-E84D-4EA1-8EC3-D65D1B339A41"></a><h3 id="HTMDB-GUID-025B2F94-E84D-4EA1-8EC3-D65D1B339A41" class="sect3"><span class="enumeration_section">16.8.2.7 </span>Managing Orphaned Static List Entries
+               </h3>
+               <div>
+                  <p>Manage orphaned list entries by removing the parent entry.</p>
+                  <div class="section">An orphaned list entry is a list entry which has a parent, but the parent is no
+            longer a member of the current list. When a list entry becomes orphaned, remove the
+            parent entry.</div>
+                  <p>To manage orphaned list entries:</p>
+                  <ol>
+                     <li><span>Navigate to the Lists page.</span><ol type="a">
+                           <li class="substepexpand"><span>Navigate to the Workspace home page.</span></li>
+                           <li class="substepexpand"><span>Click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span></li>
+                           <li class="substepexpand"><span>Under Navigation and Search, click <span class="uicontrol bold">Lists</span>.</span><div>
+                                 
+                                 <p>The Lists page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Select the list.</span></li>
+                     <li><span>From the Tasks region on the side bar, click <span class="uicontrol bold">Manage Orphaned List
+                        Entries</span>.</span></li>
+                     <li><span>On Manage Orphaned List Entries:</span><ol type="a" id="GUID-025B2F94-E84D-4EA1-8EC3-D65D1B339A41__SUBSTEPS_WR1_W3R_5SB">
+                           <li><span>Select the entries to remove.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Clear Parent Entries</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-static-lists.html#GUID-6D10ADF5-4A23-4496-8654-9C9CC2A6A0DF" title="A static list is based on predefined display and return values.">Creating Static Lists</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB28468"></a><div class="props_rev_3"><a id="GUID-6CDA2970-9389-4545-B670-A5F1A51E2416" name="GUID-6CDA2970-9389-4545-B670-A5F1A51E2416"></a><h3 id="HTMDB-GUID-6CDA2970-9389-4545-B670-A5F1A51E2416" class="sect3"><span class="enumeration_section">16.8.2.8 </span>Resequencing Static List Entries
+               </h3>
+               <div>
+                  <p> Resequence list entries in increments of 10 on the Clean Up page.</p>
+                  <p>To resequence list entries:</p>
+                  <ol>
+                     <li><span>Navigate to the Lists page.</span><ol type="a">
+                           <li class="substepexpand"><span>Navigate to the Workspace home page.</span></li>
+                           <li class="substepexpand"><span>Click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span></li>
+                           <li class="substepexpand"><span>Under Navigation and Search, click <span class="uicontrol bold">Lists</span>.</span><div>
+                                 
+                                 <p>The Lists page appears.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Select the list.</span></li>
+                     <li><span>From the Tasks region on the side bar, click <span class="uicontrol bold">Resequence List
+                        Entries</span>.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Resequence</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-static-lists.html#GUID-6D10ADF5-4A23-4496-8654-9C9CC2A6A0DF" title="A static list is based on predefined display and return values.">Creating Static Lists</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

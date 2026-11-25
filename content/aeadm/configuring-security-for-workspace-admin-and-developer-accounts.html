@@ -1,0 +1,141 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Configuring Security Settings for Workspace Administrator and Developer Accounts">
+      <meta name="abstract" content="Manage security settings for workspace administrator and workspace developer accounts.">
+      <meta name="description" content="Manage security settings for workspace administrator and workspace developer accounts.">
+      <meta name="DC.subject" content="security settings, configuring for workspace administrators, configuring for developers, login controls, Username Validation Expression, Require User Account Expiration and Locking, Maximum Login Failures Allowed, Account Password Lifetime">
+      <meta name="keywords" content="security settings, configuring for workspace administrators, configuring for developers, login controls, Username Validation Expression, Require User Account Expiration and Locking, Maximum Login Failures Allowed, Account Password Lifetime">
+      <meta name="DC.Relation" scheme="URI" content="configuring-authentication-controls-for-an-instance.html#GUID-E06E263E-F489-4F10-968B-9BA82F0D4894">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-1C1AB134-7584-429A-989F-58650761B9CE">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Manage security settings for workspace administrator and workspace developer accounts.">
+      <meta name="description" content="Manage security settings for workspace administrator and workspace developer accounts.">
+      <title>Configuring Security Settings for Workspace Administrator and Developer Accounts</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Manage security settings for workspace administrator and workspace developer accounts.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="editing-social-sign-in.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-strong-password-policies.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Configuring Security Settings for Workspace Administrator and Developer Accounts","description":"Manage security settings for workspace administrator and workspace developer accounts.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="editing-social-sign-in.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-strong-password-policies.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-1C1AB134-7584-429A-989F-58650761B9CE" name="GUID-1C1AB134-7584-429A-989F-58650761B9CE"></a><a id="AEADM29166"></a>
+         
+         <h2 id="AEADM-GUID-1C1AB134-7584-429A-989F-58650761B9CE" class="sect2"><span class="enumeration_section">3.4.8.4 </span>Configuring Security Settings for Workspace Administrator and Developer Accounts
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Manage security settings for workspace administrator and workspace developer accounts. </p>
+               <div class="section">
+                  <p>To configure security controls for workspace administrator and workspace developer
+                accounts:</p>
+               </div>
+               <ol>
+                  <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                  <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                  <li><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                  <li><span>Under Development Environment Settings,, configure the following attributes:</span><ol type="a">
+                        <li class="substepexpand"><span><span class="bold">Username Validation Expression</span> - Enter a regular expression to validate the usernames of developers and administrators. Enter <code class="codeph">*</code> to bypass the validation. The following example validates that the username is an email address:</span><div>
+                              <p><code class="codeph">^[[:alnum:]._%-]+@[[:alnum:].-]+\.[[:alpha:]]{2,4}$ </code></p>
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span><span class="bold">Require User Account Expiration and Locking</span> - Applies to end user accounts created using the <span>APEX</span> account management interface. Select&nbsp;<span class="uicontrol bold">Yes</span>&nbsp;to enable <span>APEX</span> user account expiration and locking features across all workspaces. This selection prevents the same feature from being disabled at the workspace-level. Select&nbsp;<span class="uicontrol bold">No</span>&nbsp;to relinquish control to each Workspace administrator.&nbsp;</span></li>
+                        <li class="substepexpand"><span><span class="bold">Maximum Login Failures Allowed</span> - Enter an integer for the
+                            maximum number of consecutive unsuccessful authentication attempts
+                            allowed before a developer or administrator account is locked. If you do
+                            not specify a value in this field, the default value is 4. </span><div>
+                              
+                              <p>This setting applies to administrator and developer
+                                accounts. It does not apply to end user accounts. The value you
+                                enter is used as the default for the workspace-level
+                                    <span class="uicontrol bold">Maximum Login Failures Allowed</span> preference
+                                if the Workspace administrator does not specify a value. That
+                                preference is used for end-user accounts within the respective
+                                workspace.
+                              </p>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span><span class="bold">Account Password Lifetime (days)</span> - Enter a number for the maximum number of days a developer or administrator account password may be used before the account expires. If you do not specify a value in this field, a default value is 45 days. </span><div>
+                              <p>This setting applies to accounts used to access the <span>APEX</span> administration and development environment only. It does not apply to end user accounts. The value you enter is used as the default workspace-level <span class="uicontrol bold">End User Account Lifetime</span> preference which workspace administrators can change. The workspace-level preference applies to the accounts within that workspace.
+                              </p>
+                           </div>
+                        </li>
+                     </ol>
+                  </li>
+                  <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+               </ol>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="configuring-authentication-controls-for-an-instance.html#GUID-E06E263E-F489-4F10-968B-9BA82F0D4894" title="Administrators can configure authentication controls for an entire instance or for each individual workspace.">Configuring Authentication Controls for an Instance</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

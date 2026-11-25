@@ -1,0 +1,576 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Exporting One or More Applications">
+      <meta name="abstract" content="Use SQLcl to export a single APEX application or all applications in a workspace.">
+      <meta name="description" content="Use SQLcl to export a single APEX application or all applications in a workspace.">
+      <meta name="DC.subject" content="SQLcl, exporting to single file, , exporting all applications, apex export, -split, using -split option with source control, exporting specific components, apex export options">
+      <meta name="keywords" content="SQLcl, exporting to single file, , exporting all applications, apex export, -split, using -split option with source control, exporting specific components, apex export options">
+      <meta name="DC.Relation" scheme="URI" content="exporting-and-importing-using-sqlcl.html#GUID-54ED6670-EAEA-45CF-BB0B-F2CB81EB8CFF">
+      <meta name="DC.Relation" scheme="URI" content="exporting-one-or-more-applications.html#GUID-42ACDC50-73A7-45E7-9E8C-6E22967F6A9F">
+      <meta name="DC.Relation" scheme="URI" content="exporting-one-or-more-applications.html#GUID-D3C7B236-9CCC-4026-9652-63BAD57C6D77">
+      <meta name="DC.Relation" scheme="URI" content="exporting-one-or-more-applications.html#GUID-287F79AA-AC44-4443-88C4-2A646AF134F8">
+      <meta name="DC.Relation" scheme="URI" content="exporting-one-or-more-applications.html#GUID-BD33D1F1-CAED-4895-9A1D-B178E2024B23">
+      <meta name="DC.Relation" scheme="URI" content="exporting-one-or-more-applications.html#GUID-FC04ED78-28AA-494C-933B-E7E63B561524">
+      <meta name="DC.Relation" scheme="URI" content="exporting-one-or-more-applications.html#GUID-EC03A6A5-9C99-491F-9EFA-A00AAA1E8F9F">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-644620C3-4E8C-467D-82FB-093908B68D2D">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Use SQLcl to export a single APEX application or all applications in a workspace.">
+      <meta name="description" content="Use SQLcl to export a single APEX application or all applications in a workspace.">
+      <title>Exporting One or More Applications</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Use SQLcl to export a single APEX application or all applications in a workspace.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="listing-components-in-an-application.html" title="Previous" type="text/html">
+      <link rel="next" href="exporting-a-workspace.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Exporting One or More Applications","description":"Use SQLcl to export a single APEX application or all applications in a workspace.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="listing-components-in-an-application.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="exporting-a-workspace.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-644620C3-4E8C-467D-82FB-093908B68D2D" name="GUID-644620C3-4E8C-467D-82FB-093908B68D2D"></a>
+         
+         <h2 id="AEADM-GUID-644620C3-4E8C-467D-82FB-093908B68D2D" class="sect2"><span class="enumeration_section">3.12.11.1.6 </span>Exporting One or More Applications
+         </h2>
+         <div class="ind">
+            <p>Use <span>SQLcl</span> to export a single <span>APEX</span> application or all applications in a workspace.
+            </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="exporting-one-or-more-applications.html#GUID-42ACDC50-73A7-45E7-9E8C-6E22967F6A9F">Exporting an Application to a Single File</a><br>Export an <span>APEX</span> application to a single file.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-one-or-more-applications.html#GUID-D3C7B236-9CCC-4026-9652-63BAD57C6D77">Exporting All Applications from a Workspace</a><br>Export all <span>APEX</span> applications in a workspace.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-one-or-more-applications.html#GUID-287F79AA-AC44-4443-88C4-2A646AF134F8">Exporting an Application Split into Multiple Files</a><br>Export an <span>APEX</span>         <span>APEX</span> application as a directory which contains all the application components as separate         files.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-one-or-more-applications.html#GUID-BD33D1F1-CAED-4895-9A1D-B178E2024B23">Why the Split Option is Preferable for Source Control</a><br>Learn about the advantages of using  <code class="codeph">apex export</code> with         the <code class="codeph">-split</code> option with source control.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-one-or-more-applications.html#GUID-FC04ED78-28AA-494C-933B-E7E63B561524">Exporting Only Selected Application Components</a><br>Export some application components by specifically listing the components         by type and ID.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-one-or-more-applications.html#GUID-EC03A6A5-9C99-491F-9EFA-A00AAA1E8F9F">Additional Options for Controlling APEX Application Export</a><br>Learn about additional <code class="codeph">apex export</code> command         options.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="exporting-and-importing-using-sqlcl.html#GUID-54ED6670-EAEA-45CF-BB0B-F2CB81EB8CFF" title="Export workspaces, applications, and related files from a command line using Oracle SQL Developer Command Line (SQLcl) release 22.1 and later.">Exporting and Importing Using SQLcl</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-42ACDC50-73A7-45E7-9E8C-6E22967F6A9F" name="GUID-42ACDC50-73A7-45E7-9E8C-6E22967F6A9F"></a><h3 id="AEADM-GUID-42ACDC50-73A7-45E7-9E8C-6E22967F6A9F" class="sect3"><span class="enumeration_section">3.12.11.1.6.1 </span>Exporting an Application to a Single
+        File
+               </h3>
+               <div>
+                  <p>Export an <span>APEX</span> application to a single file.
+                  </p>
+                  <div class="section">
+                     
+                     <p>To export an <span>APEX</span> application to a single file, use the <code class="codeph">apex export</code> command and
+                provide the application ID.
+                     </p>
+                     
+                     <p>In this example, the application ID is <code class="codeph">113</code>.
+                     </p>
+                     <pre class="pre codeblock"><code>SQL&gt; apex export -applicationid 113</code></pre>
+                     </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="exporting-one-or-more-applications.html#GUID-644620C3-4E8C-467D-82FB-093908B68D2D" title="Use SQLcl to export a single APEX application or all applications in a workspace.">Exporting One or More Applications</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-D3C7B236-9CCC-4026-9652-63BAD57C6D77" name="GUID-D3C7B236-9CCC-4026-9652-63BAD57C6D77"></a><h3 id="AEADM-GUID-D3C7B236-9CCC-4026-9652-63BAD57C6D77" class="sect3"><span class="enumeration_section">3.12.11.1.6.2 </span>Exporting All Applications from a
+        Workspace
+               </h3>
+               <div>
+                  <p>Export all <span>APEX</span> applications in a workspace.
+                  </p>
+                  <div class="section">
+                     
+                     <p>To export all applications in a workspace, use the <code class="codeph">apex
+                    export</code> command and provide the workspace  ID.
+                     </p>
+                     
+                     <p>In this example, the workspace ID is
+                <code class="codeph">1908816359534887</code>.
+                     </p>
+                     <pre class="pre codeblock"><code>SQL&gt; apex export -workspaceid 1908816359534887
+
+Exporting Application 106:'Sample Interactive Grids'
+Exporting Application 110:'Books with Tags'
+Exporting Application 113:'List Examples'
+Exporting Application 117:'HR App'</code></pre>
+                     </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="exporting-one-or-more-applications.html#GUID-644620C3-4E8C-467D-82FB-093908B68D2D" title="Use SQLcl to export a single APEX application or all applications in a workspace.">Exporting One or More Applications</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-287F79AA-AC44-4443-88C4-2A646AF134F8" name="GUID-287F79AA-AC44-4443-88C4-2A646AF134F8"></a><h3 id="AEADM-GUID-287F79AA-AC44-4443-88C4-2A646AF134F8" class="sect3"><span class="enumeration_section">3.12.11.1.6.3 </span>Exporting an Application Split into
+        Multiple Files
+               </h3>
+               <div>
+                  <p>Export an <span>APEX</span>
+                     <span>APEX</span> application as a directory which contains all the application components as separate
+        files.
+                  </p>
+                  <div class="section">
+                     
+                     <p>To export an application as a directory with each application component
+                split into a separate file, use the <code class="codeph">apex export</code> command and include
+                the application ID and the <code class="codeph">-split</code> option.
+                     </p>
+                     
+                     <p>In this example, the application ID is <code class="codeph">113</code>.
+                     </p>
+                     <pre class="pre codeblock"><code>SQL&gt; apex export -applicationid 113 -split</code></pre>
+                     <p>The previous example would create the <code class="codeph">f113</code> directory (in
+                the current directory) containing the <code class="codeph">install.sql</code> script and an
+                application directory. This applcation directory contains all the application
+                components organized into logical subdirectories. Each distinct component is
+                exported to a separate file.
+                     </p>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="exporting-one-or-more-applications.html#GUID-644620C3-4E8C-467D-82FB-093908B68D2D" title="Use SQLcl to export a single APEX application or all applications in a workspace.">Exporting One or More Applications</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-BD33D1F1-CAED-4895-9A1D-B178E2024B23" name="GUID-BD33D1F1-CAED-4895-9A1D-B178E2024B23"></a><h3 id="AEADM-GUID-BD33D1F1-CAED-4895-9A1D-B178E2024B23" class="sect3"><span class="enumeration_section">3.12.11.1.6.4 </span>Why the Split Option is Preferable for Source Control
+               </h3>
+               <div>
+                  <p>Learn about the advantages of using  <code class="codeph">apex export</code> with
+        the <code class="codeph">-split</code> option with source control.
+                  </p>
+                  <div class="section">
+                     
+                     <p>Using <code class="codeph">apex export</code> with <code class="codeph">-split</code> option
+                offers a more granular approach for exporting an application. This approach also
+                makes source control change tracking tools more useful by enabling developers to see
+                and review changes made to their application at the component level.
+                     </p>
+                     
+                     <p>For example, suppose you add a new application feature on a new page
+                (for example, page 11), modify the existing page 3, and modify an existing shared
+                LOV named <code class="codeph">tags_lov</code>. Exporting the application using the
+                    <code class="codeph">-split</code> option enables your source control system to list the
+                specific pages and LOV separately in its <span class="q">"what's changed?"</span> report. 
+                     </p>
+                     
+                     <p>Then, suppose you are using the popular source control system Git. You
+                could see what changes are pending using the <code class="codeph">git status</code> command as
+                shown in the the following example:
+                     </p>
+                     <pre class="pre codeblock"><code>[./f113]$ git status
+On branch main
+Changes to be committed:
+        new file:   application/pages/page_00011.sql
+        modified:   application/pages/page_00003.sql
+        modified:   application/shared_components/user_interface/lovs/tags_lov.sql
+        modified:   application/create_application.sql
+        modified:   install.sql</code></pre>
+                     <p>Notice that the list of changed files indicates that page 11 was added,
+                page 3 was modified, and the existing shared components LOV named
+                    <code class="codeph">tags_lov</code> was also modified. Also notice that the
+                    <code class="codeph">install.sql</code> file and <code class="codeph">create_application.sql</code>
+                file also were modified to reflect the addition of a new page to the
+                application.
+                     </p>
+                     
+                     <p>In contrast, if you export the application as a single file, the source control
+                system can only list that one file as being modified, making it less clear what
+                aspects of the application have changed. Similarly, reviewing changes made by
+                colleagues becomes easier when you consider the changes in the context of a smaller
+                amount of surrounding text and a meaningfully named subdirectory that explains the
+                purpose of the file being reviewed.</p>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="exporting-one-or-more-applications.html#GUID-644620C3-4E8C-467D-82FB-093908B68D2D" title="Use SQLcl to export a single APEX application or all applications in a workspace.">Exporting One or More Applications</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-FC04ED78-28AA-494C-933B-E7E63B561524" name="GUID-FC04ED78-28AA-494C-933B-E7E63B561524"></a><h3 id="AEADM-GUID-FC04ED78-28AA-494C-933B-E7E63B561524" class="sect3"><span class="enumeration_section">3.12.11.1.6.5 </span>Exporting Only Selected Application Components
+               </h3>
+               <div>
+                  <p>Export some application components by specifically listing the components
+        by type and ID.</p>
+                  <div class="section">
+                     
+                     <p>You can perform a partial export of application components by
+                specifically listing the component by type and ID. </p>
+                     
+                     <p>The following example demonstrates how to list the components changed in
+                application 113 made on or after January 22, 2022 and then export only those
+                components split into separate files using the <code class="codeph">-expComponents</code>
+                option.
+                     </p>
+                     <pre class="pre codeblock"><code>SQL&gt; apex list -applicationid 113 -changesSince 2022-01-22
+LAST_UPDATED_ON  ID                                      NAME
+2022-01-22 14:59 LOV:23618973754424510000                TAGS_LOV
+2022-01-22 14:59 PAGE:3                                  3. Book
+2022-01-22 15:00 PAGE:11                                 11. Library Search
+
+SQL&gt; apex export -applicationid 113 -expComponents "LOV:23618973754424510000 PAGE:3 PAGE:11"
+Exporting Application 113</code></pre>
+                     <p>The previous example produces a single <code class="codeph">f113.sql</code> file
+                containing only the necessary contents to install the three indicated
+                components.
+                     </p>
+                     
+                     <p>You can also use the <code class="codeph">-split</code> option as shown in the
+                following example:
+                     </p>
+                     <pre class="pre codeblock"><code>SQL&gt; apex export -applicationid 113 -split -expComponents "LOV:23618973754424510000 PAGE:3 PAGE:11"
+Exporting Application 113</code></pre>
+                     <p>This produces the <code class="codeph">f113</code> directory and just the necessary
+                files to install these three components. Notice that in this example the main SQL
+                script is named <code class="codeph">install_component.sql</code> instead of
+                    <code class="codeph">install.sql</code>.
+                     </p>
+                     <pre class="pre codeblock"><code>[./f113]$ find . | grep \.sql
+./application/pages/page_00003.sql
+./application/pages/page_00011.sql
+./application/shared_components/user_interface/lovs/tags_lov.sql
+./application/pages/delete_00003.sql
+./application/pages/delete_00011.sql
+./application/set_environment.sql
+./application/end_environment.sql
+./install_component.sql</code></pre>
+                     </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="exporting-one-or-more-applications.html#GUID-644620C3-4E8C-467D-82FB-093908B68D2D" title="Use SQLcl to export a single APEX application or all applications in a workspace.">Exporting One or More Applications</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-EC03A6A5-9C99-491F-9EFA-A00AAA1E8F9F" name="GUID-EC03A6A5-9C99-491F-9EFA-A00AAA1E8F9F"></a><h3 id="AEADM-GUID-EC03A6A5-9C99-491F-9EFA-A00AAA1E8F9F" class="sect3"><span class="enumeration_section">3.12.11.1.6.6 </span>Additional Options for Controlling APEX
+        Application Export
+               </h3>
+               <div>
+                  <p>Learn about additional <code class="codeph">apex export</code> command
+        options.
+                  </p>
+                  <div class="section">
+                     
+                     <p>Use the following <code class="codeph">apex export</code> command options to adjust what gets
+                exported along with your application.
+                     </p>
+                     
+                     <div class="tblformalwide" id="GUID-EC03A6A5-9C99-491F-9EFA-A00AAA1E8F9F__TABLE_T14_PNS_BTB">
+                        <table cellpadding="4" cellspacing="0" class="FormalWide" title summary="apex export command options. " width="100%" frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="0%" id="d50975e740">
+                                Option
+                            </th>
+                                 <th align="left" valign="bottom" width="0%" id="d50975e745">
+                                Description
+                            </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d50975e752" headers="d50975e740 ">
+                                    
+                                    <p><code class="codeph">-expFiles</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d50975e752 d50975e745 ">
+                                    
+                                    <p>Export all workspace files identified by
+                                        <code class="codeph">-workspaceid</code></p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d50975e766" headers="d50975e740 ">
+                                    
+                                    <p><code class="codeph">-expType</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d50975e766 d50975e745 ">
+                                    
+                                    <p>Comma delimited list of export types:<code class="codeph">
+                                        APPLICATION_SOURCE (default), READABLE_YAML, EMBEDDED_CODE,
+                                        CHECKSUM-SH1 or CHECKSUM-SH256</code></p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d50975e780" headers="d50975e740 ">
+                                    
+                                    <p><code class="codeph">-skipExportDate</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d50975e780 d50975e745 ">
+                                    
+                                    <p>Exclude export date from application export files</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d50975e792" headers="d50975e740 ">
+                                    
+                                    <p><code class="codeph">-expPubReports</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d50975e792 d50975e745 ">
+                                    
+                                    <p>Export all user saved public interactive reports</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d50975e804" headers="d50975e740 ">
+                                    
+                                    <p><code class="codeph">-expSavedReports</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d50975e804 d50975e745 ">
+                                    
+                                    <p>Export all user saved interactive reports</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d50975e816" headers="d50975e740 ">
+                                    
+                                    <p><code class="codeph">-expIRNotif</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d50975e816 d50975e745 ">
+                                    
+                                    <p>Export all interactive report notifications</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d50975e828" headers="d50975e740 ">
+                                    
+                                    <p><code class="codeph">-expTranslations</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d50975e828 d50975e745 ">
+                                    
+                                    <p>Export the translation mappings and all text from
+                                    the translation repository</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d50975e840" headers="d50975e740 ">
+                                    
+                                    <p><code class="codeph">-expOriginalIds</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d50975e840 d50975e745 ">
+                                    
+                                    <p> Export will emit IDs as they were when the
+                                    application was imported</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d50975e852" headers="d50975e740 ">
+                                    
+                                    <p><code class="codeph">-expNoSubscriptions</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d50975e852 d50975e745 ">
+                                    
+                                    <p>Do not export references to subscribed
+                                    components</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d50975e864" headers="d50975e740 ">
+                                    
+                                    <p><code class="codeph">-expComments</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d50975e864 d50975e745 ">
+                                    
+                                    <p>Export developer comments</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d50975e876" headers="d50975e740 ">
+                                    
+                                    <p><code class="codeph">-expSupportingObjects</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d50975e876 d50975e745 ">
+                                    
+                                    <p>Pass <code class="codeph">Y</code> for yes, <code class="codeph">N</code>
+                                    for no, or the letter <code class="codeph">I</code> to export and
+                                    automatically install supporting objects on import
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d50975e898" headers="d50975e740 ">
+                                    
+                                    <p><code class="codeph">-dir</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d50975e898 d50975e745 ">
+                                    
+                                    <p>Save all files in the given directory, e.g. -dir
+                                    some/sub/directory</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d50975e910" headers="d50975e740 ">
+                                    
+                                    <p><code class="codeph">-expComponents</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d50975e910 d50975e745 ">
+                                    
+                                    <p>Export application components. All remaining
+                                    parameters must be of form <code class="codeph">TYPE:ID</code></p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d50975e924" headers="d50975e740 ">
+                                    
+                                    <p><code class="codeph">-debug</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d50975e924 d50975e745 ">
+                                    
+                                    <p>Print debug output</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d50975e936" headers="d50975e740 ">
+                                    
+                                    <p><code class="codeph">-nochecksum</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d50975e936 d50975e745 ">
+                                    
+                                    <p> Overwrite existing files even if the contents have
+                                    not changed</p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d50975e948" headers="d50975e740 ">
+                                    
+                                    <p><code class="codeph">-split</code></p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d50975e948 d50975e745 ">
+                                    
+                                    <p> Split applications into multiple files</p>
+                                    
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="exporting-one-or-more-applications.html#GUID-644620C3-4E8C-467D-82FB-093908B68D2D" title="Use SQLcl to export a single APEX application or all applications in a workspace.">Exporting One or More Applications</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,935 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Feature Configuration">
+      <meta name="abstract" content="Use the Feature Configuration page to configure the Application Development settings, Application Installation Options, SQL Workshop functionality, database and activity monitoring, RESTful service, service requests, and Team Development.">
+      <meta name="description" content="Use the Feature Configuration page to configure the Application Development settings, Application Installation Options, SQL Workshop functionality, database and activity monitoring, RESTful service, service requests, and Team Development.">
+      <meta name="DC.subject" content="Application Development Settings, configuring in Administration Services, PL/SQL program unit editing, feature configuration, disabling PL/SQL program unit editing, create demonstration objects, create demonstration applications, workspace, disabling creation of demonstration objects, configuring the application backups, application backups, configuring, configure SQL Workshop, SQL Workshop, configuring monitoring, Monitoring, Enable Database Monitoring, onitoring, Application Activity Logging, Web Service Activity Logging, Enable Web Service Activity Logging, enabling database monitoring, Database Monitoring, Enable Database Monitoring, enabling application activity logging, applications, enabling activity logging, enabling web service activity logging, web service, enabling tracing, RESTful Services, enabling, enabling service requests, service request, enabling for workspace, Team Development, Enable Issue File Repository (new workspaces), Maximum Issue File Size (new workspaces), Enable Feedback File Repository (new workspaces), Maximum Feedback File Size (new workspaces)">
+      <meta name="keywords" content="Application Development Settings, configuring in Administration Services, PL/SQL program unit editing, feature configuration, disabling PL/SQL program unit editing, create demonstration objects, create demonstration applications, workspace, disabling creation of demonstration objects, configuring the application backups, application backups, configuring, configure SQL Workshop, SQL Workshop, configuring monitoring, Monitoring, Enable Database Monitoring, onitoring, Application Activity Logging, Web Service Activity Logging, Enable Web Service Activity Logging, enabling database monitoring, Database Monitoring, Enable Database Monitoring, enabling application activity logging, applications, enabling activity logging, enabling web service activity logging, web service, enabling tracing, RESTful Services, enabling, enabling service requests, service request, enabling for workspace, Team Development, Enable Issue File Repository (new workspaces), Maximum Issue File Size (new workspaces), Enable Feedback File Repository (new workspaces), Maximum Feedback File Size (new workspaces)">
+      <meta name="DC.Relation" scheme="URI" content="oracle-apex-administration-services.html#GUID-3E40D63B-D9C4-42B9-87D7-88A015762392">
+      <meta name="DC.Relation" scheme="URI" content="configuring-features.html#GUID-372C90B1-AA30-487B-B6E6-014FE6CE8C07">
+      <meta name="DC.Relation" scheme="URI" content="configuring-features.html#GUID-1F994F8E-112D-4D6B-AE4C-D8F7647493A6">
+      <meta name="DC.Relation" scheme="URI" content="configuring-features.html#GUID-BBA95CD1-44D7-4C6E-A6C4-13E663E9E1D0">
+      <meta name="DC.Relation" scheme="URI" content="configuring-features.html#GUID-F9491905-FFDB-4ED1-BAAC-B13F8C48D436">
+      <meta name="DC.Relation" scheme="URI" content="configuring-features.html#GUID-919502D2-148A-4955-BE5A-45A69E653ED1">
+      <meta name="DC.Relation" scheme="URI" content="configuring-features.html#GUID-5FA3F017-49ED-4839-92AD-4812D2B455D8">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-C4B5506C-E8CE-4C3C-985A-BA7109BA149C">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Use the Feature Configuration page to configure the Application Development settings, Application Installation Options, SQL Workshop functionality, database and activity monitoring, RESTful service, service requests, and Team Development.">
+      <meta name="description" content="Use the Feature Configuration page to configure the Application Development settings, Application Installation Options, SQL Workshop functionality, database and activity monitoring, RESTful service, service requests, and Team Development.">
+      <title>Managing Feature Configuration</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Use the Feature Configuration page to configure the Application Development settings, Application Installation Options, SQL Workshop functionality, database and activity monitoring, RESTful service, service requests, and Team Development.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-workspace-and-change-requests.html" title="Previous" type="text/html">
+      <link rel="next" href="configuring-security.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Managing Feature Configuration","description":"Use the Feature Configuration page to configure the Application Development settings, Application Installation Options, SQL Workshop functionality, database and activity monitoring, RESTful service, service requests, and Team Development.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-workspace-and-change-requests.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="configuring-security.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-C4B5506C-E8CE-4C3C-985A-BA7109BA149C" name="GUID-C4B5506C-E8CE-4C3C-985A-BA7109BA149C"></a><a id="AEADM390"></a><a id="4050:16"></a>
+         
+         <h2 id="AEADM-GUID-C4B5506C-E8CE-4C3C-985A-BA7109BA149C" class="sect2"><span class="enumeration_section">3.3 </span>Managing Feature Configuration
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Use the Feature Configuration page to configure the Application Development
+                settings, Application Installation Options, SQL Workshop functionality, database and
+                activity monitoring, RESTful service, service requests, and <span>Team Development</span>.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="configuring-features.html#GUID-372C90B1-AA30-487B-B6E6-014FE6CE8C07">Configuring Application Development Settings</a><br>Configure Application Development settings including: Allow PL/SQL Program                 Unit Editing, Create demonstration objects in new workspaces, and Number of backups                 per application.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-features.html#GUID-1F994F8E-112D-4D6B-AE4C-D8F7647493A6">Configuring SQL Workshop</a><br>Configure basic SQL Workshop behavior for an instance.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-features.html#GUID-BBA95CD1-44D7-4C6E-A6C4-13E663E9E1D0">Configuring Monitoring</a><br>Configure monitoring including: Database Monitoring (SQL Workshop),                 Application Activity Logging, Web Service Activity Logging, and Web Service Activity                 Logging.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-features.html#GUID-F9491905-FFDB-4ED1-BAAC-B13F8C48D436">Enabling RESTful Services for an Instance</a><br>Controls the ability to create and access RESTful Services mapped to SQL and         PL/SQL.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-features.html#GUID-919502D2-148A-4955-BE5A-45A69E653ED1">Enabling Service Requests</a><br>Determine if workspace administrators to make service requests from Workspace Administration.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-features.html#GUID-5FA3F017-49ED-4839-92AD-4812D2B455D8">Configuring Team Development for New Workspaces</a><br>Configure the following  <span>Team Development</span> settings for new workspaces: Enable Issue File Repository, Maximum Issue File Size,         Enable Feedback File Repository, and Maximum Feedback File Size.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-C4B5506C-E8CE-4C3C-985A-BA7109BA149C__GUID-09CF3DA0-E34C-4F83-80DE-C5B6F45298D2">
+                  <p class="notep1">See Also:</p>
+                  <p><a href="managing-component-availability-for-an-instance.html#GUID-9C06C608-C8A6-495C-9A9B-90442C94EC00" title="Control which components are available within an Oracle APEX instance, including App Builder, SQL Workshop, PL/SQL Editing in SQL Workshop, Team Development, or installation of productivity and sample applications.">Managing Component Availability for an Instance</a></p>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="oracle-apex-administration-services.html#GUID-3E40D63B-D9C4-42B9-87D7-88A015762392" title="Instance administrators manage an entire APEX hosted instance using the Oracle APEX Administration Services (Administration Services) application.">Oracle APEX Administration Services</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-372C90B1-AA30-487B-B6E6-014FE6CE8C07" name="GUID-372C90B1-AA30-487B-B6E6-014FE6CE8C07"></a><h3 id="AEADM-GUID-372C90B1-AA30-487B-B6E6-014FE6CE8C07" class="sect3"><span class="enumeration_section">3.3.1 </span>Configuring Application Development
+        Settings
+               </h3>
+               <p>Configure Application Development settings including: Allow PL/SQL Program
+                Unit Editing, Create demonstration objects in new workspaces, and Number of backups
+                per application.</p>
+               <div>
+                  <ul class="ullinks">
+                     <li class="ulchildlink"><a href="configuring-features.html#GUID-8D02CD2A-F307-4B56-A5E2-29B04179320E">Disabling PL/SQL Program Unit Editing for an Instance</a><br>Control if PL/SQL program unit editing is available in an         instance.
+                     </li>
+                     <li class="ulchildlink"><a href="configuring-features.html#GUID-5B620097-F712-438B-A8AF-A36ECBEB155A">Enabling the Creation of Demonstration Objects in New Workspaces</a><br>Enable the creation of demonstration applications and demonstration database         objects when creating new workspaces.
+                     </li>
+                     <li class="ulchildlink"><a href="configuring-features.html#GUID-A61AAF17-D142-4F5E-8845-9811A8B88589">Configuring the Number of Application Backups</a><br>Configure the number of application backups. 
+                     </li>
+                  </ul>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-features.html#GUID-C4B5506C-E8CE-4C3C-985A-BA7109BA149C" title="Use the Feature Configuration page to configure the Application Development settings, Application Installation Options, SQL Workshop functionality, database and activity monitoring, RESTful service, service requests, and Team Development.">Managing Feature Configuration</a></p>
+                     </div>
+                  </div>
+               </div>
+               <a id="AEADM463"></a><div class="props_rev_3"><a id="GUID-8D02CD2A-F307-4B56-A5E2-29B04179320E" name="GUID-8D02CD2A-F307-4B56-A5E2-29B04179320E"></a><h4 id="AEADM-GUID-8D02CD2A-F307-4B56-A5E2-29B04179320E" class="sect4"><span class="enumeration_section">3.3.1.1 </span>Disabling PL/SQL Program Unit Editing for an Instance
+                  </h4>
+                  <div>
+                     <p>Control if PL/SQL program unit editing is available in an
+        instance.</p>
+                     <div class="section">
+                        <p>By default, developers can change and compile PL/SQL source code when browsing database procedures, packages, and functions in Object Browser. Instance administrators can control if PL/SQL program unit editing is available on an <span>Oracle APEX</span> instance.
+                        </p>
+                     </div>
+                     <p>To disable PL/SQL program unit editing:</p>
+                     <ol>
+                        <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                        <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                        <li><span>Under Instance Settings, click <span class="uicontrol bold">Feature Configuration</span>.</span></li>
+                        <li><span>Locate the <span class="uicontrol bold">Application Development</span>
+                                        section.</span></li>
+                        <li><span>For <span class="uicontrol bold">Allow PL/SQL Program Unit Editing</span>,
+                                        select <span class="bold">No</span>.</span></li>
+                        <li><span>Click <span class="bold">Apply Changes</span>.</span></li>
+                     </ol>
+                     <div class="section"></div>
+                  </div>
+                  <div>
+                     <div class="infoboxnotealso" id="GUID-8D02CD2A-F307-4B56-A5E2-29B04179320E__GUID-057A4423-B6E1-4247-97CF-2C002D68D031">
+                        <p class="notep1">See Also:</p>
+                        <p><a href="configuring-workspace-preferences.html#GUID-AD3BDF61-1F03-4481-B1BD-043D9F0B3E94" title="Workspace administrators can control whether developers can edit and compile PL/SQL program units from Object Browser.">Disabling PL/SQL Program Unit Editing for a Workspace</a></p>
+                     </div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="configuring-features.html#GUID-372C90B1-AA30-487B-B6E6-014FE6CE8C07" title="Configure Application Development settings including: Allow PL/SQL Program Unit Editing, Create demonstration objects in new workspaces, and Number of backups per application.">Configuring Application Development Settings</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div><a id="AEADM464"></a><div class="props_rev_3"><a id="GUID-5B620097-F712-438B-A8AF-A36ECBEB155A" name="GUID-5B620097-F712-438B-A8AF-A36ECBEB155A"></a><h4 id="AEADM-GUID-5B620097-F712-438B-A8AF-A36ECBEB155A" class="sect4"><span class="enumeration_section">3.3.1.2 </span>Enabling the Creation of Demonstration Objects in New Workspaces
+                  </h4>
+                  <div>
+                     <p>Enable the creation of demonstration applications and demonstration database
+        objects when creating new workspaces.</p>
+                     <div class="section">When creating a new workspace, an Instance administrators can create demonstration objects by enabling the <span class="uicontrol bold">Create demonstration objects in new workspaces</span> attribute. Setting this attribute to <span class="uicontrol bold">Yes</span> creates demonstration applications and demonstration database objects in new workspaces.
+                     </div>
+                     <p>To enable the creation of demonstration database objects in a new
+                workspace:</p>
+                     <ol>
+                        <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                        <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                        <li><span>Under Instance Settings, click <span class="uicontrol bold">Feature Configuration</span>.</span></li>
+                        <li><span>Locate the <span class="uicontrol bold">Application Development</span> section.</span></li>
+                        <li><span>For <span class="uicontrol bold">Create demonstration objects in new workspaces</span>, select <span class="uicontrol bold">Yes</span> to include demonstration applications and demonstration database objects when creating new workspace. To disable the creation of demonstration applications, select&nbsp;<span class="uicontrol bold">No</span>.&nbsp;</span></li>
+                        <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="configuring-features.html#GUID-372C90B1-AA30-487B-B6E6-014FE6CE8C07" title="Configure Application Development settings including: Allow PL/SQL Program Unit Editing, Create demonstration objects in new workspaces, and Number of backups per application.">Configuring Application Development Settings</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="props_rev_3"><a id="GUID-A61AAF17-D142-4F5E-8845-9811A8B88589" name="GUID-A61AAF17-D142-4F5E-8845-9811A8B88589"></a><h4 id="AEADM-GUID-A61AAF17-D142-4F5E-8845-9811A8B88589" class="sect4"><span class="enumeration_section">3.3.1.3 </span>Configuring the Number of Application Backups 
+                  </h4>
+                  <div>
+                     <p>Configure the number of application backups. </p>
+                     <div class="section">Backups provide a simple means for developers to recover applications
+            that may have been unexpectedly modified or deleted. Older backups are deleted during
+            daily maintenance to make room for new ones. A value of null or zero (0) disables the
+            automated backup feature. No more than 30 backups are kept per application. </div>
+                     <p>To configure the number of application backups:</p>
+                     <ol>
+                        <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                        <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                        <li><span>Under Instance Settings, click <span class="uicontrol bold">Feature Configuration</span>.</span></li>
+                        <li><span>Locate the <span class="uicontrol bold">Application Development</span> section.</span></li>
+                        <li><span>For <span class="uicontrol bold">Number of backups per application</span>, enter the maximum
+                    number of backups to keep per application. Enter a value of null or zero (0) to
+                    disable automated backup.</span></li>
+                        <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                     </ol>
+                     <div class="section">
+                        
+                        
+                     </div>
+                  </div>
+                  <div>
+                     <div class="infoboxnotealso" id="GUID-A61AAF17-D142-4F5E-8845-9811A8B88589__GUID-80CF1D44-5195-43E4-832F-E59BF9B554AA">
+                        <p class="notep1">See Also:</p>
+                        
+                        <ul style="list-style-type: disc;" id="GUID-A61AAF17-D142-4F5E-8845-9811A8B88589__UL_XNN_VZW_PKB">
+                           <li>
+                              
+                              <p><a href="monitoring-activity-across-an-instance.html#GUID-444D823B-81DA-4D5E-8342-DE76F1DEC70A" title="Monitor the performance of a backup job by reviewing the Backup Log.">Viewing the Backup Log</a></p>
+                              
+                           </li>
+                           <li>
+                              
+                              <p><a href="../htmdb/managing-application-backups.html#HTMDB-GUID-764CE12A-6EE1-457C-88A7-FDC0ED9FA827" target="_blank">Managing Application Backups </a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></p>
+                              
+                           </li>
+                        </ul>
+                        
+                     </div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="configuring-features.html#GUID-372C90B1-AA30-487B-B6E6-014FE6CE8C07" title="Configure Application Development settings including: Allow PL/SQL Program Unit Editing, Create demonstration objects in new workspaces, and Number of backups per application.">Configuring Application Development Settings</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div><a id="AEADM468"></a><a id="AEADM467"></a><div class="props_rev_3"><a id="GUID-1F994F8E-112D-4D6B-AE4C-D8F7647493A6" name="GUID-1F994F8E-112D-4D6B-AE4C-D8F7647493A6"></a><h3 id="AEADM-GUID-1F994F8E-112D-4D6B-AE4C-D8F7647493A6" class="sect3"><span class="enumeration_section">3.3.2 </span>Configuring SQL Workshop
+               </h3>
+               <div>
+                  <p>Configure basic SQL Workshop behavior for an instance.</p>
+                  <div class="section">Instance administrators can configure SQL Workshop behavior for an
+            instance.</div>
+                  <p>To configure SQL Workshop:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Instance Settings, click <span class="uicontrol bold">Feature Configuration</span>.</span></li>
+                     <li class="stepexpand"><span>Locate the <span class="uicontrol bold">SQL Workshop</span> section.</span></li>
+                     <li class="stepexpand"><span>Under SQL Workshop, configure the following attributes described in the
+                    following table:</span><div>
+                           
+                           <div class="tblformal" id="GUID-1F994F8E-112D-4D6B-AE4C-D8F7647493A6__BABFDBIH">
+                              <table cellpadding="4" cellspacing="0" class="Formal" title summary="Feature Configuration page, SQL Workshop&#xA;                            attributes." width="90%" frame="hsides" border="1" rules="rows">
+                                 <thead>
+                                    <tr align="left" valign="top">
+                                       <th align="left" valign="bottom" width="33%" id="d22449e705">
+                                        Attribute
+                                    </th>
+                                       <th align="left" valign="bottom" width="67%" id="d22449e710">
+                                        Description
+                                    </th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="33%" id="d22449e717" headers="d22449e705 ">
+                                          <p>SQL Commands
+                                            Maximum Inactivity in minutes</p><a id="d22449e720" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="67%" headers="d22449e717 d22449e710 ">
+                                          
+                                          <p>Identify the maximum amount of time a
+                                            transactional command in the SQL Command Processor waits
+                                            before timing out.</p>
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="33%" id="d22449e730" headers="d22449e705 ">
+                                          <p>SQL Scripts
+                                            Maximum Script Output Size in bytes</p><a id="d22449e733" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="67%" headers="d22449e730 d22449e710 ">
+                                          
+                                          <p>Identify the maximum amount of output a
+                                            single SQL script can generate. Run SQL scripts in SQL
+                                            Workshop.</p>
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="33%" id="d22449e743" headers="d22449e705 ">
+                                          <p>SQL Scripts
+                                            Maximum Workspace Output Size in bytes</p><a id="d22449e746" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="67%" headers="d22449e743 d22449e710 ">
+                                          
+                                          <p>Identify the maximum amount of space all
+                                            scripts within a workspace may consume. SQL Script
+                                            results are the output generated when running SQL
+                                            Scripts from the SQL command processor.</p>
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="33%" id="d22449e756" headers="d22449e705 ">
+                                          <p>SQL Scripts
+                                            Maximum Script Size in bytes</p><a id="d22449e759" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="67%" headers="d22449e756 d22449e710 ">
+                                          
+                                          <p>Identify the maximum size of a SQL script
+                                            used within the SQL Workshop.</p>
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="33%" id="d22449e769" headers="d22449e705 ">
+                                          <p>Enable
+                                            Transactional SQL Commands</p><a id="d22449e772" class="indexterm-anchor"></a><a id="d22449e776" class="indexterm-anchor"></a><a id="d22449e780" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="67%" headers="d22449e769 d22449e710 ">
+                                          
+                                          <p>Enable Transactional <span>SQL Commands</span> for the entire instance. Enabling this feature
+                                            permits users of SQL Commands to issue multiple <span>SQL Commands</span> within the same physical database transaction. Select
+                                                <span class="uicontrol bold">Yes</span> or
+                                                <span class="uicontrol bold">No</span>.
+                                          </p>
+                                          
+                                          <p>Setting <span class="uicontrol bold">Enable Transactional SQL
+                                                Commands</span> to <span class="uicontrol bold">Yes</span>
+                                            adds an <span class="uicontrol bold">Autocommit</span> check box in
+                                                <span>SQL Commands</span>. 
+                                          </p>
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="33%" id="d22449e815" headers="d22449e705 ">
+                                          <p>Maximum File
+                                            size for Data Loading in bytess</p><a id="d22449e818" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="67%" headers="d22449e815 d22449e710 ">
+                                          
+                                          <p>Provide the overall maximum file size for SQL
+                                            Workshop Data Loading. Note that smaller limits exist
+                                            for XML and XSLX files as well as for JSON files on
+                                            Oracle Database 11.2 and 12.1. This setting configures
+                                            the overall file size limitation for all file types.</p>
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="33%" id="d22449e828" headers="d22449e705 ">
+                                          <p>Data Loading Job
+                                            Class</p><a id="d22449e831" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="67%" headers="d22449e828 d22449e710 ">
+                                          
+                                          <p>Identify the DBMS_SCHEDULER Job Class for SQL
+                                            Workshop Data Loading jobs. This setting enables you to
+                                            assign Data Loading jobs to a specific Resource Manager
+                                            Consumer group. If not set, the job class
+                                                <code class="codeph">SYS.DEFAULT_JOB_CLASS</code> is used.
+                                          </p>
+                                          
+                                          <p>To see an example, see field-level Help. For
+                                            more information on job classes, see the <span><cite>Oracle Database
+                                        Administrator’s Guide</cite></span>.
+                                          </p>
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="33%" id="d22449e849" headers="d22449e705 ">
+                                          <p>Enable SQL Developer
+                                            Web</p><a id="d22449e852" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="67%" headers="d22449e849 d22449e710 ">
+                                          
+                                          <p><span>SQL Developer Web</span> (also known as Database Actions) provides a web-based
+                                            interface that enables you to execute queries and
+                                            scripts, create database objects, load data, build data
+                                            models, and monitor database performance.
+                                          </p>
+                                          
+                                          <p>When enabled, the <span class="uicontrol bold">SQL Developer
+                                                Web</span> menu entry displays on the SQL
+                                            Workshop menu in the menu bar.
+                                          </p>
+                                          
+                                          <p>This feature requires Oracle REST Data
+                                            Services (ORDS) 23.1.0 or later with HTTPS.</p>
+                                          
+                                          <p><span class="uicontrol bold">See Also</span>:
+                                          </p>
+                                          
+                                          <ul style="list-style-type: disc;" id="GUID-1F994F8E-112D-4D6B-AE4C-D8F7647493A6__UL_XKV_YD2_RWB">
+                                             <li><a href="../aeutl/accessing-sql-developer-web-from-sql-workshop-menu.html#GUID-9DA2CDE0-7679-4106-B901-6E127D996005" target="_blank">Accessing SQL Developer Web Directly from
+                                                  APEX</a> in <span><cite>Oracle APEX SQL Workshop
+                                        Guide</cite></span></li>
+                                             <li><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeadm&id=SDWAD-GUID-AF7601F9-7713-4ECC-8EC9-FB0296002C69" target="_blank">About Database
+                                                  Actions</a> in <span><cite>Using Oracle Database
+                                        Actions</cite></span></li>
+                                          </ul>
+                                          
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section">
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-1F994F8E-112D-4D6B-AE4C-D8F7647493A6__GUID-327FE838-C1DD-47DA-BAA9-18F9800269F8">
+                     <p class="notep1">See Also:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-1F994F8E-112D-4D6B-AE4C-D8F7647493A6__UL_BMK_QZS_HKB">
+                        <li><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeadm&id=ADMIN-GUID-3CE3AF47-1043-4F21-BA0A-3F30AC359A0C" target="_blank">Job Classes</a> in <span><cite>Oracle Database
+                                        Administrator’s Guide</cite></span></li>
+                        <li><a href="../aeutl/getting-started.html#AEUTL-GUID-75135310-3884-4F6F-A434-B02DDDA09B70" target="_blank">Getting Started with SQL Workshop</a> in <span><cite>Oracle APEX SQL Workshop
+                                        Guide</cite></span></li>
+                     </ul>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-features.html#GUID-C4B5506C-E8CE-4C3C-985A-BA7109BA149C" title="Use the Feature Configuration page to configure the Application Development settings, Application Installation Options, SQL Workshop functionality, database and activity monitoring, RESTful service, service requests, and Team Development.">Managing Feature Configuration</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-BBA95CD1-44D7-4C6E-A6C4-13E663E9E1D0" name="GUID-BBA95CD1-44D7-4C6E-A6C4-13E663E9E1D0"></a><h3 id="AEADM-GUID-BBA95CD1-44D7-4C6E-A6C4-13E663E9E1D0" class="sect3"><span class="enumeration_section">3.3.3 </span>Configuring Monitoring
+               </h3>
+               <p>Configure monitoring including: Database Monitoring (SQL Workshop),
+                Application Activity Logging, Web Service Activity Logging, and Web Service Activity
+                Logging.</p>
+               <div>
+                  <ul class="ullinks">
+                     <li class="ulchildlink"><a href="configuring-features.html#GUID-5D68CFE4-1557-4B3B-AFE7-B600C7E045CD">Enabling Database Monitoring</a><br>Enabling database monitoring in SQL Workshop.
+                     </li>
+                     <li class="ulchildlink"><a href="configuring-features.html#GUID-7DD54DF5-A482-4642-8E82-0535B6B4C9E7">Enabling Application Activity Logging</a><br>Configure application activity logging for all applications on the instance.
+                     </li>
+                     <li class="ulchildlink"><a href="configuring-features.html#GUID-BB4F8AA6-A683-418D-A9AF-9349F46892E6">Enabling Web Service Activity Logging</a><br>Configure web service activity logging for all workspaces on the instance. 
+                     </li>
+                     <li class="ulchildlink"><a href="configuring-features.html#GUID-FEA234A3-A9CC-4F65-B9DC-E4D12900DE47">Enabling Application Tracing</a><br>Control application tracing at the instance-level.
+                     </li>
+                  </ul>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-features.html#GUID-C4B5506C-E8CE-4C3C-985A-BA7109BA149C" title="Use the Feature Configuration page to configure the Application Development settings, Application Installation Options, SQL Workshop functionality, database and activity monitoring, RESTful service, service requests, and Team Development.">Managing Feature Configuration</a></p>
+                     </div>
+                  </div>
+               </div>
+               <a id="AEADM469"></a><div class="props_rev_3"><a id="GUID-5D68CFE4-1557-4B3B-AFE7-B600C7E045CD" name="GUID-5D68CFE4-1557-4B3B-AFE7-B600C7E045CD"></a><h4 id="AEADM-GUID-5D68CFE4-1557-4B3B-AFE7-B600C7E045CD" class="sect4"><span class="enumeration_section">3.3.3.1 </span>Enabling Database Monitoring
+                  </h4>
+                  <div>
+                     <p>Enabling database monitoring in SQL Workshop.</p>
+                     <div class="p">
+                        <p>Before you can access the Database Monitoring page in SQL Workshop, an Instance administrator must enable database monitoring. See <a href="../aeutl/monitoring-db.html#AEUTL-GUID-4894E6E8-F2BA-4675-AEE5-E200EB1E154F" target="_blank">Monitoring the Database</a> in <span><cite>Oracle APEX SQL Workshop
+                                        Guide</cite></span></p>
+                        <div class="infoboxnote" id="GUID-5D68CFE4-1557-4B3B-AFE7-B600C7E045CD__GUID-CB395FB9-E875-45BD-95B8-8D9F06D83B22">
+                           <p class="notep1">Note:</p>
+                           <p>Only users having a database user account that has been granted a DBA role can access the Database Monitor page. </p>
+                        </div>
+                     </div>
+                     <div class="section">Setting <span class="uicontrol bold">Enable Database Monitoring</span> to
+                <span class="uicontrol bold">Yes</span> enables monitoring within SQL Workshop. 
+                     </div>
+                     <p>To enable database monitoring:</p>
+                     <ol>
+                        <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                        <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                        <li><span>Under Instance Settings, click <span class="uicontrol bold">Feature Configuration</span>.</span></li>
+                        <li><span>Locate the <span class="uicontrol bold">Monitoring</span> section.</span></li>
+                        <li><span>For <span class="uicontrol bold">Enable Database Monitoring</span>, select
+                        <span class="uicontrol bold">Yes</span>.</span></li>
+                        <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="configuring-features.html#GUID-BBA95CD1-44D7-4C6E-A6C4-13E663E9E1D0" title="Configure monitoring including: Database Monitoring (SQL Workshop), Application Activity Logging, Web Service Activity Logging, and Web Service Activity Logging.">Configuring Monitoring</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div><a id="AEADM470"></a><div class="props_rev_3"><a id="GUID-7DD54DF5-A482-4642-8E82-0535B6B4C9E7" name="GUID-7DD54DF5-A482-4642-8E82-0535B6B4C9E7"></a><h4 id="AEADM-GUID-7DD54DF5-A482-4642-8E82-0535B6B4C9E7" class="sect4"><span class="enumeration_section">3.3.3.2 </span>Enabling Application Activity Logging
+                  </h4>
+                  <div>
+                     <p>Configure application activity logging for all applications on the instance.</p>
+                     <p>To configure application activity logging:</p>
+                     <ol>
+                        <li class="stepexpand"><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                        <li class="stepexpand"><span>Under Instance Settings, click <span class="uicontrol bold">Feature Configuration</span>.</span></li>
+                        <li class="stepexpand"><span>Locate the <span class="uicontrol bold">Monitoring</span> section.</span></li>
+                        <li class="stepexpand"><span>For <span class="uicontrol bold">Application Activity Logging</span>, select one of the
+                    following:</span><div>
+                              
+                              <ul style="list-style-type: disc;">
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Use Application Settings
+                                    (default)</span> - Use the Logging attribute of each
+                                application to determine if activity is logged.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Never</span> - Disable activity logging
+                                for all applications in the instance.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Always</span> - Enable activity logging
+                                for all applications in the instance.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                     </ol>
+                     <div class="section">
+                        
+                        <div class="infobox-tip" id="GUID-7DD54DF5-A482-4642-8E82-0535B6B4C9E7__GUID-A30ED13F-06B4-45C2-9CE4-865130C4DC6C">
+                           <p class="notep1">Tip:</p>You can configure
+                logging at the application-level by editing the Logging attribute under Properties
+                in the Application Definition. See <a href="../htmdb/editing-application-attributes.html#HTMDB-GUID-8B6DF456-41CC-40E3-877E-A0038677AADE" target="_blank">Editing the Application Definition</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span>.
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="infoboxnotealso" id="GUID-7DD54DF5-A482-4642-8E82-0535B6B4C9E7__GUID-BB69F180-8E3B-4B68-A2DB-8BFFC9C326CB">
+                        <p class="notep1">See Also:</p>
+                        <p><a href="monitoring-activity-across-an-instance.html#GUID-57123911-C427-4C9E-96A7-A91D54A2B9C6" title="Use the links on the Monitor Activity page to access various reports on application, developer, and session activity in all workspaces.">Monitoring Activity Across an Instance</a></p>
+                     </div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="configuring-features.html#GUID-BBA95CD1-44D7-4C6E-A6C4-13E663E9E1D0" title="Configure monitoring including: Database Monitoring (SQL Workshop), Application Activity Logging, Web Service Activity Logging, and Web Service Activity Logging.">Configuring Monitoring</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="props_rev_3"><a id="GUID-BB4F8AA6-A683-418D-A9AF-9349F46892E6" name="GUID-BB4F8AA6-A683-418D-A9AF-9349F46892E6"></a><h4 id="AEADM-GUID-BB4F8AA6-A683-418D-A9AF-9349F46892E6" class="sect4"><span class="enumeration_section">3.3.3.3 </span>Enabling Web Service Activity Logging
+                  </h4>
+                  <div>
+                     <p>Configure web service activity logging for all workspaces on the instance. </p>
+                     <div class="p">
+                        
+                        <div class="infoboxnote" id="GUID-BB4F8AA6-A683-418D-A9AF-9349F46892E6__GUID-2B1D1426-BF61-440D-B240-02A5FBEC3377">
+                           <p class="notep1">Note:</p>To ensure the security and performance of your
+                                development environment, this functionality is not available in
+                                Oracle APEX instances running in Oracle Cloud.
+                        </div>
+                        
+                     </div>
+                     <p>To configuring web service activity logging:</p>
+                     <ol>
+                        <li class="stepexpand"><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                        <li class="stepexpand"><span>Under Instance Settings, click <span class="uicontrol bold">Feature Configuration</span>.</span></li>
+                        <li class="stepexpand"><span>Locate the <span class="uicontrol bold">Monitoring</span> section.</span></li>
+                        <li class="stepexpand"><span>For <span class="uicontrol bold">Web Service Activity Logging</span>, select one of the
+                    following:</span><div>
+                              
+                              <ul style="list-style-type: disc;">
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Use Application Settings
+                                    (default)</span> - Use the Web Service Logging attribute of
+                                each workspace to determine if activity is logged.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Never</span> - Disable web service
+                                activity logging for all workspaces in the instance.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Always</span> - Enable web service
+                                activity logging for all workspaces in the instance.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                     </ol>
+                     <div class="section"></div>
+                  </div>
+                  <div>
+                     <div class="infoboxnotealso" id="GUID-BB4F8AA6-A683-418D-A9AF-9349F46892E6__GUID-BB69F180-8E3B-4B68-A2DB-8BFFC9C326CB">
+                        <p class="notep1">See Also:</p>
+                        <p><a href="monitoring-activity-across-an-instance.html#GUID-57123911-C427-4C9E-96A7-A91D54A2B9C6" title="Use the links on the Monitor Activity page to access various reports on application, developer, and session activity in all workspaces.">Monitoring Activity Across an Instance</a></p>
+                     </div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="configuring-features.html#GUID-BBA95CD1-44D7-4C6E-A6C4-13E663E9E1D0" title="Configure monitoring including: Database Monitoring (SQL Workshop), Application Activity Logging, Web Service Activity Logging, and Web Service Activity Logging.">Configuring Monitoring</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div><a id="AEADM503"></a><div class="props_rev_3"><a id="GUID-FEA234A3-A9CC-4F65-B9DC-E4D12900DE47" name="GUID-FEA234A3-A9CC-4F65-B9DC-E4D12900DE47"></a><h4 id="AEADM-GUID-FEA234A3-A9CC-4F65-B9DC-E4D12900DE47" class="sect4"><span class="enumeration_section">3.3.3.4 </span>Enabling Application Tracing
+                  </h4>
+                  <div>
+                     <p>Control application tracing at the instance-level.</p>
+                     <div class="p">
+                        
+                        <div class="infoboxnote" id="GUID-FEA234A3-A9CC-4F65-B9DC-E4D12900DE47__GUID-78317A27-FDA1-418C-9E7E-BE4EE41742AE">
+                           <p class="notep1">Note:</p>To ensure the security and performance of your
+                                development environment, this functionality is not available in
+                                Oracle APEX instances running in Oracle Cloud.
+                        </div>
+                        
+                     </div>
+                     <div class="section">Instance administrators can control whether developers or users can generate
+            database trace files simply by specifying <code class="codeph">&amp;p_trace=YES</code> on the URL
+            when displaying a page. The ability to generate a trace file is already controlled if
+                <span class="uicontrol bold">Debug</span> is enabled for the application. 
+                     </div>
+                     <p>To configure application tracing</p>
+                     <ol>
+                        <li class="stepexpand"><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                        <li class="stepexpand"><span>Under Instance Settings, click <span class="uicontrol bold">Feature Configuration</span>.</span></li>
+                        <li class="stepexpand"><span>Scroll down to Monitoring.</span></li>
+                        <li class="stepexpand"><span>From <span class="uicontrol bold">Enable Application Tracing</span>, select one of the
+                    following:</span><div>
+                              
+                              <ul style="list-style-type: disc;">
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">Yes</span> - Any application which has
+                                Debug enabled can also generate a server-side database trace file
+                                for a page using <code class="codeph">&amp;p_trace=YES</code> on the URL.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p><span class="uicontrol bold">No</span> - Tracing cannot be enabled
+                                for any application on the instance. If someone attempts to run an
+                                application with <code class="codeph">&amp;p_trace=YES</code> in the URL, the
+                                page renders but the request to generate the SQL trace file is
+                                silently ignored.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                     </ol>
+                     <div class="section"></div>
+                  </div>
+                  <div>
+                     <div class="infoboxnotealso" id="GUID-FEA234A3-A9CC-4F65-B9DC-E4D12900DE47__GUID-4A70064F-AAB8-4C66-B5BD-97B620DC571A">
+                        <p class="notep1">See Also:</p>
+                        
+                        <ul style="list-style-type: disc;" id="GUID-FEA234A3-A9CC-4F65-B9DC-E4D12900DE47__UL_UBX_Y44_3KB">
+                           <li><a href="monitoring-activity-across-an-instance.html#GUID-57123911-C427-4C9E-96A7-A91D54A2B9C6" title="Use the links on the Monitor Activity page to access various reports on application, developer, and session activity in all workspaces.">Monitoring Activity Across an Instance</a></li>
+                           <li><a href="../htmdb/enabling-sql-tracing-and-using-tkprof.html#HTMDB-GUID-273E71BB-712B-4D5A-B5F3-E5F87CC1F465" target="_blank">Enabling SQL Tracing and Using TKPROF</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></li>
+                           <li><a href="../aeapi/APEX_INSTANCE_ADMIN.Available-Parameter-Values.html#AEAPI-GUID-75DCF658-5A76-4E81-B12D-04E254A3D80A" target="_blank">Available Parameter Values</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span> to learn about the <code class="codeph">TRACING_ENABLED</code> parameter
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="configuring-features.html#GUID-BBA95CD1-44D7-4C6E-A6C4-13E663E9E1D0" title="Configure monitoring including: Database Monitoring (SQL Workshop), Application Activity Logging, Web Service Activity Logging, and Web Service Activity Logging.">Configuring Monitoring</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+            <div class="props_rev_3"><a id="GUID-F9491905-FFDB-4ED1-BAAC-B13F8C48D436" name="GUID-F9491905-FFDB-4ED1-BAAC-B13F8C48D436"></a><h3 id="AEADM-GUID-F9491905-FFDB-4ED1-BAAC-B13F8C48D436" class="sect3"><span class="enumeration_section">3.3.4 </span>Enabling RESTful Services for an
+        Instance
+               </h3>
+               <div>
+                  <p>Controls the ability to create and access RESTful Services mapped to SQL and
+        PL/SQL.</p>
+                  <p>To enable RESTful Services:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Sign in to Oracle APEX</span>.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Instance Settings, click <span class="uicontrol bold">Feature Configuration</span>.</span></li>
+                     <li class="stepexpand"><span>Locate the <span class="uicontrol bold">REST</span> section.</span></li>
+                     <li class="stepexpand"><span>Under <span class="uicontrol bold">REST</span>, edit the following attributes:</span><div>
+                           
+                           <div class="tblformal" id="GUID-F9491905-FFDB-4ED1-BAAC-B13F8C48D436__BABFDBIH">
+                              <table cellpadding="4" cellspacing="0" class="Formal" title summary="Feature Configuration, REST attributes." width="90%" frame="hsides" border="1" rules="rows">
+                                 <thead>
+                                    <tr align="left" valign="top">
+                                       <th align="left" valign="bottom" width="33%" id="d22449e1750">
+                                        Attribute
+                                    </th>
+                                       <th align="left" valign="bottom" width="67%" id="d22449e1755">
+                                        Description
+                                    </th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="33%" id="d22449e1762" headers="d22449e1750 ">
+                                          <p>Enable RESTful
+                                            Services</p><a id="d22449e1765" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="67%" headers="d22449e1762 d22449e1755 ">
+                                          
+                                          <p>Controls the ability to create and access
+                                            RESTful Services mapped to SQL and PL/SQL.</p>
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                       <td align="left" valign="top" width="33%" id="d22449e1775" headers="d22449e1750 ">
+                                          <p>Swagger UI
+                                            URL</p><a id="d22449e1778" class="indexterm-anchor"></a></td>
+                                       <td align="left" valign="top" width="67%" headers="d22449e1775 d22449e1755 ">
+                                          
+                                          <p>Defines a URL pointing to the SWAGGER UI
+                                            2.0+ server used by the ORDS REST Workshop when
+                                            generating documentation for a module. If a URL is
+                                            specified, the URI to the web service's swagger
+                                            documentation is passed to the Swagger UI server. If a
+                                            there is no URL specified, raw JSON is produced. </p>
+                                          
+                                          <p><span class="bold">Note</span>: In order to generate the
+                                            documentation the Swagger UI server must be able to
+                                            reach the referenced web service URI. When using a third
+                                            party Swagger UI service, review its privacy policy to
+                                            understand how information it collects may be used and
+                                            shared.
+                                          </p>
+                                          
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-F9491905-FFDB-4ED1-BAAC-B13F8C48D436__GUID-D8373B67-8B76-40BC-B3DB-25E827E113BE">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="configuring-workspace-preferences.html#GUID-140DE54B-E74A-47E0-AFFE-436F6FC329C0" title="Workspace administrators can control whether RESTful Services are enabled in the current workspace.">Enabling RESTful Services and Defining a Path Prefix for a Workspace</a></li>
+                        <li><a href="../aeutl/using-restful-services.html#AEUTL-GUID-9EF9F122-554D-40C3-B14D-70C3ACF1A48D" target="_blank">Enabling Data Exchange with RESTful Services</a> in <span><cite>Oracle APEX SQL Workshop
+                                        Guide</cite></span></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-features.html#GUID-C4B5506C-E8CE-4C3C-985A-BA7109BA149C" title="Use the Feature Configuration page to configure the Application Development settings, Application Installation Options, SQL Workshop functionality, database and activity monitoring, RESTful service, service requests, and Team Development.">Managing Feature Configuration</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29248"></a><div class="props_rev_3"><a id="GUID-919502D2-148A-4955-BE5A-45A69E653ED1" name="GUID-919502D2-148A-4955-BE5A-45A69E653ED1"></a><h3 id="AEADM-GUID-919502D2-148A-4955-BE5A-45A69E653ED1" class="sect3"><span class="enumeration_section">3.3.5 </span>Enabling Service Requests
+               </h3>
+               <div>
+                  <p>Determine if workspace administrators to make service requests from Workspace Administration.</p>
+                  <div class="section">Service Requests include the ability to request a new schema, request storage, or
+            request termination of their workspace.</div>
+                  <p>To enable service requests:</p>
+                  <ol>
+                     <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Feature
+                    Configuration</span>.</span></li>
+                     <li><span>Locate the <span class="uicontrol bold">Workspace Administration</span> section.</span></li>
+                     <li><span>For <span class="uicontrol bold">Enable Service Requests</span>, select
+                        <span class="uicontrol bold">Yes</span>.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-919502D2-148A-4955-BE5A-45A69E653ED1__GUID-156D8563-8DDC-4C9B-B79A-CD00ED989836">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="managing-workspace-and-change-requests.html#GUID-622172B3-CDAA-48C2-9F0C-A9A23B9E938A" title="Approve and decline workspace service requests and change requests on the Manage Request page.">Managing Requests</a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-features.html#GUID-C4B5506C-E8CE-4C3C-985A-BA7109BA149C" title="Use the Feature Configuration page to configure the Application Development settings, Application Installation Options, SQL Workshop functionality, database and activity monitoring, RESTful service, service requests, and Team Development.">Managing Feature Configuration</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-5FA3F017-49ED-4839-92AD-4812D2B455D8" name="GUID-5FA3F017-49ED-4839-92AD-4812D2B455D8"></a><h3 id="AEADM-GUID-5FA3F017-49ED-4839-92AD-4812D2B455D8" class="sect3"><span class="enumeration_section">3.3.6 </span>Configuring <span>Team Development</span> for New Workspaces
+               </h3>
+               <div>
+                  <p>Configure the following  <span>Team Development</span> settings for new workspaces: Enable Issue File Repository, Maximum Issue File Size,
+        Enable Feedback File Repository, and Maximum Feedback File Size.
+                  </p>
+                  <div class="section">These attributes only impact <span>Team Development</span> when creating new workspaces. These settings do not affect existing
+            workspaces.
+                  </div>
+                  <p>To configure <span>Team Development</span> settings for new workspaces:
+                  </p>
+                  <ol id="GUID-5FA3F017-49ED-4839-92AD-4812D2B455D8__STEPS_YSL_H51_BJB">
+                     <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Feature
+                    Configuration</span>.</span></li>
+                     <li><span>Locate the <span class="uicontrol bold">Team Development</span> section.</span></li>
+                     <li><span>Configure the following:</span><ol type="a" id="GUID-5FA3F017-49ED-4839-92AD-4812D2B455D8__SUBSTEPS_R1R_451_BJB">
+                           <li class="substepexpand"><span><span class="uicontrol bold">Enable Issue File Repository</span> - Specify whether
+                            to enable file upload on the Issues page to the  <span>Team Development</span> central file repository:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-5FA3F017-49ED-4839-92AD-4812D2B455D8__UL_RWQ_Q51_BJB">
+                                    <li>
+                                       
+                                       <p><span class="bold">Yes</span> - Select <span class="bold">Yes</span> to enable file
+                                        upload for Issues in <span>Team Development</span>.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="bold">No</span> - Select <span class="bold">No</span> to disable file
+                                        upload for Issues in <span>Team Development</span>.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Maximum File Size (in MB)</span> - Select the maximum
+                            file size for any file uploaded for Issues in the <span>Team Development</span> file repository. The default value is 15 MB.</span></li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Enable Feedback File Repository</span> - Specify
+                            whether to enable file upload for User Feedback within <span>Team Development</span>:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-5FA3F017-49ED-4839-92AD-4812D2B455D8__UL_R1C_WQS_HKB">
+                                    <li>
+                                       
+                                       <p><span class="bold">Yes</span> - Select <span class="bold">Yes</span> to allow files to
+                                        be uploaded into the Feedback repository in a new
+                                        workspace.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p><span class="bold">No</span> - Select <span class="bold">No</span> to disable file
+                                        upload into the Feedback repository in a new workspace.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Maximum Feedback File Size (in MB)</span> - Select the
+                            maximum file size for any file upload for User Feedback into the
+                            Feedback file repository. The default value is 15 MB.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section">
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-5FA3F017-49ED-4839-92AD-4812D2B455D8__GUID-A1DA6AF0-41F0-4526-A299-10B9CF14BF3A">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-5FA3F017-49ED-4839-92AD-4812D2B455D8__UL_R1V_GWS_HKB">
+                        <li><a href="configuring-workspace-preferences.html#GUID-D509DAC0-5144-45DB-92F5-3D5B1331FB4F" title="Configure Team Development for a workspace.">Configuring Team Development in an Existing Workspace</a></li>
+                        <li><a href="../htmdb/managing-team-development.html#HTMDB-GUID-81C0ED6A-7052-418D-A0AC-D8E12FF8EFFC" target="_blank">Managing Team Development</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-features.html#GUID-C4B5506C-E8CE-4C3C-985A-BA7109BA149C" title="Use the Feature Configuration page to configure the Application Development settings, Application Installation Options, SQL Workshop functionality, database and activity monitoring, RESTful service, service requests, and Team Development.">Managing Feature Configuration</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

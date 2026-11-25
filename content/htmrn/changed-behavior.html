@@ -1,0 +1,750 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Changed Behavior">
+      <meta name="DC.subject" content="installation, enabling network services, network services, enabling, granting connect privileges, Oracle Database 12c, invalid ACL error">
+      <meta name="keywords" content="installation, enabling network services, network services, enabling, granting connect privileges, Oracle Database 12c, invalid ACL error">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-44EDD667-53DC-4ADE-8812-1362E69BB27C">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-F9538021-0F7D-45A5-B7D2-4606E756969A">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-DF8821D9-FB27-4561-A48A-C715260CD27A">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-C3EE8CFE-9028-4C6C-9E15-70B1147A9011">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-D593C4D3-DDF1-4DF5-AAEB-1AD0C8C87A88">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-FCFA4901-829D-4A5F-98DD-D75066320A00">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-5C47F12C-706D-45CF-8AB9-F16915926B64">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-12BA0DB3-8022-43EC-BDD9-639D18FDE7DE">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-EEAEAFCF-2B19-42F0-8FEC-BA4862D558C1">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-157ED079-68DE-4280-94F7-4C77DD5BE52E">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-BA787A65-AAC4-4151-8205-656572437D55">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-C94D99CC-5938-49CD-8C15-0BD0306652BC">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-0E4E6EFB-F7C1-4352-8D7E-3544D2CF14E1">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-20DD4762-63C1-4B86-B81B-98A741DF5980">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-7A0D2929-91B2-464E-8887-57455F5D4167">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-AF8A33E6-0234-4374-8071-933B557A6A96">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-47B73CAA-5CB7-446E-A07C-AC2D2FE1B3A4">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-712BE54F-08CD-43A3-A645-87B9360ED516">
+      <meta name="DC.Relation" scheme="URI" content="changed-behavior.html#GUID-8D125731-989A-4A51-AFFE-00181729F87F">
+      <meta name="DC.Contributor" content="John Godfrey">
+      <meta name="DC.Contributor" content="Terri Jennings">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Changed Behavior</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Release Notes">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Release Notes">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-release-notes.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-09T16:55:16-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12907-07">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="new-features.html" title="Previous" type="text/html">
+      <link rel="next" href="ideas-app.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Release Notes">
+    <meta name="dcterms.isVersionOf" content="HTMRN">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Changed Behavior","datePublished":"2025-07-09 CST","dateModified":"2025-07-09 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="new-features.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="ideas-app.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-0F34A43F-A2B7-4D06-AA39-839396676C26" name="GUID-0F34A43F-A2B7-4D06-AA39-839396676C26"></a>
+         
+         <h2 id="HTMRN-GUID-0F34A43F-A2B7-4D06-AA39-839396676C26" class="sect2"><span class="enumeration_chapter">3 </span>Changed Behavior
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Some existing behaviour changes in this release.</p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-44EDD667-53DC-4ADE-8812-1362E69BB27C">Theme Style Selection</a><br></li>
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-F9538021-0F7D-45A5-B7D2-4606E756969A">Unified Task List and Workflow Console Compatibility Mode</a><br></li>
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-DF8821D9-FB27-4561-A48A-C715260CD27A">Improved Search Input Field on Search Pages</a><br></li>
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-C3EE8CFE-9028-4C6C-9E15-70B1147A9011">Improved Map Labels</a><br></li>
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-D593C4D3-DDF1-4DF5-AAEB-1AD0C8C87A88">Change to Interactive Grid Report Display During Refresh</a><br></li>
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-FCFA4901-829D-4A5F-98DD-D75066320A00">Page Import Changes</a><br></li>
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-5C47F12C-706D-45CF-8AB9-F16915926B64">Changes to Modal Dialog Page URLs</a><br></li>
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-12BA0DB3-8022-43EC-BDD9-639D18FDE7DE">Refresh Dynamic Action Changes</a><br></li>
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-EEAEAFCF-2B19-42F0-8FEC-BA4862D558C1">Shared Component Navigation Changes</a><br></li>
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-157ED079-68DE-4280-94F7-4C77DD5BE52E">Changes to Public Dictionary Views</a><br></li>
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-BA787A65-AAC4-4151-8205-656572437D55">Control Break Customization (tableModelView)</a><br></li>
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-C94D99CC-5938-49CD-8C15-0BD0306652BC">Changes to Faceted Search Arbitrary Filters</a><br></li>
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-0E4E6EFB-F7C1-4352-8D7E-3544D2CF14E1">Show AI Assistant Dynamic Action</a><br></li>
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-20DD4762-63C1-4B86-B81B-98A741DF5980">Edit List Simplified</a><br></li>
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-7A0D2929-91B2-464E-8887-57455F5D4167">Text Message Substitution Strings</a><br></li>
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-AF8A33E6-0234-4374-8071-933B557A6A96">Column Toggle Report, List View, and Reflow Report now Legacy</a><br></li>
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-47B73CAA-5CB7-446E-A07C-AC2D2FE1B3A4">App Builder UI Changes</a><br></li>
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-712BE54F-08CD-43A3-A645-87B9360ED516">Compatibility Mode</a><br></li>
+                  <li class="ulchildlink"><a href="changed-behavior.html#GUID-8D125731-989A-4A51-AFFE-00181729F87F">Enabling Network Services in Oracle Database</a><br>Database administrators must enable network services in <span>Oracle                                         Database</span> to send outbound mail, invoke web services, or use template-based PDF report printing with external print servers in <span>Oracle APEX</span>.
+                  </li>
+               </ul>
+            </div>
+            
+            <div class="sect2"><a id="GUID-44EDD667-53DC-4ADE-8812-1362E69BB27C" name="GUID-44EDD667-53DC-4ADE-8812-1362E69BB27C"></a><h3 id="HTMRN-GUID-44EDD667-53DC-4ADE-8812-1362E69BB27C" class="sect3"><span class="enumeration_section">3.1 </span>Theme Style Selection
+               </h3>
+               <div>
+                  <div class="section">
+                     <p>In APEX Builder under <span class="uicontrol bold">Shared Components</span>, <span class="uicontrol bold">User Interface Attributes</span>, the option <strong class="term">Enable End Users to Choose Theme Style</strong> lets users select from the available theme styles by using <span class="uicontrol bold">Customize</span> in the runtime app footer.
+                     </p>
+                     <p>Starting with APEX 24.2, if your app subscribes to Universal Theme 24.2, you can no longer use the <span class="uicontrol bold">Public</span> flag to control the visibility of Oracle-provided theme styles like Vita and Redwood Light. This is because Oracle-provided theme styles now belong to a centralized Universal Theme repository, not the current application. This change does not affect custom theme styles.
+                     </p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-F9538021-0F7D-45A5-B7D2-4606E756969A" name="GUID-F9538021-0F7D-45A5-B7D2-4606E756969A"></a><h3 id="HTMRN-GUID-F9538021-0F7D-45A5-B7D2-4606E756969A" class="sect3"><span class="enumeration_section">3.2 </span>Unified Task List and Workflow Console Compatibility Mode
+               </h3>
+               <div>
+                  <div class="section">
+                     <p>The <strong class="term">Unified Task List</strong> and <strong class="term">Workflow Console</strong> pages now use enhanced substitution strings. In order for APEX to create these pages, compatibility mode must be set to 24.2 or higher.
+                     </p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-DF8821D9-FB27-4561-A48A-C715260CD27A" name="GUID-DF8821D9-FB27-4561-A48A-C715260CD27A"></a><h3 id="HTMRN-GUID-DF8821D9-FB27-4561-A48A-C715260CD27A" class="sect3"><span class="enumeration_section">3.3 </span>Improved Search Input Field on Search Pages
+               </h3>
+               <div>
+                  <div class="section">
+                     <p>The default behavior for new search pages created by the Create Page Wizard is improved.</p>
+                     <div class="p">The <strong class="term">search field</strong> now has:
+                        <ul style="list-style-type: disc;" id="GUID-DF8821D9-FB27-4561-A48A-C715260CD27A__UL_S2C_QBG_BDC">
+                           <li>a larger input field (<code class="codeph">xlarge</code> instead of <code class="codeph">large</code>)
+                           </li>
+                           <li>item <code class="codeph">css class</code> set to <code class="codeph">mxw80 t-Form-fieldContainer--noPadding</code></li>
+                           <li>text placeholder set to <code class="codeph">Search...</code></li>
+                        </ul>
+                     </div>
+                     <div class="p">The <strong class="term">search region</strong> now has:
+                        <ul style="list-style-type: disc;" id="GUID-DF8821D9-FB27-4561-A48A-C715260CD27A__UL_NDS_CCG_BDC">
+                           <li>a default <strong class="term">no query entered</strong> message (<code class="codeph">Please enter your search term.</code>)
+                           </li>
+                           <li>a default <strong class="term">no results found</strong> message (<code class="codeph">No results for your search term.</code>)
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-C3EE8CFE-9028-4C6C-9E15-70B1147A9011" name="GUID-C3EE8CFE-9028-4C6C-9E15-70B1147A9011"></a><h3 id="HTMRN-GUID-C3EE8CFE-9028-4C6C-9E15-70B1147A9011" class="sect3"><span class="enumeration_section">3.4 </span>Improved Map Labels
+               </h3>
+               <div>
+                  <div class="section">Right-to-left (RTL) language labels now display correctly on Map Regions.</div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-D593C4D3-DDF1-4DF5-AAEB-1AD0C8C87A88" name="GUID-D593C4D3-DDF1-4DF5-AAEB-1AD0C8C87A88"></a><h3 id="HTMRN-GUID-D593C4D3-DDF1-4DF5-AAEB-1AD0C8C87A88" class="sect3"><span class="enumeration_section">3.5 </span>Change to Interactive Grid Report Display During Refresh
+               </h3>
+               <div>
+                  <div class="section">
+                     <p>Previously, Interactive Grid would clear the report during any kind of refresh, including when the sort or filter changed. Now, Interactive Grid displays the previous report until the new results arrive. The progress indicator behaves the same, but data loading now appears smoother.</p>
+                     <div class="p">To restore the previous behavior, add the below code to the region <span class="uicontrol bold">Initialization JavaScript Function</span> attribute:<pre class="pre codeblock"><code>function( config ) {
+    config.defaultModelOptions = {
+        delayClearData: false
+    };
+    return config;
+} </code></pre></div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-FCFA4901-829D-4A5F-98DD-D75066320A00" name="GUID-FCFA4901-829D-4A5F-98DD-D75066320A00"></a><h3 id="HTMRN-GUID-FCFA4901-829D-4A5F-98DD-D75066320A00" class="sect3"><span class="enumeration_section">3.6 </span>Page Import Changes
+               </h3>
+               <div>
+                  <div class="section">
+                     <p>You can now import a page into a different application or workspace without needing to use the command line. This allows more efficient page-level imports through the App Builder interface, streamlining the import process.</p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-5C47F12C-706D-45CF-8AB9-F16915926B64" name="GUID-5C47F12C-706D-45CF-8AB9-F16915926B64"></a><h3 id="HTMRN-GUID-5C47F12C-706D-45CF-8AB9-F16915926B64" class="sect3"><span class="enumeration_section">3.7 </span>Changes to Modal Dialog Page URLs
+               </h3>
+               <div>
+                  <div class="section">
+                     <div class="p"><span>APEX</span> no longer generates <code class="codeph">javascript:</code> URLs for modal dialog pages. This improves the support for Content-Security-Policy settings. This change could impact your applications when you:
+                        <ul style="list-style-type: disc;" id="GUID-5C47F12C-706D-45CF-8AB9-F16915926B64__UL_HZ5_3M2_PDC">
+                           <li>manipulate the URL in the browser using JavaScript</li>
+                           <li>rely on the URL being a JavaScript function in your code</li>
+                        </ul>An example of custom code that no longer works is a button with an <code class="codeph">onclick</code> attribute to open a modal dialog page. You should search for <code class="codeph">onclick=</code> in your code:<pre class="pre codeblock"><code>&lt;button onclick="<span class="italic">dialog_url</span>"&gt;Click here&lt;/button&gt;</code></pre>A workaround is to use the <code class="codeph">data-action</code> attribute of the button:<pre class="pre codeblock"><code>&lt;button data-action="<span class="italic">dialog_url</span>"&gt;Click here&lt;/button&gt;</code></pre></div>
+                     <div class="p">There is a new way to open modal dialog pages using JavaScript in the browser. You can use <code class="codeph">apex.navigation.dialog</code>. The URL can be the return value of <code class="codeph">APEX_PAGE.GET_URL</code>, even for dialog pages. For example:<pre class="pre codeblock"><code>apex.navigation.dialog(
+     apex.items.P1_DIALOG_URL.value,
+     {
+        height:'480',
+        width:'800',
+     } );</code></pre></div>
+                     <p>The <code class="codeph">p_triggering_element</code> parameter of the <code class="codeph">apex_util.prepare_url</code> and <code class="codeph">apex_page.get_url</code> APIs can no longer be a JavaScript expression. The value now must be a string selector.
+                     </p>
+                     <div class="p">For example, use <code class="codeph">#STATIC_ID</code> instead of <code class="codeph">$('#STATIC_ID')</code>.<pre class="language-sql"><code>select apex_page.get_url( 
+           p_application        =&gt; 100, 
+           p_page               =&gt; 2, -- a modal dialog page
+           p_triggering_element =&gt; '#STATIC_ID' ) as url
+  from dual; </code></pre></div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-12BA0DB3-8022-43EC-BDD9-639D18FDE7DE" name="GUID-12BA0DB3-8022-43EC-BDD9-639D18FDE7DE"></a><h3 id="HTMRN-GUID-12BA0DB3-8022-43EC-BDD9-639D18FDE7DE" class="sect3"><span class="enumeration_section">3.8 </span>Refresh Dynamic Action Changes
+               </h3>
+               <div>
+                  <div class="section">
+                     <p>The <span class="uicontrol bold">Refresh</span> dynamic action now features a <span class="uicontrol bold">Maintain Pagination</span> switch. If the switch is <code class="codeph">On</code>, pagination and scroll position for reports is maintained on refresh.
+                     </p>
+                     <p>This switch is currently only supported for Interactive Reports.</p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-EEAEAFCF-2B19-42F0-8FEC-BA4862D558C1" name="GUID-EEAEAFCF-2B19-42F0-8FEC-BA4862D558C1"></a><h3 id="HTMRN-GUID-EEAEAFCF-2B19-42F0-8FEC-BA4862D558C1" class="sect3"><span class="enumeration_section">3.9 </span>Shared Component Navigation Changes
+               </h3>
+               <div>
+                  <div class="section">
+                     <div class="p">Some Shared Components are now located under different headings:
+                        <ul style="list-style-type: disc;" id="GUID-EEAEAFCF-2B19-42F0-8FEC-BA4862D558C1__UL_GWQ_KKY_HRB">
+                           <li><span class="uicontrol bold">Map Backgrounds</span> moves from <strong class="term">Other Components</strong> to <strong class="term">User Interface</strong></li>
+                           <li><span class="uicontrol bold">Data Load Definitions</span> moves from <strong class="term">Data Sources</strong> to <strong class="term">Other Components</strong></li>
+                           <li><span class="uicontrol bold">REST Enabled SQL Databases</span> moves from <strong class="term">Data Sources</strong> to <span class="italic">Workspace Objects</span></li>
+                           <li><span class="uicontrol bold">REST Synchronizations</span> moves from <strong class="term">Data Sources</strong> to <span class="italic">Tasks</span></li>
+                        </ul>
+                     </div>
+                     <div class="p">Generative AI features move to the <strong class="term">Generative AI</strong> section:
+                        <ul style="list-style-type: disc;" id="GUID-EEAEAFCF-2B19-42F0-8FEC-BA4862D558C1__UL_CVT_DBD_YCC">
+                           <li><span class="uicontrol bold">AI Attributes</span></li>
+                           <li><span class="uicontrol bold">AI Configurations</span></li>
+                           <li><span class="uicontrol bold">AI Services</span></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-157ED079-68DE-4280-94F7-4C77DD5BE52E" name="GUID-157ED079-68DE-4280-94F7-4C77DD5BE52E"></a><h3 id="HTMRN-GUID-157ED079-68DE-4280-94F7-4C77DD5BE52E" class="sect3"><span class="enumeration_section">3.10 </span>Changes to Public Dictionary Views
+               </h3>
+               <div>
+                  <div class="section">
+                     <div class="p">In the following public dictionary views, the columns attribute_01...25 now return null:
+                        <ul style="list-style-type: disc;" id="GUID-157ED079-68DE-4280-94F7-4C77DD5BE52E__UL_OCS_QB2_FDC">
+                           <li><code class="codeph">apex_application_page_items</code></li>
+                           <li><code class="codeph">apex_appl_page_ig_columns</code></li>
+                           <li><code class="codeph">apex_appl_page_filters</code></li>
+                           <li><code class="codeph">apex_appl_plugin_settings</code></li>
+                        </ul>
+                     </div>
+                     <p>Use the JSON attributes column instead.</p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-BA787A65-AAC4-4151-8205-656572437D55" name="GUID-BA787A65-AAC4-4151-8205-656572437D55"></a><h3 id="HTMRN-GUID-BA787A65-AAC4-4151-8205-656572437D55" class="sect3"><span class="enumeration_section">3.11 </span>Control Break Customization (<code class="codeph">tableModelView</code>)
+               </h3>
+               <div>
+                  <div class="section">
+                     <div class="p">Any custom code that used the <code class="codeph">tableModelView</code> widget <code class="codeph">controlBreakTemplate</code> option to implement control breaks now requires changes:
+                        <ul style="list-style-type: disc;" id="GUID-BA787A65-AAC4-4151-8205-656572437D55__UL_IXW_2GG_BDC">
+                           <li>add the new <code class="codeph">controlBreakSelector</code> option
+                           </li>
+                           <li>add the <code class="codeph">model</code> FieldMeta property <code class="codeph">controlBreakIndex</code> to all break columns
+                           </li>
+                           <li>use the new #APEX$GROUP_IDENTIFICATION# placeholder</li>
+                        </ul>See the JavaScript API documentation for full details.
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-C94D99CC-5938-49CD-8C15-0BD0306652BC" name="GUID-C94D99CC-5938-49CD-8C15-0BD0306652BC"></a><h3 id="HTMRN-GUID-C94D99CC-5938-49CD-8C15-0BD0306652BC" class="sect3"><span class="enumeration_section">3.12 </span>Changes to Faceted Search Arbitrary Filters
+               </h3>
+               <div>
+                  <div class="section">
+                     <p>The <span class="uicontrol bold">Display Toggling</span> property is no longer part of faceted search. Instead, use the new <span class="uicontrol bold">Display</span> property, and select whether facets are displayed <span class="uicontrol bold">Inline</span>, or in an <span class="uicontrol bold">Add Filter Dialog</span>. If you select <span class="uicontrol bold">Add Filter Dialog</span>, the facets display in a modal dialog page.
+                     </p>
+                     <p>You can right-click <span class="uicontrol bold">Facets</span> in Page Designer to <strong class="term">Synchronize Facets</strong> and quickly add new facets to existing regions.
+                     </p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-0E4E6EFB-F7C1-4352-8D7E-3544D2CF14E1" name="GUID-0E4E6EFB-F7C1-4352-8D7E-3544D2CF14E1"></a><h3 id="HTMRN-GUID-0E4E6EFB-F7C1-4352-8D7E-3544D2CF14E1" class="sect3"><span class="enumeration_section">3.13 </span>Show AI Assistant Dynamic Action
+               </h3>
+               <div>
+                  <div class="section">
+                     <p>The "Show AI Assistant" dynamic action's JavaScript Code attribute, used for custom processing of the assistant's responses, now binds the value of the response differently. Previously, the response was available simply as <span class="q">"<code class="codeph">this</code>"</span>. Now, the response should be accessed as <span class="q">"<code class="codeph">this.data.response</code>"</span>.
+                     </p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-20DD4762-63C1-4B86-B81B-98A741DF5980" name="GUID-20DD4762-63C1-4B86-B81B-98A741DF5980"></a><h3 id="HTMRN-GUID-20DD4762-63C1-4B86-B81B-98A741DF5980" class="sect3"><span class="enumeration_section">3.14 </span>Edit List Simplified
+               </h3>
+               <div>
+                  <div class="section">
+                     <p>In <span class="uicontrol bold">Shared Components</span>, <span class="uicontrol bold">Lists</span>, <span class="uicontrol bold">Edit List</span>, the List Entries now display as an Interactive Report. To edit a list entry, you must select the <span class="uicontrol bold">List Entry Name</span> to go to the Edit List Entry page.
+                     </p>
+                     <p>To use an Interactive Grid to edit list entries, select <span class="uicontrol bold">Grid Edit</span> from the Tasks list when editing a list.
+                     </p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-7A0D2929-91B2-464E-8887-57455F5D4167" name="GUID-7A0D2929-91B2-464E-8887-57455F5D4167"></a><h3 id="HTMRN-GUID-7A0D2929-91B2-464E-8887-57455F5D4167" class="sect3"><span class="enumeration_section">3.15 </span>Text Message Substitution Strings
+               </h3>
+               <div>
+                  <div class="section">
+                     <p>To reference text messages, you can now wrap the message name in curly brackets. For example, to reference text message <code class="codeph">TEXT.MSG</code>, you can use <code class="codeph">&amp;{TEXT.MSG}</code>. Text message substitution also supports parameters. Before the closing bracket, add <code class="codeph">name=value</code> pairs, separated by white space.
+                     </p>
+                     <p>This syntax is only available if the application's Compatibility Mode is set to 24.2 or higher. For more information, see <a href="../htmdb/about-using-substitution-strings.html#HTMDB-GUID-88BD90DE-202E-480C-891E-543C2D9740D6" target="_blank">Substitutions in Text Messages (24.2 or later)</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span>.
+                     </p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-AF8A33E6-0234-4374-8071-933B557A6A96" name="GUID-AF8A33E6-0234-4374-8071-933B557A6A96"></a><h3 id="HTMRN-GUID-AF8A33E6-0234-4374-8071-933B557A6A96" class="sect3"><span class="enumeration_section">3.16 </span>Column Toggle Report, List View, and Reflow Report now Legacy
+               </h3>
+               <div>
+                  <div class="section">
+                     <p>The Column Toggle Report, List View, and Reflow Report are now marked Legacy.</p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-47B73CAA-5CB7-446E-A07C-AC2D2FE1B3A4" name="GUID-47B73CAA-5CB7-446E-A07C-AC2D2FE1B3A4"></a><h3 id="HTMRN-GUID-47B73CAA-5CB7-446E-A07C-AC2D2FE1B3A4" class="sect3"><span class="enumeration_section">3.17 </span>App Builder UI Changes
+               </h3>
+               <div>
+                  <div class="section">
+                     <p>Changes to the application builder user interface for this release include:</p>
+                     <ul style="list-style-type: disc;" id="GUID-47B73CAA-5CB7-446E-A07C-AC2D2FE1B3A4__UL_GWQ_KKY_HRB">
+                        <li>The dynamic action <strong class="term">Open AI Assistant</strong> is renamed to <strong class="term">Show AI Assistant</strong>.
+                        </li>
+                        <li>Modal dialog pages can now be declaratively set as <span class="uicontrol bold">Resizable</span>.
+                        </li>
+                        <li>Application ID, Page ID, and Page Name are now displayed in Page Designer.</li>
+                        <li>The Page Number field now supports up to eight characters.</li>
+                        <li>For Popup LOVs, the <span class="uicontrol bold">Search as You Type</span> attribute is now named <span class="uicontrol bold">Fetch on Search</span>. The <span class="uicontrol bold">Minimum Characters</span> field is now moved to the <strong class="term">Search</strong> subarea.
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-712BE54F-08CD-43A3-A645-87B9360ED516" name="GUID-712BE54F-08CD-43A3-A645-87B9360ED516"></a><h3 id="HTMRN-GUID-712BE54F-08CD-43A3-A645-87B9360ED516" class="sect3"><span class="enumeration_section">3.18 </span>Compatibility Mode
+               </h3>
+               <div>
+                  <div class="section">
+                     <p>The application attribute <strong class="term">Compatibility Mode</strong> controls the compatibility mode of the <span>APEX</span> runtime engine. Certain runtime behaviors change from release to release. You can use the Compatibility Mode attribute to obtain specific application behavior. This section lists Compatibility Mode changes by release. Note that all mode changes are inclusive in that all changes in older releases are included in newer releases.
+                     </p>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-712BE54F-08CD-43A3-A645-87B9360ED516__GUID-19E88D14-52A0-4BE4-88E8-4CC4E618CFAD">Compatibility Mode Changes in Mode 4.1</p>
+                     <p>In Oracle Application Express release 4.1, Automatic DML forms raised an error when rendering the page if the column name of the source of an item was invalid. Prior to Oracle Application Express release 4.1, an invalid column name of the source of an item would not raise an error when rendering the page but it would also not set session state of the item.</p>
+                     <p>Also, in Oracle Application Express release 4.1, there are two new application Security Attributes to control Browser Security:&nbsp;<strong class="term">Cache</strong>&nbsp;and&nbsp;<strong class="term">Embed in Frames</strong>. Enabling the Cache attribute enables the browser to save the contents of your application's pages in its cache, both in memory and on disk. The Embed in Frames attribute controls if the browser displays your application's pages within a frame. Applications running in a Pre-4.1 Compatibility Mode function as if the Cache is enabled and as if Embed in Frames is set to allowed. Applications running in Compatibility Mode&nbsp;<span class="bold">4.1</span>&nbsp;or later respect the specific Browser Security attributes.
+                     </p>
+                     <p>Also, in Oracle Application Express release 4.1, because of bug&nbsp;12990445, the following changes were implemented for Automatic Row Processing (DML) process types. The code which performs the&nbsp;INSERT&nbsp;was changed to determine if the columns should be included in the&nbsp;INSERT&nbsp;statement. Note that these are the same checks which occur before an&nbsp;UPDATE. These new checks include:</p>
+                     <ul style="list-style-type: disc;">
+                        <li>Is the source type a DB Column?</li>
+                        <li>Is the page item contained in the&nbsp;POST&nbsp;request? For example, if the page item is conditional it will not be contained in the&nbsp;POST&nbsp;request if the condition evaluates to&nbsp;FALSE&nbsp;during page rendering.</li>
+                        <li>Is the page item not of type Display Only where Save State is set to No?</li>
+                     </ul>
+                     <p>To enable these behaviors, set the Compatibility Mode to&nbsp;<span class="uicontrol bold">4.1</span>&nbsp;or later. For behavior that matches earlier releases, set the Compatibility Mode to&nbsp;<span class="uicontrol bold">Pre-4.1</span>.
+                     </p>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-712BE54F-08CD-43A3-A645-87B9360ED516__GUID-765B1485-6D5F-43F1-8F6A-AD533C39D66C">Compatibility Mode Changes in Mode 4.2</p>
+                     <p>In Oracle Application Express release 4.2 due to changes for the new grid layout, when a page is rendered, all regions in a certain display point are evaluated before rendering that display point, to find out if they should be displayed or not (so that the grid layout knows how many columns to render). The regions where the evaluation returned true will be executed and displayed. However, this will not work if a PL/SQL based region sets session state which is then used in a subsequent region condition to determine if the region should be displayed. In that scenario, the condition has already been checked before the display point is rendered. Use computations or PL/SQL processes to set session state before any region is displayed. In previous versions, the condition was evaluated right before each region was displayed.</p>
+                     <p>In Oracle Application Express release 4.2, computations and processes with a processing point Before Region(s) do now fire before any region gets rendered. Computations and processes with a processing point After Region(s) fire after all regions have been rendered. In previous versions, the computations and processes fired just before and after the region display point Page Template Body (1-3).</p>
+                     <p>Oracle Application Express Patch Set 4.2.2 added two new Compatibility Mode changes for Compatibility Mode&nbsp;<span class="bold">4.2</span>:
+                     </p>
+                     <ul style="list-style-type: disc;">
+                        <li>Text areas were changed to always use the Maximum Width attribute to restrict text input.</li>
+                        <li>Enhanced security for report column links, where the link contains both JavaScript and references to other report column substitutions, for example:<pre class="pre codeblock"><code>javascript:alert( 'Delete #<span class="italic">NAME</span>#' );</code></pre><p>In the previous example,&nbsp;<code class="codeph"><span class="codeinlineitalic">NAME</span></code>&nbsp;is a column name in the report.
+                           </p>
+                        </li>
+                     </ul>
+                     <p>Prior to Oracle Application Express release 4.2.1, to protect against possible cross-site scripting vulnerabilities, you would have had to explicitly escape any column values in the report source, so that they could safely be used in JavaScript links. When running in Compatibility Mode&nbsp;<span class="bold">4.2</span>, Oracle Application Express automatically JavaScript escapes column name substitutions referenced in JavaScript links if the column is defined to escape special characters.
+                     </p>
+                     <p>To fix this, <span>Oracle</span> recommends that you remove the manual JavaScript escaping from your report source and use of the native escaping.
+                     </p>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-712BE54F-08CD-43A3-A645-87B9360ED516__GUID-3FFB7886-3D3F-42F2-B5BC-1BC6A1E33A52">Compatibility Mode Changes in Mode 5.0</p>
+                     <p>In Oracle Application Express release 5.0, referencing a Static Application File with&nbsp;<code class="codeph">#WORKSPACE_IMAGES#</code>&nbsp;no longer returns the application file. Instead, use&nbsp;<code class="codeph">#APP_IMAGES#</code>.
+                     </p>The API calls to&nbsp;<code class="codeph">wwv_flow_custom_auth_std.logout</code>,&nbsp;<code class="codeph">wwv_flow_custom_auth_std.logout_then_go_to_page</code>,&nbsp;<code class="codeph">wwv_flow_custom_auth_std.logout_then_go_to_url</code>, and&nbsp;<code class="codeph">apex_custom_auth.logout</code>&nbsp;are desupported and will raise a runtime error instead of logging out from the Oracle Application Express session. Instead, use the&nbsp;<code class="codeph">apex_authentication.logout</code>&nbsp;entry point.
+                     <p>Prior to release 5.0, developers using data upload did not have the option to choose a date format. Instead, a parser checked for the best format to match the user's entry or an end user could enter their own format. Oracle Application Express release 5.0 includes a new item that enables the user to choose an application date format or user entered format. Because applications created before release 5.0 do not have an item, a Compatibility Mode of&nbsp;<span class="bold">5.0</span>&nbsp;checks if the user has entered some data. If no data has been entered, it picks the application date format.
+                     </p>
+                     <p>When a session timeout occurs and no timeout URL is specified, Oracle Application Express raises an error instead of redirecting to the application's home page. If the session setup for an Ajax requests fails, Oracle Application Express also raises an error. For Ajax requests that expect JSON, the response is a JSON string with members that describe the error. For other requests, the error appears on an error page.</p>
+                     <p>Page items based on a database column where the attribute Source Used is set to&nbsp;<span class="uicontrol bold">Only when current value in session state is null</span>&nbsp;will raise an error when the page item gets rendered. Using this setting for a database column is very dangerous and can result in accidentally overwriting data when viewing and saving multiple records. Always set the Source Used attribute to&nbsp;<span class="uicontrol bold">Always, replacing any existing value in session state</span>.
+                     </p>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-712BE54F-08CD-43A3-A645-87B9360ED516__GUID-B45AD2EB-DA88-4275-8B14-B5A3583BE444">Compatibility Mode Changes in Mode 5.1 / 18.1 / 18.2</p>
+                     <p>In Oracle Application Express 18.1, buttons where the Execute Validations attribute is set to <span class="uicontrol bold">Yes</span> also perform some client-side validations (such as item required checks) and will not submit the page until all issues are fixed. In previous versions this flag was just used to determine if server-side validations should be executed.
+                     </p>
+                     <div class="infobox-tip" id="GUID-712BE54F-08CD-43A3-A645-87B9360ED516__GUID-1C989AFD-F7B6-47AF-9707-366B366AA82D">
+                        <p class="notep1">Tip:</p>
+                        <p>Please pay attention when changing the Compatibility Mode to 5.1/18.1/18.2. Buttons, such as Cancel or Previous, where the Execute Validation flag has incorrectly been set to <span class="bold">Yes</span> and which use an After Submit branch, never execute validations when the user clicks the button. You can address this issue by using the new client-side validations, or by setting Execute Validations to <span class="uicontrol bold">No</span>.
+                        </p>
+                     </div>
+                     <p>In release 5.1, any Ajax-based Dynamic Actions where the <span class="q">"Wait for Result"</span> attribute is set to <code class="codeph">Yes</code> perform an asynchronous Ajax call. Prior to 5.1, such calls would be made synchronously.
+                     </p>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-712BE54F-08CD-43A3-A645-87B9360ED516__GUID-6AA5FD26-F436-44A3-9965-F8C2B1CE763A">Compatibility Mode Changes in Mode 19.1</p>
+                     <p>In Oracle Application Express 19.1, the Rich Text editor now enforces validation of the <code class="codeph">Max Length</code> item attribute. When the length of the HTML markup exceeds the <code class="codeph">Max Length</code> value, the system produces an error message.
+                     </p>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-712BE54F-08CD-43A3-A645-87B9360ED516__GUID-20DFDE69-78C7-4098-9ACA-F7D935FE5034">Compatibility Mode Changes in Mode 19.2 / 20.1 / 20.2 / 21.1</p>
+                     <p>In Oracle Application Express 19.2, Classic Reports render empty column values as an empty cell instead of using a <span class="q">"non-breaking white-space"</span> (<code class="codeph">&amp;nbsp;</code>).
+                     </p>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-712BE54F-08CD-43A3-A645-87B9360ED516__GUID-EFDFCA3E-D318-4FFF-98A7-5C60AADE433E">Compatibility Mode Changes in Mode 21.2 to 24.1</p>
+                     <p>Prior to Oracle Application Express 21.2, all processes of the current processing point have been executed regardless of the added errors.</p>
+                     <p>In Oracle Application Express 21.2, calling <code class="codeph">APEX_ERROR.ADD_ERROR</code> in a process stops further processes from executing and immediately displays the inline errors.
+                     </p>
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-712BE54F-08CD-43A3-A645-87B9360ED516__GUID-30188ACF-5E77-4F60-8D1B-16B955537885">Compatibility Mode Changes in Mode 24.2</p>
+                     <p>Starting with release 24.2, APEX supports an extended substitution syntax for text messages: <code class="codeph">&amp;{TEXT.MESSAGE}</code>.
+                     </p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-8D125731-989A-4A51-AFFE-00181729F87F" name="GUID-8D125731-989A-4A51-AFFE-00181729F87F"></a><h3 id="HTMRN-GUID-8D125731-989A-4A51-AFFE-00181729F87F" class="sect3"><span class="enumeration_section">3.19 </span>Enabling Network Services in Oracle
+                Database
+               </h3>
+               <div>
+                  <p>Database administrators must enable network services in <span>Oracle
+                                        Database</span> to send outbound mail, invoke web services, or use template-based PDF report printing with external print servers in <span>Oracle APEX</span>.
+                  </p>
+                  <p>To learn more, see <a href="../htmig/enabling-network-services-in-oracle-db11g-or-later.html#HTMIG-GUID-8D125731-989A-4A51-AFFE-00181729F87F" target="_blank">Enabling Network Services in Oracle Database</a>
+            in <span><cite>Oracle APEX Installation
+                                        Guide</cite></span>.
+                  </p>
+                  <div class="infoboxnote" id="GUID-8D125731-989A-4A51-AFFE-00181729F87F__GUID-77BAC68F-D6E2-430B-AD80-68CB2C9F3884">
+                     <p class="notep1">Note:</p>Enabling network services does not apply to <span>APEX</span> instances running on <span>Oracle</span>
+                     <span>Autonomous Database</span>. <span>APEX</span> can communicate with external endpoints over the internet without additional
+            configuration.
+                  </div>
+               </div>
+               <div>
+                  <ul class="ullinks">
+                     <li class="ulchildlink"><a href="changed-behavior.html#GUID-DEA26C53-0220-40F1-86FB-482163CA5681">When and Why Network Services Must be Enabled</a><br>Enabling network services enables support for sending outbound mail in <span>Oracle APEX</span>, using REST Services, REST Enabled SQL, or other web services, and using a remote server for report printing.
+                     </li>
+                     <li class="ulchildlink"><a href="changed-behavior.html#GUID-CA19B8DF-B210-46FC-BC3A-F0DC76AE5625">Granting Connect Privileges</a><br></li>
+                     <li class="ulchildlink"><a href="changed-behavior.html#GUID-C795F54B-D05F-4463-8424-052FD4C1CE52">Troubleshooting an Invalid ACL Error</a><br>Learn how to identify any invalid ACL error by running the query.
+                     </li>
+                  </ul>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-0F34A43F-A2B7-4D06-AA39-839396676C26">Changed Behavior</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="props_rev_3"><a id="GUID-DEA26C53-0220-40F1-86FB-482163CA5681" name="GUID-DEA26C53-0220-40F1-86FB-482163CA5681"></a><h4 id="HTMRN-GUID-DEA26C53-0220-40F1-86FB-482163CA5681" class="sect4"><span class="enumeration_section">3.19.1 </span>When and Why Network Services Must be Enabled
+                  </h4>
+                  <div>
+                     <p>Enabling network services enables support for sending outbound mail in <span>Oracle APEX</span>, using REST Services, REST Enabled SQL, or other web services, and using a remote server for report printing.
+                     </p>
+                     <p>By default, the ability to interact with network services is disabled in Oracle Database. Therefore, you must use the <code class="codeph">DBMS_NETWORK_ACL_ADMIN</code> package to grant network connect privileges to the database user that owns the <span>APEX</span> schema (<span><code class="codeph">APEX_240200</code></span>). Failing to grant these privileges results in issues with:
+                     </p>
+                     <ul style="list-style-type: disc;" id="GUID-DEA26C53-0220-40F1-86FB-482163CA5681__UL_AQL_N4Q_NNB">
+                        <li>
+                           <p>Sending outbound mail in <span>Oracle APEX</span>.
+                           </p>
+                           <p>Users can call methods from the <code class="codeph">APEX_MAIL</code> package, but issues arise when sending outbound email.
+                           </p>
+                        </li>
+                        <li>Consuming REST services and other web services from <span>APEX</span>.
+                        </li>
+                        <li>Making outbound LDAP calls from <span>APEX</span>.
+                        </li>
+                        <li>Using a remote print server for report printing.</li>
+                     </ul>
+                     <p>The granted network connect privileges apply to the entire <span>APEX</span> instance and enable all applications in all workspaces to perform outbound network calls. You do <span class="italic">not</span> need to grant network connect privileges to individual workspace schemas unless applications also use native database PL/SQL API such as <code class="codeph">UTL_HTTP</code> and <code class="codeph">UTL_SMTP</code>.
+                     </p>
+                     <div class="infoboxnote" id="GUID-DEA26C53-0220-40F1-86FB-482163CA5681__GUID-040C12F5-33AB-4A6D-AC86-6FD39A132BD6">
+                        <p class="notep1">Note:</p>When upgrading <span>APEX</span>, the upgrade automatically configures Network Services based on the configuration of the previous <span>APEX</span> version.
+                     </div>
+                     <div class="infobox-tip" id="GUID-DEA26C53-0220-40F1-86FB-482163CA5681__GUID-068BABE0-716A-4DD8-90D9-0D1D555E9335">
+                        <p class="notep1">Tip:</p>
+                        <p>To run the examples described in this section, the compatible initialization parameter of the database must be set to at least <code class="codeph">11.1.0.0.0</code>. By default, the parameter is set properly, but a database upgraded from a version prior to 11<span class="italic">g</span> may require an update. For information about changing database initialization parameters, see <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmrn&id=MULTI-GUID-A94F7344-C772-4573-955C-4DDD0971183F" target="_blank">Specifying the Database Compatibility Level</a> in <span><cite>Oracle Multitenant
+                                        Administrator's Guide</cite></span>.
+                        </p>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="infoboxnotealso" id="GUID-DEA26C53-0220-40F1-86FB-482163CA5681__GUID-D7F83F48-AA76-4676-B0D6-2008D85B1495">
+                        <p class="notep1">See Also:</p><a href="../htmdb/printing-report-regions.html#HTMDB-GUID-BBC0ECE1-2130-417E-AE33-4128588C5BA1" target="_blank">About Report Printing</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span>.
+                     </div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-8D125731-989A-4A51-AFFE-00181729F87F" title="Database administrators must enable network services in Oracle Database to send outbound mail, invoke web services, or use template-based PDF report printing with external print servers in Oracle APEX.">Enabling Network Services in Oracle Database</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="props_rev_3"><a id="GUID-CA19B8DF-B210-46FC-BC3A-F0DC76AE5625" name="GUID-CA19B8DF-B210-46FC-BC3A-F0DC76AE5625"></a><h4 id="HTMRN-GUID-CA19B8DF-B210-46FC-BC3A-F0DC76AE5625" class="sect4"><span class="enumeration_section">3.19.2 </span>Granting Connect Privileges
+                  </h4>
+                  <div>
+                     <div class="section">
+                        <p> The following example demonstrates how to grant connect privileges to any host for the the database user that owns the <span>APEX</span> schema (<span><code class="codeph">APEX_240200</code></span>). This example assumes you connected to the database where <span>Oracle APEX</span> is installed as <code class="codeph">SYS</code> specifying the <code class="codeph">SYSDBA</code> role.
+                        </p><pre class="pre codeblock"><code>BEGIN
+    DBMS_NETWORK_ACL_ADMIN.APPEND_HOST_ACE(
+        host =&gt; '*',
+        ace =&gt; xs$ace_type(privilege_list =&gt; xs$name_list('connect'),
+                           principal_name =&gt; APEX_APPLICATION.g_flow_schema_owner,
+                           principal_type =&gt; xs_acl.ptype_db));
+END;
+/</code></pre><p>The following example demonstrates how to provide less privileged access to local network resources. This example enables access only to servers running on the same database host (<code class="codeph">localhost</code>), such as email and report printing servers.
+                        </p><pre class="pre codeblock"><code>BEGIN
+    DBMS_NETWORK_ACL_ADMIN.APPEND_HOST_ACE(
+        host =&gt; 'localhost',
+        ace =&gt; xs$ace_type(privilege_list =&gt; xs$name_list('connect'),
+                           principal_name =&gt; APEX_APPLICATION.g_flow_schema_owner,
+                           principal_type =&gt; xs_acl.ptype_db));
+END;
+/</code></pre></div>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-8D125731-989A-4A51-AFFE-00181729F87F" title="Database administrators must enable network services in Oracle Database to send outbound mail, invoke web services, or use template-based PDF report printing with external print servers in Oracle APEX.">Enabling Network Services in Oracle Database</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="props_rev_3"><a id="GUID-C795F54B-D05F-4463-8424-052FD4C1CE52" name="GUID-C795F54B-D05F-4463-8424-052FD4C1CE52"></a><h4 id="HTMRN-GUID-C795F54B-D05F-4463-8424-052FD4C1CE52" class="sect4"><span class="enumeration_section">3.19.3 </span>Troubleshooting an Invalid ACL Error
+                  </h4>
+                  <div>
+                     <p>Learn how to identify any invalid ACL error by running the query.</p>
+                     <div class="section">
+                        <p>If you receive an <code class="codeph">ORA-44416: Invalid ACL</code> error after running the previous script, use the following query to identify the invalid ACL:
+                        </p><pre class="pre codeblock"><code>REM Show the dangling references to dropped users in the ACL that is assigned
+REM to '*'.
+
+SELECT ACL, PRINCIPAL
+  FROM DBA_NETWORK_ACLS NACL, XDS_ACE ACE
+ WHERE HOST = '*' AND LOWER_PORT IS NULL AND UPPER_PORT IS NULL AND
+       NACL.ACLID = ACE.ACLID AND
+       NOT EXISTS (SELECT NULL FROM ALL_USERS WHERE USERNAME = PRINCIPAL);</code></pre><p>Next, run the following code to fix the ACL:</p><pre class="pre codeblock"><code>DECLARE
+  ACL_ID   RAW(16);
+  CNT      NUMBER;
+BEGIN
+  -- Look for the object ID of the ACL currently assigned to '*'
+  SELECT ACLID INTO ACL_ID FROM DBA_NETWORK_ACLS
+   WHERE HOST = '*' AND LOWER_PORT IS NULL AND UPPER_PORT IS NULL;
+
+  -- If just some users referenced in the ACL are invalid, remove just those
+  -- users in the ACL. Otherwise, drop the ACL completely.
+  SELECT COUNT(PRINCIPAL) INTO CNT FROM XDS_ACE
+   WHERE ACLID = ACL_ID AND
+         EXISTS (SELECT NULL FROM ALL_USERS WHERE USERNAME = PRINCIPAL);
+
+  IF (CNT &gt; 0) THEN
+
+    FOR R IN (SELECT PRINCIPAL FROM XDS_ACE
+               WHERE ACLID = ACL_ID AND
+                     NOT EXISTS (SELECT NULL FROM ALL_USERS
+                                  WHERE USERNAME = PRINCIPAL)) LOOP
+      UPDATE XDB.XDB$ACL
+         SET OBJECT_VALUE =
+               DELETEXML(OBJECT_VALUE,
+                         '/ACL/ACE[PRINCIPAL="'||R.PRINCIPAL||'"]')
+       WHERE OBJECT_ID = ACL_ID;
+    END LOOP;
+
+  ELSE
+    DELETE FROM XDB.XDB$ACL WHERE OBJECT_ID = ACL_ID;
+  END IF;
+
+END;
+/
+
+REM commit the changes.
+
+COMMIT;</code></pre><p>Once the ACL has been fixed, you must run the first script in this section to apply the ACL to the <span><code class="codeph">APEX_240200</code></span> user.
+                        </p>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="changed-behavior.html#GUID-8D125731-989A-4A51-AFFE-00181729F87F" title="Database administrators must enable network services in Oracle Database to send outbound mail, invoke web services, or use template-based PDF report printing with external print servers in Oracle APEX.">Enabling Network Services in Oracle Database</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

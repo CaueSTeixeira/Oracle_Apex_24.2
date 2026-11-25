@@ -1,0 +1,209 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Using the Embedded Code Utility">
+      <meta name="abstract" content="Review all embedded code used in an APEX application on one page. Embedded code is defined as code (such as SQL, PL/SQL and JavaScript) entered in the App Builder but does not include code such as PL/SQL packages or JavaScript libraries that code may reference.">
+      <meta name="description" content="Review all embedded code used in an APEX application on one page. Embedded code is defined as code (such as SQL, PL/SQL and JavaScript) entered in the App Builder but does not include code such as PL/SQL packages or JavaScript libraries that code may reference.">
+      <meta name="DC.subject" content="Embedded Code Utility">
+      <meta name="keywords" content="Embedded Code Utility">
+      <meta name="DC.Relation" scheme="URI" content="using-application-utilities.html#GUID-4837875D-F077-47C5-A4B3-BB60BC7DD140">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-0EBFF93E-0F50-4DAC-B652-6B262A02B251">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Review all embedded code used in an APEX application on one page. Embedded code is defined as code (such as SQL, PL/SQL and JavaScript) entered in the App Builder but does not include code such as PL/SQL packages or JavaScript libraries that code may reference.">
+      <meta name="description" content="Review all embedded code used in an APEX application on one page. Embedded code is defined as code (such as SQL, PL/SQL and JavaScript) entered in the App Builder but does not include code such as PL/SQL packages or JavaScript libraries that code may reference.">
+      <title>Using the Embedded Code Utility</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Review all embedded code used in an APEX application on one page. Embedded code is defined as code (such as SQL, PL/SQL and JavaScript) entered in the App Builder but does not include code such as PL/SQL packages or JavaScript libraries that code may reference.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-application-backups.html" title="Previous" type="text/html">
+      <link rel="next" href="viewing-page-and-app-checksums.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Using the Embedded Code Utility","description":"Review all embedded code used in an APEX application on one page. Embedded code is defined as code (such as SQL, PL/SQL and JavaScript) entered in the App Builder but does not include code such as PL/SQL packages or JavaScript libraries that code may reference.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-application-backups.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="viewing-page-and-app-checksums.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-0EBFF93E-0F50-4DAC-B652-6B262A02B251" name="GUID-0EBFF93E-0F50-4DAC-B652-6B262A02B251"></a><a id="4000:101"></a>
+         
+         <h2 id="HTMDB-GUID-0EBFF93E-0F50-4DAC-B652-6B262A02B251" class="sect2"><span class="enumeration_section">5.19.9 </span>Using the Embedded Code Utility
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Review all embedded code used in an <span>APEX</span> application on one page. Embedded code is defined as code (such as SQL, PL/SQL and
+        JavaScript) entered in the App Builder but does not include code such as PL/SQL packages or
+        JavaScript libraries that code may reference.
+               </p>
+               <div class="section">The Embedded Code Utility displays all embedded code from all pages in an
+            application in an easy-to-use faceted search page. Using the Embedded Code Utility is
+            ideal for tasks such as code reviews, security evaluations, and application turning
+            where historically developers would need to click on every property in a page or Shared
+            Component.</div>
+               <p>To access the Embedded Code Utility:</p>
+               <ol>
+                  <li class="stepexpand"><span>Navigate to the Workspace home page.</span></li>
+                  <li class="stepexpand"><span>Click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                  <li class="stepexpand"><span>Select an application.</span><div>
+                        
+                        <p>The Application home page appears.</p>
+                        
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>Click <span class="uicontrol bold">Utilities</span>.</span></li>
+                  <li class="stepexpand"><span>Click <span class="uicontrol bold">Embedded Code</span>.</span><div>
+                        
+                        <div class="p">The Embedded Code page appears. Note that large applications may
+                        take longer to display.
+                           <div class="figure" id="GUID-0EBFF93E-0F50-4DAC-B652-6B262A02B251__FIG_EY1_HLN_4NB"><img id="GUID-0EBFF93E-0F50-4DAC-B652-6B262A02B251__IMAGE_FY1_HLN_4NB" height="646" width="824" src="img/embedded-code-utility.png" alt="Description of embedded-code-utility.png follows" title="Description of embedded-code-utility.png follows" longdesc="img_text/embedded-code-utility.html"><br><a href="img_text/embedded-code-utility.html">Description of the illustration embedded-code-utility.png</a></div>
+                        </div>
+                        
+                        <p>The left region contains facets that enable you to filter the
+                        Search Results report. The values of the facets depend upon the embedded
+                        code in the application. The left region contains the following facet
+                        filters:</p>
+                        
+                        <ul style="list-style-type: disc;" id="GUID-0EBFF93E-0F50-4DAC-B652-6B262A02B251__UL_OJ1_53N_4NB">
+                           <li>
+                              
+                              <p><span class="uicontrol bold">Language</span> - Identifies the
+                                programming language of the embedded code. Currently, SQL, PL/SQL
+                                and JavaScript are supported.
+                              </p>
+                              
+                              <p>Only those languages that are included in the
+                                application appear. For example, if an application uses SQL and
+                                PL/SQL, but not JavaScript, then only the first two options will
+                                appear as filters. Selecting a filter refreshes the report and only
+                                displays the code that matches the languages selected.</p>
+                              
+                           </li>
+                           <li>
+                              
+                              <p><span class="uicontrol bold">Scope</span> - Identifies where in the
+                                application the embedded code is used.
+                              </p>
+                              
+                              <p><span class="uicontrol bold">Shared Component</span> refers to any
+                                application component that is not part of a page such as application
+                                processes, authentication schemes, lists of values and so on. All
+                                other values refer to a specific page of an application. Selecting a
+                                page limits the results to only the embedded code for that page.
+                              </p>
+                              
+                           </li>
+                           <li>
+                              
+                              <p><span class="uicontrol bold">Component Type</span> - Identifies the
+                                type of component that contains the embedded code.
+                              </p>
+                              
+                              <p>Only those component types that contain embedded code
+                                display in the filter. For example, a classic report that uses a SQL
+                                query results in a <span class="uicontrol bold">Region</span> component type to
+                                be included. Similarly, if an application does not have any buttons,
+                                then a <span class="uicontrol bold">Button</span> filter does not appear. Note
+                                that not all conditions require embedded code.
+                              </p>
+                              
+                           </li>
+                        </ul>
+                        
+                        <p>A Search Results report displays in the right region and includes identifying information about the component as well as where the embedded code is used by the component. For example, a page item may have a Source query used to populate the item's value, and it can also have a Server-side Condition to determine if the item should be included on the page.</p>
+                        
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>Click <span class="uicontrol bold">Download</span> to create a ZIP archive containing files
+                    for each of the components by language type. </span><div>The directory hierarchy of the files is similar to what is
+                    created when you split export files into separate scripts. The difference is
+                    that all files will be located below the <code class="codeph">embedded_code</code>
+                    directory as opposed to the <code class="codeph">application</code> directory.
+                     </div>
+                  </li>
+               </ol>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="using-application-utilities.html#GUID-4837875D-F077-47C5-A4B3-BB60BC7DD140" title="Learn about the application summaries and reports available from Utilities page.">Using Application Utilities</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="MERGE_MEMBERS Procedure">
+      <meta name="DC.subject" content="MERGE_MEMBERS procedure, APEX_COLLECTION">
+      <meta name="keywords" content="MERGE_MEMBERS procedure, APEX_COLLECTION">
+      <meta name="DC.Relation" scheme="URI" content="APEX_COLLECTION.html#GUID-859B488C-2628-44D7-969F-50872C685B76">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-B73EC254-C04A-496D-8389-E5BCC30E89A5">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>MERGE_MEMBERS Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="GET_MEMBER_MD5-Function.html" title="Previous" type="text/html">
+      <link rel="next" href="MOVE_MEMBER_DOWN-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"MERGE_MEMBERS Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="GET_MEMBER_MD5-Function.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="MOVE_MEMBER_DOWN-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-B73EC254-C04A-496D-8389-E5BCC30E89A5" name="GUID-B73EC254-C04A-496D-8389-E5BCC30E89A5"></a><a id="AEAPI769"></a><a id="AEAPI770"></a><a id="AEAPI771"></a><a id="AEAPI772"></a><a id="AEAPI768"></a>
+         
+         <h2 id="AEAPI-GUID-B73EC254-C04A-496D-8389-E5BCC30E89A5" class="sect2"><span class="enumeration_section">15.22 </span>MERGE_MEMBERS Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>Merges members of the given named collection with the values passed in the arrays.</p>
+                  <p>If the named collection does not exist, one is created.</p>
+                  <p>If a <code class="codeph">p_init_query</code> is provided, the collection is created from the supplied SQL query.
+                  </p>
+                  <p>If the named collection exists, the following occurs:</p>
+                  <ol>
+                     <li>Rows in the collection and not in the arrays are deleted.</li>
+                     <li>Rows in the collections and in the arrays are updated.</li>
+                     <li>Rows in the arrays and not in the collection are inserted.</li>
+                  </ol>
+                  <p>The count of elements in the <code class="codeph">p_c001</code> PL/SQL table is used as the total number of items across all PL/SQL tables. For example, if <code class="codeph">p_c001.count</code> is <code class="codeph">2</code> and <code class="codeph">p_c002.count</code> is <code class="codeph">10</code>, only two members are merged.
+                  </p>
+                  <p>If <code class="codeph">p_c001</code> is NULL, an application error occurs.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B73EC254-C04A-496D-8389-E5BCC30E89A5__GUID-AF94F93F-4935-40AE-AD40-9C6BB8531614">Syntax</p><pre class="pre codeblock"><code>APEX_COLLECTION.MERGE_MEMBERS (
+    p_collection_name   IN VARCHAR2,
+    p_seq               IN apex_application_global.vc_arr2 DEFAULT empty_vc_arr,
+    p_c001              IN apex_application_global.vc_arr2 DEFAULT empty_vc_arr,
+    p_c002              IN apex_application_global.vc_arr2 DEFAULT empty_vc_arr,
+    p_c003              IN apex_application_global.vc_arr2 DEFAULT empty_vc_arr,
+    ...
+    p_c050              IN apex_application_global.vc_arr2 DEFAULT empty_vc_arr,
+    p_null_index        IN NUMBER   DEFAULT 1,
+    p_null_value        IN VARCHAR2 DEFAULT NULL,
+    p_init_query        IN VARCHAR2 DEFAULT NULL )</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B73EC254-C04A-496D-8389-E5BCC30E89A5__GUID-D59402F1-0EA3-4F40-86E5-50D0333FE472">Parameters</p>
+                  <div class="infoboxnote" id="GUID-B73EC254-C04A-496D-8389-E5BCC30E89A5__GUID-1290D9FC-9625-496B-9DF5-9334CD89C129">
+                     <p class="notep1">Note:</p>
+                     <p>Any character attribute exceeding 4,000 characters is truncated to 4,000 characters. Also, the number of members added is based on the number of elements in the first array.</p>
+                  </div>
+                  <div class="tblformal" id="GUID-B73EC254-C04A-496D-8389-E5BCC30E89A5__CJAGACGH">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="31%" id="d60833e115">Parameter</th>
+                              <th align="left" valign="bottom" width="69%" id="d60833e117">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d60833e121" headers="d60833e115 "><code class="codeph">p_collection_name</code></td>
+                              <td align="left" valign="top" width="69%" headers="d60833e121 d60833e117 ">The name of the collection. Maximum length is 255 bytes. Collection names are not case-sensitive and are converted to upper case.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d60833e127" headers="d60833e115 "><code class="codeph">p_c001 through p_c050</code></td>
+                              <td align="left" valign="top" width="69%" headers="d60833e127 d60833e117 ">Array of attribute values to be merged. Maximum length is 4,000 bytes. Any character attribute exceeding 4,000 characters is truncated to 4,000 characters. The count of the <code class="codeph">p_c001</code> array is used across all arrays. If no values are provided, then no actions are performed.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d60833e136" headers="d60833e115 "><code class="codeph">p_c0xx</code></td>
+                              <td align="left" valign="top" width="69%" headers="d60833e136 d60833e117 ">Attribute of <code class="codeph">NN</code> attributes values to be merged. Maximum length can be 4,000 bytes. The attribute value is truncated to 4,000 bytes if greater than this amount.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d60833e145" headers="d60833e115 "><code class="codeph">p_seq</code></td>
+                              <td align="left" valign="top" width="69%" headers="d60833e145 d60833e117 ">Identifies the sequence number of the collection member to be merged.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d60833e151" headers="d60833e115 "><code class="codeph">p_null_index</code></td>
+                              <td align="left" valign="top" width="69%" headers="d60833e151 d60833e117 ">If the element identified by this value is NULL, then treat this row as a NULL row. For example, if <code class="codeph">p_null_index</code> is <code class="codeph">3</code>, then <code class="codeph">p_c003</code> is treated as a NULL row. The merge function then ignores this row. This results in removing NULL rows from the collection. The NULL index works with the NULL value. If the value of the <code class="codeph">p_cXXX</code> argument is equal to the <code class="codeph">p_null_value</code>, then the row is treated as NULL.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d60833e172" headers="d60833e115 "><code class="codeph">p_null_value</code></td>
+                              <td align="left" valign="top" width="69%" headers="d60833e172 d60833e117 ">Used with the <code class="codeph">p_null_index</code> argument. Identifies the NULL value. If used, this value must not be NULL. A typical value for this argument is <code class="codeph">0</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d60833e184" headers="d60833e115 "><code class="codeph">p_init_query</code></td>
+                              <td align="left" valign="top" width="69%" headers="d60833e184 d60833e117 ">If the collection does not exist, the collection is created using this query.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-B73EC254-C04A-496D-8389-E5BCC30E89A5__GUID-CC742610-7984-4B72-912E-47729B880394">Example</p>
+                  <p>The following example creates a collection on the table of employees, and then merges the contents of the local arrays with the collection, updating the job of two employees.</p><pre class="pre codeblock"><code>DECLARE
+    l_seq   APEX_APPLICATION_GLOBAL.VC_ARR2;
+    l_c001  APEX_APPLICATION_GLOBAL.VC_ARR2;
+    l_c002  APEX_APPLICATION_GLOBAL.VC_ARR2;
+    l_c003  APEX_APPLICATION_GLOBAL.VC_ARR2;
+BEGIN
+    l_seq(1)  := 1;
+    l_c001(1) := 7369;
+    l_c002(1) := 'SMITH';
+    l_c003(1) := 'MANAGER';
+    l_seq(2)  := 2;
+    l_c001(2) := 7499;
+    l_c002(2) := 'ALLEN';
+    l_c003(2) := 'CLERK';
+ 
+    APEX_COLLECTION.MERGE_MEMBERS(
+        p_collection_name =&gt; 'EMPLOYEES',
+        p_seq =&gt; l_seq,
+        p_c001 =&gt; l_c001,
+        p_c002 =&gt; l_c002,
+        p_c003 =&gt; l_c003,
+        p_init_query =&gt; 'select empno, ename, job from emp order by empno');
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_COLLECTION.html#GUID-859B488C-2628-44D7-969F-50872C685B76">APEX_COLLECTION</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

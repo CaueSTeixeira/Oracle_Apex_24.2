@@ -1,0 +1,226 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Automating the APEX Installation Process">
+      <meta name="abstract" content="Automate the process of installing and configuring an Oracle APEX instance.">
+      <meta name="description" content="Automate the process of installing and configuring an Oracle APEX instance.">
+      <meta name="DC.Relation" scheme="URI" content="automating-the-apex-installation-process.html#GUID-F7ECBD78-287A-45BA-8AC1-BEA4D503FE27">
+      <meta name="DC.Relation" scheme="URI" content="automating-the-apex-installation-process.html#GUID-250648A9-B9E3-4D6C-AF0A-4054054CD190">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="David Bliss">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Salim Hlayel">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vlad Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-C18CDE2A-F730-41D5-85DC-FA010A2CFCD4">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Automate the process of installing and configuring an Oracle APEX instance.">
+      <meta name="description" content="Automate the process of installing and configuring an Oracle APEX instance.">
+      <title>Automating the APEX Installation Process</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Installation Guide ">
+      <meta property="og:description" content="Automate the process of installing and configuring an Oracle APEX instance.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Installation Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-installation-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:41:45-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12910-03">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="converting-between-runtime-and-full-development-environments.html" title="Previous" type="text/html">
+      <link rel="next" href="maximizing-uptime-during-apex-upgrade.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Installation Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="HTMIG">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Automating the APEX Installation Process","description":"Automate the process of installing and configuring an Oracle APEX instance.","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="converting-between-runtime-and-full-development-environments.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="maximizing-uptime-during-apex-upgrade.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-C18CDE2A-F730-41D5-85DC-FA010A2CFCD4" name="GUID-C18CDE2A-F730-41D5-85DC-FA010A2CFCD4"></a>
+         
+         <h2 id="HTMIG-GUID-C18CDE2A-F730-41D5-85DC-FA010A2CFCD4" class="sect2"><span class="enumeration_chapter">A </span>Automating the <span>APEX</span> Installation Process
+         </h2>
+         <div class="ind">
+            <p>Automate the process of installing and configuring an <span>Oracle APEX</span> instance.
+            </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="automating-the-apex-installation-process.html#GUID-F7ECBD78-287A-45BA-8AC1-BEA4D503FE27">About apxsilentins.sql</a><br>Run the <code class="codeph">apxsilentins.sql</code> script to automate the         installation and configuration of an <span>Oracle APEX</span> instance. 
+                  </li>
+                  <li class="ulchildlink"><a href="automating-the-apex-installation-process.html#GUID-250648A9-B9E3-4D6C-AF0A-4054054CD190">Running apxsilentins.sql</a><br>Run the <code class="codeph">apxsilentins.sql</code> script.
+                  </li>
+               </ul>
+            </div>
+            
+            <div class="sect2"><a id="GUID-F7ECBD78-287A-45BA-8AC1-BEA4D503FE27" name="GUID-F7ECBD78-287A-45BA-8AC1-BEA4D503FE27"></a><h3 id="HTMIG-GUID-F7ECBD78-287A-45BA-8AC1-BEA4D503FE27" class="sect3"><span class="enumeration_section">A.1 </span>About apxsilentins.sql
+               </h3>
+               <div>
+                  <p>Run the <code class="codeph">apxsilentins.sql</code> script to automate the
+        installation and configuration of an <span>Oracle APEX</span> instance. 
+                  </p>
+                  <p>Traditionally you run the run the <code class="codeph">apexins.sql</code> script to install <span>Oracle APEX</span> and then perform a multiple other steps to configure the
+                <code class="codeph">APEX_PUBLIC_USER</code> account. The <code class="codeph">apxsilentins.sql</code>
+            script simplifies the installation and configuation process.
+                <code class="codeph">apxsilentins.sql</code> accepts additional parameters so that passwords
+            can be passed for following database users associated with the <span>Oracle APEX</span> schema: <code class="codeph">APEX_PUBLIC_USER</code>, <code class="codeph">APEX_LISTENER</code>,
+                <code class="codeph">APEX_REST_PUBLIC_USER</code> and the <span>Oracle APEX</span> Instance Administration user, <code class="codeph">ADMIN</code>. You can also use these
+            passwords for the configuration of middle tiers and other processes.
+                <code class="codeph">apxsilentins.sql</code> also completes other installation steps such as
+            creating and setting the password for the Instance Administration user,
+                <code class="codeph">ADMIN</code>, configuring a network ACL, and configuring Oracle REST Data
+            Services.
+                  </p>
+                  <div class="p">Running the <code class="codeph">apxsilentins.sql</code> script, removes the need for
+            completing the following topics:
+                     <ul style="list-style-type: disc;" id="GUID-F7ECBD78-287A-45BA-8AC1-BEA4D503FE27__UL_GYQ_2GS_2JB">
+                        <li>
+                           
+                           <p><a href="downloading-installing-apex.html#GUID-7E432C6D-CECC-4977-B183-3C654380F7BF" title="Install Oracle APEX by downloading a ZIP file from the APEX download page.">Installing APEX</a></p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><a href="downloading-installing-apex.html#GUID-4062E1F0-2772-48FC-A4AA-436F326CF751" title="Learn how to create or update Instance Administrator account.">Creating or Updating Your Instance Administration Account</a></p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><a href="downloading-installing-apex.html#GUID-0619448A-56FB-43E1-A479-C45EC5002E4B" title="It is important to correctly configure the APEX_PUBLIC_USER account to enable proper operation of Oracle APEX.">Configuring the APEX_PUBLIC_USER Account</a></p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><a href="enabling-network-services-in-oracle-db11g-or-later.html#GUID-8D125731-989A-4A51-AFFE-00181729F87F" title="Database administrators must enable network services in Oracle Database to send outbound mail, invoke web services, or use template-based PDF report printing with external print servers in Oracle APEX.">Enabling Network Services in Oracle Database</a></p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><a href="configuring-ords.html#GUID-A578DB67-EE01-4CAB-8043-95F26A6E46F0" title="For configuring static files, you must run apex_rest_config.sql after a new installation of Oracle APEX.">Configuring Static File Support</a> (<code class="codeph">apex_rest_config.sql</code>)
+                           </p>
+                           
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="automating-the-apex-installation-process.html#GUID-C18CDE2A-F730-41D5-85DC-FA010A2CFCD4" title="Automate the process of installing and configuring an Oracle APEX instance.">Automating the APEX Installation Process</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-250648A9-B9E3-4D6C-AF0A-4054054CD190" name="GUID-250648A9-B9E3-4D6C-AF0A-4054054CD190"></a><h3 id="HTMIG-GUID-250648A9-B9E3-4D6C-AF0A-4054054CD190" class="sect3"><span class="enumeration_section">A.2 </span>Running apxsilentins.sql
+               </h3>
+               <div>
+                  <p>Run the <code class="codeph">apxsilentins.sql</code> script.
+                  </p>
+                  <p>To run <code class="codeph">apxsilentins.sql</code>:
+                  </p>
+                  <ol id="GUID-250648A9-B9E3-4D6C-AF0A-4054054CD190__STEPS_I5H_BGM_XWB">
+                     <li class="stepexpand"><span>Change your working directory to <code class="codeph">apex</code>.</span></li>
+                     <li class="stepexpand"><span>Start <span>SQLcl</span> and connect as user <code class="codeph">SYS</code> to the database where <span>Oracle APEX</span> is installed. You will need to specify the <code class="codeph">SYSDBA</code> role. For example:</span><ul id="GUID-250648A9-B9E3-4D6C-AF0A-4054054CD190__CHOICES_AZQ_2GM_XWB">
+                           <li>
+                              <p>On Windows:</p><pre class="pre codeblock"><code><span class="italic">SYSTEM_DRIVE:\</span> sql /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span></code></pre></li>
+                           <li>
+                              <p>On UNIX and Linux:</p><pre class="pre codeblock"><code>$ sql /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span></code></pre></li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Disable any existing password complexity rules for the default profile.</span></li>
+                     <li class="stepexpand"><span>Run <code class="codeph">apxsilentins.sql</code> passing the following eight arguments in the order shown:</span><div><pre class="pre codeblock"><code>@apxsilentins.sql tablespace_apex tablespace_files tablespace_temp images
+    password_apex_pub_user password_apex_listener password_apex_rest_pub_user
+    password_internal_admin</code></pre><p>Where:</p>
+                           <ul style="list-style-type: disc;" id="GUID-250648A9-B9E3-4D6C-AF0A-4054054CD190__UL_G1P_DJS_2JB">
+                              <li><span class="italic"><code class="codeph">tablespace_apex</code></span> is the name of the tablespace for the <span>APEX</span> platform schema.
+                              </li>
+                              <li><span class="italic"><code class="codeph">tablespace_files</code></span> is the name of the tablespace for the <span>APEX</span> files schema.
+                              </li>
+                              <li><span class="italic"><code class="codeph">tablespace_temp</code></span> is the name of the temporary tablespace or tablespace group.
+                              </li>
+                              <li><span class="italic"><code class="codeph">images</code></span> is the virtual directory for <span>APEX</span> images. To support future <span>APEX</span> upgrades, define the virtual image directory as <code class="codeph">/i/</code>.
+                              </li>
+                              <li><code class="codeph">password_apex_pub_user</code> is the password for the <code class="codeph">APEX_PUBLIC_USER</code> database account.
+                              </li>
+                              <li><code class="codeph">password_apex_listener</code> is the password for the <code class="codeph">APEX_LISTENER</code> database account.
+                              </li>
+                              <li><code class="codeph">password_apex_rest_pub_user</code> is the password for the <code class="codeph">APEX_REST_PUBLIC_USER</code> database account.
+                              </li>
+                              <li><code class="codeph">password_internal_admin</code> is the password for the Instance Administration <code class="codeph">ADMIN</code> <span>APEX</span> account. This password must meet the following requirements: 
+                                 <ul style="list-style-type: disc;" id="GUID-250648A9-B9E3-4D6C-AF0A-4054054CD190__UL_C5L_SMQ_3JB">
+                                    <li>Contain at least 6 characters.</li>
+                                    <li>Contain at least one numeric character (0123456789).</li>
+                                    <li>Contain at least one punctuation character (!"#$%&amp;()``*+,-/:;?_).</li>
+                                    <li>Contain at least one uppercase alphabetic character.</li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                  </ol>
+                  <div class="example" id="GUID-250648A9-B9E3-4D6C-AF0A-4054054CD190__GUID-CBF7DCF1-0137-40E1-BFCB-ABDC996C710B">
+                     <p>For example:</p><pre class="pre codeblock"><code>@apxsilentins.sql SYSAUX SYSAUX TEMP /i/ Passw0rd!1 Passw0rd!2 Passw0rd!3 Passw0rd!4</code></pre></div>
+                  <div class="section">
+                     <p>Once <code class="codeph">apxsilentins.sql</code> completes, you follow the steps in <a href="downloading-installing-ords.html#GUID-1F0064FB-7F00-4ACE-85BD-E9B2AF73A233" title="Learn about downloading and installing Oracle REST Data Services (ORDS).">Downloading and Installing Oracle REST Data Services (ORDS)</a> and <a href="configuring-ords.html#GUID-AD38DE06-A560-4D6D-BD50-6E5A8E513BBF" title="Configuring Oracle REST Data Services requires that you copy the images directory, if you are using an older release validate the Oracle REST Data Services installation, configure static files support, and secure Oracle REST Data Services.">Configuring Oracle REST Data Services</a> (except for <span class="q">"Configuring Static File Support"</span>).
+                     </p>
+                     <p>Use the passwords you supplied to <code class="codeph">apxsilentins.sql</code> when completing these steps. Then, move on to <a href="creating-workspace-and-adding-apex-users.html#GUID-EB1F45FA-29B3-4E9F-9493-13F16772742C" title="Before you can develop or install applications, you must create a workspace, add Oracle APEX users, and sign in to your workspace.">Creating a Workspace and Adding APEX Users</a>.
+                     </p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="automating-the-apex-installation-process.html#GUID-C18CDE2A-F730-41D5-85DC-FA010A2CFCD4" title="Automate the process of installing and configuring an Oracle APEX instance.">Automating the APEX Installation Process</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

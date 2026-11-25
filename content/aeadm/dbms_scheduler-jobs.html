@@ -1,0 +1,394 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="DBMS_SCHEDULER Jobs">
+      <meta name="abstract" content="The DBMS_SCHEDULER package provides a collection of scheduling functions and procedures that can be called from any PL/SQL program.">
+      <meta name="description" content="The DBMS_SCHEDULER package provides a collection of scheduling functions and procedures that can be called from any PL/SQL program.">
+      <meta name="DC.Relation" scheme="URI" content="dbms_scheduler-jobs.html#GUID-563FAF19-635C-4218-BB74-062F758B86C9">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-8C015BD9-8C6E-45C8-9CFA-54101A388E08">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="The DBMS_SCHEDULER package provides a collection of scheduling functions and procedures that can be called from any PL/SQL program.">
+      <meta name="description" content="The DBMS_SCHEDULER package provides a collection of scheduling functions and procedures that can be called from any PL/SQL program.">
+      <title>DBMS_SCHEDULER Jobs</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="The DBMS_SCHEDULER package provides a collection of scheduling functions and procedures that can be called from any PL/SQL program.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="configuring-and-deleting-logs-and-log-entries.html" title="Previous" type="text/html">
+      <link rel="next" href="book-index.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"DBMS_SCHEDULER Jobs","description":"The DBMS_SCHEDULER package provides a collection of scheduling functions and procedures that can be called from any PL/SQL program.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="configuring-and-deleting-logs-and-log-entries.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="book-index.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-8C015BD9-8C6E-45C8-9CFA-54101A388E08" name="GUID-8C015BD9-8C6E-45C8-9CFA-54101A388E08"></a><a id="AEADM459"></a>
+         
+         <h2 id="AEADM-GUID-8C015BD9-8C6E-45C8-9CFA-54101A388E08" class="sect2"><span class="enumeration_chapter">A </span>DBMS_SCHEDULER Jobs
+         </h2>
+         <div class="ind">
+            <p>The <code class="codeph">DBMS_SCHEDULER</code> package provides a collection of scheduling functions and procedures that can be called from any PL/SQL program.
+            </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="dbms_scheduler-jobs.html#GUID-563FAF19-635C-4218-BB74-062F758B86C9">List of DBMS_SCHEDULER Jobs</a><br>The following table describes <code class="codeph">DBMS_SCHEDULER</code> jobs that are         created in the database when you install <span>Oracle APEX</span>.
+                  </li>
+               </ul>
+            </div>
+            <a id="AEADM461"></a><a id="AEADM29241"></a><div class="props_rev_3"><a id="GUID-563FAF19-635C-4218-BB74-062F758B86C9" name="GUID-563FAF19-635C-4218-BB74-062F758B86C9"></a><h3 id="AEADM-GUID-563FAF19-635C-4218-BB74-062F758B86C9" class="sect3"><span class="enumeration_section">A.1 </span>List of DBMS_SCHEDULER Jobs
+               </h3>
+               <div>
+                  <p>The following table describes <code class="codeph">DBMS_SCHEDULER</code> jobs that are
+        created in the database when you install <span>Oracle APEX</span>.
+                  </p>
+                  <div class="tblformal" id="GUID-563FAF19-635C-4218-BB74-062F758B86C9__BCFFGIBJ">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="DBMS_SCHEDULER jobs. Oracle APEX." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="31%" id="d58013e133">Job Name</th>
+                              <th align="left" valign="bottom" width="37%" id="d58013e136">Description</th>
+                              <th align="left" valign="bottom" width="32%" id="d58013e139">To Learn More</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d58013e143" headers="d58013e133 "><code class="codeph">ORACLE_APEX_AUTOMATIONS</code></td>
+                              <td align="left" valign="top" width="37%" headers="d58013e143 d58013e136 ">
+                                 
+                                 <p>Executes due automations every 2 minutes.</p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="32%" headers="d58013e143 d58013e139 ">See <a href="../htmdb/managing-automations.html#HTMDB-GUID-EC3FF1D8-6CEF-4C8A-B200-11C3F02A6B92" target="_blank">Managing Automations</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d58013e161" headers="d58013e133 "><code class="codeph">ORACLE_APEX_BACKUP</code></td>
+                              <td align="left" valign="top" width="37%" headers="d58013e161 d58013e136 ">
+                                 
+                                 <p>Performs backups of applications that have been
+                                modified. Purges backups according to limit defined by the "Number
+                                of backups per application" instance setting. The backup job will be
+                                disabled when the setting is zero (0). The backup job runs every day
+                                starting at 0200.</p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="32%" headers="d58013e161 d58013e139 ">See <a href="configuring-features.html#GUID-A61AAF17-D142-4F5E-8845-9811A8B88589" title="Configure the number of application backups.">Configuring the Number of Application Backups</a></td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d58013e177" headers="d58013e133 ">
+                                 
+                                 <p><code class="codeph">ORACLE_APEX_BG_PROCESSES</code></p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="37%" headers="d58013e177 d58013e136 ">
+                                 
+                                 <p>Kicks off background page process executions. Runs every
+                                2 minutes for a duration of 1 minute and about 57 seconds</p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="32%" headers="d58013e177 d58013e139 ">
+                                 
+                                 <p>See <a href="../htmdb/understanding-background-page-processing.html#HTMDB-GUID-4FCFB2D6-EF19-4692-8980-4F9EBED0DBB7" target="_blank">Understanding Background Page
+                                    Processing</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></p>
+                                 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d58013e201" headers="d58013e133 ">
+                                 
+                                 <p><code class="codeph">ORACLE_APEX_DICTIONARY_CACHE</code></p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="37%" headers="d58013e201 d58013e136 ">
+                                 
+                                 <p>This job runs nightly at 0100 to gather statistics and
+                                data analysis of all workspace schema tables and caches into the <span>Oracle APEX</span> Data Dictionary.
+                                 </p>
+                                 
+                                 <p>If the Data Dictionary Cache is incorrect or out of
+                                date, you can update Data Dictionary Cache manually from the
+                                Workspace Cache report.</p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="32%" headers="d58013e201 d58013e139 ">
+                                 
+                                 <p>See <a href="accessing-data-dictionary-cache-from-administration-services.html#GUID-4874D50D-7944-472D-9C85-E1B4839A2B3D" title="View or refresh the Data Dictionary Cache.">Viewing or Refreshing the Data Dictionary Cache</a></p>
+                                 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d58013e229" headers="d58013e133 ">
+                                 
+                                 <p><code class="codeph">ORACLE_APEX_DAILY_METRICS</code></p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="37%" headers="d58013e229 d58013e136 ">
+                                 
+                                 <p>Performs nightly maintenance, every day at 0100. This job
+                                archives the activity summary and runs the workspace purge
+                                process.</p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="32%" headers="d58013e229 d58013e139 ">
+                                 
+                                 <p>n/a</p>
+                                 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d58013e246" headers="d58013e133 ">
+                                 
+                                 <p><code class="codeph">ORACLE_APEX_DAILY_MAINTENANCE</code></p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="37%" headers="d58013e246 d58013e136 ">
+                                 
+                                 <p>This job inserts the overall metrics at instance,
+                                workspace and schema level on a daily basis. Runs every day at 02:00
+                                AM.</p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="32%" headers="d58013e246 d58013e139 ">
+                                 
+                                 <p>See <a href="purging-inactive-workspaces.html#GUID-31534DD1-50AF-4DFE-9FD7-409C73437D20" target="_blank">Purging Inactive
+                                    Workspaces</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></p>
+                                 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d58013e270" headers="d58013e133 ">
+                                 
+                                 <p><code class="codeph">ORACLE_APEX_DTLD$<span class="codeinlineitalic">{job-id}</span>
+                                       </code></p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="37%" headers="d58013e270 d58013e136 ">
+                                 
+                                 <p>SQl Workshop data loading processes spawn jobs named
+                                        <code class="codeph">ORACLE_APEX_DTLD$<span class="codeinlineitalic">{job-id}</span></code>. Jobs are
+                                purged after completion. 
+                                 </p>
+                                 
+                                 <p>While the jobs are running, you can view them in <span>Oracle APEX</span> Administration Services under <span class="uicontrol bold">Monitor
+                                    Activity</span>, <span class="uicontrol bold">Developer Activity</span>,
+                                    <span class="uicontrol bold">Data Loading Jobs</span>.
+                                 </p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="32%" headers="d58013e270 d58013e139 ">
+                                 
+                                 <p>See <a href="monitoring-activity-across-an-instance.html#GUID-57123911-C427-4C9E-96A7-A91D54A2B9C6" title="Use the links on the Monitor Activity page to access various reports on application, developer, and session activity in all workspaces.">Monitoring Activity Across an Instance</a> and <a href="../aeutl/using-data-workshop.html#AEUTL-GUID-C35417B6-D1D0-4098-BBE1-35F7BA1A2423" target="_blank">Using Data
+                                    Workshop</a> in <span><cite>Oracle APEX SQL Workshop
+                                        Guide</cite></span></p>
+                                 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d58013e323" headers="d58013e133 ">
+                                 
+                                 <p><code class="codeph">ORACLE_APEX_ISSUE_EMAILS</code></p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="37%" headers="d58013e323 d58013e136 ">
+                                 
+                                 <p>Determines Team Development notifications that must be
+                                sent. This job runs every hour.</p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="32%" headers="d58013e323 d58013e139 ">
+                                 
+                                 <p>See <a href="configuring-features.html#GUID-A61AAF17-D142-4F5E-8845-9811A8B88589" title="Configure the number of application backups.">Configuring the Number of Application Backups</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></p>
+                                 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d58013e349" headers="d58013e133 ">
+                                 
+                                 <p><code class="codeph">ORACLE_APEX_MAIL_QUEUE</code></p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="37%" headers="d58013e349 d58013e136 ">
+                                 
+                                 <p>Sends mail that is in the mail queue every 5
+                                minutes.</p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="32%" headers="d58013e349 d58013e139 ">
+                                 
+                                 <p>See <a href="../aeapi/APEX_MAIL.html#AEAPI-GUID-14F51C6D-CB82-4B38-AB6E-61C46E75596F" target="_blank">APEX_MAIL</a> in
+                                    <span><cite>Oracle APEX API
+                                        Reference</cite></span>and <a href="configuring-email.html#GUID-FEC98D5E-3C89-423E-9603-4CD2E553BA34" title="To enable APEX to send mail, an instance administrator must configure instance-level email settings.">Configuring Email</a></p>
+                                 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d58013e382" headers="d58013e133 ">
+                                 
+                                 <p><code class="codeph">ORACLE_APEX_PURGE_SESSIONS</code></p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="37%" headers="d58013e382 d58013e136 ">
+                                 
+                                 <p>Purges sessions older than 12 hours (the default). This
+                                job runs every hour.</p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="32%" headers="d58013e382 d58013e139 ">
+                                 
+                                 <p>See <a href="managing-meta-data.html#GUID-67CDB349-F01D-4D30-A9B7-1033C54333D6" title="View session state statistics and purge the session state on the Session State page.">Managing Session State for an Instance</a></p>
+                                 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d58013e404" headers="d58013e133 ">
+                                 
+                                 <p><code class="codeph">ORACLE_APEX_PWA_PUSH_QUEUE</code></p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="37%" headers="d58013e404 d58013e136 ">
+                                 
+                                 <p>Sends Push Notifications every 2 minutes.</p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="32%" headers="d58013e404 d58013e139 ">
+                                 
+                                 <p>See <a href="../htmdb/creating-a-progressive-web-app.html#HTMDB-GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" target="_blank">Creating a Progressive Web App
+                                    (PWA)</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></p>
+                                 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d58013e429" headers="d58013e133 ">
+                                 
+                                 <p><code class="codeph">ORACLE_APEX_REST_SOURCE_SYNC</code></p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="37%" headers="d58013e429 d58013e136 ">
+                                 
+                                 <p>Executes due REST Source Synchronizations every 10 minutes.</p>
+                                 
+                              </td>
+                              <td align="left" valign="top" width="32%" headers="d58013e429 d58013e139 ">
+                                 
+                                 <p>See <a href="../htmdb/managing-data-synchronization.html#HTMDB-GUID-107C7CB8-F3DF-4C82-89E5-F4BFE6750096" target="_blank">Managing Data
+                                    Synchronization</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></p>
+                                 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d58013e453" headers="d58013e133 "><code class="codeph">ORACLE_APEX_TASKS_EXPIRE</code></td>
+                              <td align="left" valign="top" width="37%" headers="d58013e453 d58013e136 ">Expires any task in the task instance table that is past the due date with an expiration policy set to Expire or Renew. Creates a new task for any task set to Renew, as long as the maximum number of renewals is not exceeded. Executes any Before Expire or Expire actions. This job runs hourly.</td>
+                              <td align="left" valign="top" width="32%" headers="d58013e453 d58013e139 ">See <a href="../htmdb/creating-task-definitions.html#HTMDB-GUID-7E7A117B-4C6C-438A-A5D6-9A4001B7CB1C" target="_blank">Creating a Task Definition</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d58013e469" headers="d58013e133 "><code class="codeph">ORACLE_APEX_TASKS_PURGE</code></td>
+                              <td align="left" valign="top" width="37%" headers="d58013e469 d58013e136 ">Purges completed tasks with a retention period that is less than or equal to the current date. Purges errored, expired, and canceled tasks. Saves the purged task details as a JSON document. This job runs nightly at 0200 hours.</td>
+                              <td align="left" valign="top" width="32%" headers="d58013e469 d58013e139 ">See <a href="../htmdb/about-the-retention-and-archival-of-tasks.html#HTMDB-GUID-0F8B7CC6-36AD-4D55-9540-115C5CC90AF9" target="_blank">About Task Retention and Task Purging</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span> and <a href="configuring-workflow-settings.html#GUID-27C214B0-5278-4464-B9B8-FFC46A45BEAB" title="Configure retention periods for tasks and workflows.">Configuring Workflow Settings</a>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d58013e491" headers="d58013e133 "><code class="codeph">ORACLE_APEX_WFS_PURGE</code></td>
+                              <td align="left" valign="top" width="37%" headers="d58013e491 d58013e136 ">Purges completed workflows with a retention period that is less than or equal to the current date. Purges terminated workflows. This job runs nightly at 0300 hours.</td>
+                              <td align="left" valign="top" width="32%" headers="d58013e491 d58013e139 ">See <a href="../htmdb/workflow-retention.html#HTMDB-GUID-D2A294D7-4D2F-4635-99CE-C4EF4272B6F1" target="_blank">Workflow Instance Retention</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d58013e507" headers="d58013e133 "><code class="codeph">ORACLE_APEX_WF_TIMEOUT</code></td>
+                              <td align="left" valign="top" width="37%" headers="d58013e507 d58013e136 ">Runs every 5 minutes to check for workflow activites for which the specified due date has elapsed, and performs timeout-handling for these activities.</td>
+                              <td align="left" valign="top" width="32%" headers="d58013e507 d58013e139 ">See <a href="../htmdb/index.html" target="_blank">Defining Activity Timeout</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d58013e523" headers="d58013e133 ">
+                                 <p><code class="codeph">ORACLE_APEX_WS_NOTIFICATIONS</code></p>
+                              </td>
+                              <td align="left" valign="top" width="37%" headers="d58013e523 d58013e136 ">
+                                 <p>Sends interactive report subscription that is in the queue every 30 minutes.</p>
+                              </td>
+                              <td align="left" valign="top" width="32%" headers="d58013e523 d58013e139 ">
+                                 <p>n/a</p>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="dbms_scheduler-jobs.html#GUID-8C015BD9-8C6E-45C8-9CFA-54101A388E08" title="The DBMS_SCHEDULER package provides a collection of scheduling functions and procedures that can be called from any PL/SQL program.">DBMS_SCHEDULER Jobs</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

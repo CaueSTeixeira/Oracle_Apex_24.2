@@ -1,0 +1,326 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Installing APEX into Different PDBs">
+      <meta name="abstract" content="You can install different versions of Oracle APEX into different PDBs.">
+      <meta name="description" content="You can install different versions of Oracle APEX into different PDBs.">
+      <meta name="DC.subject" content="CDBs, uninstalling, Oracle APEX, uninstalling in CDBs, CDBs reinstalling, reinstalling in CDBs">
+      <meta name="keywords" content="CDBs, uninstalling, Oracle APEX, uninstalling in CDBs, CDBs reinstalling, reinstalling in CDBs">
+      <meta name="DC.Relation" scheme="URI" content="multitenant-architecture.html#GUID-972D1EC3-84AD-4C36-A4B1-167C3610BE7F">
+      <meta name="DC.Relation" scheme="URI" content="installing-apex-into-different-pdbs.html#GUID-EECD19AD-34C6-4DC4-A9E2-48F747F5A182">
+      <meta name="DC.Relation" scheme="URI" content="installing-apex-into-different-pdbs.html#GUID-1BD78FA9-CA7C-47CF-A5A9-30CA3084315B">
+      <meta name="DC.Relation" scheme="URI" content="installing-apex-into-different-pdbs.html#GUID-711396F6-DC1C-4EF8-8CA5-4C36E8615DFD">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="David Bliss">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Salim Hlayel">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vlad Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-91809585-A1BA-44B5-8AD5-8FB44FB61A3F">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="You can install different versions of Oracle APEX into different PDBs.">
+      <meta name="description" content="You can install different versions of Oracle APEX into different PDBs.">
+      <title>Installing APEX into Different PDBs</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Installation Guide ">
+      <meta property="og:description" content="You can install different versions of Oracle APEX into different PDBs.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Installation Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-installation-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:41:45-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12910-03">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="installing-apex-into-application-container.html" title="Previous" type="text/html">
+      <link rel="next" href="plugging-in-pdb-when-apex-installed-in-root-container.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Installation Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="HTMIG">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Installing APEX into Different PDBs","description":"You can install different versions of Oracle APEX into different PDBs.","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="installing-apex-into-application-container.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="plugging-in-pdb-when-apex-installed-in-root-container.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-91809585-A1BA-44B5-8AD5-8FB44FB61A3F" name="GUID-91809585-A1BA-44B5-8AD5-8FB44FB61A3F"></a><a id="HTMIG29327"></a>
+         
+         <h2 id="HTMIG-GUID-91809585-A1BA-44B5-8AD5-8FB44FB61A3F" class="sect2"><span class="enumeration_section">5.3 </span>Installing <span>APEX</span> into Different PDBs
+         </h2>
+         <div class="ind">
+            <div>
+               <p>You can install different versions of <span>Oracle APEX</span> into different PDBs.
+               </p>
+               <p>If <span>APEX</span> is not installed in the container database, you can install a local <span>APEX</span> within each PDB as required. When <span>APEX</span> is installed locally there are no <span>APEX</span> metadata linked objects and all packages, views, and tables are created within the <span><code class="codeph">APEX_240200</code></span> schema, within each PDB where <span>APEX</span> is installed.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="installing-apex-into-different-pdbs.html#GUID-EECD19AD-34C6-4DC4-A9E2-48F747F5A182">Uninstalling APEX from a CDB</a><br>Learn how to uninstall <span>Oracle APEX</span> from a CDB.
+                  </li>
+                  <li class="ulchildlink"><a href="installing-apex-into-different-pdbs.html#GUID-1BD78FA9-CA7C-47CF-A5A9-30CA3084315B">Installing APEX Locally in a PDB</a><br>Learn how to install <span>Oracle APEX</span> locally in a PDB.
+                  </li>
+                  <li class="ulchildlink"><a href="installing-apex-into-different-pdbs.html#GUID-711396F6-DC1C-4EF8-8CA5-4C36E8615DFD">Installing APEX into a CDB</a><br></li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="multitenant-architecture.html#GUID-972D1EC3-84AD-4C36-A4B1-167C3610BE7F" title="Learn about installation choices and different scenarios associated with copying and moving pluggable databases introduced by the multitenant architecture with respect to Oracle APEX.">Utilizing Multitenant Architecture</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMIG29436"></a><div class="props_rev_3"><a id="GUID-EECD19AD-34C6-4DC4-A9E2-48F747F5A182" name="GUID-EECD19AD-34C6-4DC4-A9E2-48F747F5A182"></a><h3 id="HTMIG-GUID-EECD19AD-34C6-4DC4-A9E2-48F747F5A182" class="sect3"><span class="enumeration_section">5.3.1 </span>Uninstalling <span>APEX</span> from a CDB
+               </h3>
+               <div>
+                  <p>Learn how to uninstall <span>Oracle APEX</span> from a CDB.
+                  </p>
+                  <div class="section">
+                     <p>To uninstall <span>APEX</span> from a CDB:
+                     </p>
+                     <div class="infoboxnote" id="GUID-EECD19AD-34C6-4DC4-A9E2-48F747F5A182__GUID-AB1FBAB4-215D-4335-80DF-AF59C97607E2">
+                        <p class="notep1">Note:</p>
+                        <p>&nbsp;Installing or removing <span>APEX</span> from a CDB requires a local connection to the database.
+                        </p>
+                        <p>This section describes removing <span>APEX</span> from a CDB.
+                        </p>
+                     </div>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Change to the <code class="codeph">apex</code> directory in the location where you unzipped the distribution.</span></li>
+                     <li class="stepexpand"><span>Start <span>SQLcl</span> and connect to the database where <span>APEX</span> is installed as <code class="codeph">SYS</code> specifying the <code class="codeph">SYSDBA</code> role. For example:</span><ul id="GUID-EECD19AD-34C6-4DC4-A9E2-48F747F5A182__CHOICES_QSF_BRM_XWB">
+                           <li>
+                              <p>On Windows:</p><pre class="pre codeblock"><code><span class="italic">SYSTEM_DRIVE:\</span> sql /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span></code></pre></li>
+                           <li>
+                              <p>On UNIX and Linux:</p><pre class="pre codeblock"><code>$ sql /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span></code></pre></li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Run <code class="codeph">apxremov.sql</code>. </span><div>
+                           <p>For example:</p><pre class="pre codeblock"><code>@apxremov.sql</code></pre><div class="infoboxnote" id="GUID-EECD19AD-34C6-4DC4-A9E2-48F747F5A182__GUID-EB9A3ADB-65DA-4CBE-8258-DDF227324553">
+                              <p class="notep1">Note:</p>If you run <code class="codeph">apexremov.sql</code> after PDBs have been added to the CDB, then <span>APEX</span> uninstalls from all of the PDBs, as well as <code class="codeph">CDB$ROOT</code> and <code class="codeph">PDB$SEED</code>. Any applications defined in any of the PDBs will be removed.
+                           </div>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="installing-apex-into-different-pdbs.html#GUID-91809585-A1BA-44B5-8AD5-8FB44FB61A3F" title="You can install different versions of Oracle APEX into different PDBs.">Installing APEX into Different PDBs</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMIG29442"></a><div class="props_rev_3"><a id="GUID-1BD78FA9-CA7C-47CF-A5A9-30CA3084315B" name="GUID-1BD78FA9-CA7C-47CF-A5A9-30CA3084315B"></a><h3 id="HTMIG-GUID-1BD78FA9-CA7C-47CF-A5A9-30CA3084315B" class="sect3"><span class="enumeration_section">5.3.2 </span>Installing <span>APEX</span> Locally in a PDB
+               </h3>
+               <div>
+                  <p>Learn how to install <span>Oracle APEX</span> locally in a PDB.
+                  </p>
+                  <div class="p">
+                     <p>Once you have removed <span>APEX</span> from the container database by following the instructions in <a href="installing-apex-into-different-pdbs.html#GUID-EECD19AD-34C6-4DC4-A9E2-48F747F5A182" title="Learn how to uninstall Oracle APEX from a CDB.">Uninstalling APEX from a CDB</a>, you can install <span>APEX</span> locally in a PDB.
+                     </p>
+                  </div>
+                  <div class="section">
+                     <p>To install <span>APEX</span> locally in a PDB:
+                     </p>
+                  </div>
+                  <ol id="GUID-1BD78FA9-CA7C-47CF-A5A9-30CA3084315B__STEPS_GSK_FCQ_R5B">
+                     <li class="stepexpand"><span>Change the <code class="codeph">apex</code> directory in the location where you unzipped the distribution.</span></li>
+                     <li class="stepexpand"><span>Start <span>SQLcl</span> and connect to the database where <span>APEX</span> is installed as SYS specifying the SYSDBA role. For example:</span><ul id="GUID-1BD78FA9-CA7C-47CF-A5A9-30CA3084315B__CHOICES_BJT_FRM_XWB">
+                           <li>
+                              <p>On Windows:</p><pre class="pre codeblock"><code><span class="italic">SYSTEM_DRIVE:\</span> sql /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span></code></pre></li>
+                           <li>
+                              <p>On UNIX and Linux:</p><pre class="pre codeblock"><code>$ sql /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span></code></pre></li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Set the container to the PDB you want to install <span>APEX</span> locally:</span><div><pre class="pre codeblock"><code>ALTER SESSION SET CONTAINER = &lt;<span class="italic">PDB_name</span>&gt;;</code></pre></div>
+                     </li>
+                     <li class="stepexpand"><span>Select the appropriate installation option. </span><div>
+                           <p><span class="bold">Full development environment</span> provides complete access to the <span>App Builder</span> environment to develop applications. A <span class="bold">Runtime environment</span> enables users to run applications that cannot be modified. 
+                           </p>
+                           <p>Available installation options include:</p>
+                           <ul style="list-style-type: disc;" id="GUID-1BD78FA9-CA7C-47CF-A5A9-30CA3084315B__UL_ISK_FCQ_R5B">
+                              <li>
+                                 <p><span class="bold">Full development environment</span> - Run <code class="codeph">apexins.sql</code> passing the following four arguments in the order shown:
+                                 </p><pre class="pre codeblock"><code>@apexins.sql <span class="italic">tablespace_apex</span> <span class="italic">tablespace_files</span> <span class="italic">tablespace_temp</span> <span class="italic">images</span></code></pre><p>Where:</p>
+                                 <ul style="list-style-type: disc;" id="GUID-1BD78FA9-CA7C-47CF-A5A9-30CA3084315B__UL_JSK_FCQ_R5B">
+                                    <li><span class="italic"><code class="codeph">tablespace_apex</code></span> is the name of the tablespace for the <span>APEX</span> platform schema.
+                                    </li>
+                                    <li><span class="italic"><code class="codeph">tablespace_files</code></span> is the name of the tablespace for the <span>APEX</span> files schema.
+                                    </li>
+                                    <li><span class="italic"><code class="codeph">tablespace_temp</code></span> is the name of the temporary tablespace or tablespace group.
+                                    </li>
+                                    <li><span class="italic"><code class="codeph">images</code></span> is the virtual directory for <span>APEX</span> images. To support future <span>APEX</span> upgrades, define the virtual image directory as <code class="codeph">/i/</code>.
+                                    </li>
+                                 </ul>
+                                 <p>For example:</p><pre class="pre codeblock"><code>@apexins.sql SYSAUX SYSAUX TEMP /i/</code></pre></li>
+                              <li>
+                                 <p><span class="bold">Runtime environment</span> - Run <code class="codeph">apxrtins.sql</code> passing the following four arguments in the order shown:
+                                 </p><pre class="pre codeblock"><code>@apxrtins.sql <span class="italic">tablespace_apex</span> <span class="italic">tablespace_files</span> <span class="italic">tablespace_temp</span> <span class="italic">images</span></code></pre><p>Where:</p>
+                                 <ul style="list-style-type: disc;" id="GUID-1BD78FA9-CA7C-47CF-A5A9-30CA3084315B__UL_KSK_FCQ_R5B">
+                                    <li><span class="italic"><code class="codeph">tablespace_apex</code></span> is the name of the tablespace for the <span>APEX</span> platform schema.
+                                    </li>
+                                    <li><span class="italic"><code class="codeph">tablespace_files</code></span> is the name of the tablespace for the <span>APEX</span> files schema.
+                                    </li>
+                                    <li><span class="italic"><code class="codeph">tablespace_temp</code></span> is the name of the temporary tablespace or tablespace group.
+                                    </li>
+                                    <li><span class="italic"><code class="codeph">images</code></span> is the virtual directory for <span>APEX</span> images. To support future <span>APEX</span> upgrades, define the virtual image directory as <code class="codeph">/i/</code>.
+                                    </li>
+                                 </ul>
+                                 <p>For example:</p><pre class="pre codeblock"><code>@apxrtins.sql SYSAUX SYSAUX TEMP /i/</code></pre></li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Complete the appropriate steps in <a href="installing-and-configuring-apex-and-ords.html#GUID-8EE981AD-B1F9-46C2-BB5A-C9FE60CCD4AA" title="Install or upgrade Oracle APEX by downloading a ZIP file from the APEX download page and then downloading and installing Oracle REST Data Services (ORDS). These instructions apply to both new and upgrade installations.">Installing and Configuring APEX and Oracle REST Data Services</a>.</span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-1BD78FA9-CA7C-47CF-A5A9-30CA3084315B__GUID-F7BA5691-95E1-4759-AF96-9FF1B085897F">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-1BD78FA9-CA7C-47CF-A5A9-30CA3084315B__UL_PH5_RWF_HTB">
+                        <li><a href="installing-and-configuring-apex-and-ords.html#GUID-8EE981AD-B1F9-46C2-BB5A-C9FE60CCD4AA" title="Install or upgrade Oracle APEX by downloading a ZIP file from the APEX download page and then downloading and installing Oracle REST Data Services (ORDS). These instructions apply to both new and upgrade installations.">Installing and Configuring APEX and Oracle REST Data Services</a></li>
+                        <li><a href="about-apex-database-accounts.html#GUID-665B41C6-1B8B-4876-9274-E6149B377822" title="Oracle APEX creates the following database accounts at installation.">About APEX Database Accounts</a></li>
+                        <li><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmig&id=SQCUG-GUID-1343FA2B-BDB4-4645-B4D4-CD7C3E200AC9" target="_blank">Working with SQLcl</a> in <span><cite>Oracle SQLcl User’s
+                                        Guide</cite></span> for more information about <span>SQLcl</span></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="installing-apex-into-different-pdbs.html#GUID-91809585-A1BA-44B5-8AD5-8FB44FB61A3F" title="You can install different versions of Oracle APEX into different PDBs.">Installing APEX into Different PDBs</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMIG29443"></a><div class="props_rev_3"><a id="GUID-711396F6-DC1C-4EF8-8CA5-4C36E8615DFD" name="GUID-711396F6-DC1C-4EF8-8CA5-4C36E8615DFD"></a><h3 id="HTMIG-GUID-711396F6-DC1C-4EF8-8CA5-4C36E8615DFD" class="sect3"><span class="enumeration_section">5.3.3 </span>Installing <span>APEX</span> into a CDB
+               </h3>
+               <div>
+                  <div class="section">
+                     <p>To install <span>Oracle APEX</span> into a CDB:
+                     </p>
+                     <div class="infoboxnote" id="GUID-711396F6-DC1C-4EF8-8CA5-4C36E8615DFD__GUID-CEDB2D04-69B6-456C-9C79-6C6DFDBE4FCD">
+                        <p class="notep1">Note:</p>
+                        <p>Installing or removing <span>APEX</span> from a CDB requires a local connection to the database.
+                        </p>
+                     </div>
+                  </div>
+                  <ol id="GUID-711396F6-DC1C-4EF8-8CA5-4C36E8615DFD__STEPS_EZP_KTQ_R5B">
+                     <li class="stepexpand"><span>Change your working directory to the <code class="codeph">apex</code> directory in the location where you unzipped the distribution.</span></li>
+                     <li class="stepexpand"><span>Start <span>SQLcl</span> and connect to <code class="codeph">CDB$ROOT</code> of the database where <span>APEX</span> is installed as <code class="codeph">SYS</code> specifying the <code class="codeph">SYSDBA</code> role. For example:</span><ul id="GUID-711396F6-DC1C-4EF8-8CA5-4C36E8615DFD__CHOICES_IM1_4RM_XWB">
+                           <li>
+                              <p>On Windows:</p><pre class="pre codeblock"><code><span class="italic">SYSTEM_DRIVE:\</span> sql /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span></code></pre></li>
+                           <li>
+                              <p>On UNIX and Linux:</p><pre class="pre codeblock"><code>$ sql /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span></code></pre></li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Select the appropriate installation option.</span><div>
+                           <p><span class="bold">Full development environment</span> provides complete access to the <span>App Builder</span> environment to develop applications. A <span class="bold">Runtime environment</span> enables users to run applications that cannot be modified.
+                           </p>
+                           <p>Available installation options include:</p>
+                           <ul style="list-style-type: disc;" id="GUID-711396F6-DC1C-4EF8-8CA5-4C36E8615DFD__UL_GZP_KTQ_R5B">
+                              <li>
+                                 <p><span class="bold">Full development environment</span>. Run <code class="codeph">apexins.sql</code> passing the following four arguments in the order shown:
+                                 </p><pre class="pre codeblock"><code>@apexins.sql <span class="italic">tablespace_apex</span> <span class="italic">tablespace_files</span> <span class="italic">tablespace_temp</span> <span class="italic">images</span></code></pre><p>Where:</p>
+                                 <ul style="list-style-type: disc;" id="GUID-711396F6-DC1C-4EF8-8CA5-4C36E8615DFD__UL_HZP_KTQ_R5B">
+                                    <li><span class="italic"><code class="codeph">tablespace_apex</code></span> is the name of the tablespace for the <span>APEX</span> platform schema.
+                                    </li>
+                                    <li><span class="italic"><code class="codeph">tablespace_files</code></span> is the name of the tablespace for the <span>APEX</span> files schema.
+                                    </li>
+                                    <li><span class="italic"><code class="codeph">tablespace_temp</code></span> is the name of the temporary tablespace or tablespace group.
+                                    </li>
+                                    <li><span class="italic"><code class="codeph">images</code></span> is the virtual directory for <span>APEX</span> images. To support future <span>APEX</span> upgrades, define the virtual image directory as <code class="codeph">/i/</code>.
+                                    </li>
+                                 </ul>
+                                 <p>Example:</p><pre class="pre codeblock"><code>@apexins.sql SYSAUX SYSAUX TEMP /i/</code></pre></li>
+                              <li>
+                                 <p><span class="bold">Runtime environment</span>. Run <code class="codeph">apxrtins.sql</code> passing the following arguments in the order shown:
+                                 </p><pre class="pre codeblock"><code>@apxrtins.sql <span class="italic">tablespace_apex</span> <span class="italic">tablespace_files</span> <span class="italic">tablespace_temp</span> <span class="italic">images</span></code></pre><p>Where:</p>
+                                 <ul style="list-style-type: disc;" id="GUID-711396F6-DC1C-4EF8-8CA5-4C36E8615DFD__UL_IZP_KTQ_R5B">
+                                    <li><span class="italic"><code class="codeph">tablespace_apex</code></span> is the name of the tablespace for the <span>APEX</span> platform schema.
+                                    </li>
+                                    <li><span class="italic"><code class="codeph">tablespace_files</code></span> is the name of the tablespace for the <span>APEX</span> files schema.
+                                    </li>
+                                    <li><code class="codeph">tablespace_temp</code> is the name of the temporary tablespace or tablespace group.
+                                    </li>
+                                    <li><code class="codeph">images</code> is the virtual directory for <span>APEX</span> images. To support future <span>APEX</span> upgrades, define the virtual image directory as <code class="codeph">/i/</code>.
+                                    </li>
+                                 </ul>
+                                 <p>Example:</p><pre class="pre codeblock"><code>@apxrtins.sql SYSAUX SYSAUX TEMP /i/</code></pre></li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Complete appropriate steps in <a href="installing-and-configuring-apex-and-ords.html#GUID-8EE981AD-B1F9-46C2-BB5A-C9FE60CCD4AA" title="Install or upgrade Oracle APEX by downloading a ZIP file from the APEX download page and then downloading and installing Oracle REST Data Services (ORDS). These instructions apply to both new and upgrade installations.">Installing and Configuring APEX and Oracle REST Data Services</a>.</span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-711396F6-DC1C-4EF8-8CA5-4C36E8615DFD__GUID-720D670D-5F89-4580-B1FD-B7243D30C8B6">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-711396F6-DC1C-4EF8-8CA5-4C36E8615DFD__UL_KZP_KTQ_R5B">
+                        <li><a href="plugging-in-pdb-when-apex-installed-in-root-container.html#GUID-E7BB8412-0A26-4C62-A220-21CC5D551B8A" title="Learn how to patch or upgrade Oracle APEX in the root container.">Patching or Upgrading APEX in a CDB</a></li>
+                        <li><a href="about-apex-runtime-environment.html#GUID-BEB2F250-40B7-4022-9B05-3B1199386020" title="Learn about the Oracle APEX runtime environment.">About the APEX Runtime Environment</a></li>
+                        <li><a href="installing-and-configuring-apex-and-ords.html#GUID-8EE981AD-B1F9-46C2-BB5A-C9FE60CCD4AA" title="Install or upgrade Oracle APEX by downloading a ZIP file from the APEX download page and then downloading and installing Oracle REST Data Services (ORDS). These instructions apply to both new and upgrade installations.">Installing and Configuring APEX and Oracle REST Data Services</a></li>
+                        <li><a href="about-apex-database-accounts.html#GUID-665B41C6-1B8B-4876-9274-E6149B377822" title="Oracle APEX creates the following database accounts at installation.">About APEX Database Accounts</a></li>
+                        <li><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmig&id=SQCUG-GUID-1343FA2B-BDB4-4645-B4D4-CD7C3E200AC9" target="_blank">Working with SQLcl</a> in <span><cite>Oracle SQLcl User’s
+                                        Guide</cite></span></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="installing-apex-into-different-pdbs.html#GUID-91809585-A1BA-44B5-8AD5-8FB44FB61A3F" title="You can install different versions of Oracle APEX into different PDBs.">Installing APEX into Different PDBs</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

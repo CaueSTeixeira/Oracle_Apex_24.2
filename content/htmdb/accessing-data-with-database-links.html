@@ -1,0 +1,214 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Accessing Data with Database Links">
+      <meta name="abstract" content="Access data remotely by creating a database link.">
+      <meta name="description" content="Access data remotely by creating a database link.">
+      <meta name="DC.subject" content="data, accessing with database links, database link, about, creating, viewing existing database links">
+      <meta name="keywords" content="data, accessing with database links, database link, about, creating, viewing existing database links">
+      <meta name="DC.Relation" scheme="URI" content="managing-application-data.html#GUID-32A38938-FAEC-4535-B944-1C1E50315F02">
+      <meta name="DC.Relation" scheme="URI" content="accessing-data-with-database-links.html#GUID-2E87C0DF-FDA4-4F69-BF13-75D7893FE0F8">
+      <meta name="DC.Relation" scheme="URI" content="accessing-data-with-database-links.html#GUID-5649BEA3-20B3-47D3-8241-08B271BD3658">
+      <meta name="DC.Relation" scheme="URI" content="accessing-data-with-database-links.html#GUID-A4149D29-B509-4B17-82C2-B1A9BC0B234D">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-6F86A22B-6D8B-4573-887F-25D21025CE04">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Access data remotely by creating a database link.">
+      <meta name="description" content="Access data remotely by creating a database link.">
+      <title>Accessing Data with Database Links</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Access data remotely by creating a database link.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="creating-an-ai-assistant-to-suggest-salary.html" title="Previous" type="text/html">
+      <link rel="next" href="extending-application-capabilities.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Accessing Data with Database Links","description":"Access data remotely by creating a database link.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="creating-an-ai-assistant-to-suggest-salary.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="extending-application-capabilities.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-6F86A22B-6D8B-4573-887F-25D21025CE04" name="GUID-6F86A22B-6D8B-4573-887F-25D21025CE04"></a><a id="HTMDB13001"></a>
+         
+         <h2 id="HTMDB-GUID-6F86A22B-6D8B-4573-887F-25D21025CE04" class="sect2"><span class="enumeration_section">18.9 </span>Accessing Data with Database Links
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Access data remotely by creating a database link.</p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="accessing-data-with-database-links.html#GUID-2E87C0DF-FDA4-4F69-BF13-75D7893FE0F8">About Database Links</a><br>A database link is a schema object in one database that enables you to                                 access objects on another database.
+                  </li>
+                  <li class="ulchildlink"><a href="accessing-data-with-database-links.html#GUID-5649BEA3-20B3-47D3-8241-08B271BD3658">Creating a Database Link</a><br>Create a database link in Object Browser.
+                  </li>
+                  <li class="ulchildlink"><a href="accessing-data-with-database-links.html#GUID-A4149D29-B509-4B17-82C2-B1A9BC0B234D">Viewing an Existing Database Link</a><br>View existing database links in Object Browser.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-6F86A22B-6D8B-4573-887F-25D21025CE04__GUID-3B175701-592E-4982-8CC3-69832F7D855C">
+                  <p class="notep1">See Also:</p>
+                  <ul style="list-style-type: disc;">
+                     <li><a href="../aeutl/managing-db-objects-with-object-browser.html#AEUTL-GUID-04321951-FD96-4930-8F44-0D8441E8B731" target="_blank">Managing Database Objects with Object Browser</a> in <span><cite>Oracle APEX SQL Workshop
+                                        Guide</cite></span></li>
+                     <li><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmdb&id=ADMIN-GUID-93B235DD-BF66-444D-9F0F-9D4B2F590C41" target="_blank">Database Links</a> in <span><cite>Oracle Database
+                                        Administrator’s Guide</cite></span></li>
+                  </ul>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-application-data.html#GUID-32A38938-FAEC-4535-B944-1C1E50315F02">Managing Application Data</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB29441"></a><div class="props_rev_3"><a id="GUID-2E87C0DF-FDA4-4F69-BF13-75D7893FE0F8" name="GUID-2E87C0DF-FDA4-4F69-BF13-75D7893FE0F8"></a><h3 id="HTMDB-GUID-2E87C0DF-FDA4-4F69-BF13-75D7893FE0F8" class="sect3"><span class="enumeration_section">18.9.1 </span>About Database Links
+               </h3>
+               <div>
+                  <p>A database link is a schema object in one database that enables you to
+                                access objects on another database.</p>
+                  <div class="infoboxnote" id="GUID-2E87C0DF-FDA4-4F69-BF13-75D7893FE0F8__GUID-095C8F90-1179-43E5-8E3E-F58D1671BFAB">
+                     <p class="notep1">Note:</p>
+                     
+                     <p>By default, the CREATE DATABASE LINK system privilege is not granted to a provisioned workspace or database user. To use this feature, a DBA or administrator must grant this specific privilege to the database user in the user's workspace. See <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmdb&id=ADMIN-GUID-B5950167-35F8-4C88-B063-382E0290CB53" target="_blank">Creating Database Links</a> in <span><cite>Oracle Database
+                                        Administrator’s Guide</cite></span>.
+                     </p>
+                     
+                  </div>
+                  <p>Because <span>Oracle APEX</span> runs in the Oracle database, you have access to all distributed Oracle database capabilities. Typically, you perform distributed database operations using database links.
+                  </p>
+                  <p>Once you create a database link you can access the remote objects by appending <code class="codeph">@dblink</code> to the table or view name where <code class="codeph">dblink</code> is the Database Link Name you specify in the Create Database Object Wizard.
+                  </p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="accessing-data-with-database-links.html#GUID-6F86A22B-6D8B-4573-887F-25D21025CE04" title="Access data remotely by creating a database link.">Accessing Data with Database Links</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29442"></a><div class="props_rev_3"><a id="GUID-5649BEA3-20B3-47D3-8241-08B271BD3658" name="GUID-5649BEA3-20B3-47D3-8241-08B271BD3658"></a><h3 id="HTMDB-GUID-5649BEA3-20B3-47D3-8241-08B271BD3658" class="sect3"><span class="enumeration_section">18.9.2 </span>Creating a Database Link
+               </h3>
+               <div>
+                  <p>Create a database link in Object Browser.</p>
+                  <p>To create a database link:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click <span class="uicontrol bold">SQL Workshop</span> and then <span class="uicontrol bold">Object Browser</span>. </span><div>
+                           <p>Object Browser home page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create</span>.</span></li>
+                     <li class="stepexpand"><span>Select <span class="uicontrol bold">Database Link</span> and click <span class="uicontrol bold">Next</span>.</span></li>
+                     <li class="stepexpand"><span>Follow the on-screen instructions.</span><div>
+                           <p>Note that Database Link names must conform to Oracle naming conventions and cannot contain spaces, or start with a number or underscore.</p>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="accessing-data-with-database-links.html#GUID-6F86A22B-6D8B-4573-887F-25D21025CE04" title="Access data remotely by creating a database link.">Accessing Data with Database Links</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29443"></a><div class="props_rev_3"><a id="GUID-A4149D29-B509-4B17-82C2-B1A9BC0B234D" name="GUID-A4149D29-B509-4B17-82C2-B1A9BC0B234D"></a><h3 id="HTMDB-GUID-A4149D29-B509-4B17-82C2-B1A9BC0B234D" class="sect3"><span class="enumeration_section">18.9.3 </span>Viewing an Existing Database Link
+               </h3>
+               <div>
+                  <p>View existing database links in Object Browser.</p>
+                  <div class="section">
+                     <p>To view an existing a database link:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click <span class="uicontrol bold">SQL Workshop</span> and then <span class="uicontrol bold">Object Browser</span>. </span><div>
+                           <p>Object Browser appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Select the object type <span class="uicontrol bold">Database Links</span> at the top of the page. </span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="accessing-data-with-database-links.html#GUID-6F86A22B-6D8B-4573-887F-25D21025CE04" title="Access data remotely by creating a database link.">Accessing Data with Database Links</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

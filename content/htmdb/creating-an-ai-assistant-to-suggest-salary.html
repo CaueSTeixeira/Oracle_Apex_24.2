@@ -1,0 +1,454 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Creating an AI Assistant to Suggest Salary">
+      <meta name="abstract" content="Create an AI Assistant to suggest salary recommendations.">
+      <meta name="description" content="Create an AI Assistant to suggest salary recommendations.">
+      <meta name="DC.subject" content="AI Assistant, example">
+      <meta name="keywords" content="AI Assistant, example">
+      <meta name="DC.Relation" scheme="URI" content="including-generative-ai-in-applications.html#GUID-1A53C3E5-658D-48D8-9C48-E9163B5D094F">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Task">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Create an AI Assistant to suggest salary recommendations.">
+      <meta name="description" content="Create an AI Assistant to suggest salary recommendations.">
+      <title>Creating an AI Assistant to Suggest Salary</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Create an AI Assistant to suggest salary recommendations.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="creating-a-dynamic-action-to-generate-text-with-ai.html" title="Previous" type="text/html">
+      <link rel="next" href="accessing-data-with-database-links.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Creating an AI Assistant to Suggest Salary","description":"Create an AI Assistant to suggest salary recommendations.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="creating-a-dynamic-action-to-generate-text-with-ai.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="accessing-data-with-database-links.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A" name="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A"></a>
+         
+         <h2 id="HTMDB-GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A" class="sect2"><span class="enumeration_section">18.8.4.6 </span>Creating an AI Assistant to Suggest
+        Salary
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Create an AI Assistant to suggest salary recommendations.</p>
+               <div class="p">
+                  
+                  <p>The example in this topic describes how to create an AI Assistant that
+                provides salary recommendations for employees. This example assumes you have
+                completed the following tasks:</p>
+                  
+                  <ul style="list-style-type: disc;" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__UL_H2W_PYD_MBC">
+                     <li>Have access the <code class="codeph">EMP</code> table available in EMP / DEPT
+                    sample dataset. To learn more, see <a href="../aeutl/using-sample-datasets.html#AEUTL-GUID-FCBF7637-0FF9-4135-98FB-EC7155334EB4" target="_blank">Using Sample Datasets</a> in <span><cite>Oracle APEX SQL Workshop
+                                        Guide</cite></span></li>
+                     <li>Create an interactive report, named <code class="codeph">Employees</code>, and
+                    form page, named <code class="codeph">Edit Employee</code>, on the <code class="codeph">EMP</code>
+                    table. See <a href="managing-interactive-reports.html#GUID-24C05873-1362-4CC5-A9E5-0252C388CC67" title="An interactive report page features a searchable, easily customizable report.">Managing Interactive Reports</a>.
+                     </li>
+                  </ul>
+                  
+               </div>
+               <p>To create an AI Assistant to suggest salary
+                recommendations:</p>
+               <ol>
+                  <li class="stepexpand"><span>View the form page in Page Designer:</span><ol type="a" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__SUBSTEPS_M5Y_2P2_MBC">
+                        <li class="substepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                        <li class="substepexpand"><span>Select the application.</span></li>
+                        <li class="substepexpand"><span>Select the form page, <code class="codeph">Edit Employee</code>.</span><div>The form page displays in Page
+                            Designer.</div>
+                        </li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>On the form page, add a button named SUGGEST_SALARY:</span><ol type="a" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__SUBSTEPS_ISF_WF2_MBC">
+                        <li class="substepexpand"><span>Right-click the <span class="uicontrol bold">Edit Employee</span> region and select
+                                <span class="uicontrol bold">Create Button</span>.</span><div>
+                              
+                              <p>In the Property Editor, edit the Button attributes.</p>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Identification, Button Name - Enter the name used to reference the
+                            button. For example, enter:</span><div><code class="codeph">SUGGEST_SALARY</code></div>
+                        </li>
+                        <li class="substepexpand"><span>Change the button position so it displays to the right of Salary
+                                (<code class="codeph">P3_SAL</code>).</span><div>
+                              
+                              <div class="infobox-tip" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__GUID-B68E43BF-E51A-4808-8C1B-40B4A820106E">
+                                 <p class="notep1">Tip:</p>You can edit the button attributes or drag and drop the
+                                button to the appropriate location in the Layout pane.
+                              </div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__UL_JSF_WF2_MBC">
+                                 <li>
+                                    
+                                    <p>Layout, Sequence - Enter the display sequence for this item.
+                                        Enter <code class="codeph">60</code></p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Layout, Start New Row - Disable <span class="uicontrol bold">Start New
+                                            Row</span>.
+                                    </p>
+                                    
+                                    <p>Note <span class="uicontrol bold">New Column</span> is now
+                                        enabled.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                              <br><div class="imageleft"><img class="imageleft" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__IMAGE_JT4_TDD_4BC" height="519" width="1104" src="img/ai_assistant_suggest_salary_button.png" alt="Description of ai_assistant_suggest_salary_button.png follows" title="Description of ai_assistant_suggest_salary_button.png follows" longdesc="img_text/ai_assistant_suggest_salary_button.html"><br><a href="img_text/ai_assistant_suggest_salary_button.html">Description of the illustration ai_assistant_suggest_salary_button.png</a></div><br>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Appearance, Button Template - Select <span class="uicontrol bold">Text with
+                                Icon</span>.</span></li>
+                        <li class="substepexpand"><span>Appearance, Hot - Enable <span class="uicontrol bold">Hot</span>.</span></li>
+                        <li class="substepexpand"><span>Appearance, Template Options - Click <span class="uicontrol bold">Use Template
+                                Defaults</span>. In Template Options dialog, configure the
+                            following:</span><div>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__UL_W4G_BDF_MBC">
+                                 <li>Common, Size - Select
+                                    <span class="uicontrol bold">Large</span>.
+                                 </li>
+                                 <li>Common, Width - Select
+                                        <span class="uicontrol bold">Stretch</span>.
+                                 </li>
+                                 <li>Advanced, Spacing Top - Select
+                                        <span class="uicontrol bold">Large</span>.
+                                 </li>
+                                 <li>Click <span class="uicontrol bold">OK</span>.
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Appearance, Icon - Select <span class="uicontrol bold">fa-robot</span>.</span></li>
+                        <li class="substepexpand"><span>Behavior, Action - Select <span class="uicontrol bold">Defined by Dynamic
+                                Action</span>.</span></li>
+                        <li class="substepexpand"><span>Behavior, Execute Validations - Disable <span class="uicontrol bold">Execute
+                                Validations</span>.</span></li>
+                        <li class="substepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Add a hidden item named P3_DEPARTMENT:</span><ol type="a" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__SUBSTEPS_YZC_VTG_MBC">
+                        <li class="substepexpand"><span>Right-click the <span class="uicontrol bold">Edit Employee</span> region and select
+                                <span class="uicontrol bold">Create Page Item</span></span><div>
+                              
+                              <p>In the Property Editor, edit the Page Item
+                                attributes.</p>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Identification, Name - Enter the item name. For example, enter: </span><div><code class="codeph">P3_DEPARTMENT</code></div>
+                        </li>
+                        <li class="substepexpand"><span>Identification, Type - Select <span class="uicontrol bold">Hidden</span>.</span></li>
+                        <li class="substepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Create a computation to retrieve the department name:</span><ol type="a" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__SUBSTEPS_OZB_ZTG_MBC">
+                        <li class="substepexpand"><span>Right-click <span class="uicontrol bold">P3_DEPARTMENT</span> and select
+                                <span class="uicontrol bold">Create Computation</span>.</span><div>
+                              
+                              <p>In the Property Editor, edit the Computation
+                                attributes.</p>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Computation, Type - Select <span class="uicontrol bold">SQL Query (return single
+                                value)</span>.</span></li>
+                        <li class="substepexpand"><span>Computation, SQL Query - Enter the following:</span><div>
+                              <pre class="pre codeblock"><code>select dname
+  from dept
+ where deptno = :P3_DEPTNO</code></pre>
+                              </div>
+                        </li>
+                        <li class="substepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Add a hidden item named P3_INIT_PROMPT:</span><ol type="a" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__SUBSTEPS_TJR_RZD_MBC">
+                        <li class="substepexpand"><span>Right-click the <span class="uicontrol bold">Edit Employee</span> region and select
+                                <span class="uicontrol bold">Create Page Item</span></span><div>
+                              
+                              <p>In the Property Editor, edit the Page Item
+                                attributes.</p>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Identification, Name - Enter the item name. For example, enter: </span><div><code class="codeph">P3_INIT_PROMPT</code></div>
+                        </li>
+                        <li class="substepexpand"><span>Identification, Type - Select <span class="uicontrol bold">Hidden</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>For P3_INIT_PROMPT, create a computation:</span><ol type="a" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__SUBSTEPS_CNR_CTG_MBC">
+                        <li class="substepexpand"><span>Right-click <span class="uicontrol bold">P3_INIT_PROMPT</span> and select
+                                <span class="uicontrol bold">Create Computation</span>.</span><div>
+                              
+                              <p>In the Property Editor, edit the Computation
+                                attributes.</p>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Computation, Type - Select <span class="uicontrol bold">Static Value</span>.</span></li>
+                        <li class="substepexpand"><span>Computation, Static Value - Enter the following:</span><div>
+                              <pre class="pre codeblock"><code>Department: &amp;P3_DEPARTMENT. Current salary: &amp;P3_SAL.</code></pre>
+                              </div>
+                        </li>
+                        <li class="substepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Create a dynamic action that fires when the user clicks the SUGGEST_SALARY
+                    button:</span><ol type="a" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__SUBSTEPS_X2J_KC2_MBC">
+                        <li class="substepexpand"><span>Click the <span class="uicontrol bold">Dynamic Actions</span> tab in the left
+                            pane.</span></li>
+                        <li class="substepexpand"><span>Right-click <span class="uicontrol bold">Click</span> and select <span class="uicontrol bold">Create
+                                Dynamic Action</span>.</span><div>A dynamic action named <span class="uicontrol bold">New</span>
+                            appears in the left pane. The Property Editor displays Dynamic Action
+                            attributes.
+                           </div>
+                        </li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>In the Property Editor, edit the Dynamic Action attributes:</span><ol type="a" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__SUBSTEPS_XPV_5C2_MBC">
+                        <li class="substepexpand"><span>Identification, Name - Enter the name of the dynamic action. For
+                            example, enter: </span><div><code class="codeph">AI: Suggest Salary</code></div>
+                        </li>
+                        <li class="substepexpand"><span>When, Event - Specifies the event that causes the dynamic action to
+                            fire. Accept the default, <span class="uicontrol bold">Click</span>.</span></li>
+                        <li class="substepexpand"><span>When, Selection Type - Specifies the page element or construct that
+                            triggers the event. For example, select
+                            <span class="uicontrol bold">Button</span>.</span></li>
+                        <li class="substepexpand"><span>When, Button - Specify the button that triggers the dynamic action.
+                            Select <span class="uicontrol bold">SUGGEST_SALARY</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Edit the True action, <span class="uicontrol bold">Show</span>. In the Dynamic Action tab,
+                    click the <span class="uicontrol bold">Show</span> action.</span><div>
+                        
+                        <p>Edit the Action attributes  in the Property Editor.</p>
+                        
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>Identification, Action - Select <span class="uicontrol bold">Show AI Assistant</span>.
+                </span></li>
+                  <li class="stepexpand"><span>Configure Generative AI attributes:</span><ol type="a">
+                        <li class="substepexpand"><span>Generative AI, Service - Select the Generative AI Service to be used by
+                            the AI Assistant. <span class="uicontrol bold">Application Default</span> uses the
+                            Generative AI Service specified on the AI page in the application
+                            attributes. See <a href="configuring-ai-attributes-for-an-application.html#GUID-CD2168E6-EB55-45C8-8D78-D2622A9E2532" title="Edit attributes on the AI page to select a Generative AI Service and define the Consent message for a application.">Configuring AI Attributes for an Application</a>.</span></li>
+                        <li class="substepexpand"><span>Generative AI, System Prompt - The System Prompt gives the AI a
+                            context. This message does not display on front end, but is sent to all
+                            AI service requests on the back end.</span><div>
+                              
+                              <p>You will use this attribute in conjunction with
+                                    <span class="uicontrol bold">Initial Prompt</span>.
+                              </p>
+                              
+                              <p>Enter:</p>
+                              <pre class="pre codeblock"><code>You are an HR manager who provides suggestions for salary raises of employees.
+Based on the department the percentage of the increase differs.
+
+Here is the list of departments and the increase percentage values:
+- ACCOUNTING 5%
+- OPERATIONS 7%
+- RESEARCH 10%
+- SALES 3%
+
+You will get the department information and the current salary of an employee.
+Based on these information you will calculate a new salary.
+
+The calculated salary should be displayed without special characters and currency symbols. Also round decimal numbers to the next highest integer. Answer in complete but short sentences containing the calculated salary.
+
+Only answer questions to salary suggestions and nothing else.
+If needed parameters like the department name or current base salary are missing, reply that you need more information to proceed.</code></pre>
+                              </div>
+                        </li>
+                        <li class="substepexpand"><span>Generative AI, Welcome Message - Specify an optional welcome message
+                            shown by the AI Assistant.  For example, enter:</span><div>
+                              <pre class="pre codeblock"><code>Hi. I'm your personal HR assistant. I can assist you in calculating salary raises.</code></pre>
+                              </div>
+                        </li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Configure the Appearance attributes:</span><ol type="a" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__SUBSTEPS_UH4_Q22_MBC">
+                        <li class="substepexpand"><span>Appearance, Display As - Select how the AI Assistant should appear on
+                            your page. Select <span class="uicontrol bold">Dialog</span>.</span></li>
+                        <li class="substepexpand"><span>Appearance, Title - Enter the title that displays on the dialog. </span><div>
+                              
+                              <p>Enter:</p>
+                              <pre class="pre codeblock"><code>Personal HR Assistant</code></pre>
+                              </div>
+                        </li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Initial Prompt attributes - The <strong class="term">Initial Prompt</strong> is the
+                    first message/context from a user's perspective:</span><ol type="a" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__SUBSTEPS_IXL_RK2_MBC">
+                        <li class="substepexpand"><span>Initial Prompt, Type - Select <span class="uicontrol bold">Item</span>.</span><div>
+                              
+                              <p>This attribute determines how the AI Assistant should
+                                return responses. Select the type of initial prompt to be delivered
+                                to the AI Assistant. The initial prompt represents a message as if
+                                it were coming from the user. This can be either a specific item
+                                value or a value derived from a JavaScript expression. </p>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Initial Prompt, Item - Enter a page item used to set the initial
+                            prompt. </span><div>
+                              
+                              <p>Select <span class="uicontrol bold">P3_INIT_PROMPT</span>.
+                              </p>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Initial Prompt, Immediate Action Prompt - Enter a prompt that is used
+                            in conjunction with the <span class="uicontrol bold">Initial Prompt</span> to display
+                            an immediate AI-generated response for the end user. </span><div>
+                              
+                              <p>Enter:</p>
+                              <pre class="pre codeblock"><code>Calculate the salary suggestion</code></pre>
+                              </div>
+                        </li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Use Response - Returns the content of an answer (or AI message). For this
+                    example, you specify  a page item.</span><ol type="a" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__SUBSTEPS_K3V_BM2_MBC">
+                        <li class="substepexpand"><span>Use Response, Type - Determines how the AI Assistant should return
+                            responses. Select <span class="uicontrol bold">Item</span>.</span></li>
+                        <li class="substepexpand"><span>Use Response, Item - Select <span class="uicontrol bold">P3_SAL</span>.</span></li>
+                        <li class="substepexpand"><span>Use Response, Button Label - Specify the label for the message action
+                            button, which is used to send the response to a designated target.
+                            Enter: </span><div><code class="codeph">Apply suggestion</code></div>
+                        </li>
+                        <li class="substepexpand"><span>Use Response, JavaScript Detection Expression - Enter a JavaScript
+                            Expression to search for certain criteria within the message. This
+                            expression should return the text to be used in the response. Enter the
+                            code:</span><div>
+                              <pre class="pre codeblock"><code>// search for numbers with a length of 3-5 and just return the number if one is found
+this.fullContent.match( /\b\d{3,5}\b/g ) ? this.fullContent.match( /\b\d{3,5}\b/g )[0] : ""</code></pre>
+                              </div>
+                        </li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                  <li class="stepexpand"><span>Test your changes:</span><ol type="a" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__SUBSTEPS_BRD_WN2_MBC">
+                        <li class="substepexpand"><span>Return the Employees page and run the page. </span></li>
+                        <li class="substepexpand"><span>Find an employee and click the Edit icon to view the Edit Employee
+                            form.</span><div>
+                              
+                              <p>The Edit Employee form appears.</p>
+                              <br><div class="imageleft"><img class="imageleft" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__IMAGE_SG5_S2D_4BC" height="665" width="685" src="img/ai_assistant_edit_employee.png" alt="Description of ai_assistant_edit_employee.png follows" title="Description of ai_assistant_edit_employee.png follows" longdesc="img_text/ai_assistant_edit_employee.html"><br><a href="img_text/ai_assistant_edit_employee.html">Description of the illustration ai_assistant_edit_employee.png</a></div><br>
+                              
+                              <p>Note that Clark's Salary is 2450.</p>
+                              
+                           </div>
+                           <div>The Edit Employee form appears.</div>
+                        </li>
+                        <li class="substepexpand"><span>Click <span class="uicontrol bold">Suggest Salary</span>.</span><div>
+                              
+                              <p>The Personal HR Assistant appears.</p>
+                              <br><div class="imageleft"><img class="imageleft" id="GUID-BD590E3A-A0B9-4418-AEFA-1EA0350E303A__IMAGE_IXW_JGD_4BC" height="639" width="539" src="img/ai_assistant_apply_suggestion.png" alt="Description of ai_assistant_apply_suggestion.png follows" title="Description of ai_assistant_apply_suggestion.png follows" longdesc="img_text/ai_assistant_apply_suggestion.html"><br><a href="img_text/ai_assistant_apply_suggestion.html">Description of the illustration ai_assistant_apply_suggestion.png</a></div><br>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Click <span class="uicontrol bold">Apply Suggestion</span>. </span><div>
+                              
+                              <p>Note that the employee's Salary is no 2573.</p>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span> to accept the change and
+                            exit the form.</span></li>
+                     </ol>
+                  </li>
+               </ol>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="including-generative-ai-in-applications.html#GUID-1A53C3E5-658D-48D8-9C48-E9163B5D094F" title="Include Generative AI in your application by creating a Generative AI Service, configuring application attributes on the AI page, and creating a dynamic action to either display the AI Assistant or generate text with AI.">Including Generative AI in Applications</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

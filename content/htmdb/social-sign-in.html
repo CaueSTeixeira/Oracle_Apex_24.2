@@ -1,0 +1,300 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Social Sign-In">
+      <meta name="abstract" content="Social Sign-In supports authentication with Google, Facebook, and other social networks and enterprise identity providers that support OpenID Connect or OAuth2 standards.">
+      <meta name="description" content="Social Sign-In supports authentication with Google, Facebook, and other social networks and enterprise identity providers that support OpenID Connect or OAuth2 standards.">
+      <meta name="DC.subject" content="authentication schemes, Social Sign-In, Social Sign-In authentication, about, setting up">
+      <meta name="keywords" content="authentication schemes, Social Sign-In, Social Sign-In authentication, about, setting up">
+      <meta name="DC.Relation" scheme="URI" content="preconfigured-authentication-schemes.html#GUID-CD382D4A-AC00-4185-B37F-9A5BC9417A7B">
+      <meta name="DC.Relation" scheme="URI" content="social-sign-in.html#GUID-8E0C259E-EE05-4497-A00E-8542730876CB">
+      <meta name="DC.Relation" scheme="URI" content="social-sign-in.html#GUID-592A3256-F94B-40D8-9DBB-91CA5E4A6D9D">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-CF10F6D7-768C-42F9-9362-4CF23BF1C4B8">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Social Sign-In supports authentication with Google, Facebook, and other social networks and enterprise identity providers that support OpenID Connect or OAuth2 standards.">
+      <meta name="description" content="Social Sign-In supports authentication with Google, Facebook, and other social networks and enterprise identity providers that support OpenID Connect or OAuth2 standards.">
+      <title>Social Sign-In</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Social Sign-In supports authentication with Google, Facebook, and other social networks and enterprise identity providers that support OpenID Connect or OAuth2 standards.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="saml-sign-in.html" title="Previous" type="text/html">
+      <link rel="next" href="viewing-authentication-scheme.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Social Sign-In","description":"Social Sign-In supports authentication with Google, Facebook, and other social networks and enterprise identity providers that support OpenID Connect or OAuth2 standards.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="saml-sign-in.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="viewing-authentication-scheme.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-CF10F6D7-768C-42F9-9362-4CF23BF1C4B8" name="GUID-CF10F6D7-768C-42F9-9362-4CF23BF1C4B8"></a>
+         
+         <h2 id="HTMDB-GUID-CF10F6D7-768C-42F9-9362-4CF23BF1C4B8" class="sect2"><span class="enumeration_section">21.4.2.11 </span>Social Sign-In
+         </h2>
+         <div class="ind">
+            <p>Social Sign-In supports authentication with Google, Facebook, and other
+                social networks and enterprise identity providers that support OpenID Connect or
+                OAuth2 standards.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="social-sign-in.html#GUID-8E0C259E-EE05-4497-A00E-8542730876CB">About Social Sign-In</a><br>Learn about Social Sign-In authentication.
+                  </li>
+                  <li class="ulchildlink"><a href="social-sign-in.html#GUID-592A3256-F94B-40D8-9DBB-91CA5E4A6D9D">Setting Up Social Sign-In Authentication</a><br>Learn how to set up Social Sign-In authentication.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="preconfigured-authentication-schemes.html#GUID-CD382D4A-AC00-4185-B37F-9A5BC9417A7B" title="Learn about the preconfigured authentication schemes.">Understanding Preconfigured Authentication Schemes</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-8E0C259E-EE05-4497-A00E-8542730876CB" name="GUID-8E0C259E-EE05-4497-A00E-8542730876CB"></a><h3 id="HTMDB-GUID-8E0C259E-EE05-4497-A00E-8542730876CB" class="sect3"><span class="enumeration_section">21.4.2.11.1 </span>About Social Sign-In
+               </h3>
+               <div>
+                  <p>Learn about Social Sign-In authentication.</p>
+                  <p>Social Sign-In authentication is primarily useful for the following use cases:</p>
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        <p>Your application is internet facing and you expect an unknown number of users from social networks to use your application.</p>
+                     </li>
+                     <li>
+                        <p>Your company has standardized on one of these identity providers for authentication:
+                        <code class="codeph">Oracle Identity Cloud Service</code>, an internal <code class="codeph">OpenID
+                        Connect</code> or <code class="codeph">OAuth2</code>.
+                        </p>
+                        
+                        <p>Since these identity providers perform user credential verification,
+                    be aware that anyone who registers with the provider can use your application,
+                    unless you use authorization schemes for protection.</p>
+                     </li>
+                  </ul>
+                  <div class="p"> When registering your application with the identity provider, you need to use the full URI for one of the predefined<span>Oracle APEX</span> callback URLs. For example, suppose your application URI is:<pre class="pre codeblock"><code>https://www.example.com/apex/f?p=100</code></pre></div>
+                  <p>Then, you can register one of the following:</p><pre class="pre codeblock"><code>https://www.example.com/apex/apex_authentication.callback</code></pre><p>or </p><pre class="pre codeblock"><code>https://www.example.com/apex/apex_authentication.callback2</code></pre><p>Social network authentication providers store a multitude of information about users. You can configure the Social Login authentication scheme to request this information, using the Scope attribute (see Item Help). In the authentication scheme's Post-Authentication procedure, you can access this information using <code class="codeph">APEX_JSON.GET_%</code> function calls.
+                  </p>
+                  <p>You can use multiple authentication schemes in your application, to support more than one Social Login provider and other schemes. </p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-8E0C259E-EE05-4497-A00E-8542730876CB__GUID-7C9B9F8D-56AD-444D-BEF4-5331177DFB4D">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="configuring-security-attributes.html#GUID-69485470-823B-4CC0-9E11-1CF144054F53">Authorization</a> for the authentication scheme attribute <code class="codeph">Switch in Session</code> for details.
+                     </p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="social-sign-in.html#GUID-CF10F6D7-768C-42F9-9362-4CF23BF1C4B8" title="Social Sign-In supports authentication with Google, Facebook, and other social networks and enterprise identity providers that support OpenID Connect or OAuth2 standards.">Social Sign-In</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-592A3256-F94B-40D8-9DBB-91CA5E4A6D9D" name="GUID-592A3256-F94B-40D8-9DBB-91CA5E4A6D9D"></a><h3 id="HTMDB-GUID-592A3256-F94B-40D8-9DBB-91CA5E4A6D9D" class="sect3"><span class="enumeration_section">21.4.2.11.2 </span>Setting Up Social Sign-In Authentication
+               </h3>
+               <div>
+                  <p>Learn how to set up Social Sign-In authentication.</p>
+                  <div class="p">
+                     <div class="infoboxnote" id="GUID-592A3256-F94B-40D8-9DBB-91CA5E4A6D9D__GUID-55AA39DA-26B4-467C-A497-72C935A6C4F7">
+                        <p class="notep1">Note:</p>
+                        <p>As a prerequisite for creating the Social Sign-In Authentication , you have to request <code class="codeph">OAuth2</code> credentials from the authentication provider and configure your account to support redirects to your application. Check your authentication provider's documentation for the details. The steps below assume that this has been done and that you saved the <code class="codeph">OAuth2</code> credentials in the application's shared components.
+                        </p>
+                     </div>
+                  </div>
+                  <p>To set up Social Sign-In Authentication:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Select an application.</span></li>
+                     <li class="stepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                           <p>The Shared Components page appears. </p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under Security, select <span class="uicontrol bold">Authentication Schemes</span>.</span></li>
+                     <li class="stepexpand"><span>On the Authentication Schemes page, click <span class="uicontrol bold">Create</span>.</span></li>
+                     <li class="stepexpand"><span>Select <span class="uicontrol bold">Based on a pre-configured scheme from the gallery</span> and click <span class="uicontrol bold">Next</span>.</span></li>
+                     <li class="stepexpand"><span>Under Name: </span><ol type="a">
+                           <li><span>Name - Enter the name used to reference the authentication scheme by other application developers.</span></li>
+                           <li><span>Scheme Type - Select <span class="uicontrol bold">Social Sign-In</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Settings:</span><ol type="a" id="GUID-592A3256-F94B-40D8-9DBB-91CA5E4A6D9D__SUBSTEPS_ZKJ_HVG_JQB">
+                           <li class="substepexpand"><span>Credential Store - Select the credential store which contains Client ID
+                            and Secret for the Authentication Provider.</span></li>
+                           <li class="substepexpand"><span>Authentication Provider - Options include:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-592A3256-F94B-40D8-9DBB-91CA5E4A6D9D__UL_J1D_MVG_JQB">
+                                    <li>OpenID Connect Provider - Use an OpenID Connect based authentication provider. You have to enter the provider's OpenID Discovery URL below.</li>
+                                    <li>Generic OAuth2 - Provider Use an OAuth2 authentication provider. You have to enter URLs for the authorization, token and userinfo endpoints below.</li>
+                                    <li>Google - Use pre-defined settings for Google Login.</li>
+                                    <li>Facebook - Use pre-defined settings for Facebook Login.</li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Discovery URL - Enter the OpenID Connect provider's discovery URL. </span><div>
+                                 
+                                 <p>Example: </p>
+                                 
+                                 <p><code class="codeph">https://accounts.example.com/.well-known/openid-configuration</code></p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Scope - Enter a comma separated list of permissions to request for the user who is logging in. The acceptable values depend on your authentication provider. For OpenID Connect and Google, <span>APEX</span> automatically adds the "<code class="codeph">openid</code>" scope. The authentication provider returns user attributes based on these permissions. You can map the attributes to application items, or use a Post Authentication procedure to process them, using the <code class="codeph">APEX_JSON.GET_%</code> functions.</span><div>
+                                 <p>OpenID Connect scopes and attributes (also called claims) are listed here: <a href="https://openid.net/specs/openid-connect-basic-1_0.html#Scopes%20Examples%20email,profile" target="_blank">https://openid.net/specs/openid-connect-basic-1_0.html#Scopes%20Examples%20email,profile</a></p>
+                                 <p></p>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Authentication URI Parameters - Enter optional parameters for the
+                            authentication URI. Consult the authentication provider's documentation
+                            for supported parameters.</span><div>Example: 
+                                 <p><code class="codeph">prompt=consent</code></p>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Username - Enter the attribute which contains the username, or free
+                            text with one or more attribute substitutions that are enclosed by "#".
+                            You can reference the authentication scheme's name with
+                                <code class="codeph">#APEX_AUTH_NAME#</code>. For example, <code class="codeph">#email#
+                                (#APEX_AUTH_NAME#)</code> will result in a username that consists
+                            of the email address, followed by " (", followed by the authentication
+                            scheme name, followed by ")", like "jane.doe@example.com (Google)". </span><div>
+                                 
+                                 <p>Consult the authentication provider's documentation for supported
+                                attributes. Note that you need to set the required Scope, otherwise
+                                the authentication provider will not send all attributes. OpenID
+                                Connect scopes and attributes (also called claims) are listed here: </p>
+                                 
+                                 <p>Examples:</p>
+                                 
+                                 <p><code class="codeph">#sub# (#APEX_AUTH_NAME#)</code></p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Convert Username To Upper Case - Configure whether the attribute values
+                            for the username should be converted to upper case.</span></li>
+                           <li class="substepexpand"><span>Additional User Attributes - Enter a comma separated list of additional
+                            user data attributes.</span><div>
+                                 
+                                 <p>Consult the authentication provider's documentation for supported
+                                attributes. Note that you need to set the required Scope, otherwise
+                                the authentication provider will not send all attributes. OpenID
+                                Connect scopes and attributes (also called claims) are listed here: </p>
+                                 
+                                 <p><a href="https://openid.net/specs/openid-connect-basic-1_0.html#Scopes" target="_blank">https://openid.net/specs/openid-connect-basic-1_0.html#Scopes</a></p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Map Additional User Attributes - Provide a comma-separated list of
+                            application item names that the Additional User Attributes map to. </span><div>
+                                 
+                                 <p>For example, if you set the following attributes, then
+                                    <span>APEX</span> automatically saves the attribute values in session state for the
+                                corresponding items.:
+                                 </p>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-592A3256-F94B-40D8-9DBB-91CA5E4A6D9D__UL_UNV_XZG_JQB">
+                                    <li>
+                                       
+                                       <p>Additional User Attributes -
+                                            <code class="codeph">email,profile,picture</code></p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Map Additional User Attributes To -
+                                            <code class="codeph">G_EMAIL,G_PROFILE,G_PICTURE</code></p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Verify Attributes - If enabled, <span>APEX</span> looks for an attribute <code class="codeph">"<span class="codeinlineitalic">#name#</span>_verified"</code> (for example, <code class="codeph">"email_verified"</code> for Attribute <code class="codeph">"email"</code>). OpenID defines that the identity provider sends <code class="codeph">"#name#_verified":false</code> for unverified <code class="codeph">"email"</code> and <code class="codeph">"phone_number"</code> attributes. <span>APEX</span> ignores such unverified attributes. This will result in a failed authentication if "<code class="codeph">#name#</code>" is the Username attribute. If the identity provider lets attackers enter unverified data that the application uses for authentication, they could impersonate other users in the application. The Verify Attributes check prevents this.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="bold">Create Authentication Scheme</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="social-sign-in.html#GUID-CF10F6D7-768C-42F9-9362-4CF23BF1C4B8" title="Social Sign-In supports authentication with Google, Facebook, and other social networks and enterprise identity providers that support OpenID Connect or OAuth2 standards.">Social Sign-In</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

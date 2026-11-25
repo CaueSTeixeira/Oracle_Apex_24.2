@@ -1,0 +1,282 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Configuring Oracle REST Data Services">
+      <meta name="abstract" content="Configuring Oracle REST Data Services requires that you copy the images directory, if you are using an older release validate the Oracle REST Data Services installation, configure static files support, and secure Oracle REST Data Services.">
+      <meta name="description" content="Configuring Oracle REST Data Services requires that you copy the images directory, if you are using an older release validate the Oracle REST Data Services installation, configure static files support, and secure Oracle REST Data Services.">
+      <meta name="DC.subject" content=", Oracle REST Data Services, configuring, Copying the Images Directory, images, copying, static resources, hosting on local file system, copying the Images Directory, referencing CDN, CDN, referencing images, referencing static resources, using static resources CDN, Validating the Oracle REST Data Services Installation">
+      <meta name="keywords" content=", Oracle REST Data Services, configuring, Copying the Images Directory, images, copying, static resources, hosting on local file system, copying the Images Directory, referencing CDN, CDN, referencing images, referencing static resources, using static resources CDN, Validating the Oracle REST Data Services Installation">
+      <meta name="DC.Relation" scheme="URI" content="installing-and-configuring-apex-and-ords.html#GUID-8EE981AD-B1F9-46C2-BB5A-C9FE60CCD4AA">
+      <meta name="DC.Relation" scheme="URI" content="configuring-ords.html#GUID-D688F4D6-FCAB-4C4D-BA6D-9A3506B3E05F">
+      <meta name="DC.Relation" scheme="URI" content="configuring-ords.html#GUID-5FBF18D4-6EFC-4860-A3E3-1B08A1E13656">
+      <meta name="DC.Relation" scheme="URI" content="configuring-ords.html#GUID-A578DB67-EE01-4CAB-8043-95F26A6E46F0">
+      <meta name="DC.Relation" scheme="URI" content="configuring-ords.html#GUID-50DF0885-0A61-4516-BEC5-01DF5A1E6C0E">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="David Bliss">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Salim Hlayel">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vlad Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-AD38DE06-A560-4D6D-BD50-6E5A8E513BBF">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Configuring Oracle REST Data Services requires that you copy the images directory, if you are using an older release validate the Oracle REST Data Services installation, configure static files support, and secure Oracle REST Data Services.">
+      <meta name="description" content="Configuring Oracle REST Data Services requires that you copy the images directory, if you are using an older release validate the Oracle REST Data Services installation, configure static files support, and secure Oracle REST Data Services.">
+      <title>Configuring Oracle REST Data Services</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Installation Guide ">
+      <meta property="og:description" content="Configuring Oracle REST Data Services requires that you copy the images directory, if you are using an older release validate the Oracle REST Data Services installation, configure static files support, and secure Oracle REST Data Services.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Installation Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-installation-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:41:45-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12910-03">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="downloading-installing-ords.html" title="Previous" type="text/html">
+      <link rel="next" href="enabling-network-services-in-oracle-db11g-or-later.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Installation Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="HTMIG">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Configuring Oracle REST Data Services","description":"Configuring Oracle REST Data Services requires that you copy the images directory, if you are using an older release validate the Oracle REST Data Services installation, configure static files support, and secure Oracle REST Data Services.","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="downloading-installing-ords.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="enabling-network-services-in-oracle-db11g-or-later.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-AD38DE06-A560-4D6D-BD50-6E5A8E513BBF" name="GUID-AD38DE06-A560-4D6D-BD50-6E5A8E513BBF"></a><a id="HTMIG29335"></a>
+         
+         <h2 id="HTMIG-GUID-AD38DE06-A560-4D6D-BD50-6E5A8E513BBF" class="sect2"><span class="enumeration_section">6.5 </span>Configuring <span>Oracle REST Data
+                                        Services</span></h2>
+         <div class="ind">
+            <p>Configuring <span>Oracle REST Data
+                                        Services</span> requires that you copy the images directory, if you are using an older release validate
+        the <span>Oracle REST Data
+                                        Services</span> installation, configure static files support, and secure <span>Oracle REST Data
+                                        Services</span>.
+            </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="configuring-ords.html#GUID-D688F4D6-FCAB-4C4D-BA6D-9A3506B3E05F">Managing Static Resources (Images)</a><br>Manage images and static resources used by an <span>Oracle APEX</span> installation.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-ords.html#GUID-5FBF18D4-6EFC-4860-A3E3-1B08A1E13656">Validating the Oracle REST Data Services Installation</a><br>In a new installation or upgrade of <span>Oracle APEX</span> and if you are using <span>Oracle REST Data                                         Services</span> 21.2.1 or older, you must validate the <span>Oracle REST Data                                         Services</span> installation.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-ords.html#GUID-A578DB67-EE01-4CAB-8043-95F26A6E46F0">Configuring Static File Support</a><br>For configuring static files, you must run             <code class="codeph">apex_rest_config.sql</code> after a new installation of <span>Oracle APEX</span>.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-ords.html#GUID-50DF0885-0A61-4516-BEC5-01DF5A1E6C0E">Securing Oracle REST Data Service</a><br>In a configuration for <span>Oracle APEX</span>, <span>Oracle</span> recommends setting the parameter <code class="codeph">security.requestValidationFunction</code> to <code class="codeph">wwv_flow_epg_include_modules.authorize</code>.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="installing-and-configuring-apex-and-ords.html#GUID-8EE981AD-B1F9-46C2-BB5A-C9FE60CCD4AA" title="Install or upgrade Oracle APEX by downloading a ZIP file from the APEX download page and then downloading and installing Oracle REST Data Services (ORDS). These instructions apply to both new and upgrade installations.">Installing and Configuring APEX and Oracle REST Data Services</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-D688F4D6-FCAB-4C4D-BA6D-9A3506B3E05F" name="GUID-D688F4D6-FCAB-4C4D-BA6D-9A3506B3E05F"></a><h3 id="HTMIG-GUID-D688F4D6-FCAB-4C4D-BA6D-9A3506B3E05F" class="sect3"><span class="enumeration_section">6.5.1 </span>Managing Static Resources (Images)
+               </h3>
+               <div>
+                  <p>Manage images and static resources used by an <span>Oracle APEX</span> installation.
+                  </p>
+                  <p>The images and static resources used by an <span>Oracle APEX</span> installation can either be stored on the local file system accessible by <span>Oracle REST Data
+                                        Services</span>, or  referenced to the <span>Oracle APEX</span> static resources Content Delivery Network (CDN). 
+                  </p>
+               </div>
+               <div>
+                  <ul class="ullinks">
+                     <li class="ulchildlink"><a href="configuring-ords.html#GUID-C070563B-2080-4DB1-A5FB-48B4D1B57D77">Copying the Images Directory</a><br>Store images and static resources used by an <span>Oracle APEX</span> installation on a local filesystem accessible by <span>Oracle REST Data                                         Services</span>.
+                     </li>
+                     <li class="ulchildlink"><a href="configuring-ords.html#GUID-20825EEF-652D-4B01-857E-17C3578E41C4">Using a Static Resources CDN</a><br>Reference images and static resources used by an <span>Oracle APEX</span> instance by referencing a static resources Content Delivery Network (CDN). 
+                     </li>
+                  </ul>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-ords.html#GUID-AD38DE06-A560-4D6D-BD50-6E5A8E513BBF" title="Configuring Oracle REST Data Services requires that you copy the images directory, if you are using an older release validate the Oracle REST Data Services installation, configure static files support, and secure Oracle REST Data Services.">Configuring Oracle REST Data Services</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="props_rev_3"><a id="GUID-C070563B-2080-4DB1-A5FB-48B4D1B57D77" name="GUID-C070563B-2080-4DB1-A5FB-48B4D1B57D77"></a><h4 id="HTMIG-GUID-C070563B-2080-4DB1-A5FB-48B4D1B57D77" class="sect4"><span class="enumeration_section">6.5.1.1 </span>Copying the Images Directory
+                  </h4>
+                  <div>
+                     <p>Store images and static resources used by an <span>Oracle APEX</span> installation on a local filesystem accessible by <span>Oracle REST Data
+                                        Services</span>.
+                     </p>
+                     <div class="p">
+                        
+                        <div class="infoboxnote" id="GUID-C070563B-2080-4DB1-A5FB-48B4D1B57D77__GUID-5C91D17A-D2EC-48F1-BB10-6A36B1933756">
+                           <p class="notep1">Note:</p>Skip this step if you choose to use
+                the <span>Oracle APEX</span> static resources CDN as described in <a href="configuring-ords.html#GUID-20825EEF-652D-4B01-857E-17C3578E41C4" title="Reference images and static resources used by an Oracle APEX instance by referencing a static resources Content Delivery Network (CDN).">Using a Static Resources CDN</a>.
+                        </div>
+                        
+                     </div>
+                     <div class="section">
+                        
+                        <p>Perform this task whether you are loading a new installation or upgrading
+                from a previous version. To host the images and static resources on a local file
+                system, you must copy the images directory from the top level of the
+                    <code class="codeph">apex\images</code> directory, for example <code class="codeph">C:\TEMP</code>, to
+                the location used by your <span>Oracle REST Data
+                                        Services</span> installation.
+                        </p>
+                        <p>During an upgrade, you overwrite your existing images directory. Before you begin the upgrade, to ensure that you can revert to the previous version, <span>Oracle</span> recommends that you create a copy of your existing images directory for <span>APEX</span>, indicating the release number of the images (for example, <code class="codeph"><span>images_24_1</span></code>).
+                        </p>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="configuring-ords.html#GUID-D688F4D6-FCAB-4C4D-BA6D-9A3506B3E05F" title="Manage images and static resources used by an Oracle APEX installation.">Managing Static Resources (Images)</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="sect3"><a id="GUID-20825EEF-652D-4B01-857E-17C3578E41C4" name="GUID-20825EEF-652D-4B01-857E-17C3578E41C4"></a><h4 id="HTMIG-GUID-20825EEF-652D-4B01-857E-17C3578E41C4" class="sect4"><span class="enumeration_section">6.5.1.2 </span>Using a Static Resources CDN
+                  </h4>
+                  <div>
+                     <p>Reference images and static resources used by an <span>Oracle APEX</span> instance by referencing a static resources Content Delivery Network (CDN). 
+                     </p>
+                     <div class="section">
+                        <p>Using the CDN may improve performance of <span>APEX</span> and your applications by distributing the static resources from a server that is physically located near the end user. Enabling the CDN for your <span>APEX</span> instance is a one-time configuration step. The CDN reference is automatically updated during patches and upgrades to point to the appropriate CDN for that version.
+                        </p>
+                     </div>
+                     <div class="section">
+                        <p>To use the <span>APEX</span> static resources CDN, connect to the database as a user with the APEX_ADMINISTRATOR_ROLE role and run the following code:
+                        </p>
+                        <pre class="pre codeblock"><code>begin
+    for c1 in (select version_no from APEX_RELEASE)
+    loop
+        APEX_INSTANCE_ADMIN.set_parameter(
+            p_parameter =&gt; 'IMAGE_PREFIX',
+            p_value =&gt; 'https://static.oracle.com/cdn/apex/' ||
+                            c1.version_no || '/');
+    end loop;
+
+    commit;
+end;</code></pre>
+                        </div>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="configuring-ords.html#GUID-D688F4D6-FCAB-4C4D-BA6D-9A3506B3E05F" title="Manage images and static resources used by an Oracle APEX installation.">Managing Static Resources (Images)</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+            <div class="props_rev_3"><a id="GUID-5FBF18D4-6EFC-4860-A3E3-1B08A1E13656" name="GUID-5FBF18D4-6EFC-4860-A3E3-1B08A1E13656"></a><h3 id="HTMIG-GUID-5FBF18D4-6EFC-4860-A3E3-1B08A1E13656" class="sect3"><span class="enumeration_section">6.5.2 </span>Validating the <span>Oracle REST Data
+                                        Services</span> Installation
+               </h3>
+               <div>
+                  <p>In a new installation or upgrade of <span>Oracle APEX</span> and if you are using <span>Oracle REST Data
+                                        Services</span> 21.2.1 or older, you must validate the <span>Oracle REST Data
+                                        Services</span> installation.
+                  </p>
+                  <div class="section">
+                     <p>For validating the <span>Oracle REST Data
+                                        Services</span> installation in a new installation or upgrade of <span>Oracle APEX</span>, run the following command:
+                     </p><code class="codeph">java -jar ords.war
+                                validate [--database &lt;dbname&gt;]</code></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-5FBF18D4-6EFC-4860-A3E3-1B08A1E13656__GUID-90804374-AD74-4E48-BFAE-79E129471EAA">
+                     <p class="notep1">See Also:</p><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmig&id=ORDIG-GUID-9E8A2051-6DFC-48E2-A8D5-DA8A9EF5D324" target="_blank">Repairing the Oracle REST
+                                        Data Services Installation</a> in <span><cite>Oracle REST Data Services Installation and
+                                        Configuration Guide</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-ords.html#GUID-AD38DE06-A560-4D6D-BD50-6E5A8E513BBF" title="Configuring Oracle REST Data Services requires that you copy the images directory, if you are using an older release validate the Oracle REST Data Services installation, configure static files support, and secure Oracle REST Data Services.">Configuring Oracle REST Data Services</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMIG29472"></a><div class="props_rev_3"><a id="GUID-A578DB67-EE01-4CAB-8043-95F26A6E46F0" name="GUID-A578DB67-EE01-4CAB-8043-95F26A6E46F0"></a><h3 id="HTMIG-GUID-A578DB67-EE01-4CAB-8043-95F26A6E46F0" class="sect3"><span class="enumeration_section">6.5.3 </span>Configuring Static File Support
+               </h3>
+               <div>
+                  <p>For configuring static files, you must run
+            <code class="codeph">apex_rest_config.sql</code> after a new installation of <span>Oracle APEX</span>.
+                  </p>
+                  <p><span>Oracle APEX</span> enables application developers to include static files with
+                                    their applications. Static files can be associated with a
+                                    workspace, an application, a plug-in, or an application theme.
+                                    When using <span>Oracle REST Data
+                                        Services</span> as your web server, static files are served using RESTful
+                                    service module built into <span>Oracle APEX</span>. Therefore, you must run
+                                                <code class="codeph">apex_rest_config.sql</code> after a new
+                                    installation of <span>Oracle APEX</span>.
+                  </p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-ords.html#GUID-AD38DE06-A560-4D6D-BD50-6E5A8E513BBF" title="Configuring Oracle REST Data Services requires that you copy the images directory, if you are using an older release validate the Oracle REST Data Services installation, configure static files support, and secure Oracle REST Data Services.">Configuring Oracle REST Data Services</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-50DF0885-0A61-4516-BEC5-01DF5A1E6C0E" name="GUID-50DF0885-0A61-4516-BEC5-01DF5A1E6C0E"></a><h3 id="HTMIG-GUID-50DF0885-0A61-4516-BEC5-01DF5A1E6C0E" class="sect3"><span class="enumeration_section">6.5.4 </span>Securing Oracle REST Data Service
+               </h3>
+               <div>
+                  <p>In a configuration for <span>Oracle APEX</span>, <span>Oracle</span> recommends setting the parameter <code class="codeph">security.requestValidationFunction</code> to <code class="codeph">wwv_flow_epg_include_modules.authorize</code>.
+                  </p>
+                  <p>Set parameter <code class="codeph">security.requestValidationFunction</code> to <code class="codeph">wwv_flow_epg_include_modules.authorize</code> activates the allowed list of callable procedures which ships with <span>Oracle APEX</span> and prohibits calls to other procedures.
+                  </p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-50DF0885-0A61-4516-BEC5-01DF5A1E6C0E__GUID-FEE381F8-D29A-4D9A-B606-0FC079A51356">
+                     <p class="notep1">See Also:</p><a href="../htmdb/web-server-security-considerations.html#HTMDB-GUID-5899599D-960E-488A-8BFC-6BC6377F7E11" target="_blank">About Configuring Oracle REST Data Services with Oracle APEX</a>
+            in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-ords.html#GUID-AD38DE06-A560-4D6D-BD50-6E5A8E513BBF" title="Configuring Oracle REST Data Services requires that you copy the images directory, if you are using an older release validate the Oracle REST Data Services installation, configure static files support, and secure Oracle REST Data Services.">Configuring Oracle REST Data Services</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

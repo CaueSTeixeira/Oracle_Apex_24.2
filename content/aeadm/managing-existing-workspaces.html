@@ -1,0 +1,157 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Existing Workspaces">
+      <meta name="abstract" content="Instance administrators can manage existing workspaces within an Oracle APEX instance.">
+      <meta name="description" content="Instance administrators can manage existing workspaces within an Oracle APEX instance.">
+      <meta name="DC.Relation" scheme="URI" content="oracle-apex-administration-services.html#GUID-3E40D63B-D9C4-42B9-87D7-88A015762392">
+      <meta name="DC.Relation" scheme="URI" content="performing-a-workspace-search.html#GUID-DD07E50E-1F41-4C0C-AAFE-EFA60860EBFF">
+      <meta name="DC.Relation" scheme="URI" content="viewing-existing-workspace-information.html#GUID-F88900FF-A437-4B4D-B096-3D1E3F2D0032">
+      <meta name="DC.Relation" scheme="URI" content="isolating-workspace-to-prevent-browser-attacks.html#GUID-8BF9FF41-1CA7-44E7-A82E-42B927F42CF9">
+      <meta name="DC.Relation" scheme="URI" content="deleting-a-workspace.html#GUID-51931BAC-F108-45D1-9DD1-31D0BA5FBBB3">
+      <meta name="DC.Relation" scheme="URI" content="locking-a-workspace.html#GUID-60282006-E48D-4C23-9291-C78194D95E87">
+      <meta name="DC.Relation" scheme="URI" content="purging-inactive-workspaces.html#GUID-31534DD1-50AF-4DFE-9FD7-409C73437D20">
+      <meta name="DC.Relation" scheme="URI" content="managing-workspace-to-schema-assignments.html#GUID-355C08F2-8267-40D1-A8FF-4C7B7BE69981">
+      <meta name="DC.Relation" scheme="URI" content="managing-component-availability-for-an-instance.html#GUID-9C06C608-C8A6-495C-9A9B-90442C94EC00">
+      <meta name="DC.Relation" scheme="URI" content="exporting-and-importing-a-workspace.html#GUID-32E9F3E5-EE93-4783-9707-0B3B607CF119">
+      <meta name="DC.Relation" scheme="URI" content="installing-exported-applications-in-a-runtime-environment.html#GUID-C29240A9-08A4-4F90-A9C9-738146F9CAB5">
+      <meta name="DC.Relation" scheme="URI" content="exporting-and-importing-from-a-command-line.html#GUID-2B31CB5D-D450-47C8-A796-0F44B57CE669">
+      <meta name="DC.Relation" scheme="URI" content="changing-app-build-status-in-administration-services.html#GUID-ACDDC67C-FFAE-4576-9B63-E07A247F94FE">
+      <meta name="DC.Relation" scheme="URI" content="viewing-the-application-attributes-report.html#GUID-1DCAD5CC-9AC3-445E-A120-F1978AE05929">
+      <meta name="DC.Relation" scheme="URI" content="viewing-parsing-schemas-report.html#GUID-3535EBEC-7557-4085-9523-3A8FBFECA721">
+      <meta name="DC.Relation" scheme="URI" content="accessing-workspace-reports.html#GUID-313840F5-AA5B-49EA-83EE-B184FDADAD77">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-ACCB0B3A-C7DE-40F7-BD57-716417FD71A9">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Instance administrators can manage existing workspaces within an Oracle APEX instance.">
+      <meta name="description" content="Instance administrators can manage existing workspaces within an Oracle APEX instance.">
+      <title>Managing Existing Workspaces</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Instance administrators can manage existing workspaces within an Oracle APEX instance.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="creating-workspaces.html" title="Previous" type="text/html">
+      <link rel="next" href="performing-a-workspace-search.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Managing Existing Workspaces","description":"Instance administrators can manage existing workspaces within an Oracle APEX instance.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="creating-workspaces.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="performing-a-workspace-search.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-ACCB0B3A-C7DE-40F7-BD57-716417FD71A9" name="GUID-ACCB0B3A-C7DE-40F7-BD57-716417FD71A9"></a><a id="AEADM271"></a>
+         
+         <h2 id="AEADM-GUID-ACCB0B3A-C7DE-40F7-BD57-716417FD71A9" class="sect2"><span class="enumeration_section">3.12 </span>Managing Existing Workspaces
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Instance administrators can manage existing workspaces within an <span>Oracle APEX</span> instance.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="performing-a-workspace-search.html#GUID-DD07E50E-1F41-4C0C-AAFE-EFA60860EBFF">Performing a Workspace Search</a><br>Perform a workspace search by clicking Find a Workspace on the Workspace         Tasks page.
+                  </li>
+                  <li class="ulchildlink"><a href="viewing-existing-workspace-information.html#GUID-F88900FF-A437-4B4D-B096-3D1E3F2D0032">Viewing Existing Workspace Information</a><br>View or edit existing workspace information and behavior including workspace         details, support for AI Services, display name, login controls, component availability,         session timeout, and component availability. 
+                  </li>
+                  <li class="ulchildlink"><a href="isolating-workspace-to-prevent-browser-attacks.html#GUID-8BF9FF41-1CA7-44E7-A82E-42B927F42CF9">Isolating a Workspace to Prevent Browser Attacks</a><br>Workspace administrators can prevent browser attacks by isolating a specific                 workspace. Workspace-level settings override those configured for an entire                 instance.
+                  </li>
+                  <li class="ulchildlink"><a href="deleting-a-workspace.html#GUID-51931BAC-F108-45D1-9DD1-31D0BA5FBBB3">Deleting a Workspace</a><br>Deleting a workspace does not remove any of the associated database objects.                 To remove the associated schemas, a database administrator (DBA) must use a standard                 database administration tool, such as Oracle Enterprise Manager or <span>SQLcl</span>. 
+                  </li>
+                  <li class="ulchildlink"><a href="locking-a-workspace.html#GUID-60282006-E48D-4C23-9291-C78194D95E87">Locking a Workspace</a><br>Instance administrators can lock a workspace to address security or         performance issues.
+                  </li>
+                  <li class="ulchildlink"><a href="purging-inactive-workspaces.html#GUID-31534DD1-50AF-4DFE-9FD7-409C73437D20">Purging Inactive Workspaces</a><br>Inactive workspaces consume valuable storage space and degrade system                                 performance. Instance administrator can configure an instance to                                 periodically purge inactive workspaces.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-workspace-to-schema-assignments.html#GUID-355C08F2-8267-40D1-A8FF-4C7B7BE69981">Managing Workspace to Schema Assignments</a><br>Instance administrators can view, edit, and remove schema and workspace         assignment, associate additional schemas with a workspace, and create new             schemas.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-component-availability-for-an-instance.html#GUID-9C06C608-C8A6-495C-9A9B-90442C94EC00">Managing Component Availability for an Instance</a><br>Control which components are available within an <span>Oracle APEX</span> instance, including <span>App Builder</span>, SQL Workshop, PL/SQL Editing in SQL Workshop, Team Development, or installation of         productivity and sample applications.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-and-importing-a-workspace.html#GUID-32E9F3E5-EE93-4783-9707-0B3B607CF119">Exporting and Importing a Workspace</a><br>Move a workspace and all associated users to a new <span>Oracle APEX</span> instance by exporting and importing.
+                  </li>
+                  <li class="ulchildlink"><a href="installing-exported-applications-in-a-runtime-environment.html#GUID-C29240A9-08A4-4F90-A9C9-738146F9CAB5">Installing Exported Applications in a Runtime Environment</a><br>Instance administrators manage the <span>APEX</span> runtime environment using <span>SQLcl</span> and the&nbsp;<code class="codeph">APEX_INSTANCE_ADMIN</code>&nbsp;API.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-and-importing-from-a-command-line.html#GUID-2B31CB5D-D450-47C8-A796-0F44B57CE669">Exporting and Importing from a Command Line</a><br>Export and import workspaces, applications, and related files from a command                 line.
+                  </li>
+                  <li class="ulchildlink"><a href="changing-app-build-status-in-administration-services.html#GUID-ACDDC67C-FFAE-4576-9B63-E07A247F94FE">Changing Application Build Status in Administration Services</a><br>An Instance administrator can change the build status of an             application.
+                  </li>
+                  <li class="ulchildlink"><a href="viewing-the-application-attributes-report.html#GUID-1DCAD5CC-9AC3-445E-A120-F1978AE05929">Viewing the Application Attributes Report</a><br>View applications by workspace on the Application Attributes             page.
+                  </li>
+                  <li class="ulchildlink"><a href="viewing-parsing-schemas-report.html#GUID-3535EBEC-7557-4085-9523-3A8FBFECA721">Viewing the Parsing Schemas Report</a><br>Use the Parsing Schemas report to identify the current parsing schema of         each application in any workspace.
+                  </li>
+                  <li class="ulchildlink"><a href="accessing-workspace-reports.html#GUID-313840F5-AA5B-49EA-83EE-B184FDADAD77">Accessing Workspace Reports</a><br>Instance administrators can view workspace reports from Manage Workspaces,         Workspace Reports.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-ACCB0B3A-C7DE-40F7-BD57-716417FD71A9__GUID-531F8884-117F-4A23-9BB7-E85B4395462A">
+                  <p class="notep1">See Also:</p>
+                  <ul style="list-style-type: disc;">
+                     <li><a href="creating-workspaces.html#GUID-4C221D31-B584-40DB-A407-A4CABDECDAD8" title="Users access Oracle APEX by signing in to a shared work area called a workspace. An administrator can create workspaces manually in Administration Services or take advantage of an automated approach in which users click a link a login page.">Creating Workspaces in Administration Services</a></li>
+                     <li><a href="managing-schemas.html#GUID-21F40BBE-BD84-4435-A326-B267D9A21029" title="Manage the schemas within an Oracle APEX instance.">Managing Schemas</a></li>
+                     <li><a href="managing-users-across-an-application-express-instance.html#GUID-AC77C488-E9CC-4279-9D5F-C4C864EF3683" title="An Instance administrator manages all user accounts within an Oracle APEX instance on the Manage Developers and Users page.">Managing Users Across an Oracle APEX Instance</a></li>
+                     <li><a href="monitoring-activity-across-an-instance.html#GUID-57123911-C427-4C9E-96A7-A91D54A2B9C6" title="Use the links on the Monitor Activity page to access various reports on application, developer, and session activity in all workspaces.">Monitoring Activity Across an Instance</a></li>
+                  </ul>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="oracle-apex-administration-services.html#GUID-3E40D63B-D9C4-42B9-87D7-88A015762392" title="Instance administrators manage an entire APEX hosted instance using the Oracle APEX Administration Services (Administration Services) application.">Oracle APEX Administration Services</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

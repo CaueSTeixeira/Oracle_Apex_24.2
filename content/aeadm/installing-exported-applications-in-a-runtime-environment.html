@@ -1,0 +1,205 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Installing Exported Applications in a Runtime Environment">
+      <meta name="abstract" content="Instance administrators manage the APEX runtime environment using SQLcl and the&nbsp;APEX_INSTANCE_ADMIN&nbsp;API.">
+      <meta name="description" content="Instance administrators manage the APEX runtime environment using SQLcl and the&nbsp;APEX_INSTANCE_ADMIN&nbsp;API.">
+      <meta name="DC.Relation" scheme="URI" content="managing-existing-workspaces.html#GUID-ACCB0B3A-C7DE-40F7-BD57-716417FD71A9">
+      <meta name="DC.Relation" scheme="URI" content="installing-exported-applications-in-a-runtime-environment.html#GUID-39A74978-F167-4F7D-A420-3767EBA97ED1">
+      <meta name="DC.Relation" scheme="URI" content="installing-exported-applications-in-a-runtime-environment.html#GUID-1CC6E0BA-BECE-4681-8F70-1DE440705EF6">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-C29240A9-08A4-4F90-A9C9-738146F9CAB5">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Instance administrators manage the APEX runtime environment using SQLcl and the&nbsp;APEX_INSTANCE_ADMIN&nbsp;API.">
+      <meta name="description" content="Instance administrators manage the APEX runtime environment using SQLcl and the&nbsp;APEX_INSTANCE_ADMIN&nbsp;API.">
+      <title>Installing Exported Applications in a Runtime Environment</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Instance administrators manage the APEX runtime environment using SQLcl and the&nbsp;APEX_INSTANCE_ADMIN&nbsp;API.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="exporting-and-importing-a-workspace.html" title="Previous" type="text/html">
+      <link rel="next" href="exporting-and-importing-from-a-command-line.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Installing Exported Applications in a Runtime Environment","description":"Instance administrators manage the APEX runtime environment using SQLcl and the&nbsp;APEX_INSTANCE_ADMIN&nbsp;API.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="exporting-and-importing-a-workspace.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="exporting-and-importing-from-a-command-line.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-C29240A9-08A4-4F90-A9C9-738146F9CAB5" name="GUID-C29240A9-08A4-4F90-A9C9-738146F9CAB5"></a><a id="AEADM29193"></a>
+         
+         <h2 id="AEADM-GUID-C29240A9-08A4-4F90-A9C9-738146F9CAB5" class="sect2"><span class="enumeration_section">3.12.10 </span>Installing Exported Applications in a Runtime Environment
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Instance administrators manage the <span>APEX</span> runtime environment using <span>SQLcl</span> and the&nbsp;<code class="codeph">APEX_INSTANCE_ADMIN</code>&nbsp;API.
+               </p>
+               <div class="infoboxnote" id="GUID-C29240A9-08A4-4F90-A9C9-738146F9CAB5__GUID-E4A042E8-63A7-47CA-9A9E-E2FF1B4C3050">
+                  <p class="notep1">Note:</p>To ensure the security and performance of your
+                                development environment, this functionality is not available in
+                                Oracle APEX instances running in Oracle Cloud.
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="installing-exported-applications-in-a-runtime-environment.html#GUID-39A74978-F167-4F7D-A420-3767EBA97ED1">About the Advantages of Using Runtime Environment</a><br>A runtime environment enables you to run production applications, but does not provide a web interface for administration or direct development of these applications.
+                  </li>
+                  <li class="ulchildlink"><a href="installing-exported-applications-in-a-runtime-environment.html#GUID-1CC6E0BA-BECE-4681-8F70-1DE440705EF6">Installing an Exported Application in to a Runtime Environment</a><br>You administer the <span>Oracle APEX</span> runtime environment using <span>SQLcl</span> and the <code class="codeph">APEX_INSTANCE_ADMIN</code> API.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-existing-workspaces.html#GUID-ACCB0B3A-C7DE-40F7-BD57-716417FD71A9" title="Instance administrators can manage existing workspaces within an Oracle APEX instance.">Managing Existing Workspaces</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="AEADM29208"></a><div class="props_rev_3"><a id="GUID-39A74978-F167-4F7D-A420-3767EBA97ED1" name="GUID-39A74978-F167-4F7D-A420-3767EBA97ED1"></a><h3 id="AEADM-GUID-39A74978-F167-4F7D-A420-3767EBA97ED1" class="sect3"><span class="enumeration_section">3.12.10.1 </span>About the Advantages of Using Runtime Environment
+               </h3>
+               <div>
+                  <p>A runtime environment enables you to run production applications, but does not provide a web interface for administration or direct development of these applications.</p>
+                  <div class="section">
+                     <p>Oracle recommends that you run any sensitive production <span>APEX</span> applications with a runtime installation of<span>APEX</span>. A runtime installation does not expose the web-based application development environment, thus preventing the use of&nbsp;App Builder, SQL Workshop, and related utilities on a production installation. Additionally, a runtime environment only includes the <span>APEX</span> database objects and privileges necessary to run applications, making it a more hardened environment.
+                     </p>
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-39A74978-F167-4F7D-A420-3767EBA97ED1__GUID-601A2FE7-A57E-4C63-B719-9FCB5C31F7DA">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="../aeapi/index.html" target="_blank">APEX_INSTANCE_ADMIN</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="installing-exported-applications-in-a-runtime-environment.html#GUID-C29240A9-08A4-4F90-A9C9-738146F9CAB5" title="Instance administrators manage the APEX runtime environment using SQLcl and the&nbsp;APEX_INSTANCE_ADMIN&nbsp;API.">Installing Exported Applications in a Runtime Environment</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29209"></a><div class="props_rev_3"><a id="GUID-1CC6E0BA-BECE-4681-8F70-1DE440705EF6" name="GUID-1CC6E0BA-BECE-4681-8F70-1DE440705EF6"></a><h3 id="AEADM-GUID-1CC6E0BA-BECE-4681-8F70-1DE440705EF6" class="sect3"><span class="enumeration_section">3.12.10.2 </span>Installing an Exported Application in to a Runtime Environment
+               </h3>
+               <div>
+                  <p>You administer the <span>Oracle APEX</span> runtime environment using <span>SQLcl</span> and the <code class="codeph">APEX_INSTANCE_ADMIN</code> API.
+                  </p>
+                  <div class="section">
+                     <p>To install an exported application into a runtime installation, you must:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Export the workspace from the <span>Oracle APEX</span> instance where the application was developed as described in <a href="exporting-and-importing-a-workspace.html#GUID-32E9F3E5-EE93-4783-9707-0B3B607CF119" title="Move a workspace and all associated users to a new Oracle APEX instance by exporting and importing.">Exporting and Importing a Workspace</a>.</span></li>
+                     <li class="stepexpand"><span>Use <span>SQLcl</span> to import your workspace in to the runtime
+                                        environment:</span><div>
+                           
+                           <ul style="list-style-type: disc;">
+                              <li>
+                                 
+                                 <p>Connect as <span><code class="codeph">APEX_240200</code></span>, <code class="codeph">SYS</code>, <code class="codeph">SYSTEM</code>,
+                                                  or any schema to which the role
+                                                  <code class="codeph">APEX_ADMINISTRATOR_ROLE</code> has been
+                                                  granted. 
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>Run the workspace import file.</p>
+                                 
+                                 <p>If the workspace export file was
+                                                  created with a version of <span>Oracle APEX</span> lower than 3.2, you must connect as <span><code class="codeph">APEX_240200</code></span>.
+                                 </p>
+                                 
+                              </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Export and then import your application using <span>SQLcl</span> in to the runtime environment. </span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-1CC6E0BA-BECE-4681-8F70-1DE440705EF6__GUID-33228241-F32B-4530-ACB8-A6DDFFA7B371">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li>
+                           <p><a href="../htmdb/exporting-workspaces-apps-and-app-components.html#HTMDB-GUID-8D046D43-C033-4165-9C2B-6AB33A99CF75" target="_blank">Exporting an Application and Application Components</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></p>
+                        </li>
+                        <li>
+                           <p><a href="creating-workspaces.html#GUID-24B309D2-50CB-4C8D-8476-EE37774624F8" title="Instance administrators can create workspaces manually in a runtime environment starting SQLcl and running the following SQL statements.">Creating a Workspace Manually in a Runtime Environment</a></p>
+                        </li>
+                        <li>
+                           <p><a href="managing-workspace-to-schema-assignments.html#GUID-355C08F2-8267-40D1-A8FF-4C7B7BE69981" title="Instance administrators can view, edit, and remove schema and workspace assignment, associate additional schemas with a workspace, and create new schemas.">Managing Workspace to Schema Assignments</a></p>
+                        </li>
+                        <li>
+                           <p><a href="managing-workspace-to-schema-assignments.html#GUID-D82C380E-9EBA-4F50-9F29-053188858407" title="Remove a schema mapping from a workspace in a runtime environment.">Removing a Schema Mapping from a Workspace in a Runtime Environment</a></p>
+                        </li>
+                        <li>
+                           <p><a href="deleting-a-workspace.html#GUID-6D6C1EB1-7751-4BCD-8F26-9959239C9FDD" title="Delete workspaces in a runtime development environment.">Deleting Workspaces in a Runtime Development Environment</a></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="installing-exported-applications-in-a-runtime-environment.html#GUID-C29240A9-08A4-4F90-A9C9-738146F9CAB5" title="Instance administrators manage the APEX runtime environment using SQLcl and the&nbsp;APEX_INSTANCE_ADMIN&nbsp;API.">Installing Exported Applications in a Runtime Environment</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

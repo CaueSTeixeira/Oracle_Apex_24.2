@@ -1,0 +1,908 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Configuring Service-level Security Settings">
+      <meta name="abstract" content="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">
+      <meta name="description" content="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">
+      <meta name="DC.subject" content="security settings, workspace cookies, Allow Persistent Auth, Persistent Authentication Lifetime Days, Administration Services, restricting access, access to Administration Services, enabling access to Administration Services, enabling access, disabling workspace login, workspace login, disabling, disabling access to Internal applications, disabling apps login, app login, disabling, disabling app login, disabling public file upload, public file upload, disabling, AI Enabled, AI Services, enabling usage, restricting access by IP address, restricting user access, IP address, restricting by IP address, user access, restricting access by IP address, enabling AI, allow DBMS credentials usage, Allow DBMS Credentials Usage, enabling, setting instance proxy, instance proxy setting, proxy, setting for instance, outbound HTTP traffic, setting proxy, selecting checksum hash function, checksum hash function, selecting, Rejoin Sessions, configuring at instance-level, unhandled errors, unhandled errors, configuring">
+      <meta name="keywords" content="security settings, workspace cookies, Allow Persistent Auth, Persistent Authentication Lifetime Days, Administration Services, restricting access, access to Administration Services, enabling access to Administration Services, enabling access, disabling workspace login, workspace login, disabling, disabling access to Internal applications, disabling apps login, app login, disabling, disabling app login, disabling public file upload, public file upload, disabling, AI Enabled, AI Services, enabling usage, restricting access by IP address, restricting user access, IP address, restricting by IP address, user access, restricting access by IP address, enabling AI, allow DBMS credentials usage, Allow DBMS Credentials Usage, enabling, setting instance proxy, instance proxy setting, proxy, setting for instance, outbound HTTP traffic, setting proxy, selecting checksum hash function, checksum hash function, selecting, Rejoin Sessions, configuring at instance-level, unhandled errors, unhandled errors, configuring">
+      <meta name="DC.Relation" scheme="URI" content="configuring-security.html#GUID-5EC277A4-20BD-47CF-9448-46680C75593E">
+      <meta name="DC.Relation" scheme="URI" content="configuring-service-level-security-settings.html#GUID-3F82A546-7D5D-456E-BD9C-BC5ADCA3DDC8">
+      <meta name="DC.Relation" scheme="URI" content="configuring-service-level-security-settings.html#GUID-A8FF8215-46E0-4394-841D-2E1510C3CDDA">
+      <meta name="DC.Relation" scheme="URI" content="configuring-service-level-security-settings.html#GUID-BB34BEA0-7034-4E33-82F1-5EBDAFD17DBD">
+      <meta name="DC.Relation" scheme="URI" content="configuring-service-level-security-settings.html#GUID-EF319A45-FE5C-4EE8-909E-B5EFB28D0865">
+      <meta name="DC.Relation" scheme="URI" content="configuring-service-level-security-settings.html#GUID-B2A90F17-9B58-4223-8EE8-64C897A2FDDE">
+      <meta name="DC.Relation" scheme="URI" content="configuring-service-level-security-settings.html#GUID-138D30FE-DBA2-4012-98DB-EAA53C93A3E6">
+      <meta name="DC.Relation" scheme="URI" content="configuring-service-level-security-settings.html#GUID-5D83A6BC-DAE1-404A-9DAE-85CA10965493">
+      <meta name="DC.Relation" scheme="URI" content="configuring-service-level-security-settings.html#GUID-4D5AAB41-953C-4B8B-8A2C-A8E4CEC2CC2F">
+      <meta name="DC.Relation" scheme="URI" content="configuring-service-level-security-settings.html#GUID-1952AB59-7DC5-48C3-B4A5-31398CEA1485">
+      <meta name="DC.Relation" scheme="URI" content="configuring-service-level-security-settings.html#GUID-9B3B422C-3F71-4C85-9962-42A8C5DD5D14">
+      <meta name="DC.Relation" scheme="URI" content="configuring-service-level-security-settings.html#GUID-4129C05C-C7FC-42BF-9AD1-46B0A1A394D3">
+      <meta name="DC.Relation" scheme="URI" content="configuring-service-level-security-settings.html#GUID-06973DA0-92C6-4195-99FD-B3311252D172">
+      <meta name="DC.Relation" scheme="URI" content="configuring-service-level-security-settings.html#GUID-B4019F56-044F-4E56-89D0-EF911395FDDF">
+      <meta name="DC.Relation" scheme="URI" content="configuring-service-level-security-settings.html#GUID-6AB636A0-7DDE-4D7E-99AA-244C77D72776">
+      <meta name="DC.Relation" scheme="URI" content="configuring-service-level-security-settings.html#GUID-A3A1492B-7384-4633-88DE-020F33B30680">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-498FFCDE-9D65-40FD-923D-4707C927482C">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">
+      <meta name="description" content="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">
+      <title>Configuring Service-level Security Settings</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="configuring-security.html" title="Previous" type="text/html">
+      <link rel="next" href="configuring-http-attributes.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Configuring Service-level Security Settings","description":"Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="configuring-security.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="configuring-http-attributes.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-498FFCDE-9D65-40FD-923D-4707C927482C" name="GUID-498FFCDE-9D65-40FD-923D-4707C927482C"></a><a id="AEADM29249"></a>
+         
+         <h2 id="AEADM-GUID-498FFCDE-9D65-40FD-923D-4707C927482C" class="sect2"><span class="enumeration_section">3.4.1 </span>Configuring Service-level Security Settings
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.</p>
+               <div class="infoboxnote" id="GUID-498FFCDE-9D65-40FD-923D-4707C927482C__GUID-E088D738-57DC-4F5B-AA0A-3D37FF5DF4EB">
+                  <p class="notep1">Note:</p>To ensure the security and performance
+                                of your development environment, some administration functionality
+                                is not available in Oracle APEX instances running in Oracle
+                                Cloud.
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="configuring-service-level-security-settings.html#GUID-3F82A546-7D5D-456E-BD9C-BC5ADCA3DDC8">Controlling Workspace Cookies</a><br>Determine if <span>Oracle APEX</span> saves persistent cookies in the browser
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-service-level-security-settings.html#GUID-A8FF8215-46E0-4394-841D-2E1510C3CDDA">Controlling Persistent Authentication</a><br>Control if Persistent Authentication is enabled. Enabling Persistent         Authentication enables developers to use a built-in API to let users choose to re-login to         an application without having to provide credentials.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-service-level-security-settings.html#GUID-BB34BEA0-7034-4E33-82F1-5EBDAFD17DBD">Disabling Access to Administration Services</a><br>Prevent a user from logging in to <span>Oracle APEX</span> Administration Services.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-service-level-security-settings.html#GUID-EF319A45-FE5C-4EE8-909E-B5EFB28D0865">Enabling Access to Oracle APEX Administration Services</a><br>If access to <span>Oracle APEX</span> Administration Services has been disabled, an Instance administrator can re-enable again by     running the following SQL statements.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-service-level-security-settings.html#GUID-B2A90F17-9B58-4223-8EE8-64C897A2FDDE">Disabling Workspace Login Access</a><br>Restrict user access to <span>APEX</span> by disabling workspace login. Disabling workspace login in production environments prevents users from running <span>APEX</span> applications such as <span>App Builder</span>.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-service-level-security-settings.html#GUID-138D30FE-DBA2-4012-98DB-EAA53C93A3E6">Disabling App Login Access</a><br>Restrict access to all or specific customer built applications by     configuring the Disable Apps Login attribute.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-service-level-security-settings.html#GUID-5D83A6BC-DAE1-404A-9DAE-85CA10965493">Controlling Public File Upload</a><br>Use the Allow Public File Upload attribute to control whether unauthenticated users can upload files in applications that provide file upload controls.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-service-level-security-settings.html#GUID-4D5AAB41-953C-4B8B-8A2C-A8E4CEC2CC2F">Managing Support for AI Services for an Instance</a><br>Use the AI Enabled attribute in  Instance Settings, Security to enable or         disable AI Services in a <span>APEX</span> instance.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-service-level-security-settings.html#GUID-1952AB59-7DC5-48C3-B4A5-31398CEA1485">Restricting User Access by IP Address</a><br>Restrict user access to the <span>APEX</span> development environment and Administration Services by specifying a comma-delimited list of allowable IP addresses.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-service-level-security-settings.html#GUID-9B3B422C-3F71-4C85-9962-42A8C5DD5D14">Configuring App Builder Proxy for AI Services</a><br>Specify a proxy server to be used by Generative AI Services in  <span>App Builder</span>.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-service-level-security-settings.html#GUID-4129C05C-C7FC-42BF-9AD1-46B0A1A394D3">Enabling Allow DBMS Credentials Usage</a><br>Enable database credentials to be used in all workspace on the current         instance.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-service-level-security-settings.html#GUID-06973DA0-92C6-4195-99FD-B3311252D172">Configuring a Proxy Server for an Instance</a><br>Configure an entire <span>APEX</span> instance to use a proxy for all outbound HTTP traffic.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-service-level-security-settings.html#GUID-B4019F56-044F-4E56-89D0-EF911395FDDF">Selecting a Checksum Hash Function</a><br>Select a hash function that <span>APEX</span> uses to generate one way hash strings for checksums.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-service-level-security-settings.html#GUID-6AB636A0-7DDE-4D7E-99AA-244C77D72776">Configuring Rejoin Sessions for an Instance</a><br>Controls at the application-level whether URLs in this application contain session IDs.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-service-level-security-settings.html#GUID-A3A1492B-7384-4633-88DE-020F33B30680">Configuring Unhandled Errors</a><br>Control how <span>Oracle APEX</span> displays the results of unhandled errors.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="configuring-security.html#GUID-5EC277A4-20BD-47CF-9448-46680C75593E" title="Instance administrators can configure instance security, including service-level security, configuring support for Real Application Security, configuring session time out, preventing browser attacks by isolating workspaces, excluding domains from regions and Web services, configuring authentication controls, creating strong password policies, and managing authorized URLs.">Configuring Security</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="AEADM201"></a><div class="props_rev_3"><a id="GUID-3F82A546-7D5D-456E-BD9C-BC5ADCA3DDC8" name="GUID-3F82A546-7D5D-456E-BD9C-BC5ADCA3DDC8"></a><h3 id="AEADM-GUID-3F82A546-7D5D-456E-BD9C-BC5ADCA3DDC8" class="sect3"><span class="enumeration_section">3.4.1.1 </span>Controlling Workspace Cookies
+               </h3>
+               <div>
+                  <p>Determine if <span>Oracle APEX</span> saves persistent cookies in the browser
+                  </p>
+                  <div class="section">
+                     
+                     <p><span>Oracle APEX</span> uses the following persistent cookies:
+                     </p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-3F82A546-7D5D-456E-BD9C-BC5ADCA3DDC8__UL_H2Y_TLY_NNB">
+                        <li><code class="codeph">ORA_WWV_REMEMBER_UN</code> - The development environment login page stores the Workspace and Username data in this cookie. It is used to populate these attributes with default values, when you log in again.
+                        </li>
+                        <li><code class="codeph">LOGIN_USERNAME_COOKIE</code> - Customer application login pages use this cookie to store the Username. It is used to populate the attribute with a default value, when customers log in again.
+                        </li>
+                        <li><code class="codeph">ORA_WWV_REMEMBER_LANG</code> - When using language selection in the development environment, <span>APEX</span> stores the language and territory in this cookie. It is used to automatically show the application in the selected language when the application is used next time.
+                        </li>
+                     </ul>
+                     
+                     <p>If your system has received cookies, you can physically remove it from its persistent
+                location on disk using browser tools or system utilities.</p>
+                     
+                  </div>
+                  <div class="section">
+                     <p>To configure if <span>APEX</span> saves persistent cookies:
+                     </p>
+                  </div>
+                  <ol>
+                     <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                     <li><span>Locate the Security section.</span></li>
+                     <li><span>For Set Workspace Cookie, select one of the following:</span><ul>
+                           <li>
+                              
+                              <p><span class="uicontrol bold">Yes</span> - Enables <span>APEX</span> to save persistent cookies in the browser.
+                              </p>
+                              
+                           </li>
+                           <li><span class="uicontrol bold">No</span> - Prevents persistent cookies from
+                        being sent.
+                           </li>
+                        </ul>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-service-level-security-settings.html#GUID-498FFCDE-9D65-40FD-923D-4707C927482C" title="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">Configuring Service-level Security Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-A8FF8215-46E0-4394-841D-2E1510C3CDDA" name="GUID-A8FF8215-46E0-4394-841D-2E1510C3CDDA"></a><h3 id="AEADM-GUID-A8FF8215-46E0-4394-841D-2E1510C3CDDA" class="sect3"><span class="enumeration_section">3.4.1.2 </span>Controlling Persistent Authentication
+               </h3>
+               <div>
+                  <p>Control if Persistent Authentication is enabled. Enabling Persistent
+        Authentication enables developers to use a built-in API to let users choose to re-login to
+        an application without having to provide credentials.</p>
+                  <div class="section">
+                     
+                     <p>If <span class="uicontrol bold">Allow Persistent Authentication</span> option is set to <span class="uicontrol bold">Yes</span>, <span>Oracle APEX</span> sends a persistent cookie that:
+                     </p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-A8FF8215-46E0-4394-841D-2E1510C3CDDA__UL_DJF_ZCP_YSB">
+                        <li>
+                           
+                           <p>Contains a hash value</p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>Has a lifetime as configured in Persistent Authentication Lifetime Days</p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>Is read to compare to the value that is stored in the database.</p>
+                           
+                        </li>
+                     </ul>
+                     
+                     <p>If your system has received cookies, you can physically remove it from its persistent
+                location on disk using browser tools or system utilities.</p>
+                     
+                  </div>
+                  <p>To control Persistent Authentication:</p>
+                  <ol>
+                     <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                     <li><span>Locate the Security section.</span></li>
+                     <li><span>For Allow Persistent Authentication, select one of the following:</span><ul>
+                           <li>
+                              
+                              <p><span class="uicontrol bold">Yes</span> - Enables the <span>APEX</span> Persistent Authentication API for the login page to send a persistent
+                            cookie.
+                              </p>
+                              
+                              <p>The additional configuration option Persistent Authentication Lifetime
+                            Days controls the lifetime of this cookie.</p>
+                              
+                           </li>
+                           <li><span class="uicontrol bold">No</span> - Disables persistent
+                        authentication on this instance.
+                           </li>
+                        </ul>
+                     </li>
+                     <li><span>For Persistent Authentication Lifetime Days - Enter the maximum number of days
+                    users can login using Persistent Authentication before having to enter
+                    credentials again.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section">
+                     
+                     <div class="infoboxnote" id="GUID-A8FF8215-46E0-4394-841D-2E1510C3CDDA__GUID-6660900D-4DB4-4232-822F-41DAF6212C58">
+                        <p class="notep1">Note:</p>If your system has received this
+                cookie, you can physically remove it from its persistent location on disk using
+                browser tools, system utilities. The cookie will have the same name as the session
+                cookie, post-fixed with <code class="codeph">$P</code>. It may exist for each application
+                accessed having Persistent Authentication enabled.
+                     </div>
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-A8FF8215-46E0-4394-841D-2E1510C3CDDA__GUID-384DC284-195F-4860-8511-B8795E5C5AB9">
+                     <p class="notep1">See Also:</p><a href="../aeapi/APEX_AUTHENTICATION.html#AEAPI-GUID-2BA36F55-4881-455B-AC19-123DD9365E92" target="_blank">APEX_AUTHENTICATION</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-service-level-security-settings.html#GUID-498FFCDE-9D65-40FD-923D-4707C927482C" title="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">Configuring Service-level Security Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM206"></a><div class="props_rev_3"><a id="GUID-BB34BEA0-7034-4E33-82F1-5EBDAFD17DBD" name="GUID-BB34BEA0-7034-4E33-82F1-5EBDAFD17DBD"></a><h3 id="AEADM-GUID-BB34BEA0-7034-4E33-82F1-5EBDAFD17DBD" class="sect3"><span class="enumeration_section">3.4.1.3 </span>Disabling Access to Administration
+        Services
+               </h3>
+               <div>
+                  <p>Prevent a user from logging in to <span>Oracle APEX</span> Administration Services.
+                  </p>
+                  <div class="section">
+                     
+                     <p>Instance administrators can prevent a user from logging in to
+                Administration Services. Disabling administrator login in production environments
+                prevents unauthorized users from accessing Administration Services and possibly
+                compromising other user login credentials.</p>
+                     
+                  </div>
+                  <p>To disable user access to <span>APEX</span> Administration Services:
+                  </p>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                     <li class="stepexpand"><span>Locate the Security section.</span></li>
+                     <li class="stepexpand"><span>For Disable Administrator Login, select <span class="uicontrol bold">Yes</span>.</span><div>
+                           <div class="infoboxnote" id="GUID-BB34BEA0-7034-4E33-82F1-5EBDAFD17DBD__GUID-776E19D4-250A-4AE9-B884-E57639792E6E">
+                              <p class="notep1">Note:</p>
+                              <p>Selecting <span class="uicontrol bold">Yes</span> and signing out prevents anyone from accessing
+                            Administration Services.
+                              </p>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-BB34BEA0-7034-4E33-82F1-5EBDAFD17DBD__GUID-39EA7E16-220F-48AF-B890-F975F2123AFB">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="configuring-service-level-security-settings.html#GUID-EF319A45-FE5C-4EE8-909E-B5EFB28D0865" title="If access to Oracle APEX Administration Services has been disabled, an Instance administrator can re-enable again by running the following SQL statements.">Enabling Access to Oracle APEX Administration Services</a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-service-level-security-settings.html#GUID-498FFCDE-9D65-40FD-923D-4707C927482C" title="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">Configuring Service-level Security Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM395"></a><div class="props_rev_3"><a id="GUID-EF319A45-FE5C-4EE8-909E-B5EFB28D0865" name="GUID-EF319A45-FE5C-4EE8-909E-B5EFB28D0865"></a><h3 id="AEADM-GUID-EF319A45-FE5C-4EE8-909E-B5EFB28D0865" class="sect3"><span class="enumeration_section">3.4.1.4 </span>Enabling Access to <span>Oracle APEX</span> Administration Services
+               </h3>
+               <div>
+                  <p>If access to <span>Oracle APEX</span> Administration Services has been disabled, an Instance administrator can re-enable again by
+    running the following SQL statements.
+                  </p>
+                  <div class="section">
+                     <p>To enable user access to Administration Services if it has been disabled:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Start <span>Oracle SQL Developer Command Line</span> (<span>SQLcl</span>) and connect to the database where <span>Oracle APEX</span> is installed as <code class="codeph">SYS</code>, for example:</span><div>
+                           
+                           <ul style="list-style-type: disc;">
+                              <li>
+                                 
+                                 <p>On Windows:</p>
+                                 <pre class="oac_no_warn" dir="ltr"><span class="italic">SYSTEM_DRIVE:</span>\ <span>sql</span> /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span>
+</pre>
+                                 </li>
+                              <li>
+                                 
+                                 <p>On UNIX and Linux:</p>
+                                 <pre class="oac_no_warn" dir="ltr">$ <span>sql</span> /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span>
+</pre>
+                                 </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Run the following statement:</span><div><pre class="oac_no_warn" dir="ltr">ALTER SESSION SET CURRENT_SCHEMA = <span>APEX_240200</span>;
+</pre></div>
+                     </li>
+                     <li class="stepexpand"><span>Run the following statement:</span><div><pre class="oac_no_warn" dir="ltr">BEGIN
+  APEX_INSTANCE_ADMIN.SET_PARAMETER('DISABLE_ADMIN_LOGIN', 'N');
+  commit;
+END;
+/
+</pre></div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-service-level-security-settings.html#GUID-498FFCDE-9D65-40FD-923D-4707C927482C" title="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">Configuring Service-level Security Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM207"></a><div class="props_rev_3"><a id="GUID-B2A90F17-9B58-4223-8EE8-64C897A2FDDE" name="GUID-B2A90F17-9B58-4223-8EE8-64C897A2FDDE"></a><h3 id="AEADM-GUID-B2A90F17-9B58-4223-8EE8-64C897A2FDDE" class="sect3"><span class="enumeration_section">3.4.1.5 </span>Disabling Workspace Login Access
+               </h3>
+               <div>
+                  <p>Restrict user access to <span>APEX</span> by disabling workspace login. Disabling workspace login in production environments prevents users from running <span>APEX</span> applications such as <span>App Builder</span>.
+                  </p>
+                  <div class="section">
+                     <p>To disable user access to the Internal workspace:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                     <li class="stepexpand"><span>Locate the Security section.</span></li>
+                     <li class="stepexpand"><span>From Disable Workspace Login, select <span class="uicontrol bold">Yes</span>.</span><div>
+                           <p>Selecting <span class="uicontrol bold">Yes</span> effectively sets a Runtime-Only environment
+                                                while still allowing Instance administrators to sign
+                                                in to Administration Services. Selecting
+                                                  <span class="uicontrol bold">Yes</span> in production
+                                                environments prevents developers from changing
+                                                applications or data.
+                           </p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-service-level-security-settings.html#GUID-498FFCDE-9D65-40FD-923D-4707C927482C" title="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">Configuring Service-level Security Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-138D30FE-DBA2-4012-98DB-EAA53C93A3E6" name="GUID-138D30FE-DBA2-4012-98DB-EAA53C93A3E6"></a><h3 id="AEADM-GUID-138D30FE-DBA2-4012-98DB-EAA53C93A3E6" class="sect3"><span class="enumeration_section">3.4.1.6 </span>Disabling App Login Access
+               </h3>
+               <div>
+                  <p>Restrict access to all or specific customer built applications by
+    configuring the Disable Apps Login attribute.</p>
+                  <div class="section">
+                     <p>To disable user access to customer built applications:</p>
+                  </div>
+                  <ol>
+                     <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                     <li><span>Locate the Security section.</span></li>
+                     <li><span>Configure <span class="uicontrol bold">Disable Apps Login</span>. Options include:</span><ul id="GUID-138D30FE-DBA2-4012-98DB-EAA53C93A3E6__CHOICES_UQZ_JWR_DYB">
+                           <li>
+                              
+                              <p><span class="uicontrol bold">Yes</span> - Disables login access to all customer built
+              applications. 
+                              </p>
+                              
+                           </li>
+                           <li>
+                              
+                              <p><span class="uicontrol bold">Only for Specific Apps</span> - Disables login access for the
+              applications specified. In <span class="uicontrol bold">Disabled Apps</span>, enter a
+              comma-separated list of application IDs, for example:
+                              </p>
+                              
+                              <p><code class="codeph">100,101,102</code></p>
+                              
+                           </li>
+                           <li><span class="uicontrol bold">No</span> - Login access to customer built
+            applications is not disabled. No is the default setting.
+                           </li>
+                        </ul>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-service-level-security-settings.html#GUID-498FFCDE-9D65-40FD-923D-4707C927482C" title="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">Configuring Service-level Security Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM396"></a><div class="props_rev_3"><a id="GUID-5D83A6BC-DAE1-404A-9DAE-85CA10965493" name="GUID-5D83A6BC-DAE1-404A-9DAE-85CA10965493"></a><h3 id="AEADM-GUID-5D83A6BC-DAE1-404A-9DAE-85CA10965493" class="sect3"><span class="enumeration_section">3.4.1.7 </span>Controlling Public File Upload
+               </h3>
+               <div>
+                  <p>Use the Allow Public File Upload attribute to control whether unauthenticated users can upload files in applications that provide file upload controls.</p>
+                  <div class="section">
+                     <p>To control file upload:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                     <li class="stepexpand"><span>Locate the Security section.</span></li>
+                     <li class="stepexpand"><span>From Allow Public File Upload, select one of the following:</span><div>
+                           <ul style="list-style-type: disc;">
+                              <li>
+                                 <p><span class="uicontrol bold">Yes</span> - Enables unauthenticated users to upload files in applications that provide file upload controls.
+                                 </p>
+                              </li>
+                              <li>
+                                 <p><span class="uicontrol bold">No</span> - Prevents unauthenticated users from uploading files in applications that provide file upload controls.
+                                 </p>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-service-level-security-settings.html#GUID-498FFCDE-9D65-40FD-923D-4707C927482C" title="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">Configuring Service-level Security Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-4D5AAB41-953C-4B8B-8A2C-A8E4CEC2CC2F" name="GUID-4D5AAB41-953C-4B8B-8A2C-A8E4CEC2CC2F"></a><h3 id="AEADM-GUID-4D5AAB41-953C-4B8B-8A2C-A8E4CEC2CC2F" class="sect3"><span class="enumeration_section">3.4.1.8 </span>Managing Support for AI Services for an
+        Instance
+               </h3>
+               <div>
+                  <p>Use the AI Enabled attribute in  Instance Settings, Security to enable or
+        disable AI Services in a <span>APEX</span> instance.
+                  </p>
+                  <div class="p">
+                     
+                     <div class="infoboxnote" id="GUID-4D5AAB41-953C-4B8B-8A2C-A8E4CEC2CC2F__GUID-29044E33-49C9-4667-8E85-671AA72FBAA0">
+                        <p class="notep1">Note:</p>You can enable AI Services at the
+                workspace or instance-level. To enable AI Services for a workspace, see <a href="viewing-existing-workspace-information.html#GUID-F88900FF-A437-4B4D-B096-3D1E3F2D0032" title="View or edit existing workspace information and behavior including workspace details, support for AI Services, display name, login controls, component availability, session timeout, and component availability.">Viewing Existing Workspace Information</a>.
+                     </div>
+                     
+                  </div>
+                  <p>
+                     
+                     </p><p>To manage AI Services in an <span>APEX</span> instance:
+                     </p>
+                     
+                  <p></p>
+                  <ol>
+                     <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                     <li><span>Locate the Security section.</span></li>
+                     <li><span>From AI Enabled, select one of the following:</span><ul id="GUID-4D5AAB41-953C-4B8B-8A2C-A8E4CEC2CC2F__CHOICES_JQL_5TW_JBC">
+                           <li><span class="uicontrol bold">Yes</span> - Enable the usage of AI Services
+                        in this <span>APEX</span> instance.
+                           </li>
+                           <li><span class="uicontrol bold">No</span> - Disable the usage of AI
+                        Services in this <span>APEX</span> instance.
+                           </li>
+                        </ul>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section">
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-4D5AAB41-953C-4B8B-8A2C-A8E4CEC2CC2F__GUID-966887B8-3A2D-457C-8335-B5EDE2D3C2B0">
+                     <p class="notep1">See Also:</p><a href="../htmdb/managing-generative-ai-services.html#HTMDB-GUID-56EEAE93-53A8-467A-B01F-BF1B76DBC5F4" target="_blank">Managing Generative AI Services</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-service-level-security-settings.html#GUID-498FFCDE-9D65-40FD-923D-4707C927482C" title="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">Configuring Service-level Security Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM208"></a><div class="props_rev_3"><a id="GUID-1952AB59-7DC5-48C3-B4A5-31398CEA1485" name="GUID-1952AB59-7DC5-48C3-B4A5-31398CEA1485"></a><h3 id="AEADM-GUID-1952AB59-7DC5-48C3-B4A5-31398CEA1485" class="sect3"><span class="enumeration_section">3.4.1.9 </span>Restricting User Access by IP Address
+               </h3>
+               <div>
+                  <p>Restrict user access to the <span>APEX</span> development environment and Administration Services by specifying a comma-delimited list of allowable IP addresses.
+                  </p>
+                  <div class="section">
+                     <p>To restrict user access by IP address:</p>
+                  </div>
+                  <ol>
+                     <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                     <li><span>Locate the Security section and edit the following attributes:</span><ol type="a" id="GUID-1952AB59-7DC5-48C3-B4A5-31398CEA1485__SUBSTEPS_VVD_PYB_FTB">
+                           <li class="substepexpand"><span>Disable Administrator Login - Select <span class="uicontrol bold">No</span>.</span></li>
+                           <li class="substepexpand"><span>Restrict Access by IP Address - To restrict access to the <span>Oracle APEX</span> development environment and Administration Services to a specific
+                            range of IP addresses, enter a comma-delimited list of IP
+                            addresses.</span><div>
+                                 
+                                 <p>If necessary, use an asterisk (*) as a wildcard. However, do not
+                                include additional numeric values after wildcard characters. For
+                                example, <code class="codeph">138.*.41.2</code> is <span class="italic">not</span> a valid
+                                value.
+                                 </p>
+                                 
+                                 <p>You can enter IP addresses from one to four levels. For
+                                example:</p>
+                                 <pre class="oac_no_warn" dir="ltr">141, 141.* ...
+192.128.23.1 ...
+</pre>
+                                 </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-service-level-security-settings.html#GUID-498FFCDE-9D65-40FD-923D-4707C927482C" title="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">Configuring Service-level Security Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-9B3B422C-3F71-4C85-9962-42A8C5DD5D14" name="GUID-9B3B422C-3F71-4C85-9962-42A8C5DD5D14"></a><h3 id="AEADM-GUID-9B3B422C-3F71-4C85-9962-42A8C5DD5D14" class="sect3"><span class="enumeration_section">3.4.1.10 </span>Configuring <span>App Builder</span> Proxy for AI Services
+               </h3>
+               <div>
+                  <p>Specify a proxy server to be used by Generative AI Services in  <span>App Builder</span>.
+                  </p>
+                  <p>To specify a proxy server to be used by by Generative AI Services in  <span>App Builder</span>.
+                  </p>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                     <li class="stepexpand"><span>Locate the Security section.</span></li>
+                     <li class="stepexpand"><span>From <span>App Builder</span> Proxy for AI Services -  Specify a proxy server to be used by Generative AI
+                    Services in <span>App Builder</span>. </span><div>
+                           
+                           <p>For example:</p>
+                           
+                           <p><code class="codeph">http://www-proxy.example.com</code></p>
+                           
+                           <p><code class="codeph">http://www-proxy.example.com:8080</code></p>
+                           
+                           <p>If no proxy server is configured, the Instance Proxy is used.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section">
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-9B3B422C-3F71-4C85-9962-42A8C5DD5D14__GUID-F50AFBCD-F2D0-4739-9494-E2EF232915FA">
+                     <p class="notep1">See Also:</p><a href="../htmdb/managing-generative-ai-services.html#HTMDB-GUID-56EEAE93-53A8-467A-B01F-BF1B76DBC5F4" target="_blank">Managing Generative AI Services</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-service-level-security-settings.html#GUID-498FFCDE-9D65-40FD-923D-4707C927482C" title="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">Configuring Service-level Security Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-4129C05C-C7FC-42BF-9AD1-46B0A1A394D3" name="GUID-4129C05C-C7FC-42BF-9AD1-46B0A1A394D3"></a><h3 id="AEADM-GUID-4129C05C-C7FC-42BF-9AD1-46B0A1A394D3" class="sect3"><span class="enumeration_section">3.4.1.11 </span>Enabling Allow DBMS Credentials Usage
+               </h3>
+               <div>
+                  <p>Enable database credentials to be used in all workspace on the current
+        instance.</p>
+                  <div class="section">
+                     
+                     <p>In order for database credentials to be accessible to the <span>APEX</span> engine, the <code class="codeph">APEX_<span class="codeinlineitalic">NNNNNN</span></code> schema must have execute
+                premissions to the credential and a public synonoym must be created such that the
+                    <span>APEX</span> engine can access the credentials with the <code class="codeph">SYS</code> prefix. 
+                     </p>
+                     
+                     <p>Any database credentials which do not meet this criteria will not be available to all
+                workspaces if <span class="uicontrol bold">Allow DBMS Credentials Usage</span> is enabled.
+                     </p>
+                     
+                  </div>
+                  <div class="p">
+                     
+                     <div class="infoboxnote" id="GUID-4129C05C-C7FC-42BF-9AD1-46B0A1A394D3__GUID-A5D9931C-46AC-44F0-B472-AFEF10E456E6">
+                        <p class="notep1">Note:</p>Enabling this option is required when integrating <span>APEX</span> with Fusion Applications. See <a href="../htmdb/integrating-apex-with-fusion-applications.html#HTMDB-GUID-E9480E6C-A6E9-4C40-8193-F15B41FFF442" target="_blank">Integrating APEX with Fusion Applications</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></div>
+                     
+                  </div>
+                  <p>To enable database credentials for all workspaces on the
+                current instance:</p>
+                  <ol>
+                     <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                     <li><span>Locate the Security section.</span></li>
+                     <li><span>From Allow DBMS Credentials Usage - Select <span class="uicontrol bold">Yes</span> to enable
+                    database credentials. These credentials are accessible to <span>APEX</span> engine and can be used in all workspaces on this instance. </span></li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-service-level-security-settings.html#GUID-498FFCDE-9D65-40FD-923D-4707C927482C" title="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">Configuring Service-level Security Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM476"></a><div class="props_rev_3"><a id="GUID-06973DA0-92C6-4195-99FD-B3311252D172" name="GUID-06973DA0-92C6-4195-99FD-B3311252D172"></a><h3 id="AEADM-GUID-06973DA0-92C6-4195-99FD-B3311252D172" class="sect3"><span class="enumeration_section">3.4.1.12 </span>Configuring a Proxy Server for an Instance
+               </h3>
+               <div>
+                  <p>Configure an entire <span>APEX</span> instance to use a proxy for all outbound HTTP traffic.
+                  </p>
+                  <div class="section">
+                     
+                     <div class="infoboxnote" id="GUID-06973DA0-92C6-4195-99FD-B3311252D172__GUID-22DF2EB5-283B-49C0-8C11-2AE4C9FDA897">
+                        <p class="notep1">Note:</p>To ensure the security and performance of your
+                                development environment, this functionality is not available in
+                                Oracle APEX instances running in Oracle Cloud.
+                     </div>
+                     <p>Setting a proxy at the instance-level supersedes any proxies defined at the application-level or in web service references. If a proxy is specified, regions of type URL, Web services, and report printing will use the proxy.</p>
+                  </div>
+                  <p>To configure a proxy for an <span>APEX</span> instance:
+                  </p>
+                  <ol>
+                     <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                     <li><span>Locate the Security section and edit the following attributes:</span><ol type="a" id="GUID-06973DA0-92C6-4195-99FD-B3311252D172__SUBSTEPS_Q3T_GYB_FTB">
+                           <li class="substepexpand"><span>Instance Proxy - To require that all outbound HTTP(s) traffic from an
+                                <span>Oracle APEX</span> instance to use a specific proxy server, enter the proxy server
+                            address and port in this field. </span><div>For example: <code class="codeph">www-proxy.example.com:80</code></div>
+                           </li>
+                           <li class="substepexpand"><span>Instance No Proxy Domains - Provide a comma-separated list of domains
+                            for which the Instance Proxy should not be used.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-service-level-security-settings.html#GUID-498FFCDE-9D65-40FD-923D-4707C927482C" title="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">Configuring Service-level Security Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29228"></a><div class="props_rev_3"><a id="GUID-B4019F56-044F-4E56-89D0-EF911395FDDF" name="GUID-B4019F56-044F-4E56-89D0-EF911395FDDF"></a><h3 id="AEADM-GUID-B4019F56-044F-4E56-89D0-EF911395FDDF" class="sect3"><span class="enumeration_section">3.4.1.13 </span>Selecting a Checksum Hash Function
+               </h3>
+               <div>
+                  <p>Select a hash function that <span>APEX</span> uses to generate one way hash strings for checksums.
+                  </p>
+                  <div class="section">
+                     <p>The Checksum Hash Function attribute enables you to react to recent developments and switch between algorithms based on new research. Use the Checksum Hash Function attribute to select a hash function that <span>APEX</span> uses to generate one way hash strings for checksums. This attribute is also the default value for the Security Bookmark Hash Function attribute in new applications. Applications use the Bookmark Hash Function when defining bookmark URLs.
+                     </p>
+                     <div class="infobox-tip" id="GUID-B4019F56-044F-4E56-89D0-EF911395FDDF__GUID-6422EB7C-2C83-467A-8C27-4AE5E817EAB6">
+                        <p class="notep1">Tip:</p>
+                        <p>Changing the Checksum Hash Function does not change the Bookmark Hash Function currently defined for existing applications because this would invalidate all existing bookmarks saved by end users. Oracle strongly recommends going into existing applications, expiring existing bookmarks, and then updating the Bookmark Hash Function to the same value defined for Checksum Hash Function.</p>
+                     </div>
+                  </div>
+                  <div class="section">
+                     <p>To select a checksum hash function:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                     <li class="stepexpand"><span>Locate the Security section.</span></li>
+                     <li class="stepexpand"><span>From Checksum Hash Function, select a hash function that <span>APEX</span> uses to generate one way hash strings for checksums. </span><div>
+                           <p><span class="bold">Most Secure</span> automatically selects the most secure algorithm available.
+                        Therefore, Oracle recommends this setting. On Oracle Database 12<span class="italic">c</span> or
+                        later, this evaluates to <span class="bold">SHA-2, 512 bit</span> and on Oracle Database
+                            11<span class="italic">g</span>, <span class="bold">SHA-1</span> is the most secure algorithm. Since the
+                            <span class="bold">MD5</span> algorithm is deprecated, Oracle does not recommend this
+                        setting.
+                           </p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-service-level-security-settings.html#GUID-498FFCDE-9D65-40FD-923D-4707C927482C" title="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">Configuring Service-level Security Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29229"></a><div class="props_rev_3"><a id="GUID-6AB636A0-7DDE-4D7E-99AA-244C77D72776" name="GUID-6AB636A0-7DDE-4D7E-99AA-244C77D72776"></a><h3 id="AEADM-GUID-6AB636A0-7DDE-4D7E-99AA-244C77D72776" class="sect3"><span class="enumeration_section">3.4.1.14 </span>Configuring Rejoin Sessions for an Instance
+               </h3>
+               <div>
+                  <p>Controls at the application-level whether URLs in this application contain session IDs.</p>
+                  <div class="section">
+                     <p>By configuring the Rejoin Sessions attribute, Instance administrators can control if <span>APEX</span> supports URLs that contain session IDs. When Rejoin Sessions is enabled, <span>APEX</span> attempts to use the session cookie to join an existing session, when a URL does not contain a session ID.
+                     </p>
+                     
+                     <p>To use Rejoin Sessions at the application or page-level, an administrator must enable <span class="uicontrol bold">Rejoin Sessions</span> at the instance-level. A more restrictive instance-level setting overrides application and page settings.
+                     </p>
+                     <div class="infoboxnote" id="GUID-6AB636A0-7DDE-4D7E-99AA-244C77D72776__GUID-EFB823E1-DDF7-472D-8084-7088601D1E2E">
+                        <p class="notep1">Warning:</p>
+                        <p>For security reasons, Oracles recommends that administrators disable support for session joining unless they implement workspace isolation by configuring the Allow Hostname attributes. See <a href="isolating-workspace-to-prevent-browser-attacks.html#GUID-8BF9FF41-1CA7-44E7-A82E-42B927F42CF9" title="Workspace administrators can prevent browser attacks by isolating a specific workspace. Workspace-level settings override those configured for an entire instance.">Isolating a Workspace to Prevent Browser Attacks</a> and <a href="isolating-workspaces-in-an-instance.html#GUID-B3BD09CF-D003-4837-A7D2-91A6E756D72E" title="Instance administrators can configure limits to isolate all workspaces and prevent browser attacks. Workspace administrators can override these default values at the workspace-level.">Isolating All Workspaces in an Instance</a>.
+                        </p>
+                     </div>
+                     
+                     <div class="infoboxnote" id="GUID-6AB636A0-7DDE-4D7E-99AA-244C77D72776__GUID-2F644011-C330-4A79-8EAB-C995455BE95E">
+                        <p class="notep1">Note:</p>
+                        
+                        <p>Enabling rejoin sessions may expose your application to possible security breaches by enabling attackers to take over existing end user sessions. To learn more, see <a href="../htmdb/manging-instance-security.html#HTMDB-GUID-D7361972-32E2-4DB0-9650-688A04DBA400" target="_blank">About Rejoin Sessions</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span>.
+                        </p>
+                        
+                     </div>
+                  </div>
+                  <div class="section">
+                     <p>To configure Rejoin Sessions:</p>
+                  </div>
+                  <ol>
+                     <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                     <li><span>Locate the Security section.</span></li>
+                     <li><span>From Rejoin Sessions, select an option:</span><ul>
+                           <li><span class="uicontrol bold">Disabled</span> - If the URL does not contain a session ID, <span>APEX</span> creates a new session.
+                           </li>
+                           <li><span class="uicontrol bold">Enabled for Public Sessions</span> - If the URL goes to a public page and does not contain a session ID, <span>APEX</span> attempts to utilize the existing session cookie established for that application. For applications with both public and authenticated pages, a session ID is defined after the end user authenticates. <span>APEX</span> only joins via the cookie when the session is not yet authenticated.
+                           </li>
+                           <li><span class="uicontrol bold">Enabled for All Sessions</span> - If the URL does not contain a session ID, <span>APEX</span> attempts to use the existing session cookie established for that application, providing one of the following conditions are met:
+                              <ul style="list-style-type: disc;">
+                                 <li>
+                                    <p>Session State Protection is enabled for the application and the URL includes a valid checksum. For public bookmarks, the most restrictive item level protection must be either <span class="bold">Unrestricted</span> or <span class="bold">Checksum Required - Application Level</span>.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>The URL does not contain payload (a request parameter, clear cache or data value pairs). This setting requires that Embed In Frames is set to <span class="bold">Allow from same origin</span> or to <span class="bold">Deny</span> for the application.
+                                    </p>
+                                 </li>
+                              </ul>
+                              <p><span class="uicontrol bold">Enabled for All Sessions</span> requires that <span class="uicontrol bold">Embed in Frames</span> is set to <span class="uicontrol bold">Allow from same origin</span> or <span class="uicontrol bold">Deny</span>. This is not tied to a condition about the URL payload, but also applies to session state protected URLs.
+                              </p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-6AB636A0-7DDE-4D7E-99AA-244C77D72776__GUID-984B77A6-F4BB-4543-B053-EC35987AE089">
+                     <p class="notep1">See Also:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-6AB636A0-7DDE-4D7E-99AA-244C77D72776__UL_K4W_XXD_SKB">
+                        <li><a href="../htmdb/editing-page-attributes-in-page-designer.html#HTMDB-GUID-C5DC542A-6963-43AB-AA35-26FDC0730B18" target="_blank">Configuring Rejoin Sessions for a Page</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span> 
+                        </li>
+                        <li><a href="../htmdb/configuring-security-attributes.html#HTMDB-GUID-33A67D5E-1128-4D23-9C5C-15FC9BE1B783" target="_blank">Session Management</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span> to learn how to configure Rejoin Sessions at the application-level
+                        </li>
+                     </ul>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-service-level-security-settings.html#GUID-498FFCDE-9D65-40FD-923D-4707C927482C" title="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">Configuring Service-level Security Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29250"></a><div class="props_rev_3"><a id="GUID-A3A1492B-7384-4633-88DE-020F33B30680" name="GUID-A3A1492B-7384-4633-88DE-020F33B30680"></a><h3 id="AEADM-GUID-A3A1492B-7384-4633-88DE-020F33B30680" class="sect3"><span class="enumeration_section">3.4.1.15 </span>Configuring Unhandled Errors
+               </h3>
+               <div>
+                  <p>Control how <span>Oracle APEX</span> displays the results of unhandled errors.
+                  </p>
+                  <div class="section">
+                     
+                     <div class="infoboxnote" id="GUID-A3A1492B-7384-4633-88DE-020F33B30680__GUID-F9ABC0B1-7426-46CA-B25F-84BB1E76FA1D">
+                        <p class="notep1">Note:</p>To ensure the security and performance of your
+                                development environment, this functionality is not available in
+                                Oracle APEX instances running in Oracle Cloud.
+                     </div>
+                     <p>When <span>Oracle APEX</span> encounters an unhandled error during processing, an error page displays to the
+                end user of the application. From a security standpoint, it is often better to not
+                display these messages and error codes to the end user and simply return a HTTP 400
+                (Bad Request) error code to the client browser.
+                     </p>
+                  </div>
+                  <p>To configure Unhandled Errors:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                     <li class="stepexpand"><span>Locate the Security section.</span></li>
+                     <li class="stepexpand"><span>From Unhandled Errors, select an option:</span><div>
+                           <ul style="list-style-type: disc;">
+                              <li>
+                                 <p><span class="uicontrol bold">Show Error Page</span> - This is the default behavior. For any error or exception which is not handled by the error processing of an application, an error page displays to the end user with the specific error and the error code.
+                                 </p>
+                              </li>
+                              <li>
+                                 <p><span class="uicontrol bold">Return HTTP 400</span> - Returns an HTTP 400 status to the end user's client browser when the <span>APEX</span> engine encounters an unhandled error. 
+                                 </p>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-service-level-security-settings.html#GUID-498FFCDE-9D65-40FD-923D-4707C927482C" title="Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.">Configuring Service-level Security Settings</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

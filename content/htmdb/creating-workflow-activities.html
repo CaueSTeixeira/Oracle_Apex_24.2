@@ -1,0 +1,828 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Creating a Workflow Activity">
+      <meta name="abstract" content="Create a workflow activity by right-clicking the workflow version and selecting Create Activity.">
+      <meta name="description" content="Create a workflow activity by right-clicking the workflow version and selecting Create Activity.">
+      <meta name="DC.subject" content="workflows, activities, creating, workflow activities, start, end, switch, true false, check workflow variable, case, if elsif else, wait, human task, custom process type plug-in, invoke workflow, variables">
+      <meta name="keywords" content="workflows, activities, creating, workflow activities, start, end, switch, true false, check workflow variable, case, if elsif else, wait, human task, custom process type plug-in, invoke workflow, variables">
+      <meta name="DC.Relation" scheme="URI" content="creating-a-workflow.html#GUID-D396762A-FC8E-49D1-BBD7-47B001752281">
+      <meta name="DC.Relation" scheme="URI" content="creating-workflow-activities.html#GUID-1BA51524-D2A1-44CD-A8AF-D50A3FB171F3">
+      <meta name="DC.Relation" scheme="URI" content="creating-workflow-activities.html#GUID-080A3A93-F1AB-45ED-9848-379DC1976005">
+      <meta name="DC.Relation" scheme="URI" content="creating-workflow-activities.html#GUID-4CACDAE4-B83A-45FD-B2B2-C0CF4C5B7E01">
+      <meta name="DC.Relation" scheme="URI" content="creating-workflow-activities.html#GUID-4E32C001-ECFA-42EA-B2EC-ADA215F72C97">
+      <meta name="DC.Relation" scheme="URI" content="creating-workflow-activities.html#GUID-5F6BC9E8-F598-40C6-B7EC-0760A5AEEF4B">
+      <meta name="DC.Relation" scheme="URI" content="creating-workflow-activities.html#GUID-8BD3A85D-2A76-4CA6-B90B-ECBBCAE72D9F">
+      <meta name="DC.Relation" scheme="URI" content="creating-workflow-activities.html#GUID-B61E36D3-D97D-4971-926F-6087F2121079">
+      <meta name="DC.Relation" scheme="URI" content="creating-workflow-activities.html#GUID-16385275-0C1A-41C1-BD81-6528F9343C4C">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Task">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Create a workflow activity by right-clicking the workflow version and selecting Create Activity.">
+      <meta name="description" content="Create a workflow activity by right-clicking the workflow version and selecting Create Activity.">
+      <title>Creating a Workflow Activity</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Create a workflow activity by right-clicking the workflow version and selecting Create Activity.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="creating-workflow-variables.html" title="Previous" type="text/html">
+      <link rel="next" href="adding-workflow-connections.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Creating a Workflow Activity","description":"Create a workflow activity by right-clicking the workflow version and selecting Create Activity.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="creating-workflow-variables.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="adding-workflow-connections.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3" name="GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3"></a>
+         
+         <h2 id="HTMDB-GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3" class="sect2"><span class="enumeration_section">20.2.3 </span>Creating a Workflow Activity
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Create a workflow activity by right-clicking the workflow version and selecting Create Activity.</p>
+               <div class="section">A workflow activity specifies what kind of work <span>APEX</span> performs when the workflow arrives at that activity.
+               </div>
+               <div class="p">You can only create a workflow activity if the workflow is in development. You cannot create a workflow activity if the workflow is active.</div>
+               <p>To create a workflow activity:</p>
+               <ol id="GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3__STEPS_Z2R_CKY_TYB">
+                  <li class="stepexpand"><span>Choose one of the following options:</span><ul id="GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3__CHOICES_GJD_HQK_WYB">
+                        <li>Right-click on the workflow version and choose <span class="uicontrol bold">Create Activity</span>.
+                        </li>
+                        <li>Drag and drop a specific activity from the Activity Palette into the Diagram Builder.
+                           <div class="infobox-tip" id="GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3__GUID-FFA5B949-BA33-480D-A0D7-EA0F5AD53C0D">
+                              <p class="notep1">Tip:</p>You can drop an activity on an existing activity to automatically place the new activity next in the workflow execution order. You can also drop an activity on a connection to place the new activity between the original source and the target of the connection.
+                           </div>
+                        </li>
+                        <li>Right-click an existing activity in the workflow tree and select <span class="uicontrol bold">Create Activity Below</span>.
+                           <div class="infobox-tip" id="GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3__GUID-41E0142E-0656-4E8D-A454-F3431C6B5CC8">
+                              <p class="notep1">Tip:</p>The new activity is not connected to any existing activities. You must explicitly create connections to other activities.
+                           </div>
+                        </li>
+                        <li>Right-click an existing activity in the workflow tree and select <span class="uicontrol bold">Create Activity After</span>.
+                           <div class="infobox-tip" id="GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3__GUID-BC3B9704-1E4C-45C8-A894-4C7B2AA6FC6B">
+                              <p class="notep1">Tip:</p>The new activity is connected to the existing activity. If the existing activity was connected to another activity, the new activity replaces that connection.
+                           </div>
+                        </li>
+                     </ul>
+                     <div>By default, the new activity type is <strong class="term">Execute Code</strong>.
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>Enter the activity <span class="uicontrol bold">Name</span>.</span><div>The name displays in the workflow tree and in the Diagram Builder. The activity name must be unique for the workflow.</div>
+                  </li>
+                  <li class="stepexpand"><span>Select the activity <span class="uicontrol bold">Type</span>:</span><ul id="GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3__CHOICES_GBG_MRK_WYB">
+                        <li>Custom Process Type Plug-in - An activity that uses an existing process type plug-in. See <a href="creating-workflow-activities.html#GUID-8BD3A85D-2A76-4CA6-B90B-ECBBCAE72D9F" title="A custom process type plugin uses a custom plugin as an activity.">Adding a Custom Process Type Plug-in as an Activity</a>.
+                        </li>
+                        <li>Execute Code - An activity that executes the entered code.</li>
+                        <li>Human Task - Create - An activity that links to an existing task definition. See <a href="creating-workflow-activities.html#GUID-5F6BC9E8-F598-40C6-B7EC-0760A5AEEF4B" title="A Human Task - Create activity creates a human task using an existing task definition.">Adding a Workflow Human Task Activity</a>.
+                        </li>
+                        <li>Invoke API - An activity that invokes an API.</li>
+                        <li>Invoke Workflow - An activity that invokes another workflow in the current application. See <a href="creating-workflow-activities.html#GUID-B61E36D3-D97D-4971-926F-6087F2121079" title="An invoke workflow activity calls another workflow in the same application.">Adding an Invoke Workflow Activity</a>.
+                        </li>
+                        <li>Send Email - An activity that sends an email.</li>
+                        <li>Send Push Notification - An activity that sends a push notification.</li>
+                        <li>Switch - An activity that defines branches in the workflow. See <a href="creating-workflow-activities.html#GUID-4CACDAE4-B83A-45FD-B2B2-C0CF4C5B7E01" title="A switch activity defines conditional branches in your workflow.">Adding a Workflow Switch Activity</a>.
+                        </li>
+                        <li>Wait - An activity that represents a pause in the workflow. See <a href="creating-workflow-activities.html#GUID-4E32C001-ECFA-42EA-B2EC-ADA215F72C97" title="A Wait activity pauses workflow execution.">Adding a Workflow Wait Activity</a>.
+                        </li>
+                        <li>Workflow End - An activity that ends the workflow or a particular branch of a workflow. See <a href="creating-workflow-activities.html#GUID-080A3A93-F1AB-45ED-9848-379DC1976005" title="An end activity ends a workflow or a workflow branch.">Adding a Workflow End Activity</a>.
+                        </li>
+                        <li>Workflow Start - The single activity that starts the workflow. See <a href="creating-workflow-activities.html#GUID-1BA51524-D2A1-44CD-A8AF-D50A3FB171F3" title="A Start activity begins a workflow.">Adding a Workflow Start Activity</a>.
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="stepexpand"><span>Fill in the remaining settings for the activity type.</span></li>
+                  <li class="stepexpand"><span>(Optional) Under Additional Data, specify a SQL Query to read additional data. For more information, see item-level help.</span></li>
+                  <li class="stepexpand"><span>(Optional) Under Deadline, configure <span class="uicontrol bold">Due On Type</span>.</span></li>
+                  <li class="stepexpand"><span>Under Layout, set the sequence.</span><div>The sequence determines where the activity displays in the workflow tree. The sequence does not impact the order of activities in the workflow execution chain.</div>
+                  </li>
+                  <li class="stepexpand"><span>Continue configuring the activity:</span><ul id="GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3__CHOICES_KRV_M14_XYB">
+                        <li><strong class="term">Duplicate</strong> the activity by clicking on the context menu and selecting <span class="uicontrol bold">Duplicate</span>.
+                        </li>
+                        <li>Configure <strong class="term">Workflow Connections</strong> by clicking the context menu and selecting <span class="uicontrol bold">Create Connection</span>. For more on workflow connections, see <a href="adding-workflow-connections.html#GUID-A08E305A-A1EC-4DC1-8F44-CD8FBC500A42" title="Add a workflow connection by right-clicking on an activity and selecting Create Connection.">Adding a Workflow Connection</a>.
+                        </li>
+                        <li>Create an <strong class="term">Activity Variable</strong> by clicking the context menu and selecting <span class="uicontrol bold">Create Activity Variable</span>. For more on activity variables, see <a href="creating-workflow-activities.html#GUID-16385275-0C1A-41C1-BD81-6528F9343C4C" title="Add an activity variable by right-clicking the activity in the workflow tree and selecting Create Activity Variable.">Defining an Activity Variable</a>.
+                        </li>
+                        <li>Create another activity connected to this activity by clicking the <span class="uicontrol bold">Connect</span> tool on any side of the existing activity and selecting the type for the new activity.
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="stepexpand"><span>Click <span class="uicontrol bold">Show Messages</span> to view and fix errors.</span><div>The <span class="uicontrol bold">Show Messages</span> icon indicates whether there are any workflow modeling or workflow configuration errors. When you click the icon, APEX displays the list of errors. You can click on an individual error to focus on that activity in the workflow. Note that you cannot save the workflow until you address any errors.
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span> to save your changes.</span></li>
+               </ol>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="creating-workflow-activities.html#GUID-1BA51524-D2A1-44CD-A8AF-D50A3FB171F3">Adding a Workflow Start Activity</a><br>A <strong class="term">Start</strong> activity begins a workflow.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-workflow-activities.html#GUID-080A3A93-F1AB-45ED-9848-379DC1976005">Adding a Workflow End Activity</a><br>An end activity ends a workflow or a workflow branch.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-workflow-activities.html#GUID-4CACDAE4-B83A-45FD-B2B2-C0CF4C5B7E01">Adding a Workflow Switch Activity</a><br>A switch activity defines conditional branches in your workflow.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-workflow-activities.html#GUID-4E32C001-ECFA-42EA-B2EC-ADA215F72C97">Adding a Workflow Wait Activity</a><br>A <strong class="term">Wait</strong> activity pauses workflow execution.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-workflow-activities.html#GUID-5F6BC9E8-F598-40C6-B7EC-0760A5AEEF4B">Adding a Workflow Human Task Activity</a><br>A <strong class="term">Human Task - Create</strong> activity creates a human task using an existing task definition.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-workflow-activities.html#GUID-8BD3A85D-2A76-4CA6-B90B-ECBBCAE72D9F">Adding a Custom Process Type Plug-in as an Activity</a><br>A custom process type plugin uses a custom plugin as an activity.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-workflow-activities.html#GUID-B61E36D3-D97D-4971-926F-6087F2121079">Adding an Invoke Workflow Activity</a><br>An invoke workflow activity calls another workflow in the same application.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-workflow-activities.html#GUID-16385275-0C1A-41C1-BD81-6528F9343C4C">Defining an Activity Variable</a><br>Add an activity variable by right-clicking the activity in the workflow tree and selecting <span class="uicontrol bold">Create Activity Variable</span>.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="creating-a-workflow.html#GUID-D396762A-FC8E-49D1-BBD7-47B001752281" title="Create a Workflow in Shared Components, Workflows and Automations.">Creating a Workflow</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-1BA51524-D2A1-44CD-A8AF-D50A3FB171F3" name="GUID-1BA51524-D2A1-44CD-A8AF-D50A3FB171F3"></a><h3 id="HTMDB-GUID-1BA51524-D2A1-44CD-A8AF-D50A3FB171F3" class="sect3"><span class="enumeration_section">20.2.3.1 </span>Adding a Workflow Start Activity
+               </h3>
+               <div>
+                  <p>A <strong class="term">Start</strong> activity begins a workflow.
+                  </p>
+                  <div class="section">There can only be one start activity in a workflow.</div>
+                  <p>To create a workflow start activity:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Right-click on the workflow version and select <span class="uicontrol bold">Create Activity</span>.</span><div>You can also drag the Workflow Start activity from the Activities Palette into the Diagram Builder.</div>
+                     </li>
+                     <li class="stepexpand"><span>Enter the activity <span class="uicontrol bold">Name</span>.</span><div>The name displays in the workflow tree and in the workflow diagram builder. The activity name must be unique for the workflow.</div>
+                     </li>
+                     <li class="stepexpand"><span>Set the Type to <span class="uicontrol bold">Workflow Start</span>.</span></li>
+                     <li class="stepexpand"><span>(Optional) Under Additional Data, specify a SQL Query to read additional data. For more information, see item-level help.</span></li>
+                     <li class="stepexpand"><span>(Optional) Under Deadline, configure <span class="uicontrol bold">Due On Type</span>.</span></li>
+                     <li class="stepexpand"><span>Under Layout, set the sequence.</span><div>The sequence determines where the activity displays in the workflow tree. The sequence does not impact the order of the activities in the workflow execution chain.</div>
+                     </li>
+                     <li class="stepexpand"><span>Continue configuring the activity:</span><ul id="GUID-1BA51524-D2A1-44CD-A8AF-D50A3FB171F3__CHOICES_KRV_M14_XYB">
+                           <li>Configure <strong class="term">Workflow Connections</strong> by clicking the context menu and selecting <span class="uicontrol bold">Create Connection</span>. For more on workflow connections, see <a href="adding-workflow-connections.html#GUID-A08E305A-A1EC-4DC1-8F44-CD8FBC500A42" title="Add a workflow connection by right-clicking on an activity and selecting Create Connection.">Adding a Workflow Connection</a>.
+                           </li>
+                           <li>Create an <strong class="term">Activity Variable</strong> by clicking the context menu and selecting <span class="uicontrol bold">Create Activity Variable</span>. For more on activity variables, see <a href="creating-workflow-activities.html#GUID-16385275-0C1A-41C1-BD81-6528F9343C4C" title="Add an activity variable by right-clicking the activity in the workflow tree and selecting Create Activity Variable.">Defining an Activity Variable</a>.
+                           </li>
+                           <li>Create another activity connected to this activity by clicking <span class="uicontrol bold">Connect</span> on any side of the existing activity and selecting the type for the new activity.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Show Messages</span> to view and fix errors.</span><div>The <span class="uicontrol bold">Show Messages</span> icon indicates whether there are any workflow modeling or workflow configuration errors. When you click the icon, APEX displays the list of errors. You can click on an individual error to focus on that activity in the workflow. Note that you cannot save the workflow until you address any errors.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span> to save your changes.</span></li>
+                  </ol>
+                  <div class="section">A workflow can only have one Start Activity. The Start Activity cannot have any incoming connections.</div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-workflow-activities.html#GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3" title="Create a workflow activity by right-clicking the workflow version and selecting Create Activity.">Creating a Workflow Activity</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-080A3A93-F1AB-45ED-9848-379DC1976005" name="GUID-080A3A93-F1AB-45ED-9848-379DC1976005"></a><h3 id="HTMDB-GUID-080A3A93-F1AB-45ED-9848-379DC1976005" class="sect3"><span class="enumeration_section">20.2.3.2 </span>Adding a Workflow End Activity
+               </h3>
+               <div>
+                  <p>An end activity ends a workflow or a workflow branch.</p>
+                  <div class="p">To create a workflow end activity:</div>
+                  <ol id="GUID-080A3A93-F1AB-45ED-9848-379DC1976005__STEPS_FPB_MVD_5YB">
+                     <li class="stepexpand"><span>Right-click on the workflow version and select <span class="uicontrol bold">Create Activity</span>.</span><div>You can also drag the Workflow End activity from the Activities Palette into the Diagram Builder.</div>
+                     </li>
+                     <li class="stepexpand"><span>Enter the activity <span class="uicontrol bold">Name</span>.</span><div>The name displays in the workflow tree and in the workflow diagram builder. The activity name must be unique for the workflow.</div>
+                     </li>
+                     <li class="stepexpand"><span>Set the type to <span class="uicontrol bold">Workflow End</span>.</span></li>
+                     <li class="stepexpand"><span>Select the <span class="uicontrol bold">End State</span>:</span><ul id="GUID-080A3A93-F1AB-45ED-9848-379DC1976005__CHOICES_DGC_VVD_5YB">
+                           <li>Completed - When the workflow reaches this activity, the workflow ends with the <strong class="term">Completed</strong> state.
+                           </li>
+                           <li>Terminated - When the workflow reaches this activity, the workflow ends with the <strong class="term">Terminated</strong> state. This state indicates that something unexpected happened in the workflow.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>(Optional) Under Additional Data, specify a SQL Query to read additional data. For more information, see item-level help.</span></li>
+                     <li class="stepexpand"><span>(Optional) Under Deadline, configure <span class="uicontrol bold">Due On Type</span>.</span></li>
+                     <li class="stepexpand"><span>Under Layout, set the sequence.</span><div>The sequence determines where the activity displays in the workflow tree. The sequence does not impact the order of the activities in the workflow execution chain.</div>
+                     </li>
+                     <li class="stepexpand"><span>Continue configuring the activity:</span><ul id="GUID-080A3A93-F1AB-45ED-9848-379DC1976005__CHOICES_KRV_M14_XYB">
+                           <li><strong class="term">Duplicate</strong> the activity by clicking on the context menu and selecting <span class="uicontrol bold">Duplicate</span>.
+                           </li>
+                           <li>Configure <strong class="term">Workflow Connections</strong> by clicking the context menu and selecting <span class="uicontrol bold">Create Connection</span>. For more on workflow connections, see <a href="adding-workflow-connections.html#GUID-A08E305A-A1EC-4DC1-8F44-CD8FBC500A42" title="Add a workflow connection by right-clicking on an activity and selecting Create Connection.">Adding a Workflow Connection</a>.
+                           </li>
+                           <li>Create an <strong class="term">Activity Variable</strong> by clicking the context menu and selecting <span class="uicontrol bold">Create Activity Variable</span>. For more on activity variables, see <a href="creating-workflow-activities.html#GUID-16385275-0C1A-41C1-BD81-6528F9343C4C" title="Add an activity variable by right-clicking the activity in the workflow tree and selecting Create Activity Variable.">Defining an Activity Variable</a>.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Show Messages</span> to view and fix errors.</span><div>The <span class="uicontrol bold">Show Messages</span> icon indicates whether there are any workflow modeling or workflow configuration errors. When you click the icon, APEX displays the list of errors. You can click on an individual error to focus on that activity in the workflow. Note that you cannot save the workflow until you address any errors.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span> to save your changes.</span></li>
+                  </ol>
+                  <div class="section">A workflow can have one end activity or multiple end activities. An end activity does not have any outgoing connections.</div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-workflow-activities.html#GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3" title="Create a workflow activity by right-clicking the workflow version and selecting Create Activity.">Creating a Workflow Activity</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-4CACDAE4-B83A-45FD-B2B2-C0CF4C5B7E01" name="GUID-4CACDAE4-B83A-45FD-B2B2-C0CF4C5B7E01"></a><h3 id="HTMDB-GUID-4CACDAE4-B83A-45FD-B2B2-C0CF4C5B7E01" class="sect3"><span class="enumeration_section">20.2.3.3 </span>Adding a Workflow Switch Activity
+               </h3>
+               <div>
+                  <p>A switch activity defines conditional branches in your workflow.</p>
+                  <p>To create a workflow switch activity:</p>
+                  <ol id="GUID-4CACDAE4-B83A-45FD-B2B2-C0CF4C5B7E01__STEPS_GLM_PWD_5YB">
+                     <li class="stepexpand"><span>Right-click on the workflow version and select <span class="uicontrol bold">Create Activity</span>.</span><div>You can also drag the Switch activity from the Activities Palette into the Diagram Builder.</div>
+                     </li>
+                     <li class="stepexpand"><span>Enter the activity <span class="uicontrol bold">Name</span>.</span><div>The name displays in the workflow tree and in the workflow diagram builder. The activity name must be unique for the workflow.</div>
+                     </li>
+                     <li class="stepexpand"><span>Set the Type to <span class="uicontrol bold">Switch</span>.</span></li>
+                     <li class="stepexpand"><span>Select the switch type:</span><ul id="GUID-4CACDAE4-B83A-45FD-B2B2-C0CF4C5B7E01__CHOICES_NN2_ZYD_5YB">
+                           <li><strong class="term">True False</strong> - For branches based on a true/false outcome of the switch condition. See <a href="creating-workflow-activities.html#GUID-4FA2FB1E-D417-4E20-9319-834991082EA5" title="A True False switch is based on the result of a single condition that returns a boolean.">Configuring a True False Switch</a>.
+                           </li>
+                           <li><strong class="term">Check Workflow Variable</strong> - For branches based on the value of a workflow variable. See <a href="creating-workflow-activities.html#GUID-0FAB6091-7ABE-4FB3-AE24-1F4D8D4FBDA2" title="A Check Workflow Variable switch is based on the value of a workflow variable.">Configuring a Check Workflow Variable Switch</a>.
+                           </li>
+                           <li><strong class="term">Case</strong> - For branches based on the value of a case expression. See <a href="creating-workflow-activities.html#GUID-CF2DD07D-0F7E-4226-A4BB-904B6506781B" title="A Case switch is based on the result of a computation.">Configuring a Case Switch</a>.
+                           </li>
+                           <li><strong class="term">If Elsif Else</strong> - For branches based on the evaluation of more complex conditional expressions. See <a href="creating-workflow-activities.html#GUID-B3857A01-58CE-4534-A1F1-377ECD36C822" title="An If Elsif Else switch is based on AND/OR comparisons between the conditions.">Configuring an If Elsif Else Switch</a>.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Fill in the remaining settings for the activity type.</span></li>
+                     <li class="stepexpand"><span>(Optional) Under Additional Data, specify a SQL Query to read additional data. For more information, see item-level help.</span></li>
+                     <li class="stepexpand"><span>(Optional) Under Deadline, configure <span class="uicontrol bold">Due On Type</span>.</span></li>
+                     <li class="stepexpand"><span>Under Layout, set the sequence.</span><div>The sequence determines where the activity displays in the workflow tree. The sequence does not impact the order of the activities in the workflow execution chain.</div>
+                     </li>
+                     <li class="stepexpand"><span>Continue configuring the activity:</span><ul id="GUID-4CACDAE4-B83A-45FD-B2B2-C0CF4C5B7E01__CHOICES_KRV_M14_XYB">
+                           <li><strong class="term">Duplicate</strong> the activity by clicking on the context menu and selecting <span class="uicontrol bold">Duplicate</span>.
+                           </li>
+                           <li>Configure <strong class="term">Workflow Connections</strong> by clicking the context menu and selecting <span class="uicontrol bold">Create Connection</span>. For more on workflow connections, see <a href="adding-workflow-connections.html#GUID-A08E305A-A1EC-4DC1-8F44-CD8FBC500A42" title="Add a workflow connection by right-clicking on an activity and selecting Create Connection.">Adding a Workflow Connection</a>.
+                           </li>
+                           <li>Create an <strong class="term">Activity Variable</strong> by clicking the context menu and selecting <span class="uicontrol bold">Create Activity Variable</span>. For more on activity variables, see <a href="creating-workflow-activities.html#GUID-16385275-0C1A-41C1-BD81-6528F9343C4C" title="Add an activity variable by right-clicking the activity in the workflow tree and selecting Create Activity Variable.">Defining an Activity Variable</a>.
+                           </li>
+                           <li>Create another activity connected to this activity by clicking <span class="uicontrol bold">Connect</span> on any side of the existing activity and selecting the type for the new activity.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Show Messages</span> to view and fix errors.</span><div>The <span class="uicontrol bold">Show Messages</span> icon indicates whether there are any workflow modeling or workflow configuration errors. When you click the icon, APEX displays the list of errors. You can click on an individual error to focus on that activity in the workflow. Note that you cannot save the workflow until you address any errors.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span> to save your changes.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <ul class="ullinks">
+                     <li class="ulchildlink"><a href="creating-workflow-activities.html#GUID-4FA2FB1E-D417-4E20-9319-834991082EA5">Configuring a True False Switch</a><br>A <strong class="term">True False</strong> switch is based on the result of a single condition that returns a boolean.
+                     </li>
+                     <li class="ulchildlink"><a href="creating-workflow-activities.html#GUID-0FAB6091-7ABE-4FB3-AE24-1F4D8D4FBDA2">Configuring a Check Workflow Variable Switch</a><br>A <strong class="term">Check Workflow Variable</strong> switch is based on the value of a workflow variable.
+                     </li>
+                     <li class="ulchildlink"><a href="creating-workflow-activities.html#GUID-CF2DD07D-0F7E-4226-A4BB-904B6506781B">Configuring a Case Switch</a><br>A <strong class="term">Case</strong> switch is based on the result of a computation.
+                     </li>
+                     <li class="ulchildlink"><a href="creating-workflow-activities.html#GUID-B3857A01-58CE-4534-A1F1-377ECD36C822">Configuring an If Elsif Else Switch</a><br>An <strong class="term">If Elsif Else</strong> switch is based on <code class="codeph">AND/OR</code> comparisons between the conditions.
+                     </li>
+                  </ul>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-workflow-activities.html#GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3" title="Create a workflow activity by right-clicking the workflow version and selecting Create Activity.">Creating a Workflow Activity</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="sect3"><a id="GUID-4FA2FB1E-D417-4E20-9319-834991082EA5" name="GUID-4FA2FB1E-D417-4E20-9319-834991082EA5"></a><h4 id="HTMDB-GUID-4FA2FB1E-D417-4E20-9319-834991082EA5" class="sect4"><span class="enumeration_section">20.2.3.3.1 </span>Configuring a True False Switch
+                  </h4>
+                  <div>
+                     <p>A <strong class="term">True False</strong> switch is based on the result of a single condition that returns a boolean.
+                     </p>
+                     <div class="section"></div>
+                     <p>To configure a <strong class="term">True False</strong> Switch:
+                     </p>
+                     <ol>
+                        <li class="stepexpand"><span>Set the switch type to <span class="uicontrol bold">True False Check</span>.</span></li>
+                        <li class="stepexpand"><span>Set the Condition Type:</span><ul id="GUID-4FA2FB1E-D417-4E20-9319-834991082EA5__CHOICES_NN2_ZYD_5YB">
+                              <li>Rows Returned - Defined by a SQL Query.</li>
+                              <li>Rows Not Returned - Defined by a SQL Query.</li>
+                              <li>Expression - Defined by an PL/SQL Expression.</li>
+                              <li>Function Body - Defined by a PL/SQL Function Body.</li>
+                              <li>Workflow Variable = Value - Select the workflow parameters, version variables, or activity variables.</li>
+                              <li>Workflow Variable != Value - Select the workflow parameters, version variables, or activity variables.</li>
+                              <li>Workflow Variable is NULL.</li>
+                              <li>Workflow Variable is NOT NULL.</li>
+                           </ul>
+                        </li>
+                        <li class="stepexpand"><span>(Optional) Under Additional Data, specify a SQL Query to read additional data. For more information, see item-level help.</span></li>
+                        <li class="stepexpand"><span>(Optional) Under Deadline, configure <span class="uicontrol bold">Due On Type</span>.</span></li>
+                        <li class="stepexpand"><span>Under Layout, set the sequence.</span><div>The sequence determines where the activity displays in the workflow tree. The sequence does not impact the order of the activities in the workflow execution chain.</div>
+                        </li>
+                     </ol>
+                     <p>Add the switch branches. To create a new branch:</p>
+                     <ol start="6">
+                        <li class="stepexpand"><span>Right-click on the Switch activity in the tree and select <span class="uicontrol bold">Create Connection</span>.</span><div>You can also click the context menu at the bottom right corner of the Switch activity in the Diagram Builder and select <span class="uicontrol bold">Create Connection</span>.
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>In the properties of the Connection, specify the following attributes:</span><ol type="a" id="GUID-4FA2FB1E-D417-4E20-9319-834991082EA5__SUBSTEPS_M2B_1F2_5YB">
+                              <li><span>When - Specify whether this connection is for a True, False, or Null value of the condition.</span></li>
+                              <li><span>To - Select the target activity that the condition leads to.</span></li>
+                           </ol>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Show Messages</span> to view and fix errors.</span><div>The <span class="uicontrol bold">Show Messages</span> icon indicates whether there are any workflow modeling or workflow configuration errors. When you click the icon, APEX displays the list of errors. You can click on an individual error to focus on that activity in the workflow. Note that you cannot save the workflow until you address any errors.
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span> to save your changes.</span></li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="creating-workflow-activities.html#GUID-4CACDAE4-B83A-45FD-B2B2-C0CF4C5B7E01" title="A switch activity defines conditional branches in your workflow.">Adding a Workflow Switch Activity</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="sect3"><a id="GUID-0FAB6091-7ABE-4FB3-AE24-1F4D8D4FBDA2" name="GUID-0FAB6091-7ABE-4FB3-AE24-1F4D8D4FBDA2"></a><h4 id="HTMDB-GUID-0FAB6091-7ABE-4FB3-AE24-1F4D8D4FBDA2" class="sect4"><span class="enumeration_section">20.2.3.3.2 </span>Configuring a Check Workflow Variable Switch
+                  </h4>
+                  <div>
+                     <p>A <strong class="term">Check Workflow Variable</strong> switch is based on the value of a workflow variable.
+                     </p>
+                     <p>To configure a <strong class="term">Check Workflow Variable</strong> Switch:
+                     </p>
+                     <ol>
+                        <li class="stepexpand"><span>Set the switch type to <span class="uicontrol bold">Check Workflow Variable</span>.</span></li>
+                        <li class="stepexpand"><span>For Compare Variable, select the workflow parameter, version variable, or activity variable for the comparison.</span></li>
+                        <li class="stepexpand"><span>(Optional) Under Additional Data, specify a SQL Query to read additional data. For more information, see item-level help.</span></li>
+                        <li class="stepexpand"><span>(Optional) Under Deadline, configure <span class="uicontrol bold">Due On Type</span>.</span></li>
+                        <li class="stepexpand"><span>Under Layout, set the sequence.</span><div>The sequence determines where the activity displays in the workflow tree. The sequence does not impact the order of the activities in the workflow execution chain.</div>
+                        </li>
+                     </ol>
+                     <p>Add the switch branches. To create a new branch:</p>
+                     <ol start="6">
+                        <li class="stepexpand"><span>Right-click on the Switch activity in the tree and select <span class="uicontrol bold">Create Connection</span>.</span><div>You can also click on the menu at the bottom right corner of the Switch activity in the Diagram Builder and select <span class="uicontrol bold">Create Connection</span>.
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>In the properties of the Connection, specify the following attributes:</span><ol type="a" id="GUID-0FAB6091-7ABE-4FB3-AE24-1F4D8D4FBDA2__SUBSTEPS_M2B_1F2_5YB">
+                              <li><span>Operator - From the dropdown, select the appropriate operator.</span></li>
+                              <li><span>To - Select the target activity that the condition leads to.</span></li>
+                           </ol>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Show Messages</span> to view and fix errors.</span><div>The <span class="uicontrol bold">Show Messages</span> icon indicates whether there are any workflow modeling or workflow configuration errors. When you click the icon, APEX displays the list of errors. You can click on an individual error to focus on that activity in the workflow. Note that you cannot save the workflow until you address any errors.
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span> to save your changes.</span></li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="creating-workflow-activities.html#GUID-4CACDAE4-B83A-45FD-B2B2-C0CF4C5B7E01" title="A switch activity defines conditional branches in your workflow.">Adding a Workflow Switch Activity</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="sect3"><a id="GUID-CF2DD07D-0F7E-4226-A4BB-904B6506781B" name="GUID-CF2DD07D-0F7E-4226-A4BB-904B6506781B"></a><h4 id="HTMDB-GUID-CF2DD07D-0F7E-4226-A4BB-904B6506781B" class="sect4"><span class="enumeration_section">20.2.3.3.3 </span>Configuring a Case Switch
+                  </h4>
+                  <div>
+                     <p>A <strong class="term">Case</strong> switch is based on the result of a computation.
+                     </p>
+                     <p>To configure a <strong class="term">Case</strong> Switch:
+                     </p>
+                     <ol>
+                        <li class="stepexpand"><span>Set the switch type to <span class="uicontrol bold">Case</span>.</span></li>
+                        <li class="stepexpand"><span>Specify the <span class="uicontrol bold">Compare Data Type</span> by selecting the appropriate data type for the result of the case statement or expression.</span><div>Case supports the following data types: <code class="codeph">VARCHAR2</code>, <code class="codeph">NUMBER</code>, <code class="codeph">BOOLEAN</code>, <code class="codeph">TIMESTAMP</code>, <code class="codeph">TIMESTAMP WITH TIME ZONE</code>, <code class="codeph">TIMESTAMP WITH LOCAL TIME ZONE</code>.
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Specify the Compare Type by selecting either SQL Query, Expression, or Function Body.</span></li>
+                        <li class="stepexpand"><span>In the Code Editor, enter the Compare Query.</span></li>
+                        <li class="stepexpand"><span>(Optional) Under Additional Data, specify a SQL Query to read additional data. For more information, see item-level help.</span></li>
+                        <li class="stepexpand"><span>(Optional) Under Deadline, configure <span class="uicontrol bold">Due On Type</span>.</span></li>
+                        <li class="stepexpand"><span>Under Layout, set the sequence.</span><div>The sequence determines where the activity displays in the workflow tree. The sequence does not impact the order of the activities in the workflow execution chain.</div>
+                        </li>
+                     </ol>
+                     <p>Add the switch branches. To create a new branch:</p>
+                     <ol start="8">
+                        <li class="stepexpand"><span>Right-click on the switch activity in the tree and select <span class="uicontrol bold">Create Connection</span>.</span><div>You can also click on the menu at the bottom right corner of the Switch activity in the Diagram Builder and select <span class="uicontrol bold">Create Connection</span>.
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>In the connection properties, specify the following attributes:</span><ol type="a" id="GUID-CF2DD07D-0F7E-4226-A4BB-904B6506781B__SUBSTEPS_M2B_1F2_5YB">
+                              <li><span>Sequence - Specify the sequence. The sequence determines the order that <span>APEX</span> evaluates case branches at runtime.</span></li>
+                              <li><span>Operator - Select the branch condition expression.</span></li>
+                              <li><span>Value - Specify the value to compare with.</span></li>
+                              <li><span>To - Select the target activity the branch leads to.</span></li>
+                           </ol>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Show Messages</span> to view and fix errors.</span><div>The <span class="uicontrol bold">Show Messages</span> icon indicates whether there are any workflow modeling or workflow configuration errors. When you click the icon, APEX displays the list of errors. You can click on an individual error to focus on that activity in the workflow. Note that you cannot save the workflow until you address any errors.
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span> to save your changes.</span></li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="creating-workflow-activities.html#GUID-4CACDAE4-B83A-45FD-B2B2-C0CF4C5B7E01" title="A switch activity defines conditional branches in your workflow.">Adding a Workflow Switch Activity</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="sect3"><a id="GUID-B3857A01-58CE-4534-A1F1-377ECD36C822" name="GUID-B3857A01-58CE-4534-A1F1-377ECD36C822"></a><h4 id="HTMDB-GUID-B3857A01-58CE-4534-A1F1-377ECD36C822" class="sect4"><span class="enumeration_section">20.2.3.3.4 </span>Configuring an If Elsif Else Switch
+                  </h4>
+                  <div>
+                     <p>An <strong class="term">If Elsif Else</strong> switch is based on <code class="codeph">AND/OR</code> comparisons between the conditions.
+                     </p>
+                     <p>To configure an <strong class="term">If Elsif Else</strong> switch:
+                     </p>
+                     <ol>
+                        <li class="stepexpand"><span>Set the switch type to <span class="uicontrol bold">If Elsif Else</span>.</span></li>
+                        <li class="stepexpand"><span>(Optional) Under Deadline, configure <span class="uicontrol bold">Due On Type</span>.</span></li>
+                        <li class="stepexpand"><span>Under Layout, set the sequence.</span><div>The sequence determines where the activity displays in the workflow tree. The sequence does not impact the order of the activities in the workflow execution chain.</div>
+                        </li>
+                     </ol>
+                     <p>Add the switch branches. To create a new branch:</p>
+                     <ol start="4">
+                        <li class="stepexpand"><span>Right-click on the switch activity in the tree and select <span class="uicontrol bold">Create Connection</span>.</span><div>You can also click on the menu at the bottom right corner of the Switch activity in the Diagram Builder and select <span class="uicontrol bold">Create Connection</span>.
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>In the properties of the connection, specify the following attributes:</span><ol type="a" id="GUID-B3857A01-58CE-4534-A1F1-377ECD36C822__SUBSTEPS_M2B_1F2_5YB">
+                              <li><span>Sequence - Specify the sequence. This determines the order that <span>APEX</span> evaluates the branches in at runtime.</span></li>
+                              <li><span>Type - From the dropdown, select the appropriate condition that must be satisfied for this branch.</span></li>
+                              <li><span>To - Select the target activity the branch leads to.</span></li>
+                           </ol>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Show Messages</span> to view and fix errors.</span><div>The <span class="uicontrol bold">Show Messages</span> icon indicates whether there are any workflow modeling or workflow configuration errors. When you click the icon, APEX displays the list of errors. You can click on an individual error to focus on that activity in the workflow. Note that you cannot save the workflow until you address any errors.
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span> to save your changes.</span></li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="creating-workflow-activities.html#GUID-4CACDAE4-B83A-45FD-B2B2-C0CF4C5B7E01" title="A switch activity defines conditional branches in your workflow.">Adding a Workflow Switch Activity</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+            <div class="sect2"><a id="GUID-4E32C001-ECFA-42EA-B2EC-ADA215F72C97" name="GUID-4E32C001-ECFA-42EA-B2EC-ADA215F72C97"></a><h3 id="HTMDB-GUID-4E32C001-ECFA-42EA-B2EC-ADA215F72C97" class="sect3"><span class="enumeration_section">20.2.3.4 </span>Adding a Workflow Wait Activity
+               </h3>
+               <div>
+                  <p>A <strong class="term">Wait</strong> activity pauses workflow execution.
+                  </p>
+                  <div class="section">A <strong class="term">Wait</strong> activity pauses workflow execution. The wait state updates in two ways: a <strong class="term">Time Out</strong> after the specified duration elapses, or a call from <code class="codeph">apex_workflow.continue_activity</code>.
+                  </div>
+                  <p>To create a workflow wait activity:</p>
+                  <ol id="GUID-4E32C001-ECFA-42EA-B2EC-ADA215F72C97__STEPS_EJJ_WJF_5YB">
+                     <li class="stepexpand"><span>Right-click on the workflow version and select <span class="uicontrol bold">Create Activity</span>.</span><div>You can also drag the workflow Wait activity from the Activities Palette into the Diagram Builder.</div>
+                     </li>
+                     <li class="stepexpand"><span>Enter the activity <span class="uicontrol bold">Name</span>.</span><div>The name displays in the workflow tree and in the workflow diagram builder. The activity name must be unique for the workflow.</div>
+                     </li>
+                     <li class="stepexpand"><span>Set the type to <span class="uicontrol bold">Wait</span>.</span></li>
+                     <li class="stepexpand"><span>For Timeout Type, specify Static, SQL Query, Expression, or Function Body.</span><div>For Static, use ISO Duration format values.</div>
+                     </li>
+                     <li class="stepexpand"><span>(Optional) Under Additional Data, specify a SQL Query to read additional data. For more information, see item-level help.</span></li>
+                     <li class="stepexpand"><span>Under Layout, set the sequence.</span><div>The sequence determines where the activity displays in the workflow tree. The sequence does not impact the order of the activities in the workflow execution chain.</div>
+                     </li>
+                     <li class="stepexpand"><span>Continue configuring the activity:</span><ul id="GUID-4E32C001-ECFA-42EA-B2EC-ADA215F72C97__CHOICES_KRV_M14_XYB">
+                           <li><strong class="term">Duplicate</strong> the activity by clicking on the context menu and selecting <span class="uicontrol bold">Duplicate</span>.
+                           </li>
+                           <li>Configure <strong class="term">Workflow Connections</strong> by clicking the context menu and selecting <span class="uicontrol bold">Create Connection</span>. For more on workflow connections, see <a href="adding-workflow-connections.html#GUID-A08E305A-A1EC-4DC1-8F44-CD8FBC500A42" title="Add a workflow connection by right-clicking on an activity and selecting Create Connection.">Adding a Workflow Connection</a>.
+                           </li>
+                           <li>Create an <strong class="term">Activity Variable</strong> by clicking the context menu and selecting <span class="uicontrol bold">Create Activity Variable</span>. For more on activity variables, see <a href="creating-workflow-activities.html#GUID-16385275-0C1A-41C1-BD81-6528F9343C4C" title="Add an activity variable by right-clicking the activity in the workflow tree and selecting Create Activity Variable.">Defining an Activity Variable</a>.
+                           </li>
+                           <li>Create another activity connected to this activity by clicking <span class="uicontrol bold">Connect</span> on any side of the existing activity and selecting the type for the new activity.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Show Messages</span> to view and fix errors.</span><div>The <span class="uicontrol bold">Show Messages</span> icon indicates whether there are any workflow modeling or workflow configuration errors. When you click the icon, APEX displays the list of errors. You can click on an individual error to focus on that activity in the workflow. Note that you cannot save the workflow until you address any errors.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span> to save your changes.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-workflow-activities.html#GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3" title="Create a workflow activity by right-clicking the workflow version and selecting Create Activity.">Creating a Workflow Activity</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-5F6BC9E8-F598-40C6-B7EC-0760A5AEEF4B" name="GUID-5F6BC9E8-F598-40C6-B7EC-0760A5AEEF4B"></a><h3 id="HTMDB-GUID-5F6BC9E8-F598-40C6-B7EC-0760A5AEEF4B" class="sect3"><span class="enumeration_section">20.2.3.5 </span>Adding a Workflow Human Task Activity
+               </h3>
+               <div>
+                  <p>A <strong class="term">Human Task - Create</strong> activity creates a human task using an existing task definition.
+                  </p>
+                  <div class="p">In order to use a task as part of a workflow, you must already have the task definition configured in the application. For more information on setting up task definitions, see <a href="about-task-definitions.html#GUID-BB3D3E1C-413E-4F66-9E02-85B16ABCB72F" title="Task definitions include task type, parameters, participants, parameters, and actions.">About Task Definitions</a>.
+                  </div>
+                  <p>To create a workflow human task activity:</p>
+                  <ol id="GUID-5F6BC9E8-F598-40C6-B7EC-0760A5AEEF4B__STEPS_OSD_1NF_5YB">
+                     <li class="stepexpand"><span>Right-click on the workflow version and select <span class="uicontrol bold">Create Activity</span>.</span><div>You can also drag the Human Task - Create activity from the Activities Palette into the Diagram Builder.</div>
+                     </li>
+                     <li class="stepexpand"><span>Enter the activity <span class="uicontrol bold">Name</span>.</span><div>The name displays in the workflow tree and in the workflow diagram builder. The activity name must be unique for the workflow.</div>
+                     </li>
+                     <li class="stepexpand"><span>Set the Type to <span class="uicontrol bold">Human Task - Create</span>.</span></li>
+                     <li class="stepexpand"><span>Under Settings, set the Human Task properties:</span><ol type="a" id="GUID-5F6BC9E8-F598-40C6-B7EC-0760A5AEEF4B__SUBSTEPS_KZC_54F_5YB">
+                           <li><span>Definition - Select the Task Definition from the dropdown.</span></li>
+                           <li><span>Subject - Set the subject if you want to override the subject from the task definition.</span></li>
+                           <li><span>Priority - Set the priority if you want to override the priority from the task definition.</span></li>
+                           <li><span>(Approval tasks only) Initiator Can Complete - Set whether the initiator can also complete the task if you want to override this value from the task definition.</span></li>
+                           <li><span>Initiator Item - The ID of the user initiating the task. When not specified, this value defaults to the current logged-in user.</span></li>
+                           <li><span>Task ID Item - The page item where the ID of the newly created task instance can be stored.</span></li>
+                           <li><span>Details Primary Key Item - The workflow item (variable or parameter) pointing to the Primary Key for the system of records that the task definition uses.</span></li>
+                           <li><span>(Optional) Outcome - A workflow variable to store the task outcome.</span></li>
+                           <li><span>(Optional) Owner - A workflow variable to store the person who approved, rejected, or completed the task.</span></li>
+                        </ol>
+                        <div>
+                           <div class="infobox-tip" id="GUID-5F6BC9E8-F598-40C6-B7EC-0760A5AEEF4B__GUID-85AE82E7-2A6D-4271-9C61-367ACCF98706">
+                              <p class="notep1">Tip:</p>When you create a Human Task activity, <span>APEX</span> creates two workflow variables: <code class="codeph">TASK_OUTCOME</code> and <code class="codeph">APPROVER</code>. In the activity settings, you can set the Outcome and Approver attributes to these variables. At runtime, after the task completes, the workflow variable <code class="codeph">TASK_OUTCOME</code> is set to <code class="codeph">APPROVED</code> or <code class="codeph">REJECTED</code> based on the outcome of the task. Subsequent activities in the workflow can use these workflow variables. You can choose to ignore the outcome and approver details from the activity, delete the auto-generated workflow variables, and leave the corresponding task attributes empty.
+                              <p>For example, a Switch activity that follows a Human Task activity can use the <strong class="term">Check Workflow Variable</strong> type to look at <code class="codeph">TASK_OUTCOME</code>, and branch the workflow based on <code class="codeph">TASK_OUTCOME = APPROVED</code> and <code class="codeph">TASK_OUTCOME = REJECTED</code>.
+                              </p>
+                              <p>Note that if there are subsequent Human Task activities in the workflow, these workflow variables are not automatically created again. You can choose to re-use the same workflow variables to store the task outcome and actual owner, or you can manually create new workflow variables if you want each Human Task activity outcome stored in a different workflow variable.</p>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>(Optional) Under Additional Data, specify a SQL Query to read additional data. For more information, see item-level help.</span></li>
+                     <li class="stepexpand"><span>(Optional) Under Deadline, configure <span class="uicontrol bold">Due On Type</span>.</span></li>
+                     <li class="stepexpand"><span>Under Layout, set the sequence.</span><div>The sequence determines where the activity displays in the workflow tree. The sequence does not impact the order of the activities in the workflow execution chain.</div>
+                     </li>
+                     <li class="stepexpand"><span>Continue configuring the activity:</span><ul id="GUID-5F6BC9E8-F598-40C6-B7EC-0760A5AEEF4B__CHOICES_KRV_M14_XYB">
+                           <li><strong class="term">Duplicate</strong> the activity by clicking on the context menu and selecting <span class="uicontrol bold">Duplicate</span>.
+                           </li>
+                           <li>Configure <strong class="term">Workflow Connections</strong> by clicking the context menu and selecting <span class="uicontrol bold">Create Connection</span>. For more on workflow connections, see <a href="adding-workflow-connections.html#GUID-A08E305A-A1EC-4DC1-8F44-CD8FBC500A42" title="Add a workflow connection by right-clicking on an activity and selecting Create Connection.">Adding a Workflow Connection</a>.
+                           </li>
+                           <li>Create an <strong class="term">Activity Variable</strong> by clicking the context menu and selecting <span class="uicontrol bold">Create Activity Variable</span>. For more on activity variables, see <a href="creating-workflow-activities.html#GUID-16385275-0C1A-41C1-BD81-6528F9343C4C" title="Add an activity variable by right-clicking the activity in the workflow tree and selecting Create Activity Variable.">Defining an Activity Variable</a>.
+                           </li>
+                           <li>Create another activity connected to this activity by clicking <span class="uicontrol bold">Connect</span> on any side of the existing activity and selecting the type for the new activity.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Show Messages</span> to view and fix errors.</span><div>The <span class="uicontrol bold">Show Messages</span> icon indicates whether there are any workflow modeling or workflow configuration errors. When you click the icon, APEX displays the list of errors. You can click on an individual error to focus on that activity in the workflow. Note that you cannot save the workflow until you address any errors.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span> to save your changes.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-workflow-activities.html#GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3" title="Create a workflow activity by right-clicking the workflow version and selecting Create Activity.">Creating a Workflow Activity</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-8BD3A85D-2A76-4CA6-B90B-ECBBCAE72D9F" name="GUID-8BD3A85D-2A76-4CA6-B90B-ECBBCAE72D9F"></a><h3 id="HTMDB-GUID-8BD3A85D-2A76-4CA6-B90B-ECBBCAE72D9F" class="sect3"><span class="enumeration_section">20.2.3.6 </span>Adding a Custom Process Type Plug-in as an Activity
+               </h3>
+               <div>
+                  <p>A custom process type plugin uses a custom plugin as an activity.</p>
+                  <div class="section"></div>
+                  <p>To configure the process type plug-in for workflow use:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a" id="GUID-8BD3A85D-2A76-4CA6-B90B-ECBBCAE72D9F__SUBSTEPS_BYN_RXK_5YB">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                 <p>The Shared Components page appears. </p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Other Components, click <span class="uicontrol bold">Plug-ins</span>.</span></li>
+                     <li class="stepexpand"><span>Click the plug-in you want to edit. </span><div>
+                           <p>The Edit page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>In Supported For, enable <span class="uicontrol bold">Workflow Activities</span>.</span></li>
+                  </ol>
+                  <p>To configure the workflow to wait on this process and only progress after the process completes:</p>
+                  <ol start="5">
+                     <li class="stepexpand"><span>Under Standard Attributes, select <span class="uicontrol bold">Wait for Completion</span>.</span></li>
+                     <li class="stepexpand"><span>(Optional) In Callbacks, specify the Completion function for the process.</span><div>When the process completes and calls back into the workflow using <code class="codeph">apex_workflow.continue_activity</code>, the workflow engine executes the Completion function before continuing with the rest of the workflow activities. Refer to <a href="../aeapi/APEX_WORKFLOW.html#AEAPI-GUID-4FAAF38B-BB10-4BC8-8A87-9BF3C0CA6772" target="_blank">APEX_WORKFLOW</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span> to learn more about the <code class="codeph">continue_activity()</code> API.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>(Optional) In Callbacks, specify the Termination function for the process.</span><div>Termination functions are useful if you want to free up resources held by your process if the workflow is terminated. You can only add a termination function if you have already selected <span class="uicontrol bold">Wait For Completion</span>.
+                        </div>
+                     </li>
+                  </ol>
+                  <p>To add the custom process type plug-in to the workflow:</p>
+                  <ol start="8">
+                     <li class="stepexpand"><span>Right-click on the workflow version and select <span class="uicontrol bold">Create Activity</span>.</span></li>
+                     <li class="stepexpand"><span>Enter the activity <span class="uicontrol bold">Name</span>.</span><div>The name displays in the workflow tree and in the workflow diagram builder. The activity name must be unique for the workflow.</div>
+                     </li>
+                     <li class="stepexpand"><span>Set the Type to the name of your plug-in. Available custom process plug-ins display under the <span class="uicontrol bold">Application Components</span> heading.</span><div>You can also drag the custom process type plug-in activity from the Activities Palette into the Diagram Builder.</div>
+                     </li>
+                     <li class="stepexpand"><span>(Optional) Under Additional Data, specify a SQL Query to read additional data. For more information, see item-level help.</span></li>
+                     <li class="stepexpand"><span>(Optional) Under Deadline, configure <span class="uicontrol bold">Due On Type</span>.</span></li>
+                     <li class="stepexpand"><span>Under Layout, set the sequence.</span><div>The sequence determines where the activity displays in the workflow tree. The sequence does not impact the order of the activities in the workflow execution chain.</div>
+                     </li>
+                     <li class="stepexpand"><span>Continue configuring the activity:</span><ul id="GUID-8BD3A85D-2A76-4CA6-B90B-ECBBCAE72D9F__CHOICES_KRV_M14_XYB">
+                           <li><strong class="term">Duplicate</strong> the activity by clicking on the context menu and selecting <span class="uicontrol bold">Duplicate</span>.
+                           </li>
+                           <li>Configure <strong class="term">Workflow Connections</strong> by clicking the context menu and selecting <span class="uicontrol bold">Create Connection</span>. For more on workflow connections, see <a href="adding-workflow-connections.html#GUID-A08E305A-A1EC-4DC1-8F44-CD8FBC500A42" title="Add a workflow connection by right-clicking on an activity and selecting Create Connection.">Adding a Workflow Connection</a>.
+                           </li>
+                           <li>Create an <strong class="term">Activity Variable</strong> by clicking the context menu and selecting <span class="uicontrol bold">Create Activity Variable</span>. For more on activity variables, see <a href="creating-workflow-activities.html#GUID-16385275-0C1A-41C1-BD81-6528F9343C4C" title="Add an activity variable by right-clicking the activity in the workflow tree and selecting Create Activity Variable.">Defining an Activity Variable</a>.
+                           </li>
+                           <li>Create another activity connected to this activity by clicking <span class="uicontrol bold">Connect</span> on any side of the existing activity and selecting the type for the new activity.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Show Messages</span> to view and fix errors.</span><div>The <span class="uicontrol bold">Show Messages</span> icon indicates whether there are any workflow modeling or workflow configuration errors. When you click the icon, APEX displays the list of errors. You can click on an individual error to focus on that activity in the workflow. Note that you cannot save the workflow until you address any errors.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span> to save your changes.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-workflow-activities.html#GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3" title="Create a workflow activity by right-clicking the workflow version and selecting Create Activity.">Creating a Workflow Activity</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-B61E36D3-D97D-4971-926F-6087F2121079" name="GUID-B61E36D3-D97D-4971-926F-6087F2121079"></a><h3 id="HTMDB-GUID-B61E36D3-D97D-4971-926F-6087F2121079" class="sect3"><span class="enumeration_section">20.2.3.7 </span>Adding an Invoke Workflow Activity
+               </h3>
+               <div>
+                  <p>An invoke workflow activity calls another workflow in the same application.</p>
+                  <div class="p">The invoked workflow must already be configured for the application.</div>
+                  <p>To add an invoke workflow activity:</p>
+                  <ol id="GUID-B61E36D3-D97D-4971-926F-6087F2121079__STEPS_OSD_1NF_5YB">
+                     <li class="stepexpand"><span>Right-click on the workflow version and select <span class="uicontrol bold">Create Activity</span>.</span><div>You can also drag the Invoke Workflow activity from the Activities Palette into the Diagram Builder.</div>
+                     </li>
+                     <li class="stepexpand"><span>Enter the activity <span class="uicontrol bold">Name</span>.</span><div>The name displays in the workflow tree and in the workflow diagram builder. The activity name must be unique for the workflow.</div>
+                     </li>
+                     <li class="stepexpand"><span>Set the Type to <span class="uicontrol bold">Invoke Workflow</span>.</span></li>
+                     <li class="stepexpand"><span>Under Settings, set the Invoke Workflow properties:</span><ol type="a" id="GUID-B61E36D3-D97D-4971-926F-6087F2121079__SUBSTEPS_KZC_54F_5YB">
+                           <li class="substepexpand"><span>Definition - Select the Workflow Definition from the dropdown.</span><div>
+                                 <div class="infoboxnote" id="GUID-B61E36D3-D97D-4971-926F-6087F2121079__GUID-534DB922-88B3-4793-A329-E550F75A42D7">
+                                    <p class="notep1">Note:</p>A workflow cannot invoke itself or any of its caller workflows. This avoids cyclic dependency.
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Initiator Item - Provide an optional workflow variable or parameter that specifies the initiator of the invoked workflow.</span><div>If Initiator Item is set, the initiator of the invoked workflow is the value of this item. Otherwise, the initiator of the invoked workflow is the initiator of the parent workflow.</div>
+                           </li>
+                           <li class="substepexpand"><span>Details Primary Key Item - The workflow item (variable or parameter) pointing to the Primary Key for the system of records that the invoked workflow uses.</span></li>
+                           <li class="substepexpand"><span>Workflow ID Item - The workflow item where the ID of the newly invoked workflow instance is stored.</span></li>
+                           <li class="substepexpand"><span>Wait for Completion - Turn this switch <span class="bold">On</span> if the workflow waits for the invoked workflow instance to complete before progressing to the next activity. Turn this switch <span class="bold">Off</span> if the workflow progresses to the next activity without waiting for the invoked workflow instance to complete.</span><div>This switch is turned on by default.</div>
+                           </li>
+                           <li class="substepexpand"><span>Retry Point - Defines the point where an invoked workflow is retried if it faults. <span class="uicontrol bold">Resume</span> retries the invoked workflow from the faulted activity. <span class="uicontrol bold">Start Over</span> terminates the faulted instance of the invoked workflow and starts a new instance.</span><div><span class="uicontrol bold">Start Over</span> is only applicable when the Retry operation is performed on the faulted parent workflow instance.
+                                 <div class="infoboxnote" id="GUID-B61E36D3-D97D-4971-926F-6087F2121079__GUID-10B0DAC0-96E7-48C7-8611-F7FC14C0B4EE">
+                                    <p class="notep1">Note:</p>Retry Point is only applicable for invoked workflows with <span class="uicontrol bold">Wait for Completion</span> set to <code class="codeph">On</code>.
+                                 </div>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Set the values for the parameters of the invoked workflow:</span><ol type="a" id="GUID-B61E36D3-D97D-4971-926F-6087F2121079__SUBSTEPS_BPY_KF5_NCC">
+                           <li><span>Under the Invoke Workflow activity, expand the Parameters region to display the parameters of the invoked workflow.</span></li>
+                           <li><span>Ignore Output - Specify whether the parameters for Out and In/Out should be ignored. By default, Ignore Output is turned on. If Ignore Output is turned off, then the value can only be set to an item (parameter, variable, or activity variable) of the current workflow.</span></li>
+                        </ol>
+                        <div>
+                           <div class="infoboxnote" id="GUID-B61E36D3-D97D-4971-926F-6087F2121079__GUID-7D4C6F43-7D99-4261-874E-7B22D62D7C45">
+                              <p class="notep1">Note:</p>If a workflow parameter is set to <code class="codeph">Required</code> and its Value Type is set to <code class="codeph">null</code>, using this workflow in an Invoke Workflow activity throws an exception when the Invoke Activity is executed at runtime.
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>(Optional) Under Additional Data, specify a SQL Query to read additional data. For more information, see item-level help.</span></li>
+                     <li class="stepexpand"><span>(Optional) Under Deadline, configure <span class="uicontrol bold">Due On Type</span>.</span></li>
+                     <li class="stepexpand"><span>Under Layout, set the sequence.</span><div>The sequence determines where the activity displays in the workflow tree. The sequence does not impact the order of the activities in the workflow execution chain.</div>
+                     </li>
+                     <li class="stepexpand"><span>Continue configuring the activity:</span><ul id="GUID-B61E36D3-D97D-4971-926F-6087F2121079__CHOICES_KRV_M14_XYB">
+                           <li><strong class="term">Duplicate</strong> the activity by clicking on the context menu and selecting <span class="uicontrol bold">Duplicate</span>.
+                           </li>
+                           <li>Configure <strong class="term">Workflow Connections</strong> by clicking the context menu and selecting <span class="uicontrol bold">Create Connection</span>. For more on workflow connections, see <a href="adding-workflow-connections.html#GUID-A08E305A-A1EC-4DC1-8F44-CD8FBC500A42" title="Add a workflow connection by right-clicking on an activity and selecting Create Connection.">Adding a Workflow Connection</a>.
+                           </li>
+                           <li>Create an <strong class="term">Activity Variable</strong> by clicking the context menu and selecting <span class="uicontrol bold">Create Activity Variable</span>. For more on activity variables, see <a href="creating-workflow-activities.html#GUID-16385275-0C1A-41C1-BD81-6528F9343C4C" title="Add an activity variable by right-clicking the activity in the workflow tree and selecting Create Activity Variable.">Defining an Activity Variable</a>.
+                           </li>
+                           <li>Create another activity connected to this activity by clicking <span class="uicontrol bold">Connect</span> on any side of the existing activity and selecting the type for the new activity.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Show Messages</span> to view and fix errors.</span><div>The <span class="uicontrol bold">Show Messages</span> icon indicates whether there are any workflow modeling or workflow configuration errors. When you click the icon, APEX displays the list of errors. You can click on an individual error to focus on that activity in the workflow. Note that you cannot save the workflow until you address any errors.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span> to save your changes.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-workflow-activities.html#GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3" title="Create a workflow activity by right-clicking the workflow version and selecting Create Activity.">Creating a Workflow Activity</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-16385275-0C1A-41C1-BD81-6528F9343C4C" name="GUID-16385275-0C1A-41C1-BD81-6528F9343C4C"></a><h3 id="HTMDB-GUID-16385275-0C1A-41C1-BD81-6528F9343C4C" class="sect3"><span class="enumeration_section">20.2.3.8 </span>Defining an Activity Variable
+               </h3>
+               <div>
+                  <p>Add an activity variable by right-clicking the activity in the workflow tree and selecting <span class="uicontrol bold">Create Activity Variable</span>.
+                  </p>
+                  <p>To add a workflow activity variable:</p>
+                  <ol id="GUID-16385275-0C1A-41C1-BD81-6528F9343C4C__STEPS_EJJ_WJF_5YB">
+                     <li><span>Right-click on the activity in the workflow tree and select <span class="uicontrol bold">Create Activity Variable</span>.</span></li>
+                     <li><span>Fill in the properties for the variable:</span><ol type="a" id="GUID-16385275-0C1A-41C1-BD81-6528F9343C4C__SUBSTEPS_MYR_QLX_TYB">
+                           <li><span>Static ID - The unique name of the variable.</span></li>
+                           <li><span>Label - The user-friendly label for the variable.</span></li>
+                           <li><span>Data Type - Select from <code class="codeph">VARCHAR2</code>, <code class="codeph">TIMESTAMP</code>,<code class="codeph"> TIMESTAMP WITH LOCAL TIME ZONE</code>, <code class="codeph">TIMESTAMP WITH TIME ZONE</code>, <code class="codeph">NUMBER</code>, <code class="codeph">BOOLEAN</code>, and <code class="codeph">CLOB</code>.</span></li>
+                           <li><span>Value Type - The type of value for the variable.</span></li>
+                           <li><span>Value Language - Language, if applicable.</span></li>
+                           <li><span>(Item only) Item - The workflow parameter, version variable, or activity variable.</span></li>
+                           <li><span>(Boolean only) Format Mask - If applicable, fill in the variable or parameter value used to determine the values.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-workflow-activities.html#GUID-FF67E1FA-D65A-4F53-AEA2-13F890FCDCD3" title="Create a workflow activity by right-clicking the workflow version and selecting Create Activity.">Creating a Workflow Activity</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Editing SAML Sign In">
+      <meta name="abstract" content="Delegates authentication to the Security Assertion Markup Language (SAML) Sign In authentication scheme.">
+      <meta name="description" content="Delegates authentication to the Security Assertion Markup Language (SAML) Sign In authentication scheme.">
+      <meta name="DC.subject" content="authentication schemes, SAML Sign-In, SAML Sign-In, editing, about, SAML Sign In authentication, about, response signing requirments, SAML Assertion requirment, SAML Response requirment, cross-origin requests, configuring, configuring">
+      <meta name="keywords" content="authentication schemes, SAML Sign-In, SAML Sign-In, editing, about, SAML Sign In authentication, about, response signing requirments, SAML Assertion requirment, SAML Response requirment, cross-origin requests, configuring, configuring">
+      <meta name="DC.Relation" scheme="URI" content="configuring-authentication-schemes-for-instance.html#GUID-A1EFFB66-8D37-437C-9183-A230213CBDCC">
+      <meta name="DC.Relation" scheme="URI" content="editing-saml-sign-in.html#GUID-A12117BF-BC0C-4080-B535-1E35076A1461">
+      <meta name="DC.Relation" scheme="URI" content="editing-saml-sign-in.html#GUID-012FAAC1-E6CC-4E8E-9F59-37D182D0FA23">
+      <meta name="DC.Relation" scheme="URI" content="editing-saml-sign-in.html#GUID-EFBE29FF-BCD5-4695-A6C6-1A4C68C5D343">
+      <meta name="DC.Relation" scheme="URI" content="editing-saml-sign-in.html#GUID-C4ECCC2F-284C-40AD-9ECC-A8C4B2B4BF32">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-D13FDB40-8FE2-441D-9EDB-E9DB7891D7FE">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Delegates authentication to the Security Assertion Markup Language (SAML) Sign In authentication scheme.">
+      <meta name="description" content="Delegates authentication to the Security Assertion Markup Language (SAML) Sign In authentication scheme.">
+      <title>Editing SAML Sign In</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Delegates authentication to the Security Assertion Markup Language (SAML) Sign In authentication scheme.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="editing-oracle-application-server-single-sign-on.html" title="Previous" type="text/html">
+      <link rel="next" href="editing-social-sign-in.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Editing SAML Sign In","description":"Delegates authentication to the Security Assertion Markup Language (SAML) Sign In authentication scheme.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="editing-oracle-application-server-single-sign-on.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="editing-social-sign-in.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-D13FDB40-8FE2-441D-9EDB-E9DB7891D7FE" name="GUID-D13FDB40-8FE2-441D-9EDB-E9DB7891D7FE"></a>
+         
+         <h2 id="AEADM-GUID-D13FDB40-8FE2-441D-9EDB-E9DB7891D7FE" class="sect2"><span class="enumeration_section">3.4.8.3.6 </span>Editing SAML Sign In
+         </h2>
+         <div class="ind">
+            <p>Delegates authentication to the Security Assertion Markup Language (SAML)
+        Sign In authentication scheme.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="editing-saml-sign-in.html#GUID-A12117BF-BC0C-4080-B535-1E35076A1461">About SAML Sign In</a><br>Learn about SAML Sign In authentication.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-saml-sign-in.html#GUID-012FAAC1-E6CC-4E8E-9F59-37D182D0FA23">About Response Signing when Using SAML</a><br>Learn about the authentication response signing requirements when using         SAML.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-saml-sign-in.html#GUID-EFBE29FF-BCD5-4695-A6C6-1A4C68C5D343">About Cross-Origin Resource Sharing when Using SAML</a><br>Learn about cross-origin resource sharing when using SAML.
+                  </li>
+                  <li class="ulchildlink"><a href="editing-saml-sign-in.html#GUID-C4ECCC2F-284C-40AD-9ECC-A8C4B2B4BF32">Configuring SAML Sign-In</a><br>Edit the SAML Sign-In authentication scheme for an instance.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="configuring-authentication-schemes-for-instance.html#GUID-A1EFFB66-8D37-437C-9183-A230213CBDCC" title="Instance administrators can configure available authentication schemes for an Oracle APEX instance.">Configuring Authentication Schemes for an Instance</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-A12117BF-BC0C-4080-B535-1E35076A1461" name="GUID-A12117BF-BC0C-4080-B535-1E35076A1461"></a><h3 id="AEADM-GUID-A12117BF-BC0C-4080-B535-1E35076A1461" class="sect3"><span class="enumeration_section">3.4.8.3.6.1 </span>About SAML Sign In
+               </h3>
+               <div>
+                  <p>Learn about SAML Sign In authentication.</p>
+                  <p><span>Oracle APEX</span> supports the use of Security Assertion Markup Language
+                                    (SAML). SAML is an XML-based protocol for exchanging security
+                                    information between software entities on the Web. SAML security
+                                    is based on the interaction of asserting and relying parties.
+                                    SAML provides single sign-on capabilities; users can
+                                    authenticate at one location and then access service providers
+                                    at other locations without having to log in multiple times.
+                  </p>
+                  <div class="infoboxnote" id="GUID-A12117BF-BC0C-4080-B535-1E35076A1461__GUID-D3228592-B1D0-45EF-96F4-CDD3E9675DA3">
+                     <p class="notep1">Note:</p>SAML support requires Oracle Database
+            19c (Database Release Update 19.9.0.0.0 or newer) or Oracle Database 23ai. If your
+            database does not meet these requirements, SAML Sign-In authentication scheme will not
+            display.
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-saml-sign-in.html#GUID-D13FDB40-8FE2-441D-9EDB-E9DB7891D7FE" title="Delegates authentication to the Security Assertion Markup Language (SAML) Sign In authentication scheme.">Editing SAML Sign In</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-012FAAC1-E6CC-4E8E-9F59-37D182D0FA23" name="GUID-012FAAC1-E6CC-4E8E-9F59-37D182D0FA23"></a><h3 id="AEADM-GUID-012FAAC1-E6CC-4E8E-9F59-37D182D0FA23" class="sect3"><span class="enumeration_section">3.4.8.3.6.2 </span>About Response Signing when Using
+        SAML 
+               </h3>
+               <div>
+                  <p>Learn about the authentication response signing requirements when using
+        SAML.</p>
+                  <p><span>Oracle APEX</span> requires the Identity Provider to digitally sign both the SAML Assertion and SAML
+            Response. It is common for Identity Providers to only sign the SAML Assertion by
+            default. When only the SAML Assertion is signed, <span>APEX</span> will reject the SAML payload with the <code class="codeph">Invalid value for parameter</code>
+            error. You must ensure your Identity Provider is signing both the SAML Assertion and
+            SAML Response. 
+                  </p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-saml-sign-in.html#GUID-D13FDB40-8FE2-441D-9EDB-E9DB7891D7FE" title="Delegates authentication to the Security Assertion Markup Language (SAML) Sign In authentication scheme.">Editing SAML Sign In</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-EFBE29FF-BCD5-4695-A6C6-1A4C68C5D343" name="GUID-EFBE29FF-BCD5-4695-A6C6-1A4C68C5D343"></a><h3 id="AEADM-GUID-EFBE29FF-BCD5-4695-A6C6-1A4C68C5D343" class="sect3"><span class="enumeration_section">3.4.8.3.6.3 </span>About Cross-Origin Resource Sharing when Using
+        SAML
+               </h3>
+               <div>
+                  <p>Learn about cross-origin resource sharing when using SAML.</p>
+                  <div class="section">
+                     <p>The SAML authentication end user flow requires Oracle REST Data Services (ORDS) to
+                permit cross-origin requests from your Identity Provider to <span>Oracle APEX</span>. By default, ORDS does not allow cross-origin requests to its PL/SQL gateway
+                including to <span>Oracle APEX</span>. You must configure ORDS to designate your Identity Provider as a trusted origin
+                by setting <code class="codeph">security.externalSessionTrustedOrigins</code> configuration
+                parameter.
+                     </p>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-EFBE29FF-BCD5-4695-A6C6-1A4C68C5D343__GUID-BB315406-D888-4EE2-AECD-BAECB37D6FC8">
+                     <p class="notep1">See Also:</p><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeadm&id=ORDDG-GUID-ACAAB207-8475-403E-A757-304D7E76B2EF" target="_blank">Cross-Origin Resource Sharing
+                    Feature</a> in <span><cite>Oracle REST Data Services Developer's
+                                Guide</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-saml-sign-in.html#GUID-D13FDB40-8FE2-441D-9EDB-E9DB7891D7FE" title="Delegates authentication to the Security Assertion Markup Language (SAML) Sign In authentication scheme.">Editing SAML Sign In</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-C4ECCC2F-284C-40AD-9ECC-A8C4B2B4BF32" name="GUID-C4ECCC2F-284C-40AD-9ECC-A8C4B2B4BF32"></a><h3 id="AEADM-GUID-C4ECCC2F-284C-40AD-9ECC-A8C4B2B4BF32" class="sect3"><span class="enumeration_section">3.4.8.3.6.4 </span>Configuring SAML Sign-In
+               </h3>
+               <div>
+                  <p>Edit the SAML Sign-In authentication scheme for an instance.</p>
+                  <p>To edit SAML Sign-In:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to <span>Oracle APEX</span> Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                     <li class="stepexpand"><span>Under Authentication Control, scroll down to <span class="uicontrol bold">Development Environment
+                        Authentication Schemes</span>. </span><div>The Status column indicates if the authentication scheme
+                    designated as <span class="uicontrol bold">Current</span>.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Find <span class="uicontrol bold">SAML</span> and click <span class="uicontrol bold">Edit</span>.</span><div>The Edit Scheme page appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Make Current Scheme</span> to have applications identify
+                    and verify the user using this authentication scheme.</span></li>
+                     <li class="stepexpand"><span>Under Edit Authentication Scheme:</span><ul id="GUID-C4ECCC2F-284C-40AD-9ECC-A8C4B2B4BF32__CHOICES_WWX_SKR_3QB">
+                           <li>PL/SQL Code - Enter a PL/SQL anonymous block of code that
+                        contains procedures for pre- and post-authentication entry points. To
+                        improve performance, you can also store this code in a PL/SQL package in the
+                        database.</li>
+                           <li>Pre-Authentication Procedure Name - Specify the name of a procedure to be executed after the login page is submitted and just before credentials verification is performed. The procedure can be defined in the PL/SQL Code attribute or within the database. 
+                              <p>Authentication schemes where user credentials checking is done outside of <span>Oracle APEX</span> typically do not execute the Pre-Authentication procedure. Examples include HTTP Header Variable, Oracle Application Server Single Sign-On and custom authentication schemes that use <code class="codeph">APEX_AUTHENTICATION.POST_LOGIN</code> instead of <code class="codeph">APEX_AUTHENTICATION.LOGIN</code>.
+                              </p>
+                           </li>
+                           <li>Post-Authentication Procedure Name - Specify the name of a
+                        procedure to be executed by the <span>Oracle APEX</span> LOGIN procedure after the authentication step (login credentials
+                        verification). The LOGIN procedure will execute this code after it performs
+                        its normal duties, which include setting a cookie and registering the
+                        session, but before it redirects to the desired application page. The
+                        procedure can be defined in the PL/SQL Code attribute or within the
+                        database.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Under SAML for Internal and Workspace Applications: APEX Attributes:</span><ul id="GUID-C4ECCC2F-284C-40AD-9ECC-A8C4B2B4BF32__CHOICES_LBH_R4R_3QB">
+                           <li>Enable SAML for Applications - Enable if workspace
+                        applications should be able to use SAML authentication. Note that you can
+                        enable any other authentication scheme for internal applications, but still
+                        use SAML in applications if this attribute is enabled.</li>
+                           <li>Username Attribute - SAML responses can contain additional attributes about the user. If set, <span>APEX</span> uses that attribute's value as the username. By default, <span>APEX</span> uses the assertion subject's NameID attribute.
+                           </li>
+                           <li>NameID Format - Enter the expected format of the NameID attribute. If
+                        empty, <span>APEX</span> assumes
+                            <code class="codeph">urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</code>.
+                           </li>
+                           <li>Issuer - Enter the <code class="codeph">Issuer</code> attribute that <span>Oracle APEX</span> sends. This attribute defaults to the callback URL
+                            (<code class="codeph">https://apex.example.com/ords/apex_authentication.saml_callback</code>),
+                        which is normally sufficient.
+                           </li>
+                           <li>Certificate - Enter the primary certificate of the <span>APEX</span> side.
+                           </li>
+                           <li>Private Key - Enter the private key of the <span>APEX</span> side. Note that <span>APEX</span> does not display an existing private key, but you can enter a new one.
+                           </li>
+                           <li>Alternative Certificate - Enter the alternative certificate of the <span>APEX</span> side.
+                           </li>
+                           <li>Alternative Private Key - Enter the alternative private key of the <span>APEX</span> side. Note that <span>APEX</span> does not display an existing private key, but you can enter a new one.
+                           </li>
+                           <li>Supported Callback URLs - Enter <span>APEX</span> callback URLs (separated by new lines) if this <span>APEX</span> instance should support integration using multiple domains. When
+                        redirecting to the identify provider for login <span>APEX</span> sends <code class="codeph">AssertionConsumerServiceIndex="nnn"</code> in the
+                        authentication request, where <code class="codeph">nnn</code> is the index of the
+                        current callback URL in this list, starting with 0. This attribute is
+                        optional if the <span>APEX</span> instance only needs to support integration with a single domain.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Under SAML for Internal and Workspace Applications: Identity Provider
+                    Attributes:</span><ul id="GUID-C4ECCC2F-284C-40AD-9ECC-A8C4B2B4BF32__CHOICES_THD_KGS_3QB">
+                           <li>Issuer - Enter the Issuer attribute from the identity
+                        provider's metadata, for
+                                example:
+                              <p><code class="codeph">https://login.example.com/oam/fed</code></p>
+                           </li>
+                           <li>Signing Certificate - Enter the certificate from the
+                        identity provider's metadata.</li>
+                           <li>Alternative Signing Certificate - Enter an alternative
+                        certificate from the identity provider's metadata.</li>
+                           <li>Sign-In URL - Enter the identity provider's sign in
+                        URL.</li>
+                           <li>Sign-Out URL - Enter the identity provider's sign out URL.
+                        If empty, it defaults to the sign in URL, which is normally
+                        sufficient.</li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>To save your changes, click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section">
+                     
+                     <div class="infobox-tip" id="GUID-C4ECCC2F-284C-40AD-9ECC-A8C4B2B4BF32__GUID-14F8F2EF-2F13-463B-9C9A-FBA94AB6DE28">
+                        <p class="notep1">Tip:</p>
+                        
+                        <p>If your <span>APEX</span> instance is using the prerequisite Oracle Database release and Database Release Update and the SAML Sign-In authentication scheme does not appear, execute the following while connected to the database (or pluggable database) as SYSDBA:
+                        </p>
+                        <pre class="pre codeblock"><code>set serveroutput on
+exec sys.validate_apex</code></pre>
+                        </div>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="editing-saml-sign-in.html#GUID-D13FDB40-8FE2-441D-9EDB-E9DB7891D7FE" title="Delegates authentication to the Security Assertion Markup Language (SAML) Sign In authentication scheme.">Editing SAML Sign In</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

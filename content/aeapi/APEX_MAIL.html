@@ -1,0 +1,154 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="APEX_MAIL">
+      <meta name="DC.subject" content="APEX_MAIL">
+      <meta name="keywords" content="APEX_MAIL">
+      <meta name="DC.Relation" scheme="URI" content="Configuring-Oracle-Application-Express-to-Send-Email.html#GUID-596E11FE-9289-4238-A3CA-D33F508E40F7">
+      <meta name="DC.Relation" scheme="URI" content="ADD_ATTACHMENT-Procedure-Signature-1.html#GUID-5B514926-2C0A-40E3-82BB-7E357CB0C927">
+      <meta name="DC.Relation" scheme="URI" content="ADD_ATTACHMENT-Procedure-Signature-2.html#GUID-0C43024A-D0B5-4358-A43E-8BF8FAD30E08">
+      <meta name="DC.Relation" scheme="URI" content="GET_IMAGES_URL-Function.html#GUID-5FBF4725-3B92-4B4F-8FF6-E135838FD687">
+      <meta name="DC.Relation" scheme="URI" content="GET_INSTANCE_URL-Function.html#GUID-6CB52F5D-4FE8-4ECD-855E-306CAA160CEF">
+      <meta name="DC.Relation" scheme="URI" content="PREPARE_TEMPLATE_Procedure.html#GUID-639A0777-5A94-461A-8DD7-F71C950E7B69">
+      <meta name="DC.Relation" scheme="URI" content="PUSH_QUEUE-Procedure.html#GUID-A17CEA4E-B667-4657-AC0E-F2C0833010EC">
+      <meta name="DC.Relation" scheme="URI" content="SEND-Function-Signature-1.html#GUID-760A11B9-3CB9-435C-9289-C2F2791BB80C">
+      <meta name="DC.Relation" scheme="URI" content="SEND-Function-Signature-2.html#GUID-9E630ED9-C896-4163-BEA1-9F52A110986B">
+      <meta name="DC.Relation" scheme="URI" content="SEND-Procedure-Signature-1.html#GUID-B1CD726B-EABE-4A9D-A7A4-3A973E84262D">
+      <meta name="DC.Relation" scheme="URI" content="SEND-Procedure-Signature-2.html#GUID-579D3770-3164-42C9-8EDD-69A61CB3207C">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-14F51C6D-CB82-4B38-AB6E-61C46E75596F">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>APEX_MAIL</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_LDAP.SEARCH-Function.html" title="Previous" type="text/html">
+      <link rel="next" href="Configuring-Oracle-Application-Express-to-Send-Email.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"APEX_MAIL","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_LDAP.SEARCH-Function.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="Configuring-Oracle-Application-Express-to-Send-Email.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-14F51C6D-CB82-4B38-AB6E-61C46E75596F" name="GUID-14F51C6D-CB82-4B38-AB6E-61C46E75596F"></a><a id="AEAPI341"></a>
+         
+         <h2 id="AEAPI-GUID-14F51C6D-CB82-4B38-AB6E-61C46E75596F" class="sect2"><span class="enumeration_chapter">41 </span> APEX_MAIL
+         </h2>
+         <div class="ind">
+            <div>
+               <p>You can use the <code class="codeph">APEX_MAIL</code> package to send an email from an <span>Oracle APEX</span> application. This package is built on top of the <span>Oracle</span>-supplied <code class="codeph">UTL_SMTP</code> package. Because of this dependence, the <code class="codeph">UTL_SMTP</code> package must be installed and functioning to use <code class="codeph">APEX_MAIL</code>.
+               </p>
+               <div class="p"><code class="codeph">APEX_MAIL</code> contains three notable procedures:
+                  <ul style="list-style-type: disc;" id="GUID-14F51C6D-CB82-4B38-AB6E-61C46E75596F__UL_VT3_RSS_2PB">
+                     <li>Use <code class="codeph">APEX_MAIL.SEND</code> to send an outbound email message from your application.
+                     </li>
+                     <li>Use <code class="codeph">APEX_MAIL.PUSH_QUEUE</code> to deliver mail messages stored in <code class="codeph">APEX_MAIL_QUEUE</code>.
+                     </li>
+                     <li>Use <code class="codeph">APEX_MAIL.ADD_ATTACHMENT</code> to send an outbound email message from your application as an attachment.
+                     </li>
+                  </ul>
+               </div>
+               <p><span>APEX</span> installs the database job <code class="codeph">ORACLE_APEX_MAIL_QUEUE</code>, which periodically sends all mail messages stored in the active mail queue.
+               </p>
+               <div class="infoboxnote" id="GUID-14F51C6D-CB82-4B38-AB6E-61C46E75596F__GUID-4F5DD7E7-A80C-44CA-849F-283215C68C2D">
+                  <p class="notep1">Note:</p>
+                  <p>The <code class="codeph">APEX_MAIL</code> package may be used from outside the context of an <span>APEX</span> application (such as from <span>SQLcl</span> or from a Database Scheduler job) as long as the database user making the call is mapped to an <span>APEX</span> workspace. If the database user is mapped to multiple workspaces, you must first call <code class="codeph">APEX_UTIL.SET_WORKSPACE</code> or <code class="codeph">APEX_UTIL.SET_SECURITY_GROUP_ID</code> as in the following examples. The <code class="codeph">APEX_MAIL</code> package cannot be used by database users that are not mapped to any workspace unless they have been granted the role <code class="codeph">APEX_ADMINISTRATOR_ROLE</code>.
+                  </p><pre class="pre codeblock"><code>-- Example 1
+apex_util.set_workspace(p_workspace =&gt; 'MY_WORKSPACE');
+
+-- Example 2
+FOR c1 in (
+   select workspace_id
+     from apex_applications
+    where application_id = 100 )
+LOOP
+   apex_util.set_security_group_id(p_security_group_id =&gt; c1.workspace_id);
+END LOOP;</code></pre></div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="Configuring-Oracle-Application-Express-to-Send-Email.html#GUID-596E11FE-9289-4238-A3CA-D33F508E40F7">Configuring Oracle APEX to Send Email</a><br></li>
+                  <li class="ulchildlink"><a href="ADD_ATTACHMENT-Procedure-Signature-1.html#GUID-5B514926-2C0A-40E3-82BB-7E357CB0C927">ADD_ATTACHMENT Procedure Signature 1</a><br></li>
+                  <li class="ulchildlink"><a href="ADD_ATTACHMENT-Procedure-Signature-2.html#GUID-0C43024A-D0B5-4358-A43E-8BF8FAD30E08">ADD_ATTACHMENT Procedure Signature 2</a><br></li>
+                  <li class="ulchildlink"><a href="GET_IMAGES_URL-Function.html#GUID-5FBF4725-3B92-4B4F-8FF6-E135838FD687">GET_IMAGES_URL Function</a><br></li>
+                  <li class="ulchildlink"><a href="GET_INSTANCE_URL-Function.html#GUID-6CB52F5D-4FE8-4ECD-855E-306CAA160CEF">GET_INSTANCE_URL Function</a><br></li>
+                  <li class="ulchildlink"><a href="PREPARE_TEMPLATE_Procedure.html#GUID-639A0777-5A94-461A-8DD7-F71C950E7B69">PREPARE_TEMPLATE Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="PUSH_QUEUE-Procedure.html#GUID-A17CEA4E-B667-4657-AC0E-F2C0833010EC">PUSH_QUEUE Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="SEND-Function-Signature-1.html#GUID-760A11B9-3CB9-435C-9289-C2F2791BB80C">SEND Function Signature 1</a><br></li>
+                  <li class="ulchildlink"><a href="SEND-Function-Signature-2.html#GUID-9E630ED9-C896-4163-BEA1-9F52A110986B">SEND Function Signature 2</a><br></li>
+                  <li class="ulchildlink"><a href="SEND-Procedure-Signature-1.html#GUID-B1CD726B-EABE-4A9D-A7A4-3A973E84262D">SEND Procedure Signature 1</a><br></li>
+                  <li class="ulchildlink"><a href="SEND-Procedure-Signature-2.html#GUID-579D3770-3164-42C9-8EDD-69A61CB3207C">SEND Procedure Signature 2</a><br></li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-14F51C6D-CB82-4B38-AB6E-61C46E75596F__GUID-D3D12D80-05A1-4FB3-815B-902F39587596">
+                  <p class="notep1">See Also:</p>
+                  <ul style="list-style-type: disc;" id="GUID-14F51C6D-CB82-4B38-AB6E-61C46E75596F__UL_VQZ_3NC_2NB">
+                     <li><a href="../htmdb/sending-email-from-an-application.html#HTMDB-GUID-5579DEA8-699C-41F0-B08F-9AB565F76D77" target="_blank">Sending Email from an Application</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></li>
+                     <li><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeapi&id=ARPLS-GUID-F0065C52-D618-4F8A-A361-7B742D44C520" target="_blank"><span><cite>Oracle Database PL/SQL
+                                        Packages and Types Reference</cite></span></a> for more information about the UTL_SMTP package
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

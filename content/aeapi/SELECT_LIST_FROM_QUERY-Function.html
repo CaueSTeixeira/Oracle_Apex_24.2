@@ -1,0 +1,186 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="SELECT_LIST_FROM_QUERY Function">
+      <meta name="DC.subject" content="SELECT_LIST_FROM_QUERY function, APEX_ITEM">
+      <meta name="keywords" content="SELECT_LIST_FROM_QUERY function, APEX_ITEM">
+      <meta name="DC.Relation" scheme="URI" content="APEX_ITEM.html#GUID-A111B577-2503-4F4E-962E-192C7D5B5338">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-A4E36237-2B18-4CE5-A455-9771919A32F9">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>SELECT_LIST_FROM_QUERY Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="SELECT_LIST_FROM_LOV_XL-Function.html" title="Previous" type="text/html">
+      <link rel="next" href="SELECT_LIST_FROM_QUERY_XL-Function.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"SELECT_LIST_FROM_QUERY Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="SELECT_LIST_FROM_LOV_XL-Function.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="SELECT_LIST_FROM_QUERY_XL-Function.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-A4E36237-2B18-4CE5-A455-9771919A32F9" name="GUID-A4E36237-2B18-4CE5-A455-9771919A32F9"></a><a id="AEAPI1066"></a><a id="AEAPI1067"></a><a id="AEAPI1068"></a><a id="AEAPI1069"></a><a id="AEAPI208"></a>
+         
+         <h2 id="AEAPI-GUID-A4E36237-2B18-4CE5-A455-9771919A32F9" class="sect2"><span class="enumeration_section">35.16 </span>SELECT_LIST_FROM_QUERY Function
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function dynamically generates a select list from a query. Similar to other functions available in the <code class="codeph">APEX_ITEM</code> package, these select list functions are designed to generate forms with <code class="codeph">F01</code> to <code class="codeph">F50</code> form array elements.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-A4E36237-2B18-4CE5-A455-9771919A32F9__GUID-5CE1A952-B258-474D-BE65-D4B302EED0CD">Syntax</p><pre class="pre codeblock"><code>APEX_ITEM.SELECT_LIST_FROM_QUERY (
+    p_idx           IN    NUMBER,
+    p_value         IN    VARCHAR2 DEFAULT NULL,
+    p_query         IN    VARCHAR2,
+    p_attributes    IN    VARCHAR2 DEFAULT NULL,
+    p_show_null     IN    VARCHAR2 DEFAULT 'YES',
+    p_null_value    IN    VARCHAR2 DEFAULT '%NULL%',
+    p_null_text     IN    VARCHAR2 DEFAULT '%',
+    p_item_id       IN    VARCHAR2 DEFAULT NULL,
+    p_item_label    IN    VARCHAR2 DEFAULT NULL,
+    p_show_extra    IN    VARCHAR2 DEFAULT 'YES' )
+    RETURN VARCHAR2;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-A4E36237-2B18-4CE5-A455-9771919A32F9__GUID-21BE4539-D929-4AFA-93B8-269AD3D65748">Parameters</p>
+                  <div class="tblformal" id="GUID-A4E36237-2B18-4CE5-A455-9771919A32F9__CHDJEBJD">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="21%" id="d170797e83">Parameter</th>
+                              <th align="left" valign="bottom" width="79%" id="d170797e85">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d170797e89" headers="d170797e83 "><code class="codeph">p_idx</code></td>
+                              <td align="left" valign="top" width="79%" headers="d170797e89 d170797e85 ">Form element name. For example, <code class="codeph">1</code> equals <code class="codeph">F01</code> and <code class="codeph">2</code> equals <code class="codeph">F02</code>. Typically, the <code class="codeph">p_idx</code> parameter is constant for a given column. 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d170797e110" headers="d170797e83 "><code class="codeph">p_value</code></td>
+                              <td align="left" valign="top" width="79%" headers="d170797e110 d170797e85 ">Current value. This value should be a value in the <code class="codeph">p_query</code> parameter.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d170797e119" headers="d170797e83 "><code class="codeph">p_query</code></td>
+                              <td align="left" valign="top" width="79%" headers="d170797e119 d170797e85 ">
+                                 <p>SQL query that is expected to select two columns, a display column, and a return column. For example: </p><pre class="oac_no_warn" dir="ltr">SELECT dname, deptno FROM dept
+</pre><p>Note that this is used only by the <code class="codeph">SELECT_LIST_FROM_QUERY</code> function. 
+                                 </p>
+                                 <p>Also note, if only one column is specified in the select clause of this query, the value for this column is used for both display and return purposes.</p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d170797e135" headers="d170797e83 "><code class="codeph">p_attributes</code></td>
+                              <td align="left" valign="top" width="79%" headers="d170797e135 d170797e85 ">Extra HTML parameters you want to add.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d170797e141" headers="d170797e83 "><code class="codeph">p_show_null</code></td>
+                              <td align="left" valign="top" width="79%" headers="d170797e141 d170797e85 ">Extra select option to enable the NULL selection. Range of values is <code class="codeph">YES</code> and <code class="codeph">NO</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d170797e153" headers="d170797e83 "><code class="codeph">p_null_value</code></td>
+                              <td align="left" valign="top" width="79%" headers="d170797e153 d170797e85 ">Value to be returned when a user selects the NULL option. Only relevant when <code class="codeph">p_show_null</code> equals <code class="codeph">YES</code>. 
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d170797e165" headers="d170797e83 "><code class="codeph">p_null_text</code></td>
+                              <td align="left" valign="top" width="79%" headers="d170797e165 d170797e85 ">Value to be displayed when a user selects the NULL option. Only relevant when <code class="codeph">p_show_null</code> equals <code class="codeph">YES</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d170797e177" headers="d170797e83 "><code class="codeph">p_item_id</code></td>
+                              <td align="left" valign="top" width="79%" headers="d170797e177 d170797e85 ">HTML attribute ID for the <code class="codeph">&lt;select&gt;</code> tag.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d170797e186" headers="d170797e83 "><code class="codeph">p_item_label</code></td>
+                              <td align="left" valign="top" width="79%" headers="d170797e186 d170797e85 ">Invisible label created for the item.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d170797e192" headers="d170797e83 "><code class="codeph">p_show_extra</code></td>
+                              <td align="left" valign="top" width="79%" headers="d170797e192 d170797e85 ">Show the current value even if the value of <code class="codeph">p_value</code> is not located in the select list.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-A4E36237-2B18-4CE5-A455-9771919A32F9__GUID-08740EA9-2038-4C65-96EC-151DF6B4D16B">Example</p>
+                  <p>The following example demonstrates a select list based on a SQL query.</p><pre class="pre codeblock"><code>SELECT APEX_ITEM.SELECT_LIST_FROM_QUERY(3,job,'SELECT DISTINCT job FROM emp')job 
+FROM emp</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_ITEM.html#GUID-A111B577-2503-4F4E-962E-192C7D5B5338">APEX_ITEM (Legacy)</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

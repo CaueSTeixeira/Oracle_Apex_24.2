@@ -1,0 +1,192 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Understanding Generative AI Support in APEX">
+      <meta name="abstract" content="Learn about Generative Artificial Intelligence (AI) Service support in APEX.">
+      <meta name="description" content="Learn about Generative Artificial Intelligence (AI) Service support in APEX.">
+      <meta name="DC.subject" content="Generative AI service, understanding, AI service">
+      <meta name="keywords" content="Generative AI service, understanding, AI service">
+      <meta name="DC.Relation" scheme="URI" content="managing-generative-ai-in-apex.html#GUID-FDA021EF-D1A4-42AB-886F-617BE89B2557">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Topic">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-C97CBF88-4189-4F72-B92F-959F9B2CAC33">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about Generative Artificial Intelligence (AI) Service support in APEX.">
+      <meta name="description" content="Learn about Generative Artificial Intelligence (AI) Service support in APEX.">
+      <title>Understanding Generative AI Support in APEX</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Learn about Generative Artificial Intelligence (AI) Service support in APEX.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-generative-ai-in-apex.html" title="Previous" type="text/html">
+      <link rel="next" href="managing-generative-ai-services.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Understanding Generative AI Support in APEX","description":"Learn about Generative Artificial Intelligence (AI) Service support in APEX.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-generative-ai-in-apex.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="managing-generative-ai-services.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-C97CBF88-4189-4F72-B92F-959F9B2CAC33" name="GUID-C97CBF88-4189-4F72-B92F-959F9B2CAC33"></a>
+         
+         <h2 id="HTMDB-GUID-C97CBF88-4189-4F72-B92F-959F9B2CAC33" class="sect2"><span class="enumeration_section">18.8.1 </span>Understanding Generative AI Support in <span>APEX</span></h2>
+         <div class="ind">
+            <div>
+               <p>Learn about Generative Artificial Intelligence (AI) Service support in <span>APEX</span>.
+               </p>
+               <div class="section">
+                  <p class="subhead1" id="GUID-C97CBF88-4189-4F72-B92F-959F9B2CAC33__GUID-9BF24795-0680-4A5F-B8D5-5DCF9D8DF5BE">About Generative AI Services</p>
+                  
+                  
+                  <p><span>APEX</span> stores Generative AI Service information as a Generative AI object
+                (or Generative AI Service) on the Generative AI Services page in Workspace
+                Utilities. Since Generative AI Services are stored at the workspace-level, they are
+                visible and available to all applications in the workspace. Generative AI Services
+                support many commercial Generative AI products including OpenAI, OCI Generative AI
+                Service, and Cohere.
+                  </p>
+                  
+                  <p>When you create a Generative AI Service, <span>APEX</span> stores the AI Service key as a Web Credential. The Generative AI
+                Service actually stores information about the AI Service being used. 
+                  </p>
+                  
+                  <p>If you export an application that uses Generative AI Service, the export
+                file omits the actual Web Credential secret from the Web Credential definition. When
+                importing the export file, you must set the Web Credential secret manually or set it
+                using an API.</p>
+                  
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-C97CBF88-4189-4F72-B92F-959F9B2CAC33__GUID-6B29C19B-9406-4306-B44A-1D68CFEF0774">Administrator Controls</p>
+                  
+                  
+                  <p>Instance administrators can manage support for AI Services at the
+                workspace or instance-level. To learn more, see <a href="../aeadm/viewing-existing-workspace-information.html#AEADM-GUID-F88900FF-A437-4B4D-B096-3D1E3F2D0032" target="_blank">Editing Workspace Information</a> and <a href="../aeadm/configuring-service-level-security-settings.html#AEADM-GUID-4D5AAB41-953C-4B8B-8A2C-A8E4CEC2CC2F" target="_blank">Managing Support for AI Services for an
+                    Instance</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span>.
+                  </p>
+                  
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-C97CBF88-4189-4F72-B92F-959F9B2CAC33__GUID-C57F0E05-E5EA-4804-A6C9-C50853476B7B">About Enabling a Generative AI in <span>App Builder</span></p>
+                  
+                  
+                  <p>When you create a Generative AI Service, enabling the <span class="uicontrol bold">Used by</span>
+                     <span><span class="uicontrol bold">App
+                                        Builder</span></span> setting makes the following features available:
+                  </p>
+                  
+                  <ul style="list-style-type: disc;" id="GUID-C97CBF88-4189-4F72-B92F-959F9B2CAC33__UL_WKZ_1N5_3BC">
+                     <li>An integrated Generative AI option in the Create Application
+                    Wizard.</li>
+                     <li>Generative AI support (<span>APEX</span> Assistant) in all <span>APEX</span> Code Editors.
+                     </li>
+                  </ul>
+                  
+                  <div class="infoboxnote" id="GUID-C97CBF88-4189-4F72-B92F-959F9B2CAC33__GUID-704AA02D-8D19-4FF9-A677-F057ACCB3D82">
+                     <p class="notep1">Note:</p>Only one Generative AI Service at a
+                time can be configured with the <span class="uicontrol bold">Used by</span>
+                     <span><span class="uicontrol bold">App
+                                        Builder</span></span> setting enabled.
+                  </div>
+                  
+                  <p>See <a href="creating-an-app-using-generative-ai.html#GUID-123930A5-9DDE-4C6F-B780-B57B13F4B6AE" title="Create an application using Generative AI and enter natural language.">Creating an App Using Generative AI</a> and <a href="using-apex-assistant.html#GUID-F20CBA35-5451-48EE-9492-10D426C41C98" title="Use integrated AI Chat capability (called APEX Assistant) in Code Editors within App Builder.">Using APEX Assistant</a>.
+                  </p>
+                  
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-C97CBF88-4189-4F72-B92F-959F9B2CAC33__GUID-078EE1B1-4FC9-4F91-9447-CBC52A81E10F">Including Generative AI in Runtime Apps</p>
+                  
+                  
+                  <p>You can include AI in your applications by creating a dynamic action
+                which opens the AI Assistant. The actual steps involved can be as simple as hooking
+                a button to the dynamic action.</p>
+                  
+                  <p>See <a href="including-generative-ai-in-applications.html#GUID-1A53C3E5-658D-48D8-9C48-E9163B5D094F" title="Include Generative AI in your application by creating a Generative AI Service, configuring application attributes on the AI page, and creating a dynamic action to either display the AI Assistant or generate text with AI.">Including Generative AI in Applications</a>.
+                  </p>
+                  
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-generative-ai-in-apex.html#GUID-FDA021EF-D1A4-42AB-886F-617BE89B2557" title="Create Generative AI Services to include AI features in App Builder and enable support for developers to include Generative AI in their applications.">Managing Generative AI in APEX</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

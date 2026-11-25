@@ -1,0 +1,145 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="GET_CALLBACK_URL Function">
+      <meta name="DC.subject" content="GET_CALLBACK_URL procedure, APEX_AUTHENTICATION">
+      <meta name="keywords" content="GET_CALLBACK_URL procedure, APEX_AUTHENTICATION">
+      <meta name="DC.Relation" scheme="URI" content="APEX_AUTHENTICATION.html#GUID-2BA36F55-4881-455B-AC19-123DD9365E92">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-313219AF-BA04-4367-9EA0-AB2946AD2689">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>GET_CALLBACK_URL Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="CALLBACK2-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="GET_LOGIN_USERNAME_COOKIE-Function.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"GET_CALLBACK_URL Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="CALLBACK2-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="GET_LOGIN_USERNAME_COOKIE-Function.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-313219AF-BA04-4367-9EA0-AB2946AD2689" name="GUID-313219AF-BA04-4367-9EA0-AB2946AD2689"></a><a id="AEAPI29140"></a><a id="AEAPI29141"></a><a id="AEAPI29142"></a><a id="AEAPI29143"></a><a id="AEAPI29139"></a>
+         
+         <h2 id="AEAPI-GUID-313219AF-BA04-4367-9EA0-AB2946AD2689" class="sect2"><span class="enumeration_section">10.4 </span>GET_CALLBACK_URL Function
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function is a plug-in helper function to return a URL that is used as a landing request for external login pages. When the browser sends the request, it triggers the authentication plug-in Ajax callback, which can be used to log the user in. </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-313219AF-BA04-4367-9EA0-AB2946AD2689__GUID-75B582F6-25AA-490E-8657-270287B882F3">Syntax</p><pre class="pre codeblock"><code>APEX_AUTHENTICATION.GET_CALLBACK_URL ( 
+    p_x01           IN VARCHAR2 DEFAULT NULL, 
+    p_x02           IN VARCHAR2 DEFAULT NULL, 
+    p_x03           IN VARCHAR2 DEFAULT NULL, 
+    p_x04           IN VARCHAR2 DEFAULT NULL, 
+    p_x05           IN VARCHAR2 DEFAULT NULL, 
+    p_x06           IN VARCHAR2 DEFAULT NULL, 
+    p_x07           IN VARCHAR2 DEFAULT NULL, 
+    p_x08           IN VARCHAR2 DEFAULT NULL, 
+    p_x09           IN VARCHAR2 DEFAULT NULL, 
+    p_x10           IN VARCHAR2 DEFAULT NULL,
+    p_callback_name IN VARCHAR2 DEFAULT NULL ) 
+    RETURN VARCHAR2; </code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-313219AF-BA04-4367-9EA0-AB2946AD2689__GUID-207ABBE2-AF9C-4212-B655-45DDE313C716">Parameters</p>
+                  <div class="tblformal" id="GUID-313219AF-BA04-4367-9EA0-AB2946AD2689__BABGJJIC">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="31%" id="d45365e74">Parameters</th>
+                              <th align="left" valign="bottom" width="69%" id="d45365e76">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d45365e80" headers="d45365e74 "><code class="codeph">p_x01</code> through <code class="codeph">p_x10</code></td>
+                              <td align="left" valign="top" width="69%" headers="d45365e80 d45365e76 ">Optional parameters that the external login passes to the authentication plugin.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="31%" id="d45365e89" headers="d45365e74 "><code class="codeph">p_callback_name</code></td>
+                              <td align="left" valign="top" width="69%" headers="d45365e89 d45365e76 ">Optional public name of the callback, defaults to <code class="codeph">apex_authentication.callback</code>.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <div class="infoboxnotealso" id="GUID-313219AF-BA04-4367-9EA0-AB2946AD2689__GUID-9AE0FE92-4525-4BF7-B0F8-5A8F5E3A9EA3">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="CALLBACK-Procedure.html#GUID-69402EA6-F362-4D25-BBB4-B2C67C789E6E">CALLBACK Procedure</a></p>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_AUTHENTICATION.html#GUID-2BA36F55-4881-455B-AC19-123DD9365E92">APEX_AUTHENTICATION</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

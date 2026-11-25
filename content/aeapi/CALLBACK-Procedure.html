@@ -1,0 +1,270 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="CALLBACK Procedure">
+      <meta name="DC.subject" content="CALLBACK procedure, APEX_AUTHENTICATION">
+      <meta name="keywords" content="CALLBACK procedure, APEX_AUTHENTICATION">
+      <meta name="DC.Relation" scheme="URI" content="APEX_AUTHENTICATION.html#GUID-2BA36F55-4881-455B-AC19-123DD9365E92">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-69402EA6-F362-4D25-BBB4-B2C67C789E6E">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>CALLBACK Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_AUTHENTICATION-Constants.html" title="Previous" type="text/html">
+      <link rel="next" href="CALLBACK2-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"CALLBACK Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_AUTHENTICATION-Constants.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="CALLBACK2-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-69402EA6-F362-4D25-BBB4-B2C67C789E6E" name="GUID-69402EA6-F362-4D25-BBB4-B2C67C789E6E"></a><a id="AEAPI29134"></a><a id="AEAPI29135"></a><a id="AEAPI29136"></a><a id="AEAPI29137"></a><a id="AEAPI29138"></a><a id="AEAPI29133"></a>
+         
+         <h2 id="AEAPI-GUID-69402EA6-F362-4D25-BBB4-B2C67C789E6E" class="sect2"><span class="enumeration_section">10.2 </span>CALLBACK Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This procedure is the landing resource for external login pages. Call this procedure directly from the browser.</p>
+                  <div class="infobox-tip" id="GUID-69402EA6-F362-4D25-BBB4-B2C67C789E6E__GUID-0CD466CF-5A17-4A86-BBF7-C11AE30FC302">
+                     <p class="notep1">Tip:</p>The parameters which are marked with <span class="q">"OAuth2"</span> should <span class="bold">not</span> be used for custom callback URLs. They are only used if this procedure is used for Social Sign-In. These parameters are defined by the OAuth2 spec.
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-69402EA6-F362-4D25-BBB4-B2C67C789E6E__GUID-3BD304DD-F303-4212-9AE8-F08F9D23FEC7">Syntax</p><pre class="pre codeblock"><code>APEX_AUTHENTICATION.CALLBACK (
+    --
+    -- Custom callback parameters
+    --
+    p_session_id        IN NUMBER   DEFAULT NULL,
+    p_app_id            IN NUMBER   DEFAULT NULL,
+    p_ajax_identifier   IN VARCHAR2 DEFAULT NULL,
+    p_page_id           IN NUMBER   DEFAULT NULL,
+    p_x01               IN VARCHAR2 DEFAULT NULL,
+    p_x02               IN VARCHAR2 DEFAULT NULL,
+    p_x03               IN VARCHAR2 DEFAULT NULL,
+    p_x04               IN VARCHAR2 DEFAULT NULL,
+    p_x05               IN VARCHAR2 DEFAULT NULL,
+    p_x06               IN VARCHAR2 DEFAULT NULL,
+    p_x07               IN VARCHAR2 DEFAULT NULL,
+    p_x08               IN VARCHAR2 DEFAULT NULL,
+    p_x09               IN VARCHAR2 DEFAULT NULL,
+    p_x10               IN VARCHAR2 DEFAULT NULL,
+    --
+    -- OAuth2-related parameters
+    --
+    state               IN VARCHAR2 DEFAULT NULL,
+    code                IN VARCHAR2 DEFAULT NULL,
+    error               IN VARCHAR2 DEFAULT NULL,
+    error_description   IN VARCHAR2 DEFAULT NULL,
+    error_uri           IN VARCHAR2 DEFAULT NULL,
+    error_reason        IN VARCHAR2 DEFAULT NULL,
+    error_code          IN VARCHAR2 DEFAULT NULL,
+    error_message       IN VARCHAR2 DEFAULT NULL,
+    authuser            IN VARCHAR2 DEFAULT NULL,
+    session_state       IN VARCHAR2 DEFAULT NULL,
+    prompt              IN VARCHAR2 DEFAULT NULL,
+    hd                  IN VARCHAR2 DEFAULT NULL,
+    scope               IN VARCHAR2 DEFAULT NULL,
+    realmID             IN VARCHAR2 DEFAULT NULL )</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-69402EA6-F362-4D25-BBB4-B2C67C789E6E__GUID-BEE6D475-5F84-46AD-81DB-E44C1D287A04">Parameters</p>
+                  <div class="tblformal" id="GUID-69402EA6-F362-4D25-BBB4-B2C67C789E6E__BABFCFHE">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="28%" id="d44406e84">Parameters</th>
+                              <th align="left" valign="bottom" width="72%" id="d44406e86">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e90" headers="d44406e84 "><code class="codeph">p_session_id</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e90 d44406e86 ">The <span>Oracle APEX</span> session identifier.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e99" headers="d44406e84 "><code class="codeph">p_app_id</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e99 d44406e86 ">The database application identifier.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e105" headers="d44406e84 "><code class="codeph">p_page_id</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e105 d44406e86 ">Optional page identifier.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e111" headers="d44406e84 "><code class="codeph">p_ajax_identifier</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e111 d44406e86 ">The system generated Ajax identifier. See <a href="GET_AJAX_IDENTIFIER-Function.html#GUID-4E48F89D-40A1-4EB3-92D7-ACC401B89F47">GET_AJAX_IDENTIFIER Function</a>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e120" headers="d44406e84 "><code class="codeph">p_x01</code> through <code class="codeph">p_x10</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e120 d44406e86 ">Optional parameters that the external login passes to the authentication plugin.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e129" headers="d44406e84 "><code class="codeph">state</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e129 d44406e86 ">OAuth2.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e135" headers="d44406e84 "><code class="codeph">code</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e135 d44406e86 ">OAuth2.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e141" headers="d44406e84 "><code class="codeph">error</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e141 d44406e86 ">OAuth2.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e147" headers="d44406e84 "><code class="codeph">error_description</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e147 d44406e86 ">OAuth2.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e153" headers="d44406e84 "><code class="codeph">error_uri</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e153 d44406e86 ">OAuth2.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e159" headers="d44406e84 "><code class="codeph">error_reason</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e159 d44406e86 ">OAuth2.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e166" headers="d44406e84 "><code class="codeph">error_code</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e166 d44406e86 ">OAuth2.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e172" headers="d44406e84 "><code class="codeph">error_message</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e172 d44406e86 ">OAuth2.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e178" headers="d44406e84 "><code class="codeph">authuser</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e178 d44406e86 ">OAuth2.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e184" headers="d44406e84 "><code class="codeph">session_state</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e184 d44406e86 ">OAuth2.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e190" headers="d44406e84 "><code class="codeph">prompt</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e190 d44406e86 ">OAuth2.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e196" headers="d44406e84 "><code class="codeph">hd</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e196 d44406e86 ">OAuth2.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e202" headers="d44406e84 "><code class="codeph">scope</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e202 d44406e86 ">OAuth2.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="28%" id="d44406e208" headers="d44406e84 "><code class="codeph">realmID</code></td>
+                              <td align="left" valign="top" width="72%" headers="d44406e208 d44406e86 ">OAuth2.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-69402EA6-F362-4D25-BBB4-B2C67C789E6E__GUID-F1398E5A-5A5A-4CD5-842F-20E7CB9517BE">Example 1</p>
+                  <p>In this example, a redirect is performed to an external login page and the callback is passed into <span>APEX</span>, which the external login redirects to after successful authentication. 
+                  </p><pre class="pre codeblock"><code>DECLARE 
+    l_callback varchar2(4000) := apex_application.get_callback_url; 
+BEGIN 
+    sys.owa_util.redirect_url( 
+        'https://single-signon.example.com/my_custom_sso.login?p_on_success='|| 
+        sys.utl_url.escape ( 
+            url =&gt; l_callback, 
+            escape_reserved_chars =&gt; true ); 
+    apex_application.stop_apex_engine; 
+END;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-69402EA6-F362-4D25-BBB4-B2C67C789E6E__GUID-3D5A62CF-6983-40CC-8AF4-DC3505298E28">Example 2</p>
+                  <p>In this example, an external login page saves user data in a shared table and performs a call back with a handle to the data. In <span>APEX</span>, the callback activates the authentication plugin's ajax code. It can take the value of <code class="codeph">x01</code> and fetch the actual user data from the shared table.
+                  </p><pre class="pre codeblock"><code>---- create or replace package body my_custom_sso as 
+PROCEDURE LOGIN ( 
+    p_on_success in varchar2 ) 
+    IS 
+    l_login_id varchar2(32); 
+BEGIN
+    l_login_id := rawtohex(sys.dbms_crypto.random(32)); 
+    insert into login_data(id, username) values (l_login_id, 'JOE USER'); 
+    sys.owa_util.redirect_url ( 
+    p_on_success||'&amp;p_x01='||l_login_id ); 
+END; 
+---- end my_custom_sso;</code></pre></div>
+               <div class="section">
+                  <div class="infoboxnotealso" id="GUID-69402EA6-F362-4D25-BBB4-B2C67C789E6E__GUID-1D68BB07-D624-4617-B157-1FE728CFCBC7">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-69402EA6-F362-4D25-BBB4-B2C67C789E6E__UL_DK4_TJL_RSB">
+                        <li><a href="GET_CALLBACK_URL-Function.html#GUID-313219AF-BA04-4367-9EA0-AB2946AD2689">GET_CALLBACK_URL Function</a></li>
+                        <li><a href="CALLBACK2-Procedure.html#GUID-F67D5A66-2ECB-40A3-8FEE-7D2689C1E103">CALLBACK2 Procedure</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_AUTHENTICATION.html#GUID-2BA36F55-4881-455B-AC19-123DD9365E92">APEX_AUTHENTICATION</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

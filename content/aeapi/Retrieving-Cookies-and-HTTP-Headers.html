@@ -1,0 +1,147 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Retrieving Cookies and HTTP Headers">
+      <meta name="DC.subject" content="Retrieving Cookies and HTTP Headers, APEX_WEB_SERVICE">
+      <meta name="keywords" content="Retrieving Cookies and HTTP Headers, APEX_WEB_SERVICE">
+      <meta name="DC.Relation" scheme="URI" content="About-the-APEX_WEB_SERVICE-API.html#GUID-ECC9CC44-D10B-4502-B832-A171B370F3B4">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-39ADA850-DDD1-4A71-834A-1F7BC4FB2269">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Retrieving Cookies and HTTP Headers</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="Setting-Cookies-and-HTTP-Headers.html" title="Previous" type="text/html">
+      <link rel="next" href="about-web-credentials-APEX_WEB_SERVICE.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Retrieving Cookies and HTTP Headers","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="Setting-Cookies-and-HTTP-Headers.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="about-web-credentials-APEX_WEB_SERVICE.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-39ADA850-DDD1-4A71-834A-1F7BC4FB2269" name="GUID-39ADA850-DDD1-4A71-834A-1F7BC4FB2269"></a><a id="AEAPI1933"></a>
+         
+         <h2 id="AEAPI-GUID-39ADA850-DDD1-4A71-834A-1F7BC4FB2269" class="sect2"><span class="enumeration_section">60.1.4 </span>Retrieving Cookies and HTTP Headers
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>When you invoke a Web service using any of the supported methods in <span>Oracle APEX</span>, the <code class="codeph">g_response_cookies</code> and <code class="codeph">g_headers</code> globals are populated if the Web service response included any cookies or HTTP headers. You can interrogate these globals and store the information in collections.
+                  </p>
+                  <p>When you invoke a Web service using any of the supported methods in <span>APEX</span>, the <code class="codeph">g_status_code</code> global is populated with the numeric HTTP status code of the response (for example, 200 or 404). The <code class="codeph">g_response_cookies</code> and <code class="codeph">g_headers</code> globals are populated if the Web service response included any cookies or HTTP headers.
+                  </p>
+                  <p>The following are examples of interrogating the <code class="codeph">APEX_WEB_SERVICE</code> globals to store cookie and HTTP header responses in collections.
+                  </p><pre class="pre codeblock"><code>DECLARE
+  i number;
+  secure varchar2(1);
+BEGIN
+  apex_collection.create_or_truncate_collection('P31_RESP_COOKIES');
+  FOR i in 1.. apex_web_service.g_response_cookies.count LOOP
+    IF (apex_web_service.g_response_cookies(i).secure) THEN
+      secure := 'Y';
+    ELSE
+      secure := 'N';
+    END IF;
+    apex_collection.add_member(p_collection_name =&gt; 'P31_RESP_COOKIES',
+      p_c001 =&gt; apex_web_service.g_response_cookies(i).name,
+      p_c002 =&gt; apex_web_service.g_response_cookies(i).value,
+      p_c003 =&gt; apex_web_service.g_response_cookies(i).domain,
+      p_c004 =&gt; apex_web_service.g_response_cookies(i).expire,
+      p_c005 =&gt; apex_web_service.g_response_cookies(i).path,
+      p_c006 =&gt; secure,
+      p_c007 =&gt; apex_web_service.g_response_cookies(i).version );
+  END LOOP;
+END;
+ 
+DECLARE
+  i number;
+BEGIN
+apex_collection.create_or_truncate_collection('P31_RESP_HEADERS');
+ 
+FOR i in 1.. apex_web_service.g_headers.count LOOP
+  apex_collection.add_member(p_collection_name =&gt; 'P31_RESP_HEADERS',
+    p_c001 =&gt; apex_web_service.g_headers(i).name,
+    p_c002 =&gt; apex_web_service.g_headers(i).value,
+    p_c003 =&gt; apex_web_service.g_status_code);
+END LOOP;
+END;</code></pre></div>
+               <div class="section">
+                  <div class="infoboxnotealso" id="GUID-39ADA850-DDD1-4A71-834A-1F7BC4FB2269__GUID-979807BC-84B3-4F7A-99E8-FFC79129F289">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-39ADA850-DDD1-4A71-834A-1F7BC4FB2269__UL_T2C_Y5B_H1C">
+                        <li><a href="APEX_WEB_SERVICE.Global-Variables.html#GUID-3A4D9CE9-0418-4EB5-AA2B-5EC5B9AF0617">Global Variables</a></li>
+                        <li><a href="Setting-Cookies-and-HTTP-Headers.html#GUID-7F49060A-3359-47ED-B18B-AD34A1885E92">Setting Cookies and HTTP Headers</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="About-the-APEX_WEB_SERVICE-API.html#GUID-ECC9CC44-D10B-4502-B832-A171B370F3B4">About the APEX_WEB_SERVICE API</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

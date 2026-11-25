@@ -1,0 +1,324 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="GET_PRINT_CONFIG Procedure">
+      <meta name="DC.subject" content="GET_PRINT_CONFIG procedure, APEX_DATA_EXPORT">
+      <meta name="keywords" content="GET_PRINT_CONFIG procedure, APEX_DATA_EXPORT">
+      <meta name="DC.Relation" scheme="URI" content="APEX_DATA_EXPORT.html#GUID-F195C61B-30DA-4462-93A3-465BCA6FCB78">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-FEBD25E1-53E7-4C03-A30B-5859692188A7">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>GET_PRINT_CONFIG Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_DATA_EXPORT-EXPORT-Function.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_DATA_INSTALL.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"GET_PRINT_CONFIG Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_DATA_EXPORT-EXPORT-Function.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_DATA_INSTALL.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-FEBD25E1-53E7-4C03-A30B-5859692188A7" name="GUID-FEBD25E1-53E7-4C03-A30B-5859692188A7"></a>
+         
+         <h2 id="AEAPI-GUID-FEBD25E1-53E7-4C03-A30B-5859692188A7" class="sect2"><span class="enumeration_section">20.9 </span>GET_PRINT_CONFIG Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function prepares the print config to style the data export.</p>
+                  <ul style="list-style-type: disc;" id="GUID-FEBD25E1-53E7-4C03-A30B-5859692188A7__UL_DJL_3WS_LNB">
+                     <li>The colors are specified using hexadecimal (hex) notation, RGB color codes, or HTML color names.</li>
+                     <li>The alignment options include: Left, Center, Right</li>
+                     <li>The font family options include: Helvetica, Times, Courier</li>
+                     <li>The font weight options include: Normal, Bold</li>
+                  </ul>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-FEBD25E1-53E7-4C03-A30B-5859692188A7__GUID-3A975680-7D56-4118-84BB-24D71B6D0DE1">Syntax</p><pre class="pre codeblock"><code>FUNCTION GET_PRINT_CONFIG(
+    p_units                       IN t_unit         DEFAULT c_unit_inches,
+    p_paper_size                  IN t_size         DEFAULT c_size_letter,
+    p_width_units                 IN t_width_unit   DEFAULT c_width_unit_percentage,
+    p_width                       IN NUMBER         DEFAULT 11,
+    p_height                      IN NUMBER         DEFAULT 8.5,
+    p_orientation                 IN t_orientation  DEFAULT c_orientation_landscape,
+    --
+    p_page_header                 IN VARCHAR2       DEFAULT NULL,
+    p_page_header_font_color      IN t_color        DEFAULT '#000000',
+    p_page_header_font_family     IN t_font_family  DEFAULT c_font_family_helvetica,
+    p_page_header_font_weight     IN t_font_weight  DEFAULT c_font_weight_normal,
+    p_page_header_font_size       IN NUMBER         DEFAULT 12,
+    p_page_header_alignment       IN t_alignment    DEFAULT c_align_center,
+    --
+    p_page_footer                 IN VARCHAR2       DEFAULT NULL,
+    p_page_footer_font_color      IN t_color        DEFAULT '#000000',
+    p_page_footer_font_family     IN t_font_family  DEFAULT c_font_family_helvetica,
+    p_page_footer_font_weight     IN t_font_weight  DEFAULT c_font_weight_normal,
+    p_page_footer_font_size       IN NUMBER         DEFAULT 12,
+    p_page_footer_alignment       IN t_alignment    DEFAULT c_align_center,
+    --
+    p_header_bg_color             IN t_color        DEFAULT '#EEEEEE',
+    p_header_font_color           IN t_color        DEFAULT '#000000',
+    p_header_font_family          IN t_font_family  DEFAULT c_font_family_helvetica,
+    p_header_font_weight          IN t_font_weight  DEFAULT c_font_weight_bold,
+    p_header_font_size            IN NUMBER         DEFAULT 10,
+    --
+    p_body_bg_color               IN t_color        DEFAULT '#FFFFFF',
+    p_body_font_color             IN t_color        DEFAULT '#000000',
+    p_body_font_family            IN t_font_family  DEFAULT c_font_family_helvetica,
+    p_body_font_weight            IN t_font_weight  DEFAULT c_font_weight_normal,
+    p_body_font_size              IN NUMBER         DEFAULT 10,
+    --
+    p_border_width                IN NUMBER         DEFAULT .5,
+    p_border_color                IN t_color        DEFAULT '#666666' )
+RETURN t_print_config;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-FEBD25E1-53E7-4C03-A30B-5859692188A7__GUID-3361732E-4798-4F77-8A54-80C0EC94B9A3">Parameters</p>
+                  <div class="tblformal" id="GUID-FEBD25E1-53E7-4C03-A30B-5859692188A7__GUID-9F202D0F-0EBD-4F39-AD38-CF4C25C5BB1B">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" id="d76645e78">Parameter</th>
+                              <th align="left" valign="bottom" id="d76645e80">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e84" headers="d76645e78 "><code class="codeph">p_units</code></td>
+                              <td align="left" valign="top" headers="d76645e84 d76645e80 ">
+                                 <p>Select the units used to specify page width and height.</p>
+                                 <p>Valid values are: Inches, Millimeters, Centimeters, Points</p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e93" headers="d76645e78 "><code class="codeph">p_paper_size</code></td>
+                              <td align="left" valign="top" headers="d76645e93 d76645e80 ">
+                                 <p>PDF only. Select the report page size. To type in your own page width and height, select Custom.</p>
+                                 <p>Available options include: Letter, Legal, Tabloid, A4, A3, Custom</p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e102" headers="d76645e78 "><code class="codeph">p_width_units</code></td>
+                              <td align="left" valign="top" headers="d76645e102 d76645e80 ">
+                                 <p>PDF only. Select the units used to specify column widths.</p>
+                                 <p>Valid values are: Percentage, Points, Pixels</p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e111" headers="d76645e78 "><code class="codeph">p_width</code></td>
+                              <td align="left" valign="top" headers="d76645e111 d76645e80 ">PDF only. The width of the page.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e117" headers="d76645e78 "><code class="codeph">p_height</code></td>
+                              <td align="left" valign="top" headers="d76645e117 d76645e80 ">PDF only. The height of the page.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e123" headers="d76645e78 "><code class="codeph">p_orientation</code></td>
+                              <td align="left" valign="top" headers="d76645e123 d76645e80 ">
+                                 <p>The orientation for the page. PDF only.</p>
+                                 <p>Available options include: Vertical (Portrait), Horizontal (Landscape)</p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e132" headers="d76645e78 "><code class="codeph">p_page_header</code></td>
+                              <td align="left" valign="top" headers="d76645e132 d76645e80 ">Text to appear in the header section of the document.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e138" headers="d76645e78 "><code class="codeph">p_page_header_font_color</code></td>
+                              <td align="left" valign="top" headers="d76645e138 d76645e80 ">The page header font color.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e144" headers="d76645e78 "><code class="codeph">p_page_header_font_family</code></td>
+                              <td align="left" valign="top" headers="d76645e144 d76645e80 ">The page header font family.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e150" headers="d76645e78 "><code class="codeph">p_page_header_font_weight</code></td>
+                              <td align="left" valign="top" headers="d76645e150 d76645e80 ">The page header font weight.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e156" headers="d76645e78 "><code class="codeph">p_page_header_font_size</code></td>
+                              <td align="left" valign="top" headers="d76645e156 d76645e80 ">The page header font size.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e163" headers="d76645e78 "><code class="codeph">p_page_header_alignment</code></td>
+                              <td align="left" valign="top" headers="d76645e163 d76645e80 ">The page header text aligment.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e169" headers="d76645e78 "><code class="codeph">p_page_footer</code></td>
+                              <td align="left" valign="top" headers="d76645e169 d76645e80 ">Text to appear in the footer section of the document.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e175" headers="d76645e78 "><code class="codeph">p_page_footer_font_color</code></td>
+                              <td align="left" valign="top" headers="d76645e175 d76645e80 ">The page footer font color.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e181" headers="d76645e78 "><code class="codeph">p_page_footer_font_family</code></td>
+                              <td align="left" valign="top" headers="d76645e181 d76645e80 ">The page footer font family.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e187" headers="d76645e78 "><code class="codeph">p_page_footer_font_weight</code></td>
+                              <td align="left" valign="top" headers="d76645e187 d76645e80 ">The page footer font weight.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e193" headers="d76645e78 "><code class="codeph">p_page_footer_font_size</code></td>
+                              <td align="left" valign="top" headers="d76645e193 d76645e80 ">The page footer font size.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e199" headers="d76645e78 "><code class="codeph">p_page_footer_alignment</code></td>
+                              <td align="left" valign="top" headers="d76645e199 d76645e80 ">The page footer text aligment.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e205" headers="d76645e78 "><code class="codeph">p_header_bg_color</code></td>
+                              <td align="left" valign="top" headers="d76645e205 d76645e80 ">The table header background color.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e211" headers="d76645e78 "><code class="codeph">p_header_font_color</code></td>
+                              <td align="left" valign="top" headers="d76645e211 d76645e80 ">The table header font color.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e217" headers="d76645e78 "><code class="codeph">p_header_font_family</code></td>
+                              <td align="left" valign="top" headers="d76645e217 d76645e80 ">The table header font family.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e223" headers="d76645e78 "><code class="codeph">p_header_font_weight</code></td>
+                              <td align="left" valign="top" headers="d76645e223 d76645e80 ">The table header font weight.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e230" headers="d76645e78 "><code class="codeph">p_header_font_size</code></td>
+                              <td align="left" valign="top" headers="d76645e230 d76645e80 ">The table header font size.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e236" headers="d76645e78 "><code class="codeph">p_body_bg_color</code></td>
+                              <td align="left" valign="top" headers="d76645e236 d76645e80 ">The table body background color.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e242" headers="d76645e78 "><code class="codeph">p_body_font_color</code></td>
+                              <td align="left" valign="top" headers="d76645e242 d76645e80 ">The table body font color.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e248" headers="d76645e78 "><code class="codeph">p_body_font_family</code></td>
+                              <td align="left" valign="top" headers="d76645e248 d76645e80 ">The table body font family.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e254" headers="d76645e78 "><code class="codeph">p_body_font_weight</code></td>
+                              <td align="left" valign="top" headers="d76645e254 d76645e80 ">The table body font weight.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e260" headers="d76645e78 "><code class="codeph">p_body_font_size</code></td>
+                              <td align="left" valign="top" headers="d76645e260 d76645e80 ">The table body font size.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e266" headers="d76645e78 "><code class="codeph">p_border_width</code></td>
+                              <td align="left" valign="top" headers="d76645e266 d76645e80 ">The width of the borders.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d76645e272" headers="d76645e78 "><code class="codeph">p_border_color</code></td>
+                              <td align="left" valign="top" headers="d76645e272 d76645e80 ">The color of the borders.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-FEBD25E1-53E7-4C03-A30B-5859692188A7__GUID-3035146B-D243-4446-B557-1ED2B218BB49">Returns</p>
+                  <p>The print config to style the data export.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-FEBD25E1-53E7-4C03-A30B-5859692188A7__GUID-63C79938-2CA3-4FE7-844E-B0322ABF005B">Example</p><pre class="pre codeblock"><code>DECLARE
+    l_context         apex_exec.t_context; 
+    l_print_config    apex_data_export.t_print_config;
+    l_export          apex_data_export.t_export;
+BEGIN
+    l_context := apex_exec.open_query_context(
+        p_location    =&gt; apex_exec.c_location_local_db,
+        p_sql_query   =&gt; 'select * from emp' );
+
+    l_print_config := apex_data_export.get_print_config(
+        p_orientation     =&gt; apex_data_export.c_orientation_portrait,
+        p_border_width    =&gt; 2 );
+
+    l_export := apex_data_export.export (
+        p_context         =&gt; l_context,
+        p_print_config    =&gt; l_print_config,
+        p_format          =&gt; apex_data_export.c_format_pdf );
+
+    apex_exec.close( l_context );
+
+    apex_data_export.download( p_export =&gt; l_export );
+
+EXCEPTION
+    when others THEN
+        apex_exec.close( l_context );
+        raise;
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_DATA_EXPORT.html#GUID-F195C61B-30DA-4462-93A3-465BCA6FCB78">APEX_DATA_EXPORT</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

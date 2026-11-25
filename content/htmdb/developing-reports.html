@@ -1,0 +1,161 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Developing Reports">
+      <meta name="abstract" content="In Oracle APEX, a report is the formatted result of a SQL query. You can generate the SQL query by selecting a table or view in a wizard or by defining the SQL query manually.">
+      <meta name="description" content="In Oracle APEX, a report is the formatted result of a SQL query. You can generate the SQL query by selecting a table or view in a wizard or by defining the SQL query manually.">
+      <meta name="DC.subject" content="reports, about">
+      <meta name="keywords" content="reports, about">
+      <meta name="DC.Relation" scheme="URI" content="understanding-report-page-types.html#GUID-41FC6A79-8FE6-4585-AB16-987F28DA07D2">
+      <meta name="DC.Relation" scheme="URI" content="creating-report-create-app-wizard.html#GUID-80BCFBDC-CB4D-43EF-B534-AEE159BBD939">
+      <meta name="DC.Relation" scheme="URI" content="creating-report-create-page-wizard.html#GUID-98976897-71A7-4642-97CD-A28CD5D67267">
+      <meta name="DC.Relation" scheme="URI" content="creating-a-report-by-dragging-and-dropping-from-gallery.html#GUID-B4195FAD-D65F-42AE-BE25-59175AA18BB2">
+      <meta name="DC.Relation" scheme="URI" content="managing-cards.html#GUID-4B524AC4-9507-45EB-B4EA-A4D33F469B2D">
+      <meta name="DC.Relation" scheme="URI" content="managing-smart-filters.html#GUID-C8C68618-6D42-41F6-BC36-C9CC19C03AD6">
+      <meta name="DC.Relation" scheme="URI" content="managing-faceted-search.html#GUID-1A586583-3DAB-4F49-A5B4-A09AD93F015F">
+      <meta name="DC.Relation" scheme="URI" content="managing-interactive-grids.html#GUID-82BA760D-2142-4FED-99D7-0DE98B852079">
+      <meta name="DC.Relation" scheme="URI" content="managing-interactive-reports.html#GUID-24C05873-1362-4CC5-A9E5-0252C388CC67">
+      <meta name="DC.Relation" scheme="URI" content="managing-classic-reports.html#GUID-6C9E3F69-691B-4501-8020-097C92508561">
+      <meta name="DC.Relation" scheme="URI" content="managing-sorting-with-order-by-item.html#GUID-48FBEAC0-82C3-486E-A87C-5C7F98341F53">
+      <meta name="DC.Relation" scheme="URI" content="printing-report-regions.html#GUID-CB735DE1-2198-4BA8-A9E7-2521CBBA760B">
+      <meta name="DC.Relation" scheme="URI" content="understanding-blob-support-in-forms-and-reports.html#GUID-C428EEED-3FF9-4A20-9731-1C17C10991DB">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-A63ECD33-D759-4725-9666-A02719FB35B8">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="In Oracle APEX, a report is the formatted result of a SQL query. You can generate the SQL query by selecting a table or view in a wizard or by defining the SQL query manually.">
+      <meta name="description" content="In Oracle APEX, a report is the formatted result of a SQL query. You can generate the SQL query by selecting a table or view in a wizard or by defining the SQL query manually.">
+      <title>Developing Reports</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="In Oracle APEX, a report is the formatted result of a SQL query. You can generate the SQL query by selecting a table or view in a wizard or by defining the SQL query manually.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="deleting-pages-in-page-designer.html" title="Previous" type="text/html">
+      <link rel="next" href="understanding-report-page-types.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Developing Reports","description":"In Oracle APEX, a report is the formatted result of a SQL query. You can generate the SQL query by selecting a table or view in a wizard or by defining the SQL query manually.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="deleting-pages-in-page-designer.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="understanding-report-page-types.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-A63ECD33-D759-4725-9666-A02719FB35B8" name="GUID-A63ECD33-D759-4725-9666-A02719FB35B8"></a>
+         
+         <h2 id="HTMDB-GUID-A63ECD33-D759-4725-9666-A02719FB35B8" class="sect2"><span class="enumeration_chapter">8 </span>Developing Reports
+         </h2>
+         <div class="ind">
+            <div>
+               <p>In <span>Oracle APEX</span>, a report is the formatted result of a SQL query. You can generate the SQL query by selecting a table or view in a wizard or by defining the SQL query manually.
+               </p>
+               <div class="infobox-tip" id="GUID-A63ECD33-D759-4725-9666-A02719FB35B8__GUID-53868937-C352-47AE-935E-CC266F1A13F9">
+                  <p class="notep1">Tip:</p>
+                  
+                  <p>To view examples, install the sample app, <span class="italic">Sample Reporting</span>. To
+                learn more, see <a href="https://apex.oracle.com/samples211" target="_blank">Sample Apps</a>.
+                  </p>
+                  
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="understanding-report-page-types.html#GUID-41FC6A79-8FE6-4585-AB16-987F28DA07D2">Understanding Report Page Types</a><br>Learn about the available report page types when running the Create         Application Wizard and Create Page Wizard.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-report-create-app-wizard.html#GUID-80BCFBDC-CB4D-43EF-B534-AEE159BBD939">Creating a Report Using the Create Application Wizard</a><br>Run the Create Application Wizard to create a new application containing one                 or more pages. Supported report pages include cards, faceted search, interactive                 grid, interactive report, and classic report.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-report-create-page-wizard.html#GUID-98976897-71A7-4642-97CD-A28CD5D67267">Creating a Report Using the Create Page Wizard</a><br>Run the Create Page Wizard from an existing application to create a variety                 of different reports.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-a-report-by-dragging-and-dropping-from-gallery.html#GUID-B4195FAD-D65F-42AE-BE25-59175AA18BB2">Creating a Report by Dragging and Dropping from the Gallery</a><br>Create a report by dragging and dropping a report type from the Gallery.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-cards.html#GUID-4B524AC4-9507-45EB-B4EA-A4D33F469B2D">Managing Cards</a><br><span>A cards page features an                                         orderly layout of information tiles. Developers choose                                         between three layouts: Grid, Float, or Horizontal                                         (Row).</span></li>
+                  <li class="ulchildlink"><a href="managing-smart-filters.html#GUID-C8C68618-6D42-41F6-BC36-C9CC19C03AD6">Managing Smart Filters</a><br>         <span>A smart filters page                                         features a single search field at the top of the page and a                                         search results report (classic report, cards, map, or                                         calendar). While a smart filter behaves similarly to faceted                                         search, it features a more space efficient layout.</span></li>
+                  <li class="ulchildlink"><a href="managing-faceted-search.html#GUID-1A586583-3DAB-4F49-A5B4-A09AD93F015F">Managing Faceted Search</a><br><span>A faceted search page                                         displays and filters data using an intuitive experience                                         users recognize from ecommerce sites (a left Search region                                         and report region). The report region displays search                                         results as cards or a classic report.</span></li>
+                  <li class="ulchildlink"><a href="managing-interactive-grids.html#GUID-82BA760D-2142-4FED-99D7-0DE98B852079">Managing Interactive Grids</a><br><span>An interactive grid presents data                                         in a searchable, customizable report. Includes similar                                         customization capabilities available in interactive reports                                         plus the ability to rearrange the report interactively using                                         the mouse or keyboard.</span></li>
+                  <li class="ulchildlink"><a href="managing-interactive-reports.html#GUID-24C05873-1362-4CC5-A9E5-0252C388CC67">Managing Interactive Reports</a><br><span>An interactive report page features                                         a searchable, easily customizable report.</span></li>
+                  <li class="ulchildlink"><a href="managing-classic-reports.html#GUID-6C9E3F69-691B-4501-8020-097C92508561">Managing Classic Reports</a><br><span>A classic report features                                         a simple report page based on the formatted result of a SQL                                         query.</span></li>
+                  <li class="ulchildlink"><a href="managing-sorting-with-order-by-item.html#GUID-48FBEAC0-82C3-486E-A87C-5C7F98341F53">Managing Sorting with Order By Item</a><br>Create an inline static LOV by configuring region-level Order By Item                 attributes.
+                  </li>
+                  <li class="ulchildlink"><a href="printing-report-regions.html#GUID-CB735DE1-2198-4BA8-A9E7-2521CBBA760B">Printing Report Regions</a><br>Configure a report region to print by exporting it to several different formats.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-blob-support-in-forms-and-reports.html#GUID-C428EEED-3FF9-4A20-9731-1C17C10991DB">Understanding BLOB Support in Forms and Reports</a><br><span>Oracle APEX</span> includes declarative <code class="codeph">BLOB</code> support to enable developers to declaratively upload files in forms, and download or display files in reports. 
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-A63ECD33-D759-4725-9666-A02719FB35B8__GUID-8C97B549-8E1F-4DD0-82C7-9619A1C2C656">
+                  <p class="notep1">See Also:</p>
+                  <p><a href="developing-forms.html#GUID-FDB1159B-21B7-47BE-8640-2C92CCE2389E" title="Developers can create a variety of different application forms either manually or by using wizards. Some forms enable users to update a single row in a table, while other forms enable users to update multiple rows in a table.">Developing Forms</a> and <a href="managing-application-components.html#GUID-E7598ABE-5077-4A1F-A3F9-1C89EE2B2CE8" title="Oracle APEX supports the creation the following application components: calendars, maps, charts, and application Help.">Managing Application Components</a></p>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

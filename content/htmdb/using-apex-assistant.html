@@ -1,0 +1,301 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Using APEX Assistant">
+      <meta name="abstract" content="Use integrated AI Chat capability (called APEX Assistant) in Code Editors within App Builder.">
+      <meta name="description" content="Use integrated AI Chat capability (called APEX Assistant) in Code Editors within App Builder.">
+      <meta name="DC.subject" content="Generative AI service, creating">
+      <meta name="keywords" content="Generative AI service, creating">
+      <meta name="DC.Relation" scheme="URI" content="managing-generative-ai-in-apex.html#GUID-FDA021EF-D1A4-42AB-886F-617BE89B2557">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Task">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-F20CBA35-5451-48EE-9492-10D426C41C98">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Use integrated AI Chat capability (called APEX Assistant) in Code Editors within App Builder.">
+      <meta name="description" content="Use integrated AI Chat capability (called APEX Assistant) in Code Editors within App Builder.">
+      <title>Using APEX Assistant</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Use integrated AI Chat capability (called APEX Assistant) in Code Editors within App Builder.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-generative-ai-services.html" title="Previous" type="text/html">
+      <link rel="next" href="including-generative-ai-in-applications.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Using APEX Assistant","description":"Use integrated AI Chat capability (called APEX Assistant) in Code Editors within App Builder.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-generative-ai-services.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="including-generative-ai-in-applications.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-F20CBA35-5451-48EE-9492-10D426C41C98" name="GUID-F20CBA35-5451-48EE-9492-10D426C41C98"></a>
+         
+         <h2 id="HTMDB-GUID-F20CBA35-5451-48EE-9492-10D426C41C98" class="sect2"><span class="enumeration_section">18.8.3 </span>Using APEX Assistant
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Use integrated AI Chat capability (called <span>APEX</span> Assistant) in Code Editors within <span>App Builder</span>.
+               </p>
+               <div class="p">
+                  
+                  <div class="infoboxnote" id="GUID-F20CBA35-5451-48EE-9492-10D426C41C98__GUID-297DDE84-6227-4698-B766-95AA52CC4471">
+                     <p class="notep1">Note:</p>Before you can use <span>APEX</span> Assistant, you must create an Generative AI Service and enable the
+                    <span class="uicontrol bold">Used by</span>
+                     <span><span class="uicontrol bold">App
+                                        Builder</span></span> setting. See <a href="managing-generative-ai-services.html#GUID-56EEAE93-53A8-467A-B01F-BF1B76DBC5F4" title="Create Generative AI Services on the Generative AI Services page in Workspace Utilities.">Managing Generative AI Services</a>.
+                  </div>
+                  <div class="infobox-tip" id="GUID-F20CBA35-5451-48EE-9492-10D426C41C98__GUID-3BC3134D-9997-45EF-8B8F-70A6BEFCB248">
+                     <p class="notep1">Tip:</p><span>APEX</span> Assistant can also generate data models. For more information, see <a href="../aeutl/creating-data-model-ai.html#AEUTL-GUID-40F683A7-DA74-46D1-AA36-5B38310F11A4" target="_blank">Creating a Data Model Using AI</a> in <span><cite>Oracle APEX SQL Workshop
+                                        Guide</cite></span>.
+                  </div>
+                  
+               </div>
+               <div class="section">
+                  
+                  <p><span>APEX</span> Assistant adds AI chat capability to all <span>APEX</span> code editors to assist you with writing SQL queries, debugging code, and so on.
+                To enable an iterative chat experience, the Chat Widget memorizes the context of the
+                chat until the <span class="uicontrol bold">Clear Chat</span> button is pressed. For example,
+                given the SQL Query Builder use case below, a developer might ask 'add department
+                information of the employee to the query'. Given the context in the chat, the
+                Generative AI Service uses this information to enhance the existing query to include
+                the desired information asked by the developer.
+                  </p>
+                  
+                  <div class="infobox-caution" id="GUID-F20CBA35-5451-48EE-9492-10D426C41C98__GUID-137EC2F3-7896-42FB-8176-5848D89005AE">
+                     <p class="notep1">Caution:</p>AI-generated code
+                may contain errors or security risks. Oracle recommends you always review and
+                validate all code before use.
+                  </div>
+                  
+               </div>
+               <p> To use <span>APEX</span> Assistant:
+               </p>
+               <ol>
+                  <li class="stepexpand"><span>Create an Generative AI Service and enable the <span class="uicontrol bold">Used by</span>
+                        <span><span class="uicontrol bold">App
+                                        Builder</span></span> setting. See <a href="managing-generative-ai-services.html#GUID-56EEAE93-53A8-467A-B01F-BF1B76DBC5F4" title="Create Generative AI Services on the Generative AI Services page in Workspace Utilities.">Managing Generative AI Services</a>.</span></li>
+                  <li class="stepexpand"><span>Access a Code Editor. The examples that follow show the Code Editor in Page
+                    Designer.</span></li>
+                  <li class="stepexpand"><span>Click <span class="uicontrol bold">APEX Assistant</span> on the menu bar.</span><div>
+                        <br><div class="imageleft"><img class="imageleft" id="GUID-F20CBA35-5451-48EE-9492-10D426C41C98__IMAGE_OBC_NHL_KBC" height="622" width="998" src="img/apex_assistant_button.png" alt="Description of apex_assistant_button.png follows" title="Description of apex_assistant_button.png follows" longdesc="img_text/apex_assistant_button.html"><br><a href="img_text/apex_assistant_button.html">Description of the illustration apex_assistant_button.png</a></div><br>
+                        
+                        <p>The first time you access <span>APEX</span> Assistant a consent dialog appears. Review the dialog carefully and click
+                            <span class="uicontrol bold">Accept</span> to continue. <span>APEX</span> Assistant appears in the right pane.
+                        </p>
+                        <br><div class="imageleft"><img class="imageleft" id="GUID-F20CBA35-5451-48EE-9492-10D426C41C98__IMAGE_E2Q_LML_KBC" height="623" width="996" src="img/apex_assistant_menu.png" alt="Description of apex_assistant_menu.png follows" title="Description of apex_assistant_menu.png follows" longdesc="img_text/apex_assistant_menu.html"><br><a href="img_text/apex_assistant_menu.html">Description of the illustration apex_assistant_menu.png</a></div><br>
+                        
+                        <p>Note that the <span>APEX</span> Assistant menu contains two options:
+                        </p>
+                        
+                        <ul style="list-style-type: disc;" id="GUID-F20CBA35-5451-48EE-9492-10D426C41C98__UL_EVW_53K_KBC">
+                           <li>
+                              
+                              <p><span class="uicontrol bold">Query Builder</span> - Use Query Builder to get back
+                                a simple query.
+                              </p>
+                              
+                              <p>In Query Builder mode, the AI assumes all questions are
+                                in the context of the customer schema in the database. For example,
+                                if your request that the AI create SQL for tables that do not exist
+                                in the database, APEX Assistant's responses will not be very
+                                helpful.</p>
+                              
+                           </li>
+                           <li>
+                              
+                              <p><span class="uicontrol bold">General Assistance</span> - Use General Assistance
+                                for general conversation, technical questions such as "Explain this"
+                                or "Improve this code." In General Assistance mode, APEX Assistant
+                                prompts you with default options such as <span class="uicontrol bold">Use
+                                    Selection</span>, <span class="uicontrol bold">Improve Selection</span>,
+                                and <span class="uicontrol bold">Explain Selection</span>.
+                              </p>
+                              
+                           </li>
+                        </ul>
+                        
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span><span class="bold">Query Builder Example</span>: Show average salary by department. </span><ol type="a" id="GUID-F20CBA35-5451-48EE-9492-10D426C41C98__SUBSTEPS_WSQ_FMK_KBC">
+                        <li class="substepexpand"><span>From the menu, select <span class="uicontrol bold">Query Builder</span> (if not
+                            already selected).</span></li>
+                        <li class="substepexpand"><span>In the Code Editor, select the query and click <span class="uicontrol bold">Use
+                                Selection</span>.</span></li>
+                        <li class="substepexpand"><span>In <span class="uicontrol bold">Type your message here</span>, enter <code class="codeph">show
+                                average salary of employee by department name</code> and click
+                                <span class="uicontrol bold">Send Message</span>.</span></li>
+                        <li class="substepexpand"><span><span>APEX</span> Assistant responds with a query as shown in the following
+                            example.</span><div>
+                              <br><div class="imageleft"><img class="imageleft" id="GUID-F20CBA35-5451-48EE-9492-10D426C41C98__IMAGE_TWB_5VZ_MBC" height="621" width="997" src="img/query_builder_response.png" alt="Description of query_builder_response.png follows" title="Description of query_builder_response.png follows" longdesc="img_text/query_builder_response.html"><br><a href="img_text/query_builder_response.html">Description of the illustration query_builder_response.png</a></div><br>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>Click <span class="uicontrol bold">Copy</span> or <span class="uicontrol bold">Insert</span> to
+                            copy or insert the response into the Code Editor.</span></li>
+                        <li class="substepexpand"><span>To clear the chat window, click <span class="uicontrol bold">Clear
+                            Chat</span>.</span></li>
+                     </ol>
+                     <div>
+                        
+                        <div class="infobox-tip" id="GUID-F20CBA35-5451-48EE-9492-10D426C41C98__GUID-F8ACF904-C4EE-47D4-A45E-1471FA84821D">
+                           <p class="notep1">Tip:</p>If a query
+                        throws an error, <span>APEX</span> Assistant switches to General Assistance mode. Click <span class="uicontrol bold">Help me
+                            fix this</span>.
+                        </div>
+                        
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>General Assistance example: Explain a selected query:</span><ol type="a" id="GUID-F20CBA35-5451-48EE-9492-10D426C41C98__SUBSTEPS_P3X_RWK_KBC">
+                        <li class="substepexpand"><span>From the menu, select <span class="uicontrol bold">General Assistance</span>.</span><div>
+                              
+                              <p><span>APEX</span> Assistant displays three options:
+                              </p>
+                              
+                              <ul style="list-style-type: disc;" id="GUID-F20CBA35-5451-48EE-9492-10D426C41C98__UL_D53_5WK_KBC">
+                                 <li><span class="uicontrol bold">Use selection</span></li>
+                                 <li><span class="uicontrol bold">Improve selection</span></li>
+                                 <li><span class="uicontrol bold">Explain selection</span></li>
+                              </ul>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>In the Code Editor, select the query and click <span class="uicontrol bold">Explain
+                                selection</span>.</span><div>
+                              
+                              <p><span>APEX</span> Assistant responds and describes the query.
+                              </p>
+                              <br><div class="imageleft"><img class="imageleft" id="GUID-F20CBA35-5451-48EE-9492-10D426C41C98__IMAGE_WYM_TML_KBC" height="609" width="971" src="img/general_assistance_response.png" alt="Description of general_assistance_response.png follows" title="Description of general_assistance_response.png follows" longdesc="img_text/general_assistance_response.html"><br><a href="img_text/general_assistance_response.html">Description of the illustration general_assistance_response.png</a></div><br>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>To clear the chat window, click <span class="uicontrol bold">Clear
+                            Chat</span>.</span></li>
+                     </ol>
+                  </li>
+                  <li class="stepexpand"><span>General Assistance example: Help with SQL query errors:</span><div>
+                        
+                        <p>If your query throws an error, <span>APEX</span> Assistant can help troubleshoot the problem. 
+                        </p>
+                        
+                        <p>For example, suppose you have the following query and have
+                        inadvertently left off the "s" at the end the table name.</p>
+                        <pre class="pre codeblock"><code>select rowid,
+       ID,
+       PROJECT,
+       TASK_NAME,
+       START_DATE,
+       END_DATE,
+       STATUS,
+       ASSIGNED_TO,
+       COST,
+       BUDGET
+from EBA_DEMO_IR_PROJECT
+where (nvl(:P3_STATUS,'0') = '0' or :P3_STATUS = status)</code></pre>
+                        <p>Since the table name should be
+                            <code class="codeph">EBA_DEMO_IR_PROJECTS</code>, if you validate or try to run the
+                        query it throws the error:
+                        </p>
+                        
+                        <p><code class="codeph">ORA-20999: Failed to parse SQL query! ORA-06550: line 11,
+                            column 24: ORA-00942: table or view does not exist</code>.
+                        </p>
+                        
+                     </div>
+                     <ol type="a" id="GUID-F20CBA35-5451-48EE-9492-10D426C41C98__SUBSTEPS_ETQ_3HT_MBC">
+                        <li class="substepexpand"><span>In the error, click <span class="uicontrol bold">Help me fix this</span>.</span><div>
+                              
+                              <p><span>APEX</span> Assistant reviews the code and error and suggests the table name
+                                may not be spelled correctly. 
+                              </p>
+                              <br><div class="imageleft"><img class="imageleft" id="GUID-F20CBA35-5451-48EE-9492-10D426C41C98__IMAGE_ITT_M3B_4BC" height="644" width="996" src="img/sql_query_error.png" alt="Description of sql_query_error.png follows" title="Description of sql_query_error.png follows" longdesc="img_text/sql_query_error.html"><br><a href="img_text/sql_query_error.html">Description of the illustration sql_query_error.png</a></div><br>
+                              
+                           </div>
+                        </li>
+                        <li class="substepexpand"><span>To clear the chat window, click <span class="uicontrol bold">Clear
+                            Chat</span>.</span></li>
+                     </ol>
+                  </li>
+               </ol>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-generative-ai-in-apex.html#GUID-FDA021EF-D1A4-42AB-886F-617BE89B2557" title="Create Generative AI Services to include AI features in App Builder and enable support for developers to include Generative AI in their applications.">Managing Generative AI in APEX</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

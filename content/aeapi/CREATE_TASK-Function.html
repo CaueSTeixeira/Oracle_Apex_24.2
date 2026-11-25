@@ -1,0 +1,210 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="CREATE_TASK Function">
+      <meta name="DC.subject" content="CREATE_TASK function, APEX_APPROVAL">
+      <meta name="keywords" content="CREATE_TASK function, APEX_APPROVAL">
+      <meta name="DC.Relation" scheme="URI" content="APEX_APPROVAL.html#GUID-CC1036F7-0705-4750-9AEB-2E899E2AC7E4">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-12261F10-5D8D-42A6-ADD9-FD323DC44156">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>CREATE_TASK Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="COMPLETE_TASK-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="DELEGATE_TASK-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"CREATE_TASK Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="COMPLETE_TASK-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="DELEGATE_TASK-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-12261F10-5D8D-42A6-ADD9-FD323DC44156" name="GUID-12261F10-5D8D-42A6-ADD9-FD323DC44156"></a>
+         
+         <h2 id="AEAPI-GUID-12261F10-5D8D-42A6-ADD9-FD323DC44156" class="sect2"><span class="enumeration_section">9.9 </span>CREATE_TASK Function
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <div class="infobox-caution" id="GUID-12261F10-5D8D-42A6-ADD9-FD323DC44156__GUID-B0EFFD6F-9092-4C0E-BE84-B2995BC6809E">
+                     <p class="notep1">Caution:</p>
+                     <p>This API is deprecated and will be
+                                        removed in a future release.</p>
+                     <p>Use <a href="APEX_HUMAN_TASK.html#GUID-8F8F6295-F45E-4801-A8A4-D4C298A178B4">APEX_HUMAN_TASK</a> instead.
+                     </p>
+                  </div>
+                  <p>This function creates a new task. A new Task (Instance) is created. Depending on the task definition participant setting, the Task is set to state <code class="codeph">Unassigned</code> or <code class="codeph">Assigned</code>.
+                  </p>
+                  <p>If the task definition has a single potential owner, the Task is set to <code class="codeph">Assigned</code>.
+                  </p>
+                  <p>If the task has multiple potential owners, the Task is set to <code class="codeph">Unassigned</code> and can be claimed by any of the potential owners. This procedure throws an exception if no potential owners are found in the corresponding task definition.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-12261F10-5D8D-42A6-ADD9-FD323DC44156__GUID-4BACA0A5-CA13-4765-914C-C9A5F5275A82">Syntax</p>
+                  <pre class="pre codeblock"><code>APEX_APPROVAL.CREATE_TASK (
+    p_application_id         IN NUMBER                   DEFAULT apex_application.g_flow_id,
+    p_task_def_static_id     IN VARCHAR2,
+    p_subject                IN VARCHAR2                 DEFAULT NULL,
+    p_parameters             IN t_task_parameters        DEFAULT c_empty_task_parameters,
+    p_priority               IN INTEGER                  DEFAULT NULL,
+    p_initiator              IN VARCHAR2                 DEFAULT NULL,
+    p_initiator_can_complete IN BOOLEAN                  DEFAULT NULL,
+    p_detail_pk              IN VARCHAR2                 DEFAULT NULL,
+    p_due_date               IN TIMESTAMP WITH TIME ZONE DEFAULT NULL )
+RETURN NUMBER;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-12261F10-5D8D-42A6-ADD9-FD323DC44156__GUID-2118C338-643E-4828-B981-F63B51FF8CA0">Parameters</p>
+                  <div class="tblformal" id="GUID-12261F10-5D8D-42A6-ADD9-FD323DC44156__GUID-AFEF5317-38DA-4552-89F3-FCB6A18A7292">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="42%" id="d38522e94">Parameter</th>
+                              <th align="left" valign="bottom" width="58%" id="d38522e96">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d38522e100" headers="d38522e94 "><code class="codeph">p_application_id</code></td>
+                              <td align="left" valign="top" width="58%" headers="d38522e100 d38522e96 ">The application ID that creates the Task.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d38522e106" headers="d38522e94 "><code class="codeph">p_task_def_static_id</code></td>
+                              <td align="left" valign="top" width="58%" headers="d38522e106 d38522e96 ">The Task Definition static ID.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d38522e112" headers="d38522e94 "><code class="codeph">p_subject</code></td>
+                              <td align="left" valign="top" width="58%" headers="d38522e112 d38522e96 ">The subject (expression of the Task).</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d38522e118" headers="d38522e94 "><code class="codeph">p_parameters</code></td>
+                              <td align="left" valign="top" width="58%" headers="d38522e118 d38522e96 ">The task parameters.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d38522e124" headers="d38522e94 "><code class="codeph">p_priority</code></td>
+                              <td align="left" valign="top" width="58%" headers="d38522e124 d38522e96 ">(Optional) A task priority, default is NULL. If no priority is provided, uses the priority set in the corresponding task definition.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d38522e130" headers="d38522e94 "><code class="codeph">p_initiator</code></td>
+                              <td align="left" valign="top" width="58%" headers="d38522e130 d38522e96 ">(Optional) An initiator information for the task.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d38522e136" headers="d38522e94 "><code class="codeph">p_initiator_can_complete</code></td>
+                              <td align="left" valign="top" width="58%" headers="d38522e136 d38522e96 ">(Optional) Enables the initiator of a task to complete the task (default NULL). If this parameter is not specified, the value of the corresponding task definition is used.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d38522e142" headers="d38522e94 "><code class="codeph">p_detail_pk</code></td>
+                              <td align="left" valign="top" width="58%" headers="d38522e142 d38522e96 ">(Optional) A primary key value for the task details.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d38522e148" headers="d38522e94 "><code class="codeph">p_due_date</code></td>
+                              <td align="left" valign="top" width="58%" headers="d38522e148 d38522e96 ">(Optional) Page Item representing the Due Date of the Task. When specified, this value overrides the Due Date provided in the Task Definition this Task is based on.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-12261F10-5D8D-42A6-ADD9-FD323DC44156__GUID-36DD5F09-A5C5-452D-94EE-4B06EF4B3A7E">Returns</p>
+                  <p>Returns the ID of the newly created task.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-12261F10-5D8D-42A6-ADD9-FD323DC44156__GUID-BD217647-FAFB-4D84-A2E1-4DCBBD38D3C9">Example</p>
+                  
+                  <p>The following example creates a requisition item in the system of record in the database and then creates a new Human Task to get the requisition item approved by a user.</p><pre class="pre codeblock"><code>DECLARE
+   l_req_id     number;
+   l_req_item   varchar2(100) := 'Some requisition item requiring approval';
+   l_req_amount number := 2499.42;
+   l_task_id    number;
+BEGIN
+    insert into requisitions(created_by, creator_emailid, item, item_amount, item_category)
+    values (:emp_uid, :emp_email, l_req_item, l_req_amount, 'Equipment')
+    returning id into l_req_id;
+    commit;
+
+    l_task_id := apex_approval.create_task(
+        p_application_id =&gt; 110,
+        p_task_def_static_id =&gt; 'REQAPPROVALS',
+        p_subject =&gt; 'Requisition ' || l_req_id || ': ' || l_req_item || ' for ' || l_req_amount,
+        p_initiator =&gt; :emp_uid,
+        p_initiator_can_complete =&gt; true,
+        p_parameters =&gt; apex_approval.t_task_parameters(
+            1 =&gt; apex_approval.t_task_parameter(static_id =&gt; 'REQ_DATE', string_value =&gt; sysdate),
+            3 =&gt; apex_approval.t_task_parameter(static_id =&gt; 'REQ_AMOUNT', string_value =&gt; l_req_amount),
+            4 =&gt; apex_approval.t_task_parameter(static_id =&gt; 'REQ_ITEM', string_value =&gt; l_req_item),
+            5 =&gt; apex_approval.t_task_parameter(static_id =&gt; 'REQ_ID', string_value =&gt; l_req_id)
+        ),
+        p_detail_pk =&gt; l_req_id
+    );
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_APPROVAL.html#GUID-CC1036F7-0705-4750-9AEB-2E899E2AC7E4">APEX_APPROVAL (Deprecated)</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

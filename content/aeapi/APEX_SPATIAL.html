@@ -1,0 +1,120 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="APEX_SPATIAL">
+      <meta name="DC.subject" content="APEX_SPATIAL">
+      <meta name="keywords" content="APEX_SPATIAL">
+      <meta name="DC.Relation" scheme="URI" content="APEX_SPATIAL-Data-Types.html#GUID-D0B47BE3-FB5A-4DB7-8A1A-89374C177927">
+      <meta name="DC.Relation" scheme="URI" content="CHANGE_GEOM_METADATA-Procedure.html#GUID-16480559-CF68-4646-8F9B-6FECE291016F">
+      <meta name="DC.Relation" scheme="URI" content="CIRCLE_POLYGON-Function.html#GUID-0D07C628-1D34-4B13-94D6-819D4BCD2A09">
+      <meta name="DC.Relation" scheme="URI" content="DELETE_GEOM_METADATA-Procedure.html#GUID-645A08B4-FEAB-45D9-ADC1-9CBA3B340B89">
+      <meta name="DC.Relation" scheme="URI" content="INSERT_GEOM_METADATA-Procedure.html#GUID-D718B5C0-6E01-407A-945D-16C41087CCB6">
+      <meta name="DC.Relation" scheme="URI" content="INSERT_GEOM_METADATA_LONLAT-Procedure.html#GUID-13597DEE-7B13-4AEF-8F15-3F8AA11F0F31">
+      <meta name="DC.Relation" scheme="URI" content="POINT-Function.html#GUID-0B6AF301-D21A-4158-99F8-E473C52E13A5">
+      <meta name="DC.Relation" scheme="URI" content="RECTANGLE-Function.html#GUID-2C21073A-0585-4106-A82F-18B1E500FEE9">
+      <meta name="DC.Relation" scheme="URI" content="SPATIAL_IS_AVAILABLE-Function.html#GUID-8E6B82FC-1035-4775-840C-7A6BDAB5B328">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-B92B11BD-4A18-405F-AE84-0C85E6176BEA">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>APEX_SPATIAL</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_SHARED_COMPONENT.REFRESH-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_SPATIAL-Data-Types.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"APEX_SPATIAL","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_SHARED_COMPONENT.REFRESH-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_SPATIAL-Data-Types.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-B92B11BD-4A18-405F-AE84-0C85E6176BEA" name="GUID-B92B11BD-4A18-405F-AE84-0C85E6176BEA"></a><a id="AEAPI29874"></a>
+         
+         <h2 id="AEAPI-GUID-B92B11BD-4A18-405F-AE84-0C85E6176BEA" class="sect2"><span class="enumeration_chapter">54 </span>APEX_SPATIAL
+         </h2>
+         <div class="ind">
+            <div>
+               <p>This package enables you to use Oracle Locator and the Spatial Option within <span>Oracle APEX</span>.
+               </p>
+               <p>In an <span>APEX</span> context, the logon user of the database session is typically <code class="codeph">APEX_PUBLIC_USER</code> or <code class="codeph">ANONYMOUS</code>. Spatial developers can not directly use DML on <code class="codeph">USER_SDO_GEOM_METADATA</code> within such a session in SQL Commands within SQL Workshop, for example. The Spatial view's trigger performs DML as the logon user, but it must run as the application owner or workspace user.
+               </p>
+               <p>With the <code class="codeph">APEX_SPATIAL</code> API, developers can use the procedures and functions below to insert, update, and delete rows of <code class="codeph">USER_SDO_GEOM_METADATA</code> as the current <span>APEX</span> user. The package also provides a few utilities that simplify the use of Spatial in <span>APEX</span>.
+               </p>
+               <p>If the SDO_GEOMETRY data type is unavailable in the database, then SPATIAL_IS_AVAILABLE is the only function within this package, and it returns <code class="codeph">FALSE</code>. All other functions are only available if SDO_GEOMETRY is available in the database, and SPATIAL_IS_AVAILABLE returns <code class="codeph">TRUE</code>.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="APEX_SPATIAL-Data-Types.html#GUID-D0B47BE3-FB5A-4DB7-8A1A-89374C177927">Data Types</a><br></li>
+                  <li class="ulchildlink"><a href="CHANGE_GEOM_METADATA-Procedure.html#GUID-16480559-CF68-4646-8F9B-6FECE291016F">CHANGE_GEOM_METADATA Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="CIRCLE_POLYGON-Function.html#GUID-0D07C628-1D34-4B13-94D6-819D4BCD2A09">CIRCLE_POLYGON Function</a><br></li>
+                  <li class="ulchildlink"><a href="DELETE_GEOM_METADATA-Procedure.html#GUID-645A08B4-FEAB-45D9-ADC1-9CBA3B340B89">DELETE_GEOM_METADATA Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="INSERT_GEOM_METADATA-Procedure.html#GUID-D718B5C0-6E01-407A-945D-16C41087CCB6">INSERT_GEOM_METADATA Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="INSERT_GEOM_METADATA_LONLAT-Procedure.html#GUID-13597DEE-7B13-4AEF-8F15-3F8AA11F0F31">INSERT_GEOM_METADATA_LONLAT Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="POINT-Function.html#GUID-0B6AF301-D21A-4158-99F8-E473C52E13A5">POINT Function</a><br></li>
+                  <li class="ulchildlink"><a href="RECTANGLE-Function.html#GUID-2C21073A-0585-4106-A82F-18B1E500FEE9">RECTANGLE Function</a><br></li>
+                  <li class="ulchildlink"><a href="SPATIAL_IS_AVAILABLE-Function.html#GUID-8E6B82FC-1035-4775-840C-7A6BDAB5B328">SPATIAL_IS_AVAILABLE Function</a><br></li>
+               </ul>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

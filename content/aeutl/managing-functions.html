@@ -1,0 +1,339 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Functions">
+      <meta name="abstract" content="A function is a subprogram that can take parameters and return a single value. You can use Object Browser to create, view, edit, compile, download, and drop functions.">
+      <meta name="description" content="A function is a subprogram that can take parameters and return a single value. You can use Object Browser to create, view, edit, compile, download, and drop functions.">
+      <meta name="DC.subject" content="Object Browser, managing functions, function, creating, browsing, editing, compiling, downloading, dropping">
+      <meta name="keywords" content="Object Browser, managing functions, function, creating, browsing, editing, compiling, downloading, dropping">
+      <meta name="DC.Relation" scheme="URI" content="managing-db-objects-with-object-browser.html#GUID-04321951-FD96-4930-8F44-0D8441E8B731">
+      <meta name="DC.Relation" scheme="URI" content="managing-functions.html#GUID-8C12D356-18B4-44CB-8E7E-584FDB4920CB">
+      <meta name="DC.Relation" scheme="URI" content="managing-functions.html#GUID-EB4C8B0A-8372-4A30-BE8B-FBBABE355EF7">
+      <meta name="DC.Relation" scheme="URI" content="managing-functions.html#GUID-081D053F-40E7-464A-8399-BF89B28E8A02">
+      <meta name="DC.Relation" scheme="URI" content="managing-functions.html#GUID-4D01A7B3-E632-49FC-8288-638832C35213">
+      <meta name="DC.Relation" scheme="URI" content="managing-functions.html#GUID-E47FC25B-04A5-419D-8EC1-78470DA70F71">
+      <meta name="DC.Relation" scheme="URI" content="managing-functions.html#GUID-3D1646B6-6264-41B3-A1D8-DA8954A9F551">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Neil Fernandez">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Synders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="January2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-F08999A0-2780-4F2D-8A9F-766AA3A6D333">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="A function is a subprogram that can take parameters and return a single value. You can use Object Browser to create, view, edit, compile, download, and drop functions.">
+      <meta name="description" content="A function is a subprogram that can take parameters and return a single value. You can use Object Browser to create, view, edit, compile, download, and drop functions.">
+      <title>Managing Functions</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="SQL Workshop Guide">
+      <meta property="og:description" content="A function is a subprogram that can take parameters and return a single value. You can use Object Browser to create, view, edit, compile, download, and drop functions.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="SQL Workshop Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-sql-workshop-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-01-14T12:14:06-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2008, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12911-01">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-procedures.html" title="Previous" type="text/html">
+      <link rel="next" href="managing-triggers.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX SQL Workshop Guide">
+    <meta name="dcterms.isVersionOf" content="AEUTL">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","name":"Managing Functions","description":"A function is a subprogram that can take parameters and return a single value. You can use Object Browser to create, view, edit, compile, download, and drop functions.","datePublished":"2025-01-14 CST","dateModified":"2025-01-14 CST"} </script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-procedures.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="managing-triggers.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article>
+         <header>
+            <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Workshop Guide</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="managing-db-objects-with-object-browser.html" property="item" typeof="WebPage"><span property="name"> Managing Database Objects with Object Browser </span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">Managing Functions</li>
+            </ol>
+            <a id="GUID-F08999A0-2780-4F2D-8A9F-766AA3A6D333" name="GUID-F08999A0-2780-4F2D-8A9F-766AA3A6D333"></a>
+            
+            <h2 id="AEUTL-GUID-F08999A0-2780-4F2D-8A9F-766AA3A6D333" class="sect2"><span class="enumeration_section">3.10 </span>Managing Functions
+            </h2>
+         </header>
+         <div class="ind">
+            <div>
+               <p>A function is a subprogram that can take parameters and return a single value. You can use <span>Object Browser</span> to create, view, edit, compile, download, and drop functions.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="managing-functions.html#GUID-8C12D356-18B4-44CB-8E7E-584FDB4920CB">Creating a Function</a><br>Create a function using <span>Object Browser</span>.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-functions.html#GUID-EB4C8B0A-8372-4A30-BE8B-FBBABE355EF7">Viewing a Function</a><br>Select a function from the Object Tree and access tabs in the Object Detail         View.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-functions.html#GUID-081D053F-40E7-464A-8399-BF89B28E8A02">Editing a Function</a><br>Select a trigger from the Object Tree.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-functions.html#GUID-4D01A7B3-E632-49FC-8288-638832C35213">Compiling a Function</a><br>Select a function from the Object Tree and click Save and Compile.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-functions.html#GUID-E47FC25B-04A5-419D-8EC1-78470DA70F71">Downloading a Function</a><br>Select a function from the Object Tree and click Download to save the function.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-functions.html#GUID-3D1646B6-6264-41B3-A1D8-DA8954A9F551">Dropping a Function</a><br>Select a function from the Object Tree and click Drop.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-F08999A0-2780-4F2D-8A9F-766AA3A6D333__GUID-53505EC6-4DF1-4596-B535-9BD7100F19ED">
+                  <p class="notep1">See Also:</p>
+                  <div class="p">
+                     <ul style="list-style-type: disc;">
+                        <li><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeutl&id=SQLRF-GUID-049B7AE8-11E1-4110-B3E4-D117907D77AC" target="_blank"><span><cite>Oracle Database SQL
+                                        Language Reference</cite></span></a> for information about PL/SQL functions 
+                        </li>
+                        <li><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeutl&id=LNPLS-GUID-2FBCFBBE-6B42-4DB8-83F3-55B63B75B1EB" target="_blank"><span><cite>Oracle Database PL/SQL
+                                        Language Reference</cite></span></a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-db-objects-with-object-browser.html#GUID-04321951-FD96-4930-8F44-0D8441E8B731" title="Object Browser enables developers to browse, create, and edit objects in the Oracle Database.">Managing Database Objects with Object Browser</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-8C12D356-18B4-44CB-8E7E-584FDB4920CB" name="GUID-8C12D356-18B4-44CB-8E7E-584FDB4920CB"></a><h3 id="AEUTL-GUID-8C12D356-18B4-44CB-8E7E-584FDB4920CB" class="sect3"><span class="enumeration_section">3.10.1 </span>Creating a Function
+               </h3>
+               <div>
+                  <p>Create a function using <span>Object Browser</span>.
+                  </p>
+                  <div class="section">
+                     <p>To create a function:</p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, click the <span class="uicontrol bold">Create Database Objects</span> menu and select <span class="uicontrol bold">Function</span>.</span><div>
+                           <div class="infobox-tip" id="GUID-8C12D356-18B4-44CB-8E7E-584FDB4920CB__GUID-3FF5BA69-2804-4201-A305-A9D6340B396B">
+                              <p class="notep1">Tip:</p>To create new objects from the Object
+                                Tree, right-click the object and select the
+                                        <span class="uicontrol bold">Create</span> option.
+                           </div>
+                           <p>The Create Function Wizard appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>On Create Function:</span><ol type="a" id="GUID-8C12D356-18B4-44CB-8E7E-584FDB4920CB__SUBSTEPS_UBW_VLR_FXB">
+                           <li><span>Name - Enter the name of the function. This name must conform to Oracle naming conventions and cannot contain spaces or start with a number or underscore. </span></li>
+                           <li><span>Include Sample Code - Specify whether to include sample code.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Function</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-functions.html#GUID-F08999A0-2780-4F2D-8A9F-766AA3A6D333" title="A function is a subprogram that can take parameters and return a single value. You can use Object Browser to create, view, edit, compile, download, and drop functions.">Managing Functions</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-EB4C8B0A-8372-4A30-BE8B-FBBABE355EF7" name="GUID-EB4C8B0A-8372-4A30-BE8B-FBBABE355EF7"></a><h3 id="AEUTL-GUID-EB4C8B0A-8372-4A30-BE8B-FBBABE355EF7" class="sect3"><span class="enumeration_section">3.10.2 </span>Viewing a Function
+               </h3>
+               <div>
+                  <p>Select a function from the Object Tree and access tabs in the Object Detail
+        View.</p>
+                  <div class="section">
+                     <p>To view a function:</p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Functions</span> and select a function.</span></li>
+                     <li><span>The Object Detail View appears and displays four tabs:</span><ul id="GUID-EB4C8B0A-8372-4A30-BE8B-FBBABE355EF7__CHOICES_OSB_FR3_FXB">
+                           <li><span class="uicontrol bold">Code</span> - View the source code for the
+                        function, or edit it manually. Available actions include:
+                              <ul style="list-style-type: disc;" id="GUID-EB4C8B0A-8372-4A30-BE8B-FBBABE355EF7__UL_QG4_ZR3_FXB">
+                                 <li><span class="uicontrol bold">Download</span></li>
+                                 <li><span class="uicontrol bold">Save and Compile</span></li>
+                                 <li><span class="uicontrol bold">Drop</span></li>
+                                 <li><span class="uicontrol bold">Refresh</span></li>
+                              </ul>
+                           </li>
+                           <li><span class="uicontrol bold">Dependencies</span> - View objects that use
+                        (or depend) on the current function and objects that the function depends
+                        on. Select the <span class="uicontrol bold">Refresh</span> button to refresh the list of
+                        functions.
+                           </li>
+                           <li><span class="uicontrol bold">Errors</span> - View the errors related to
+                        the current function. Select the <span class="uicontrol bold">Refresh</span> button to
+                        refresh the list of functions.
+                           </li>
+                           <li><span class="uicontrol bold">Grants</span> - View the details of grants
+                        for the current function. Available buttons include:
+                              <ul style="list-style-type: disc;" id="GUID-EB4C8B0A-8372-4A30-BE8B-FBBABE355EF7__UL_MNF_KS3_FXB">
+                                 <li><span class="uicontrol bold">Grant</span></li>
+                                 <li><span class="uicontrol bold">Revoke</span></li>
+                                 <li><span class="uicontrol bold">Refresh</span></li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-functions.html#GUID-F08999A0-2780-4F2D-8A9F-766AA3A6D333" title="A function is a subprogram that can take parameters and return a single value. You can use Object Browser to create, view, edit, compile, download, and drop functions.">Managing Functions</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-081D053F-40E7-464A-8399-BF89B28E8A02" name="GUID-081D053F-40E7-464A-8399-BF89B28E8A02"></a><h3 id="AEUTL-GUID-081D053F-40E7-464A-8399-BF89B28E8A02" class="sect3"><span class="enumeration_section">3.10.3 </span>Editing a Function
+               </h3>
+               <div>
+                  <p>Select a trigger from the Object Tree.</p>
+                  <div class="section"></div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Functions</span> and select a trigger.</span><div>The Object Detail View appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>In the Code tab, edit the code. Other edit controls include:</span><ul id="GUID-081D053F-40E7-464A-8399-BF89B28E8A02__CHOICES_WNV_PW3_FXB">
+                           <li><span class="uicontrol bold">Undo</span></li>
+                           <li><span class="uicontrol bold">Redo</span></li>
+                           <li><span class="uicontrol bold">Find</span></li>
+                           <li><span class="uicontrol bold">Auto Complete</span></li>
+                        </ul>
+                        <div>
+                           <div class="infobox-tip" id="GUID-081D053F-40E7-464A-8399-BF89B28E8A02__GUID-334C5C69-926F-46F5-8F93-72921AF49892">
+                              <p class="notep1">Tip:</p>To learn more about the Code Editor, see <a href="understanding-object-browser.html#GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE" title="Learn about the Code Editor available Object Browser.">Code Editor in Object Browser</a>.
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Select <span class="uicontrol bold">Save and Compile</span> to save your changes.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-functions.html#GUID-F08999A0-2780-4F2D-8A9F-766AA3A6D333" title="A function is a subprogram that can take parameters and return a single value. You can use Object Browser to create, view, edit, compile, download, and drop functions.">Managing Functions</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-4D01A7B3-E632-49FC-8288-638832C35213" name="GUID-4D01A7B3-E632-49FC-8288-638832C35213"></a><h3 id="AEUTL-GUID-4D01A7B3-E632-49FC-8288-638832C35213" class="sect3"><span class="enumeration_section">3.10.4 </span>Compiling a Function
+               </h3>
+               <div>
+                  <p>Select a function from the Object Tree and click Save and Compile.</p>
+                  <div class="section">
+                     <p>If you edit and make changes to a function, you must compile to save your changes. Compiling re-creates the function in the database.</p>
+                     <p>To compile a function in Object Browser:</p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Functions</span> and select a function.</span><div>The Object Detail View appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>On the <span class="uicontrol bold">Code</span> tab, click <span class="uicontrol bold">Save and Compile</span>.</span><div>If the compilation fails, an error message displays. Correct the error and compile the function again.</div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-functions.html#GUID-F08999A0-2780-4F2D-8A9F-766AA3A6D333" title="A function is a subprogram that can take parameters and return a single value. You can use Object Browser to create, view, edit, compile, download, and drop functions.">Managing Functions</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-E47FC25B-04A5-419D-8EC1-78470DA70F71" name="GUID-E47FC25B-04A5-419D-8EC1-78470DA70F71"></a><h3 id="AEUTL-GUID-E47FC25B-04A5-419D-8EC1-78470DA70F71" class="sect3"><span class="enumeration_section">3.10.5 </span>Downloading a Function
+               </h3>
+               <div>
+                  <p>Select a function from the Object Tree and click Download to save the function.</p>
+                  <div class="section">
+                     <p>To download a function:</p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Functions</span> and select a function.</span><div>The Object Details View appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>On the <span class="uicontrol bold">Code</span> tab, click <span class="uicontrol bold">Download</span>.</span></li>
+                     <li class="stepexpand"><span>Enter a file name for the file and click <span class="uicontrol bold">Save</span>.</span><div>The file saves in <code class="codeph">.sql</code> format.
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-functions.html#GUID-F08999A0-2780-4F2D-8A9F-766AA3A6D333" title="A function is a subprogram that can take parameters and return a single value. You can use Object Browser to create, view, edit, compile, download, and drop functions.">Managing Functions</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-3D1646B6-6264-41B3-A1D8-DA8954A9F551" name="GUID-3D1646B6-6264-41B3-A1D8-DA8954A9F551"></a><h3 id="AEUTL-GUID-3D1646B6-6264-41B3-A1D8-DA8954A9F551" class="sect3"><span class="enumeration_section">3.10.6 </span>Dropping a Function
+               </h3>
+               <div>
+                  <p>Select a function from the Object Tree and click Drop.</p>
+                  <div class="section">
+                     <p>To drop a function in Object Browser:</p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Functions</span> and select a function.</span><div>The Object Details View appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>On the <span class="uicontrol bold">Code</span> tab, click <span class="uicontrol bold">Drop</span>.</span><ol type="a" id="GUID-3D1646B6-6264-41B3-A1D8-DA8954A9F551__SUBSTEPS_UKZ_2XL_GXB">
+                           <li><span>Drop - Review the details.</span></li>
+                           <li><span>SQL - Displays the SQL generated to drop the function. To copy the displayed SQL, click the <span class="uicontrol bold">Copy</span> icon.</span></li>
+                           <li><span>To confirm your selection, click <span class="uicontrol bold">Drop</span> again.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>To confirm, click <span class="uicontrol bold">Drop</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-functions.html#GUID-F08999A0-2780-4F2D-8A9F-766AA3A6D333" title="A function is a subprogram that can take parameters and return a single value. You can use Object Browser to create, view, edit, compile, download, and drop functions.">Managing Functions</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

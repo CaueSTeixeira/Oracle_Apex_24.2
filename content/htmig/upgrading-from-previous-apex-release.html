@@ -1,0 +1,456 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Upgrading from a Previous APEX Release">
+      <meta name="abstract" content="Upgrading Oracle APEX creates new database objects in a new schema and migrates the application metadata to the new release.">
+      <meta name="description" content="Upgrading Oracle APEX creates new database objects in a new schema and migrates the application metadata to the new release.">
+      <meta name="DC.subject" content="upgrading, about, release numbering, convention, sample scenarios, release number, viewing, Oracle APEX, Oracle REST Data Services, releases included with Oracle Database, Oracle Database, , existing applications, applications, upgrading, testing, environment clean-up, reverting, reverting to previous release">
+      <meta name="keywords" content="upgrading, about, release numbering, convention, sample scenarios, release number, viewing, Oracle APEX, Oracle REST Data Services, releases included with Oracle Database, Oracle Database, , existing applications, applications, upgrading, testing, environment clean-up, reverting, reverting to previous release">
+      <meta name="DC.Relation" scheme="URI" content="upgrading-from-previous-apex-release.html#GUID-54D7AD46-0359-40D0-AAD8-E1811F56E446">
+      <meta name="DC.Relation" scheme="URI" content="upgrading-from-previous-apex-release.html#GUID-8A677851-19A5-4AEA-81C1-85C256D2E5C5">
+      <meta name="DC.Relation" scheme="URI" content="upgrading-from-previous-apex-release.html#GUID-C1BE7081-ABEA-4629-9EA7-913F4353C5D7">
+      <meta name="DC.Relation" scheme="URI" content="upgrading-from-previous-apex-release.html#GUID-D15F0078-3E72-42D2-A63E-E25464AE1867">
+      <meta name="DC.Relation" scheme="URI" content="upgrading-from-previous-apex-release.html#GUID-766942ED-A16C-45AE-A0E1-256F8B92E9C5">
+      <meta name="DC.Relation" scheme="URI" content="upgrading-from-previous-apex-release.html#GUID-54619C72-6291-420D-9CB5-865124AC3F0E">
+      <meta name="DC.Relation" scheme="URI" content="upgrading-from-previous-apex-release.html#GUID-A81B6A14-4DA8-4CA4-8FFB-7039EABED150">
+      <meta name="DC.Relation" scheme="URI" content="upgrading-from-previous-apex-release.html#GUID-1C9FFC9D-D0BA-4A87-82D8-2832FCE40D3D">
+      <meta name="DC.Relation" scheme="URI" content="upgrading-from-previous-apex-release.html#GUID-6F35C5D1-F010-422E-A268-D17DA94823BD">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="David Bliss">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Salim Hlayel">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vlad Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-802A767F-2528-4B98-AC4F-B683DF4E572B">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Upgrading Oracle APEX creates new database objects in a new schema and migrates the application metadata to the new release.">
+      <meta name="description" content="Upgrading Oracle APEX creates new database objects in a new schema and migrates the application metadata to the new release.">
+      <title>Upgrading from a Previous APEX Release</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Installation Guide ">
+      <meta property="og:description" content="Upgrading Oracle APEX creates new database objects in a new schema and migrates the application metadata to the new release.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Installation Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-installation-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:41:45-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12910-03">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="about-apex-database-accounts.html" title="Previous" type="text/html">
+      <link rel="next" href="multitenant-architecture.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Installation Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="HTMIG">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Upgrading from a Previous APEX Release","description":"Upgrading Oracle APEX creates new database objects in a new schema and migrates the application metadata to the new release.","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="about-apex-database-accounts.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="multitenant-architecture.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-802A767F-2528-4B98-AC4F-B683DF4E572B" name="GUID-802A767F-2528-4B98-AC4F-B683DF4E572B"></a>
+         
+         <h2 id="HTMIG-GUID-802A767F-2528-4B98-AC4F-B683DF4E572B" class="sect2"><span class="enumeration_chapter">4 </span>Upgrading from a Previous <span>APEX</span> Release
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Upgrading <span>Oracle APEX</span> creates new database objects in a new schema and migrates the application metadata to the
+        new release.
+               </p>
+               <p>If you have <span>APEX</span> release <span>24.1</span> or earlier, following any of the installation scenarios in this guide upgrades your <span>APEX</span> instance to the current release, creates <span>APEX</span> <span>24.2</span> database objects in a new schema, and migrates the application metadata to the new release.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="upgrading-from-previous-apex-release.html#GUID-54D7AD46-0359-40D0-AAD8-E1811F56E446">About Release Numbering Conventions</a><br>New releases of <span>Oracle APEX</span> correlate to the calendar year.
+                  </li>
+                  <li class="ulchildlink"><a href="upgrading-from-previous-apex-release.html#GUID-8A677851-19A5-4AEA-81C1-85C256D2E5C5">Sample Upgrade Scenarios</a><br>Review common upgrade scenarios including upgrading from a prior release and                 upgrading when an Oracle Database release includes <span>Oracle APEX</span>.
+                  </li>
+                  <li class="ulchildlink"><a href="upgrading-from-previous-apex-release.html#GUID-C1BE7081-ABEA-4629-9EA7-913F4353C5D7">Viewing the APEX Release Number</a><br>View your <span>Oracle APEX</span> release number on the Workspace home page or on the About <span>APEX</span> page.
+                  </li>
+                  <li class="ulchildlink"><a href="upgrading-from-previous-apex-release.html#GUID-D15F0078-3E72-42D2-A63E-E25464AE1867">Viewing the Oracle REST Data Services Release Number</a><br>View the Oracle REST Data Services release number on the About <span>Oracle APEX</span> page.
+                  </li>
+                  <li class="ulchildlink"><a href="upgrading-from-previous-apex-release.html#GUID-766942ED-A16C-45AE-A0E1-256F8B92E9C5">About Installing an APEX Release Included with the Oracle Database</a><br>Learn about which <span>Oracle                                         Database</span> releases include <span>Oracle APEX</span> and the importance of updating to the lastest <span>APEX</span> release.
+                  </li>
+                  <li class="ulchildlink"><a href="upgrading-from-previous-apex-release.html#GUID-54619C72-6291-420D-9CB5-865124AC3F0E">About Upgrading Existing Applications</a><br>Installing a new release of <span>Oracle APEX</span>, updates existing applications to the latest release, but does not alter                 application user interface or application components.
+                  </li>
+                  <li class="ulchildlink"><a href="upgrading-from-previous-apex-release.html#GUID-A81B6A14-4DA8-4CA4-8FFB-7039EABED150">About Testing Requirements</a><br>Determining the appropriate amount of regression testing when upgrading <span>Oracle APEX</span> depends upon the complexity, size, and number of applications you are         upgrading.
+                  </li>
+                  <li class="ulchildlink"><a href="upgrading-from-previous-apex-release.html#GUID-1C9FFC9D-D0BA-4A87-82D8-2832FCE40D3D">About Cleaning Up Your Environment</a><br>Following the successful upgrade of all of the environments to the latest release of <span>Oracle APEX</span>, you should clean up the environments.
+                  </li>
+                  <li class="ulchildlink"><a href="upgrading-from-previous-apex-release.html#GUID-6F35C5D1-F010-422E-A268-D17DA94823BD">About Reverting to a Previous Release</a><br>You can revert to a previous release of <span>Oracle APEX</span>.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-802A767F-2528-4B98-AC4F-B683DF4E572B__GUID-339C9E65-C098-45D1-831F-6B92AFB4A5A1">
+                  <p class="notep1">See Also:</p>
+                  <ul style="list-style-type: disc;" id="GUID-802A767F-2528-4B98-AC4F-B683DF4E572B__UL_PKK_5ZL_Z5B">
+                     <li><a href="understanding-installation-process.html#GUID-EA165C61-C987-47F6-91D9-C44353207E1B" title="Installing Oracle APEX is a multiple step process. You follow the same instructions for new or upgrade installations.">Understanding the Installation Process</a></li>
+                     <li><a href="maximizing-uptime-during-apex-upgrade.html#GUID-DE1EEE34-E79A-4937-8B5E-B405BE23F1B5" title="Learn how to maximize uptime during an Oracle APEX upgrade.">Maximizing Uptime During an APEX Upgrade</a></li>
+                  </ul>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-54D7AD46-0359-40D0-AAD8-E1811F56E446" name="GUID-54D7AD46-0359-40D0-AAD8-E1811F56E446"></a><h3 id="HTMIG-GUID-54D7AD46-0359-40D0-AAD8-E1811F56E446" class="sect3"><span class="enumeration_section">4.1 </span>About Release Numbering
+        Conventions
+               </h3>
+               <div>
+                  <p>New releases of <span>Oracle APEX</span> correlate to the calendar year.
+                  </p>
+                  <div class="section">
+                     <p> In 2018 and starting with release 18.1 and 18.2, <span>APEX</span> introduced correlating the release number to the calendar year.
+                     </p>
+                     <p>In addition, <span>APEX</span> now only offers full releases and no longer provides patch set releases (such as 5.1.1). Eliminating patch set releases reduces downtime when updating existing installations. <span>APEX</span> architecture also enables developers to revert releases if necessary.
+                     </p>
+                     <p>Patch set exceptions (PSEs) may still be delivered for major defects. To learn more about PSEs, visit the <a href="https://www.oracle.com/tools/downloads/apex-downloads/apex-242-known-issues/" target="_blank"><span>Oracle APEX</span> <span>24.2</span> Known Issues</a> page or the <a href="https://www.oracle.com/tools/downloads/apex-all-archives-downloads.html" target="_blank">Prior Release Archives</a> for earlier releases.
+                     </p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="upgrading-from-previous-apex-release.html#GUID-802A767F-2528-4B98-AC4F-B683DF4E572B" title="Upgrading Oracle APEX creates new database objects in a new schema and migrates the application metadata to the new release.">Upgrading from a Previous APEX Release</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMIG29314"></a><a id="HTMIG29313"></a><div class="props_rev_3"><a id="GUID-8A677851-19A5-4AEA-81C1-85C256D2E5C5" name="GUID-8A677851-19A5-4AEA-81C1-85C256D2E5C5"></a><h3 id="HTMIG-GUID-8A677851-19A5-4AEA-81C1-85C256D2E5C5" class="sect3"><span class="enumeration_section">4.2 </span>Sample Upgrade Scenarios
+               </h3>
+               <div>
+                  <p>Review common upgrade scenarios including upgrading from a prior release and
+                upgrading when an Oracle Database release includes <span>Oracle APEX</span>.
+                  </p>
+                  <div class="section">
+                     <p> <a href="upgrading-from-previous-apex-release.html#GUID-8A677851-19A5-4AEA-81C1-85C256D2E5C5__CEGJIBAB" title="This table shows common upgrade scenarios.">Table 4-1</a> lists common upgrade scenarios.
+                     </p>
+                     
+                     <div class="tblformal" id="GUID-8A677851-19A5-4AEA-81C1-85C256D2E5C5__CEGJIBAB">
+                        <p class="titleintable">Table 4-1 Sample Upgrade
+                                        Scenarios</p>
+                        <table cellpadding="4" cellspacing="0" class="Formal" title="Sample Upgrade&#xA;                                        Scenarios" summary="This table shows common upgrade scenarios." width="100%" frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="56%" id="d4565e362">
+                                                  Upgrade Scenarios
+                                                  </th>
+                                 <th align="left" valign="bottom" width="44%" id="d4565e367">
+                                                  Action
+                                                  </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="56%" id="d4565e374" headers="d4565e362 ">
+                                    
+                                    <p>Upgrade from a prior <span>Oracle APEX</span> release.
+                                    </p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="44%" headers="d4565e374 d4565e367 ">
+                                    
+                                    <p>Download the most recent ZIP file
+                                                  from the <a href="https://www.oracle.com/tools/downloads/apex-downloads.html" target="_blank">Oracle
+                                                  APEX download page</a> and run a script to
+                                                  upgrade to the latest release.
+                                    </p>
+                                    
+                                    <p>For details, see <a href="downloading-installing-apex.html#GUID-7E432C6D-CECC-4977-B183-3C654380F7BF" title="Install Oracle APEX by downloading a ZIP file from the APEX download page.">Installing APEX</a>.
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="56%" id="d4565e407" headers="d4565e362 ">
+                                    
+                                    <p>You install an Oracle Database
+                                                  which includes <span>Oracle APEX</span>.
+                                    </p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="44%" headers="d4565e407 d4565e367 ">
+                                    
+                                    <p>Download the most recent ZIP file
+                                                  from the <a href="https://www.oracle.com/tools/downloads/apex-downloads.html" target="_blank">Oracle
+                                                  APEX download page</a> and run a script to
+                                                  upgrade to the latest release.
+                                    </p>
+                                    
+                                    <p>For details, see <a href="downloading-installing-apex.html#GUID-7E432C6D-CECC-4977-B183-3C654380F7BF" title="Install Oracle APEX by downloading a ZIP file from the APEX download page.">Installing APEX</a>.
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class="infobox-caution" id="GUID-8A677851-19A5-4AEA-81C1-85C256D2E5C5__GUID-1FDD6465-6EDC-49C7-9A5C-BEC3BCF935D9">
+                        <p class="notep1">Caution:</p>When upgrading from <span>APEX</span> 18.1 to <span>APEX</span> 24.2, upgrade to <span>APEX</span> 24.1 first, and then to <span>APEX</span> 24.2. For more information, review <a href="https://www.oracle.com/tools/downloads/apex-downloads/apex-242-known-issues/" target="_blank">Oracle APEX 24.2 Known Issues</a>.
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="relinfo">
+                     <p><strong>Related Topics</strong></p>
+                     <ul>
+                        <li><a href="downloading-installing-apex.html#GUID-B5A5B38D-586C-488A-AE27-A168FAA28FEE" title="Learn about downloading and installing Oracle APEX.">Downloading and Installing APEX</a></li>
+                        <li><a href="../htmrn/about-release-notes.html#HTMRN-GUID-540B73CB-08A7-4422-B6BF-CC785EC47694" target="_blank"><span class="italic">Oracle APEX Release Notes</span></a></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="upgrading-from-previous-apex-release.html#GUID-802A767F-2528-4B98-AC4F-B683DF4E572B" title="Upgrading Oracle APEX creates new database objects in a new schema and migrates the application metadata to the new release.">Upgrading from a Previous APEX Release</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="props_rev_3"><a id="GUID-C1BE7081-ABEA-4629-9EA7-913F4353C5D7" name="GUID-C1BE7081-ABEA-4629-9EA7-913F4353C5D7"></a><h3 id="HTMIG-GUID-C1BE7081-ABEA-4629-9EA7-913F4353C5D7" class="sect3"><span class="enumeration_section">4.3 </span>Viewing the <span>APEX</span> Release Number
+               </h3>
+               <div>
+                  <p>View your <span>Oracle APEX</span> release number on the Workspace home page or on the About <span>APEX</span> page.
+                  </p>
+                  <div class="section">
+                     <div class="p">You can view the <span>APEX</span> release number on the Workspace home page or on the About <span>APEX</span> page:
+                        <ul style="list-style-type: disc;" id="GUID-C1BE7081-ABEA-4629-9EA7-913F4353C5D7__UL_MMH_PQ2_VHB">
+                           <li>Workspace home page:
+                              <ul style="list-style-type: disc;" id="GUID-C1BE7081-ABEA-4629-9EA7-913F4353C5D7__UL_HX5_PQ2_VHB">
+                                 <li>
+                                    <p>Sign in to <span>APEX</span>.
+                                    </p>
+                                    <p>On the Workspace home page, the current release number displays in the bottom right corner.</p>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li>About <span>APEX</span> page:
+                              <ul style="list-style-type: disc;" id="GUID-C1BE7081-ABEA-4629-9EA7-913F4353C5D7__UL_ISD_ZQ2_VHB">
+                                 <li>
+                                    <p>Sign in to <span>APEX</span>.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>Click the <span class="uicontrol bold">Help</span> menu in the upper right and select <span class="uicontrol bold">About</span>.
+                                    </p>
+                                    <p>On the About <span>APEX</span> page, the release number appears next to <span class="uicontrol bold">Product Build</span>.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="upgrading-from-previous-apex-release.html#GUID-802A767F-2528-4B98-AC4F-B683DF4E572B" title="Upgrading Oracle APEX creates new database objects in a new schema and migrates the application metadata to the new release.">Upgrading from a Previous APEX Release</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-D15F0078-3E72-42D2-A63E-E25464AE1867" name="GUID-D15F0078-3E72-42D2-A63E-E25464AE1867"></a><h3 id="HTMIG-GUID-D15F0078-3E72-42D2-A63E-E25464AE1867" class="sect3"><span class="enumeration_section">4.4 </span>Viewing the Oracle REST Data Services Release
+        Number
+               </h3>
+               <div>
+                  <p>View the Oracle REST Data Services release number on the About <span>Oracle APEX</span> page.
+                  </p>
+                  <div class="section"><span>Oracle APEX</span> requires access to the web server, <span>Oracle REST Data
+                                        Services</span> (ORDS) 23.3 or later.
+                  </div>
+                  <p>To view the <span>Oracle REST Data
+                                        Services</span> release number:
+                  </p>
+                  <ol id="GUID-D15F0078-3E72-42D2-A63E-E25464AE1867__STEPS_OQF_2RT_MMB">
+                     <li><span>Sign in to <span>Oracle APEX</span>.</span></li>
+                     <li><span>Click the <span class="uicontrol bold">Help</span> menu in the upper right and select
+                        <span class="uicontrol bold">About</span>.</span></li>
+                     <li><span>Under the <span class="uicontrol bold">CGI Environment</span> section, find
+                        <code class="codeph">APEX_LISTENER_VERSION</code>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="upgrading-from-previous-apex-release.html#GUID-802A767F-2528-4B98-AC4F-B683DF4E572B" title="Upgrading Oracle APEX creates new database objects in a new schema and migrates the application metadata to the new release.">Upgrading from a Previous APEX Release</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-766942ED-A16C-45AE-A0E1-256F8B92E9C5" name="GUID-766942ED-A16C-45AE-A0E1-256F8B92E9C5"></a><h3 id="HTMIG-GUID-766942ED-A16C-45AE-A0E1-256F8B92E9C5" class="sect3"><span class="enumeration_section">4.5 </span>About Installing an <span>APEX</span> Release Included with the Oracle Database
+               </h3>
+               <div>
+                  <p>Learn about which <span>Oracle
+                                        Database</span> releases include <span>Oracle APEX</span> and the importance of updating to the lastest <span>APEX</span> release.
+                  </p>
+                  <p><span>APEX</span> is included with the following <span>Oracle
+                                        Database</span> releases:
+                  </p>
+                  <ul style="list-style-type: disc;">
+                     <li>Oracle Database 19<span class="italic">c</span> - Oracle Application Express release 18.1.
+                     </li>
+                     <li>Oracle Database 18<span class="italic">c</span> - Oracle Application Express release 5.1.
+                     </li>
+                     <li>Oracle Database 12<span class="italic">c</span> Release 2 (12.2)- Oracle Application Express release 5.0.
+                     </li>
+                     <li>Oracle Database 12<span class="italic">c</span> Release 1 (12.1) - Oracle Application Express release 4.2.
+                     </li>
+                     <li>Oracle Database 11<span class="italic">g</span> Release 2 (11.2) - Oracle Application Express release 3.2.
+                     </li>
+                     <li>Oracle Database 11<span class="italic">g</span> Release 1 (11.1) - Oracle Application Express release 3.0.
+                     </li>
+                  </ul>
+                  <p>Since <span>Oracle
+                                        Database</span> releases less frequently than <span>APEX</span>, <span>Oracle</span> recommends updating to the latest <span>APEX</span> release available. To learn more, see <a href="downloading-installing-apex.html#GUID-B5A5B38D-586C-488A-AE27-A168FAA28FEE" title="Learn about downloading and installing Oracle APEX.">Downloading and Installing APEX</a>.
+                  </p>
+                  <div class="infoboxnote" id="GUID-766942ED-A16C-45AE-A0E1-256F8B92E9C5__GUID-6F763B51-5D87-4252-B9FB-22B56BE5F05D">
+                     <p class="notep1">Note:</p>If upgrading <span>APEX</span> from a release that ships with the database, do not alter any <span>APEX</span> files in the <span>Oracle</span> home directory (for example, <code class="codeph">/u01/app/oracle/product/18.0.0/dbhome_1/apex</code>) .
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="upgrading-from-previous-apex-release.html#GUID-802A767F-2528-4B98-AC4F-B683DF4E572B" title="Upgrading Oracle APEX creates new database objects in a new schema and migrates the application metadata to the new release.">Upgrading from a Previous APEX Release</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-54619C72-6291-420D-9CB5-865124AC3F0E" name="GUID-54619C72-6291-420D-9CB5-865124AC3F0E"></a><h3 id="HTMIG-GUID-54619C72-6291-420D-9CB5-865124AC3F0E" class="sect3"><span class="enumeration_section">4.6 </span>About Upgrading Existing Applications
+               </h3>
+               <div>
+                  <p>Installing a new release of <span>Oracle APEX</span>, updates existing applications to the latest release, but does not alter
+                application user interface or application components.
+                  </p>
+                  <p>Once you upgrade an <span>Oracle APEX</span> instance from a previous release, existing applications will work without
+                        modification. However, to keep applications maintainable, up-to-date, and to
+                        leverage new functionality, developers should perform the steps outlined in
+                                <a href="../htmdb/upgrading-apex-applications.html#HTMDB-GUID-AC003A2E-7851-4E97-B5DE-BB354A919971" target="_blank">Upgrading APEX Applications</a> in
+                                <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span>.
+                  </p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="upgrading-from-previous-apex-release.html#GUID-802A767F-2528-4B98-AC4F-B683DF4E572B" title="Upgrading Oracle APEX creates new database objects in a new schema and migrates the application metadata to the new release.">Upgrading from a Previous APEX Release</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-A81B6A14-4DA8-4CA4-8FFB-7039EABED150" name="GUID-A81B6A14-4DA8-4CA4-8FFB-7039EABED150"></a><h3 id="HTMIG-GUID-A81B6A14-4DA8-4CA4-8FFB-7039EABED150" class="sect3"><span class="enumeration_section">4.7 </span>About Testing Requirements
+               </h3>
+               <div>
+                  <p>Determining the appropriate amount of regression testing when upgrading <span>Oracle APEX</span> depends upon the complexity, size, and number of applications you are
+        upgrading.
+                  </p>
+                  <p>You should include the majority of complex pages, particularly those that incorporate significant JavaScript or extensive PL/SQL computations or processes. Developers should ensure pages which they manually update based on the Upgrade Application or Advisor are also included in regression tests. Not all remaining pages have to be included in regression testing. Oracle recommends you include a good representation of different page types includes reports, charts, and forms. An application should always be included in regression testing if its compatibility mode was modified post-upgrade.</p>
+                  <p>While regression testing of upgraded applications is imperative to minimize risk of disrupting the end users, it is important that testing is not drawn out for an extended period. As a general rule:</p>
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        <p>Step 1: Upgrade your development environment first. Allow developers to review the applications and make initial updates as needed.</p>
+                     </li>
+                     <li>
+                        <p>Step 2: Upgrade your QA/Test environment.</p>
+                     </li>
+                     <li>
+                        <p>Step 3: Upgrade applications from development are built into this environment.</p>
+                     </li>
+                     <li>
+                        <p>Step 4: Upgrade your production environment.</p>
+                     </li>
+                     <li>
+                        <p>Step 5: Build upgraded applications into this environment.</p>
+                     </li>
+                  </ul>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="upgrading-from-previous-apex-release.html#GUID-802A767F-2528-4B98-AC4F-B683DF4E572B" title="Upgrading Oracle APEX creates new database objects in a new schema and migrates the application metadata to the new release.">Upgrading from a Previous APEX Release</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-1C9FFC9D-D0BA-4A87-82D8-2832FCE40D3D" name="GUID-1C9FFC9D-D0BA-4A87-82D8-2832FCE40D3D"></a><h3 id="HTMIG-GUID-1C9FFC9D-D0BA-4A87-82D8-2832FCE40D3D" class="sect3"><span class="enumeration_section">4.8 </span>About Cleaning Up Your Environment
+               </h3>
+               <div>
+                  <p>Following the successful upgrade of all of the environments to the latest release of <span>Oracle APEX</span>, you should clean up the environments.
+                  </p>
+                  <p>Once you start developing with the newer release, the <span>Oracle APEX</span> schema associated with the prior release can be deleted. If you installed the prior release into a separate tablespace, you can simply drop the specific tablespace. <span>Oracle</span> recommends leaving the older <span>Oracle APEX</span> schema(s) for a few weeks and then remove them from the development, test, and production environments. This cleanup process releases disk space and ensures that no one accesses an outdated schema using tools such as SQL Developer or <span>SQLcl</span>.
+                  </p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="upgrading-from-previous-apex-release.html#GUID-802A767F-2528-4B98-AC4F-B683DF4E572B" title="Upgrading Oracle APEX creates new database objects in a new schema and migrates the application metadata to the new release.">Upgrading from a Previous APEX Release</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-6F35C5D1-F010-422E-A268-D17DA94823BD" name="GUID-6F35C5D1-F010-422E-A268-D17DA94823BD"></a><h3 id="HTMIG-GUID-6F35C5D1-F010-422E-A268-D17DA94823BD" class="sect3"><span class="enumeration_section">4.9 </span>About Reverting to a Previous Release
+               </h3>
+               <div>
+                  <p>You can revert to a previous release of <span>Oracle APEX</span>.
+                  </p>
+                  <p>Because <span>Oracle APEX</span> creates a new schema for each major release, reverting back to a prior release is a
+            relatively simple process. If you revert to a prior release, any modifications made in
+            the current <span>Oracle APEX</span> instance are lost. The main task is to switch the public synonyms and grants to point
+            at the previous schema instead of the new schema. 
+                  </p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-6F35C5D1-F010-422E-A268-D17DA94823BD__GUID-FEAB03E4-8745-4839-A6CA-A8D71B6AC79D">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="reverting-to-previous-release-after-failed-upgrade-installation.html#GUID-24B09CC5-32FB-494F-AF84-E4482219E4E2" title="Learn about reverting to Oracle APEX to a previous release in the case of a failed upgrade installation.">Reverting to a Previous Release After a Failed Upgrade Installation</a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="upgrading-from-previous-apex-release.html#GUID-802A767F-2528-4B98-AC4F-B683DF4E572B" title="Upgrading Oracle APEX creates new database objects in a new schema and migrates the application metadata to the new release.">Upgrading from a Previous APEX Release</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

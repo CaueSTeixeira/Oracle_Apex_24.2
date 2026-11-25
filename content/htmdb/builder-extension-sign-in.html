@@ -1,0 +1,207 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Builder Extension Sign-in">
+      <meta name="abstract" content="The Extension Builder Sign-in enables users to log into an Extension App without having to sign-in again when already signed into a APEX session. The Extension Sign-in Authentication checks for a valid APEX session.">
+      <meta name="description" content="The Extension Builder Sign-in enables users to log into an Extension App without having to sign-in again when already signed into a APEX session. The Extension Sign-in Authentication checks for a valid APEX session.">
+      <meta name="DC.subject" content="authentication schemes, Builder Extension Sign-in, Builder Extension Sign-in, about, Builder Extension authentication, setting up">
+      <meta name="keywords" content="authentication schemes, Builder Extension Sign-in, Builder Extension Sign-in, about, Builder Extension authentication, setting up">
+      <meta name="DC.Relation" scheme="URI" content="preconfigured-authentication-schemes.html#GUID-CD382D4A-AC00-4185-B37F-9A5BC9417A7B">
+      <meta name="DC.Relation" scheme="URI" content="builder-extension-sign-in.html#GUID-A2F94E08-7D18-45D4-9983-0F9966F346C6">
+      <meta name="DC.Relation" scheme="URI" content="builder-extension-sign-in.html#GUID-2F473DAC-7810-4666-88F2-FEE5CFCDA80D">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Topic">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-09050521-2C93-45B9-B144-EE3404CDABA6">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="The Extension Builder Sign-in enables users to log into an Extension App without having to sign-in again when already signed into a APEX session. The Extension Sign-in Authentication checks for a valid APEX session.">
+      <meta name="description" content="The Extension Builder Sign-in enables users to log into an Extension App without having to sign-in again when already signed into a APEX session. The Extension Sign-in Authentication checks for a valid APEX session.">
+      <title>Builder Extension Sign-in</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="The Extension Builder Sign-in enables users to log into an Extension App without having to sign-in again when already signed into a APEX session. The Extension Sign-in Authentication checks for a valid APEX session.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="preconfigured-authentication-schemes.html" title="Previous" type="text/html">
+      <link rel="next" href="custom-authentication.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Builder Extension Sign-in","description":"The Extension Builder Sign-in enables users to log into an Extension App without having to sign-in again when already signed into a APEX session. The Extension Sign-in Authentication checks for a valid APEX session.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="preconfigured-authentication-schemes.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="custom-authentication.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-09050521-2C93-45B9-B144-EE3404CDABA6" name="GUID-09050521-2C93-45B9-B144-EE3404CDABA6"></a>
+         
+         <h2 id="HTMDB-GUID-09050521-2C93-45B9-B144-EE3404CDABA6" class="sect2"><span class="enumeration_section">21.4.2.1 </span>Builder Extension Sign-in
+         </h2>
+         <div class="ind">
+            <p>The Extension Builder Sign-in enables users to log into an Extension App
+        without having to sign-in again when already signed into a <span>APEX</span> session. The Extension Sign-in Authentication checks for a valid <span>APEX</span> session.
+            </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="builder-extension-sign-in.html#GUID-A2F94E08-7D18-45D4-9983-0F9966F346C6">About Builder Extension Sign-in</a><br>Learn about Builder Extension Sign-in.
+                  </li>
+                  <li class="ulchildlink"><a href="builder-extension-sign-in.html#GUID-2F473DAC-7810-4666-88F2-FEE5CFCDA80D">Setting Up Builder Extension Sign-in Authentication</a><br>Learn how to set up Builder Extension Sign-in authentication.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="preconfigured-authentication-schemes.html#GUID-CD382D4A-AC00-4185-B37F-9A5BC9417A7B" title="Learn about the preconfigured authentication schemes.">Understanding Preconfigured Authentication Schemes</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-A2F94E08-7D18-45D4-9983-0F9966F346C6" name="GUID-A2F94E08-7D18-45D4-9983-0F9966F346C6"></a><h3 id="HTMDB-GUID-A2F94E08-7D18-45D4-9983-0F9966F346C6" class="sect3"><span class="enumeration_section">21.4.2.1.1 </span>About Builder Extension
+        Sign-in
+               </h3>
+               <div>
+                  <p>Learn about Builder Extension Sign-in.</p>
+                  <div class="section">
+                     
+                     <p>The Builder Extension Sign-in Authentication Scheme enables users to open
+                the Extension app from a <span>APEX</span> session without having to sign-in again with a username and password. Use this
+                authentication scheme with Builder Extension apps published from a workspace that
+                has been configured to host and publish Builder Extension apps.
+                     </p>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-A2F94E08-7D18-45D4-9983-0F9966F346C6__GUID-EC401A83-FF83-4862-AF6D-3444B7A8AE2F">Administrator Controls</p>
+                     
+                     
+                     <p>Administrators can enable or disable support for hosting of Builder Extensions at the
+                workspace-level by configuring the <span class="uicontrol bold">Allow Hosting Extensions</span>
+                setting on the Edit Workspace Information page. To learn more, see <a href="../aeadm/viewing-existing-workspace-information.html#AEADM-GUID-F88900FF-A437-4B4D-B096-3D1E3F2D0032" target="_blank">Editing Workspace Information</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span>.
+                     </p>
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-A2F94E08-7D18-45D4-9983-0F9966F346C6__GUID-95F816A8-1E9D-477B-97B7-C12A1F53BB04">
+                     <p class="notep1">See Also:</p><a href="../aeadm/managing-links-on-the-extensions-menu.html#AEADM-GUID-2FB002C4-A6CD-4BD9-8A17-71E3F32AC8FF" target="_blank">Managing Links on the Extension Menu</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="builder-extension-sign-in.html#GUID-09050521-2C93-45B9-B144-EE3404CDABA6" title="The Extension Builder Sign-in enables users to log into an Extension App without having to sign-in again when already signed into a APEX session. The Extension Sign-in Authentication checks for a valid APEX session.">Builder Extension Sign-in</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-2F473DAC-7810-4666-88F2-FEE5CFCDA80D" name="GUID-2F473DAC-7810-4666-88F2-FEE5CFCDA80D"></a><h3 id="HTMDB-GUID-2F473DAC-7810-4666-88F2-FEE5CFCDA80D" class="sect3"><span class="enumeration_section">21.4.2.1.2 </span>Setting Up Builder Extension Sign-in
+        Authentication
+               </h3>
+               <div>
+                  <p>Learn how to set up Builder Extension Sign-in authentication.</p>
+                  <p>To set up Builder Extension Sign-in:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Select an application.</span></li>
+                     <li class="stepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                    Components</span>.</span><div>
+                           
+                           <p>The Shared Components page appears. </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under Security, select <span class="uicontrol bold">Authentication Schemes</span>.</span></li>
+                     <li class="stepexpand"><span>On the Authentication Schemes page, click <span class="uicontrol bold">Create</span>.</span></li>
+                     <li class="stepexpand"><span>Select <span class="uicontrol bold">Based on a pre-configured scheme from the gallery</span>
+                    and click <span class="uicontrol bold">Next</span>.</span></li>
+                     <li class="stepexpand"><span>Under Name: </span><ol type="a">
+                           <li><span>Name - Enter the name used to reference the authentication scheme by
+                            other application developers.</span></li>
+                           <li><span>Scheme Type - Select <span class="uicontrol bold">Builder Extension
+                            Sign-in</span>.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Create Authentication Scheme</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="builder-extension-sign-in.html#GUID-09050521-2C93-45B9-B144-EE3404CDABA6" title="The Extension Builder Sign-in enables users to log into an Extension App without having to sign-in again when already signed into a APEX session. The Extension Sign-in Authentication checks for a valid APEX session.">Builder Extension Sign-in</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

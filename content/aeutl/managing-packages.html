@@ -1,0 +1,466 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Packages">
+      <meta name="abstract" content="A package is a database object that groups logically related PL/SQL types, items, functions and procedures. Use Object Browser to view, create, edit, download, and drop packages.">
+      <meta name="description" content="A package is a database object that groups logically related PL/SQL types, items, functions and procedures. Use Object Browser to view, create, edit, download, and drop packages.">
+      <meta name="DC.subject" content="Object Browser, managing packages, package, creating, viewing, editing, compiling, downloading, package specification, dropping">
+      <meta name="keywords" content="Object Browser, managing packages, package, creating, viewing, editing, compiling, downloading, package specification, dropping">
+      <meta name="DC.Relation" scheme="URI" content="managing-db-objects-with-object-browser.html#GUID-04321951-FD96-4930-8F44-0D8441E8B731">
+      <meta name="DC.Relation" scheme="URI" content="managing-packages.html#GUID-0B587202-EA39-4B69-809B-C828DB1E62BC">
+      <meta name="DC.Relation" scheme="URI" content="managing-packages.html#GUID-2EEDDB42-8169-4373-9AD3-B73BA61F671D">
+      <meta name="DC.Relation" scheme="URI" content="managing-packages.html#GUID-0C9B5B64-CCAE-4228-BF5B-B4A1A78FEFDA">
+      <meta name="DC.Relation" scheme="URI" content="managing-packages.html#GUID-5D5290EF-E1D6-45C8-9DC9-E1703A954D38">
+      <meta name="DC.Relation" scheme="URI" content="managing-packages.html#GUID-4ACBC9B1-FCFC-4052-A271-760AF61647D3">
+      <meta name="DC.Relation" scheme="URI" content="managing-packages.html#GUID-60E32984-843C-4FCC-9624-DB66FC3BFAC6">
+      <meta name="DC.Relation" scheme="URI" content="managing-packages.html#GUID-758E293E-3AAE-4F0B-B94F-CEFF2E8E10F0">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Neil Fernandez">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Synders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="January2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-9405C4B0-3DDB-48A3-98DA-6164967A80E8">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="A package is a database object that groups logically related PL/SQL types, items, functions and procedures. Use Object Browser to view, create, edit, download, and drop packages.">
+      <meta name="description" content="A package is a database object that groups logically related PL/SQL types, items, functions and procedures. Use Object Browser to view, create, edit, download, and drop packages.">
+      <title>Managing Packages</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="SQL Workshop Guide">
+      <meta property="og:description" content="A package is a database object that groups logically related PL/SQL types, items, functions and procedures. Use Object Browser to view, create, edit, download, and drop packages.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="SQL Workshop Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-sql-workshop-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-01-14T12:14:06-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2008, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12911-01">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-types.html" title="Previous" type="text/html">
+      <link rel="next" href="managing-procedures.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX SQL Workshop Guide">
+    <meta name="dcterms.isVersionOf" content="AEUTL">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","name":"Managing Packages","description":"A package is a database object that groups logically related PL/SQL types, items, functions and procedures. Use Object Browser to view, create, edit, download, and drop packages.","datePublished":"2025-01-14 CST","dateModified":"2025-01-14 CST"} </script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-types.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="managing-procedures.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article>
+         <header>
+            <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Workshop Guide</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="managing-db-objects-with-object-browser.html" property="item" typeof="WebPage"><span property="name"> Managing Database Objects with Object Browser </span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">Managing Packages</li>
+            </ol>
+            <a id="GUID-9405C4B0-3DDB-48A3-98DA-6164967A80E8" name="GUID-9405C4B0-3DDB-48A3-98DA-6164967A80E8"></a>
+            
+            <h2 id="AEUTL-GUID-9405C4B0-3DDB-48A3-98DA-6164967A80E8" class="sect2"><span class="enumeration_section">3.8 </span>Managing Packages
+            </h2>
+         </header>
+         <div class="ind">
+            <div>
+               <p>A package is a database object that groups logically related PL/SQL types,
+                items, functions and procedures. Use <span>Object Browser</span> to view, create, edit, download, and drop packages.
+               </p>
+               <p> Packages usually have two parts, a specification and a body. The <span class="bold">specification</span> is the interface to your application. The <span class="bold">body</span> implements the specification.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="managing-packages.html#GUID-0B587202-EA39-4B69-809B-C828DB1E62BC">Creating a Package</a><br>Create packages using <span>Object Browser</span>.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-packages.html#GUID-2EEDDB42-8169-4373-9AD3-B73BA61F671D">Viewing a Package</a><br>Select a package from the Object Tree and access tabs in the Object Detail         View.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-packages.html#GUID-0C9B5B64-CCAE-4228-BF5B-B4A1A78FEFDA">Editing a Package Manually</a><br>Select a package from the Object Tree and edit the code in the Object Detail         View.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-packages.html#GUID-5D5290EF-E1D6-45C8-9DC9-E1703A954D38">Compiling a Package</a><br>Select a package from the Object Tree and click Save and         Compile.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-packages.html#GUID-4ACBC9B1-FCFC-4052-A271-760AF61647D3">Downloading a Package</a><br>Select a package from the Object Tree and click Download to save it as a         file.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-packages.html#GUID-60E32984-843C-4FCC-9624-DB66FC3BFAC6">Dropping a Package While Viewing the Specification</a><br>Select a package from the Object Tree and click Drop on the Specification         tab.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-packages.html#GUID-758E293E-3AAE-4F0B-B94F-CEFF2E8E10F0">Dropping a Package While Viewing the Body</a><br>Select a package from the Object Tree and click Drop on the Body         tab.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-9405C4B0-3DDB-48A3-98DA-6164967A80E8__GUID-BA6BB1C5-BB59-40BC-855F-41E8F743C323">
+                  <p class="notep1">See Also:</p>
+                  
+                  <p><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeutl&id=LNPLS-GUID-C285EC5A-BE50-4192-A88E-48C0778B34E0" target="_blank">PL/SQL Packages</a> and <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeutl&id=LNPLS-GUID-13BEBBEC-02D4-48E8-A059-DFEAC4751A3B" target="_blank">PL/SQL Subprograms</a> in <span><cite>Oracle Database PL/SQL
+                                        Language Reference</cite></span> for additional information on
+                PL/SQL packages.
+                  </p>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-db-objects-with-object-browser.html#GUID-04321951-FD96-4930-8F44-0D8441E8B731" title="Object Browser enables developers to browse, create, and edit objects in the Oracle Database.">Managing Database Objects with Object Browser</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-0B587202-EA39-4B69-809B-C828DB1E62BC" name="GUID-0B587202-EA39-4B69-809B-C828DB1E62BC"></a><h3 id="AEUTL-GUID-0B587202-EA39-4B69-809B-C828DB1E62BC" class="sect3"><span class="enumeration_section">3.8.1 </span>Creating a Package
+               </h3>
+               <div>
+                  <p>Create packages using <span>Object Browser</span>.
+                  </p>
+                  <div class="section">
+                     
+                     <p>To create a package:</p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, click the <span class="uicontrol bold">Create Database Objects</span> menu and select
+                        <span class="uicontrol bold">Package</span>.</span><div>
+                           
+                           <div class="infobox-tip" id="GUID-0B587202-EA39-4B69-809B-C828DB1E62BC__GUID-4B61BEDB-E3C7-494C-8F9D-9B12327CEBB3">
+                              <p class="notep1">Tip:</p>To create new objects from the Object
+                                Tree, right-click the object and select the
+                                        <span class="uicontrol bold">Create</span> option.
+                           </div>
+                           
+                           <p>The Create Package Wizard appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>On Create Package:</span><ol type="a" id="GUID-0B587202-EA39-4B69-809B-C828DB1E62BC__SUBSTEPS_UBW_VLR_FXB">
+                           <li><span>Name - Enter the name of the package to be created. The name must
+                            conform to Oracle naming conventions and cannot contain spaces, or start
+                            with a number or underscore.</span></li>
+                           <li><span>Include Sample Code - Specify whether to include sample code while
+                            creating the package. Enable or disable this option.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Package</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-packages.html#GUID-9405C4B0-3DDB-48A3-98DA-6164967A80E8" title="A package is a database object that groups logically related PL/SQL types, items, functions and procedures. Use Object Browser to view, create, edit, download, and drop packages.">Managing Packages</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-2EEDDB42-8169-4373-9AD3-B73BA61F671D" name="GUID-2EEDDB42-8169-4373-9AD3-B73BA61F671D"></a><h3 id="AEUTL-GUID-2EEDDB42-8169-4373-9AD3-B73BA61F671D" class="sect3"><span class="enumeration_section">3.8.2 </span>Viewing a Package
+               </h3>
+               <div>
+                  <p>Select a package from the Object Tree and access tabs in the Object Detail
+        View.</p>
+                  <div class="section">
+                     <p>To view a package:</p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Packages</span> and select a package.</span></li>
+                     <li class="stepexpand"><span>The Object Detail View appears and displays five tabs:</span><div>
+                           <div class="infobox-tip" id="GUID-2EEDDB42-8169-4373-9AD3-B73BA61F671D__GUID-E7E80ADE-72C1-472B-9FE4-35AB33D4D838">
+                              <p class="notep1">Tip:</p>The <span class="uicontrol bold">Specification</span> and <span class="uicontrol bold">Body</span> tabs feature a fully functional Code Editor. To learn more about the Code Editor, see <a href="understanding-object-browser.html#GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE" title="Learn about the Code Editor available Object Browser.">Code Editor in Object Browser</a>.
+                           </div>
+                        </div>
+                        <ul id="GUID-2EEDDB42-8169-4373-9AD3-B73BA61F671D__CHOICES_QRM_DZG_GXB">
+                           <li><span class="uicontrol bold">Specification</span> - Displays the package specification. The
+                            <strong class="term">package specification</strong> defines the interface to your
+                        application and delcares the elements that can be referenced outside of the
+                        package. You can edit the code in this view using a fully functional Code
+                        Editor. Available actions include:
+                              <ul style="list-style-type: disc;" id="GUID-2EEDDB42-8169-4373-9AD3-B73BA61F671D__UL_ZZV_FZG_GXB">
+                                 <li><span class="uicontrol bold">Download </span></li>
+                                 <li><span class="uicontrol bold">Save and Compile</span>
+                                    
+                                 </li>
+                                 <li><span class="uicontrol bold">Drop</span>.
+                                 </li>
+                                 <li><span class="uicontrol bold">Refresh</span></li>
+                              </ul>
+                           </li>
+                           <li><span class="uicontrol bold">Body</span> - Displays the package body. The <strong class="term">packge
+                            body</strong> is named collection of functions, procedures, variables,
+                        cursors, user-defined types, and records that are referenced using the
+                        package name. You can edit the code in this view using a fully function Code
+                        Editor. Available actions include:
+                              <ul style="list-style-type: disc;" id="GUID-2EEDDB42-8169-4373-9AD3-B73BA61F671D__UL_NPG_GZG_GXB">
+                                 <li><span class="uicontrol bold">Download </span></li>
+                                 <li><span class="uicontrol bold">Save and Compile</span>
+                                    
+                                 </li>
+                                 <li><span class="uicontrol bold">Drop</span>.
+                                 </li>
+                                 <li><span class="uicontrol bold">Refresh</span></li>
+                              </ul>
+                           </li>
+                           <li><span class="uicontrol bold">Dependencies</span> - Displays objects that use (or depend on) on the current package and objects the package depends on. Available actions include <span class="uicontrol bold">Refresh</span>.
+                           </li>
+                           <li><span class="uicontrol bold">Errors</span> - Lists errors related to the current package. Available actions include <span class="uicontrol bold">Refresh</span>.
+                           </li>
+                           <li><span class="uicontrol bold">Grants</span> - Lists details of grants for the current package, including privilege, grantee, grantable, grantor, and object name. Available actions include:
+                              <ul style="list-style-type: disc;" id="GUID-2EEDDB42-8169-4373-9AD3-B73BA61F671D__UL_H5C_3ZG_GXB">
+                                 <li><span class="uicontrol bold">Grant</span></li>
+                                 <li><span class="uicontrol bold">Revoke</span></li>
+                                 <li><span class="uicontrol bold">Refresh</span></li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-packages.html#GUID-9405C4B0-3DDB-48A3-98DA-6164967A80E8" title="A package is a database object that groups logically related PL/SQL types, items, functions and procedures. Use Object Browser to view, create, edit, download, and drop packages.">Managing Packages</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-0C9B5B64-CCAE-4228-BF5B-B4A1A78FEFDA" name="GUID-0C9B5B64-CCAE-4228-BF5B-B4A1A78FEFDA"></a><h3 id="AEUTL-GUID-0C9B5B64-CCAE-4228-BF5B-B4A1A78FEFDA" class="sect3"><span class="enumeration_section">3.8.3 </span>Editing a Package Manually
+               </h3>
+               <div>
+                  <p>Select a package from the Object Tree and edit the code in the Object Detail
+        View.</p>
+                  <div class="section">
+                     
+                     
+                     <p>When you edit a package, you can edit the code manually, perform a search
+                and replace, and then compile the package.</p>
+                     
+                  </div>
+                  <!-- class="section" -->
+                  <div class="section">To edit a package manually:</div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Packages</span> and select a package.</span><div>
+                           <p>The Object Detail View appears. </p>
+                           <p>The <span class="uicontrol bold">Specification</span> tab defines the interface to your application. The <span class="uicontrol bold">Body</span> tab displays the package body, if one exists, for the selected package. 
+                           </p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Select the appropriate tab (<span class="uicontrol bold">Specification</span> or
+                        <span class="uicontrol bold">Body</span>) and edit the source code directly using the
+                    Code Editor.</span><div>
+                           
+                           <div class="infobox-tip" id="GUID-0C9B5B64-CCAE-4228-BF5B-B4A1A78FEFDA__GUID-4F256EC5-2DEE-41AF-99D7-0EA739B9EABC">
+                              <p class="notep1">Tip:</p>To learn more about the Code Editor, see <a href="understanding-object-browser.html#GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE" title="Learn about the Code Editor available Object Browser.">Code Editor in Object Browser</a>.
+                           </div>
+                           
+                           <p>If you edit and make changes to a view, you must compile to save your changes.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save and Compile</span> to compile the current package. </span><div>
+                           <p>Compiling re-creates the object in the database. If the compilation fails, an error message displays above the code.</p>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-packages.html#GUID-9405C4B0-3DDB-48A3-98DA-6164967A80E8" title="A package is a database object that groups logically related PL/SQL types, items, functions and procedures. Use Object Browser to view, create, edit, download, and drop packages.">Managing Packages</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-5D5290EF-E1D6-45C8-9DC9-E1703A954D38" name="GUID-5D5290EF-E1D6-45C8-9DC9-E1703A954D38"></a><h3 id="AEUTL-GUID-5D5290EF-E1D6-45C8-9DC9-E1703A954D38" class="sect3"><span class="enumeration_section">3.8.4 </span>Compiling a Package
+               </h3>
+               <div>
+                  <p>Select a package from the Object Tree and click Save and
+        Compile.</p>
+                  <div class="section">
+                     
+                     
+                     <p>If you edit and make changes to a package, you must compile to save your changes.</p>
+                     
+                     <p>The <span class="uicontrol bold">Save and Compile</span> action is available on both the <span class="uicontrol bold">Specification</span> and <span class="uicontrol bold">Body</span> tabs in Object Detail View.
+                     </p>
+                     <p>To compile a package:</p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Packages</span> and select a package.</span><div>
+                           <p>The Object Detail View appears. </p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click the appropriate tab (<span class="uicontrol bold">Specification</span> tab or <span class="uicontrol bold">Body</span>) and then click <span class="uicontrol bold">Save and Compile</span>.</span><div>
+                           <p>Compiling re-creates the object in the database. If the compilation fails, an error message displays above the code.</p>
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-packages.html#GUID-9405C4B0-3DDB-48A3-98DA-6164967A80E8" title="A package is a database object that groups logically related PL/SQL types, items, functions and procedures. Use Object Browser to view, create, edit, download, and drop packages.">Managing Packages</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-4ACBC9B1-FCFC-4052-A271-760AF61647D3" name="GUID-4ACBC9B1-FCFC-4052-A271-760AF61647D3"></a><h3 id="AEUTL-GUID-4ACBC9B1-FCFC-4052-A271-760AF61647D3" class="sect3"><span class="enumeration_section">3.8.5 </span>Downloading a Package
+               </h3>
+               <div>
+                  <p>Select a package from the Object Tree and click Download to save it as a
+        file.</p>
+                  <div class="section">
+                     
+                     
+                     <p>Both the Specification and Body tabs feature a fully functional Code
+                Editor. To download the displayed source code in either tab, click
+                    <span class="uicontrol bold">Download</span>.
+                     </p>
+                     
+                  </div>
+                  <!-- class="section" -->
+                  <div class="section">
+                     <p>To download a package:</p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Packages</span> and select a package.</span><div>
+                           <p>The Object Detail View appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>To save the current package as a file:</span><ol type="a" id="GUID-4ACBC9B1-FCFC-4052-A271-760AF61647D3__SUBSTEPS_C4M_FX2_GXB">
+                           <li><span>Select the appropriate tab (<span class="uicontrol bold">Specification</span> or
+                                <span class="uicontrol bold">Body</span>).</span></li>
+                           <li><span>Click <span class="uicontrol bold">Download </span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-packages.html#GUID-9405C4B0-3DDB-48A3-98DA-6164967A80E8" title="A package is a database object that groups logically related PL/SQL types, items, functions and procedures. Use Object Browser to view, create, edit, download, and drop packages.">Managing Packages</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-60E32984-843C-4FCC-9624-DB66FC3BFAC6" name="GUID-60E32984-843C-4FCC-9624-DB66FC3BFAC6"></a><h3 id="AEUTL-GUID-60E32984-843C-4FCC-9624-DB66FC3BFAC6" class="sect3"><span class="enumeration_section">3.8.6 </span>Dropping a Package While Viewing the
+        Specification
+               </h3>
+               <div>
+                  <p>Select a package from the Object Tree and click Drop on the Specification
+        tab.</p>
+                  <div class="section">
+                     
+                     
+                     <p>The <strong class="term">package specification</strong> defines the interface to your application and
+                delcares the elements that can be referenced outside of the package.
+                     </p>
+                     
+                  </div>
+                  <!-- class="section" -->
+                  <div class="section">
+                     <p>To drop a package specification:</p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Packages</span> and select a package.</span><div>
+                           <p>The Object Detail View appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>On the <span class="uicontrol bold">Specification</span> tab, click <span class="uicontrol bold">Drop</span>.</span><ol type="a" id="GUID-60E32984-843C-4FCC-9624-DB66FC3BFAC6__SUBSTEPS_LBV_51F_GXB">
+                           <li><span>Drop - Review the details.</span></li>
+                           <li><span>SQL - Displays the SQL generated to drop the package. To copy the displayed SQL, click the <span class="uicontrol bold">Copy</span> icon.</span></li>
+                           <li><span>To confirm your selection, click <span class="uicontrol bold">Drop</span> again.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-packages.html#GUID-9405C4B0-3DDB-48A3-98DA-6164967A80E8" title="A package is a database object that groups logically related PL/SQL types, items, functions and procedures. Use Object Browser to view, create, edit, download, and drop packages.">Managing Packages</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-758E293E-3AAE-4F0B-B94F-CEFF2E8E10F0" name="GUID-758E293E-3AAE-4F0B-B94F-CEFF2E8E10F0"></a><h3 id="AEUTL-GUID-758E293E-3AAE-4F0B-B94F-CEFF2E8E10F0" class="sect3"><span class="enumeration_section">3.8.7 </span>Dropping a Package While Viewing the Body
+               </h3>
+               <div>
+                  <p>Select a package from the Object Tree and click Drop on the Body
+        tab.</p>
+                  <div class="section">
+                     
+                     
+                     <p>The <strong class="term">package body</strong> is a named collection of
+                functions, procedures, variables, cursors, user-defined types, and records that are
+                referenced using the package name.
+                     </p>
+                     
+                  </div>
+                  <!-- class="section" -->
+                  <div class="section">
+                     <p>To drop a package while viewing the Body:</p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Packages</span> and select a package.</span><div>
+                           <p>The Object Detail View appears. </p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>On the <span class="uicontrol bold">Body</span> tab, click <span class="uicontrol bold">Drop</span>.</span><div>
+                           <p>In the Drop dialog:</p>
+                        </div>
+                        <ol type="a" id="GUID-758E293E-3AAE-4F0B-B94F-CEFF2E8E10F0__SUBSTEPS_QT5_2BF_GXB">
+                           <li><span>Drop - Review the details.</span></li>
+                           <li><span>SQL - Displays the SQL generated to drop the package body. To copy the displayed SQL, click the <span class="uicontrol bold">Copy</span> icon.</span></li>
+                           <li><span>Confirm your selection and click <span class="uicontrol bold">Drop</span> again.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-packages.html#GUID-9405C4B0-3DDB-48A3-98DA-6164967A80E8" title="A package is a database object that groups logically related PL/SQL types, items, functions and procedures. Use Object Browser to view, create, edit, download, and drop packages.">Managing Packages</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

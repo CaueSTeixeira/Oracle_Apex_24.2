@@ -1,0 +1,317 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Sending Email from an Application">
+      <meta name="abstract" content="To configure and manage email in Oracle APEX, an Instance administrator must sign in to APEX Administration Services.">
+      <meta name="description" content="To configure and manage email in Oracle APEX, an Instance administrator must sign in to APEX Administration Services.">
+      <meta name="DC.subject" content="email, managing, email queue, email log, configuring for instance, instance settings, configuring email, APEX_MAIL, sending with APEX_MAIL package">
+      <meta name="keywords" content="email, managing, email queue, email log, configuring for instance, instance settings, configuring email, APEX_MAIL, sending with APEX_MAIL package">
+      <meta name="DC.Relation" scheme="URI" content="extending-application-capabilities.html#GUID-1EDC0CA6-A063-406C-AE6E-12746C885E22">
+      <meta name="DC.Relation" scheme="URI" content="sending-email-from-an-application.html#GUID-F6B74AAA-86C9-48F6-A87B-80CAF2960318">
+      <meta name="DC.Relation" scheme="URI" content="sending-email-from-an-application.html#GUID-1C5283E5-A758-4815-81C4-8EFB7694BBBE">
+      <meta name="DC.Relation" scheme="URI" content="sending-email-from-an-application.html#GUID-93475001-B8B9-489F-8DC2-409AC8D1B493">
+      <meta name="DC.Relation" scheme="URI" content="sending-email-from-an-application.html#GUID-9DA65691-7650-4DCA-85A3-71264594D690">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-5579DEA8-699C-41F0-B08F-9AB565F76D77">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="To configure and manage email in Oracle APEX, an Instance administrator must sign in to APEX Administration Services.">
+      <meta name="description" content="To configure and manage email in Oracle APEX, an Instance administrator must sign in to APEX Administration Services.">
+      <title>Sending Email from an Application</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="To configure and manage email in Oracle APEX, an Instance administrator must sign in to APEX Administration Services.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="extending-application-capabilities.html" title="Previous" type="text/html">
+      <link rel="next" href="implementing-plug-ins.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Sending Email from an Application","description":"To configure and manage email in Oracle APEX, an Instance administrator must sign in to APEX Administration Services.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="extending-application-capabilities.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="implementing-plug-ins.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-5579DEA8-699C-41F0-B08F-9AB565F76D77" name="GUID-5579DEA8-699C-41F0-B08F-9AB565F76D77"></a><a id="HTMDB13006"></a>
+         
+         <h2 id="HTMDB-GUID-5579DEA8-699C-41F0-B08F-9AB565F76D77" class="sect2"><span class="enumeration_section">19.1 </span>Sending Email from an Application
+         </h2>
+         <div class="ind">
+            <div>
+               <p>To configure and manage email in <span>Oracle APEX</span>, an Instance administrator must sign in to <span>APEX</span> Administration Services.
+               </p>
+               <div class="infoboxnote" id="GUID-5579DEA8-699C-41F0-B08F-9AB565F76D77__GUID-D4BE5003-C859-4738-9873-BD2704748A9B">
+                  <p class="notep1">Note:</p>To learn more about configuring email in <span>Oracle APEX</span> with <span>Autonomous Database</span>, see <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmdb&id=ADBSB-GUID-060AC41F-4C3A-44E6-992C-B0CC2DB5B73E" target="_blank">Sending Email from APEX</a> in <span id="GUID-5579DEA8-699C-41F0-B08F-9AB565F76D77__ADBSB"><cite>Using Oracle Autonomous Database Serverless</cite></span>.
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="sending-email-from-an-application.html#GUID-F6B74AAA-86C9-48F6-A87B-80CAF2960318">About Configuring Email</a><br>To enable <span>APEX</span> to send email, an Instance administrator must configure email settings. 
+                  </li>
+                  <li class="ulchildlink"><a href="sending-email-from-an-application.html#GUID-1C5283E5-A758-4815-81C4-8EFB7694BBBE">About Email Provisioning</a><br>Learn about email provisioning.
+                  </li>
+                  <li class="ulchildlink"><a href="sending-email-from-an-application.html#GUID-93475001-B8B9-489F-8DC2-409AC8D1B493">About the Mail Queue</a><br>Learn about the mail queue.
+                  </li>
+                  <li class="ulchildlink"><a href="sending-email-from-an-application.html#GUID-9DA65691-7650-4DCA-85A3-71264594D690">About the APEX_MAIL Package</a><br>Learn about the <code class="codeph">APEX_MAIL</code> package.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="extending-application-capabilities.html#GUID-1EDC0CA6-A063-406C-AE6E-12746C885E22" title="Learn about how to extend application capabilities including managing email, running background PL/SQL, utilizing plug-ins, and understanding jQuery support.">Extending Application Capabilities</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB29886"></a><div class="props_rev_3"><a id="GUID-F6B74AAA-86C9-48F6-A87B-80CAF2960318" name="GUID-F6B74AAA-86C9-48F6-A87B-80CAF2960318"></a><h3 id="HTMDB-GUID-F6B74AAA-86C9-48F6-A87B-80CAF2960318" class="sect3"><span class="enumeration_section">19.1.1 </span>About Configuring Email
+               </h3>
+               <div>
+                  <p>To enable <span>APEX</span> to send email, an Instance administrator must configure email settings. 
+                  </p>
+               </div>
+               <div>
+                  <ul class="ullinks">
+                     <li class="ulchildlink"><a href="sending-email-from-an-application.html#GUID-9039281A-C7AE-4E55-9443-693D147A7620">About Enabling Network Services</a><br>Learn about enabling network services.
+                     </li>
+                     <li class="ulchildlink"><a href="sending-email-from-an-application.html#GUID-C9727FC9-2406-4B06-A291-4469D3177A87">About Configuring Email in a Full Development Environment</a><br>Learn about about configuring email in a full development environment.
+                     </li>
+                  </ul>
+                  <div class="infoboxnotealso" id="GUID-F6B74AAA-86C9-48F6-A87B-80CAF2960318__GUID-735902A0-285A-4D4A-92AF-95943EAB54F9">
+                     <p class="notep1">See Also:</p>
+                     
+                     <p><a href="../aeadm/configuring-email.html#AEADM-GUID-FEC98D5E-3C89-423E-9603-4CD2E553BA34" target="_blank">Configuring Email</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="sending-email-from-an-application.html#GUID-5579DEA8-699C-41F0-B08F-9AB565F76D77" title="To configure and manage email in Oracle APEX, an Instance administrator must sign in to APEX Administration Services.">Sending Email from an Application</a></p>
+                     </div>
+                  </div>
+               </div>
+               <a id="HTMDB30031"></a><div class="props_rev_3"><a id="GUID-9039281A-C7AE-4E55-9443-693D147A7620" name="GUID-9039281A-C7AE-4E55-9443-693D147A7620"></a><h4 id="HTMDB-GUID-9039281A-C7AE-4E55-9443-693D147A7620" class="sect4"><span class="enumeration_section">19.1.1.1 </span>About Enabling Network Services
+                  </h4>
+                  <div>
+                     <p>Learn about enabling network services.</p>
+                     <p>Enabling network services enables support for sending
+      outbound mail in <span>Oracle APEX</span>, use of Web services in <span>Oracle APEX</span>, and PDF report printing.
+                     </p>
+                     <p>By default, the ability to interact with network services is
+      disabled in Oracle Database 11<span class="italic">g</span> Release 2 or later. Therefore, if you are running <span>Oracle APEX</span> with Oracle Database 11<span class="italic">g</span> Release 2 or later, you must use the new
+        <code class="codeph">DBMS_NETWORK_ACL_ADMIN</code> package to grant connect privileges to any host for
+      the <span><code class="codeph">APEX_240200</code></span> database user. Failing to grant these privileges results in issues with:
+                     </p>
+                     <ul style="list-style-type: disc;">
+                        <li>
+                           
+                           <p>Sending outbound mail in <span>Oracle APEX</span>.
+                           </p>
+                           
+                           <p>Users can call methods from the
+                                                  <code class="codeph">APEX_MAIL</code> package, but issues
+                                                  arise when sending outbound email.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           <p>Using Web services in <span>Oracle APEX</span>.
+                           </p>
+                        </li>
+                        <li>
+                           <p>PDF/report printing.</p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div>
+                     <div class="infoboxnotealso" id="GUID-9039281A-C7AE-4E55-9443-693D147A7620__GUID-9D2811D4-BAB0-40B1-ABEC-E3213B4682EB">
+                        <p class="notep1">See Also:</p>
+                        <ul style="list-style-type: disc;">
+                           <li><a href="../htmig/enabling-network-services-in-oracle-db11g-or-later.html#HTMIG-GUID-8D125731-989A-4A51-AFFE-00181729F87F" target="_blank">Enabling Network Services in Oracle
+            Database</a> in <span><cite>Oracle APEX Installation
+                                        Guide</cite></span></li>
+                           <li>
+                              <p><a href="../aeadm/configuring-email.html#AEADM-GUID-FEC98D5E-3C89-423E-9603-4CD2E553BA34" target="_blank">Configuring Email</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="sending-email-from-an-application.html#GUID-F6B74AAA-86C9-48F6-A87B-80CAF2960318" title="To enable APEX to send email, an Instance administrator must configure email settings.">About Configuring Email</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div><a id="HTMDB30032"></a><div class="props_rev_3"><a id="GUID-C9727FC9-2406-4B06-A291-4469D3177A87" name="GUID-C9727FC9-2406-4B06-A291-4469D3177A87"></a><h4 id="HTMDB-GUID-C9727FC9-2406-4B06-A291-4469D3177A87" class="sect4"><span class="enumeration_section">19.1.1.2 </span>About Configuring Email in a Full Development Environment
+                  </h4>
+                  <div>
+                     <p>Learn about about configuring email in a full development environment.</p>
+                     <p>To configure <span>APEX</span> to send mail in a full development environment your Instance administrator must sign in to <span>APEX</span> Administration Services, navigate to the Instance Settings page, and configure Email attributes. 
+                     </p>
+                  </div>
+                  <div>
+                     <div class="infoboxnotealso" id="GUID-C9727FC9-2406-4B06-A291-4469D3177A87__GUID-6A8AC54D-D877-4207-B7E7-4A706B8B70B2">
+                        <p class="notep1">See Also:</p>
+                        <p><a href="../aeadm/configuring-email.html#AEADM210" target="_blank">Configuring Email</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                     </div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="sending-email-from-an-application.html#GUID-F6B74AAA-86C9-48F6-A87B-80CAF2960318" title="To enable APEX to send email, an Instance administrator must configure email settings.">About Configuring Email</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div><a id="HTMDB29887"></a><div class="props_rev_3"><a id="GUID-1C5283E5-A758-4815-81C4-8EFB7694BBBE" name="GUID-1C5283E5-A758-4815-81C4-8EFB7694BBBE"></a><h3 id="HTMDB-GUID-1C5283E5-A758-4815-81C4-8EFB7694BBBE" class="sect3"><span class="enumeration_section">19.1.2 </span>About Email Provisioning
+               </h3>
+               <div>
+                  <p>Learn about email provisioning.</p>
+                  <p>To configure <span>APEX</span> to automatically email users their login credentials when a new workspace request has
+            been approved. To accomplish this, you must complete the email configuration process and
+            select the provisioning status, Request with Email Verification.
+                  </p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-1C5283E5-A758-4815-81C4-8EFB7694BBBE__GUID-89BCA334-9F9C-40FE-B39D-EC4768BB834A">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="../aeadm/configuring-email.html#AEADM210" target="_blank">Configuring Email</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                        <li><a href="../aeadm/creating-workspaces.html#AEADM241" target="_blank">About Specifying How Workspaces Are Created</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                        <li><a href="../aeadm/creating-workspaces.html#AEADM29207" target="_blank">Selecting a Provisioning Mode</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="sending-email-from-an-application.html#GUID-5579DEA8-699C-41F0-B08F-9AB565F76D77" title="To configure and manage email in Oracle APEX, an Instance administrator must sign in to APEX Administration Services.">Sending Email from an Application</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29888"></a><div class="props_rev_3"><a id="GUID-93475001-B8B9-489F-8DC2-409AC8D1B493" name="GUID-93475001-B8B9-489F-8DC2-409AC8D1B493"></a><h3 id="HTMDB-GUID-93475001-B8B9-489F-8DC2-409AC8D1B493" class="sect3"><span class="enumeration_section">19.1.3 </span>About the Mail Queue
+               </h3>
+               <div>
+                  <p>Learn about the mail queue.</p>
+                  <p>Instance administrators can manage email sent from applications by monitoring email
+            messages in the mail queue and mail log.</p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-93475001-B8B9-489F-8DC2-409AC8D1B493__GUID-0246EA9B-6EDE-4344-8F24-07DCEF4B62B7">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="../aeadm/managing-meta-data.html#AEADM29189" target="_blank">Managing the Mail Queue</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="sending-email-from-an-application.html#GUID-5579DEA8-699C-41F0-B08F-9AB565F76D77" title="To configure and manage email in Oracle APEX, an Instance administrator must sign in to APEX Administration Services.">Sending Email from an Application</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29889"></a><div class="props_rev_3"><a id="GUID-9DA65691-7650-4DCA-85A3-71264594D690" name="GUID-9DA65691-7650-4DCA-85A3-71264594D690"></a><h3 id="HTMDB-GUID-9DA65691-7650-4DCA-85A3-71264594D690" class="sect3"><span class="enumeration_section">19.1.4 </span>About the APEX_MAIL Package
+               </h3>
+               <div>
+                  <p>Learn about the <code class="codeph">APEX_MAIL</code> package.
+                  </p>
+                  <p>You can send email from an <span>APEX</span> application using the <code class="codeph">APEX_MAIL</code> package.
+                  </p>
+                  <p>The <code class="codeph">APEX_MAIL</code> package is built on top of the Oracle
+            supplied <code class="codeph">UTL_SMTP</code> package. Because of this dependence, the
+                <code class="codeph">UTL_SMTP</code> package must be installed and functioning to use
+            APEX_MAIL.
+                  </p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-9DA65691-7650-4DCA-85A3-71264594D690__GUID-23A6AC8D-3850-4CD3-A4E5-2CF257429485">
+                     <p class="notep1">See Also:</p>
+                     
+                     <ul style="list-style-type: disc;">
+                        <li><a href="../aeapi/APEX_MAIL.html#AEAPI341" target="_blank">APEX_MAIL</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></li>
+                        <li><a href="../aeadm/configuring-email.html#AEADM210" target="_blank">Configuring Email</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                     </ul>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="sending-email-from-an-application.html#GUID-5579DEA8-699C-41F0-B08F-9AB565F76D77" title="To configure and manage email in Oracle APEX, an Instance administrator must sign in to APEX Administration Services.">Sending Email from an Application</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

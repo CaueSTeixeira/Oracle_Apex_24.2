@@ -1,0 +1,701 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Creating a Breadcrumb Manually">
+      <meta name="abstract" content="Create a breadcrumb while creating a new page, as a Shared Component using the Create Breadcrumb Wizard, or by adding a the breadcrumb region in Page Designer. Add breadcrumb entries from Shared Components.">
+      <meta name="description" content="Create a breadcrumb while creating a new page, as a Shared Component using the Create Breadcrumb Wizard, or by adding a the breadcrumb region in Page Designer. Add breadcrumb entries from Shared Components.">
+      <meta name="DC.subject" content="breadcrumbs, about creating manually, creating, creating entries, breadcrumb region, adding with Wizard, Create Region Wizard, creating breadcrumb, adding from Gallery, adding to a page, creating dynamic">
+      <meta name="keywords" content="breadcrumbs, about creating manually, creating, creating entries, breadcrumb region, adding with Wizard, Create Region Wizard, creating breadcrumb, adding from Gallery, adding to a page, creating dynamic">
+      <meta name="DC.Relation" scheme="URI" content="creating-breadcrumbs.html#GUID-BBA20416-6F27-4ED5-8A80-A8E896138D30">
+      <meta name="DC.Relation" scheme="URI" content="creating-breadcrumb-manually.html#GUID-12C711EC-E85B-4003-A21B-EB6A8F05C8EF">
+      <meta name="DC.Relation" scheme="URI" content="creating-breadcrumb-manually.html#GUID-648B12E8-2ABB-4E78-8AB8-59F926CEFDA0">
+      <meta name="DC.Relation" scheme="URI" content="creating-breadcrumb-manually.html#GUID-9C1CE1A5-B3FA-416B-BA65-D2014EC1C7A7">
+      <meta name="DC.Relation" scheme="URI" content="creating-breadcrumb-manually.html#GUID-407B1BA1-B348-4F81-A73C-45624CC68798">
+      <meta name="DC.Relation" scheme="URI" content="creating-breadcrumb-manually.html#GUID-EBF15ABF-92E7-45DF-B44D-0DA2832372E0">
+      <meta name="DC.Relation" scheme="URI" content="creating-breadcrumb-manually.html#GUID-6750ADDF-959C-44E7-A6C5-495095E42C67">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-E5CF5983-3267-475E-BAAB-C683FFB918D6">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Create a breadcrumb while creating a new page, as a Shared Component using the Create Breadcrumb Wizard, or by adding a the breadcrumb region in Page Designer. Add breadcrumb entries from Shared Components.">
+      <meta name="description" content="Create a breadcrumb while creating a new page, as a Shared Component using the Create Breadcrumb Wizard, or by adding a the breadcrumb region in Page Designer. Add breadcrumb entries from Shared Components.">
+      <title>Creating a Breadcrumb Manually</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Create a breadcrumb while creating a new page, as a Shared Component using the Create Breadcrumb Wizard, or by adding a the breadcrumb region in Page Designer. Add breadcrumb entries from Shared Components.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="creating-breadcrumb-while-creating-page.html" title="Previous" type="text/html">
+      <link rel="next" href="editing-breadcrumbs.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Creating a Breadcrumb Manually","description":"Create a breadcrumb while creating a new page, as a Shared Component using the Create Breadcrumb Wizard, or by adding a the breadcrumb region in Page Designer. Add breadcrumb entries from Shared Components.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="creating-breadcrumb-while-creating-page.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="editing-breadcrumbs.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-E5CF5983-3267-475E-BAAB-C683FFB918D6" name="GUID-E5CF5983-3267-475E-BAAB-C683FFB918D6"></a><a id="HTMDB25538"></a><a id="4000:263"></a><a id="4000:264"></a><a id="4000:286"></a><a id="4000:288"></a><a id="4000:481"></a>
+         
+         <h2 id="HTMDB-GUID-E5CF5983-3267-475E-BAAB-C683FFB918D6" class="sect2"><span class="enumeration_section">14.3.3 </span>Creating a Breadcrumb Manually
+         </h2>
+         <div class="ind">
+            <p>Create a breadcrumb while creating a new page, as a Shared Component using the Create Breadcrumb Wizard, or by adding a the breadcrumb region in Page Designer. Add breadcrumb entries from Shared Components.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="creating-breadcrumb-manually.html#GUID-12C711EC-E85B-4003-A21B-EB6A8F05C8EF">About Creating Breadcrumbs Manually</a><br>Create a breadcrumb manually by creating the breadcrumb, adding breadcrumb entries,         and then adding the breadcrumb to a page by creating a region.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-breadcrumb-manually.html#GUID-648B12E8-2ABB-4E78-8AB8-59F926CEFDA0">Creating Breadcrumbs from Page Designer</a><br>Create a breadcrumb and breadcrumb entries from Page         Designer.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-breadcrumb-manually.html#GUID-9C1CE1A5-B3FA-416B-BA65-D2014EC1C7A7">Creating Breadcrumbs from Shared Components</a><br>Create a breadcrumb and breadcrumb entries in Shared         Components.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-breadcrumb-manually.html#GUID-407B1BA1-B348-4F81-A73C-45624CC68798">Adding a Breadcrumb Region with a Wizard</a><br>Add a breadcrumb region from the Gallery.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-breadcrumb-manually.html#GUID-EBF15ABF-92E7-45DF-B44D-0DA2832372E0">Adding a Breadcrumb Region from the Gallery</a><br>Add a breadcrumb region from the Gallery.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-breadcrumb-manually.html#GUID-6750ADDF-959C-44E7-A6C5-495095E42C67">About Creating Dynamic Breadcrumbs</a><br></li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="creating-breadcrumbs.html#GUID-BBA20416-6F27-4ED5-8A80-A8E896138D30" title="Breadcrumbs provide hierarchical navigation and display as a list of links.">Creating Breadcrumbs</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB29343"></a><div class="props_rev_3"><a id="GUID-12C711EC-E85B-4003-A21B-EB6A8F05C8EF" name="GUID-12C711EC-E85B-4003-A21B-EB6A8F05C8EF"></a><h3 id="HTMDB-GUID-12C711EC-E85B-4003-A21B-EB6A8F05C8EF" class="sect3"><span class="enumeration_section">14.3.3.1 </span>About Creating  Breadcrumbs Manually
+               </h3>
+               <div>
+                  <p>Create a breadcrumb manually by creating the breadcrumb, adding breadcrumb entries,
+        and then adding the breadcrumb to a page by creating a region.</p>
+                  <div class="section">
+                     
+                     <p>The following summarizes the steps needed to create breadcrumbs
+                manually:</p>
+                     
+                  </div>
+                  <ol>
+                     <li><span>Create the breadcrumb. </span><ol type="a" id="GUID-12C711EC-E85B-4003-A21B-EB6A8F05C8EF__SUBSTEPS_V24_JCJ_WQB">
+                           <li class="substepexpand"><span>You can create a breadcrumb in two ways:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-12C711EC-E85B-4003-A21B-EB6A8F05C8EF__UL_JBL_MBJ_WQB">
+                                    <li>
+                                       
+                                       <p>From Shared Components. See <a href="creating-breadcrumb-manually.html#GUID-9C1CE1A5-B3FA-416B-BA65-D2014EC1C7A7" title="Create a breadcrumb and breadcrumb entries in Shared Components.">Creating Breadcrumbs from Shared Components</a>.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>From Page Designer. <a href="creating-breadcrumb-manually.html#GUID-648B12E8-2ABB-4E78-8AB8-59F926CEFDA0" title="Create a breadcrumb and breadcrumb entries from Page Designer.">Creating Breadcrumbs from Page Designer</a>.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>In the Create Breadcrumb dialog, enter a name for the new breadcrumb
+                            and click <span class="uicontrol bold">Create</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Add entries to the breadcrumb.</span></li>
+                     <li><span>Add the breadcrumb to a page by creating a breadcrumb region.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-breadcrumb-manually.html#GUID-E5CF5983-3267-475E-BAAB-C683FFB918D6" title="Create a breadcrumb while creating a new page, as a Shared Component using the Create Breadcrumb Wizard, or by adding a the breadcrumb region in Page Designer. Add breadcrumb entries from Shared Components.">Creating a Breadcrumb Manually</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-648B12E8-2ABB-4E78-8AB8-59F926CEFDA0" name="GUID-648B12E8-2ABB-4E78-8AB8-59F926CEFDA0"></a><h3 id="HTMDB-GUID-648B12E8-2ABB-4E78-8AB8-59F926CEFDA0" class="sect3"><span class="enumeration_section">14.3.3.2 </span>Creating Breadcrumbs from Page
+        Designer
+               </h3>
+               <div>
+                  <p>Create a breadcrumb and breadcrumb entries from Page
+        Designer.</p>
+                  <div class="section">Once you create a named breadcrumb, you can then add breadcrumb
+            entries. The breadcrumb name provides a way to name a collection of breadcrumb
+            entries.</div>
+                  <div class="section">
+                     
+                     <p>To manually create a breadcrumb from Page Designer:</p>
+                     
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a" id="GUID-648B12E8-2ABB-4E78-8AB8-59F926CEFDA0__SUBSTEPS_ASF_W3J_WQB">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears. </div>
+                     </li>
+                     <li class="stepexpand"><span>Create the breadcrumb:</span><ol type="a" id="GUID-648B12E8-2ABB-4E78-8AB8-59F926CEFDA0__SUBSTEPS_GNV_1JJ_WQB">
+                           <li class="substepexpand"><span>In the left pane of Page Designer, click the <span class="uicontrol bold">Page Shared
+                                Components</span> tab.</span></li>
+                           <li class="substepexpand"><span>Right-click <span class="uicontrol bold">Breadcrumb</span> and select
+                                <span class="uicontrol bold">Create</span>.</span><div>The Create Breadcrumb dialog appears.</div>
+                           </li>
+                           <li class="substepexpand"><span>Breadcrumb Name - Enter a name for this new breadcrumb. Once you create
+                            a named breadcrumb, you can then add breadcrumb entries.</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Create</span>.</span></li>
+                        </ol>
+                        <div>The Edit Breadcrumb page appears displaying the breadcrumb in the left
+                    pane.</div>
+                     </li>
+                     <li class="stepexpand"><span>Next, create a breadcrumb entry. Click <span class="uicontrol bold">New Entry</span>.</span><div>Breadcrumb Entry appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Under Breadcrumb Entry:</span><ol type="a" id="GUID-648B12E8-2ABB-4E78-8AB8-59F926CEFDA0__SUBSTEPS_KFZ_KD1_HQB">
+                           <li><span>Page - Select the page where this breadcrumb entry displays. </span></li>
+                           <li><span>Parent Entry - Identify the parent of this entry. Any given breadcrumb
+                            should have only one root node, identified as an item with no parent ID.
+                        </span></li>
+                           <li><span>Sequence - Indicate the order in which breadcrumb entries appear. The
+                            sequence determines the order of evaluation. </span></li>
+                           <li><span>Short Name - Identify the short name of this breadcrumb entry. Both the
+                            short and long names can be referenced from the breadcrumb
+                            template.</span></li>
+                           <li><span>Synchronize page name and title - Enable this option to update the
+                            corresponding Page Name and Title with breadcrumb short name.</span></li>
+                           <li><span>Long Name - Identify the long name of this breadcrumb entry. Both the
+                            short and long names can be referenced from the breadcrumb
+                            template.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Target - Specify the target location. For the <span class="uicontrol bold">Target is
+                        a</span> attribute, select either:</span><ul id="GUID-648B12E8-2ABB-4E78-8AB8-59F926CEFDA0__CHOICES_J12_NB1_HQB">
+                           <li><span class="uicontrol bold">Page in this Application</span></li>
+                           <li><span class="uicontrol bold">URL</span></li>
+                        </ul>
+                        <div>The UI changes depending upon what you select.</div>
+                     </li>
+                     <li class="stepexpand"><span>If the Target is <span class="uicontrol bold">Page in this Application</span>:</span><ol type="a" id="GUID-648B12E8-2ABB-4E78-8AB8-59F926CEFDA0__SUBSTEPS_XCR_HC1_HQB">
+                           <li class="substepexpand"><span>Target is a - Select <span class="uicontrol bold">Page in this
+                            Application</span>.</span></li>
+                           <li class="substepexpand"><span>Page - Specify the target page number.</span><div>
+                                 
+                                 <p>To reset pagination for that page, select
+                                    <span class="uicontrol bold">reset pagination for this page</span>.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Request - Enter text for which you would like to set the built-in
+                            application item called <code class="codeph">REQUEST</code>. This is also the item
+                            that is set with the name of a button that was clicked.</span></li>
+                           <li class="substepexpand"><span>Clear Cache - Enter the page numbers (separated by commas) for those
+                            pages for which you would like to clear the user's session state.</span></li>
+                           <li class="substepexpand"><span>To set session state (that is, give a listed item a value):</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-648B12E8-2ABB-4E78-8AB8-59F926CEFDA0__UL_YCR_HC1_HQB">
+                                    <li>
+                                       
+                                       <p>Set these items - Enter the list of application
+                                        item names (separated by commas) for which you would like to
+                                        set the session state (give the listed item a value).</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>With these values - Enter a comma delimited list
+                                        of values for the items specified in Set these items. You
+                                        can specify static values or substitution syntax (for
+                                        example, <code class="codeph">&amp;APP_ITEM_NAME.</code>).
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                                 <p>You can specify static values or substitution syntax
+                                (for example, <code class="codeph">&amp;APP_ITEM_NAME.</code>). Note that item
+                                values passed to <code class="codeph">f?p=</code> in the URL cannot contain a
+                                colon. Additionally, item values cannot contain commas unless you
+                                enclose the entire value in backslashes (for example,
+                                    <code class="codeph">\1234,56\</code>).
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>If the Target is <span class="uicontrol bold">URL</span>:</span><ol type="a" id="GUID-648B12E8-2ABB-4E78-8AB8-59F926CEFDA0__SUBSTEPS_ZSK_SD1_HQB">
+                           <li><span>Target is a - Select <span class="uicontrol bold">URL</span>.</span></li>
+                           <li><span>URL Target - Identify URL to go to when the breadcrumb entry is
+                            clicked..</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Conditions: </span><ol type="a" id="GUID-648B12E8-2ABB-4E78-8AB8-59F926CEFDA0__SUBSTEPS_ATK_SD1_HQB">
+                           <li><span>Condition Type - Select a condition type from the list. This condition
+                            must be met in order for this component to be rendered or
+                            processed.</span></li>
+                           <li><span>Enter expressions in the fields provided.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Authorization - Optionally select an authorization scheme. This
+                    authorization scheme must evaluate to TRUE in order for this component to be
+                    rendered or otherwise processed.</span></li>
+                     <li class="stepexpand"><span>For Configuration - Optionally select a build option for this component. Build
+                    options are predefined settings that determine whether or not components within
+                    an application are enabled. </span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Entry</span>.</span><div>The Edit Breadcrumb page appears. A new entry appears under
+                    the breadcrumb in the left pane. </div>
+                     </li>
+                     <li class="stepexpand"><span>Create another breadcrumb entry:</span><ol type="a" id="GUID-648B12E8-2ABB-4E78-8AB8-59F926CEFDA0__SUBSTEPS_TGK_ZQJ_WQB">
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">New Entry</span>.</span><div>The Breadcrumb Entry appears under the breadcrumb
+                            in the left pane. </div>
+                           </li>
+                           <li class="substepexpand"><span>Starting at step 4, repeat previous steps for each breadcrumb entry you
+                            want to create.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+                  <div class="section">
+                     
+                     <p>Next, add the breadcrumb to a page by creating a region.</p>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-breadcrumb-manually.html#GUID-E5CF5983-3267-475E-BAAB-C683FFB918D6" title="Create a breadcrumb while creating a new page, as a Shared Component using the Create Breadcrumb Wizard, or by adding a the breadcrumb region in Page Designer. Add breadcrumb entries from Shared Components.">Creating a Breadcrumb Manually</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25539"></a><div class="props_rev_3"><a id="GUID-9C1CE1A5-B3FA-416B-BA65-D2014EC1C7A7" name="GUID-9C1CE1A5-B3FA-416B-BA65-D2014EC1C7A7"></a><h3 id="HTMDB-GUID-9C1CE1A5-B3FA-416B-BA65-D2014EC1C7A7" class="sect3"><span class="enumeration_section">14.3.3.3 </span>Creating Breadcrumbs from Shared
+        Components
+               </h3>
+               <div>
+                  <p>Create a breadcrumb and breadcrumb entries in Shared
+        Components.</p>
+                  <div class="section">
+                     
+                     <p>Once you create a named breadcrumb, you can then add breadcrumb entries. The
+                breadcrumb name provides a way to name a collection of breadcrumb entries.</p>
+                     
+                  </div>
+                  <div class="section">
+                     
+                     <p>To manually create a breadcrumb from Shared Components:</p>
+                     
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Breadcrumbs page:</span><ol type="a" id="GUID-9C1CE1A5-B3FA-416B-BA65-D2014EC1C7A7__SUBSTEPS_YFY_BD1_HQB">
+                           <li><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li><span>Select the application. </span></li>
+                           <li><span>Click <span class="uicontrol bold">Shared Components</span>.</span></li>
+                           <li><span>Under Navigation and Search, click
+                            <span class="uicontrol bold">Breadcrumbs</span>.</span></li>
+                        </ol>
+                        <div>The Breadcrumbs page appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Create the breadcrumb:</span><ol type="a" id="GUID-9C1CE1A5-B3FA-416B-BA65-D2014EC1C7A7__SUBSTEPS_WLJ_1LJ_WQB">
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Create Breadcrumb</span>.</span></li>
+                           <li class="substepexpand"><span>In the Create Breadcrumb dialog:</span><div>The Create Breadcrumb dialog appears.</div>
+                           </li>
+                           <li class="substepexpand"><span>Breadcrumb Name - Enter a name for this new breadcrumb. Once you create
+                            a named breadcrumb, you can then add breadcrumb entries.</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Create</span>.</span></li>
+                        </ol>
+                        <div>The Edit Breadcrumb page appears displaying the breadcrumb
+                    in the left pane. </div>
+                     </li>
+                     <li class="stepexpand"><span>Next, create a breadcrumb entry. Click <span class="uicontrol bold">New Entry</span>.</span><div>Breadcrumb Entry appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Under Breadcrumb Entry:</span><ol type="a" id="GUID-9C1CE1A5-B3FA-416B-BA65-D2014EC1C7A7__SUBSTEPS_KFZ_KD1_HQB">
+                           <li><span>Page - Select the page where this breadcrumb entry displays. </span></li>
+                           <li><span>Parent Entry - Identify the parent of this entry. Any given breadcrumb
+                            should have only one root node, identified as an item with no parent ID.
+                        </span></li>
+                           <li><span>Sequence - Indicate the order in which breadcrumb entries appear. The
+                            sequence determines the order of evaluation. </span></li>
+                           <li><span>Short Name - Identify the short name of this breadcrumb entry. Both the
+                            short and long names can be referenced from the breadcrumb
+                            template.</span></li>
+                           <li><span>Synchronize page name and title - Enable this option to update the
+                            corresponding Page Name and Title with breadcrumb short name.</span></li>
+                           <li><span>Long Name - Identify the long name of this breadcrumb entry. Both the
+                            short and long names can be referenced from the breadcrumb
+                            template.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Target - Specify the target location. For the <span class="uicontrol bold">Target is
+                        a</span> attribute, select either:</span><ul id="GUID-9C1CE1A5-B3FA-416B-BA65-D2014EC1C7A7__CHOICES_J12_NB1_HQB">
+                           <li><span class="uicontrol bold">Page in this Application</span></li>
+                           <li><span class="uicontrol bold">URL</span></li>
+                        </ul>
+                        <div>The UI changes depending upon what you select.</div>
+                     </li>
+                     <li class="stepexpand"><span>If the Target is <span class="uicontrol bold">Page in this Application</span>:</span><ol type="a" id="GUID-9C1CE1A5-B3FA-416B-BA65-D2014EC1C7A7__SUBSTEPS_XCR_HC1_HQB">
+                           <li class="substepexpand"><span>Target is a - Select <span class="uicontrol bold">Page in this
+                            Application</span>.</span></li>
+                           <li class="substepexpand"><span>Page - Specify the target page number.</span><div>
+                                 
+                                 <p>To reset pagination for that page, select
+                                    <span class="uicontrol bold">reset pagination for this page</span>.
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Request - Enter text for which you would like to set the built-in
+                            application item called <code class="codeph">REQUEST</code>. This is also the item
+                            that is set with the name of a button that was clicked.</span></li>
+                           <li class="substepexpand"><span>Clear Cache - Enter the page numbers (separated by commas) for those
+                            pages for which you would like to clear the user's session state.</span></li>
+                           <li class="substepexpand"><span>To set session state (that is, give a listed item a value):</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-9C1CE1A5-B3FA-416B-BA65-D2014EC1C7A7__UL_YCR_HC1_HQB">
+                                    <li>
+                                       
+                                       <p>Set these items - Enter the list of application
+                                        item names (separated by commas) for which you would like to
+                                        set the session state (give the listed item a value).</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>With these values - Enter a comma delimited list
+                                        of values for the items specified in Set these items. You
+                                        can specify static values or substitution syntax (for
+                                        example, <code class="codeph">&amp;APP_ITEM_NAME.</code>).
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                                 <p>You can specify static values or substitution syntax
+                                (for example, <code class="codeph">&amp;APP_ITEM_NAME.</code>). Note that item
+                                values passed to <code class="codeph">f?p=</code> in the URL cannot contain a
+                                colon. Additionally, item values cannot contain commas unless you
+                                enclose the entire value in backslashes (for example,
+                                    <code class="codeph">\1234,56\</code>).
+                                 </p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>If the Target is <span class="uicontrol bold">URL</span>:</span><ol type="a" id="GUID-9C1CE1A5-B3FA-416B-BA65-D2014EC1C7A7__SUBSTEPS_ZSK_SD1_HQB">
+                           <li><span>Target is a - Select <span class="uicontrol bold">URL</span>.</span></li>
+                           <li><span>URL Target - Identify URL to go to when the breadcrumb entry is
+                            clicked..</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Conditions: </span><ol type="a" id="GUID-9C1CE1A5-B3FA-416B-BA65-D2014EC1C7A7__SUBSTEPS_ATK_SD1_HQB">
+                           <li><span>Condition Type - Select a condition type from the list. This condition
+                            must be met in order for this component to be rendered or
+                            processed.</span></li>
+                           <li><span>Enter expressions in the fields provided.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>For Authorization - Optionally select an authorization scheme. This
+                    authorization scheme must evaluate to TRUE in order for this component to be
+                    rendered or otherwise processed.</span></li>
+                     <li class="stepexpand"><span>For Configuration - Optionally select a build option for this component. Build
+                    options are predefined settings that determine whether or not components within
+                    an application are enabled. </span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Entry</span>.</span><div>The Edit Breadcrumb page appears. A new entry appears under
+                    the breadcrumb in the left pane. </div>
+                     </li>
+                     <li class="stepexpand"><span>Create another breadcrumb entry:</span><ol type="a" id="GUID-9C1CE1A5-B3FA-416B-BA65-D2014EC1C7A7__SUBSTEPS_TGK_ZQJ_WQB">
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">New Entry</span>.</span><div>The Breadcrumb Entry appears under the breadcrumb
+                            in the left pane. </div>
+                           </li>
+                           <li class="substepexpand"><span>Starting at step 4, repeat previous steps for each breadcrumb entry you
+                            want to create.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+                  <div class="section">
+                     
+                     <p>Next, add the breadcrumb to a page by creating a region.</p>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-breadcrumb-manually.html#GUID-E5CF5983-3267-475E-BAAB-C683FFB918D6" title="Create a breadcrumb while creating a new page, as a Shared Component using the Create Breadcrumb Wizard, or by adding a the breadcrumb region in Page Designer. Add breadcrumb entries from Shared Components.">Creating a Breadcrumb Manually</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB30015"></a><div class="props_rev_3"><a id="GUID-407B1BA1-B348-4F81-A73C-45624CC68798" name="GUID-407B1BA1-B348-4F81-A73C-45624CC68798"></a><h3 id="HTMDB-GUID-407B1BA1-B348-4F81-A73C-45624CC68798" class="sect3"><span class="enumeration_section">14.3.3.4 </span>Adding a Breadcrumb Region with a
+        Wizard
+               </h3>
+               <div>
+                  <p>Add a breadcrumb region from the Gallery.</p>
+                  <div class="p">
+                     
+                     <div class="infobox-tip" id="GUID-407B1BA1-B348-4F81-A73C-45624CC68798__GUID-801BFA84-7CD2-43AD-9219-91688AAA2082">
+                        <p class="notep1">Tip:</p>Before creating a breadcrumb region, create the breadcrumb. The wizard
+                will propmt you to create breadcrumb entry if one has not yet been defined.
+                     </div>
+                     
+                  </div>
+                  <div class="section">
+                     
+                     <p>To create a breadcrumb region with a wizard:</p>
+                     
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer. </span><ol type="a">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>On Page Designer Toolbar at the top of the page, click the
+                        <span class="uicontrol bold">Create</span> menu and select <span class="uicontrol bold">Breadcrumb
+                        Region</span>.</span><div>The Create Breadcrumb Wizard appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>For Region Attributes:</span><ol type="a" id="GUID-407B1BA1-B348-4F81-A73C-45624CC68798__SUBSTEPS_GWY_YFN_4MB">
+                           <li class="substepexpand"><span>Region Title - Enter a title for the region such as
+                                <code class="codeph">Breadcrumb</code>.</span></li>
+                           <li class="substepexpand"><span>Region Template - Select a region template. </span><div>For the Universal Theme, the application breadcrumb has a
+                            special location for placement. Oracle recommends using <span class="uicontrol bold">Title
+                                Bar</span> region template.
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Display Point - Identify the display point.</span></li>
+                           <li class="substepexpand"><span>Sequence - Specify the sequence for this component. The sequence
+                            determines the order of evaluation.</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Identify the Breadcrumb:</span><ol type="a" id="GUID-407B1BA1-B348-4F81-A73C-45624CC68798__SUBSTEPS_FCR_DGN_4MB">
+                           <li><span>Breadcrumb - Select the breadcrumb to be associated with this
+                            region.</span></li>
+                           <li><span>Breadcrumb Template - Identify breadcrumb template.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>If no Breadcrumb Entry has been created, the wizard prompts you to create one.
+                    For Breadcrumb Entry:</span><ol type="a" id="GUID-407B1BA1-B348-4F81-A73C-45624CC68798__SUBSTEPS_RCY_GGN_4MB">
+                           <li><span>Breadcrumb Entry Label - Specify the label for this breadcrumb
+                            entry.</span></li>
+                           <li><span>Parent Entry - Select this breadcrumb entry's hierarchical
+                            parent..</span></li>
+                           <li><span>Click <span class="uicontrol bold">Next</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Confirm your selections and click <span class="uicontrol bold">Finish</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-breadcrumb-manually.html#GUID-E5CF5983-3267-475E-BAAB-C683FFB918D6" title="Create a breadcrumb while creating a new page, as a Shared Component using the Create Breadcrumb Wizard, or by adding a the breadcrumb region in Page Designer. Add breadcrumb entries from Shared Components.">Creating a Breadcrumb Manually</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB30017"></a><div class="props_rev_3"><a id="GUID-EBF15ABF-92E7-45DF-B44D-0DA2832372E0" name="GUID-EBF15ABF-92E7-45DF-B44D-0DA2832372E0"></a><h3 id="HTMDB-GUID-EBF15ABF-92E7-45DF-B44D-0DA2832372E0" class="sect3"><span class="enumeration_section">14.3.3.5 </span>Adding a Breadcrumb Region from the
+        Gallery
+               </h3>
+               <div>
+                  <p>Add a breadcrumb region from the Gallery.</p>
+                  <div class="p">
+                     
+                     <div class="infobox-tip" id="GUID-EBF15ABF-92E7-45DF-B44D-0DA2832372E0__GUID-C9614BA5-4CE5-4C1D-B9B9-B5CCCA0EB3DC">
+                        <p class="notep1">Tip:</p>Before creating a breadcrumb region, Oracle recommends creating the
+                breadcrumb and adding breadcrumb entries.
+                     </div>
+                     
+                  </div>
+                  <div class="section">
+                     
+                     <p>To create a breadcrumb region from the Gallery:</p>
+                     
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears.
+                           <div class="infoboxnote" id="GUID-EBF15ABF-92E7-45DF-B44D-0DA2832372E0__GUID-88DCBD5C-2FEC-4B7E-AE0F-9CA2FE04F5C0">
+                              <p class="notep1">Note:</p>
+                              <p>Note the Gallery at the bottom of the page. Pass the cursor over a control or
+                            component to view a tooltip that describes it.</p>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>From the Gallery at the bottom of the page:</span><ol type="a" id="GUID-EBF15ABF-92E7-45DF-B44D-0DA2832372E0__SUBSTEPS_LYB_SHN_4MB">
+                           <li><span>Click the <span class="uicontrol bold">Regions</span> tab. </span></li>
+                           <li><span>Right-click <span class="uicontrol bold">Breadcrumb</span>.</span></li>
+                           <li><span>Select <span class="uicontrol bold">Add To</span> and then select the appropriate
+                            location such as <span class="uicontrol bold">Breadcrumb Bar</span>.</span></li>
+                        </ol>
+                        <div>
+                           
+                           <div class="infobox-tip" id="GUID-EBF15ABF-92E7-45DF-B44D-0DA2832372E0__GUID-A0AF1A6F-ECD6-44D5-A8F8-DD4ADC9282BF">
+                              <p class="notep1">Tip:</p>
+                              
+                              <p>You can also select the Breadcrumb region in the Gallery and
+                            drag it to the appropriate location in the Layout tab.</p>
+                              
+                           </div>
+                           
+                        </div>
+                        <div>
+                           
+                           <p>Page Designer indicates what actions are required next. If there
+                        is an error, a <span class="uicontrol bold">Messages</span> icon displays next to the
+                            <span class="uicontrol bold">Save</span> button. Click the
+                            <span class="uicontrol bold">Messages</span> icon to view a dialog listing all the
+                        errors. Select an error to highlight the associated attribute in the
+                        Property Editor.
+                           </p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>In the Property Editor, edit the following Region attributes:</span><div>
+                           
+                           <div class="infobox-tip" id="GUID-EBF15ABF-92E7-45DF-B44D-0DA2832372E0__GUID-8E8D0F45-EE4D-48AB-8729-45741FA19F9E">
+                              <p class="notep1">Tip:</p>
+                              
+                              <p>To learn more about an attribute, select the attribute in the
+                            Property Editor and click the <span class="uicontrol bold">Help</span> tab in the
+                            center pane.
+                              </p>
+                              
+                           </div>
+                           
+                        </div>
+                        <ol type="a">
+                           <li class="substepexpand"><span>Identification, Title - Enter a region title. The region title only
+                            displays when it is defined in the region template.</span></li>
+                           <li class="substepexpand"><span>Source, Breadcrumb - Select the breadcrumb to be added to the
+                            page.</span></li>
+                           <li class="substepexpand"><span>Layout, Sequence - Enter the display sequence for this item. The
+                            sequence and other layout settings determine where this item is
+                            displayed in relation to other items within the region.</span></li>
+                           <li class="substepexpand"><span>Layout, Position - Select the template position used to display this
+                            region. The selections available are derived from the appropriate
+                            template positions defined within the current theme, for the page's user
+                            interface.</span></li>
+                           <li class="substepexpand"><span>Appearance, Template - Select a region template to define the
+                            appearance and layout of this region. </span><div>For the Universal Theme, the application breadcrumb has a
+                            special location for placement. Oracle recommends using <span class="uicontrol bold">Title
+                                Bar</span> region template.
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Appearance, Render Components - Select if the region components display
+                            above or below the main region content.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                  </ol>
+                  <div class="section">
+                     <p>Repeat these procedures for each page where you would like to add breadcrumbs.</p>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-breadcrumb-manually.html#GUID-E5CF5983-3267-475E-BAAB-C683FFB918D6" title="Create a breadcrumb while creating a new page, as a Shared Component using the Create Breadcrumb Wizard, or by adding a the breadcrumb region in Page Designer. Add breadcrumb entries from Shared Components.">Creating a Breadcrumb Manually</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25543"></a><div class="props_rev_3"><a id="GUID-6750ADDF-959C-44E7-A6C5-495095E42C67" name="GUID-6750ADDF-959C-44E7-A6C5-495095E42C67"></a><h3 id="HTMDB-GUID-6750ADDF-959C-44E7-A6C5-495095E42C67" class="sect3"><span class="enumeration_section">14.3.3.6 </span>About Creating Dynamic Breadcrumbs
+               </h3>
+               <div>
+                  <div class="section">
+                     <p>To give users more exact context, you can include session state in breadcrumbs, making your breadcrumbs dynamic. For example, suppose a page in your application displays a list of orders for a particular company and you want to include the following breadcrumb:</p><pre class="oac_no_warn" dir="ltr">Home &gt; Orders &gt; Orders for ACME Inc
+</pre><p>In this example, <code class="codeph">ACME Inc</code> not only indicates the page a user is on but also the navigation path. The <span>Oracle APEX</span> engine stores the value of ACME Inc. in session state.
+                     </p>
+                     <p>To create this type of dynamic menu, you must include a reference to a session state item in the breadcrumb's short name or long name. For example:</p><pre class="oac_no_warn" dir="ltr">&amp;COMPANY_NAME.
+</pre></div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="creating-breadcrumb-manually.html#GUID-E5CF5983-3267-475E-BAAB-C683FFB918D6" title="Create a breadcrumb while creating a new page, as a Shared Component using the Create Breadcrumb Wizard, or by adding a the breadcrumb region in Page Designer. Add breadcrumb entries from Shared Components.">Creating a Breadcrumb Manually</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

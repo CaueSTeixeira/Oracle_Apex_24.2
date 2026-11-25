@@ -1,0 +1,246 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Listing Components in an Application">
+      <meta name="abstract" content="Use SQLcl to list all or selected components in an APEX application.">
+      <meta name="description" content="Use SQLcl to list all or selected components in an APEX application.">
+      <meta name="DC.subject" content="SQLcl, listing components in app, listing changed components by date, listing changed components by user">
+      <meta name="keywords" content="SQLcl, listing components in app, listing changed components by date, listing changed components by user">
+      <meta name="DC.Relation" scheme="URI" content="exporting-and-importing-using-sqlcl.html#GUID-54ED6670-EAEA-45CF-BB0B-F2CB81EB8CFF">
+      <meta name="DC.Relation" scheme="URI" content="listing-components-in-an-application.html#GUID-050A3C93-345D-4009-8F74-8C281C161A1C">
+      <meta name="DC.Relation" scheme="URI" content="listing-components-in-an-application.html#GUID-9B86B32F-081F-4852-BE5E-C372C4648B1B">
+      <meta name="DC.Relation" scheme="URI" content="listing-components-in-an-application.html#GUID-B6B0773F-C958-46E6-BA09-B250CF47B6FA">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-CA2DB2B3-7916-4F43-B26B-94676265BD32">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Use SQLcl to list all or selected components in an APEX application.">
+      <meta name="description" content="Use SQLcl to list all or selected components in an APEX application.">
+      <title>Listing Components in an Application</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Use SQLcl to list all or selected components in an APEX application.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="listing-applications.html" title="Previous" type="text/html">
+      <link rel="next" href="exporting-one-or-more-applications.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Listing Components in an Application","description":"Use SQLcl to list all or selected components in an APEX application.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="listing-applications.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="exporting-one-or-more-applications.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-CA2DB2B3-7916-4F43-B26B-94676265BD32" name="GUID-CA2DB2B3-7916-4F43-B26B-94676265BD32"></a>
+         
+         <h2 id="AEADM-GUID-CA2DB2B3-7916-4F43-B26B-94676265BD32" class="sect2"><span class="enumeration_section">3.12.11.1.5 </span>Listing Components in an Application
+         </h2>
+         <div class="ind">
+            <p>Use <span>SQLcl</span> to list all or selected components in an <span>APEX</span> application.
+            </p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="listing-components-in-an-application.html#GUID-050A3C93-345D-4009-8F74-8C281C161A1C">Listing Components in an Application</a><br>List all components in an <span>APEX</span> application.
+                  </li>
+                  <li class="ulchildlink"><a href="listing-components-in-an-application.html#GUID-9B86B32F-081F-4852-BE5E-C372C4648B1B">Listing Components in an Application Changed On or After a Given Date</a><br>List components in an <span>APEX</span> application changed on or after a given date.
+                  </li>
+                  <li class="ulchildlink"><a href="listing-components-in-an-application.html#GUID-B6B0773F-C958-46E6-BA09-B250CF47B6FA">Listing Components in an Application Changed by a Given User</a><br>List components in an <span>APEX</span> application changed by a given user.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="exporting-and-importing-using-sqlcl.html#GUID-54ED6670-EAEA-45CF-BB0B-F2CB81EB8CFF" title="Export workspaces, applications, and related files from a command line using Oracle SQL Developer Command Line (SQLcl) release 22.1 and later.">Exporting and Importing Using SQLcl</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-050A3C93-345D-4009-8F74-8C281C161A1C" name="GUID-050A3C93-345D-4009-8F74-8C281C161A1C"></a><h3 id="AEADM-GUID-050A3C93-345D-4009-8F74-8C281C161A1C" class="sect3"><span class="enumeration_section">3.12.11.1.5.1 </span>Listing Components in an
+        Application
+               </h3>
+               <div>
+                  <p>List all components in an <span>APEX</span> application.
+                  </p>
+                  <div class="section">
+                     
+                     <p>To list all components in an application, use the command
+                    <code class="codeph">apex</code> with the <code class="codeph">list</code> option and provide the
+                application ID.
+                     </p>
+                     
+                     <p>For example:</p>
+                     <pre class="pre codeblock"><code>SQL&gt; apex list -applicationid 113
+
+LAST_UPDATED_ON  ID                                      NAME
+2022-01-16 13:27 AUTHENTICATION:8357166163330009         Application Express Accounts
+2022-01-16 13:27 AUTHORIZATION:8548023343331081          Administration Rights
+2022-01-16 13:27 BREADCRUMB:8357461593330012             Breadcrumb
+:
+2022-01-16 13:27 PAGE:0                                  0. Global Page
+2022-01-16 13:27 PAGE:9999                               9999. Login Page
+2022-01-16 13:27 PAGE_TEMPLATE:8358297610330029          Drawer
+:
+2022-01-16 13:27 POPUP_LOV_TEMPLATE:8522686443330703     Search Dialog
+2022-01-16 13:27 REGION_TEMPLATE:8388699844330160        Alert</code></pre>
+                     <div class="infobox-tip" id="GUID-050A3C93-345D-4009-8F74-8C281C161A1C__GUID-9CBD92C4-FC05-410A-BA37-CE5A5346F2E7">
+                        <p class="notep1">Tip:</p>The
+                    <code class="codeph">COMPONENT_TYPE:ID</code> values returned in the <code class="codeph">ID</code>
+                column can be useful as input to the <code class="codeph">-expComponents</code> option
+                described in <a href="exporting-one-or-more-applications.html#GUID-FC04ED78-28AA-494C-933B-E7E63B561524" title="Export some application components by specifically listing the components by type and ID.">Exporting Only Selected Application Components</a>.
+                     </div>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="listing-components-in-an-application.html#GUID-CA2DB2B3-7916-4F43-B26B-94676265BD32" title="Use SQLcl to list all or selected components in an APEX application.">Listing Components in an Application</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-9B86B32F-081F-4852-BE5E-C372C4648B1B" name="GUID-9B86B32F-081F-4852-BE5E-C372C4648B1B"></a><h3 id="AEADM-GUID-9B86B32F-081F-4852-BE5E-C372C4648B1B" class="sect3"><span class="enumeration_section">3.12.11.1.5.2 </span>Listing Components in an Application
+        Changed On or After a Given Date 
+               </h3>
+               <div>
+                  <p>List components in an <span>APEX</span> application changed on or after a given date.
+                  </p>
+                  <div class="section">
+                     
+                     <p>To list components in an application changed on or after a given date,
+                use the the command <code class="codeph">apex</code> with the <code class="codeph">list</code> option and
+                provide the application <code class="codeph">ID</code> and date in the
+                    <code class="codeph">YYYY-MM-DD</code> format.
+                     </p>
+                     
+                     <p>For example:</p>
+                     <pre class="pre codeblock"><code>SQL&gt; apex list -applicationid 113 -changesSince 2022-01-14
+
+LAST_UPDATED_ON  ID                                      NAME
+2022-01-14 13:27 BREADCRUMB:8357461593330012             Breadcrumb
+2022-01-16 13:27 AUTHENTICATION:8357166163330009         Application Express Accounts
+2022-01-16 13:27 AUTHORIZATION:8548023343331081          Administration Rights
+:
+2022-01-16 13:27 PAGE:0                                  0. Global Page
+2022-01-16 13:27 PAGE:9999                               9999. Login Page
+2022-01-16 13:27 PAGE_TEMPLATE:8358297610330029          Drawer</code></pre>
+                     <div class="infobox-tip" id="GUID-9B86B32F-081F-4852-BE5E-C372C4648B1B__GUID-E2FD6E41-14CF-49A1-AE11-8EDB77C29FCF">
+                        <p class="notep1">Tip:</p> The
+                    <code class="codeph">COMPONENT_TYPE:ID</code> values returned in the <code class="codeph">ID</code>
+                column can be useful as input to the <code class="codeph">-expComponents</code> option
+                described in <a href="exporting-one-or-more-applications.html#GUID-FC04ED78-28AA-494C-933B-E7E63B561524" title="Export some application components by specifically listing the components by type and ID.">Exporting Only Selected Application Components</a>.
+                     </div>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="listing-components-in-an-application.html#GUID-CA2DB2B3-7916-4F43-B26B-94676265BD32" title="Use SQLcl to list all or selected components in an APEX application.">Listing Components in an Application</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-B6B0773F-C958-46E6-BA09-B250CF47B6FA" name="GUID-B6B0773F-C958-46E6-BA09-B250CF47B6FA"></a><h3 id="AEADM-GUID-B6B0773F-C958-46E6-BA09-B250CF47B6FA" class="sect3"><span class="enumeration_section">3.12.11.1.5.3 </span>Listing Components in an Application
+        Changed by a Given User 
+               </h3>
+               <div>
+                  <p>List components in an <span>APEX</span> application changed by a given user.
+                  </p>
+                  <div class="section">
+                     
+                     <p>To list components in an <span>APEX</span> application changed by a particular user, use the command <code class="codeph">apex</code>
+                with the <code class="codeph">list</code> option and include the application ID and a
+                username.
+                     </p>
+                     
+                     <p>The following example lists changed components in the application
+                    <code class="codeph">113</code> by <code class="codeph">jane.green</code>:
+                     </p>
+                     <pre class="pre codeblock"><code>SQL&gt; apex list -applicationid 113 -changesBy jane.green
+
+LAST_UPDATED_ON  ID                                      NAME
+2022-01-14 13:27 BREADCRUMB:8357461593330012             Breadcrumb
+2022-01-16 13:27 PAGE:0                                  0. Global Page
+2022-01-16 13:27 PAGE:9999                               9999. Login Page</code></pre>
+                     <p>You can also combine the date-based and user-based filters as
+                follows:</p>
+                     <pre class="pre codeblock"><code>SQL&gt; apex list -applicationid 113 -changesBy jane.green -changesSince 2022-01-15
+
+LAST_UPDATED_ON  ID                                      NAME
+2022-01-16 13:27 PAGE:0                                  0. Global Page
+2022-01-16 13:27 PAGE:9999                               9999. Login Page</code></pre>
+                     <div class="infobox-tip" id="GUID-B6B0773F-C958-46E6-BA09-B250CF47B6FA__GUID-90E460A7-9F88-4382-A287-86833083B15F">
+                        <p class="notep1">Tip:</p>The
+                    <code class="codeph">COMPONENT_TYPE:ID</code> values returned in the ID column can be
+                useful as input to the <code class="codeph">-expComponents</code> option described in <a href="exporting-one-or-more-applications.html#GUID-FC04ED78-28AA-494C-933B-E7E63B561524" title="Export some application components by specifically listing the components by type and ID.">Exporting Only Selected Application Components</a>.
+                     </div>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="listing-components-in-an-application.html#GUID-CA2DB2B3-7916-4F43-B26B-94676265BD32" title="Use SQLcl to list all or selected components in an APEX application.">Listing Components in an Application</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

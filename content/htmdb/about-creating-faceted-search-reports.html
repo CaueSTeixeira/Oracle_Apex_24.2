@@ -1,0 +1,342 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="About Creating Faceted Search Pages">
+      <meta name="abstract" content="Learn about creating faceted search pages.">
+      <meta name="description" content="Learn about creating faceted search pages.">
+      <meta name="DC.subject" content="faceted search, about creating, auto-discovered facets, about Data Dictionary Cache, facet types, search facet, types">
+      <meta name="keywords" content="faceted search, about creating, auto-discovered facets, about Data Dictionary Cache, facet types, search facet, types">
+      <meta name="DC.Relation" scheme="URI" content="managing-faceted-search.html#GUID-1A586583-3DAB-4F49-A5B4-A09AD93F015F">
+      <meta name="DC.Relation" scheme="URI" content="about-creating-faceted-search-reports.html#GUID-E86CE3C2-9DDE-48AB-965F-3181942E87FD">
+      <meta name="DC.Relation" scheme="URI" content="about-creating-faceted-search-reports.html#GUID-361C3264-019F-49A9-BAD1-029146BAEC2A">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Topic">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-896F3646-A9B3-410A-B703-28D79E96A1DE">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about creating faceted search pages.">
+      <meta name="description" content="Learn about creating faceted search pages.">
+      <title>About Creating Faceted Search Pages</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Learn about creating faceted search pages.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="example-faceted-search.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-faceted-search-using-create-application-wizard.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"About Creating Faceted Search Pages","description":"Learn about creating faceted search pages.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="example-faceted-search.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-faceted-search-using-create-application-wizard.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-896F3646-A9B3-410A-B703-28D79E96A1DE" name="GUID-896F3646-A9B3-410A-B703-28D79E96A1DE"></a>
+         
+         <h2 id="HTMDB-GUID-896F3646-A9B3-410A-B703-28D79E96A1DE" class="sect2"><span class="enumeration_section">8.7.2 </span>About Creating Faceted Search Pages
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Learn about creating faceted search pages.</p>
+               <p>Running the Create Application Wizard or Create Page Wizard is the easiest
+            way to create a faceted search page. However, you can create a faceted search page
+            manually but the process involves multiple steps. To learn more, see <a href="creating-a-faceted-search-manually.html#GUID-88226F4A-2971-447D-A267-1B7E37E9946D" title="Create a faceted search page by manually adding the page and facet components.">Creating a Faceted Search Manually</a>.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="about-creating-faceted-search-reports.html#GUID-E86CE3C2-9DDE-48AB-965F-3181942E87FD">About Creating Facet Search Pages with a Wizard</a><br>Create a faceted search page by running either the Create Application         Wizard or the Create Page Wizard.
+                  </li>
+                  <li class="ulchildlink"><a href="about-creating-faceted-search-reports.html#GUID-361C3264-019F-49A9-BAD1-029146BAEC2A">Search Facet Types</a><br>Learn about supported facet types.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-faceted-search.html#GUID-1A586583-3DAB-4F49-A5B4-A09AD93F015F" title="A faceted search page displays and filters data using an intuitive experience users recognize from ecommerce sites (a left Search region and report region). The report region displays search results as cards or a classic report.">Managing Faceted Search</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-E86CE3C2-9DDE-48AB-965F-3181942E87FD" name="GUID-E86CE3C2-9DDE-48AB-965F-3181942E87FD"></a><h3 id="HTMDB-GUID-E86CE3C2-9DDE-48AB-965F-3181942E87FD" class="sect3"><span class="enumeration_section">8.7.2.1 </span>About Creating Facet Search Pages
+        with a Wizard
+               </h3>
+               <div>
+                  <p>Create a faceted search page by running either the Create Application
+        Wizard or the Create Page Wizard.</p>
+                  <p>Both the Create Application Wizard and Create Page Wizard support the
+            creation of a faceted search page which contains a left Search region and a report. You
+            choose if the report is a classic report or a cards report.</p>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-E86CE3C2-9DDE-48AB-965F-3181942E87FD__GUID-83B076A3-FDE4-449B-8A32-C2552CCA7B9B">About Auto-Discovered
+                Facets</p>
+                     
+                     
+                     <p>When you build a faceted search page with either the Create Application
+                Wizard and Create Page Wizard, you can select a table or view on which to build the
+                page. If you create the page based on a table, the facets are auto-discovered using
+                the Data Dictionary Cache. In contrast, if you build the page on a view or a SQL
+                query, the facets are not auto-discovered. Instead, the wizard creates a facet
+                region which only searches <code class="codeph">VARCHAR2</code> columns.
+                     </p>
+                     
+                  </div>
+                  <div class="section">
+                     <p class="subhead2" id="GUID-E86CE3C2-9DDE-48AB-965F-3181942E87FD__GUID-8B4FF74C-5B0A-49DA-8EC9-B427E31A6A0C">About the Data Dictionary
+                Cache</p>
+                     
+                     
+                     <p>The Data Dictionary Cache report displays statistics and a data analysis
+                of schema tables and caches in a workspace. Both the Create Application Wizard and
+                Create Page Wizard use the Data Dictionary Cache when creating new applications and
+                pages. You can preview how the wizards will render facets on the Data Dictionary
+                Cache page by viewing the Table Column Cache report. The wizard uses the first top
+                five facet search score columns with score greater than or equal to 20.</p>
+                     
+                     <p>If a table changes due to DDL or DML modifications, the <span>Oracle APEX</span> nightly job <code class="codeph">ORACLE_APEX_DICTIONARY_CACHE</code> refreshes the Data
+                Dictionary Cache. However, you can refresh the cache manually by navigating to the
+                Data Dictionary Cache and clicking either <span class="uicontrol bold">Gather Statistics and Refresh
+                    Cache</span> or <span class="uicontrol bold">Refresh Cache Only</span> at the workspace
+                or table-level.
+                     </p>
+                     
+                  </div>
+                  <div class="section">
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-E86CE3C2-9DDE-48AB-965F-3181942E87FD__GUID-14351F5E-B07E-4C93-BE81-D740EAB8EA06">
+                     <p class="notep1">See Also:</p>
+                     
+                     <p><a href="../aeadm/accessing-data-dictionary-cache-from-workspace-administration.html#AEADM-GUID-E1F53056-9313-4693-AB33-C470D457EBE2" target="_blank">Accessing the Data Dictionary
+                        Cache Report from Workspace Administration</a> or <a href="../aeadm/accessing-data-dictionary-cache-from-administration-services.html#AEADM-GUID-E398AC8D-2054-4B10-A49C-E6AD49DCF78F" target="_blank">Accessing the Data Dictionary Cache Report
+                        from Administration Services</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+                     
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="about-creating-faceted-search-reports.html#GUID-896F3646-A9B3-410A-B703-28D79E96A1DE" title="Learn about creating faceted search pages.">About Creating Faceted Search Pages</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-361C3264-019F-49A9-BAD1-029146BAEC2A" name="GUID-361C3264-019F-49A9-BAD1-029146BAEC2A"></a><h3 id="HTMDB-GUID-361C3264-019F-49A9-BAD1-029146BAEC2A" class="sect3"><span class="enumeration_section">8.7.2.2 </span>Search Facet Types
+               </h3>
+               <div>
+                  <p>Learn about supported facet types.</p>
+                  <div class="section">
+                     
+                     <p>Search facets enable users to refine and narrow
+        results by selecting multiple static filters simultaneously.  </p>
+                     
+                     <p>You specify a search facet type in Page Designer, by selecting the facet in
+        the Rendering tab and configuring the <span class="uicontrol bold">Identification</span>,
+          <span class="uicontrol bold">Type</span> attribute in the Property Editor. Each facet has additional
+        attributes that control behavior. To learn more about a specific attribute, select the
+        attribute and click the <span class="uicontrol bold">Help</span> tab in the central pane. 
+                     </p>
+                     
+                     <div class="infobox-tip" id="GUID-361C3264-019F-49A9-BAD1-029146BAEC2A__GUID-CD5AAE1B-C800-4667-BF5C-4C8ED6EAC089">
+                        <p class="notep1">Tip:</p>
+                        
+                        <p>To see an example of manually adding a Search facet, Checkbox Group facets,
+          and a Range facets, see <a href="creating-a-faceted-search-manually.html#GUID-88226F4A-2971-447D-A267-1B7E37E9946D" title="Create a faceted search page by manually adding the page and facet components.">Creating a Faceted Search Manually</a>.
+                        </p>
+                        
+                     </div>
+                     
+                     <p><span>App Builder</span> supports the following search facet Types:
+                     </p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-361C3264-019F-49A9-BAD1-029146BAEC2A__UL_RYT_3WQ_FZB">
+                        <li>
+                           
+                           <p><span class="uicontrol bold">Checkbox Group</span> -
+                                                  Displays multiple values as check boxes, enabling
+                                                  the end user to select multiple values. A list of
+                                                  values is required for items displayed as check
+                                                  boxes. The values corresponding to the checked
+                                                  boxes are stored in a single colon-delimited
+                                                  string.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="uicontrol bold">Input Field</span> - Displays a text field that enables
+            the user to filter by text input. The comparison operator is either set by the developer
+            or can be chosen by the end user. Includes support for filtering by date, timestamp
+            (with local time zone). For DATE or TIMESTAMP values, use the
+              <code class="codeph">YYYYMMDDHH24MISS</code> canonical format.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="uicontrol bold">Radio Group</span> - Displays
+                                                  multiple values as radio group options, enabling
+                                                  the end user to select a single value.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="uicontrol bold">Range</span> - Displays an item
+                                                  with a built-in list of values selector. Each
+                                                  option represents a range of values, from a lower
+                                                  to an upper boundary. The facet supports single or
+                                                  multiple selection, and manual entry.
+                           </p>
+                           
+                           <p>For filtering and count computation, the lower
+                                                  boundary of a specified range is always treated
+                                                  inclusive, and the upper boundary is exclusive.
+                                                  Example LOV Syntax:</p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-361C3264-019F-49A9-BAD1-029146BAEC2A__UL_NRH_1XQ_FZB">
+                              <li>
+                                 
+                                 <p>Less than 100:</p>
+                                 
+                                 <p><code class="codeph">|100</code></p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>Between 100 and 500 (exclusive):</p>
+                                 
+                                 <p><code class="codeph">100|500</code></p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>500 and more:</p>
+                                 
+                                 <p><code class="codeph">500| </code></p>
+                                 
+                              </li>
+                           </ul>
+                           
+                           <p>For a range with a Manual Input, filter by date, timestamp (with local time zone). For
+            DATE or TIMESTAMP values, use the <code class="codeph">YYYYMMDDHH24MISS</code> canonical
+            format.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="uicontrol bold">Search</span> - Displays a text
+                                                  field, enabling the end user to search the list
+                                                  entries of the facets in the Faceted Search
+                                                  region. A Faceted Search region supports one
+                                                  Search facet, which will always be at the top of
+                                                  the list of Facets, regardless of its
+                                                  sequence.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p><span class="uicontrol bold">Select List</span> - Displays
+                                                  an item with a built-in list of values selector.
+                                                  When the end user clicks the item, the list of
+                                                  supported values displays directly inline with the
+                                                  current item.
+                           </p>
+                           
+                           <p>Select List is best suited for relatively
+                                                  small, discrete lists. End-Users can very quickly
+                                                  select a value from the list without needing to
+                                                  change focus to a popup dialog. For large lists
+                                                  <span class="italic">Popup LOV</span> is often better suited.
+                           </p>
+                           
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="about-creating-faceted-search-reports.html#GUID-896F3646-A9B3-410A-B703-28D79E96A1DE" title="Learn about creating faceted search pages.">About Creating Faceted Search Pages</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

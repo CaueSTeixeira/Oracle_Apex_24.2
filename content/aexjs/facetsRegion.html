@@ -1,0 +1,8086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Interface: facetsRegion</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+
+    <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+    <meta name="dcterms.created" content="2025-01-14T20:03:42+00:00">
+    <meta name="dcterms.title" content="Oracle APEX JavaScript API Reference">
+    <meta name="dcterms.category" content="database">
+    <meta name="dcterms.isVersionOf" content="AEXJS">
+    <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+    <meta name="dcterms.identifier" content="G12908-01">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script id="ssot-metadata" type="application/json"> {"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}} </script>
+    <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","name":"JSDoc: Interface: facetsRegion","datePublished":"2025-01-14 CST","dateModified":"2025-01-14 CST"} </script>
+    </head>
+
+<body>
+<a href="#main-content" id="skipToContent">Skip to Main Content</a>
+
+<nav id="nav" data-current-item="nav_25">
+    <h2 id="navIndex"><a href="index.html">Index</a></h2><h3>Namespaces</h3><ul><li id="nav_0"><a href="apex.html">apex</a></li><li id="nav_1"><a href="apex.actions.html">apex.actions</a></li><li id="nav_2"><a href="apex.da.html">apex.da</a></li><li id="nav_3"><a href="apex.date.html">apex.date</a></li><li id="nav_4"><a href="apex.debug.html">apex.debug</a></li><li id="nav_5"><a href="apex.event.html">apex.event</a></li><li id="nav_6"><a href="apex.item.html">apex.item</a></li><li id="nav_7"><a href="apex.lang.html">apex.lang</a></li><li id="nav_8"><a href="apex.locale.html">apex.locale</a></li><li id="nav_9"><a href="apex.message.html">apex.message</a></li><li id="nav_10"><a href="apex.model.html">apex.model</a></li><li id="nav_11"><a href="apex.navigation.html">apex.navigation</a></li><li id="nav_12"><a href="apex.navigation.dialog.html">apex.navigation.dialog</a></li><li id="nav_13"><a href="apex.navigation.popup.html">apex.navigation.popup</a></li><li id="nav_14"><a href="apex.page.html">apex.page</a></li><li id="nav_15"><a href="apex.pwa.html">apex.pwa</a></li><li id="nav_16"><a href="apex.region.html">apex.region</a></li><li id="nav_17"><a href="apex.server.html">apex.server</a></li><li id="nav_18"><a href="apex.storage.html">apex.storage</a></li><li id="nav_19"><a href="apex.theme.html">apex.theme</a></li><li id="nav_20"><a href="apex.util.html">apex.util</a></li><li id="nav_21"><a href="apex.util.delayLinger.html">apex.util.delayLinger</a></li><li id="nav_22"><a href="apex.widget.html">apex.widget</a></li></ul><h3>Interfaces</h3><ul><li id="nav_23"><a href="actions.html">actions</a></li><li id="nav_24"><a href="cardsRegion.html">cardsRegion</a></li><li id="nav_25"><a href="facetsRegion.html">facetsRegion</a></li><li id="nav_26"><a href="htmlBuilder.html">htmlBuilder</a></li><li id="nav_27"><a href="interactiveGridView.html">interactiveGridView</a></li><li id="nav_28"><a href="item.html">item</a></li><li id="nav_29"><a href="mapRegion.html">mapRegion</a></li><li id="nav_30"><a href="model.html">model</a></li><li id="nav_31"><a href="numberFieldItem.html">numberFieldItem</a></li><li id="nav_32"><a href="region.html">region</a></li><li id="nav_33"><a href="templateReportRegion.html">templateReportRegion</a></li><li id="nav_34"><a href="treeNodeAdapter.html">treeNodeAdapter</a></li></ul><h3>Widgets</h3><ul><li id="nav_35"><a href="grid.html">grid</a></li><li id="nav_36"><a href="iconList.html">iconList</a></li><li id="nav_37"><a href="interactiveGrid.html">interactiveGrid</a></li><li id="nav_38"><a href="menu.html">menu</a></li><li id="nav_39"><a href="menuButton.html">menuButton</a></li><li id="nav_40"><a href="recordView.html">recordView</a></li><li id="nav_41"><a href="tableModelView.html">tableModelView</a></li><li id="nav_42"><a href="tableModelViewBase.html">tableModelViewBase</a></li><li id="nav_43"><a href="treeView.html">treeView</a></li></ul><h3><a href="global.html">Non-namespace APIs</a></h3>
+</nav>
+
+<div id="main">
+
+
+
+    <h1 class="page-title">Interface: facetsRegion</h1>
+
+    
+
+
+
+
+<section id="quick-nav">
+    <header><h2>QuickNav</h2></header>
+    
+    <div class="quick-nav-section">
+        <h3> <a href="#members-section">Properties</a></h3>
+        <ul class="subList">
+            
+                <li><a href="#batch">batch</a></li>
+            
+                <li><a href="#chartTopNValues">chartTopNValues</a></li>
+            
+                <li><a href="#clearOnHide">clearOnHide</a></li>
+            
+                <li><a href="#collapsibleSearchBar">collapsibleSearchBar</a></li>
+            
+                <li><a href="#controls">controls</a></li>
+            
+                <li><a href="#currentFacets">currentFacets</a></li>
+            
+                <li><a href="#element">element</a></li>
+            
+                <li><a href="#externalApply">externalApply</a></li>
+            
+                <li><a href="#feedback">feedback</a></li>
+            
+                <li><a href="#filterRegionId">filterRegionId</a></li>
+            
+                <li><a href="#maxChips">maxChips</a></li>
+            
+                <li><a href="#moreFiltersChip">moreFiltersChip</a></li>
+            
+                <li><a href="#multipleSearches">multipleSearches</a></li>
+            
+                <li><a href="#numberFormat">numberFormat</a></li>
+            
+                <li><a href="#numberFormatOptions">numberFormatOptions</a></li>
+            
+                <li><a href="#numberFormatThreshold">numberFormatThreshold</a></li>
+            
+                <li><a href="#persistState">persistState</a></li>
+            
+                <li><a href="#searchButton">searchButton</a></li>
+            
+                <li><a href="#searchField">searchField</a></li>
+            
+                <li><a href="#searchItem">searchItem</a></li>
+            
+                <li><a href="#showCharts">showCharts</a></li>
+            
+                <li><a href="#showTotalCount">showTotalCount</a></li>
+            
+                <li><a href="#text">text</a></li>
+            
+                <li><a href="#type">type</a></li>
+            
+                <li><a href="#uiMode">uiMode</a></li>
+            
+        </ul>
+    </div>
+    
+    
+    <div class="quick-nav-section">
+        <h3><a href="#events-section">Events</a></h3>
+        <ul class="subList">
+            
+            <li><a href="#event:afterRemoveChart">afterRemoveChart</a></li>
+            
+            <li><a href="#event:beforeAddChart">beforeAddChart</a></li>
+            
+            <li><a href="#event:change">change</a></li>
+            
+        </ul>
+    </div>
+    
+
+    
+    <div class="quick-nav-section">
+        <h3><a href="#methods-section">Methods</a></h3>
+        <ul class="subList">
+            
+                <li><a href="#addChart">addChart</a></li>
+            
+                <li><a href="#apply">apply</a></li>
+            
+                <li><a href="#clear">clear</a></li>
+            
+                <li><a href="#clearFacets">clearFacets</a></li>
+            
+                <li><a href="#fetchCounts">fetchCounts</a></li>
+            
+                <li><a href="#focus">focus</a></li>
+            
+                <li><a href="#getFacetCount">getFacetCount</a></li>
+            
+                <li><a href="#getFacetValueCounts">getFacetValueCounts</a></li>
+            
+                <li><a href="#getTotalResourceCount">getTotalResourceCount</a></li>
+            
+                <li><a href="#hideFacet">hideFacet</a></li>
+            
+                <li><a href="#lock">lock</a></li>
+            
+                <li><a href="#off">off</a></li>
+            
+                <li><a href="#on">on</a></li>
+            
+                <li><a href="#refresh">refresh</a></li>
+            
+                <li><a href="#refreshView">refreshView</a></li>
+            
+                <li><a href="#removeChart">removeChart</a></li>
+            
+                <li><a href="#reset">reset</a></li>
+            
+                <li><a href="#showFacet">showFacet</a></li>
+            
+                <li><a href="#unlock">unlock</a></li>
+            
+        </ul>
+    </div>
+    
+
+    
+    <div class="quick-nav-section">
+        <h3><a href="#typedefs-section">Type Definitions</a></h3>
+        <ul class="subList">
+            
+                <li><a href="#.checkboxControl">checkboxControl</a></li>
+            
+                <li><a href="#.control">control</a></li>
+            
+                <li><a href="#.inputControl">inputControl</a></li>
+            
+                <li><a href="#.listControl">listControl</a></li>
+            
+                <li><a href="#.rangeControl">rangeControl</a></li>
+            
+                <li><a href="#.selectListControl">selectListControl</a></li>
+            
+        </ul>
+    </div>
+    
+</section>
+
+
+<section id="main-content">
+
+<header>
+    
+    
+        <h2>facetsRegion</h2>
+        
+            <div class="class-description"><p>The facetsRegion interface is used to access the properties and methods of the facets API which is
+used by both the Faceted Search and Smart Filters regions.
+You get access to the facetsRegion interface with the <a href="apex.region.html">apex.region</a> function when passed
+the regionId (static ID) of either a Faceted Search Region or Smart Filters Region.
+The terms <em>facet</em> and <em>filter</em> (when used as a noun) are often used interchangeably.
+</p>
+<p>The facetsRegion provides the user interface used to search and filter an associated report.
+The Faceted Search and Smart Filters regions have a great deal of overlap in their functionality; both allow
+searching and filtering a report. The biggest difference is in the UI and this is controlled by the
+<a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> property. A number of properties are only supported in one mode or the other
+as noted in the description of each property.
+</p>
+<p>Report region plug-in developers use the facetsRegion API to support the client side of faceted
+search for their plug-in. The plug-in server-side render code must pass the static ID of the Faceted Search
+or Smart Filter region to the client as part of its configuration. The plug-in region must listen for
+the <a href="facetsRegion.html#event:change">facetsRegion#event:change</a> event and refresh the report in response.
+Before sending the ajax request to refresh the report it must call
+<a href="facetsRegion.html#lock">facetsRegion#lock</a> and after the response completes it must call <a href="facetsRegion.html#unlock">facetsRegion#unlock</a>.
+</p>
+<div class="hw">
+<h3 id="facet-items-section">Facet Items</h3>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark Facet Items" href="#facet-items-section"></a>
+</div>
+<p>Users filter the report by choosing or entering value(s) for as many facets as needed. The facet value is used
+to match a specific column. Users can also enter a search term that matches any of the searchable columns
+of the report. Each facet value and the search term(s) is stored in a hidden page item and has a corresponding
+session state value. The item name is the filter or facet name.
+</p>
+<p>For example, if there is a facet or filter with name P1_PROJECT_STATUS that has LOV return values:
+'OPEN', 'IN_PROGRESS', 'CLOSED', and 'REOPENED'. Setting the page item will cause the facets region and
+the report region to be updated to reflect the new facet value(s).
+After executing the following code the report will show any records that have project status of OPEN or REOPENED.</p>
+<pre class="prettyprint"><code>apex.item( "P1_PROJECT_STATUS" ).setValue( "OPEN:REOPENED" );
+</code></pre>
+<p>Note that multiple values are separated by a colon ":" and facet values that represent a range use
+vertical bar "|" to separate the min and max range values.
+</p>
+<h4 id="facet-items-section-flexible-Operators"><b>Flexible Operators</b></h4>
+<p>When using facets of type "Input Field" and "User can Choose Operator" is activated then the operator can be set by changing
+the facet value.</p>
+<p>For example, if there is a facet or filter with name P1_POPULATION, then report region can be filtered for all countries where
+population is equal to a specific value.
+After executing the following code the report will show any records that have equals to 1000.</p>
+<pre class="prettyprint"><code>apex.item( "P1_POPULATION" ).setValue( "EQ:1000" );</code></pre>
+<p>The following operators are available:</p>
+<ul>
+    <li>General
+        <ul>
+            <li>EQ: Equals</li>
+            <li>NEQ: Not equals</li>
+        </ul>
+    </li>
+    <li>NUMBER
+        <ul>
+            <li>LT: Less than</li>
+            <li>LTE: Less than or equal to</li>
+            <li>GT: Greater than</li>
+            <li>GTE: Greater than or equal to</li>
+        </ul>
+    </li>
+    <li>VARCHAR2
+        <ul>
+            <li>STARTS": Starts with</li>
+            <li>NSTARTS: Does not start with</li>
+            <li>C: Contains</li>
+            <li>NC: Does not contain</li>
+        </ul>
+    </li>
+</ul></div>
+        
+    
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since"><ul class="dummy"><li>21.2</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="region.html">region</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+        <div class="hw">
+        <h3 id="members-section" class="subsection-title">
+            Properties
+        </h3>
+            <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark Properties" href="#members-section"></a>
+        </div>
+
+        
+            
+<div class="hw">
+<h4 class="name" id="batch"><span class="type-signature"></span>batch<span class="type-signature"> :boolean</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark batch" href="#batch"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>Batch facet control changes or not. Batching changes allows the user to make a number of selections
+before the report refreshes. In some cases this can make searching more efficient.
+</p>
+<p>When true, the <a href="facetsRegion.html#event:change">facetsRegion#event:change</a> event is delayed until an "apply" button is pressed. When
+ <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "F" (faceted search mode) there will be an apply button shown (unless
+ <a href="facetsRegion.html#externalApply">facetsRegion#externalApply</a> is true). When <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "S" (smart filter mode)
+ changes are applied when the the facet popup is closed.
+</p>
+<p>When false, the <a href="facetsRegion.html#event:change">facetsRegion#event:change</a> event is fired as soon as any facet control value changes.
+</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get or set option batch after initialization.</p>
+    
+        <pre class="prettyprint"><code>// get
+var value = apex.region( "myRegionId" ).batch;
+// set
+apex.region( "myRegionId" ).batch = false;</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="chartTopNValues"><span class="type-signature"></span>chartTopNValues<span class="type-signature"> :number</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark chartTopNValues" href="#chartTopNValues"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>The default maximum number of values to show in a facet chart.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>10</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get or set option chartTopNValues after initialization.</p>
+    
+        <pre class="prettyprint"><code>// get
+var value = apex.region( "myRegionId" ).chartTopNValues;
+// set
+apex.region( "myRegionId" ).chartTopNValues = 20;</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="clearOnHide"><span class="type-signature"></span>clearOnHide<span class="type-signature"> :boolean</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark clearOnHide" href="#clearOnHide"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>Controls if facet values are cleared when hidden by the facet configuration popup (More Filters).
+This option is not applicable when <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "S" (smart filter mode)</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get or set option clearOnHide after initialization.</p>
+    
+        <pre class="prettyprint"><code>// get
+var value = apex.region( "myRegionId" ).clearOnHide;
+// set
+apex.region( "myRegionId" ).clearOnHide = false;</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="collapsibleSearchBar"><span class="type-signature"></span>collapsibleSearchBar<span class="type-signature"> :boolean|null</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark collapsibleSearchBar" href="#collapsibleSearchBar"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>This determines if the search bar is collapsible.
+If null (the default) the search bar is collapsible on mobile sized screens but not on desktop (larger) screens.
+If true the searchbar is always collapsible. If false the searchbar is not collapsible.
+When collapsible and there are no filters the search input field is not shown and the suggestions,
+if any, are on one line.
+This only applies when <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "S" (smart filter mode) and
+<a href="facetsRegion.html#maxChips">facetsRegion#maxChips</a> is not 0.
+</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+|
+
+<span class="param-type">null</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>null</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get or set option collapsibleSearchBar after initialization.</p>
+    
+        <pre class="prettyprint"><code>// get
+var value = apex.region( "myRegionId" ).collapsibleSearchBar;
+// set
+apex.region( "myRegionId" ).collapsibleSearchBar = true;</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="controls"><span class="type-signature"></span>controls<span class="type-signature"> :Array.&lt;<a href="facetsRegion.html#.control">facetsRegion.control</a>></span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark controls" href="#controls"></a>
+</div>
+
+
+
+
+<div class="description">
+    An array of facet control objects. Required. The controls are set according to the region
+facet or filter configuration.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Array.&lt;<a href="facetsRegion.html#.control">facetsRegion.control</a>></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="currentFacets"><span class="type-signature"></span>currentFacets<span class="type-signature"> :string|boolean</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark currentFacets" href="#currentFacets"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>Controls if and where the list of current (applied) facet choices are shown. This is known as the
+current facets area.
+If a string, it is the selector of an element to render the list of current facet values in.
+If true the list of current facets is added at the top of the facets region.
+If false or not present there is no list of current facets.
+</p>
+<p>This option can only be set during initialization.
+When <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "S" (smart filter mode) this option is forced to be false
+because applied facets are always shown in the search bar.
+</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+|
+
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get option currentFacets after initialization.</p>
+    
+        <pre class="prettyprint"><code>var value = apex.region( "myRegionId" ).currentFacets;</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="element"><span class="type-signature"></span>element<span class="type-signature"> :jQuery</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark element" href="#element"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>The jQuery object for the region element.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">jQuery</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="region.html#element">region#element</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get option element after initialization.</p>
+    
+        <pre class="prettyprint"><code>var value = apex.region( "myRegionId" ).element;</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="externalApply"><span class="type-signature"></span>externalApply<span class="type-signature"> :boolean</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark externalApply" href="#externalApply"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>Only applies if <a href="facetsRegion.html#batch">facetsRegion#batch</a> is true and <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "F" (faceted search mode).
+If true no apply button is shown. Used when facets are in a dialog
+or popup or otherwise have some other external way to apply the changes.
+See the <a href="facetsRegion.html#apply">facetsRegion#apply</a> method.
+</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>false</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get or set option externalApply after initialization.</p>
+    
+        <pre class="prettyprint"><code>// get
+var value = apex.region( "myRegionId" ).externalApply;
+// set
+apex.region( "myRegionId" ).externalApply = true;</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="feedback"><span class="type-signature"></span>feedback<span class="type-signature"> :boolean</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark feedback" href="#feedback"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>If true the facet control values give feedback (counts) about how many resources match the facet value.
+If false there is no feedback. Feedback can also be configured on a per facet basis with the
+<code class="prettyprint">hasFeedback</code> property of a control. See <a href="facetsRegion.html#.control">facetsRegion.control</a>.
+</p>
+<p>This option can only be set during initialization.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get option feedback after initialization.</p>
+    
+        <pre class="prettyprint"><code>var value = apex.region( "myRegionId" ).feedback;</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="filterRegionId"><span class="type-signature"></span>filterRegionId<span class="type-signature"> :string</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark filterRegionId" href="#filterRegionId"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>For region plug-ins which support Faceted Search / Smart Filters it is possible to pass in the DOM ID of the 
+<a href="facetsRegion.html">facetsRegion</a> region in order for APEX to bind the two together. If provided, the region will be automatically refreshed as the filters change.
+Further, if the region's refresh callback returns a Promise, APEX will also automatically perform the appropriate locking and unlocking
+of the <a href="facetsRegion.html">facetsRegion</a> region during refresh.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="region.html#filterRegionId">region#filterRegionId</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="maxChips"><span class="type-signature"></span>maxChips<span class="type-signature"> :number</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark maxChips" href="#maxChips"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>The maximum number of suggestion filter chips to show at a time.
+If 0 the suggestion filter chips area is not shown. If -1 then all available facet suggestions
+are shown. The <a href="facetsRegion.html#moreFiltersChip">facetsRegion#moreFiltersChip</a> option is only useful when this value is positive.
+</p>
+<p>This only applies when <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "S" (smart filter mode) and is ignored otherwise.
+</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>5</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get or set option maxChips after initialization.</p>
+    
+        <pre class="prettyprint"><code>// get
+var value = apex.region( "myRegionId" ).maxChips;
+// set
+apex.region( "myRegionId" ).maxChips = 6;</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="moreFiltersChip"><span class="type-signature"></span>moreFiltersChip<span class="type-signature"> :boolean</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark moreFiltersChip" href="#moreFiltersChip"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>Determine if a special "more filters" chip is shown in the suggestion filter chips area.
+When clicked this chip shows a list of available filers to choose and filer the report on.
+</p>
+<p>This only applies when <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "S" (smart filter mode) and is ignored otherwise.
+See also <a href="facetsRegion.html#maxChips">facetsRegion#maxChips</a>.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get or set option moreFiltersChip after initialization.</p>
+    
+        <pre class="prettyprint"><code>// get
+var value = apex.region( "myRegionId" ).moreFiltersChip;
+// set
+apex.region( "myRegionId" ).moreFiltersChip = false;</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="multipleSearches"><span class="type-signature"></span>multipleSearches<span class="type-signature"> :boolean</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark multipleSearches" href="#multipleSearches"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>Specify if multiple searches are allowed. If true the report can be filtered by multiple
+search terms. Each search term must match some part of a record for it to be included in the report.
+(This means that search term conditions are combined with AND.)
+If false only a single search term is allowed.
+When <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "S" (smart filter mode) this option is forced to be true
+and cannot be changed.
+</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>false</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get or set option multipleSearches after initialization.</p>
+    
+        <pre class="prettyprint"><code>// get
+var value = apex.region( "myRegionId" ).multipleSearches;
+// set
+apex.region( "myRegionId" ).multipleSearches = true;</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="numberFormat"><span class="type-signature"></span>numberFormat<span class="type-signature"> :string|boolean</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark numberFormat" href="#numberFormat"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>Controls if and how numbers for facet value counts and total count are formatted.
+If false the numbers are not formatted.
+If true the numbers are formatted using compact format (with no fractional digits) for numbers greater
+than or equal to the <a href="facetsRegion.html#numberFormatThreshold">facetsRegion#numberFormatThreshold</a> and a default format model with group separators otherwise.
+The <a href="facetsRegion.html#numberFormatOptions">facetsRegion#numberFormatOptions</a> are not used.
+If a string: it is a database number format model or the keyword "compact".
+</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+|
+
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get or set option numberFormat after initialization.</p>
+    
+        <pre class="prettyprint"><code>// get
+var value = apex.region( "myRegionId" ).numberFormat;
+// set
+apex.region( "myRegionId" ).numberFormat = "999G999G999G999";</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="numberFormatOptions"><span class="type-signature"></span>numberFormatOptions<span class="type-signature"> :object</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark numberFormatOptions" href="#numberFormatOptions"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>Options to pass to the number formatting function. The available option properties depend on
+the value of <a href="facetsRegion.html#numberFormat">facetsRegion#numberFormat</a>. See <a href="apex.locale.html#.formatNumber">apex.locale.formatNumber</a> and
+<a href="apex.locale.html#.formatCompactNumber">apex.locale.formatCompactNumber</a>.
+</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>null</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get or set option numberFormatOptions after initialization.</p>
+    
+        <pre class="prettyprint"><code>// get
+var value = apex.region( "myRegionId" ).numberFormatOptions;
+// set
+apex.region( "myRegionId" ).numberFormatOptions = {
+    maximumFractionDigits: 1
+};</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="numberFormatThreshold"><span class="type-signature"></span>numberFormatThreshold<span class="type-signature"> :number</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark numberFormatThreshold" href="#numberFormatThreshold"></a>
+</div>
+
+
+
+
+<div class="description">
+    See <a href="facetsRegion.html#numberFormat">facetsRegion#numberFormat</a>. Only applies if <a href="facetsRegion.html#numberFormat">facetsRegion#numberFormat</a> is true.
+If null and <code class="prettyprint">numberFormat</code> is true then
+the default format model with group separators is used.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>null</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get or set option numberFormatThreshold after initialization.</p>
+    
+        <pre class="prettyprint"><code>// get
+var value = apex.region( "myRegionId" ).numberFormatThreshold;
+// set
+apex.region( "myRegionId" ).numberFormatThreshold = 1000;</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="persistState"><span class="type-signature"></span>persistState<span class="type-signature"> :boolean</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark persistState" href="#persistState"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>Persist facet control collapsed state and chart state in browser session storage or not.
+</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get or set option persistState after initialization.</p>
+    
+        <pre class="prettyprint"><code>// get
+var value = apex.region( "myRegionId" ).persistState;
+// set
+apex.region( "myRegionId" ).persistState = false;</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="searchButton"><span class="type-signature"></span>searchButton<span class="type-signature"> :string</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark searchButton" href="#searchButton"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>The id of a button that initiates the search. Only applies if <a href="facetsRegion.html#searchField">facetsRegion#searchField</a>
+is a string page item id. If this value is changed call <a href="facetsRegion.html#refreshView">facetsRegion#refreshView</a>.
+</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>null</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get or set option searchButton after initialization.</p>
+    
+        <pre class="prettyprint"><code>// get
+var value = apex.region( "myRegionId" ).searchButton;
+// set
+apex.region( "myRegionId" ).searchButton = "P1_SEARCH_BUTTON";</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="searchField"><span class="type-signature"></span>searchField<span class="type-signature"> :string|boolean</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark searchField" href="#searchField"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>This controls the search field.
+If true a search field is included in the facets area.
+If false there is no search field.
+If a string it is the ID of a page item input field to use as the search field
+When <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "S" (smart filter mode) this option is forced to be true
+and cannot be changed.
+</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+|
+
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>false</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get or set option searchField after initialization.</p>
+    
+        <pre class="prettyprint"><code>// get
+var value = apex.region( "myRegionId" ).searchField;
+// set
+apex.region( "myRegionId" ).searchField = "P1_SEARCH";</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="searchItem"><span class="type-signature"></span>searchItem<span class="type-signature"> :string</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark searchItem" href="#searchItem"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>Name of the search item. Required if <a href="facetsRegion.html#searchField">facetsRegion#searchField</a> is not false.
+</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>null</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get option searchItem after initialization.</p>
+    
+        <pre class="prettyprint"><code>var value = apex.region( "myRegionId" ).searchItem;</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="showCharts"><span class="type-signature"></span>showCharts<span class="type-signature"> :string|boolean</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark showCharts" href="#showCharts"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>Determines if facets can have a button to show a chart of facet counts.
+If true a chart for a single facet can be shown in a dialog (or popup).
+If false no charts can be shown.
+If a string it is the selector of an element to render the charts in.
+</p>
+<p>Charts can also be shown with the <a href="facetsRegion.html#addChart">facetsRegion#addChart</a> method unless this option is false.
+When <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "S" (smart filter mode) there is no built-in UI for the user to show charts.
+The require and JET chart libraries and JET CSS must be available. This is done automatically by the Faceted
+Search region but not the Smart Filters region.
+</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+|
+
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>false</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get or set option showCharts after initialization.</p>
+    
+        <pre class="prettyprint"><code>// get
+var value = apex.region( "myRegionId" ).showCharts;
+// set
+apex.region( "myRegionId" ).showCharts = true;</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="showTotalCount"><span class="type-signature"></span>showTotalCount<span class="type-signature"> :string|boolean</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark showTotalCount" href="#showTotalCount"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>Controls if and where the total count is shown.
+If a string, it is a selector of an element to display the current total resources count in.
+If true show the total count in the current facets area or if there is no current facets area show it
+where the current facets area would be if it were true.
+If false don't show the total count.
+This is forced to false if feedback is false.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+|
+
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get option showTotalCount after initialization.</p>
+    
+        <pre class="prettyprint"><code>var value = apex.region( "myRegionId" ).showTotalCount;</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="text"><span class="type-signature"></span>text<span class="type-signature"> :object</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark text" href="#text"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>Object containing translatable strings. All required.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props" aria-label="Properties">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>searchLabel</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Accessible label for the search input field or search button.
+  Only used when <a href="facetsRegion.html#searchField">facetsRegion#searchField</a> is true.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>searchPlaceholder</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Placeholder text for the search input field.
+  Only used when <a href="facetsRegion.html#searchField">facetsRegion#searchField</a> is true.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>totalCountLabel</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Label to show before the total results count. Only used when <a href="facetsRegion.html#showTotalCount">facetsRegion#showTotalCount</a> is true.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get option text after initialization.</p>
+    
+        <pre class="prettyprint"><code>var value = apex.region( "myRegionId" ).text;</code></pre>
+    
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="type"><span class="type-signature"></span>type<span class="type-signature"> :string</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark type" href="#type"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>The facetsRegion type is "Facets".</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="region.html#type">region#type</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<div class="hw">
+<h4 class="name" id="uiMode"><span class="type-signature"></span>uiMode<span class="type-signature"> :string</span></h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark uiMode" href="#uiMode"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>Controls the UI mode of the region. It is one of the following values:</p>
+<ul>
+<li>"F" This is traditional faceted search mode. This is the value set by the Faceted Search region.</li>
+<li>"S" This is smart filter search mode. This is the value set by the Smart Filters region.</li>
+</ul>
+<p>This option property cannot be changed after initialization. A number of other options and methods
+are affected by this property setting.
+</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>"F"</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get option uiMode after initialization.</p>
+    
+        <pre class="prettyprint"><code>var value = apex.region( "myRegionId" ).uiMode;</code></pre>
+    
+
+
+        
+    
+
+    
+        <div class="hw">
+        <h3 id="events-section" class="subsection-title">
+            Events
+        </h3>
+        <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark Events" href="#events-section"></a>
+        </div>
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="event:afterRemoveChart">afterRemoveChart</h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark afterRemoveChart" href="#event:afterRemoveChart"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Triggered just after a chart is removed from the charts dashboard area.
+This is the same as the Dynamic Action event: After Remove Chart [Faceted Search].</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props" aria-label="Properties">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>event</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Event</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><code class="prettyprint">jQuery</code> event object.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>data</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <h6>Properties</h6>
+
+<table class="props" aria-label="Properties">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>count</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Number of active charts now that this one is removed.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>chartName</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the chart. It is the same as the facet item.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">In this example charts are shown in a collapsible dashboard region. When the
+last chart is removed the collapsible region needs to be collapsed.</p>
+    
+        <pre class="prettyprint"><code>apex.region( "myRegionId" ).on( "facetsafterremovechart", function( event, data ) {
+    if ( data.count === 0 ) {
+        apex.theme.closeRegion( "myDashboardRegionId" );
+    }
+} );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="event:beforeAddChart">beforeAddChart</h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark beforeAddChart" href="#event:beforeAddChart"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Triggered just before a new chart is added to the charts dashboard area.
+This is the same as the Dynamic Action event: Before Add Chart [Faceted Search].</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props" aria-label="Properties">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>event</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Event</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><code class="prettyprint">jQuery</code> event object.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>data</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <h6>Properties</h6>
+
+<table class="props" aria-label="Properties">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>count</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Number of active charts after this one is added.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>chartName</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the chart. It is the same as the facet item.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>chart</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Element</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The chart Element added. This is the wrapping element that contains
+  the title, buttons, and chart.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">In this example charts are shown in a collapsible dashboard region. When the
+first chart is added the collapsible region needs to be expanded.</p>
+    
+        <pre class="prettyprint"><code>apex.region( "myRegionId" ).on( "facetsbeforeaddchart", function( event, data ) {
+    if ( data.count === 1 ) {
+        apex.theme.openRegion( "myDashboardRegionId" );
+    }
+} );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="event:change">change</h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark change" href="#event:change"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Triggered when one or more facet control values have changed. It has no additional data.
+This is the same as the Dynamic Action events: Facets Change [Faceted Search] and
+Filters Change [Smart Filters].</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props" aria-label="Properties">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>event</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Event</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><code class="prettyprint">jQuery</code> event object.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">The report region associated with the Smart Filter or Faceted Search region will
+automatically refresh when facet values change but if you have other regions on the page that
+also need to refresh listen for this event. The following will refresh region "extraReport" when
+facet values change.</p>
+    
+        <pre class="prettyprint"><code>apex.region( "myRegionId" ).on( "facetschange", function( event ) {
+    apex.region( "extraReport" ).refresh();
+} );</code></pre>
+    
+
+
+        
+    
+
+    
+        <div class="hw">
+        <h3 id="methods-section" class="subsection-title">
+            Methods
+        </h3>
+        <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark Methods" href="#methods-section"></a>
+        </div>
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="addChart"><span class="type-signature"></span>addChart<span class="signature">(pFacetName, pAppendTo$<span class="signature-attributes">opt</span>, pConfig<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark addChart(pFacetName, pAppendTo$, pConfig)" href="#addChart"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Add/show a chart for the given facet.</p>
+<p>This API only works for facets that are displayed inline (facetsRegion#displayAs is "INLINE").</p>
+<p>See also <a href="facetsRegion.html#removeChart">facetsRegion#removeChart</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params" aria-label="Parameters for addChart">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+        <th scope="col">Attributes</th>
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pFacetName</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The facet to add a chart for.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pAppendTo$</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">jQuery</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The element to append the chart to. If not specified then the chart is shown
+   according to the <a href="facetsRegion.html#showCharts">facetsRegion#showCharts</a> property.
+   The <a href="facetsRegion.html#showCharts">facetsRegion#showCharts</a> option must not be false if <code class="prettyprint">appendTo$</code>
+   is not specified.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pConfig</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Optional chart configuration.
+                <h6>Properties</h6>
+                
+
+<table class="params" aria-label="Parameters for pConfig">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>type</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The chart type. One of "bar", "pie".</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>topN</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Maximum number of values to show in the chart</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Examples</h5>
+    
+        <p class="code-caption">This example shows a chart for the P1_SAL facet in a non-modal dialog.</p>
+    
+        <pre class="prettyprint"><code>apex.region( "myRegionId" ).addChart( "P1_SAL" );</code></pre>
+    
+        <p class="code-caption">This example adds a pie chart for the P1_JOB facet in dashboard area div with id "#chartDashboard".</p>
+    
+        <pre class="prettyprint"><code>apex.region( "myRegionId" ).addChart( "P1_JOB", $( "#chartDashboard" ), {type: "pie"});</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="apply"><span class="type-signature"></span>apply<span class="signature">()</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark apply()" href="#apply"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Apply any outstanding changes to facet values. This method is intended for when
+both <a href="facetsRegion.html#batch">facetsRegion#batch</a> and <a href="facetsRegion.html#externalApply">facetsRegion#externalApply</a> are true.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">In this example the <code class="prettyprint">batch</code> and
+<code class="prettyprint">externalApply</code> properties are true and the page has
+a button with id "myApplyButton". The user clicks this button to apply facet choices.</p>
+    
+        <pre class="prettyprint"><code>$( "#myApplyButton" ).on( "click", function() {
+    apex.region( "myRegionId" ).apply();
+}</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="clear"><span class="type-signature"></span>clear<span class="signature">()</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark clear()" href="#clear"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Clear all the current (applied) facet values and any search terms.</p>
+<p>See also <a href="facetsRegion.html#clearFacets">facetsRegion#clearFacets</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example clears all the facet and search term values when the button with
+id <em>CLEAR_BUTTON</em> is pressed.</p>
+    
+        <pre class="prettyprint"><code>$("#CLEAR_BUTTON").on( "click", function() {
+    apex.region( "regionId" ).clear();
+} );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="clearFacets"><span class="type-signature"></span>clearFacets<span class="signature">()</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark clearFacets()" href="#clearFacets"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Clear all the current (applied) facet values. Search terms if any are not cleared.</p>
+<p>See also <a href="facetsRegion.html#clear">facetsRegion#clear</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example defines an action that will clear all the facet values when
+the keyboard shortcut Ctrl+/,X is pressed. The action could also be associated with a menu item
+and/or button. See also <a href="actions.html#add">actions#add</a>.</p>
+    
+        <pre class="prettyprint"><code>apex.actions.add( [ {
+    name: "clear-search",
+    label: "Clear Filters",
+    shortcut: "Ctrl+/,X",
+    action: function() {
+        apex.region( "regionId" ).clearFacets();
+    }
+} ] );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="fetchCounts"><span class="type-signature"></span>fetchCounts<span class="signature">()</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark fetchCounts()" href="#fetchCounts"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Refreshes the counts for all the facets. This is useful if the report is also filtered by controls, such
+as page items, that are external to the facets region and those external control values have changed.</p>
+<p>See also <a href="facetsRegion.html#refresh">facetsRegion#refresh</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">In this example there is an input element with id <em>P1_EXTERNAL_FILTER</em> and when
+it changes the report is refreshed so the facet counts must also be refreshed.</p>
+    
+        <pre class="prettyprint"><code>$("#P1_EXTERNAL_FILTER").on( "change", function() {
+    apex.region( "regionId" ).fetchCounts();
+} );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="focus"><span class="type-signature"></span>focus<span class="signature">()</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark focus()" href="#focus"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Focus the first tabbable element. In faceted search mode (<a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "F")
+the search input field is focused if <a href="facetsRegion.html#searchField">facetsRegion#searchField</a> is true or the first facet control body
+otherwise. In smart filter mode (<a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "S") the search bar search input field
+or search button is focused.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="region.html#focus">region#focus</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example puts focus in the Faceted Search or Smart Filters region.</p>
+    
+        <pre class="prettyprint"><code>apex.region( "myRegionId" ).focus();</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="getFacetCount"><span class="type-signature"></span>getFacetCount<span class="signature">(pIncludeSearchTerms)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark getFacetCount(pIncludeSearchTerms) returns {number}" href="#getFacetCount"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Returns the number of facets that have a non-empty value. This is useful when the
+facet UI is not always visible (for example it is in a collapsible or dialog region)
+and you wish to display how many filters are applied.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params" aria-label="Parameters for getFacetCount">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pIncludeSearchTerms</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If true the search terms are included in the count.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="getFacetValueCounts"><span class="type-signature"></span>getFacetValueCounts<span class="signature">()</span><span class="type-signature"> &rarr; {object}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark getFacetValueCounts() returns {object}" href="#getFacetValueCounts"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Returns an object structure with all the counts displayed by the facets UI.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Facet value counts. The object properties are the facet control names.
+The value of each property is an object with the facet value as the property and the
+count as the property value.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="getTotalResourceCount"><span class="type-signature"></span>getTotalResourceCount<span class="signature">()</span><span class="type-signature"> &rarr; {number}</span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark getTotalResourceCount() returns {number}" href="#getTotalResourceCount"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Returns the total number of resources (records) in the report. This is the same value
+displayed by the <a href="facetsRegion.html#showTotalCount">facetsRegion#showTotalCount</a> property, except it is not formatted.
+Returns null if <a href="facetsRegion.html#feedback">facetsRegion#feedback</a> property is false.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example logs the number of records in the report to the console.</p>
+    
+        <pre class="prettyprint"><code>console.log("Total records is ", apex.region( "regionId" ).getTotalResourceCount() );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="hideFacet"><span class="type-signature"></span>hideFacet<span class="signature">(pFacetName)</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark hideFacet(pFacetName)" href="#hideFacet"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Hides the specified facet. Note that hiding a facet does not clear any value(s) that may currently
+be filtering the report.</p>
+<p></p>
+<p>In faceted search mode (<a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "F") the facet
+header and all choices or other selection UI are hidden.
+</p>
+<p>This API only works for facets that are displayed inline (facetsRegion#displayAs is "INLINE").</p>
+<p>In smart filter mode (<a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "S") the hidden facet will not show in the
+suggestion chip area or in the suggestion drop down.</p>
+<p>
+</p><p>See also <a href="facetsRegion.html#showFacet">facetsRegion#showFacet</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params" aria-label="Parameters for hideFacet">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pFacetName</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Examples</h5>
+    
+        <p class="code-caption">This example hides the facet named "P1_COMM".</p>
+    
+        <pre class="prettyprint"><code>apex.region( "myRegionId" ).hideFacet( "P1_COMM" );</code></pre>
+    
+        <p class="code-caption">This example hides the facet named "P1_COMM" and also clears any values it may have.</p>
+    
+        <pre class="prettyprint"><code>apex.item( "P1_COMM" ).setValue( "" );
+apex.region( "myRegionId" ).hideFacet( "P1_COMM" );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="lock"><span class="type-signature"></span>lock<span class="signature">()</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark lock()" href="#lock"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Disables the facets region so that facet values cannot be changed through the UI or API.
+This is done by the report region associated with this facets region so that multiple requests are not
+sent to the server at the same time.
+For every call to <a href="facetsRegion.html#lock">facetsRegion#lock</a> there must be a corresponding call to <a href="facetsRegion.html#unlock">facetsRegion#unlock</a>.</p>
+<p>See <a href="facetsRegion.html#unlock">facetsRegion#unlock</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Examples</h5>
+    
+        <p class="code-caption">This example shows how a report region plug-in would listen for facet value changes and
+call lock and unlock. </p>
+    
+        <pre class="prettyprint"><code>// ajaxIdentifier and facetsStaticId are passed into the report plug-in
+if ( facetsStaticId ) {
+    let facetsRegion = apex.region( facetsStaticId );
+    facetsRegion.widget().on( "facetschange", function() {
+        facetsRegion.lock();
+        let p = apex.server.plugin( ajaxIdentifier, ... );
+        ...
+        p.always( function() {
+            facetsRegion.unlock();
+        } );
+    } );
+}</code></pre>
+    
+        <p class="code-caption">This example shows how to set multiple facet item values but only cause the report
+ and facet counts to be updated once. The region static id is "empFacets" and P2_JOB and P2_MGR are
+ 2 of the facet names.</p>
+    
+        <pre class="prettyprint"><code>let facets = apex.region( "empFacets" );
+facets.lock();
+$s("P2_JOB", "CLERK");
+$s("P2_MGR", "7698");
+facets.unlock(); // only after this will the report and counts be updated</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="off"><span class="type-signature"></span>off<span class="signature">(events, &hellip;args)</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark off(events, ...args)" href="#off"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Removes an event handler from the widget element associated with this region. This method only applies to
+regions that are implemented with a jQuery UI style widget. This means that <a href="region.html#widgetName">region#widgetName</a>
+property must be defined and the <a href="region.html#widget">region#widget</a> method returns a value.</p>
+
+<p>This is a shortcut for calling <code class="prettyprint">apex.region(id).widget().off(...)</code>.
+Unlike the jQuery object <code class="prettyprint">off</code> method this does not return the
+jQuery object and therefore is not chainable. See the jQuery documentation for details.</p>
+
+<p>See also <a href="region.html#on">region#on</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params" aria-label="Parameters for off">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+        <th scope="col">Attributes</th>
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>events</code></th>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">One or more space-separated event types and optional namespaces as defined by the
+  jQuery <code class="prettyprint">off</code> method. For events defined by this region widget the
+  event name prefix can be omitted.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>args</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Other arguments to be passed to the widget's jQuery object
+  <code class="prettyprint">off</code> method such as selector, data, and handler.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="region.html#off">region#off</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example removes all event handlers for the selectionChange event of an
+Interactive Grid region. Note that the short event name "selectionChange" can be
+used rather than the full name "interactivegridselectionchange".
+See also <a href="interactiveGrid.html#event:selectionchange">interactiveGrid#event:selectionchange</a>.</p>
+    
+        <pre class="prettyprint"><code>apex.region( interactiveGridRegionId ).off( "selectionChange" );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="on"><span class="type-signature"></span>on<span class="signature">(events, &hellip;args)</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark on(events, ...args)" href="#on"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Attaches an event handler to the widget element associated with this region. This method only applies to
+regions that are implemented with a jQuery UI style widget. This means that <a href="region.html#widgetName">region#widgetName</a>
+property must be defined and the <a href="region.html#widget">region#widget</a> method returns a value.</p>
+
+<p>This is a shortcut for calling <code class="prettyprint">apex.region(id).widget().on(...)</code>.
+Unlike the jQuery object <code class="prettyprint">on</code> method this does not return the
+jQuery object and therefore is not chainable. See the jQuery documentation for details.</p>
+
+<p>See also <a href="region.html#off">region#off</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params" aria-label="Parameters for on">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+        <th scope="col">Attributes</th>
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>events</code></th>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">One or more space-separated event types and optional namespaces as defined by the
+  jQuery <code class="prettyprint">on</code> method. For events defined by this region widget the
+  event name prefix can be omitted.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>args</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Other arguments to be passed to the widget's jQuery object
+  <code class="prettyprint">on</code> method such as selector, data, and handler.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="region.html#on">region#on</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example handles the selectionChange event of an Interactive Grid
+region by logging a message to the console. Note that the short event name "selectionChange" can be
+used rather than the full name "interactivegridselectionchange".
+See also <a href="interactiveGrid.html#event:selectionchange">interactiveGrid#event:selectionchange</a></p>
+    
+        <pre class="prettyprint"><code>apex.region( interactiveGridRegionId ).on( "selectionChange", function(event, data) {
+    console.log("Selection changed; # records selected is", data.selectedRecords.length );
+} );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="refresh"><span class="type-signature"></span>refresh<span class="signature">()</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark refresh()" href="#refresh"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>This is a convenience method that simply calls the <a href="facetsRegion.html#fetchCounts">facetsRegion#fetchCounts</a> method.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="region.html#refresh">region#refresh</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="refreshView"><span class="type-signature"></span>refreshView<span class="signature">()</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark refreshView()" href="#refreshView"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Renders and initializes the facets UI.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example refreshes the view.</p>
+    
+        <pre class="prettyprint"><code>apex.region( "regionId" ).refreshView();</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="removeChart"><span class="type-signature"></span>removeChart<span class="signature">(pFacetName)</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark removeChart(pFacetName)" href="#removeChart"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Remove the chart for the given facet.</p>
+<p>See also <a href="facetsRegion.html#addChart">facetsRegion#addChart</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params" aria-label="Parameters for removeChart">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pFacetName</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The facet name of the chart to remove.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example removes the chart for the P1_SAL facet.</p>
+    
+        <pre class="prettyprint"><code>apex.region( "myRegionId" ).removeChart( "P1_SAL" );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="reset"><span class="type-signature"></span>reset<span class="signature">()</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark reset()" href="#reset"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Clears all filters and search terms and resets any persistent settings to their original configured values.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example resets the region.</p>
+    
+        <pre class="prettyprint"><code>apex.region( "regionId" ).refreshView();</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="showFacet"><span class="type-signature"></span>showFacet<span class="signature">(pFacetName)</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark showFacet(pFacetName)" href="#showFacet"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Shows the specified facet.</p>
+<p>This API only works for facets that are displayed inline (facetsRegion#displayAs is "INLINE").</p>
+<p>See also <a href="facetsRegion.html#hideFacet">facetsRegion#hideFacet</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params" aria-label="Parameters for showFacet">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>pFacetName</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">This example shows the facet named "P1_COMM".</p>
+    
+        <pre class="prettyprint"><code>apex.region( "myRegionId" ).showFacet( "P1_COMM" );</code></pre>
+    
+
+
+        
+            
+
+    
+
+    <div class="hw">
+    <h4 class="name" id="unlock"><span class="type-signature"></span>unlock<span class="signature">()</span><span class="type-signature"></span></h4>
+    <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark unlock()" href="#unlock"></a>
+    </div>
+
+
+    
+
+
+
+<div class="description">
+    <p>Enables the facets region after it was previously disabled with <a href="facetsRegion.html#lock">facetsRegion#lock</a> so
+that facet values can be changed again. For every call to <a href="facetsRegion.html#lock">facetsRegion#lock</a> there must be a
+corresponding call to <a href="facetsRegion.html#unlock">facetsRegion#unlock</a>.</p>
+<p>See <a href="facetsRegion.html#lock">facetsRegion#lock</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">See <a href="facetsRegion.html#lock">facetsRegion#lock</a> for examples.</p>
+    
+
+
+        
+    
+
+    
+        <div class="hw">
+        <h3 id="typedefs-section" class="subsection-title">
+            Type Definitions
+        </h3>
+        <a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark Type Definitions" href="#typedefs-section"></a>
+        </div>
+
+        
+                
+<div class="hw">
+<h4 class="name" id=".checkboxControl">checkboxControl</h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark checkboxControl" href="#.checkboxControl"></a>
+</div>
+
+
+
+
+<div class="description">
+    Checkbox specific options
+  Note the checkbox type can only be in a group. This means it must follow a group control or be in
+    the facets array of a group item. It is different from other facet controls in that it does not
+    form its own group. The label is the label of the checkbox. So some of the common control properties
+    such as collapsible and maxHeight don't apply and are simply ignored. Some properties take their
+    value from the group the checkbox is in.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props" aria-label="Properties">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>value</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Control return value when checked</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>icon</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Icon CSS class</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>escape</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If false allows markup in the label. Otherwise markup is escaped.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>altLabel</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">{string} label to use in currentFacets and charts. Useful when the label contains markup.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<div class="hw">
+<h4 class="name" id=".control">control</h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark control" href="#.control"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>Facet control option properties that configure the look and behavior of a facet.
+</p>
+<p>A note about facet visibility: There are 3 options that can affect if a facet is shown:
+displayed, visibleCondition, and lovDependsOn. There is little coordination between these options.
+In general, the last one evaluated wins (gets to say if the facet is visible or not).
+</p>
+<p>See also listControl, facetsRegion#rangeControl.
+</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props" aria-label="Properties">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>name</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The item/session state name</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>type</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">One of "list", "range", "rangeList", "selectList",
+              "group", "checkbox", "input"</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>label</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UI label to show for the facet control.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>includeLabel</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Determines if the facet label is also displayed when a facet value is shown
+  standalone such as in the current facets area in faceted search mode
+  or as a suggestion facet chip in smart filters mode. When facet is displayed in filter dialog the label is always shown.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>icon</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Icon CSS classes to show before the facet label in faceted search mode and
+  in the suggestions drop down in smart filters mode.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>cssClasses</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Additional classes to set on the facet control. In faceted search mode
+the class is added to the facet control element with class 'a-FS-control'.
+In smart filters mode the class is added to the suggestion chip element with class 'a-Chip' and to
+the popup element with class 'a-FS-body'.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>collapsible</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Determines if the the facet control can be collapsed.
+  Only applies when <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "F" (faceted search mode).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>initialCollapsed</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">When <code class="prettyprint">collapsible</code> is true this determines if the facet control is initially collapsed.
+  Only applies when <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "F" (faceted search mode).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>maxHeight</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">integer</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The maximum height of the facet control values area.
+  If the facet has more values than will fit in this height then they will scroll.
+  Only applies when <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "F" (faceted search mode).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>clearBtn</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If true the control will have a clear button shown when it has a value.
+  Default true.
+  When <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "S" (smart filters mode) this does not apply and is set to false.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>hasFeedback</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If true then this control expects to get feedback about how many matching
+  resources are available. The default comes from option <a href="facetsRegion.html#feedback">facetsRegion#feedback</a>.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>displayAs</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Controls whether the facet control is shown as inline or in a filter dialog (INLINE, FILTER_DIALOG).
+  Only applies when <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "F" (faceted search mode).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>visibleCondition</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A condition object as described by apex.util.checkCondition. This controls the visibility
+    of the facet. When the condition is true the facet if visible. When not visible the facet will have no value.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>showChart</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Default true. Only applicable for LOV related controls and if showCharts, hasFeedback and showCounts is true.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>initialChart</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Default false. Only applies if showChart is applicable and true and showCharts is a string.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>suggestedValues</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+|
+
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Determines if a facet suggestion chip is displayed in the suggestion filter chips area
+  and if so what value to suggest. If true the value with the largest count or first value
+  of a LOV facet is used as the suggestion value.
+  If false this facet is not included in the suggestion filter chip area. If an array it is an array of
+  facet values. The first value that has a non-zero count is used.
+  Only applies when <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "S" (smart search mode).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>*</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="facetsRegion.html#.listControl">facetsRegion.listControl</a></span>
+|
+
+<span class="param-type"><a href="facetsRegion.html#.rangeControl">facetsRegion.rangeControl</a></span>
+|
+
+<span class="param-type"><a href="facetsRegion.html#.selectListControl">facetsRegion.selectListControl</a></span>
+|
+
+<span class="param-type"><a href="facetsRegion.html#.checkboxControl">facetsRegion.checkboxControl</a></span>
+|
+
+<span class="param-type"><a href="facetsRegion.html#.inputControl">facetsRegion.inputControl</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Additional type specific properties.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<div class="hw">
+<h4 class="name" id=".inputControl">inputControl</h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark inputControl" href="#.inputControl"></a>
+</div>
+
+
+
+
+<div class="description">
+    Input specific options
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props" aria-label="Properties">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>dataType</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The datatype of the value to enter and the facet value to compare with.
+  The comparison operator is controlled by the server. One of "NUMBER", "VARCHAR2", "DATE", "TIMESTAMP", "TIMESTAMP WITH TIME ZONE", "TIMESTAMP WITH LOCAL TIME ZONE"</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>formatMask</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Format Mask of the input when facet is based on dataType "DATE", "TIMESTAMP", "TIMESTAMP WITH TIME ZONE", "TIMESTAMP WITH LOCAL TIME ZONE"</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>inputLabel</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Label to show before the input.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>suffixText</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">{string} Text to show after the input.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>currentLabel</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">{string} Label used for the current facets area. Example: "Within %0 miles"
+  When dataType is "NUMBER":</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>min</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Minimum value user is allowed to enter</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>max</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Maximum value user is allowed to enter</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>step</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Number input step increment</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<div class="hw">
+<h4 class="name" id=".listControl">listControl</h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark listControl" href="#.listControl"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>These are additional options for controls that have a list of values (LOV).
+These options apply to the facet control types 'list' and 'rangeList'</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props" aria-label="Properties">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>escape</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If false allows markup in the values display values. Otherwise markup is escaped.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>multiple</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If true the user can select multiple values from the list. (checkboxes)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>showCounts</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Default true. Only applicable if hasFeedback is true.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>hideEmpty</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If true values with 0 count are hidden if false values with 0 count are visually "disabled"</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>lovDependsOn</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Parent cascading LOV parent facet name. When the parent changes, new values are requested from the server.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>lovDependsOnRequired</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If true the lovDependsOn parent must have a value for this facet to have any values.
+      This only applies when lovDependsOn is specified.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>values</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;object></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">LOV array of objects with these properties
+                <h6>Properties</h6>
+
+<table class="props" aria-label="Properties">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+        <th scope="col">Attributes</th>
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>r</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Return value</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>d</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Display value</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>l</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Optional display value without markup. Only needed when display value includes markup
+     if no l property and escape is false fall back to stripHTML on display value (d).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>i</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Icon CSS Classes for value</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>g</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Indicates that this list item represents a group not a value.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>filterValues</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If true the user can filter the list of values to make it easy to find a particular value.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>listClasses</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">extra classes to add to the list grouping element</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>showAllCount</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If the list contains more than this number of items a "Show all" control is shown.
+    Only applies when <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "F" (faceted search mode).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>showAllGrace</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Default 1. If the number of items is withing this amount of the showAllCount
+    don't bother with showMore behavior. Only applies if showAllCount is given.
+    This solves the problem of clicking show more/all only to find for example 1 more item.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>orderByCount</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If true the items are ordered by the count descending (after checked items if checkedFirst is true).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>checkedFirst</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If true any selected items are shown first. Not supported if values are grouped.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>disabledLast</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If true any disabled items are shown last. Only applies if hasFeedback is true.
+    Not applicable if hideEmpty is true. Not supported if values are grouped.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>hideRadioButton</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Only applies when multiple is false. Uses bold label rather than radio button to indicate selected item</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>noManualEntry</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Only applies to rangeList. If true the manual range entry controls are not added.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>actionsFilter</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If true adds the action Filter to the facet context menu. The default is false.
+     Only applies when <a href="facetsRegion.html#uiMode">facetsRegion#uiMode</a> is "F" (faceted search mode).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<div class="hw">
+<h4 class="name" id=".rangeControl">rangeControl</h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark rangeControl" href="#.rangeControl"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>These are additional options for controls that allow a range defined by a start and end value.
+These options apply to the facet control types 'range' and 'rangeList' (unless noManualEntry is true).</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props" aria-label="Properties">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>allowOpen</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If true manual entry open ended ranges are allowed. Default false.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>prefixText</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Text to display before the range input fields. Example: "$".</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>suffixText</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Text to display after the range input fields. Example: "mph".</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>rangeText</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Text displayed between the 2 range input fields. Example: " - ".</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>currentLabel</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Label used for the current facets area. Example: "$%0 to $%1"</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>currentLabelOpenHi</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Label used for the current facets area. Example: "Over $%0"</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>currentLabelOpenLow</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Label used for the current facets area. Example: "Under $%0"</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>min</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Minimum value user is allowed to enter.   When dataType is number:</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>max</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Maximum value user is allowed to enter.   When dataType is number:</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>step</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Number input step increment.   When dataType is number:</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>dataType</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The datatype of the value to enter and the facet value to compare with.
+  The comparison operator is controlled by the server. One of "NUMBER", "VARCHAR2", "DATE", "TIMESTAMP", "TIMESTAMP_TZ", "TIMESTAMP_LTZ"</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>formatMask</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Format Mask of the input when facet is based on dataType "DATE", "TIMESTAMP", "TIMESTAMP_TZ", "TIMESTAMP_LTZ"</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<div class="hw">
+<h4 class="name" id=".selectListControl">selectListControl</h4>
+<a class="bookmarkable-link" title="Bookmarkable Link" aria-label="Bookmark selectListControl" href="#.selectListControl"></a>
+</div>
+
+
+
+
+<div class="description">
+    <p>These are additional options for select list controls.
+These options apply to the facet control types 'selectList'.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props" aria-label="Properties">
+    <thead>
+    <tr>
+        
+        <th scope="col">Name</th>
+        
+
+        <th scope="col">Type</th>
+
+        
+
+        
+
+        <th scope="col" class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>showCounts</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Default true. Only applicable if hasFeedback is true.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>hideEmpty</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If true values with 0 count are hidden if false values with 0 count are visually "disabled"</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>lovDependsOn</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Parent cascading LOV parent facet name. When the parent changes, new values are requested from the server.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>lovDependsOnRequired</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If true the lovDependsOn parent must have a value for this facet to have any values.
+  This only applies when lovDependsOn is specified.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>values</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;object></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Same as for list type.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <th scope="row" class="name"><code>nullLabel</code></th>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">This is the label for the first option, which used to unselect all others.
+  It represents no facet value selected. This is not the same as the List of Values: Include Null Option.
+  Required.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+    
+
+</article>
+
+</section>
+
+
+
+
+
+    <footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.3</a> on Wed Nov 27 2024 04:42:15 GMT+0000 (Coordinated Universal Time)
+      <br>
+      <span class="product-docs-footer">Oracle APEX Release 24.2, JavaScript API Reference</span>
+      <br>
+      <span class="product-docs-footer">Copyright &copy; 2003, 2025, Oracle and/or its affiliates. All rights reserved.</span>
+    </footer>
+</div>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+<script>
+(function() {
+    // make skip link work for mobile browsers
+    document.getElementById("skipToContent").addEventListener("click", function(e) {
+        var target = document.getElementById("main-content");
+        e.preventDefault();
+        target.setAttribute("tabindex", "-1");
+        target.addEventListener("blur", function(e) {
+            target.removeAttribute("tabindex");
+        });
+        target.focus();
+    });
+
+    var nav = document.getElementById("nav");
+    var currentId = nav.getAttribute("data-current-item");
+    if (!currentId) {
+        return;
+    }
+    var link = document.getElementById(currentId);
+    if (!link) {
+        return;
+    }
+    link.className = link.className ? link.className + " current-nav-item" : "current-nav-item";
+    nav.scrollTop = link.offsetTop + (link.offsetHeight - nav.offsetHeight)/2;
+})();
+</script>
+
+</body>
+</html>

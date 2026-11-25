@@ -1,0 +1,352 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="ADD_DML_ARRAY_ROW Procedure">
+      <meta name="DC.subject" content="ADD_DML_ARRAY_ROW procedure, APEX_EXEC">
+      <meta name="keywords" content="ADD_DML_ARRAY_ROW procedure, APEX_EXEC">
+      <meta name="DC.Relation" scheme="URI" content="APEX_EXEC.html#GUID-3CF1D2DD-AEA4-4982-9857-548567AB7169">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-37F4CB18-7657-4C79-B114-6D7C5A6CC803">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>ADD_DML_ARRAY_ROW Procedure</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="APEX_EXEC.ADD_COLUMN-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="APEX_EXEC.ADD_DML_ROW-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"ADD_DML_ARRAY_ROW Procedure","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="APEX_EXEC.ADD_COLUMN-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="APEX_EXEC.ADD_DML_ROW-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-37F4CB18-7657-4C79-B114-6D7C5A6CC803" name="GUID-37F4CB18-7657-4C79-B114-6D7C5A6CC803"></a>
+         
+         <h2 id="AEAPI-GUID-37F4CB18-7657-4C79-B114-6D7C5A6CC803" class="sect2"><span class="enumeration_section">27.5 </span>ADD_DML_ARRAY_ROW Procedure
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This procedure adds a child row for the current array or the array column provided as <code class="codeph">p_column_name</code>. The cursor moves to the new row within the specified array column, and all subsequent calls to <code class="codeph">SET_VALUE</code> target the attributes of this new array element. Only supported within DML contexts on REST Data Sources.
+                  </p>
+                  <p>Hierarchical structures are currently only supported for DML on REST Data Sources, if the REST Source type or Plug-In can deal with such structures. DML on a local table or based on REST-Enabled SQL ignores array columns.</p>
+                  <p>The provided array column must be a direct child of the current array column; path syntax and jumping to another position in the hierarchy is unsupported.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-37F4CB18-7657-4C79-B114-6D7C5A6CC803__GUID-57B7B085-7589-4463-9A4B-CA608AEB16A7">Syntax</p>
+                  <pre class="pre codeblock"><code>APEX_EXEC.ADD_DML_ARRAY_ROW (
+    p_context               IN t_context,
+    p_column_name           IN VARCHAR2        DEFAULT NULL,
+    p_column_position       IN PLS_INTEGER,
+    p_operation             IN t_dml_operation DEFAULT NULL )</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-37F4CB18-7657-4C79-B114-6D7C5A6CC803__GUID-2118C338-643E-4828-B981-F63B51FF8CA0">Parameters</p>
+                  <div class="tblformal" id="GUID-37F4CB18-7657-4C79-B114-6D7C5A6CC803__GUID-AFEF5317-38DA-4552-89F3-FCB6A18A7292">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for procedure." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="42%" id="d109140e80">Parameter</th>
+                              <th align="left" valign="bottom" width="58%" id="d109140e82">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d109140e86" headers="d109140e80 "><code class="codeph">p_context</code></td>
+                              <td align="left" valign="top" width="58%" headers="d109140e86 d109140e82 ">Context object obtained with one of the <code class="codeph">OPEN_</code> functions.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d109140e95" headers="d109140e80 "><code class="codeph">p_column_name</code></td>
+                              <td align="left" valign="top" width="58%" headers="d109140e95 d109140e82 ">Name of the array column (must exist within the current context) to add a new row for.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d109140e101" headers="d109140e80 "><code class="codeph">p_column_position</code></td>
+                              <td align="left" valign="top" width="58%" headers="d109140e101 d109140e82 ">Position of the column to set the value for within the DML context.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="42%" id="d109140e107" headers="d109140e80 "><code class="codeph">p_operation</code></td>
+                              <td align="left" valign="top" width="58%" headers="d109140e107 d109140e82 ">DML operation to be executed on this row. Use constants <code class="codeph">c_dml_operation_*</code>. If omitted, the child row inherits the operation from its parent.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-37F4CB18-7657-4C79-B114-6D7C5A6CC803__GUID-BD217647-FAFB-4D84-A2E1-4DCBBD38D3C9">Example</p>
+                  <pre class="pre codeblock"><code>declare
+    l_columns apex_exec.t_columns;
+    l_context apex_exec.t_context;
+
+begin
+
+    --
+    -- I. Define DML columns    
+    --
+    -- 1. row-level columns
+    --
+    apex_exec.add_column( 
+        p_columns      =&gt; l_columns,
+        p_column_name  =&gt; 'CUSTOMER_NAME',
+        p_data_type    =&gt; apex_exec.c_data_type_varchar2 );
+
+    apex_exec.add_column( 
+        p_columns      =&gt; l_columns,
+        p_column_name  =&gt; 'ORDER_DATE',
+        p_data_type    =&gt; apex_exec.c_data_type_date );
+
+    apex_exec.add_column( 
+        p_columns      =&gt; l_columns,
+        p_column_name  =&gt; 'ORDER_ITEMS',
+        p_data_type    =&gt; apex_exec.c_data_type_array );
+
+    --
+    -- 2. child columns of the ORDER_ITEMS array column
+    --
+    apex_exec.add_column( 
+        p_columns            =&gt; l_columns,
+        p_column_name        =&gt; 'PRODUCT_ID',
+        p_data_type          =&gt; apex_exec.c_data_type_number,
+        p_parent_column_path =&gt; 'ORDER_ITEMS' );
+
+    apex_exec.add_column( 
+        p_columns            =&gt; l_columns,
+        p_column_name        =&gt; 'PRODUCT_NAME',
+        p_data_type          =&gt; apex_exec.c_data_type_varchar2,
+        p_parent_column_path =&gt; 'ORDER_ITEMS' );
+
+    apex_exec.add_column( 
+        p_columns            =&gt; l_columns,
+        p_column_name        =&gt; 'UNIT_PRICE',
+        p_data_type          =&gt; apex_exec.c_data_type_number,
+        p_parent_column_path =&gt; 'ORDER_ITEMS' );
+
+    apex_exec.add_column( 
+        p_columns            =&gt; l_columns,
+        p_column_name        =&gt; 'AMOUNT_ORDERED',
+        p_data_type          =&gt; apex_exec.c_data_type_number,
+        p_parent_column_path =&gt; 'ORDER_ITEMS' );
+
+    --
+    -- II. Open the context object    
+    --
+    l_context := apex_exec.open_rest_source_dml_context(
+                     p_columns    =&gt; l_columns,
+                     p_static_id  =&gt; '{module static id}' );
+
+    --
+    -- III: Provide DML data
+    -- 
+    -- 1. the first row
+    --
+    apex_exec.add_dml_row(
+        p_context   =&gt; l_context,
+        p_operation =&gt; apex_exec.c_dml_operation_insert );
+
+    apex_exec.set_value(
+        p_context      =&gt; l_context,
+        p_column_name  =&gt; 'CUSTOMER_NAME',
+        p_value        =&gt; 'John Doe' );
+
+    apex_exec.set_value(
+        p_context      =&gt; l_context,
+        p_column_name  =&gt; 'ORDER_DATE',
+        p_value        =&gt; date'2024-03-15' );
+
+    -- 
+    -- 1.1. the first line item of the first row
+    --
+    apex_exec.add_dml_array_row(
+        p_context      =&gt; l_context,
+        p_operation    =&gt; apex_exec.c_dml_operation_insert,
+        p_column_name  =&gt; 'ORDER_ITEMS');
+
+    apex_exec.set_value(
+        p_context      =&gt; l_context,
+        p_column_name  =&gt; 'PRODUCT_ID',
+        p_value        =&gt; 100 );
+
+    apex_exec.set_value(
+        p_context      =&gt; l_context,
+        p_column_name  =&gt; 'PRODUCT_NAME',
+        p_value        =&gt; 'Men''s Jeans size L' );
+
+    apex_exec.set_value(
+        p_context      =&gt; l_context,
+        p_column_name  =&gt; 'UNIT_PRICE',
+        p_value        =&gt; 30.99 );
+
+    apex_exec.set_value(
+        p_context      =&gt; l_context,
+        p_column_name  =&gt; 'AMOUNT_ORDERED',
+        p_value        =&gt; 10 );
+
+    --
+    -- 1.2. the second line item of the first row
+    --
+    apex_exec.add_dml_array_row(
+        p_context      =&gt; l_context );
+
+    apex_exec.set_value(
+        p_context      =&gt; l_context,
+        p_column_name  =&gt; 'PRODUCT_ID',
+        p_value        =&gt; 101 );
+
+    apex_exec.set_value(
+        p_context      =&gt; l_context,
+        p_column_name  =&gt; 'PRODUCT_NAME',
+        p_value        =&gt; 'Ladies Jeans size S' );
+
+    apex_exec.set_value(
+        p_context      =&gt; l_context,
+        p_column_name  =&gt; 'UNIT_PRICE',
+        p_value        =&gt; 30.99 );
+
+    apex_exec.set_value(
+        p_context      =&gt; l_context,
+        p_column_name  =&gt; 'AMOUNT_ORDERED',
+        p_value        =&gt; 10 );
+
+    -- 
+    -- 2. the second row
+    --
+    apex_exec.add_dml_row(
+        p_context   =&gt; l_context,
+        p_operation =&gt; apex_exec.c_dml_operation_insert );
+
+    apex_exec.set_value(
+        p_context      =&gt; l_context,
+        p_column_name  =&gt; 'CUSTOMER_NAME',
+        p_value        =&gt; 'Jane Doe' );
+
+    apex_exec.set_value(
+        p_context      =&gt; l_context,
+        p_column_name  =&gt; 'ORDER_DATE',
+        p_value        =&gt; date'2024-03-16' );
+
+    -- 
+    -- 2.1. the first line item of the second row
+    --
+    apex_exec.add_dml_array_row(
+        p_context      =&gt; l_context,
+        p_operation    =&gt; apex_exec.c_dml_operation_insert,
+        p_column_name  =&gt; 'ORDER_ITEMS');
+
+    apex_exec.set_value(
+        p_context      =&gt; l_context,
+        p_column_name  =&gt; 'PRODUCT_ID',
+        p_value        =&gt; 100 );
+
+    -- :
+
+    apex_exec.add_dml_array_row(
+        p_context      =&gt; l_context,
+        p_operation    =&gt; apex_exec.c_dml_operation_insert );
+
+    -- :
+
+    -- IV: Set "cursor" back to the first child in order to change a value
+
+    apex_exec.set_array_current_row(
+        p_context         =&gt; l_context,
+        p_current_row_idx =&gt; 1 );
+
+    apex_exec.set_value(
+        p_context      =&gt; l_context,
+        p_column_name  =&gt; 'AMOUNT_ORDERED',
+        p_value        =&gt; 20 );
+
+    -- V: Execute the DML statement
+
+    apex_exec.execute_dml(
+        p_context           =&gt; l_context,
+        p_continue_on_error =&gt; false);
+
+    apex_exec.close( l_context );
+exception
+    when others then
+        apex_exec.close( l_context );
+        raise;
+end;</code></pre></div>
+               <div class="section">
+                  <div class="infoboxnotealso" id="GUID-37F4CB18-7657-4C79-B114-6D7C5A6CC803__GUID-7419655C-E1C5-474F-998B-C9222B4E200E">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-37F4CB18-7657-4C79-B114-6D7C5A6CC803__UL_BHW_QQ3_SBC">
+                        <li><a href="APEX_EXEC.CLOSE_ARRAY-Procedure.html#GUID-E933C2AC-C2F3-4F1F-B67A-F98023DDD8D6">CLOSE_ARRAY Procedure</a></li>
+                        <li><a href="APEX_EXEC.OPEN_ARRAY-Procedure-Signature-1.html#GUID-D1CB527B-C92B-4994-BFF4-E224979A4702">OPEN_ARRAY Procedure Signature 1</a></li>
+                        <li><a href="APEX_EXEC.NEXT_ARRAY_ROW-Function.html#GUID-9918364A-5A5E-45A2-9F13-F463E44EDABD">NEXT_ARRAY_ROW Function</a></li>
+                        <li><a href="APEX_EXEC.SET_ARRAY_CURRENT_ROW-Procedure.html#GUID-A4C59BF3-E31A-46E0-9156-93CC14214905">SET_ARRAY_CURRENT_ROW Procedure</a></li>
+                        <li><a href="APEX_EXEC.GET_ARRAY_ROW_DML_OPERATION-Function.html#GUID-34934601-765E-403B-8AE8-EB665DCB085F">GET_ARRAY_ROW_DML_OPERATION Function</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_EXEC.html#GUID-3CF1D2DD-AEA4-4982-9857-548567AB7169">APEX_EXEC</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

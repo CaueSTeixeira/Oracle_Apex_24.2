@@ -1,0 +1,171 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="IS_ROLE_REMOVED_FROM_USER Function">
+      <meta name="DC.subject" content="IS_ROLE_REMOVED_FROM_USER function, APEX_ACL">
+      <meta name="keywords" content="IS_ROLE_REMOVED_FROM_USER function, APEX_ACL">
+      <meta name="DC.Relation" scheme="URI" content="APEX_ACL.html#GUID-C59214CB-8138-4CB4-89CC-4CC357A67288">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-1B650723-4E97-4179-91BB-4AE626379AA9">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>IS_ROLE_REMOVED_FROM_USER Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="HAS_USER_ROLE-Function.html" title="Previous" type="text/html">
+      <link rel="next" href="REMOVE_USER_ROLE-Procedure-Signature1.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"IS_ROLE_REMOVED_FROM_USER Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="HAS_USER_ROLE-Function.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="REMOVE_USER_ROLE-Procedure-Signature1.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-1B650723-4E97-4179-91BB-4AE626379AA9" name="GUID-1B650723-4E97-4179-91BB-4AE626379AA9"></a>
+         
+         <h2 id="AEAPI-GUID-1B650723-4E97-4179-91BB-4AE626379AA9" class="sect2"><span class="enumeration_section">2.5 </span>IS_ROLE_REMOVED_FROM_USER Function
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function checks if a role is removed from a user. This function returns <code class="codeph">TRUE</code> if a specific role is removed from the list of new role IDs for the user.
+                  </p>
+                  <p>This function is used to ensure that a user cannot remove a role identified by <code class="codeph">p_role_static_id</code> from him/herself.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-1B650723-4E97-4179-91BB-4AE626379AA9__GUID-4BACA0A5-CA13-4765-914C-C9A5F5275A82">Syntax</p>
+                  <pre class="pre codeblock"><code>APEX_ACL.IS_ROLE_REMOVED_FROM_USER (
+    p_application_id    IN NUMBER   DEFAULT apex_application.g_flow_id,
+    p_user_name         IN VARCHAR2,
+    p_role_static_id    IN VARCHAR2,
+    p_role_ids          IN apex_t_number )
+RETURN BOOLEAN;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-1B650723-4E97-4179-91BB-4AE626379AA9__GUID-2118C338-643E-4828-B981-F63B51FF8CA0">Parameters</p>
+                  <div class="tblformal" id="GUID-1B650723-4E97-4179-91BB-4AE626379AA9__GUID-AFEF5317-38DA-4552-89F3-FCB6A18A7292">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="32%" id="d14970e78">Parameter</th>
+                              <th align="left" valign="bottom" width="68%" id="d14970e80">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="32%" id="d14970e84" headers="d14970e78 "><code class="codeph">p_application_id</code></td>
+                              <td align="left" valign="top" width="68%" headers="d14970e84 d14970e80 ">The application ID for which you want to check if a specific role removed from the list of roles was from a user. It defaults to the current application.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="32%" id="d14970e90" headers="d14970e78 "><code class="codeph">p_user_name</code></td>
+                              <td align="left" valign="top" width="68%" headers="d14970e90 d14970e80 ">The case insensitive name of the application user to check.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="32%" id="d14970e96" headers="d14970e78 "><code class="codeph">p_role_static_id</code></td>
+                              <td align="left" valign="top" width="68%" headers="d14970e96 d14970e80 ">The case insensitive name of the role static ID to check if it is removed.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="32%" id="d14970e102" headers="d14970e78 "><code class="codeph">p_role_ids</code></td>
+                              <td align="left" valign="top" width="68%" headers="d14970e102 d14970e80 ">The array of NUMBER type new role IDs the user is assigned to.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-1B650723-4E97-4179-91BB-4AE626379AA9__GUID-85E4C2CC-13B8-45FA-9FA4-8B5AEF571996">Returns</p>
+                  <p>Returns <code class="codeph">TRUE</code> when <code class="codeph">p_user_name</code> currently has the role identified by <code class="codeph">p_role_static_id</code> but the roles identified by <code class="codeph">p_role_ids</code> do not include the role identified by <code class="codeph">p_role_static_id</code>.
+                  </p>
+                  <p>Return <code class="codeph">FALSE</code> in all other cases.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-1B650723-4E97-4179-91BB-4AE626379AA9__GUID-BD217647-FAFB-4D84-A2E1-4DCBBD38D3C9">Example</p>
+                  
+                  <p>The following example uses the IS_ROLE_REMOVED_FROM_USER function to ensure the current user of the app who has the <code class="codeph">ADMINISTRATOR</code> role does not remove him/herself from the role when updating or deleting the access to the app.
+                  </p><pre class="pre codeblock"><code>BEGIN
+    IF :P1_USER_NAME = :APP_USER
+       and apex_acl.is_role_removed_from_user (
+                p_application_id =&gt; :APP_ID,
+                p_user_name      =&gt; :APP_USER,
+                p_role_static_id =&gt; 'ADMINISTRATOR',
+                p_role_ids       =&gt; apex_string.split_numbers(
+                                        p_str =&gt; case when :REQUEST = 'DELETE' THEN
+                                                     null
+                                                 ELSE
+                                                     :P1_ROLE_IDS
+                                                 END,
+                                        p_sep =&gt; ':') ) THEN
+
+        raise_application_error(-20001, 'You cannot remove administrator role from yourself.' );
+    END IF;
+END;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_ACL.html#GUID-C59214CB-8138-4CB4-89CC-4CC357A67288">APEX_ACL</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

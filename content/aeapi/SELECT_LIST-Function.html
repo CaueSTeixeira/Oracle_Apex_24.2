@@ -1,0 +1,219 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="SELECT_LIST Function">
+      <meta name="DC.subject" content="SELECT_LIST function, APEX_ITEM">
+      <meta name="keywords" content="SELECT_LIST function, APEX_ITEM">
+      <meta name="DC.Relation" scheme="URI" content="APEX_ITEM.html#GUID-A111B577-2503-4F4E-962E-192C7D5B5338">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-7F55E7A5-29A8-4644-89A7-1F00A083ADAE">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>SELECT_LIST Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="RADIOGROUP-Function.html" title="Previous" type="text/html">
+      <link rel="next" href="SELECT_LIST_FROM_LOV-Function.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"SELECT_LIST Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="RADIOGROUP-Function.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="SELECT_LIST_FROM_LOV-Function.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-7F55E7A5-29A8-4644-89A7-1F00A083ADAE" name="GUID-7F55E7A5-29A8-4644-89A7-1F00A083ADAE"></a><a id="AEAPI1054"></a><a id="AEAPI1055"></a><a id="AEAPI1056"></a><a id="AEAPI1057"></a><a id="AEAPI205"></a>
+         
+         <h2 id="AEAPI-GUID-7F55E7A5-29A8-4644-89A7-1F00A083ADAE" class="sect2"><span class="enumeration_section">35.13 </span>SELECT_LIST Function
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function dynamically generates a static select list. This function is designed to generate forms with <code class="codeph">F01</code> to <code class="codeph">F50</code> form array elements.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-7F55E7A5-29A8-4644-89A7-1F00A083ADAE__GUID-099AE97C-CD26-4C36-A75B-8E5916BE94E0">Syntax</p><pre class="pre codeblock"><code>APEX_ITEM.SELECT_LIST (
+    p_idx           IN   NUMBER,
+    p_value         IN   VARCHAR2 DEFAULT NULL,
+    p_list_values   IN   VARCHAR2 DEFAULT NULL,
+    p_attributes    IN   VARCHAR2 DEFAULT NULL,
+    p_show_null     IN   VARCHAR2 DEFAULT 'NO',
+    p_null_value    IN   VARCHAR2 DEFAULT '%NULL%',
+    p_null_text     IN   VARCHAR2 DEFAULT '%',
+    p_item_id       IN   VARCHAR2 DEFAULT NULL,
+    p_item_label    IN   VARCHAR2 DEFAULT NULL,
+    p_show_extra    IN   VARCHAR2 DEFAULT 'YES' )
+    RETURN VARCHAR2;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-7F55E7A5-29A8-4644-89A7-1F00A083ADAE__GUID-D62500BB-E665-4C06-AFB2-AFE62E7F7EDC">Parameters</p>
+                  <div class="tblformal" id="GUID-7F55E7A5-29A8-4644-89A7-1F00A083ADAE__CHDCBBHG">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="21%" id="d169087e80">Parameter</th>
+                              <th align="left" valign="bottom" width="79%" id="d169087e82">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d169087e86" headers="d169087e80 "><code class="codeph">p_idx</code></td>
+                              <td align="left" valign="top" width="79%" headers="d169087e86 d169087e82 ">Form element name. For example, <code class="codeph">1</code> equals <code class="codeph">F01</code> and <code class="codeph">2</code> equals <code class="codeph">F02</code>. Typically the <code class="codeph">P_IDX</code> parameter is constant for a given column.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d169087e107" headers="d169087e80 "><code class="codeph">p_value</code></td>
+                              <td align="left" valign="top" width="79%" headers="d169087e107 d169087e82 ">Current value. This value should be a value in the <code class="codeph">P_LIST_VALUES</code> parameter.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d169087e116" headers="d169087e80 "><code class="codeph">p_list_values</code></td>
+                              <td align="left" valign="top" width="79%" headers="d169087e116 d169087e82 ">
+                                 <p>List of static values separated by commas. Displays values and returns values that are separated by semicolons.</p>
+                                 <p>Note that this is only available in the <code class="codeph">SELECT_LIST</code> function.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d169087e128" headers="d169087e80 "><code class="codeph">p_attributes</code></td>
+                              <td align="left" valign="top" width="79%" headers="d169087e128 d169087e82 ">Extra HTML parameters you want to add.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d169087e134" headers="d169087e80 "><code class="codeph">p_show_null</code></td>
+                              <td align="left" valign="top" width="79%" headers="d169087e134 d169087e82 ">Extra select option to enable the NULL selection. Range of values is <code class="codeph">YES</code> and <code class="codeph">NO</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d169087e146" headers="d169087e80 "><code class="codeph">p_null_value</code></td>
+                              <td align="left" valign="top" width="79%" headers="d169087e146 d169087e82 ">Value to be returned when a user selects the NULL option. Only relevant when <code class="codeph">p_show_null</code> equals <code class="codeph">YES</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d169087e158" headers="d169087e80 "><code class="codeph">p_null_text</code></td>
+                              <td align="left" valign="top" width="79%" headers="d169087e158 d169087e82 ">Value to be displayed when a user selects the NULL option. Only relevant when <code class="codeph">p_show_null</code> equals <code class="codeph">YES</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d169087e170" headers="d169087e80 "><code class="codeph">p_item_id</code></td>
+                              <td align="left" valign="top" width="79%" headers="d169087e170 d169087e82 ">HTML attribute ID for the &lt;<code class="codeph">input</code>&gt; tag.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d169087e179" headers="d169087e80 "><code class="codeph">p_item_label</code></td>
+                              <td align="left" valign="top" width="79%" headers="d169087e179 d169087e82 ">Invisible label created for the item.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="21%" id="d169087e185" headers="d169087e80 "><code class="codeph">p_show_extra</code></td>
+                              <td align="left" valign="top" width="79%" headers="d169087e185 d169087e82 ">Shows the current value even if the value of p_value is not located in the select list.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-7F55E7A5-29A8-4644-89A7-1F00A083ADAE__GUID-2B0B6889-2F3E-4CBE-BA39-A216B268326B">Example 1</p>
+                  <p>The following example demonstrates a static select list that displays <code class="codeph">Yes</code>, returns <code class="codeph">Y</code>, defaults to <code class="codeph">Y</code>, and generates a <code class="codeph">F01</code> form item.
+                  </p><pre class="pre codeblock"><code>SELECT APEX_ITEM.SELECT_LIST(1,'Y','Yes;Y,No;N')yn 
+FROM emp</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-7F55E7A5-29A8-4644-89A7-1F00A083ADAE__GUID-927AB558-9C91-4FE2-A506-D5045C8D9A69">Example 2</p>
+                  <p>The following example generates a static select list where:</p>
+                  <ul style="list-style-type: disc;" id="GUID-7F55E7A5-29A8-4644-89A7-1F00A083ADAE__UL_DYJ_YSV_LCC">
+                     <li>A form array element <code class="codeph">F03</code> is generated (<code class="codeph">p_idx</code> parameter).
+                     </li>
+                     <li>The initial value for each element is equal to the value for <code class="codeph">deptno</code> for the row from <code class="codeph">emp</code> (<code class="codeph">p_value</code> parameter).
+                     </li>
+                     <li>The select list contains 4 options (<code class="codeph">p_list_values</code> parameter).
+                     </li>
+                     <li>The text within the select list displays in red (<code class="codeph">p_attributes</code> parameter).
+                     </li>
+                     <li>A null option is displayed (<code class="codeph">p_show_null</code>) and this option displays <code class="codeph">-Select-</code> as the text (<code class="codeph">p_null_text</code> parameter).
+                     </li>
+                     <li>An HTML ID attribute is generated for each row, where <code class="codeph">#ROWNUM# </code>is substituted for the current row <code class="codeph">rownum</code> (<code class="codeph">p_item_id</code> parameter). (So an ID of '<code class="codeph">f03_4</code>' is generated for row 4.)
+                     </li>
+                     <li>A HTML label element is generated for each row (<code class="codeph">p_item_label</code> parameter).
+                     </li>
+                     <li>The current value for <code class="codeph">deptno</code> is displayed, even if it is not contained with the list of values passed in the <code class="codeph">p_list_values</code> parameter (<code class="codeph">p_show_extra</code> parameter).
+                     </li>
+                  </ul><pre class="pre codeblock"><code>SELECT  empno "Employee #", 
+    ename "Name",
+    APEX_ITEM.SELECT_LIST(
+        p_idx           =&gt;   3,
+        p_value         =&gt;   deptno,
+        p_list_values   =&gt;   'ACCOUNTING;10,RESEARCH;20,SALES;30,OPERATIONS;40',
+        p_attributes    =&gt;   'style="color:red;"',
+        p_show_null     =&gt;   'YES',
+        p_null_value    =&gt;   NULL,
+        p_null_text     =&gt;   '-Select-',
+        p_item_id       =&gt;   'f03_#ROWNUM#',
+        p_item_label    =&gt;   'Label for f03_#ROWNUM#',
+        p_show_extra    =&gt;   'YES') "Department"
+    FROM  emp;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_ITEM.html#GUID-A111B577-2503-4F4E-962E-192C7D5B5338">APEX_ITEM (Legacy)</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,621 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Application Items">
+      <meta name="abstract" content="Application items do not display, but are used to maintain session state.">
+      <meta name="description" content="Application items do not display, but are used to maintain session state.">
+      <meta name="DC.subject" content="application item, about, creating, editing attributes, copying from current app, copying from another app, subscribing, subscribing to, History report, Utilization report, creating a global variable, global variable, creating, session state, sharing across applications">
+      <meta name="keywords" content="application item, about, creating, editing attributes, copying from current app, copying from another app, subscribing, subscribing to, History report, Utilization report, creating a global variable, global variable, creating, session state, sharing across applications">
+      <meta name="DC.Relation" scheme="URI" content="managing-shared-components.html#GUID-04D43728-0539-4817-9FBB-DEFFA616E916">
+      <meta name="DC.Relation" scheme="URI" content="managing-application-items.html#GUID-C64124CF-B34B-4F42-B12F-E79271350AEA">
+      <meta name="DC.Relation" scheme="URI" content="managing-application-items.html#GUID-FD715F27-17CB-4B69-8ECA-998F32E932F6">
+      <meta name="DC.Relation" scheme="URI" content="managing-application-items.html#GUID-4B59C2A5-A4ED-4D85-9C19-67D112602E4C">
+      <meta name="DC.Relation" scheme="URI" content="managing-application-items.html#GUID-7FC4996A-6E55-4DA8-AEE8-586B3317DD41">
+      <meta name="DC.Relation" scheme="URI" content="managing-application-items.html#GUID-6F91FC5C-8802-490E-B430-3F51BB0C7B5D">
+      <meta name="DC.Relation" scheme="URI" content="managing-application-items.html#GUID-93461E2E-F168-449E-9DC2-D1DB51E46081">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-F616E451-87EC-420A-BAAD-7A6D9BB5B4F7">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Application items do not display, but are used to maintain session state.">
+      <meta name="description" content="Application items do not display, but are used to maintain session state.">
+      <title>Managing Application Items</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Application items do not display, but are used to maintain session state.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="managing-app-settings.html" title="Previous" type="text/html">
+      <link rel="next" href="managing-component-settings.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Managing Application Items","description":"Application items do not display, but are used to maintain session state.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="managing-app-settings.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="managing-component-settings.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-F616E451-87EC-420A-BAAD-7A6D9BB5B4F7" name="GUID-F616E451-87EC-420A-BAAD-7A6D9BB5B4F7"></a><a id="HTMDB05034"></a><a id="4000:4100"></a><a id="4000:533"></a><a id="4000:4303"></a><a id="4000:130"></a>
+         
+         <h2 id="HTMDB-GUID-F616E451-87EC-420A-BAAD-7A6D9BB5B4F7" class="sect2"><span class="enumeration_section">16.5 </span>Managing Application Items
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Application items do not display, but are used to maintain session state.</p>
+               <p>Application items can be set using computations, processes, or by passing values on a
+            URL. Use <span class="uicontrol bold">On New Instance</span> computations to set the value of items
+            once for a session. Use application items to maintain session state that is not
+            displayed and is not specific to any one page.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="managing-application-items.html#GUID-C64124CF-B34B-4F42-B12F-E79271350AEA">Creating an Application Item</a><br>Create a application item on the shared Shared Components page.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-application-items.html#GUID-FD715F27-17CB-4B69-8ECA-998F32E932F6">Editing Application Item Attributes</a><br>Once you create an application item, you can edit it on the Create/Edit         Application Item page.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-application-items.html#GUID-4B59C2A5-A4ED-4D85-9C19-67D112602E4C">Copying or Subscribing to Application Items</a><br>Copy application items from the current application or from another         applications. When copying an application item from another app, you can also subscribe to         it.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-application-items.html#GUID-7FC4996A-6E55-4DA8-AEE8-586B3317DD41">Subscribing to an Application Item</a><br>Subscribe to an application item on the Application Item, Create / Edit         page.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-application-items.html#GUID-6F91FC5C-8802-490E-B430-3F51BB0C7B5D">Accessing Application Item Reports</a><br>View the application item Utilization and History reports by clicking the         appropriate tab on the Application Items page.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-application-items.html#GUID-93461E2E-F168-449E-9DC2-D1DB51E46081">About Creating an Application Item that Functions as a Global Variable</a><br>You can create a global variable by creating an application item with the         same name across all applications and setting the scope to Global. 
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-F616E451-87EC-420A-BAAD-7A6D9BB5B4F7__GUID-476C77DF-C38F-4D47-AE03-781B698BCB8E">
+                  <p class="notep1">See Also:</p>
+                  <ul style="list-style-type: disc;">
+                     <li><a href="understanding-page-items.html#GUID-DBE765CA-96D0-4062-A3BC-B402D167A305" title="Page items are placed on a page and have associated user interface properties and Application items are not associated with a page.">About the Differences Between Page Items and Application Items</a></li>
+                     <li><a href="understanding-page-items.html#GUID-207E66F9-C8A6-4FD1-B2F4-12D4BB302D31" title="You can reference item values stored in session state in regions, computations, processes, validation, and branches.">Referencing Item Values</a></li>
+                  </ul>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-shared-components.html#GUID-04D43728-0539-4817-9FBB-DEFFA616E916" title="Shared components can display or be applied on any page within an application. Developers can use the tools and wizards on the Shared Components page either at the application-level or on specific pages.">Managing Shared Components</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB25339"></a><div class="props_rev_3"><a id="GUID-C64124CF-B34B-4F42-B12F-E79271350AEA" name="GUID-C64124CF-B34B-4F42-B12F-E79271350AEA"></a><h3 id="HTMDB-GUID-C64124CF-B34B-4F42-B12F-E79271350AEA" class="sect3"><span class="enumeration_section">16.5.1 </span>Creating an Application Item
+               </h3>
+               <div>
+                  <p>Create a application item on the shared Shared Components page.</p>
+                  <div class="section">
+                     <p>To create an application item:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                 <p>The Shared Components page appears.</p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Application Logic, select <span class="uicontrol bold">Application Items</span>.</span><div>
+                           <p>The Application Items page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>To create an application item, click <span class="uicontrol bold">Create</span>.</span><div>
+                           <p>The Create/Edit page appears. </p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>For Name:</span><ol type="a">
+                           <li class="substepexpand"><span>Name - Enter a name for the application item.</span></li>
+                           <li class="substepexpand"><span>Scope - Options include:</span><div>
+                                 <ul style="list-style-type: disc;">
+                                    <li>
+                                       <p><span class="uicontrol bold">Global</span> - Select this option if the <span>Oracle APEX</span> session is shared by more than one application and the item's value should be the same for all applications.
+                                       </p>
+                                       
+                                       <p>Applications can share the same session if their
+                                        authentications have the same Session Cookie Attributes. The
+                                        Scope attribute of application items has to be the same
+                                        across these applications.</p>
+                                    </li>
+                                    <li>
+                                       <p><span class="uicontrol bold">Application</span> - Select this option if the application does share
+                                        session state with another application.
+                                       </p>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Security, Session State Protection - Set session state protection for this
+                    item. Options include:</span><div>
+                           
+                           <ul style="list-style-type: disc;">
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Unrestricted</span> - The item's session
+                                state may be set by passing the item name/value in a URL or in a
+                                form. No checksum is required in the URL.
+                                 </p>
+                                 
+                                 <div class="infoboxnote" id="GUID-C64124CF-B34B-4F42-B12F-E79271350AEA__GUID-41DB16D3-DF82-4E0F-8F14-5525BC92385F">
+                                    <p class="notep1">Note:</p>
+                                    
+                                    <p> If you must set this item's value in session state
+                                    using Ajax, then an Unrestricted protection level must be used
+                                    for the item (for example in Dynamic Actions, Set Value, Page
+                                    Items to Submit or Cascading LOVs, Page Items to Submit).</p>
+                                    
+                                 </div>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Restricted - May not be set from
+                                    browser</span> - The item may not be altered using the URL
+                                or POSTDATA. Use this option when you want to restrict the way that
+                                the item value can be set to internal processes, computations, and
+                                so on. This attribute is only applicable only to items that cannot
+                                be used as data entry items and is always observed even if Session
+                                State Protection is disabled. This attribute may be used for
+                                application items or for page items with any of these Display As
+                                types: 
+                                 </p>
+                                 
+                                 <ul style="list-style-type: disc;">
+                                    <li>
+                                       
+                                       <p>Display Only (Save State=No)</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Display Only (Save State=No) </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Stop and Start Grid Layout (Displays label
+                                        only)</p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Checksum Required: Application
+                                    Level</span> - The item's session state may be set by
+                                passing the item name/value in a URL if a checksum specific to the
+                                schema is provided. A user-level checksum or a session-level
+                                checksum will also suffice (see next bullets). Use this option when
+                                you want to allow the item to be set only by URLs having checksums
+                                that were generated by any user running the same application in the
+                                current workspace but in a different session. 
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Checksum Required: User Level</span> -
+                                The item's session state may be set by passing the item name/value
+                                in a URL if a checksum specific to the workspace, application, and
+                                user is provided. A session-level checksum will also suffice (see
+                                next bullet). Use this option when you want to allow the item to be
+                                set only by URLs having checksums that were generated by the same
+                                named user, running the same application in the current workspace
+                                but in a different session. 
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Checksum Required: Session Level</span>
+                                - The item's session state may be set by passing the item name/value
+                                in a URL if a checksum specific to the current session is provided.
+                                Use this option when you want to allow this item to be set only by
+                                URLs having checksums that were generated in the current session.
+                            
+                                 </p>
+                                 
+                              </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Security, Escape Special Characters  - Controls whether the application item's
+                    value is automatically escaped in substitutions (for exmple, when referencing
+                    the item using <code class="codeph">&amp;ITEM.</code> syntax.</span><div>To prevent Cross-Site Scripting (XSS) attacks, set Escape Special
+                    Characters to <span class="uicontrol bold">On</span>. If you need to render HTML tags stored
+                    in the application item, you can set this flag to
+                    <span class="uicontrol bold">Off</span>.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Configuration, Build Option - Select a build option for this component. Build
+                    options are predefined settings that determine whether components within an
+                    application are enabled. </span></li>
+                     <li class="stepexpand"><span>Comments - Enter any notes regarding this item.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Application Item</span>.</span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-C64124CF-B34B-4F42-B12F-E79271350AEA__GUID-D9D0EA38-ECA0-4D9C-B0DC-87745499B73F">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="managing-application-items.html#GUID-93461E2E-F168-449E-9DC2-D1DB51E46081" title="You can create a global variable by creating an application item with the same name across all applications and setting the scope to Global.">About Creating an Application Item that Functions as a Global Variable</a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-application-items.html#GUID-F616E451-87EC-420A-BAAD-7A6D9BB5B4F7" title="Application items do not display, but are used to maintain session state.">Managing Application Items</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25342"></a><div class="props_rev_3"><a id="GUID-FD715F27-17CB-4B69-8ECA-998F32E932F6" name="GUID-FD715F27-17CB-4B69-8ECA-998F32E932F6"></a><h3 id="HTMDB-GUID-FD715F27-17CB-4B69-8ECA-998F32E932F6" class="sect3"><span class="enumeration_section">16.5.2 </span>Editing Application Item Attributes
+               </h3>
+               <div>
+                  <p>Once you create an application item, you can edit it on the Create/Edit
+        Application Item page.</p>
+                  <div class="section">
+                     <p>To edit application item attributes:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application.</span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                 <p>The Shared Components page appears. </p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Application Logic, select <span class="uicontrol bold">Application Items</span>.</span><div>
+                           <p>The Application Items page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Select an application item.</span><div>
+                           <p>The Create/Edit page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Edit the attributes. </span><div>
+                           <p>To learn more about an attribute, see field-level Help</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-FD715F27-17CB-4B69-8ECA-998F32E932F6__GUID-2AFDCC8D-555A-4B2B-8E9A-5FA27DE6DD63">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="using-oracle-apex-documentation.html#GUID-86D5F514-0613-4A96-9400-B320B03699C9" title="Learn about field-level Help and Help in Page Designer.">Viewing Field-Level and Page Designer Help</a></li>
+                        <li><a href="cross-site-scripting-protection.html#GUID-3E24746E-378C-478E-85F6-55DD8EC4A367" title="Protect your application from a cross site-scripting security breach.">Understanding Cross-Site Scripting Protection</a></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-application-items.html#GUID-F616E451-87EC-420A-BAAD-7A6D9BB5B4F7" title="Application items do not display, but are used to maintain session state.">Managing Application Items</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-4B59C2A5-A4ED-4D85-9C19-67D112602E4C" name="GUID-4B59C2A5-A4ED-4D85-9C19-67D112602E4C"></a><h3 id="HTMDB-GUID-4B59C2A5-A4ED-4D85-9C19-67D112602E4C" class="sect3"><span class="enumeration_section">16.5.3 </span>Copying or Subscribing to Application Items
+               </h3>
+               <div>
+                  <p>Copy application items from the current application or from another
+        applications. When copying an application item from another app, you can also subscribe to
+        it.</p>
+                  <div class="section">
+                     
+                     <div class="infobox-tip" id="GUID-4B59C2A5-A4ED-4D85-9C19-67D112602E4C__GUID-0580F871-73DC-4FE0-AC94-9508031D7DFC">
+                        <p class="notep1">Tip:</p>Subscriptions enable developers to reuse shared components across
+                several applications in a workspace. To learn more about subscriptions, see <a href="using-shared-component-subscriptions.html#GUID-24D34103-5C45-4DC6-A7BF-228744B04AAE" title="Use subscriptions to reuse shared components across several applications in a workspace.">Using Shared Component Subscriptions</a>.
+                     </div>
+                     
+                     <div class="infoboxnote" id="GUID-4B59C2A5-A4ED-4D85-9C19-67D112602E4C__GUID-0BFDF72F-4C99-405A-88D1-947C0C807612">
+                        <p class="notep1">Note:</p>When copying an application item from another app, shared component dependencies
+                are automatically resolved. To learn more, see <a href="using-shared-component-subscriptions.html#GUID-0D4081E6-7874-4EB0-998C-FAD74A8E3DCB" title="Learn about the automatic copy of dependent shared components.">About Automatic Dependency Resolution</a>.
+                     </div>
+                     
+                  </div>
+                  <p>To copy or subscribe to an application item:</p>
+                  <ol>
+                     <li><span>Navigate to the Application Items page:</span><ol type="a">
+                           <li class="substepexpand"><span>Navigate to the Workspace home page.</span></li>
+                           <li class="substepexpand"><span>Click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span></li>
+                           <li class="substepexpand"><span>Under Application Logic, click <span class="uicontrol bold">Application
+                            Items</span>.</span><div>
+                                 
+                                 <p>The Application Items page appears. Note that the report
+                                includes the following columns: Subscribed From, Subscription
+                                Status, and Subscribers.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li><span> To copy an Application Item within the current application:</span><ol type="a" id="GUID-4B59C2A5-A4ED-4D85-9C19-67D112602E4C__SUBSTEPS_XPQ_NFB_4YB">
+                           <li class="substepexpand"><span>Search for the application item and click <span class="uicontrol bold">Copy</span>
+                            icon in the Copy column.</span><div>
+                                 
+                                 <p>The Copy Application Item Wizard appears.</p>
+                                 
+                                 <div class="infobox-tip" id="GUID-4B59C2A5-A4ED-4D85-9C19-67D112602E4C__GUID-1CDDBC77-B137-49DF-812C-DA26667954E7">
+                                    <p class="notep1">Tip:</p>To copy
+                                an Application Item from another app, click <span class="uicontrol bold">Copy from
+                                    another app</span> and see Step 3.
+                                 </div>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>New Application Item - Enter the name of the application item. This
+                            name must be unique within the application.</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Copy Application Item</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li><span> To copy an application item from another application:</span><ol type="a" id="GUID-4B59C2A5-A4ED-4D85-9C19-67D112602E4C__SUBSTEPS_KXH_MWR_5SB">
+                           <li class="substepexpand"><span>From the Tasks region, click <span class="uicontrol bold">Copy from another
+                                app</span>.</span><div>The Copy Application Item Wizard appears.</div>
+                           </li>
+                           <li class="substepexpand"><span>Application - Select the application from which you want to copy.</span></li>
+                           <li class="substepexpand"><span>Copy Application Item - Select the application item to copy.</span></li>
+                           <li class="substepexpand"><span>Subscribe - Set this flag to  <span class="uicontrol bold">On</span> to subscribe to
+                            the application item.</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Copy Application Item</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+                  <div class="section">
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-4B59C2A5-A4ED-4D85-9C19-67D112602E4C__GUID-98251D9B-ECC2-4320-BD55-3AEE5F0BB162">
+                     <p class="notep1">See Also:</p><a href="using-shared-component-subscriptions.html#GUID-24D34103-5C45-4DC6-A7BF-228744B04AAE" title="Use subscriptions to reuse shared components across several applications in a workspace.">Using Shared Component Subscriptions</a></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-application-items.html#GUID-F616E451-87EC-420A-BAAD-7A6D9BB5B4F7" title="Application items do not display, but are used to maintain session state.">Managing Application Items</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-7FC4996A-6E55-4DA8-AEE8-586B3317DD41" name="GUID-7FC4996A-6E55-4DA8-AEE8-586B3317DD41"></a><h3 id="HTMDB-GUID-7FC4996A-6E55-4DA8-AEE8-586B3317DD41" class="sect3"><span class="enumeration_section">16.5.4 </span>Subscribing to an Application Item
+               </h3>
+               <div>
+                  <p>Subscribe to an application item on the Application Item, Create / Edit
+        page.</p>
+                  <div class="section">
+                     
+                     <p>Subscriptions enable developers to reuse shared components across several
+                applications in a workspace. To learn more about shared component subscriptions, see
+                    <a href="using-shared-component-subscriptions.html#GUID-24D34103-5C45-4DC6-A7BF-228744B04AAE" title="Use subscriptions to reuse shared components across several applications in a workspace.">Using Shared Component Subscriptions</a>.
+                     </p>
+                     
+                     <div class="infobox-tip" id="GUID-7FC4996A-6E55-4DA8-AEE8-586B3317DD41__GUID-AF63EE53-49BA-46F5-B632-E103E78B4D48">
+                        <p class="notep1">Tip:</p>You can also subscribe
+                to an application item by copying it and then subscribing. See <a href="managing-application-items.html#GUID-4B59C2A5-A4ED-4D85-9C19-67D112602E4C" title="Copy application items from the current application or from another applications. When copying an application item from another app, you can also subscribe to it.">Copying or Subscribing to Application Items</a>.
+                     </div>
+                     
+                  </div>
+                  <p>To subscribe to an application item:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Application Items page:</span><ol type="a" id="GUID-7FC4996A-6E55-4DA8-AEE8-586B3317DD41__SUBSTEPS_HPG_MPR_41C">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared
+                                Components</span>.</span><div>
+                                 
+                                 <p>The Shared Components page appears. </p>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Under Application Logic, click <span class="uicontrol bold">Application
+                            Items</span>.</span><div>
+                                 
+                                 <p>The Application Items page appears. Note that the report
+                                includes the following columns: Subscribed From, Subscription
+                                Status, and Subscribers.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Select an application item.</span><div>The Application Items, Create / Edit page
+                    appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>To subscribe to an application item:</span><ol type="a" id="GUID-7FC4996A-6E55-4DA8-AEE8-586B3317DD41__SUBSTEPS_G1B_Z2K_41C">
+                           <li class="substepexpand"><span>Find the <span class="uicontrol bold">Subscription</span> region.</span></li>
+                           <li class="substepexpand"><span>Subscription, Subscribe From - Select a master application item to
+                            subscribe to and click <span class="uicontrol bold">Apply
+                                Changes</span>.</span><div>
+                                 
+                                 <p>The subscribed component is automatically refreshed from
+                                the selected master.</p>
+                                 
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>To refresh a subscribed application item:</span><ol type="a" id="GUID-7FC4996A-6E55-4DA8-AEE8-586B3317DD41__SUBSTEPS_EM2_1FK_41C">
+                           <li><span>Find the <span class="uicontrol bold">Subscription</span> region.</span></li>
+                           <li><span>Subscription, Refresh Application Item - If the application item is
+                            already subscribed, click <span class="uicontrol bold">Refresh Application
+                                Item</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>To unsubscribe from a subscribed application item:</span><ol type="a" id="GUID-7FC4996A-6E55-4DA8-AEE8-586B3317DD41__SUBSTEPS_UPJ_CFK_41C">
+                           <li><span>Find the <span class="uicontrol bold">Subscription</span> region.</span></li>
+                           <li><span>Subscription, Unsubscribe - Click
+                            <span class="uicontrol bold">Unsubscribe</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-application-items.html#GUID-F616E451-87EC-420A-BAAD-7A6D9BB5B4F7" title="Application items do not display, but are used to maintain session state.">Managing Application Items</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25341"></a><div class="props_rev_3"><a id="GUID-6F91FC5C-8802-490E-B430-3F51BB0C7B5D" name="GUID-6F91FC5C-8802-490E-B430-3F51BB0C7B5D"></a><h3 id="HTMDB-GUID-6F91FC5C-8802-490E-B430-3F51BB0C7B5D" class="sect3"><span class="enumeration_section">16.5.5 </span>Accessing Application Item Reports
+               </h3>
+               <div>
+                  <p>View the application item Utilization and History reports by clicking the
+        appropriate tab on the Application Items page.</p>
+                  <div class="section">
+                     <p>To view the application item reports:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                 <p>The Shared Components page appears.</p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Application Logic, select <span class="uicontrol bold">Application Items</span>.</span><div>
+                           <p>The Application Items page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click the appropriate tab:</span><div>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-6F91FC5C-8802-490E-B430-3F51BB0C7B5D__UL_VNG_X1M_NZB">
+                              <li><span class="uicontrol bold">Utilization</span> - Displays where each application
+                            item is used.
+                              </li>
+                              <li><span class="uicontrol bold">History</span> - Displays recent modifications made to
+                            application items in this application.
+                              </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-application-items.html#GUID-F616E451-87EC-420A-BAAD-7A6D9BB5B4F7" title="Application items do not display, but are used to maintain session state.">Managing Application Items</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29095"></a><div class="props_rev_3"><a id="GUID-93461E2E-F168-449E-9DC2-D1DB51E46081" name="GUID-93461E2E-F168-449E-9DC2-D1DB51E46081"></a><h3 id="HTMDB-GUID-93461E2E-F168-449E-9DC2-D1DB51E46081" class="sect3"><span class="enumeration_section">16.5.6 </span>About Creating an Application Item that
+        Functions as a Global Variable
+               </h3>
+               <div>
+                  <p>You can create a global variable by creating an application item with the
+        same name across all applications and setting the scope to Global. </p>
+                  <p>Large applications are often separated into several physical applications that reside in the same workspace. These applications often share session state by configuring the same cookie name in each application. </p>
+                  <p>Another requirement of this type of architecture is the need to share a few global variables. While the number global variables should be kept small, global variables function as an effective means to facilitate communicate between the applications. For example:</p>
+                  <ul style="list-style-type: disc;">
+                     <li>Properties of the current user (such as email address, employee number, and so on).</li>
+                     <li>Current company in a multitenant application.</li>
+                  </ul>
+                  <p>To create an application item that functions as a global variable:</p>
+                  <ol>
+                     <li>Create an application item with the same name in each application to share session state. </li>
+                     <li>For Scope, select <span class="bold">Global</span>.
+                     </li>
+                     <li>For Security, Session State Protection, select <span class="bold">Restricted</span>. 
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-93461E2E-F168-449E-9DC2-D1DB51E46081__GUID-C69441B8-CD10-44E4-8AB8-D7F8705132C3">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="managing-application-items.html#GUID-C64124CF-B34B-4F42-B12F-E79271350AEA" title="Create a application item on the shared Shared Components page.">Creating an Application Item</a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-application-items.html#GUID-F616E451-87EC-420A-BAAD-7A6D9BB5B4F7" title="Application items do not display, but are used to maintain session state.">Managing Application Items</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

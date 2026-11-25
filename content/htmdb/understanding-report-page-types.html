@@ -1,0 +1,791 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Understanding Report Page Types">
+      <meta name="abstract" content="Learn about the available report page types when running the Create Application Wizard and Create Page Wizard.">
+      <meta name="description" content="Learn about the available report page types when running the Create Application Wizard and Create Page Wizard.">
+      <meta name="DC.subject" content="report page types, understanding, use cases, comparison">
+      <meta name="keywords" content="report page types, understanding, use cases, comparison">
+      <meta name="DC.Relation" scheme="URI" content="developing-reports.html#GUID-A63ECD33-D759-4725-9666-A02719FB35B8">
+      <meta name="DC.Relation" scheme="URI" content="understanding-report-page-types.html#GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E">
+      <meta name="DC.Relation" scheme="URI" content="understanding-report-page-types.html#GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-41FC6A79-8FE6-4585-AB16-987F28DA07D2">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about the available report page types when running the Create Application Wizard and Create Page Wizard.">
+      <meta name="description" content="Learn about the available report page types when running the Create Application Wizard and Create Page Wizard.">
+      <title>Understanding Report Page Types</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Learn about the available report page types when running the Create Application Wizard and Create Page Wizard.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="developing-reports.html" title="Previous" type="text/html">
+      <link rel="next" href="creating-report-create-app-wizard.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Understanding Report Page Types","description":"Learn about the available report page types when running the Create Application Wizard and Create Page Wizard.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="developing-reports.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="creating-report-create-app-wizard.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-41FC6A79-8FE6-4585-AB16-987F28DA07D2" name="GUID-41FC6A79-8FE6-4585-AB16-987F28DA07D2"></a>
+         
+         <h2 id="HTMDB-GUID-41FC6A79-8FE6-4585-AB16-987F28DA07D2" class="sect2"><span class="enumeration_section">8.1 </span>Understanding Report Page Types
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Learn about the available report page types when running the Create
+        Application Wizard and Create Page Wizard.</p>
+               <p>The Create Application Wizard and Create Page Wizard include a number of pages for
+            displaying data. Some of these page types, such as classic reports, interactive reports,
+            and interactive grids, are straightforward reports. However, others include a report
+            region and an associated search region. For example, a faceted search page contains a
+            search region and a report region which can display as either a cards region or a
+            classic report. Similarly, a smart filters page includes a search region and a search
+            results report which can be a classic report, cards, map, or calendar.</p>
+               <div class="infoboxnote" id="GUID-41FC6A79-8FE6-4585-AB16-987F28DA07D2__GUID-67F33BA6-19FB-454D-A02B-1F9FAD44411C">
+                  <p class="notep1">Note:</p>To learn more about reports and forms
+            optimized for mobile devices, see <a href="creating-applications-for-mobile-devices.html#GUID-D36D47CE-37A1-4B2B-A647-DF1005EE9FB9" title="Build applications for mobile devices with mobile-specific design patterns that can provide an optimal user experience for small screens.">Creating Applications for Mobile Devices</a> and <a href="legacy-forms-optimized-for-mobile.html#GUID-252C4E1E-24F5-4A11-B3AE-A36D99650F73" title="Learn about legacy forms optimized for mobile environments.">Legacy Forms Optimized for Mobile Environments</a>.
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="understanding-report-page-types.html#GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E">Report Page Type Use Cases</a><br>Review common use cases for available report page types.
+                  </li>
+                  <li class="ulchildlink"><a href="understanding-report-page-types.html#GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A">Comparison of Report Page Types</a><br>Compare report pages types available when running the Create Application         Wizard and Create Page Wizard.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="developing-reports.html#GUID-A63ECD33-D759-4725-9666-A02719FB35B8" title="In Oracle APEX, a report is the formatted result of a SQL query. You can generate the SQL query by selecting a table or view in a wizard or by defining the SQL query manually.">Developing Reports</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="sect2"><a id="GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E" name="GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E"></a><h3 id="HTMDB-GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E" class="sect3"><span class="enumeration_section">8.1.1 </span>Report Page Type Use Cases
+               </h3>
+               <div>
+                  <p>Review common use cases for available report page types.</p>
+                  <div class="section">
+                     
+                     <p>The following table describes uses cases for the report page types
+                available in the Create Page Wizard and Create Application Wizard.</p>
+                     
+                     <div class="infoboxnote" id="GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E__GUID-B83AC63D-40C9-4B8F-A68E-FE9D48511B05">
+                        <p class="notep1">Note:</p>For a more detailed comparison of
+                report page types, see <a href="understanding-report-page-types.html#GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A" title="Compare report pages types available when running the Create Application Wizard and Create Page Wizard.">Comparison of Report Page Types</a>.
+                     </div>
+                     
+                     <div class="tblformalwide" id="GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E__TABLE_GC3_H2K_5TB">
+                        <table cellpadding="4" cellspacing="0" class="FormalWide" title summary="Report page type use cases." width="100%" frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="0%" id="d100489e242">Report Page Type</th>
+                                 <th align="left" valign="bottom" width="0%" id="d100489e244">Use Case</th>
+                                 <th align="left" valign="bottom" width="0%" id="d100489e246">Learn More...</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d100489e250" headers="d100489e242 ">
+                                    <p>Cards</p><a id="d100489e253" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e250 d100489e244 ">
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E__CARDS_RPT_USE_CASES">
+                                       <li>Display data at a glance using information
+                                        tiles that can easily include an image.</li>
+                                       <li>Choose between three cards page layouts: Grid,
+                                        Float, or Horizontal (Row).</li>
+                                       <li>Provides summary information from a modern
+                                        layout with one-click access to more details on another
+                                        report or form page.</li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e250 d100489e246 ">
+                                    
+                                    <p>See:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E__UL_D2J_M2K_5TB">
+                                       <li><a href="managing-cards.html#GUID-4B524AC4-9507-45EB-B4EA-A4D33F469B2D" title="A cards page features an orderly layout of information tiles. Developers choose between three layouts: Grid, Float, or Horizontal (Row).">Managing Cards</a></li>
+                                       <li><a href="example-cards-page.html#GUID-0F5699C1-D198-4951-9E9C-175F6D79936B" title="View an example cards page.">Example Cards Page</a></li>
+                                       <li>Install the <span class="italic">Sample Cards</span> sample app. See
+                                            <a href="using-the-app-gallery.html#GUID-BA858DEB-1828-4FCE-8955-D14CC3D1F29C" title="Install Sample and Starter Apps directly from the Gallery by clicking Install.">Installing Apps from the Gallery</a>.
+                                       </li>
+                                    </ul>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d100489e302" headers="d100489e242 ">
+                                    <p>Classic
+                                    Report</p><a id="d100489e305" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e302 d100489e244 ">
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E__CR_USE_CASES">
+                                       <li>Display data in a simple report region.</li>
+                                       <li>Update data by including a report and update
+                                        form combination during creation.</li>
+                                       <li>Column sorting configurable.</li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e302 d100489e246 ">
+                                    
+                                    <p>See:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E__UL_PTV_P2K_5TB">
+                                       <li><a href="managing-classic-reports.html#GUID-6C9E3F69-691B-4501-8020-097C92508561" title="A classic report features a simple report page based on the formatted result of a SQL query.">Managing Classic Reports</a></li>
+                                       <li><a href="example-classic-report.html#GUID-7192E5DA-35F0-4326-BF96-2CA05E822092" title="View a classic report example.">Example Classic Report</a></li>
+                                       <li>Install the <span class="italic"><span class="italic">Sample Reporting</span></span>
+                                        sample app. See <a href="using-the-app-gallery.html#GUID-BA858DEB-1828-4FCE-8955-D14CC3D1F29C" title="Install Sample and Starter Apps directly from the Gallery by clicking Install.">Installing Apps from the Gallery</a>.
+                                       </li>
+                                    </ul>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d100489e355" headers="d100489e242 ">
+                                    <p>Faceted
+                                    Search</p><a id="d100489e358" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e355 d100489e244 ">
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E__FS_USE_CASES">
+                                       <li>Display and filter data using an intuitive experience users
+                                        recognize from ecommerce sites  (a left Search region and
+                                        report region).</li>
+                                       <li>Show search results as cards or a classic
+                                        report.</li>
+                                       <li>Includes built-in search capability.</li>
+                                       <li>Users select facets in the Search region to
+                                        narrow down the search results.</li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e355 d100489e246 ">
+                                    
+                                    <p>See:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E__UL_I2S_52K_5TB">
+                                       <li><a href="managing-faceted-search.html#GUID-1A586583-3DAB-4F49-A5B4-A09AD93F015F" title="A faceted search page displays and filters data using an intuitive experience users recognize from ecommerce sites (a left Search region and report region). The report region displays search results as cards or a classic report.">Managing Faceted Search</a></li>
+                                       <li><a href="example-faceted-search.html#GUID-4C2C0104-274C-4F68-A5E1-EF9A9D78668A" title="View an example faceted search page.">Example Faceted Search</a></li>
+                                       <li>Install the <span class="italic"><span class="italic">Sample Reporting</span></span>
+                                        sample app. See <a href="using-the-app-gallery.html#GUID-BA858DEB-1828-4FCE-8955-D14CC3D1F29C" title="Install Sample and Starter Apps directly from the Gallery by clicking Install.">Installing Apps from the Gallery</a>.
+                                       </li>
+                                    </ul>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d100489e410" headers="d100489e242 ">
+                                    <p>Interactive
+                                    Grid</p><a id="d100489e413" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e410 d100489e244 ">
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E__IG_RPT_USE_CASES">
+                                       <li>Display data in a searchable, customizable
+                                        report that supports inline editing at runtime using the
+                                        mouse or keyboard.</li>
+                                       <li>Enable end users to create highly customized
+                                        reports. Users can alter the report layout by using either
+                                        the Column Heading menu or Actions menu.</li>
+                                       <li>Move columns by using the Actions menu, Column
+                                        dialog, or by dragging and dropping with the mouse.</li>
+                                       <li>Save customizations and report layout by saving
+                                        a private or alternative report just for yourself, a public
+                                        report, or as a primary report that can be viewed by
+                                        others.</li>
+                                       <li>Save a report layout by creating an Alternative
+                                        or Private report.</li>
+                                       <li>Download or email the report as a CSV, HTML,
+                                        PDF, or Excel file.</li>
+                                       <li>Enable and disable editing capability at by
+                                        editing attributes in Page Designer.</li>
+                                       <li>
+                                          
+                                          <p>If editable:</p>
+                                          
+                                          <ul style="list-style-type: disc;" id="GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E__UL_RLK_WQJ_5TB">
+                                             <li>Select options from the Row Action
+                                                menu.</li>
+                                             <li>
+                                                
+                                                <p>Add and remove rows or edit data by
+                                                  directly editing a cell.</p>
+                                                
+                                             </li>
+                                          </ul>
+                                          
+                                       </li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e410 d100489e246 ">
+                                    
+                                    <p>See:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E__UL_YDB_LFK_5TB">
+                                       <li><a href="understanding-report-page-types.html#GUID-41FC6A79-8FE6-4585-AB16-987F28DA07D2" title="Learn about the available report page types when running the Create Application Wizard and Create Page Wizard.">Understanding Report Page Types</a></li>
+                                       <li><a href="understanding-report-page-types.html#GUID-41FC6A79-8FE6-4585-AB16-987F28DA07D2" title="Learn about the available report page types when running the Create Application Wizard and Create Page Wizard.">Understanding Report Page Types</a></li>
+                                       <li>Install the <span class="italic"><span class="italic">Sample Reporting</span></span>
+                                        sample app. See <a href="using-the-app-gallery.html#GUID-BA858DEB-1828-4FCE-8955-D14CC3D1F29C" title="Install Sample and Starter Apps directly from the Gallery by clicking Install.">Installing Apps from the Gallery</a>.
+                                       </li>
+                                    </ul>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d100489e484" headers="d100489e242 ">
+                                    <p>Interactive
+                                    Report</p><a id="d100489e487" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e484 d100489e244 ">
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E__IR_RPT_USE_CASES">
+                                       <li>Display data in a searchable, customizable
+                                        report.</li>
+                                       <li>Enable end users to create highly customized
+                                        reports. Users can alter the report layout by using either
+                                        the Column Heading menu or Actions menu.</li>
+                                       <li>Update data by including an update form during
+                                        creation.</li>
+                                       <li>Save customizations and report layout by saving
+                                        a private report just for yourself, a public report, or as a
+                                        default report that can be viewed by others.</li>
+                                       <li>Download, email, or subscribe to report update
+                                        subscriptions in CSV, HTML, Excel, or PDF format.</li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e484 d100489e246 ">
+                                    
+                                    <p>See:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E__UL_QSH_NFK_5TB">
+                                       <li><a href="managing-interactive-reports.html#GUID-24C05873-1362-4CC5-A9E5-0252C388CC67" title="An interactive report page features a searchable, easily customizable report.">Managing Interactive Reports</a></li>
+                                       <li><a href="example-interactive-report.html#GUID-A9E14582-339C-4C89-A566-DDE7387E0A01" title="View an interactive report example.">Example Interactive Report</a></li>
+                                       <li>Install the <span class="italic"><span class="italic">Sample Reporting</span></span>
+                                        sample app. See <a href="using-the-app-gallery.html#GUID-BA858DEB-1828-4FCE-8955-D14CC3D1F29C" title="Install Sample and Starter Apps directly from the Gallery by clicking Install.">Installing Apps from the Gallery</a>.
+                                       </li>
+                                    </ul>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d100489e541" headers="d100489e242 ">
+                                    <p>Smart
+                                    Filters</p><a id="d100489e544" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e541 d100489e244 ">
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E__SMART_FIL_USE_CASES">
+                                       <li>Display data using a single search field region
+                                        at the top of the page and results report.</li>
+                                       <li>Offers a more compact UI when compared to
+                                        faceted search.</li>
+                                       <li>Search results report can display as a classic
+                                        report, cards, map, or calendar.</li>
+                                       <li>End users select filters that display as
+                                        suggestion chips.</li>
+                                       <li>Includes built-in search capability.</li>
+                                       <li>Configurable search suggestions</li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e541 d100489e246 ">
+                                    
+                                    <p>See:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-F10A07C1-BA9A-47F6-B70E-8E5CA3FECB2E__UL_GQ2_PFK_5TB">
+                                       <li><a href="managing-smart-filters.html#GUID-C8C68618-6D42-41F6-BC36-C9CC19C03AD6" title="A smart filters page features a single search field at the top of the page and a search results report (classic report, cards, map, or calendar). While a smart filter behaves similarly to faceted search, it features a more space efficient layout.">Managing Smart Filters</a></li>
+                                       <li><a href="example-smar-filters.html#GUID-D5124E51-C188-47F3-834D-CFB3CB0A4DA4" title="View an example smart filters page.">Example Smart Filters</a></li>
+                                       <li>Install the <span class="italic"><span class="italic">Sample Reporting</span></span>
+                                        sample app. See <a href="using-the-app-gallery.html#GUID-BA858DEB-1828-4FCE-8955-D14CC3D1F29C" title="Install Sample and Starter Apps directly from the Gallery by clicking Install.">Installing Apps from the Gallery</a>.
+                                       </li>
+                                    </ul>
+                                    
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-report-page-types.html#GUID-41FC6A79-8FE6-4585-AB16-987F28DA07D2" title="Learn about the available report page types when running the Create Application Wizard and Create Page Wizard.">Understanding Report Page Types</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A" name="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A"></a><h3 id="HTMDB-GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A" class="sect3"><span class="enumeration_section">8.1.2 </span>Comparison of Report Page Types
+               </h3>
+               <div>
+                  <p>Compare report pages types available when running the Create Application
+        Wizard and Create Page Wizard.</p>
+                  <div class="section">
+                     <p>The following table describes the commonly used report page types available in the
+                Create Page Wizard and Create Application Wizard.</p>
+                     
+                     
+                     <div class="tblformalwide" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__TABLE_V3T_KDF_5TB">
+                        <table cellpadding="4" cellspacing="0" class="FormalWide" title summary="Commonly used report pages types." width="100%" frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="0%" id="d100489e713">Report Page Type</th>
+                                 <th align="left" valign="bottom" width="0%" id="d100489e715">Description</th>
+                                 <th align="left" valign="bottom" width="0%" id="d100489e717">Learn More...</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d100489e721" headers="d100489e713 ">
+                                    <p>Cards</p><a id="d100489e724" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e721 d100489e715 ">
+                                    
+                                    <p><span id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__CARDS_RPT_DESC">A cards page features an
+                                        orderly layout of information tiles. Developers choose
+                                        between three layouts: Grid, Float, or Horizontal
+                                        (Row).</span></p>
+                                    
+                                    <p>Features:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__CARDS_RPT_FEATURES">
+                                       <li>Customize every aspect of a cards region's UI
+                                        (including layout, appearance, icon, badge, and media).</li>
+                                       <li>Declaratively create links from a cards page by
+                                        adding actions. Action types include Button, Full Card,
+                                        Title, Subtitle, or Media. </li>
+                                       <li>Supports advanced HTML expressions including
+                                        template directives for client-side conditional
+                                        formatting.</li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e721 d100489e717 ">
+                                    
+                                    <p>See:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__UL_E15_14J_5TB">
+                                       <li><a href="managing-cards.html#GUID-4B524AC4-9507-45EB-B4EA-A4D33F469B2D" title="A cards page features an orderly layout of information tiles. Developers choose between three layouts: Grid, Float, or Horizontal (Row).">Managing Cards</a></li>
+                                       <li><a href="example-cards-page.html#GUID-0F5699C1-D198-4951-9E9C-175F6D79936B" title="View an example cards page.">Example Cards Page</a></li>
+                                       <li>Install the <span class="italic">Sample Cards</span> sample app. See
+                                            <a href="using-the-app-gallery.html#GUID-BA858DEB-1828-4FCE-8955-D14CC3D1F29C" title="Install Sample and Starter Apps directly from the Gallery by clicking Install.">Installing Apps from the Gallery</a>.
+                                       </li>
+                                    </ul>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d100489e780" headers="d100489e713 ">
+                                    <p>Classic
+                                    Report</p><a id="d100489e783" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e780 d100489e715 ">
+                                    
+                                    <p><span id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__CLASSIC_RPT_DESC">A classic report features
+                                        a simple report page based on the formatted result of a SQL
+                                        query.</span></p>
+                                    
+                                    <p>Features:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__CLASSIC_RPT_FEATURES">
+                                       <li>
+                                          
+                                          <p>Report can display as a standard application
+                                            page or as a modal dialog.</p>
+                                          
+                                       </li>
+                                       <li>Enable the <span class="uicontrol bold">Include Form</span>
+                                        option to create a report and update form combination.
+                                       </li>
+                                       <li>Enable column sorting in Page Designer by
+                                        selecting a column and configuring Column, Sorting
+                                        attributes.</li>
+                                       <li>The most versatile report as it is
+                                        template-driven. Choose from the predefined report
+                                        templates, including Media List, Comments, Timeline, Badge
+                                        List, Value Attributes Pairs, and so on. Or, create your own
+                                        template to customize and visualize data.</li>
+                                       <li>Download the report as a CSV, HTML, Excel, or
+                                        PDF.</li>
+                                       <li>Supports Report Layouts to format PDF
+                                        exports.</li>
+                                    </ul>
+                                    
+                                    <p>Limitations compared to other report types:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__CLASSIC_RPT_LIMITATIONS">
+                                       <li>Using templates requires changing the SQL query
+                                        column names to match the chosen template (for row
+                                        templates)</li>
+                                       <li>No support for scroll pagination or virtual
+                                        scrolling. Other pagination options available.</li>
+                                       <li>No column header groups, frozen columns, and
+                                        template directives.</li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e780 d100489e717 ">
+                                    
+                                    <p>See:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__UL_QKP_J4J_5TB">
+                                       <li><a href="managing-classic-reports.html#GUID-6C9E3F69-691B-4501-8020-097C92508561" title="A classic report features a simple report page based on the formatted result of a SQL query.">Managing Classic Reports</a></li>
+                                       <li><a href="example-classic-report.html#GUID-7192E5DA-35F0-4326-BF96-2CA05E822092" title="View a classic report example.">Example Classic Report</a></li>
+                                       <li>Install the <span class="italic"><span class="italic">Sample Reporting</span></span>
+                                        sample app. See <a href="using-the-app-gallery.html#GUID-BA858DEB-1828-4FCE-8955-D14CC3D1F29C" title="Install Sample and Starter Apps directly from the Gallery by clicking Install.">Installing Apps from the Gallery</a>.
+                                       </li>
+                                    </ul>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d100489e863" headers="d100489e713 ">
+                                    <p>Faceted
+                                    Search</p><a id="d100489e866" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e863 d100489e715 ">
+                                    
+                                    <p><span id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__FACETED_SRCH_DESC">A faceted search page
+                                        displays and filters data using an intuitive experience
+                                        users recognize from ecommerce sites (a left Search region
+                                        and report region). The report region displays search
+                                        results as cards or a classic report.</span></p>
+                                    
+                                    <p>Features:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__FACETED_SRCH_FEATURES">
+                                       <li>Select options from facets in the left Search
+                                        region to narrow down search results.</li>
+                                       <li>Set filters using facets that show possible
+                                        values together with the occurrence count within the result
+                                        set.</li>
+                                       <li>Built-in search capability.</li>
+                                       <li>Optionally include a chart for any facet.</li>
+                                       <li>Toggle between a bar chart (which is the
+                                        default) and pie chart type.</li>
+                                       <li>Create facet groups for data models having
+                                        multiple flag columns. </li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e863 d100489e717 ">
+                                    
+                                    <p>See:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__UL_V2P_DPJ_5TB">
+                                       <li><a href="managing-faceted-search.html#GUID-1A586583-3DAB-4F49-A5B4-A09AD93F015F" title="A faceted search page displays and filters data using an intuitive experience users recognize from ecommerce sites (a left Search region and report region). The report region displays search results as cards or a classic report.">Managing Faceted Search</a></li>
+                                       <li><a href="example-faceted-search.html#GUID-4C2C0104-274C-4F68-A5E1-EF9A9D78668A" title="View an example faceted search page.">Example Faceted Search</a></li>
+                                       <li>Install the <span class="italic"><span class="italic">Sample Reporting</span></span>
+                                        sample app. See <a href="using-the-app-gallery.html#GUID-BA858DEB-1828-4FCE-8955-D14CC3D1F29C" title="Install Sample and Starter Apps directly from the Gallery by clicking Install.">Installing Apps from the Gallery</a>.
+                                       </li>
+                                    </ul>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d100489e929" headers="d100489e713 ">
+                                    <p>Interactive
+                                    Grid</p><a id="d100489e932" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e929 d100489e715 ">
+                                    
+                                    <p><span id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__IG_DESC">An interactive grid presents data
+                                        in a searchable, customizable report. Includes similar
+                                        customization capabilities available in interactive reports
+                                        plus the ability to rearrange the report interactively using
+                                        the mouse or keyboard.</span></p>
+                                    
+                                    <p>Features:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__IG_FEATURES">
+                                       <li>Extensive customization capabilities using
+                                        menus or inline editing.</li>
+                                       <li>Turn editing on or off using the region
+                                        Attribute, Edit, Enabled.</li>
+                                       <li>Built-in search capability.</li>
+                                       <li>For both editable and non-editable reports,
+                                        users can change the report layout and create private
+                                            reports:
+                                          <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__UL_T2J_NWJ_5TB">
+                                             <li>Column Heading menu - Change the report
+                                                layout with Control Break, Aggregations, Freeze,
+                                                Hide, and Filter.</li>
+                                             <li>Actions menu:
+                                                <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__UL_MJP_PWJ_5TB">
+                                                   <li>Columns - Configure the columns to
+                                                  show or hide.</li>
+                                                   <li>Filters - Create filters to alter
+                                                  the display.</li>
+                                                   <li>Data - Sort, Aggregate, Refresh,
+                                                  Flashback.</li>
+                                                   <li>Format - Control Break,
+                                                  Highlight, Stretch Column Widths.</li>
+                                                   <li>Selection - Cell Selection, Copy
+                                                  to Clipboard, Refresh Rows.</li>
+                                                   <li>Chart - Create chart.</li>
+                                                   <li>Report - Create, edit, and manage
+                                                  saved Private or Alternative reports.</li>
+                                                   <li>Download - Download or email the
+                                                  report as a CSV, HTML, PDF, or Excel file</li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li>
+                                          
+                                          <p>If editable, users can edit the data
+                                            directly:</p>
+                                          
+                                          <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__UL_MRM_BXJ_5TB">
+                                             <li>Row Actions menu - Single Row View, Add
+                                                Row, Duplicate Row, Delete Row, Refresh Row, Revert
+                                                Changes.</li>
+                                             <li>Add Rows - Add new rows by clicking the
+                                                  <span class="uicontrol bold">Add Row </span>button.
+                                             </li>
+                                             <li>Edit Rows - Edit a row by selecting or
+                                                double-clicking a cell with the mouse, editing the
+                                                content, and clicking the
+                                                  <span class="uicontrol bold">Save</span> button.
+                                             </li>
+                                          </ul>
+                                          
+                                       </li>
+                                    </ul>
+                                    
+                                    <p>Limitations compared to other report page types:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__IG_LIMITATIONS">
+                                       <li>Rows are fixed height. No variable height
+                                        option.</li>
+                                       <li>Does not remember current page.</li>
+                                       <li>Tabular form limitations: submit selected rows,
+                                        always edit for small number of records</li>
+                                       <li>Interactive report features not supported: Pivot
+                                        view, Group By view, Computed columns, and complex
+                                        filters.</li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e929 d100489e717 ">
+                                    
+                                    <p>See:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__UL_BSY_XSJ_5TB">
+                                       <li><a href="understanding-report-page-types.html#GUID-41FC6A79-8FE6-4585-AB16-987F28DA07D2" title="Learn about the available report page types when running the Create Application Wizard and Create Page Wizard.">Understanding Report Page Types</a></li>
+                                       <li><a href="understanding-report-page-types.html#GUID-41FC6A79-8FE6-4585-AB16-987F28DA07D2" title="Learn about the available report page types when running the Create Application Wizard and Create Page Wizard.">Understanding Report Page Types</a></li>
+                                       <li>Install the <span class="italic"><span class="italic">Sample Reporting</span></span>
+                                        sample app. See <a href="using-the-app-gallery.html#GUID-BA858DEB-1828-4FCE-8955-D14CC3D1F29C" title="Install Sample and Starter Apps directly from the Gallery by clicking Install.">Installing Apps from the Gallery</a>.
+                                       </li>
+                                    </ul>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d100489e1044" headers="d100489e713 ">
+                                    <p>Interactive
+                                    Report</p><a id="d100489e1047" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e1044 d100489e715 ">
+                                    
+                                    <p><span id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__IR_DESC">An interactive report page features
+                                        a searchable, easily customizable report.</span></p>
+                                    
+                                    <p>Features:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__IR_FEATURES">
+                                       <li>Report can display as a standard application
+                                        page or as a modal dialog.</li>
+                                       <li>Enable the <span class="uicontrol bold">Include Form</span>
+                                        option to create a report and update form combination.
+                                       </li>
+                                       <li>Built-in search capability.</li>
+                                       <li>Change the report layout and create private
+                                        reports using menus:
+                                          <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__UL_L5X_GBK_5TB">
+                                             <li>Column Heading menu: Change the report
+                                                layout with Sort Ascending, Sort Descending, Hide
+                                                Column, Control Break, and Filter.</li>
+                                             <li>Actions menu:
+                                                <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__UL_WKV_KBK_5TB">
+                                                   <li>Columns - Configure the columns to
+                                                  show or hide.</li>
+                                                   <li>Filters - Create filters to alter
+                                                  the display.</li>
+                                                   <li>Data - Sort, Aggregate, Compute,
+                                                  Flashback.</li>
+                                                   <li>Format - Control Break,
+                                                  Highlight, Rows Per Page.</li>
+                                                   <li>Chart - Create a chart.</li>
+                                                   <li>Group By - Group sets of results
+                                                  by one or more columns with Group By.</li>
+                                                   <li>Pivot - Pivot reports transpose
+                                                  rows into columns to generate results in a cross
+                                                  tab format.</li>
+                                                   <li>Report - Create, edit, and manage
+                                                  saved Named reports.</li>
+                                                   <li>Download - Download or email the
+                                                  report as a CSV, HTML, Excel, or PDF.</li>
+                                                   <li>Subscription - Subscribe to report
+                                                  updates in CSV, HTML, Excel, or PDF format.</li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                    
+                                    <p>Limitations compared to other report page types:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__IR_LIMITATIONS">
+                                       <li>No scroll pagination.</li>
+                                       <li>Freeze columns not supported.</li>
+                                       <li>Column groups not supported.</li>
+                                       <li>Charts not as powerful as interactive grid.</li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e1044 d100489e717 ">
+                                    
+                                    <p>See:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__UL_J34_XYJ_5TB">
+                                       <li><a href="managing-interactive-reports.html#GUID-24C05873-1362-4CC5-A9E5-0252C388CC67" title="An interactive report page features a searchable, easily customizable report.">Managing Interactive Reports</a></li>
+                                       <li><a href="example-interactive-report.html#GUID-A9E14582-339C-4C89-A566-DDE7387E0A01" title="View an interactive report example.">Example Interactive Report</a></li>
+                                       <li>Install the <span class="italic"><span class="italic">Sample Reporting</span></span>
+                                        sample app. See <a href="using-the-app-gallery.html#GUID-BA858DEB-1828-4FCE-8955-D14CC3D1F29C" title="Install Sample and Starter Apps directly from the Gallery by clicking Install.">Installing Apps from the Gallery</a>.
+                                       </li>
+                                    </ul>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="0%" id="d100489e1148" headers="d100489e713 ">
+                                    <p>Smart
+                                    Filters</p><a id="d100489e1151" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e1148 d100489e715 ">
+                                    
+                                    <p><span id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__SMART_FILTERS_DESC">A smart filters page
+                                        features a single search field at the top of the page and a
+                                        search results report (classic report, cards, map, or
+                                        calendar). While a smart filter behaves similarly to faceted
+                                        search, it features a more space efficient layout.</span></p>
+                                    
+                                    <p>Features:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__SMART_FILTERS_FEATURES">
+                                       <li>Includes a search field at the top of the page
+                                        with filters that display as suggestion chip.</li>
+                                       <li>The Search Results can display as a classic
+                                        report, cards, map, or calendar.</li>
+                                       <li>Clicking a filter name displays a list of
+                                        values. </li>
+                                       <li>Clicking to right of a suggestion chip changes
+                                        it to an applied filter chip and moves to the Applied
+                                        Filters Area. Clicking the applied filter chip again
+                                        displays a list. </li>
+                                       <li>Built-in search capability.</li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="0%" headers="d100489e1148 d100489e717 ">
+                                    
+                                    <p>See:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-83B201D4-4218-42DC-9887-C7DE2CE65C3A__UL_ZF2_P1K_5TB">
+                                       <li><a href="managing-smart-filters.html#GUID-C8C68618-6D42-41F6-BC36-C9CC19C03AD6" title="A smart filters page features a single search field at the top of the page and a search results report (classic report, cards, map, or calendar). While a smart filter behaves similarly to faceted search, it features a more space efficient layout.">Managing Smart Filters</a></li>
+                                       <li><a href="example-smar-filters.html#GUID-D5124E51-C188-47F3-834D-CFB3CB0A4DA4" title="View an example smart filters page.">Example Smart Filters</a></li>
+                                       <li>Install the <span class="italic"><span class="italic">Sample Reporting</span></span>
+                                        sample app. See <a href="using-the-app-gallery.html#GUID-BA858DEB-1828-4FCE-8955-D14CC3D1F29C" title="Install Sample and Starter Apps directly from the Gallery by clicking Install.">Installing Apps from the Gallery</a>.
+                                       </li>
+                                    </ul>
+                                    
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="understanding-report-page-types.html#GUID-41FC6A79-8FE6-4585-AB16-987F28DA07D2" title="Learn about the available report page types when running the Create Application Wizard and Create Page Wizard.">Understanding Report Page Types</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

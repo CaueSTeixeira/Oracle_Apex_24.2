@@ -1,0 +1,147 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="What is a Nonce?">
+      <meta name="abstract" content="Learn about a nonce and how it works.">
+      <meta name="description" content="Learn about a nonce and how it works.">
+      <meta name="DC.subject" content="Content Security Policy (CSP), about nonce">
+      <meta name="keywords" content="Content Security Policy (CSP), about nonce">
+      <meta name="DC.Relation" scheme="URI" content="configuring-content-security-policy-csp.html#GUID-B82B66C4-84AF-40DF-ABF1-F0910F35E6E1">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="template" content="Reference">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-3F38BDC2-AEA9-44AB-9869-B32DD94C4242">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Learn about a nonce and how it works.">
+      <meta name="description" content="Learn about a nonce and how it works.">
+      <title>What is a Nonce?</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Learn about a nonce and how it works.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="types-of-csp-violations.html" title="Previous" type="text/html">
+      <link rel="next" href="using-csp-in-apex.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"What is a Nonce?","description":"Learn about a nonce and how it works.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="types-of-csp-violations.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="using-csp-in-apex.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-3F38BDC2-AEA9-44AB-9869-B32DD94C4242" name="GUID-3F38BDC2-AEA9-44AB-9869-B32DD94C4242"></a>
+         
+         <h2 id="AEADM-GUID-3F38BDC2-AEA9-44AB-9869-B32DD94C4242" class="sect2"><span class="enumeration_section">3.4.3.3 </span>What is a Nonce?
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Learn about a nonce and how it works.</p>
+               <div class="section">
+                  
+                  <p>A nonce (or <span class="italic">number used once</span>) is a cryptographic term referring to
+                a number or value that is used only once in a secure communication. When it comes to
+                web security, particularly with Content Security Policy (CSP), a nonce attribute is
+                used to allow specific inline scripts to be executed. 
+                  </p>
+                  
+                  <p>Here’s how a nonce works: </p>
+                  
+                  <ol id="GUID-3F38BDC2-AEA9-44AB-9869-B32DD94C4242__OL_GLT_G5S_DFC">
+                     <li><span class="bold">CSP and Nonce</span> - When you define a Content Security Policy (CSP) for your
+                    web application, you can specify that only scripts with a specific nonce value
+                    are allowed to execute. This prevents attackers from injecting malicious scripts
+                    because they won’t have access to the nonce value.
+                     </li>
+                     <li><span class="bold">Implementation</span> - The server generates a unique nonce value
+                    for each request and includes it in the CSP header. Inline scripts that should
+                    be allowed to run must include this nonce value in their script tag.
+                     </li>
+                  </ol>
+                  
+                  <p>Consider the following nonce examples.</p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-3F38BDC2-AEA9-44AB-9869-B32DD94C4242__GUID-ACCE5CC2-8D70-4141-8613-A988D2BAC888">HTML (Inline Script with Nonce)</p>
+                  
+                  <pre class="pre codeblock"><code>&lt;script nonce="random12345"&gt;
+    console.log('This script will run because it has the correct nonce.');
+&lt;/script&gt;</code></pre>
+                  </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-3F38BDC2-AEA9-44AB-9869-B32DD94C4242__GUID-32E366F7-DBFD-43B9-8636-1196711EB812">HTML (Inline Script without Nonce)</p>
+                  
+                  <pre class="pre codeblock"><code>&lt;script&gt;
+    console.log('This script will be blocked by CSP because it lacks the correct nonce.');
+&lt;/script&gt;</code></pre>
+                  <p>In this example, the script with the correct nonce <code class="codeph">random12345</code> will
+                be allowed to execute, while other scripts will be blocked, enhancing the security
+                of your web application. You have to look at the browser console to see the
+                remaining violations.
+                  </p>
+                  
+               </div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="configuring-content-security-policy-csp.html#GUID-B82B66C4-84AF-40DF-ABF1-F0910F35E6E1" title="Learn about how Content Security Policy (CSP) can help prevent or minimize the risk of certain types of security threats.">Configuring Content Security Policy (CSP)</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

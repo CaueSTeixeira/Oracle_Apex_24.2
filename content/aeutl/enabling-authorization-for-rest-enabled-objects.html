@@ -1,0 +1,127 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="task">
+      <meta name="DC.Title" content="Enabling Authorization for REST-enabled Objects">
+      <meta name="abstract" content="Restrict access for REST-enabled objects on the RESTful Services page. Use the resulting Authorization Role information to configure user roles in ORDS.">
+      <meta name="description" content="Restrict access for REST-enabled objects on the RESTful Services page. Use the resulting Authorization Role information to configure user roles in ORDS.">
+      <meta name="DC.Relation" scheme="URI" content="using-restful-services.html#GUID-9EF9F122-554D-40C3-B14D-70C3ACF1A48D">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Neil Fernandez">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Synders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="January2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-3BF70CA4-8992-4DE2-B73B-FF267DFD3BBF">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Restrict access for REST-enabled objects on the RESTful Services page. Use the resulting Authorization Role information to configure user roles in ORDS.">
+      <meta name="description" content="Restrict access for REST-enabled objects on the RESTful Services page. Use the resulting Authorization Role information to configure user roles in ORDS.">
+      <title>Enabling Authorization for REST-enabled Objects</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="SQL Workshop Guide">
+      <meta property="og:description" content="Restrict access for REST-enabled objects on the RESTful Services page. Use the resulting Authorization Role information to configure user roles in ORDS.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="SQL Workshop Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-sql-workshop-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-01-14T12:14:06-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2008, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12911-01">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="enabling-rest-objects-from-object-browser.html" title="Previous" type="text/html">
+      <link rel="next" href="accessing-restful-services.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX SQL Workshop Guide">
+    <meta name="dcterms.isVersionOf" content="AEUTL">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","name":"Enabling Authorization for REST-enabled Objects","description":"Restrict access for REST-enabled objects on the RESTful Services page. Use the resulting Authorization Role information to configure user roles in ORDS.","datePublished":"2025-01-14 CST","dateModified":"2025-01-14 CST"} </script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="enabling-rest-objects-from-object-browser.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="accessing-restful-services.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article>
+         <header>
+            <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Workshop Guide</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="using-restful-services.html" property="item" typeof="WebPage"><span property="name">Enabling Data Exchange with RESTful
+                        Services</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">Enabling Authorization for REST-enabled Objects</li>
+            </ol>
+            <a id="GUID-3BF70CA4-8992-4DE2-B73B-FF267DFD3BBF" name="GUID-3BF70CA4-8992-4DE2-B73B-FF267DFD3BBF"></a>
+            
+            <h2 id="AEUTL-GUID-3BF70CA4-8992-4DE2-B73B-FF267DFD3BBF" class="sect2"><span class="enumeration_section">7.3 </span>Enabling Authorization for REST-enabled Objects
+            </h2>
+         </header>
+         <div class="ind">
+            <div>
+               <p>Restrict access for REST-enabled objects on the RESTful Services page. Use the resulting Authorization Role information to configure user roles in ORDS.</p>
+               <div class="section">
+                  <p>When authorization is disabled for REST-enabled objects, they are fully exposed to normal internet traffic and publicly accessible. After you enable authorization for the object on the RESTful Services page, you must use the resulting Authorization Role to configure your authorized user roles in ORDS.</p>
+               </div>
+               <!-- class="section" -->
+               <p>
+                  </p><p>To enable authorization on a REST-enabled object:</p>
+               <p></p>
+               <ol id="GUID-3BF70CA4-8992-4DE2-B73B-FF267DFD3BBF__STEPS_CCC_HDB_W3B">
+                  <li class="stepexpand"><span>On the Workspace home page, click <span class="uicontrol bold">SQL Workshop</span> and then
+                        <span class="uicontrol bold">RESTful Services</span>.</span><div>The RESTful Services home page appears.</div>
+                  </li>
+                  <li class="stepexpand"><span>Click <span class="uicontrol bold">Enabled Objects</span> in the RESTful Data Services
+                    tree.</span></li>
+                  <li class="stepexpand"><span>Under <span class="uicontrol bold">Parsing Object</span>, click the object name.</span></li>
+                  <li class="stepexpand"><span>For Authorization Required, click <span class="uicontrol bold">Yes</span>.</span><div>
+                        
+                        <p>A new Authorization Role field appears showing the ORDS created role associated with the AutoREST-enabled object. If you enable authorization for the object, you can use the resulting Authorization Role information to configure user roles in ORDS.</p>
+                        
+                     </div>
+                  </li>
+                  <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+               </ol>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="using-restful-services.html#GUID-9EF9F122-554D-40C3-B14D-70C3ACF1A48D" title="RESTful Services enable the declarative specification of RESTful services used to access the database.">Enabling Data Exchange with RESTful Services</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

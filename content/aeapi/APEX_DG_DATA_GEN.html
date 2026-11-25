@@ -1,0 +1,159 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="APEX_DG_DATA_GEN">
+      <meta name="DC.subject" content="APEX_DG_DATA_GEN">
+      <meta name="keywords" content="APEX_DG_DATA_GEN">
+      <meta name="DC.Relation" scheme="URI" content="ADD_BLUEPRINT-Procedure.html#GUID-E4DE550B-CD51-4618-91D6-86255AC85512">
+      <meta name="DC.Relation" scheme="URI" content="ADD_BLUEPRINT_FROM_FILE-Procedure.html#GUID-0AFE617D-657E-479E-A76E-2F478A61C63C">
+      <meta name="DC.Relation" scheme="URI" content="ADD_BLUEPRINT_FROM_TABLES-Procedure.html#GUID-9BD5C59E-C17C-45BE-8829-5FEBC9CC7CF1">
+      <meta name="DC.Relation" scheme="URI" content="APEX_DG_DATA_GEN.ADD_COLUMN-Procedure.html#GUID-31CBAAB7-BDE2-479A-AA98-083533B89849">
+      <meta name="DC.Relation" scheme="URI" content="ADD_DATA_SOURCE-Procedure.html#GUID-D5ABB590-6A8F-4ACF-914B-F2DAD37FC247">
+      <meta name="DC.Relation" scheme="URI" content="ADD_TABLE-Procedure.html#GUID-B8D6DD0D-2C4B-4D5A-8376-9BF1B8878EF7">
+      <meta name="DC.Relation" scheme="URI" content="EXPORT_BLUEPRINT-Function.html#GUID-72C087B1-BD73-4B30-AFBF-7FA53BB96CE2">
+      <meta name="DC.Relation" scheme="URI" content="GENERATE_DATA-Procedure-Signature-1.html#GUID-601D4AF6-AF29-4D05-B86F-BF28A9788908">
+      <meta name="DC.Relation" scheme="URI" content="GENERATE_DATA-Procedure-Signature-2.html#GUID-8B5EC881-3C77-494F-B8A5-1B6D3FEEE678">
+      <meta name="DC.Relation" scheme="URI" content="GENERATE_DATA_INTO_COLLECTION-Procedure.html#GUID-C570DFA5-7D3A-49AA-9A3B-22C2F3832281">
+      <meta name="DC.Relation" scheme="URI" content="GET_BLUEPRINT_ID-Function.html#GUID-442014F9-11C2-4C57-9C6F-21DA6C3C46C1">
+      <meta name="DC.Relation" scheme="URI" content="GET_BP_TABLE_ID-Function.html#GUID-A662EFD9-59DD-4C50-87CD-A77B165D34B6">
+      <meta name="DC.Relation" scheme="URI" content="GET_EXAMPLE-Function.html#GUID-6DD10BBA-BCF7-4826-9953-F33B5F043606">
+      <meta name="DC.Relation" scheme="URI" content="GET_WEIGHTED_INLINE_DATA-Function.html#GUID-404E9D2C-6B6F-4389-902A-40D90AE43A17">
+      <meta name="DC.Relation" scheme="URI" content="IMPORT_BLUEPRINT-Procedure.html#GUID-FAF3F071-1878-4BB9-A55F-788522C82419">
+      <meta name="DC.Relation" scheme="URI" content="PREVIEW_BLUEPRINT-Procedure.html#GUID-5D20B0F4-BD14-4F8C-91B9-5DDB3D06FAA9">
+      <meta name="DC.Relation" scheme="URI" content="REMOVE_BLUEPRINT-Procedure.html#GUID-4C72B9A9-2F9B-4A6C-AD65-388CE7316EB7">
+      <meta name="DC.Relation" scheme="URI" content="REMOVE_COLUMN-Procedure.html#GUID-E9E80BC9-202D-4978-B4F4-7D0E7C28B997">
+      <meta name="DC.Relation" scheme="URI" content="REMOVE_DATA_SOURCE-Procedure.html#GUID-0E766A94-6787-4BD9-BB31-248FBE08EB45">
+      <meta name="DC.Relation" scheme="URI" content="REMOVE_TABLE-Procedure.html#GUID-7004CD87-4E2F-402F-AFA3-BAB5096FCEE8">
+      <meta name="DC.Relation" scheme="URI" content="RESEQUENCE_BLUEPRINT-Procedure.html#GUID-5D8B5F4B-CE8F-43C4-B870-27EBB4C90028">
+      <meta name="DC.Relation" scheme="URI" content="STOP_DATA_GENERATION-Procedure.html#GUID-6EE72FDF-64A9-410C-9A89-067BA9B1F80C">
+      <meta name="DC.Relation" scheme="URI" content="UPDATE_BLUEPRINT-Procedure.html#GUID-FC4F14D8-384C-44D5-8384-DD34AD1E4597">
+      <meta name="DC.Relation" scheme="URI" content="UPDATE_COLUMN-Procedure.html#GUID-82BDCDE8-F303-4F9C-846E-AEF5060C4C85">
+      <meta name="DC.Relation" scheme="URI" content="UPDATE_DATA_SOURCE-Procedure.html#GUID-5FADF761-D1E0-4844-88D0-D8AF1AAE7425">
+      <meta name="DC.Relation" scheme="URI" content="UPDATE_TABLE-Procedure.html#GUID-945BA0D2-08F9-4465-A916-7A8D73932A82">
+      <meta name="DC.Relation" scheme="URI" content="VALIDATE_BLUEPRINT-Procedure.html#GUID-B1C84237-D5AA-47F7-9578-E76ABA2B693C">
+      <meta name="DC.Relation" scheme="URI" content="VALIDATE_INSTANCE_SETTING-Procedure.html#GUID-C39734DC-7B1F-4FA3-BF34-70D30139C957">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-5DB25668-0D85-45FD-A062-281D2852CFA1">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>APEX_DG_DATA_GEN</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="WARN-Procedure.html" title="Previous" type="text/html">
+      <link rel="next" href="ADD_BLUEPRINT-Procedure.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"APEX_DG_DATA_GEN","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="WARN-Procedure.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="ADD_BLUEPRINT-Procedure.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-5DB25668-0D85-45FD-A062-281D2852CFA1" name="GUID-5DB25668-0D85-45FD-A062-281D2852CFA1"></a>
+         
+         <h2 id="AEAPI-GUID-5DB25668-0D85-45FD-A062-281D2852CFA1" class="sect2"><span class="enumeration_chapter">24 </span>APEX_DG_DATA_GEN
+         </h2>
+         <div class="ind">
+            <div>
+               <p>This package contains the implementation for data generation in <span>Oracle APEX</span>.
+               </p>
+               <div class="infobox-tip" id="GUID-5DB25668-0D85-45FD-A062-281D2852CFA1__GUID-A897EB26-6A77-4360-B3F3-03932E5FECC0">
+                  <p class="notep1">Tip:</p>
+                  <p>The APIs in this package require an <span>APEX</span> session. See APEX_SESSION documentation for creating a session outside of the APEX App Builder context.
+                  </p>
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="ADD_BLUEPRINT-Procedure.html#GUID-E4DE550B-CD51-4618-91D6-86255AC85512">ADD_BLUEPRINT Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="ADD_BLUEPRINT_FROM_FILE-Procedure.html#GUID-0AFE617D-657E-479E-A76E-2F478A61C63C">ADD_BLUEPRINT_FROM_FILE Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="ADD_BLUEPRINT_FROM_TABLES-Procedure.html#GUID-9BD5C59E-C17C-45BE-8829-5FEBC9CC7CF1">ADD_BLUEPRINT_FROM_TABLES Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="APEX_DG_DATA_GEN.ADD_COLUMN-Procedure.html#GUID-31CBAAB7-BDE2-479A-AA98-083533B89849">ADD_COLUMN Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="ADD_DATA_SOURCE-Procedure.html#GUID-D5ABB590-6A8F-4ACF-914B-F2DAD37FC247">ADD_DATA_SOURCE Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="ADD_TABLE-Procedure.html#GUID-B8D6DD0D-2C4B-4D5A-8376-9BF1B8878EF7">ADD_TABLE Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="EXPORT_BLUEPRINT-Function.html#GUID-72C087B1-BD73-4B30-AFBF-7FA53BB96CE2">EXPORT_BLUEPRINT Function</a><br></li>
+                  <li class="ulchildlink"><a href="GENERATE_DATA-Procedure-Signature-1.html#GUID-601D4AF6-AF29-4D05-B86F-BF28A9788908">GENERATE_DATA Procedure Signature 1</a><br></li>
+                  <li class="ulchildlink"><a href="GENERATE_DATA-Procedure-Signature-2.html#GUID-8B5EC881-3C77-494F-B8A5-1B6D3FEEE678">GENERATE_DATA Procedure Signature 2</a><br></li>
+                  <li class="ulchildlink"><a href="GENERATE_DATA_INTO_COLLECTION-Procedure.html#GUID-C570DFA5-7D3A-49AA-9A3B-22C2F3832281">GENERATE_DATA_INTO_COLLECTION Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="GET_BLUEPRINT_ID-Function.html#GUID-442014F9-11C2-4C57-9C6F-21DA6C3C46C1">GET_BLUEPRINT_ID Function</a><br></li>
+                  <li class="ulchildlink"><a href="GET_BP_TABLE_ID-Function.html#GUID-A662EFD9-59DD-4C50-87CD-A77B165D34B6">GET_BP_TABLE_ID Function</a><br></li>
+                  <li class="ulchildlink"><a href="GET_EXAMPLE-Function.html#GUID-6DD10BBA-BCF7-4826-9953-F33B5F043606">GET_EXAMPLE Function</a><br></li>
+                  <li class="ulchildlink"><a href="GET_WEIGHTED_INLINE_DATA-Function.html#GUID-404E9D2C-6B6F-4389-902A-40D90AE43A17">GET_WEIGHTED_INLINE_DATA Function</a><br></li>
+                  <li class="ulchildlink"><a href="IMPORT_BLUEPRINT-Procedure.html#GUID-FAF3F071-1878-4BB9-A55F-788522C82419">IMPORT_BLUEPRINT Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="PREVIEW_BLUEPRINT-Procedure.html#GUID-5D20B0F4-BD14-4F8C-91B9-5DDB3D06FAA9">PREVIEW_BLUEPRINT Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="REMOVE_BLUEPRINT-Procedure.html#GUID-4C72B9A9-2F9B-4A6C-AD65-388CE7316EB7">REMOVE_BLUEPRINT Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="REMOVE_COLUMN-Procedure.html#GUID-E9E80BC9-202D-4978-B4F4-7D0E7C28B997">REMOVE_COLUMN Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="REMOVE_DATA_SOURCE-Procedure.html#GUID-0E766A94-6787-4BD9-BB31-248FBE08EB45">REMOVE_DATA_SOURCE Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="REMOVE_TABLE-Procedure.html#GUID-7004CD87-4E2F-402F-AFA3-BAB5096FCEE8">REMOVE_TABLE Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="RESEQUENCE_BLUEPRINT-Procedure.html#GUID-5D8B5F4B-CE8F-43C4-B870-27EBB4C90028">RESEQUENCE_BLUEPRINT Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="STOP_DATA_GENERATION-Procedure.html#GUID-6EE72FDF-64A9-410C-9A89-067BA9B1F80C">STOP_DATA_GENERATION Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="UPDATE_BLUEPRINT-Procedure.html#GUID-FC4F14D8-384C-44D5-8384-DD34AD1E4597">UPDATE_BLUEPRINT Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="UPDATE_COLUMN-Procedure.html#GUID-82BDCDE8-F303-4F9C-846E-AEF5060C4C85">UPDATE_COLUMN Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="UPDATE_DATA_SOURCE-Procedure.html#GUID-5FADF761-D1E0-4844-88D0-D8AF1AAE7425">UPDATE_DATA_SOURCE Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="UPDATE_TABLE-Procedure.html#GUID-945BA0D2-08F9-4465-A916-7A8D73932A82">UPDATE_TABLE Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="VALIDATE_BLUEPRINT-Procedure.html#GUID-B1C84237-D5AA-47F7-9578-E76ABA2B693C">VALIDATE_BLUEPRINT Procedure</a><br></li>
+                  <li class="ulchildlink"><a href="VALIDATE_INSTANCE_SETTING-Procedure.html#GUID-C39734DC-7B1F-4FA3-BF34-70D30139C957">VALIDATE_INSTANCE_SETTING Procedure</a><br></li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-5DB25668-0D85-45FD-A062-281D2852CFA1__GUID-8E042B20-5993-499A-9FFC-1D9607CFF391">
+                  <p class="notep1">See Also:</p><a href="APEX_SESSION.html#GUID-710E9F4F-157C-4EBA-BBA9-3E0B9EE4002A">APEX_SESSION</a></div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

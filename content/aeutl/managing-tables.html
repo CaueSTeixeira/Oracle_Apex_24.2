@@ -1,0 +1,715 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Tables">
+      <meta name="abstract" content="A table is a unit of data storage in an Oracle database, containing rows and columns. Use Object Browser to create, view, edit, or drop tables.">
+      <meta name="description" content="A table is a unit of data storage in an Oracle database, containing rows and columns. Use Object Browser to create, view, edit, or drop tables.">
+      <meta name="DC.subject" content="Object Browser, managing tables, tables, creating, browsing, viewing columns, viewing data, viewing indexes, viewing constraints, viewing grants, viewing statistics, viewing triggers, viewing DDL, viewing sample queries, editing, add column, modify column, rename column, drop column, rename, copy, truncate table, create lookup table, create app, define UI defaults, table data, insert row, select columns, filter columns, load data, download, refresh, dropping, running Create App Wizard, statistics, statistics, column, sample queries">
+      <meta name="keywords" content="Object Browser, managing tables, tables, creating, browsing, viewing columns, viewing data, viewing indexes, viewing constraints, viewing grants, viewing statistics, viewing triggers, viewing DDL, viewing sample queries, editing, add column, modify column, rename column, drop column, rename, copy, truncate table, create lookup table, create app, define UI defaults, table data, insert row, select columns, filter columns, load data, download, refresh, dropping, running Create App Wizard, statistics, statistics, column, sample queries">
+      <meta name="DC.Relation" scheme="URI" content="managing-db-objects-with-object-browser.html#GUID-04321951-FD96-4930-8F44-0D8441E8B731">
+      <meta name="DC.Relation" scheme="URI" content="managing-tables.html#GUID-4ECE6D71-6189-45BA-9933-A8D6D5B52268">
+      <meta name="DC.Relation" scheme="URI" content="managing-tables.html#GUID-5FEE6A83-7898-408F-98E8-B4B57CDE394E">
+      <meta name="DC.Relation" scheme="URI" content="managing-tables.html#GUID-7CE9D743-BC88-47BC-9465-A1625B7AA535">
+      <meta name="DC.Relation" scheme="URI" content="managing-tables.html#GUID-0D2188B8-1623-48CC-A689-3D942A52C10E">
+      <meta name="DC.Relation" scheme="URI" content="managing-tables.html#GUID-4BDC81A5-0405-4895-9138-4EE44AB596D9">
+      <meta name="DC.Relation" scheme="URI" content="managing-tables.html#GUID-FEBB3D09-E031-4FA7-9428-698E2A0F843C">
+      <meta name="DC.Relation" scheme="URI" content="managing-tables.html#GUID-079ECF4F-A37B-4E40-AFAD-4A6862A7BCA1">
+      <meta name="DC.Relation" scheme="URI" content="managing-tables.html#GUID-EA76B08F-0D41-42BA-9060-3BB9E79FBA08">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Neil Fernandez">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Synders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="January2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-B21034CD-D55E-47DF-9042-237C5F98A369">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="A table is a unit of data storage in an Oracle database, containing rows and columns. Use Object Browser to create, view, edit, or drop tables.">
+      <meta name="description" content="A table is a unit of data storage in an Oracle database, containing rows and columns. Use Object Browser to create, view, edit, or drop tables.">
+      <title>Managing Tables</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="SQL Workshop Guide">
+      <meta property="og:description" content="A table is a unit of data storage in an Oracle database, containing rows and columns. Use Object Browser to create, view, edit, or drop tables.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="SQL Workshop Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-sql-workshop-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-01-14T12:14:06-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2008, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12911-01">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="understanding-object-browser.html" title="Previous" type="text/html">
+      <link rel="next" href="managing-views.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX SQL Workshop Guide">
+    <meta name="dcterms.isVersionOf" content="AEUTL">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","name":"Managing Tables","description":"A table is a unit of data storage in an Oracle database, containing rows and columns. Use Object Browser to create, view, edit, or drop tables.","datePublished":"2025-01-14 CST","dateModified":"2025-01-14 CST"} </script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="understanding-object-browser.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="managing-views.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article>
+         <header>
+            <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Workshop Guide</span></a></li>
+               <li property="itemListElement" typeof="ListItem"><a href="managing-db-objects-with-object-browser.html" property="item" typeof="WebPage"><span property="name"> Managing Database Objects with Object Browser </span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">Managing Tables</li>
+            </ol>
+            <a id="GUID-B21034CD-D55E-47DF-9042-237C5F98A369" name="GUID-B21034CD-D55E-47DF-9042-237C5F98A369"></a>
+            
+            <h2 id="AEUTL-GUID-B21034CD-D55E-47DF-9042-237C5F98A369" class="sect2"><span class="enumeration_section">3.3 </span>Managing Tables
+            </h2>
+         </header>
+         <div class="ind">
+            <div>
+               <p>A table is a unit of data storage in an <span>Oracle</span> database, containing rows and columns. Use <span>Object Browser</span> to create, view, edit, or drop tables. 
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="managing-tables.html#GUID-4ECE6D71-6189-45BA-9933-A8D6D5B52268">Creating a Table</a><br>Create a table using <span>Object Browser</span>.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-tables.html#GUID-5FEE6A83-7898-408F-98E8-B4B57CDE394E">Viewing a Table</a><br>Select a table from the Object Tree and access tabs in the Object Detail         View.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-tables.html#GUID-7CE9D743-BC88-47BC-9465-A1625B7AA535">Editing Table Columns</a><br>Select a table from the Object Tree and click the Columns tab.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-tables.html#GUID-0D2188B8-1623-48CC-A689-3D942A52C10E">Editing Table Data</a><br>Select a table from the Object Tree and click the Data tab.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-tables.html#GUID-4BDC81A5-0405-4895-9138-4EE44AB596D9">Dropping a Table</a><br>Select a table from the Object Tree, click the Columns tab, and select         Drop Table from the More menu.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-tables.html#GUID-FEBB3D09-E031-4FA7-9428-698E2A0F843C">Creating an Application from a Table</a><br>Select a table from the Object Tree, click the Columns tab, and select         Create App from the More menu.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-tables.html#GUID-079ECF4F-A37B-4E40-AFAD-4A6862A7BCA1">Analyzing Statistics of a Table</a><br>Select a table from the Object Tree and click the Statistics tab to examine various metrics of a table.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-tables.html#GUID-EA76B08F-0D41-42BA-9060-3BB9E79FBA08">Viewing Sample Queries for a Table</a><br>Select a table from the Object Tree and click the Sample Queries tab to view sample queries.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-B21034CD-D55E-47DF-9042-237C5F98A369__GUID-E168396A-12E6-40E6-93BC-EB477EB3572A">
+                  <p class="notep1">See Also:</p>
+                  <ul style="list-style-type: disc;">
+                     <li>
+                        <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeutl&id=CNCPT-GUID-096986C4-9AD7-401D-BA6D-EF6CD4B494FE" target="_blank">Tables and Table Clusters</a> in <span><cite>Oracle Database
+                                        Concepts</cite></span> for an introduction to
+                    schema objects and discusses tables
+                     </li>
+                     <li><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeutl&id=AEADM-GUID-707B02F5-E589-4C20-8E2E-5ED4F7888702" target="_blank">Managing Tables</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                  </ul>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-db-objects-with-object-browser.html#GUID-04321951-FD96-4930-8F44-0D8441E8B731" title="Object Browser enables developers to browse, create, and edit objects in the Oracle Database.">Managing Database Objects with Object Browser</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-4ECE6D71-6189-45BA-9933-A8D6D5B52268" name="GUID-4ECE6D71-6189-45BA-9933-A8D6D5B52268"></a><h3 id="AEUTL-GUID-4ECE6D71-6189-45BA-9933-A8D6D5B52268" class="sect3"><span class="enumeration_section">3.3.1 </span>Creating a Table
+               </h3>
+               <div>
+                  <p>Create a table using <span>Object Browser</span>.
+                  </p>
+                  <div class="section">
+                     
+                     <p>To create a table:</p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, click the <span class="uicontrol bold">Create Database Objects</span> menu and select
+                        <span class="uicontrol bold">Table</span>.</span><div>
+                           
+                           <div class="infobox-tip" id="GUID-4ECE6D71-6189-45BA-9933-A8D6D5B52268__GUID-4B61BEDB-E3C7-494C-8F9D-9B12327CEBB3">
+                              <p class="notep1">Tip:</p>To create new objects from the Object
+                                Tree, right-click the object and select the
+                                        <span class="uicontrol bold">Create</span> option.
+                           </div>
+                           
+                           <p>The Create Table Wizard appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>In Create Table:</span><ol type="a" id="GUID-4ECE6D71-6189-45BA-9933-A8D6D5B52268__SUBSTEPS_UFG_35N_GXB">
+                           <li class="substepexpand"><span>Table Name - Enter the name of the table. The name must conform to Oracle naming conventions and cannot contain spaces, or start with a number or underscore.</span></li>
+                           <li class="substepexpand"><span>Semantics - Select the semantics option for the text columns. Options include:</span><div>
+                                 <ul style="list-style-type: disc;" id="GUID-4ECE6D71-6189-45BA-9933-A8D6D5B52268__UL_S51_P5N_GXB">
+                                    <li><span class="uicontrol bold">Default</span> - Defaults to the database setting. If you are unsure about this setting, then choose <span class="uicontrol bold">Default</span>.
+                                    </li>
+                                    <li><span class="uicontrol bold">BYTE</span> - Storage for the text columns is determined by the number of bytes.
+                                    </li>
+                                    <li><span class="uicontrol bold">CHAR</span> - Storage is determined by the number of characters.
+                                    </li>
+                                 </ul>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span><span class="uicontrol bold">Comments</span> - Enter comments for the table. These comments are added to the table object.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Columns - Use the Columns to add, edit, and delete a column. Available controls include:</span><ul id="GUID-4ECE6D71-6189-45BA-9933-A8D6D5B52268__CHOICES_H1R_FVN_GXB">
+                           <li><span class="uicontrol bold">Edit</span> - Toggles Editing mode. When enabled, you can single-click a cell to edit. When disabled, you must double-click to edit.
+                           </li>
+                           <li><span class="uicontrol bold">Move Down</span> - Moves a column down in the table.
+                           </li>
+                           <li><span class="uicontrol bold">Move Up</span> - Moves a column up in the table.
+                           </li>
+                           <li><span class="uicontrol bold">Add Column</span> - Adds a new row (or column) to the table.
+                           </li>
+                           <li><span class="uicontrol bold">Row Actions</span> menu - Displays in the first cell on a row in the Columns region. Available Actions include: 
+                              <ul style="list-style-type: disc;" id="GUID-4ECE6D71-6189-45BA-9933-A8D6D5B52268__UL_EZZ_VZN_GXB">
+                                 <li><span class="uicontrol bold">Add Column</span></li>
+                                 <li><span class="uicontrol bold">Delete Column</span></li>
+                                 <li><span class="uicontrol bold">Move Up</span> (Alt + Up)
+                                 </li>
+                                 <li><span class="uicontrol bold">Move Down</span> (Alt + Down)
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>To add a column, click <span class="uicontrol bold">Add Column</span>.</span><div>
+                           
+                           <p>A new row appears. Edit the column attributes by selecting a cell and typing.
+                        Column attributes include: </p>
+                           
+                        </div>
+                        <ol type="a" id="GUID-4ECE6D71-6189-45BA-9933-A8D6D5B52268__SUBSTEPS_HVH_FWN_GXB">
+                           <li class="substepexpand"><span>Column Name - Enter the column name.</span></li>
+                           <li class="substepexpand"><span>Data Type - Select the column type.</span></li>
+                           <li class="substepexpand"><span>Precision - Enter the number of digits before the decimal point. </span><div>Not all column types have this setting. Precision must be a positive integer. Only <code class="codeph">NUMBER</code>, <code class="codeph">FLOAT</code>, <code class="codeph">INTERVAL YEAR TO MONTH</code>, and <code class="codeph">INTERVAL DAY TO SECOND</code> have this setting. For example, if a column of type <code class="codeph">NUMBER</code> has precision of 4, the column value can be 0 through 9999.
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Scale - Specifies scale or length depending on the selected data type:</span><div>
+                                 <ul style="list-style-type: disc;" id="GUID-4ECE6D71-6189-45BA-9933-A8D6D5B52268__UL_RHB_TWN_GXB">
+                                    <li>For <code class="codeph">NUMBER</code> types, scale is the number of digits after the decimal point.
+                                    </li>
+                                    <li>For <code class="codeph">VARCHAR2</code> and <code class="codeph">CHAR</code> types, scale is the number of stored characters.
+                                    </li>
+                                    <li>For <code class="codeph">TIMESTAMP</code> types, scale is the fractional seconds precision and must be a number between 0 and 9. Scale must be a positive number. For example, if a column type <code class="codeph">TIMESTAMP</code> has a scale of 3, seconds are between .000 seconds and .999 seconds.
+                                    </li>
+                                 </ul>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Not Null - Enable to specify a column must always have a value, select
+                            the Not Null check box.</span></li>
+                           <li class="substepexpand"><span>Primary Key - Enable if the column is part of the primary key. A <strong class="term">primary key</strong> uniquely identifies a row in a table.</span><div>
+                                 <p>If only one column is selected as primary key column and if the column data type is <code class="codeph">NUMBER</code> or <code class="codeph">FLOAT</code>, then the primary key column is automatically created as identity column.
+                                 </p>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Default Expression - If applicable, enter a default expression (must be a valid SQL expression). Custom functions are not allowed.</span></li>
+                           <li class="substepexpand"><span>Comment - Enter comments for the column. These comments are added to the table column.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>(Optional) Click <span class="uicontrol bold">Preview SQL</span> to review the SQL script used to generate the table.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Table</span>.</span></li>
+                  </ol>
+                  <div class="section"></div>
+                  <!-- class="section" -->
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-4ECE6D71-6189-45BA-9933-A8D6D5B52268__GUID-8ECE9D98-33A1-48F3-BD44-833271718144">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="../htmdb/using-the-find-icon.html#HTMDB-GUID-825BBF63-07A5-49C5-A863-FA7577BCD4D5" target="_blank">Using the Table Finder</a> in <a href="../htmdb/quick-start.html#HTMDB-GUID-3D645140-7A61-4853-B975-218F3B99F687" target="_blank"><span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></a></li>
+                        <li><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/aeutl&id=CNCPT-GUID-F845B1A7-71E3-4312-B66D-BC16C198ECE5" target="_blank">Overview of Tables</a> in <span><cite>Oracle Database
+                                        Concepts</cite></span>
+                        for information about tables
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-tables.html#GUID-B21034CD-D55E-47DF-9042-237C5F98A369" title="A table is a unit of data storage in an Oracle database, containing rows and columns. Use Object Browser to create, view, edit, or drop tables.">Managing Tables</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-5FEE6A83-7898-408F-98E8-B4B57CDE394E" name="GUID-5FEE6A83-7898-408F-98E8-B4B57CDE394E"></a><h3 id="AEUTL-GUID-5FEE6A83-7898-408F-98E8-B4B57CDE394E" class="sect3"><span class="enumeration_section">3.3.2 </span>Viewing a Table
+               </h3>
+               <div>
+                  <p>Select a table from the Object Tree and access tabs in the Object Detail
+        View.</p>
+                  <div class="section">
+                     <p>To browse a table:</p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Tables</span> and select a table.</span></li>
+                     <li><span>The Object Detail View appears and displays the following tabs:</span><ul id="GUID-5FEE6A83-7898-408F-98E8-B4B57CDE394E__CHOICES_HRR_RFT_GXB">
+                           <li><span class="uicontrol bold">Columns</span> - Displays  the column name,
+                        data type, nullable status, default value, primary key, comments, and
+                        identify. Most commonly used actions display as buttons. Available actions
+                        include: 
+                              <ul style="list-style-type: disc;" id="GUID-5FEE6A83-7898-408F-98E8-B4B57CDE394E__UL_P2Q_JGT_GXB">
+                                 <li><span class="uicontrol bold">Add Column </span></li>
+                                 <li><span class="uicontrol bold">Modify Column </span></li>
+                                 <li><span class="uicontrol bold">Rename Column </span></li>
+                                 <li><span class="uicontrol bold">Drop Column </span></li>
+                                 <li><span class="uicontrol bold">Refresh</span></li>
+                                 <li><span class="uicontrol bold">More</span> - Less commonly used
+                                actions are accessible from the <span class="uicontrol bold">More</span> menu.
+                                Available actions include:
+                                    <ul style="list-style-type: disc;" id="GUID-5FEE6A83-7898-408F-98E8-B4B57CDE394E__UL_NC5_4GT_GXB">
+                                       <li><span class="uicontrol bold">Rename Table</span></li>
+                                       <li><span class="uicontrol bold">Copy Table</span></li>
+                                       <li><span class="uicontrol bold">Drop Table</span></li>
+                                       <li><span class="uicontrol bold">Truncate Table</span></li>
+                                       <li><span class="uicontrol bold">Table Comment</span></li>
+                                       <li><span class="uicontrol bold">Create Lookup Table</span></li>
+                                       <li><span class="uicontrol bold">Create App</span></li>
+                                       <li><span class="uicontrol bold">UI Defaults</span></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li><span class="uicontrol bold">Data</span> - Displays data in the current table. Available actions include:
+                              <ul style="list-style-type: disc;" id="GUID-5FEE6A83-7898-408F-98E8-B4B57CDE394E__UL_WTH_23T_GXB">
+                                 <li><span class="uicontrol bold">Insert Row</span> - Insert a row in the table.
+                                 </li>
+                                 <li><span class="uicontrol bold">Columns</span> - Configure the columns to display.
+                                 </li>
+                                 <li><span class="uicontrol bold">Filter</span> - Create a filter by selecting a column, operation, and value.
+                                 </li>
+                                 <li><span class="uicontrol bold">Count Rows</span> - Displays the number of rows in the current table.
+                                 </li>
+                                 <li><span class="uicontrol bold">Load Data</span> - Use the Load Data Wizard to upload a file or copy and paste CSV data.
+                                 </li>
+                                 <li><span class="uicontrol bold">Download</span> - Download an XLSX file.
+                                 </li>
+                                 <li><span class="uicontrol bold">Refresh</span> - Refresh the current view.
+                                 </li>
+                              </ul>
+                           </li>
+                           <li><span class="uicontrol bold">Indexes</span> - Displays indexes associated with this
+                        table. Available actions include:
+                              <ul style="list-style-type: disc;" id="GUID-5FEE6A83-7898-408F-98E8-B4B57CDE394E__UL_AHN_3KT_GXB">
+                                 <li><span class="uicontrol bold">Create</span></li>
+                                 <li><span class="uicontrol bold">Drop</span></li>
+                                 <li><span class="uicontrol bold">Refresh</span></li>
+                              </ul>
+                           </li>
+                           <li><span class="uicontrol bold">Constraints</span> - Displays a list of constraints for
+                        the current table. Available actions include:
+                              <ul style="list-style-type: disc;" id="GUID-5FEE6A83-7898-408F-98E8-B4B57CDE394E__UL_N11_MKT_GXB">
+                                 <li><span class="uicontrol bold">Create</span></li>
+                                 <li><span class="uicontrol bold">Drop</span></li>
+                                 <li><span class="uicontrol bold">Enable</span></li>
+                                 <li><span class="uicontrol bold">Disable</span></li>
+                                 <li><span class="uicontrol bold">Refresh</span></li>
+                              </ul>
+                           </li>
+                           <li><span class="uicontrol bold">Grants</span> - Details of grants for the
+                        current table, including privilege, grantee, grantable, grantor, and object
+                        name. Available actions include:
+                              <ul style="list-style-type: disc;" id="GUID-5FEE6A83-7898-408F-98E8-B4B57CDE394E__UL_RWJ_BLT_GXB">
+                                 <li><span class="uicontrol bold">Grant</span></li>
+                                 <li><span class="uicontrol bold">Revoke</span></li>
+                                 <li><span class="uicontrol bold">Refresh</span></li>
+                              </ul>
+                           </li>
+                           <li><span class="uicontrol bold">Statistics</span> - Displays collected statistics about the current table and columns. Table statistics include the number of rows and blocks, the average row length, and the data was last analyzed. Available actions include:
+                              <ul style="list-style-type: disc;" id="GUID-5FEE6A83-7898-408F-98E8-B4B57CDE394E__UL_NSW_RMT_GXB">
+                                 <li><span class="uicontrol bold">Gather Statistics</span></li>
+                                 <li><span class="uicontrol bold">Refresh</span></li>
+                              </ul>
+                           </li>
+                           <li><span class="uicontrol bold">Triggers</span> - Displays a list of
+                        triggers associated with the current table. To view trigger details, click
+                        the trigger name.  Available actions include:
+                              <ul style="list-style-type: disc;" id="GUID-5FEE6A83-7898-408F-98E8-B4B57CDE394E__UL_F1M_4RJ_HXB">
+                                 <li><span class="uicontrol bold">Create</span></li>
+                                 <li><span class="uicontrol bold">Drop</span></li>
+                                 <li><span class="uicontrol bold">Enable</span></li>
+                                 <li><span class="uicontrol bold">Disable</span></li>
+                                 <li><span class="uicontrol bold">Refresh</span></li>
+                              </ul>
+                           </li>
+                           <li><span class="uicontrol bold">Dependencies</span> - Displays objects that
+                        use (or depend) on the current table and objects the table depends on. To
+                        link to an object, click the object name. Available actions include: 
+                              <ul style="list-style-type: disc;" id="GUID-5FEE6A83-7898-408F-98E8-B4B57CDE394E__UL_AQG_SRJ_HXB">
+                                 <li><span class="uicontrol bold">Refresh</span></li>
+                              </ul>
+                           </li>
+                           <li><span class="uicontrol bold">DDL</span> - Displays the DDL necessary to re-create this table, including keys, indexes, triggers, table and column comments, and table definition. Edit the code using a fully functional Code Editor. Available actions include:
+                              <ul style="list-style-type: disc;" id="GUID-5FEE6A83-7898-408F-98E8-B4B57CDE394E__UL_LY1_TRJ_HXB">
+                                 <li><span class="uicontrol bold">Download</span></li>
+                                 <li><span class="uicontrol bold">Refresh</span></li>
+                              </ul>
+                              <div class="infobox-tip" id="GUID-5FEE6A83-7898-408F-98E8-B4B57CDE394E__GUID-166D7922-FB28-4809-84D3-2F5A319430C9">
+                                 <p class="notep1">Tip:</p>To learn more about the Code Editor, see <a href="understanding-object-browser.html#GUID-99BBD79F-B03D-405F-B369-0C35EE007EAE" title="Learn about the Code Editor available Object Browser.">Code Editor in Object Browser</a>.
+                              </div>
+                           </li>
+                           <li><span class="uicontrol bold">Sample Queries</span> - Displays sample
+                        queries for using the table. Includes Copy and Run capability. Available
+                        actions include: 
+                              <ul style="list-style-type: disc;" id="GUID-5FEE6A83-7898-408F-98E8-B4B57CDE394E__UL_JYY_VRJ_HXB">
+                                 <li><span class="uicontrol bold">Refresh</span></li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-tables.html#GUID-B21034CD-D55E-47DF-9042-237C5F98A369" title="A table is a unit of data storage in an Oracle database, containing rows and columns. Use Object Browser to create, view, edit, or drop tables.">Managing Tables</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-7CE9D743-BC88-47BC-9465-A1625B7AA535" name="GUID-7CE9D743-BC88-47BC-9465-A1625B7AA535"></a><h3 id="AEUTL-GUID-7CE9D743-BC88-47BC-9465-A1625B7AA535" class="sect3"><span class="enumeration_section">3.3.3 </span>Editing Table Columns
+               </h3>
+               <div>
+                  <p>Select a table from the Object Tree and click the Columns tab.</p>
+                  <div class="section">
+                     <p>To edit table columns:</p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Tables</span> and select a table.</span></li>
+                     <li class="stepexpand"><span>On the Columns tab, click <span class="uicontrol bold">Add Column</span>:</span><ol type="a" id="GUID-7CE9D743-BC88-47BC-9465-A1625B7AA535__SUBSTEPS_NF5_Y2B_HXB">
+                           <li><span>Configure the attributes. At a minimum, enter a column name and select a type. Depending upon the column type, specify whether the column requires precision, scale, a default value, or is nullable. For more details on an attribute, see field-level Help.</span></li>
+                           <li><span>SQL - Displays the generated SQL used to add the column. To copy the displayed SQL, click the Copy icon.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Apply</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On the Columns tab, click <span class="uicontrol bold">Modify Column</span>:</span><ol type="a" id="GUID-7CE9D743-BC88-47BC-9465-A1625B7AA535__SUBSTEPS_Q1K_NN5_GXB">
+                           <li class="substepexpand"><span>Configure the attributes.</span><div>Data Redaction region may be shown if the current schema selected is granted execute on <code class="codeph">DBMS_REDACT</code>.
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>SQL - Displays the generated SQL used to modify the column. To copy the displayed SQL, click the Copy icon.</span></li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Apply</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On the Columns tab, click <span class="uicontrol bold">Rename Column</span>:</span><ol type="a" id="GUID-7CE9D743-BC88-47BC-9465-A1625B7AA535__SUBSTEPS_D4N_G45_GXB">
+                           <li><span>Configure the attributes.</span></li>
+                           <li><span>SQL - Displays the generated SQL used to rename the column. To copy the displayed SQL, click the Copy icon.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Apply</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>On the Columns tab, click <span class="uicontrol bold">Drop Column</span>:</span><ol type="a" id="GUID-7CE9D743-BC88-47BC-9465-A1625B7AA535__SUBSTEPS_PYS_445_GXB">
+                           <li><span>Drop Column - Review the details.</span></li>
+                           <li><span>SQL - Displays the generated SQL used to drop the column. To copy the displayed SQL, click the Copy icon.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Apply</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span><span class="uicontrol bold">More</span> menu - Less commonly used actions are accessible
+                    from the <span class="uicontrol bold">More</span> menu. Available actions include:</span><div>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-7CE9D743-BC88-47BC-9465-A1625B7AA535__UL_SHJ_MP5_GXB">
+                              <li><span class="uicontrol bold">Rename Table</span> - Rename the selected
+                            table. In <span class="uicontrol bold">New Table Name</span>, enter the new
+                            name.
+                              </li>
+                              <li><span class="uicontrol bold">Copy Table</span> - Copy the selected table.
+                            In <span class="uicontrol bold">New Table Name</span>, enter the new name.
+                              </li>
+                              <li><span class="uicontrol bold">Drop Table</span> - Delete the selected
+                            table and all table rows. See <a href="managing-tables.html#GUID-4BDC81A5-0405-4895-9138-4EE44AB596D9" title="Select a table from the Object Tree, click the Columns tab, and select Drop Table from the More menu.">Dropping a Table</a>.
+                              </li>
+                              <li><span class="uicontrol bold">Truncate Table</span> - Empty the selected
+                            table completely.
+                              </li>
+                              <li><span class="uicontrol bold">Table Comment</span> - Add or edit comments
+                            for both a table or table column.
+                              </li>
+                              <li><span class="uicontrol bold">Create Lookup Table</span> -   A table
+                            lookup finds a value corresponding to another known value, which is
+                            called the lookup basis.
+                              </li>
+                              <li><span class="uicontrol bold">Create App</span> - Create an application on
+                            the currently selected table. See <a href="managing-tables.html#GUID-FEBB3D09-E031-4FA7-9428-698E2A0F843C" title="Select a table from the Object Tree, click the Columns tab, and select Create App from the More menu.">Creating an Application from a Table</a>.
+                              </li>
+                              <li><span class="uicontrol bold">UI Defaults</span> - Create Table
+                            Dictionnary defaults from the table or column definition in the
+                            database.
+                              </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                  </ol>
+                  <div class="section"></div>
+                  <!-- class="section" -->
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-7CE9D743-BC88-47BC-9465-A1625B7AA535__GUID-B22154CC-88CF-40CB-9500-285F1151D79D">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="using-recycle-bin.html#GUID-472594C2-4CA3-401F-BBB0-9E9BF4F05294" title="You can use the Recycle Bin to view and restore dropped database objects.">Using the Recycle Bin</a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-tables.html#GUID-B21034CD-D55E-47DF-9042-237C5F98A369" title="A table is a unit of data storage in an Oracle database, containing rows and columns. Use Object Browser to create, view, edit, or drop tables.">Managing Tables</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-0D2188B8-1623-48CC-A689-3D942A52C10E" name="GUID-0D2188B8-1623-48CC-A689-3D942A52C10E"></a><h3 id="AEUTL-GUID-0D2188B8-1623-48CC-A689-3D942A52C10E" class="sect3"><span class="enumeration_section">3.3.4 </span>Editing Table Data
+               </h3>
+               <div>
+                  <p>Select a table from the Object Tree and click the Data tab.</p>
+                  <div class="section">
+                     
+                     
+                     <p>To edit table data:</p>
+                     
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Tables</span> and select a table.</span></li>
+                     <li class="stepexpand"><span>In Object Detail view, click the <span class="uicontrol bold">Data</span> tab.</span><div>More commonly used actions display as tabs.</div>
+                     </li>
+                     <li class="stepexpand"><span><span class="uicontrol bold">Insert Row</span> - In the Insert Row dialog, enter the data and click <span class="uicontrol bold">Create</span>.</span></li>
+                     <li class="stepexpand"><span>Modify existing row data:</span><ol type="a" id="GUID-0D2188B8-1623-48CC-A689-3D942A52C10E__SUBSTEPS_VPJ_MR5_GXB">
+                           <li class="substepexpand"><span>Find the row to edit and click the <span class="uicontrol bold">Edit Row</span> icon.</span></li>
+                           <li class="substepexpand"><span>In the Edit Row dialog, edit the data and click <span class="uicontrol bold">Save</span>.</span><div>
+                                 <div class="infobox-tip" id="GUID-0D2188B8-1623-48CC-A689-3D942A52C10E__GUID-C6BB7143-ED1E-454C-9FAF-532A795A1ADA">
+                                    <p class="notep1">Tip:</p>To delete the row, click <span class="uicontrol bold">Delete</span>.
+                                 </div>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span><span class="uicontrol bold">Columns</span> - Choose which columns to display.</span></li>
+                     <li class="stepexpand"><span><span class="uicontrol bold">Filters</span> - Create column filters. In the Filters dialog:</span><ol type="a" id="GUID-0D2188B8-1623-48CC-A689-3D942A52C10E__SUBSTEPS_QDZ_CS5_GXB">
+                           <li><span>Select a Column, Operation, and Value and click <span class="uicontrol bold">Add</span>.</span></li>
+                           <li><span>Click <span class="uicontrol bold">Apply</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span><span class="uicontrol bold">Count Rows</span> - Displays the number of rows in the current
+                    table.</span><div>
+                           <p>Count Rows function always provides the count of the total number of rows in a table. Applying filters does not affect count rows function.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span><span class="uicontrol bold">Load Data</span> - Use the Load Data Wizard to upload a file, copy and paste CSV data, or load a sample data set.</span></li>
+                     <li class="stepexpand"><span><span class="uicontrol bold">Download</span> - Download a native XLSX file.</span></li>
+                     <li class="stepexpand"><span><span class="uicontrol bold">Refresh</span> - Refresh the current view.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-tables.html#GUID-B21034CD-D55E-47DF-9042-237C5F98A369" title="A table is a unit of data storage in an Oracle database, containing rows and columns. Use Object Browser to create, view, edit, or drop tables.">Managing Tables</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-4BDC81A5-0405-4895-9138-4EE44AB596D9" name="GUID-4BDC81A5-0405-4895-9138-4EE44AB596D9"></a><h3 id="AEUTL-GUID-4BDC81A5-0405-4895-9138-4EE44AB596D9" class="sect3"><span class="enumeration_section">3.3.5 </span>Dropping a Table
+               </h3>
+               <div>
+                  <p>Select a table from the Object Tree, click the Columns tab, and select
+        Drop Table from the More menu.</p>
+                  <div class="section">Dropping a table deletes the selected table and all table rows.</div>
+                  <!-- class="section" -->
+                  <div class="section">
+                     <p>To drop a table:</p>
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Tables</span> and select a table.</span><div>
+                           <p>The Object Detail View appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>On the <span class="uicontrol bold">Columns</span> tab, select <span class="uicontrol bold">More</span>, and then <span class="uicontrol bold">Drop Table</span>.</span><ol type="a" id="GUID-4BDC81A5-0405-4895-9138-4EE44AB596D9__SUBSTEPS_WXX_T3B_HXB">
+                           <li><span>Drop - Review the details.</span></li>
+                           <li><span>(Optional) Enable <span class="uicontrol bold">Cascade Constraints</span> to drop all referential integrity constraints that refer to primary and unique keys in the dropped table. If disabled when referential integrity constraints exist, the database returns an error and cancels the drop procedure.</span></li>
+                           <li><span>SQL - Displays the SQL generated to drop the table.</span></li>
+                           <li><span>(Optional) Click the <span class="uicontrol bold">Copy</span> icon to copy the displayed SQL.</span></li>
+                           <li><span>To confirm your selection, click <span class="uicontrol bold">Drop</span> again.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+                  <div class="section"></div>
+                  <!-- class="section" -->
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-4BDC81A5-0405-4895-9138-4EE44AB596D9__GUID-5E5D3D13-4985-466C-9820-A53E5B5566C1">
+                     <p class="notep1">See Also:</p>
+                     <p><a href="using-recycle-bin.html#GUID-472594C2-4CA3-401F-BBB0-9E9BF4F05294" title="You can use the Recycle Bin to view and restore dropped database objects.">Using the Recycle Bin</a></p>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-tables.html#GUID-B21034CD-D55E-47DF-9042-237C5F98A369" title="A table is a unit of data storage in an Oracle database, containing rows and columns. Use Object Browser to create, view, edit, or drop tables.">Managing Tables</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-FEBB3D09-E031-4FA7-9428-698E2A0F843C" name="GUID-FEBB3D09-E031-4FA7-9428-698E2A0F843C"></a><h3 id="AEUTL-GUID-FEBB3D09-E031-4FA7-9428-698E2A0F843C" class="sect3"><span class="enumeration_section">3.3.6 </span>Creating an Application from a Table
+               </h3>
+               <div>
+                  <p>Select a table from the Object Tree, click the Columns tab, and select
+        Create App from the More menu.</p>
+                  <div class="section">
+                     <p>APEX Data Dictionary analyzes the table data with <code class="codeph">DBMS_STATS</code> and adds the following pages:
+                     </p>
+                     <ul style="list-style-type: disc;" id="GUID-FEBB3D09-E031-4FA7-9428-698E2A0F843C__UL_T5C_P13_TSB">
+                        <li>Chart page, if chart recommendation was computed</li>
+                        <li>Calendar page, if any date or timestamp column type exists</li>
+                        <li>Interactive report and form page</li>
+                        <li>Dashboard with charts with columns for charting (these dashboard charts
+                    automatically include links to the interactive report page)</li>
+                        <li>Faceted search page (if valid facets are found)</li>
+                     </ul>
+                  </div>
+                  <!-- class="section" -->
+                  <p>To create an application from a table in Object Browser:</p>
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Tables</span> and select a table.</span><div>
+                           <p>The Object Detail View appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>On the <span class="uicontrol bold">Columns</span> tab, select the <span class="uicontrol bold">More</span> menu, and then <span class="uicontrol bold">Create App</span>.</span><div>The Create Application Wizard appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>On the confirmation page, click <span class="uicontrol bold">Create App</span>.</span><div>The Create Application Wizard appears.</div>
+                     </li>
+                     <li class="stepexpand"><span>Follow the instructions.</span></li>
+                  </ol>
+                  <div class="section">
+                     <div class="infoboxnote" id="GUID-FEBB3D09-E031-4FA7-9428-698E2A0F843C__GUID-39FA98FE-178B-4E23-9D7F-1C450608BF0A">
+                        <p class="notep1">Note:</p>
+                        <p>If table Data Dictionary Cache is out of sync with the database table information due to making changes to the table (such as modifications to the table structure or column names), Create Application Wizard may raise an error. To avoid the error, refresh the Data Dictionary Cache.</p>
+                     </div>
+                  </div>
+                  <!-- class="section" -->
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-FEBB3D09-E031-4FA7-9428-698E2A0F843C__GUID-C909E170-9799-4EB6-A8E7-C8A7965A0206">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;" id="GUID-FEBB3D09-E031-4FA7-9428-698E2A0F843C__UL_NBP_PJX_LXB">
+                        <li><a href="../aeadm/accessing-data-dictionary-cache-from-administration-services.html#AEADM-GUID-4874D50D-7944-472D-9C85-E1B4839A2B3D" target="_blank">Refreshing the Data Dictionary Cache</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                        <li><a href="../htmdb/creating-applications.html#HTMDB-GUID-F09AF2EB-F452-4CC1-A3B7-8B0DA9FF94B0" target="_blank">Creating Applications</a> in <span><cite>Oracle APEX App Builder
+                                        User’s Guide</cite></span></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-tables.html#GUID-B21034CD-D55E-47DF-9042-237C5F98A369" title="A table is a unit of data storage in an Oracle database, containing rows and columns. Use Object Browser to create, view, edit, or drop tables.">Managing Tables</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-079ECF4F-A37B-4E40-AFAD-4A6862A7BCA1" name="GUID-079ECF4F-A37B-4E40-AFAD-4A6862A7BCA1"></a><h3 id="AEUTL-GUID-079ECF4F-A37B-4E40-AFAD-4A6862A7BCA1" class="sect3"><span class="enumeration_section">3.3.7 </span>Analyzing Statistics of a Table
+               </h3>
+               <div>
+                  <p>Select a table from the Object Tree and click the Statistics tab to examine various metrics of a table.</p>
+                  <div class="section">
+                     
+                     
+                     <p>To view the statistics of a table:</p>
+                     
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Tables</span> and select a table.</span><div>
+                           <p>The Object Detail View appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click the <span class="uicontrol bold">Statistics</span> tab.</span><div>The Statistics tab displays a number of metrics separated into
+                        <span class="uicontrol bold">Table Statistics</span> for row analysis and
+                        <span class="uicontrol bold">Column Statistics</span> for column analysis. The
+                    information presented depends on the table.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>To refresh the displayed statistics, click one of the following:</span><ul id="GUID-079ECF4F-A37B-4E40-AFAD-4A6862A7BCA1__CHOICES_HGV_3DD_2JB">
+                           <li><span class="uicontrol bold">Gather Statistics</span> - Gathers table statistics using <code class="codeph">DBMS_STATS</code>. <span class="q">"Gather statistics in progress..."</span> displays as Last Analyzed column value while this process runs in the database background. Click Refresh to get the table and column statistics information. If the background process finishes, the statistics information should display with Last Analyzed column value updated.
+                           </li>
+                           <li><span class="uicontrol bold">Refresh</span> - Refresh queries statistics information gathered already from <code class="codeph">USER_TABLES</code> and <code class="codeph">USER_TAB_COLUMNS</code> views.
+                           </li>
+                        </ul>
+                        <div>The Statistics tab refreshes.</div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-tables.html#GUID-B21034CD-D55E-47DF-9042-237C5F98A369" title="A table is a unit of data storage in an Oracle database, containing rows and columns. Use Object Browser to create, view, edit, or drop tables.">Managing Tables</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="sect2"><a id="GUID-EA76B08F-0D41-42BA-9060-3BB9E79FBA08" name="GUID-EA76B08F-0D41-42BA-9060-3BB9E79FBA08"></a><h3 id="AEUTL-GUID-EA76B08F-0D41-42BA-9060-3BB9E79FBA08" class="sect3"><span class="enumeration_section">3.3.8 </span>Viewing Sample Queries for a Table
+               </h3>
+               <div>
+                  <p>Select a table from the Object Tree and click the Sample Queries tab to view sample queries.</p>
+                  <div class="section">
+                     
+                     
+                     <p>To view sample queries:</p>
+                     
+                  </div>
+                  <!-- class="section" -->
+                  <ol>
+                     <li class="stepexpand"><span>In <span>Object Browser</span>, Object Tree, expand <span class="uicontrol bold">Tables</span> and select a table.</span><div>
+                           <p>The Object Detail View appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>On the <span class="uicontrol bold">Sample Queries</span> tab, choose from available actions:</span><ul id="GUID-EA76B08F-0D41-42BA-9060-3BB9E79FBA08__CHOICES_ASW_J4B_HXB">
+                           <li><span class="uicontrol bold">Refresh</span> - Refreshes the page.
+                           </li>
+                           <li><span class="uicontrol bold">Copy</span> - Copies the query.
+                           </li>
+                           <li><span class="uicontrol bold">Run</span> - Runs the query.
+                           </li>
+                        </ul>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-tables.html#GUID-B21034CD-D55E-47DF-9042-237C5F98A369" title="A table is a unit of data storage in an Oracle database, containing rows and columns. Use Object Browser to create, view, edit, or drop tables.">Managing Tables</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

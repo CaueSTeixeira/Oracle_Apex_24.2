@@ -1,0 +1,152 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Enabling Data Exchange with RESTful Services">
+      <meta name="abstract" content="RESTful Services enable the declarative specification of RESTful services used to access the database.">
+      <meta name="description" content="RESTful Services enable the declarative specification of RESTful services used to access the database.">
+      <meta name="DC.subject" content="RESTful services, using">
+      <meta name="keywords" content="RESTful services, using">
+      <meta name="DC.Relation" scheme="URI" content="about-oracle-restful-services-in-apex.html#GUID-E7D7D0F0-3315-40F6-9240-DC0E464D9666">
+      <meta name="DC.Relation" scheme="URI" content="enabling-rest-objects-from-object-browser.html#GUID-6BC78D6C-425B-4249-AA21-DE5627046A56">
+      <meta name="DC.Relation" scheme="URI" content="enabling-authorization-for-rest-enabled-objects.html#GUID-3BF70CA4-8992-4DE2-B73B-FF267DFD3BBF">
+      <meta name="DC.Relation" scheme="URI" content="accessing-restful-services.html#GUID-0142DB17-2A5F-4135-892F-E3751F11776F">
+      <meta name="DC.Relation" scheme="URI" content="how-to-create-restful-service-module-example.html#GUID-65379747-EC71-4745-8DE2-FB5198FFF21E">
+      <meta name="DC.Relation" scheme="URI" content="managing-restful-service-modules.html#GUID-BD4AE588-7033-47CF-8CD5-22386B80BCB4">
+      <meta name="DC.Relation" scheme="URI" content="managing-resource-templates.html#GUID-7411E780-0FF9-4F21-98AE-EB91B623E756">
+      <meta name="DC.Relation" scheme="URI" content="managing-resource-handlers.html#GUID-07024EE8-4772-46D1-A23D-803666AB644F">
+      <meta name="DC.Relation" scheme="URI" content="accessing-sql-developer-web-from-sql-workshop-menu.html#GUID-9DA2CDE0-7679-4106-B901-6E127D996005">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Neil Fernandez">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Synders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="January2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-9EF9F122-554D-40C3-B14D-70C3ACF1A48D">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="RESTful Services enable the declarative specification of RESTful services used to access the database.">
+      <meta name="description" content="RESTful Services enable the declarative specification of RESTful services used to access the database.">
+      <title>Enabling Data Exchange with RESTful Services</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="SQL Workshop Guide">
+      <meta property="og:description" content="RESTful Services enable the declarative specification of RESTful services used to access the database.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="SQL Workshop Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-sql-workshop-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-01-14T12:14:06-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2008, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12911-01">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="viewing-script-and-result-quotas.html" title="Previous" type="text/html">
+      <link rel="next" href="about-oracle-restful-services-in-apex.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX SQL Workshop Guide">
+    <meta name="dcterms.isVersionOf" content="AEUTL">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","name":"Enabling Data Exchange with RESTful Services","description":"RESTful Services enable the declarative specification of RESTful services used to access the database.","datePublished":"2025-01-14 CST","dateModified":"2025-01-14 CST"} </script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="viewing-script-and-result-quotas.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="about-oracle-restful-services-in-apex.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article>
+         <header>
+            <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+               <li property="itemListElement" typeof="ListItem"><a href="index.html" property="item" typeof="WebPage"><span property="name">SQL Workshop Guide</span></a></li>
+               <li class="active" property="itemListElement" typeof="ListItem">Enabling Data Exchange with RESTful
+                        Services</li>
+            </ol>
+            <a id="GUID-9EF9F122-554D-40C3-B14D-70C3ACF1A48D" name="GUID-9EF9F122-554D-40C3-B14D-70C3ACF1A48D"></a><a id="4850:100"></a>
+            
+            <h2 id="AEUTL-GUID-9EF9F122-554D-40C3-B14D-70C3ACF1A48D" class="sect2"><span class="enumeration_chapter">7 </span>Enabling Data Exchange with RESTful
+                        Services
+            </h2>
+         </header>
+         <div class="ind">
+            <div>
+               <p>RESTful Services enable the declarative specification of RESTful services used to access the database.</p>
+               <p>RESTful Services enable the creation of a set of standards-based APIs on top of database objects available for a workspace. Without connecting directly to the underlying data source, these APIs enable external systems to interact securely with the data by querying, inserting, updating, or deleting.</p>
+               <p>The definitions of RESTful services created within <span>Oracle APEX</span> are stored in the Oracle REST Data Services (ORDS) repository, and are referred to as ORDS-based REST Services.
+               </p>
+               <div class="infoboxnote" id="GUID-9EF9F122-554D-40C3-B14D-70C3ACF1A48D__GUID-155814E6-A276-41FF-8CF0-1FF77F8B3046">
+                  <p class="notep1">Note:</p>
+                  <p>Prior to release 18.1, the definitions of RESTful services created within <span>APEX</span> were stored within the metadata tables of the core <span>APEX</span> schema. They were referred to as <span>APEX</span>-based REST Services. <span>APEX</span>-based REST Services were desupported in <span>APEX</span> release 22.1.
+                  </p>
+                  <p>ORDS release 21.4.2 and later includes migration scripts that enable you to upgrade any remaining <span>APEX</span>-based REST Services to ORDS-based Services. To learn more, see <a href="https://www.oracle.com/tools/ords/ords-relnotes-2142.html" target="_blank">Migration of Oracle APEX Restful Service Modules</a> in <span class="italic">Oracle REST Data Services Release Notes</span>.
+                  </p>
+               </div>
+               <p>This section introduces you to the concepts of RESTful services and describes how to create, edit, and delete RESTful Services using <span>APEX</span>.
+               </p>
+               <div class="infoboxnote" id="GUID-9EF9F122-554D-40C3-B14D-70C3ACF1A48D__GUID-9D65F580-D094-4D6B-9382-578FA0743F5A">
+                  <p class="notep1">Note:</p>Your workspace administrator controls whether RESTful services are enabled. If disabled, the RESTful Services icon does not display.
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="about-oracle-restful-services-in-apex.html#GUID-E7D7D0F0-3315-40F6-9240-DC0E464D9666">About Oracle RESTful Services in Oracle APEX</a><br>This section introduces RESTful Services as implemented by Oracle REST Data         Services (ORDS) and provides clarification on the terminology used within <span>APEX</span> and other Oracle tools to reference the different components that make up a RESTful         Service.
+                  </li>
+                  <li class="ulchildlink"><a href="enabling-rest-objects-from-object-browser.html#GUID-6BC78D6C-425B-4249-AA21-DE5627046A56">Enabling REST Objects</a><br>Enable REST objects using the AutoREST feature of ORDS.
+                  </li>
+                  <li class="ulchildlink"><a href="enabling-authorization-for-rest-enabled-objects.html#GUID-3BF70CA4-8992-4DE2-B73B-FF267DFD3BBF">Enabling Authorization for REST-enabled Objects</a><br>Restrict access for REST-enabled objects on the RESTful Services page. Use the resulting Authorization Role information to configure user roles in ORDS.
+                  </li>
+                  <li class="ulchildlink"><a href="accessing-restful-services.html#GUID-0142DB17-2A5F-4135-892F-E3751F11776F">How to Access RESTful Services</a><br>Access RESTful Services from SQL Workshop.
+                  </li>
+                  <li class="ulchildlink"><a href="how-to-create-restful-service-module-example.html#GUID-65379747-EC71-4745-8DE2-FB5198FFF21E">How to Create the ORDS Based RESTful Services Module Example</a><br>Learn how to create the ORDS Based RESTful Services module example.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-restful-service-modules.html#GUID-BD4AE588-7033-47CF-8CD5-22386B80BCB4">Managing RESTful Service Modules</a><br>Learn how to install sample RESTful service module, You can create ,edit, and delete an ORDS RESTful service module.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-resource-templates.html#GUID-7411E780-0FF9-4F21-98AE-EB91B623E756">Managing Resource Templates</a><br>Resource templates are a means of grouping URIs and associating them with a particular RESTful Service Module.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-resource-handlers.html#GUID-07024EE8-4772-46D1-A23D-803666AB644F">Managing Resource Handlers</a><br>A resource handler is a query or an anonymous PL/SQL block responsible for handling a particular HTTP method.
+                  </li>
+                  <li class="ulchildlink"><a href="accessing-sql-developer-web-from-sql-workshop-menu.html#GUID-9DA2CDE0-7679-4106-B901-6E127D996005">Accessing SQL Developer Web Directly from APEX</a><br>Access  <span>SQL Developer Web</span>  from the <span>SQL Workshop</span> menu.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-9EF9F122-554D-40C3-B14D-70C3ACF1A48D__GUID-2FE53817-435B-4F8A-86B2-6B162B3B6305">
+                  <p class="notep1">See Also:</p>
+                  <p><a href="../aeadm/configuring-workspace-preferences.html#AEADM-GUID-140DE54B-E74A-47E0-AFFE-436F6FC329C0" target="_blank">Enabling RESTful Services and
+                                                  Defining a Path Prefix for a Workspace</a> in
+                                                  <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></p>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

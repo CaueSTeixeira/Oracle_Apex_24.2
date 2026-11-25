@@ -1,0 +1,180 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Exporting Workspaces, Applications, and App Components">
+      <meta name="abstract" content="Export a workspace, application, application components, or related file by creating an export script file.">
+      <meta name="description" content="Export a workspace, application, application components, or related file by creating an export script file.">
+      <meta name="DC.subject" content="export, application, app components, workspace, app related files">
+      <meta name="keywords" content="export, application, app components, workspace, app related files">
+      <meta name="DC.Relation" scheme="URI" content="exporting-and-importing-from-app-builder.html#GUID-F89C2B8C-68B7-404F-8CC9-FE0A99AB34C0">
+      <meta name="DC.Relation" scheme="URI" content="splitting-export-files-into-separate-scripts.html#GUID-9DEE06EA-01C4-40FF-AE36-3C97A96C3DF4">
+      <meta name="DC.Relation" scheme="URI" content="about-exporting-static-files.html#GUID-71AD725D-C3B7-4978-865C-BA5808028D2A">
+      <meta name="DC.Relation" scheme="URI" content="exporting-a-workspace.html#GUID-C7778683-46C6-44ED-9AC0-670969636008">
+      <meta name="DC.Relation" scheme="URI" content="exporting-an-application.html#GUID-CA08D090-882F-4745-87D9-149373F285F1">
+      <meta name="DC.Relation" scheme="URI" content="exporting-an-application-page.html#GUID-F329CE08-AA47-4AF9-9164-706320FAA66D">
+      <meta name="DC.Relation" scheme="URI" content="exporting-application-components.html#GUID-89F71927-C7BA-401A-95AF-229D408191D1">
+      <meta name="DC.Relation" scheme="URI" content="exporting-themes.html#GUID-4DBA1A41-BBF2-461F-BE61-AB6DF0D222BF">
+      <meta name="DC.Relation" scheme="URI" content="exporting-plug-ins.html#GUID-48F158B5-96B5-4751-9499-7780DA6D8D06">
+      <meta name="DC.Relation" scheme="URI" content="exporting-ui-defaults.html#GUID-E4F817B0-EA3A-4606-9B21-71754685E3B4">
+      <meta name="DC.Relation" scheme="URI" content="exporting-team-development-feedback.html#GUID-6BF7C68B-728E-4935-B0A2-132765EA9D63">
+      <meta name="DC.Relation" scheme="URI" content="exporting-a-REST-source-catalog.html#GUID-8C6E2596-3C11-4B5B-9B38-B268F3BD0FE5">
+      <meta name="DC.Relation" scheme="URI" content="exporting-script-files-from-the-script-repository.html#GUID-07FFD21B-E90B-4C2E-9D4B-D93328D0710C">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-8D046D43-C033-4165-9C2B-6AB33A99CF75">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Export a workspace, application, application components, or related file by creating an export script file.">
+      <meta name="description" content="Export a workspace, application, application components, or related file by creating an export script file.">
+      <title>Exporting Workspaces, Applications, and App Components</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Export a workspace, application, application components, or related file by creating an export script file.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="understanding-the-export-and-import-process.html" title="Previous" type="text/html">
+      <link rel="next" href="splitting-export-files-into-separate-scripts.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Exporting Workspaces, Applications, and App Components","description":"Export a workspace, application, application components, or related file by creating an export script file.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="understanding-the-export-and-import-process.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="splitting-export-files-into-separate-scripts.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-8D046D43-C033-4165-9C2B-6AB33A99CF75" name="GUID-8D046D43-C033-4165-9C2B-6AB33A99CF75"></a><a id="HTMDB11005"></a><a id="4000:637"></a>
+         
+         <h2 id="HTMDB-GUID-8D046D43-C033-4165-9C2B-6AB33A99CF75" class="sect2"><span class="enumeration_section">25.3.2 </span>Exporting Workspaces, Applications, and App
+        Components
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Export a workspace, application, application components, or related file by
+                creating an export script file.</p>
+               <div class="infobox-tip" id="GUID-8D046D43-C033-4165-9C2B-6AB33A99CF75__GUID-E843D764-883F-4517-9996-83619EA9F801">
+                  <p class="notep1">Tip:</p>You can also import and export from a command line using  <span>Oracle SQL Developer Command Line</span> (<span>SQLcl</span>) release 22.1 and later. See <a href="../aeadm/exporting-and-importing-using-sqlcl.html#AEADM-GUID-54ED6670-EAEA-45CF-BB0B-F2CB81EB8CFF" target="_blank">Exporting and Importing Using
+                                SQLcl</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="splitting-export-files-into-separate-scripts.html#GUID-9DEE06EA-01C4-40FF-AE36-3C97A96C3DF4">Splitting Export Files into Separate Scripts</a><br>Learn about splitting application, page, and component export files into         separate SQL scripts.
+                  </li>
+                  <li class="ulchildlink"><a href="about-exporting-static-files.html#GUID-71AD725D-C3B7-4978-865C-BA5808028D2A">About Exporting Static Files</a><br>Learn about exporting static application and workspace         files.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-a-workspace.html#GUID-C7778683-46C6-44ED-9AC0-670969636008">Exporting a Workspace</a><br>Move or copy a workspace by exporting it.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-an-application.html#GUID-CA08D090-882F-4745-87D9-149373F285F1">Exporting an Application</a><br>Move or copy an application by exporting and then importing it into the         target instance. 
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-an-application-page.html#GUID-F329CE08-AA47-4AF9-9164-706320FAA66D">Exporting an Application Page</a><br>Move or copy a single application page by exporting it. You can export or         page from the Export page or from Page Designer.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-application-components.html#GUID-89F71927-C7BA-401A-95AF-229D408191D1">Exporting Application Components</a><br>Create a Component Export to back up a component before editing it, or create an export that functions as a patch to another <span>Oracle APEX</span> instance.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-themes.html#GUID-4DBA1A41-BBF2-461F-BE61-AB6DF0D222BF">Exporting Themes</a><br>Move or copy a theme by exporting it.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-plug-ins.html#GUID-48F158B5-96B5-4751-9499-7780DA6D8D06">Exporting Plug-ins</a><br>Move or copy plug-ins by exporting them.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-ui-defaults.html#GUID-E4F817B0-EA3A-4606-9B21-71754685E3B4">Exporting UI Defaults</a><br>Move or copy a UI  Defaults by exporting them.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-team-development-feedback.html#GUID-6BF7C68B-728E-4935-B0A2-132765EA9D63">Exporting Team Development Feedback</a><br>Move or copy user-provided feedback from the current <span>APEX</span> instance.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-a-REST-source-catalog.html#GUID-8C6E2596-3C11-4B5B-9B38-B268F3BD0FE5">Exporting a REST Source Catalog</a><br>Move a REST Source Catalog to another instance on the Export             page.
+                  </li>
+                  <li class="ulchildlink"><a href="exporting-script-files-from-the-script-repository.html#GUID-07FFD21B-E90B-4C2E-9D4B-D93328D0710C">Exporting Script Files from the Script Repository</a><br>Move scripts from your current Script Repository by exporting         them.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-8D046D43-C033-4165-9C2B-6AB33A99CF75__GUID-2DC22964-046C-4E9B-A312-A03152A3F2EF">
+                  <p class="notep1">See Also:</p>
+                  
+                  <ul style="list-style-type: disc;" id="GUID-8D046D43-C033-4165-9C2B-6AB33A99CF75__UL_BVB_SCJ_CTB">
+                     <li>
+                        
+                        <p><a href="understanding-the-export-and-import-process.html#GUID-6FF01286-ADFB-4E45-81AC-B29915F260BA" title="Move a workspace, application, or related files by creating an export script file and then importing and installing it into another APEX instance.">Understanding the Export and Import Process</a></p>
+                        
+                     </li>
+                     <li>
+                        
+                        <p><a href="how-to-create-a-custom-packaged-application.html#GUID-A50AB849-243B-4F50-BAB4-0D7FF386B926" title="Simplify the steps needed to deploy an application by creating a custom application using the Supporting Objects utility.">How to Create a Custom Application</a></p>
+                        
+                     </li>
+                  </ul>
+                  
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="exporting-and-importing-from-app-builder.html#GUID-F89C2B8C-68B7-404F-8CC9-FE0A99AB34C0" title="Move a workspace, an application, application components, or related files by creating an export script file and then importing and installing it into another APEX instance.">Exporting and Importing from App Builder</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

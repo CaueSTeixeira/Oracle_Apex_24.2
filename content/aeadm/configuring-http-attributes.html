@@ -1,0 +1,371 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Configuring HTTP Protocol Attributes">
+      <meta name="abstract" content="Determine HTTPS requirements for an Oracle APEX instance and all related applications.">
+      <meta name="description" content="Determine HTTPS requirements for an Oracle APEX instance and all related applications.">
+      <meta name="DC.subject" content="security settings, Secure Sockets Layer (SSL), Secure Sockets Layer (SSL), about, requiring HTTPS, HTTPS, requiring, reversing HTTPS requirement, reversing requirement for an instance, reversing Require Outbound HTTPS, configure additional HTTP response headers, HTTP Response Headers, configure additional">
+      <meta name="keywords" content="security settings, Secure Sockets Layer (SSL), Secure Sockets Layer (SSL), about, requiring HTTPS, HTTPS, requiring, reversing HTTPS requirement, reversing requirement for an instance, reversing Require Outbound HTTPS, configure additional HTTP response headers, HTTP Response Headers, configure additional">
+      <meta name="DC.Relation" scheme="URI" content="configuring-security.html#GUID-5EC277A4-20BD-47CF-9448-46680C75593E">
+      <meta name="DC.Relation" scheme="URI" content="configuring-http-attributes.html#GUID-80DE2314-038F-4B7C-8EFD-F99F3E326E82">
+      <meta name="DC.Relation" scheme="URI" content="configuring-http-attributes.html#GUID-BA079B46-241C-4921-B6E4-216D7E873D25">
+      <meta name="DC.Relation" scheme="URI" content="configuring-http-attributes.html#GUID-7DE1584F-0001-4189-A1FF-784ABE84F722">
+      <meta name="DC.Relation" scheme="URI" content="configuring-http-attributes.html#GUID-E19AA8F4-0292-4437-BA32-FE2B8ACCF63C">
+      <meta name="DC.Relation" scheme="URI" content="configuring-http-attributes.html#GUID-C9756003-7E51-4E3F-BDC0-8F2D8C29E42B">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-DCC66FF6-200E-42D1-AFD1-EC0A058A0A2D">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Determine HTTPS requirements for an Oracle APEX instance and all related applications.">
+      <meta name="description" content="Determine HTTPS requirements for an Oracle APEX instance and all related applications.">
+      <title>Configuring HTTP Protocol Attributes</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Determine HTTPS requirements for an Oracle APEX instance and all related applications.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="configuring-service-level-security-settings.html" title="Previous" type="text/html">
+      <link rel="next" href="configuring-content-security-policy-csp.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Configuring HTTP Protocol Attributes","description":"Determine HTTPS requirements for an Oracle APEX instance and all related applications.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="configuring-service-level-security-settings.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="configuring-content-security-policy-csp.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-DCC66FF6-200E-42D1-AFD1-EC0A058A0A2D" name="GUID-DCC66FF6-200E-42D1-AFD1-EC0A058A0A2D"></a><a id="AEADM29251"></a>
+         
+         <h2 id="AEADM-GUID-DCC66FF6-200E-42D1-AFD1-EC0A058A0A2D" class="sect2"><span class="enumeration_section">3.4.2 </span>Configuring HTTP Protocol Attributes
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Determine HTTPS requirements for an <span>Oracle APEX</span> instance and all related applications.
+               </p>
+               <div class="infoboxnote" id="GUID-DCC66FF6-200E-42D1-AFD1-EC0A058A0A2D__GUID-CD951CA7-86EA-4F5D-9774-6688BFA4ADBA">
+                  <p class="notep1">Note:</p>
+                  <p>Require HTTPS makes <span>APEX</span> unreachable by the HTTP protocol. Before enabling this setting, ensure that the HTTPS protocol is enabled and configured correctly on your server.
+                  </p>
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="configuring-http-attributes.html#GUID-80DE2314-038F-4B7C-8EFD-F99F3E326E82">About SSL</a><br>Learn about Secure Sockets Layer (SSL).
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-http-attributes.html#GUID-BA079B46-241C-4921-B6E4-216D7E873D25">Requiring HTTPS</a><br>Configure both the <span>APEX</span> instance and all related applications to require HTTPS by configuring the Require HTTPS and Require Outbound HTTPS attributes.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-http-attributes.html#GUID-7DE1584F-0001-4189-A1FF-784ABE84F722">Reversing Require HTTPS</a><br>If you enable Require HTTPS, an Instance administrator can disable it by         running the following SQL statements.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-http-attributes.html#GUID-E19AA8F4-0292-4437-BA32-FE2B8ACCF63C">Reversing Require Outbound HTTPS</a><br>If you enable Require Outbound HTTPS, an Instance administrator can disable it by running the following SQL statements.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-http-attributes.html#GUID-C9756003-7E51-4E3F-BDC0-8F2D8C29E42B">Configuring Additional Response Headers</a><br>Enter additional HTTP response headers that <span>APEX</span> should send on each request, for all applications.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="configuring-security.html#GUID-5EC277A4-20BD-47CF-9448-46680C75593E" title="Instance administrators can configure instance security, including service-level security, configuring support for Real Application Security, configuring session time out, preventing browser attacks by isolating workspaces, excluding domains from regions and Web services, configuring authentication controls, creating strong password policies, and managing authorized URLs.">Configuring Security</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="AEADM29252"></a><div class="props_rev_3"><a id="GUID-80DE2314-038F-4B7C-8EFD-F99F3E326E82" name="GUID-80DE2314-038F-4B7C-8EFD-F99F3E326E82"></a><h3 id="AEADM-GUID-80DE2314-038F-4B7C-8EFD-F99F3E326E82" class="sect3"><span class="enumeration_section">3.4.2.1 </span>About SSL
+               </h3>
+               <div>
+                  <p>Learn about Secure Sockets Layer (SSL).</p>
+                  <p>Secure Sockets Layer (SSL) is a protocol for managing the security of data transmitted on
+            the Internet. For web applications, SSL is implemented by using the HTTPS protocol.
+            Oracle recommends running <span>APEX</span> applications using SSL (HTTPS protocol) to prevent any sensitive data from being sent
+            over an unencrypted (cleartext) communication channel.
+                  </p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-http-attributes.html#GUID-DCC66FF6-200E-42D1-AFD1-EC0A058A0A2D" title="Determine HTTPS requirements for an Oracle APEX instance and all related applications.">Configuring HTTP Protocol Attributes</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29253"></a><div class="props_rev_3"><a id="GUID-BA079B46-241C-4921-B6E4-216D7E873D25" name="GUID-BA079B46-241C-4921-B6E4-216D7E873D25"></a><h3 id="AEADM-GUID-BA079B46-241C-4921-B6E4-216D7E873D25" class="sect3"><span class="enumeration_section">3.4.2.2 </span>Requiring HTTPS
+               </h3>
+               <div>
+                  <p>Configure both the <span>APEX</span> instance and all related applications to require HTTPS by configuring the Require HTTPS and Require Outbound HTTPS attributes.
+                  </p>
+                  <div class="section">
+                     <div class="infoboxnote" id="GUID-BA079B46-241C-4921-B6E4-216D7E873D25__GUID-5009CA89-04A5-4260-820A-6C9582601D7D">
+                        <p class="notep1">Important:</p>
+                        <p>If you enable <span class="uicontrol bold">Require HTTPS</span>, it&nbsp;makes <span>APEX</span> unreachable by the HTTP protocol. Before enabling this setting, ensure that the HTTPS protocol is enabled and configured correctly on your server. 
+                        </p>
+                     </div>
+                  </div>
+                  <div class="section">
+                     <p>To require HTTPS in <span>APEX</span>:
+                     </p>
+                  </div>
+                  <ol>
+                     <li><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                     <li><span>Under HTTP Protocol, configure the following:</span><ol type="a">
+                           <li class="substepexpand"><span>Require HTTPS:</span><div>
+                                 <ul style="list-style-type: disc;">
+                                    <li>
+                                       <p><span class="uicontrol bold">Always</span> - Enforces HTTPS for all applications (including the <span>APEX</span> development and administration applications) to require HTTPS. 
+                                       </p>
+                                       <p>If set to <span class="uicontrol bold">Always</span>, the Strict-Transport-Security Max Age attribute displays. Use this field to specify the time period in seconds during which the browser shall access the server with HTTPS only. To learn more, see field-level Help. 
+                                       </p>
+                                    </li>
+                                    <li>
+                                       <p><span class="uicontrol bold">Development and Administration</span> - Forces all internal applications within <span>APEX</span> (that is, <span>App Builder</span>, SQL Workshop, Administration Services and so on) to require HTTPS.
+                                       </p>
+                                    </li>
+                                    <li>
+                                       <p><span class="uicontrol bold">Application specific</span> - Makes HTTPS dependent on application-level settings.
+                                       </p>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Require Outbound HTTPS - Select <span class="uicontrol bold">Yes</span> to require all outbound traffic from an <span>APEX</span> instance to use the HTTPS protocol.</span></li>
+                           <li class="substepexpand"><span>HTTP Response Headers - Enter additional HTTP response headers that <span>APEX</span> should send on each request for all applications. Developers can specify additional headers at the application-level. Each header has to start on a new line. Note that support for various headers differs between browsers. To learn more, see field-level Help.</span></li>
+                        </ol>
+                     </li>
+                     <li><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-http-attributes.html#GUID-DCC66FF6-200E-42D1-AFD1-EC0A058A0A2D" title="Determine HTTPS requirements for an Oracle APEX instance and all related applications.">Configuring HTTP Protocol Attributes</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29254"></a><div class="props_rev_3"><a id="GUID-7DE1584F-0001-4189-A1FF-784ABE84F722" name="GUID-7DE1584F-0001-4189-A1FF-784ABE84F722"></a><h3 id="AEADM-GUID-7DE1584F-0001-4189-A1FF-784ABE84F722" class="sect3"><span class="enumeration_section">3.4.2.3 </span>Reversing Require HTTPS
+               </h3>
+               <div>
+                  <p>If you enable Require HTTPS, an Instance administrator can disable it by
+        running the following SQL statements.</p>
+                  <div class="section">
+                     <p>To reverse Require HTTPS:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Connect in <span>SQLcl</span> or SQL Developer with the <span>APEX</span> engine schema as the current schema, for example:</span><div>
+                           
+                           <ul style="list-style-type: disc;">
+                              <li>
+                                 
+                                 <p>On Windows:</p>
+                                 <pre class="oac_no_warn" dir="ltr"><span class="italic">SYSTEM_DRIVE:</span>\ <span>sql</span> /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span>
+</pre>
+                                 </li>
+                              <li>
+                                 
+                                 <p>On UNIX and Linux:</p>
+                                 <pre class="oac_no_warn" dir="ltr">$ <span>sql</span> /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span>
+</pre>
+                                 </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Run the following statement:</span><div><pre class="oac_no_warn" dir="ltr">ALTER SESSION SET CURRENT_SCHEMA = <span>APEX_240200</span>;
+</pre></div>
+                     </li>
+                     <li class="stepexpand"><span>Run the following statement:</span><div><pre class="oac_no_warn" dir="ltr">BEGIN
+    APEX_INSTANCE_ADMIN.SET_PARAMETER('REQUIRE_HTTPS', 'N');
+    commit;
+end;
+/
+</pre></div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-http-attributes.html#GUID-DCC66FF6-200E-42D1-AFD1-EC0A058A0A2D" title="Determine HTTPS requirements for an Oracle APEX instance and all related applications.">Configuring HTTP Protocol Attributes</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29255"></a><div class="props_rev_3"><a id="GUID-E19AA8F4-0292-4437-BA32-FE2B8ACCF63C" name="GUID-E19AA8F4-0292-4437-BA32-FE2B8ACCF63C"></a><h3 id="AEADM-GUID-E19AA8F4-0292-4437-BA32-FE2B8ACCF63C" class="sect3"><span class="enumeration_section">3.4.2.4 </span>Reversing Require Outbound HTTPS
+               </h3>
+               <div>
+                  <p>If you enable Require Outbound HTTPS, an Instance administrator can disable it by running the following SQL statements.</p>
+                  <div class="section">
+                     <p>To reverse Require Outbound HTTPS:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Connect in <span>SQLcl</span> or SQL Developer with the <span>APEX</span> engine schema as the current schema, for example:</span><div>
+                           
+                           <ul style="list-style-type: disc;">
+                              <li>
+                                 
+                                 <p>On Windows:</p>
+                                 <pre class="oac_no_warn" dir="ltr"><span class="italic">SYSTEM_DRIVE:</span>\ <span>sql</span> /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span>
+</pre>
+                                 </li>
+                              <li>
+                                 
+                                 <p>On UNIX and Linux:</p>
+                                 <pre class="oac_no_warn" dir="ltr"><span class="italic">SYSTEM_DRIVE:</span>\ <span>sql</span> /nolog
+SQL&gt; CONNECT SYS as SYSDBA
+Enter password: <span class="italic">SYS_password</span>
+</pre>
+                                 </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Run the following statement:</span><div><pre class="oac_no_warn" dir="ltr">ALTER SESSION SET CURRENT_SCHEMA = <span>APEX_240200</span>;
+</pre></div>
+                     </li>
+                     <li class="stepexpand"><span>Run the following statement:</span><div><pre class="oac_no_warn" dir="ltr">BEGIN
+    APEX_INSTANCE_ADMIN.SET_PARAMETER('REQUIRE_OUT_HTTPS', 'N');
+    commit;
+end;
+/
+</pre></div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-http-attributes.html#GUID-DCC66FF6-200E-42D1-AFD1-EC0A058A0A2D" title="Determine HTTPS requirements for an Oracle APEX instance and all related applications.">Configuring HTTP Protocol Attributes</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="AEADM29256"></a><div class="props_rev_3"><a id="GUID-C9756003-7E51-4E3F-BDC0-8F2D8C29E42B" name="GUID-C9756003-7E51-4E3F-BDC0-8F2D8C29E42B"></a><h3 id="AEADM-GUID-C9756003-7E51-4E3F-BDC0-8F2D8C29E42B" class="sect3"><span class="enumeration_section">3.4.2.5 </span>Configuring Additional Response Headers
+               </h3>
+               <div>
+                  <p>Enter additional HTTP response headers that <span>APEX</span> should send on each request, for all applications.
+                  </p>
+                  <div class="section">
+                     <p>To configure additional response headers:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Sign in to <span>APEX</span> Administration Services.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Manage Instance</span>.</span></li>
+                     <li class="stepexpand"><span>Under Instance Settings, click <span class="uicontrol bold">Security</span>.</span></li>
+                     <li class="stepexpand"><span>Locate <span class="uicontrol bold">HTTP Protocol</span>.</span></li>
+                     <li class="stepexpand"><span>Require HTTPS - Makes <span>Oracle APEX</span> unreachable by the HTTP protocol. Options include:</span><div>
+                           
+                           <div class="infoboxnote" id="GUID-C9756003-7E51-4E3F-BDC0-8F2D8C29E42B__GUID-7DE7F251-A3AA-41B2-AAFF-3015273299F6">
+                              <p class="notep1">Note:</p>Before enabling <span class="uicontrol bold">Require HTTPS</span>, ensure that the
+                        HTTPS protocol is enabled and configured correctly on your server.
+                           </div>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-C9756003-7E51-4E3F-BDC0-8F2D8C29E42B__UL_EDS_Z2Z_CFC">
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Always</span> - Enforces HTTPS for all applications
+                                (including the <span>Oracle APEX</span> development and administration applications) to require HTTPS. 
+                                 </p>
+                                 
+                                 <p>If set to <span class="uicontrol bold">Always</span>, the
+                                    <span class="uicontrol bold">Strict-Transport-Security Max Age</span>
+                                attribute displays. Use this field to specify the time period in
+                                seconds during which the browser shall access the server with HTTPS
+                                only.
+                                 </p>
+                                 
+                              </li>
+                              <li><span class="uicontrol bold">For Development and Administration</span> - Forces all
+                            internal applications within <span>Oracle APEX</span> (such as <span>App Builder</span>, <span>SQL Workshop</span>, <span>Oracle APEX</span> Administration Services (Administration Services) and so on) to
+                            require HTTPS.
+                              </li>
+                              <li><span class="uicontrol bold">Application specific</span> - Makes HTTPS dependent on
+                            the Secure session cookie attribute in the authentication schemes of
+                            your applications.
+                              </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Require Outbound HTTPS - Select <span class="uicontrol bold">Yes</span> to require all
+                    outbound traffic from an <span>Oracle APEX</span> instance to use the HTTPS protocol.</span></li>
+                     <li class="stepexpand"><span>HTTP Response Headers - Enter additional HTTP response headers that <span>APEX</span> should send on each request for all applications. Developers can also specify
+                    additional headers at application-level. Each header has to start on a new line.
+                    Support for various headers differs between browsers. To learn more, see item
+                    Help.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span>.</span></li>
+                  </ol>
+                  <div class="section">
+                     
+                     
+                  </div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-C9756003-7E51-4E3F-BDC0-8F2D8C29E42B__GUID-7D587067-18FF-41BE-93C2-50DD059D0106">
+                     <p class="notep1">See Also:</p><a href="configuring-content-security-policy-csp.html#GUID-B82B66C4-84AF-40DF-ABF1-F0910F35E6E1" title="Learn about how Content Security Policy (CSP) can help prevent or minimize the risk of certain types of security threats.">Configuring Content Security Policy (CSP)</a></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-http-attributes.html#GUID-DCC66FF6-200E-42D1-AFD1-EC0A058A0A2D" title="Determine HTTPS requirements for an Oracle APEX instance and all related applications.">Configuring HTTP Protocol Attributes</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

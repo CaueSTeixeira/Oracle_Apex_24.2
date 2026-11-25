@@ -1,0 +1,212 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="GET_URL Function">
+      <meta name="DC.subject" content="GET_URL function, APEX_PAGE">
+      <meta name="keywords" content="GET_URL function, APEX_PAGE">
+      <meta name="DC.Relation" scheme="URI" content="APEX_PAGE.html#GUID-4E9A6524-DD04-4C34-BF9A-ABC6233E6C22">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-83A2A2A0-5B43-4A3E-BBD3-2FBD3B7B01CE">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>GET_URL Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="GET_UI_TYPE-Function.html" title="Previous" type="text/html">
+      <link rel="next" href="IS_DESKTOP_UI-Function.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"GET_URL Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="GET_UI_TYPE-Function.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="IS_DESKTOP_UI-Function.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-83A2A2A0-5B43-4A3E-BBD3-2FBD3B7B01CE" name="GUID-83A2A2A0-5B43-4A3E-BBD3-2FBD3B7B01CE"></a>
+         
+         <h2 id="AEAPI-GUID-83A2A2A0-5B43-4A3E-BBD3-2FBD3B7B01CE" class="sect2"><span class="enumeration_section">43.4 </span>GET_URL Function
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>Returns an <span>APEX</span> <code class="codeph">f?p= URL</code>. It is sometimes clearer to read a function call than a concatenated URL. See the example below for a comparison.
+                  </p>
+                  <div class="infoboxnote" id="GUID-83A2A2A0-5B43-4A3E-BBD3-2FBD3B7B01CE__GUID-9EB36790-0A49-4B2C-997D-C41DBCDB9125">
+                     <p class="notep1">Note:</p>The URL excludes a checksum if the specific application is located in a different workspace.
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-83A2A2A0-5B43-4A3E-BBD3-2FBD3B7B01CE__GUID-A5EBC1F2-2C1A-4203-81FE-F4F78DD2CC32">Syntax</p><pre class="pre codeblock"><code>APEX_PAGE.GET_URL (
+    p_application        IN VARCHAR2 DEFAULT NULL,
+    p_page               IN VARCHAR2 DEFAULT NULL,
+    p_session            IN NUMBER   DEFAULT apex_application.g_instance,
+    p_request            IN VARCHAR2 DEFAULT NULL,
+    p_debug              IN VARCHAR2 DEFAULT NULL,
+    p_clear_cache        IN VARCHAR2 DEFAULT NULL,
+    p_items              IN VARCHAR2 DEFAULT NULL,
+    p_values             IN VARCHAR2 DEFAULT NULL,
+    p_printer_friendly   IN VARCHAR2 DEFAULT NULL,
+    p_trace              IN VARCHAR2 DEFAULT NULL,
+    p_x01                IN VARCHAR2 DEFAULT NULL,
+    p_hash               IN VARCHAR2 DEFAULT NULL,
+    p_triggering_element IN VARCHAR2 DEFAULT 'this',
+    p_plain_url          IN BOOLEAN  DEFAULT FALSE,
+    p_absolute_url       IN BOOLEAN  DEFAULT FALSE )
+    RETURN VARCHAR2;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-83A2A2A0-5B43-4A3E-BBD3-2FBD3B7B01CE__GUID-EBB6E084-977D-4B5B-83E0-B29BC16BD875">Parameters</p>
+                  <div class="tblformal" id="GUID-83A2A2A0-5B43-4A3E-BBD3-2FBD3B7B01CE__GUID-57E6625A-14A3-4F99-BEF9-F39846FF241E">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" width="25%" id="d204651e77">Parameter</th>
+                              <th align="left" valign="bottom" width="75%" id="d204651e79">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="25%" id="d204651e83" headers="d204651e77 "><code class="codeph">p_application</code></td>
+                              <td align="left" valign="top" width="75%" headers="d204651e83 d204651e79 ">The application ID or alias. Defaults to the current application.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="25%" id="d204651e89" headers="d204651e77 "><code class="codeph">p_page</code></td>
+                              <td align="left" valign="top" width="75%" headers="d204651e89 d204651e79 ">Page ID or alias. Defaults to the current page.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="25%" id="d204651e95" headers="d204651e77 "><code class="codeph">p_session</code></td>
+                              <td align="left" valign="top" width="75%" headers="d204651e95 d204651e79 ">Session ID. Defaults to the current session ID.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="25%" id="d204651e101" headers="d204651e77 "><code class="codeph">p_request</code></td>
+                              <td align="left" valign="top" width="75%" headers="d204651e101 d204651e79 ">URL request parameter.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="25%" id="d204651e107" headers="d204651e77 "><code class="codeph">p_debug</code></td>
+                              <td align="left" valign="top" width="75%" headers="d204651e107 d204651e79 ">URL debug parameter. Defaults to the current debug mode.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="25%" id="d204651e113" headers="d204651e77 "><code class="codeph">p_clear_cache</code></td>
+                              <td align="left" valign="top" width="75%" headers="d204651e113 d204651e79 ">URL clear cache parameter.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="25%" id="d204651e119" headers="d204651e77 "><code class="codeph">p_items</code></td>
+                              <td align="left" valign="top" width="75%" headers="d204651e119 d204651e79 ">Comma-delimited list of item names to set session state.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="25%" id="d204651e125" headers="d204651e77 "><code class="codeph">p_values</code></td>
+                              <td align="left" valign="top" width="75%" headers="d204651e125 d204651e79 ">Comma-separated list of item values to set session state.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="25%" id="d204651e131" headers="d204651e77 "><code class="codeph">p_printer_friendly</code></td>
+                              <td align="left" valign="top" width="75%" headers="d204651e131 d204651e79 ">URL printer-friendly parameter. Defaults to the current request's printer-friendly mode.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="25%" id="d204651e137" headers="d204651e77 "><code class="codeph">p_trace</code></td>
+                              <td align="left" valign="top" width="75%" headers="d204651e137 d204651e79 ">SQL trace parameter.</td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="25%" id="d204651e143" headers="d204651e77 "><code class="codeph">p_x01</code></td>
+                              <td align="left" valign="top" width="75%" headers="d204651e143 d204651e79 ">Adds the parameter <code class="codeph">&amp;x01=value</code> to the URL.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="25%" id="d204651e153" headers="d204651e77 "><code class="codeph">p_hash</code></td>
+                              <td align="left" valign="top" width="75%" headers="d204651e153 d204651e79 ">Adds <code class="codeph">#hash-value</code> at the end of the URL.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="25%" id="d204651e162" headers="d204651e77 "><code class="codeph">p_triggering_element</code></td>
+                              <td align="left" valign="top" width="75%" headers="d204651e162 d204651e79 ">A jQuery selector to identify which element to use to trigger the dialog (for example, <code class="codeph">#my_button</code>, where <span class="q">"my_button"</span> is the static ID for a button element). Required for Modal Dialog support.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="25%" id="d204651e174" headers="d204651e77 "><code class="codeph">p_plain_url</code></td>
+                              <td align="left" valign="top" width="75%" headers="d204651e174 d204651e79 ">If the page you are calling <code class="codeph">APEX_PAGE.GET_URL</code> from is a modal dialog, specify <code class="codeph">p_plain_url</code> to omit the unnecessary JavaScript code in the generated link. By default, if this function is called from a modal dialog, JavaScript code to close the modal dialog is included in the generated URL.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" width="25%" id="d204651e186" headers="d204651e77 "><code class="codeph">p_absolute_url</code></td>
+                              <td align="left" valign="top" width="75%" headers="d204651e186 d204651e79 ">If <code class="codeph">FALSE</code> (default), auto-determines if an absolute URL is needed. If <code class="codeph">TRUE</code>, always generates an absolute URL.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-83A2A2A0-5B43-4A3E-BBD3-2FBD3B7B01CE__GUID-3C2EB0A0-EF11-4D63-8745-5A6BCFAC5B45">Example</p>
+                  <p>This query uses <code class="codeph">APEX_PAGE.GET_URL</code> and its alternative <code class="codeph">APEX_UTIL.PREPARE_URL</code> to produce two identical URLs.
+                  </p><pre class="pre codeblock"><code>SELECT APEX_PAGE.GET_URL (
+            p_page   =&gt; 1,
+            p_items  =&gt; 'P1_X,P1_Y',
+            p_values =&gt; 'somevalue,othervalue' ) f_url_1,
+         APEX_UTIL.PREPARE_URL('f?p=&amp;APP_ID.:1:&amp;APP_SESSION.::::P1_X,P1_Y:somevalue,othervalue') f_url_2
+     FROM DUAL;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_PAGE.html#GUID-4E9A6524-DD04-4C34-BF9A-ABC6233E6C22">APEX_PAGE</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

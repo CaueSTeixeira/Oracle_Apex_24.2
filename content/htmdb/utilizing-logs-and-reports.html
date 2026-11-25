@@ -1,0 +1,377 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Utilizing Logs and Reports">
+      <meta name="abstract" content="Review application logs and reports to help identify problematic pages.">
+      <meta name="description" content="Review application logs and reports to help identify problematic pages.">
+      <meta name="DC.subject" content="performance, using logs and report, reports, performance, logs, monitor workspace, Page Views, Developer Activity, Sessions, Page View Analysis, Environment, Login Attempts, Application Errors, Workspace Schema Reports, managing, Dashboard report, Dashboard, workspace activity, monitor activity">
+      <meta name="keywords" content="performance, using logs and report, reports, performance, logs, monitor workspace, Page Views, Developer Activity, Sessions, Page View Analysis, Environment, Login Attempts, Application Errors, Workspace Schema Reports, managing, Dashboard report, Dashboard, workspace activity, monitor activity">
+      <meta name="DC.Relation" scheme="URI" content="managing-application-performance.html#GUID-1684F55B-7782-4B1F-96AB-0D41BCBDB1BA">
+      <meta name="DC.Relation" scheme="URI" content="utilizing-logs-and-reports.html#GUID-9BE276ED-FF4C-40C6-B03F-2EB8258DE3BE">
+      <meta name="DC.Relation" scheme="URI" content="utilizing-logs-and-reports.html#GUID-EFAF8D00-5F0E-4EDA-937D-6F52975BB420">
+      <meta name="DC.Relation" scheme="URI" content="utilizing-logs-and-reports.html#GUID-080C4EEE-EB04-4AE9-A0AA-D16A45D18D82">
+      <meta name="DC.Relation" scheme="URI" content="utilizing-logs-and-reports.html#GUID-66427E0C-5B4D-4B27-89BE-3AD25F2153BA">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-E1615B96-4406-4748-B8D3-E0912A0962C7">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Review application logs and reports to help identify problematic pages.">
+      <meta name="description" content="Review application logs and reports to help identify problematic pages.">
+      <title>Utilizing Logs and Reports</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Review application logs and reports to help identify problematic pages.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="identifying-performance-issues.html" title="Previous" type="text/html">
+      <link rel="next" href="about-utilizing-database-reporting.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Utilizing Logs and Reports","description":"Review application logs and reports to help identify problematic pages.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="identifying-performance-issues.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="about-utilizing-database-reporting.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-E1615B96-4406-4748-B8D3-E0912A0962C7" name="GUID-E1615B96-4406-4748-B8D3-E0912A0962C7"></a><a id="HTMDB10006"></a>
+         
+         <h2 id="HTMDB-GUID-E1615B96-4406-4748-B8D3-E0912A0962C7" class="sect2"><span class="enumeration_section">23.3 </span>Utilizing Logs and Reports
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Review application logs and reports to help identify problematic pages.</p>
+               <p>The <span>Oracle APEX</span> engine records activity logs to capture usage and performance data. This information displays in various reports. If a particular page is accessed extensively or a page renders slowly then these reports can help you identify problematic pages.
+               </p>
+               <p>You can then further analyze the problematic pages. For example, you can run a report query in SQL Developer to review the Explain Plan. </p>
+               <div class="infobox-tip" id="GUID-E1615B96-4406-4748-B8D3-E0912A0962C7__GUID-55F5BE66-10D8-49FE-953E-966B2901E62B">
+                  <p class="notep1">Tip:</p>
+                  <p>Another method of determining expensive elements within a page or process is to review the <span>APEX</span> Debug mode. 
+                  </p>
+                  <p></p>
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="utilizing-logs-and-reports.html#GUID-9BE276ED-FF4C-40C6-B03F-2EB8258DE3BE">Accessing the Monitor Activity Page in Workspace Administration</a><br>Use the Monitor Activity page in Workspace Administration to view developer         activity and application change information.
+                  </li>
+                  <li class="ulchildlink"><a href="utilizing-logs-and-reports.html#GUID-EFAF8D00-5F0E-4EDA-937D-6F52975BB420">About Managing Log Files</a><br>An Instance administrator can delete log files and manage the interval at         which log file information is retained.
+                  </li>
+                  <li class="ulchildlink"><a href="utilizing-logs-and-reports.html#GUID-080C4EEE-EB04-4AE9-A0AA-D16A45D18D82">Viewing the Dashboard Report</a><br>The  Dashboard report displays metrics about applications in your                 workspace.
+                  </li>
+                  <li class="ulchildlink"><a href="utilizing-logs-and-reports.html#GUID-66427E0C-5B4D-4B27-89BE-3AD25F2153BA">Instance Activity Reports</a><br>Instance administrators are superusers that manage an entire hosted instance using the <span>APEX</span> Administration Services application.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-E1615B96-4406-4748-B8D3-E0912A0962C7__GUID-A63359D8-5FAA-46B9-956C-39D50DD56C0F">
+                  <p class="notep1">See Also:</p>
+                  <ul style="list-style-type: disc;">
+                     <li><a href="../aeapi/APEX_DEBUG.html#AEAPI-GUID-8E80E46E-CCEF-4CCC-8D00-8EC3A5C36FDE" target="_blank">APEX_DEBUG</a> in <span><cite>Oracle APEX API
+                                        Reference</cite></span></li>
+                     <li><a href="utilizing-debug-mode.html#GUID-65F66F2B-ADCB-41B2-8EEE-3B7D7603F50C" title="Use Debug mode to track down unexpected application behavior.">Utilizing Debug Mode</a></li>
+                  </ul>
+               </div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-application-performance.html#GUID-1684F55B-7782-4B1F-96AB-0D41BCBDB1BA" title="Learn about how to improve application performance.">Managing Application Performance</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-9BE276ED-FF4C-40C6-B03F-2EB8258DE3BE" name="GUID-9BE276ED-FF4C-40C6-B03F-2EB8258DE3BE"></a><h3 id="HTMDB-GUID-9BE276ED-FF4C-40C6-B03F-2EB8258DE3BE" class="sect3"><span class="enumeration_section">23.3.1 </span>Accessing the Monitor Activity Page in
+        Workspace Administration
+               </h3>
+               <div>
+                  <p>Use the Monitor Activity page in Workspace Administration to view developer
+        activity and application change information.</p>
+                  <div class="section">
+                     <p>To access the Monitor Activity page in Workspace Administration:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Workspace Administration page:</span><ol type="a">
+                           <li><span>Sign in to <span>APEX</span>.</span></li>
+                           <li><span>At the top of the Workspace home page, click the <span class="uicontrol bold">Administration</span> menu and select <span class="uicontrol bold">Administration</span>.</span></li>
+                        </ol>
+                        <div>
+                           <p>The Workspace Administration home page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Monitor Activity</span>.</span><div>
+                           <p>The Monitor Activity page appears and is divided into the following sections:</p>
+                           
+                           <ul style="list-style-type: disc;" id="GUID-9BE276ED-FF4C-40C6-B03F-2EB8258DE3BE__UL_Q3V_5FV_V4B">
+                              <li>
+                                 
+                                 <p><span class="bold">Page Views</span> - Contains reports of page views
+                                including: By View, By User, By User and Hour, By Application, By
+                                Application and Page, By Day, and By Hour.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="bold">Developer Activity</span> - Offers reports of developer
+                                activity including: By Developer, By Developer Bar Chart, By
+                                Developer by Hour, By Day, By Application, Application Changes
+                                (detailed), By Day (Monthly View), and Component Utilitzation
+                                Chart.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="bold">Sessions</span> - Lists active sessions with the current
+                                workspace such as Active Sessions and Bar Chart of Active Session by
+                                Hour.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="bold">Page View Analysis</span> - Contains reports analyzing
+                                page views, such as Most Viewed Pages over All Applications, Monthly
+                                Calendar of Page Views by Day, Line Chart of Usage by Day, and By
+                                Weighted Page Performance.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="bold">Environment</span> - Contains reports of environments
+                                including By User Agent, By Browser, By External Click, and By
+                                Operating System.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="bold">Login Attempts</span> - Offers reports listing login
+                                attempts such as Login Attempts, Login Attempts by Authentication
+                                Result, and Developer Login Summary.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="bold">Application Errors</span> - Links to the Application
+                                Errors report.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="bold">Workspace Schema Reports and Other Reports</span> - Includes the following reports: Schema Tablespace Utilization, Database Privileges by Schema, Workspace Schemas, Report Tablespace Utilization, Web Service Activity Log, and Archive of Purged Task Files.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="bold">Archived Activity Report </span> - Includes the
+                                following reports: By Application by Month, By Application by Day,
+                                Application Hash by Day, By Application, and Chart of Workspace
+                                Activity by Day.
+                                 </p>
+                                 
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Select a report to review.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="utilizing-logs-and-reports.html#GUID-E1615B96-4406-4748-B8D3-E0912A0962C7" title="Review application logs and reports to help identify problematic pages.">Utilizing Logs and Reports</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29385"></a><div class="props_rev_3"><a id="GUID-EFAF8D00-5F0E-4EDA-937D-6F52975BB420" name="GUID-EFAF8D00-5F0E-4EDA-937D-6F52975BB420"></a><h3 id="HTMDB-GUID-EFAF8D00-5F0E-4EDA-937D-6F52975BB420" class="sect3"><span class="enumeration_section">23.3.2 </span>About Managing Log Files
+               </h3>
+               <div>
+                  <p>An Instance administrator can delete log files and manage the interval at
+        which log file information is retained.</p>
+                  <p>If you wish to keep the activity log files indefinitely, you must create a batch job to copy records from the activity log table to another table.</p>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-EFAF8D00-5F0E-4EDA-937D-6F52975BB420__GUID-ABE73A0B-AC64-41A9-97E1-0D3B3075497B">
+                     <p class="notep1">See Also:</p><a href="../aeadm/configuring-and-deleting-logs-and-log-entries.html#AEADM-GUID-70E4334C-2368-4797-BE73-5DEBBEC479D2" target="_blank">Configuring and Deleting Logs and Log Entries</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="utilizing-logs-and-reports.html#GUID-E1615B96-4406-4748-B8D3-E0912A0962C7" title="Review application logs and reports to help identify problematic pages.">Utilizing Logs and Reports</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29386"></a><div class="props_rev_3"><a id="GUID-080C4EEE-EB04-4AE9-A0AA-D16A45D18D82" name="GUID-080C4EEE-EB04-4AE9-A0AA-D16A45D18D82"></a><h3 id="HTMDB-GUID-080C4EEE-EB04-4AE9-A0AA-D16A45D18D82" class="sect3"><span class="enumeration_section">23.3.3 </span>Viewing the Dashboard Report
+               </h3>
+               <div>
+                  <p>The  Dashboard report displays metrics about applications in your
+                workspace.</p>
+                  <div class="section">
+                     <p>To view the Dashboard:</p>
+                  </div>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Workspace home page.</span></li>
+                     <li class="stepexpand"><span>Click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Dashboard</span>.</span><div>
+                           
+                           <p>The  Dashboard appears and features the
+                                                following regions:</p>
+                           
+                           <ul style="list-style-type: disc;">
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Applications</span> - Count of
+                                                  applications in the current workspace.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Pages</span> -
+                                                  Count of pages in the current workspace.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Developer Activity (Last 2 Days)</span></p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Page
+                                                  Events</span></p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Page Count by
+                                                  Application</span></p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Most Active
+                                                  Pages</span></p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Native Region Component
+                                                  Utilization</span></p>
+                                 
+                              </li>
+                           </ul>
+                           
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="utilizing-logs-and-reports.html#GUID-E1615B96-4406-4748-B8D3-E0912A0962C7" title="Review application logs and reports to help identify problematic pages.">Utilizing Logs and Reports</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29388"></a><div class="props_rev_3"><a id="GUID-66427E0C-5B4D-4B27-89BE-3AD25F2153BA" name="GUID-66427E0C-5B4D-4B27-89BE-3AD25F2153BA"></a><h3 id="HTMDB-GUID-66427E0C-5B4D-4B27-89BE-3AD25F2153BA" class="sect3"><span class="enumeration_section">23.3.4 </span>Instance Activity Reports
+               </h3>
+               <div>
+                  <p>Instance administrators are superusers that manage an entire hosted instance using the <span>APEX</span> Administration Services application.
+                  </p>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-66427E0C-5B4D-4B27-89BE-3AD25F2153BA__GUID-67DC3FDB-812E-4207-8D8D-60F891DD24D7">
+                     <p class="notep1">See Also:</p>
+                     
+                     <ul style="list-style-type: disc;" id="GUID-66427E0C-5B4D-4B27-89BE-3AD25F2153BA__UL_BWF_KJV_V4B">
+                        <li><a href="../aeadm/monitoring-activity-across-an-instance.html#AEADM-GUID-57123911-C427-4C9E-96A7-A91D54A2B9C6" target="_blank">Monitoring Activity Across a Development Instance</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                        <li><a href="administrator-roles.html#GUID-B5F12A10-5684-4207-BC19-0B5007B4827B" title="Oracle APEX includes two different types of administrators: Workspace administrators and Instance administrators.">About Oracle APEX Administrator Roles</a></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="utilizing-logs-and-reports.html#GUID-E1615B96-4406-4748-B8D3-E0912A0962C7" title="Review application logs and reports to help identify problematic pages.">Utilizing Logs and Reports</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

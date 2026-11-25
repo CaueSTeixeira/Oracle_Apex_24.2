@@ -1,0 +1,212 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="LDAP Directory">
+      <meta name="abstract" content="Authenticate a user and password with an authentication request to a LDAP server.">
+      <meta name="description" content="Authenticate a user and password with an authentication request to a LDAP server.">
+      <meta name="DC.subject" content="authentication schemes, LDAP Directory, LDAP Directory Verification, about, LDAP Directory Verification, setting up">
+      <meta name="keywords" content="authentication schemes, LDAP Directory, LDAP Directory Verification, about, LDAP Directory Verification, setting up">
+      <meta name="DC.Relation" scheme="URI" content="preconfigured-authentication-schemes.html#GUID-CD382D4A-AC00-4185-B37F-9A5BC9417A7B">
+      <meta name="DC.Relation" scheme="URI" content="ldap-directory.html#GUID-AFE8D459-0D0F-41C2-97B0-379FFC2E409D">
+      <meta name="DC.Relation" scheme="URI" content="ldap-directory.html#GUID-10CE9416-DC04-449A-A734-72C7E069264D">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-7EA9D101-971E-4FA4-8C4B-ED25554CABC7">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Authenticate a user and password with an authentication request to a LDAP server.">
+      <meta name="description" content="Authenticate a user and password with an authentication request to a LDAP server.">
+      <title>LDAP Directory</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Authenticate a user and password with an authentication request to a LDAP server.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="http.header-variable.html" title="Previous" type="text/html">
+      <link rel="next" href="no-authentication.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"LDAP Directory","description":"Authenticate a user and password with an authentication request to a LDAP server.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="http.header-variable.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="no-authentication.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-7EA9D101-971E-4FA4-8C4B-ED25554CABC7" name="GUID-7EA9D101-971E-4FA4-8C4B-ED25554CABC7"></a><a id="HTMDB25955"></a>
+         
+         <h2 id="HTMDB-GUID-7EA9D101-971E-4FA4-8C4B-ED25554CABC7" class="sect2"><span class="enumeration_section">21.4.2.5 </span>LDAP Directory
+         </h2>
+         <div class="ind">
+            <p>Authenticate a user and password with an authentication request to a LDAP
+        server.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="ldap-directory.html#GUID-AFE8D459-0D0F-41C2-97B0-379FFC2E409D">About LDAP Directory Verification</a><br>Learn about LDAP Directory Verification.
+                  </li>
+                  <li class="ulchildlink"><a href="ldap-directory.html#GUID-10CE9416-DC04-449A-A734-72C7E069264D">Setting Up LDAP Directory Verification</a><br>Learn how to set up LDAP Directory Verification.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="preconfigured-authentication-schemes.html#GUID-CD382D4A-AC00-4185-B37F-9A5BC9417A7B" title="Learn about the preconfigured authentication schemes.">Understanding Preconfigured Authentication Schemes</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB29419"></a><div class="props_rev_3"><a id="GUID-AFE8D459-0D0F-41C2-97B0-379FFC2E409D" name="GUID-AFE8D459-0D0F-41C2-97B0-379FFC2E409D"></a><h3 id="HTMDB-GUID-AFE8D459-0D0F-41C2-97B0-379FFC2E409D" class="sect3"><span class="enumeration_section">21.4.2.5.1 </span>About LDAP Directory Verification
+               </h3>
+               <div>
+                  <p>Learn about LDAP Directory Verification.</p>
+                  <p>You can configure any authentication scheme that uses a login page to use Lightweight Directory Access Protocol (LDAP) to verify the user name and password submitted on the login page. </p>
+                  <p><span>App Builder</span> includes wizards and edit pages that explain how to configure this option. These wizards assume that an LDAP directory accessible to your application for this purpose already exists and that it can respond to a <code class="codeph">SIMPLE_BIND_S</code> call for credentials verification. When you create an LDAP Credentials authentication scheme, the wizard requests and saves the LDAP host name, LDAP port, DN string, and determines whether to use SSL, exact DN, and optionally a search filter if not using exact DN. An optional preprocessing function can be specified to adjust formatting of the user name passed to the API.
+                  </p>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="ldap-directory.html#GUID-7EA9D101-971E-4FA4-8C4B-ED25554CABC7" title="Authenticate a user and password with an authentication request to a LDAP server.">LDAP Directory</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB25956"></a><div class="props_rev_3"><a id="GUID-10CE9416-DC04-449A-A734-72C7E069264D" name="GUID-10CE9416-DC04-449A-A734-72C7E069264D"></a><h3 id="HTMDB-GUID-10CE9416-DC04-449A-A734-72C7E069264D" class="sect3"><span class="enumeration_section">21.4.2.5.2 </span>Setting Up LDAP Directory Verification
+               </h3>
+               <div>
+                  <p>Learn how to set up LDAP Directory Verification.</p>
+                  <p>To set up LDAP Directory:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Select an application. </span></li>
+                     <li class="stepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                           <p>The Shared Components page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Under Security, select <span class="uicontrol bold">Authentication Schemes</span>.</span></li>
+                     <li class="stepexpand"><span>On the Authentication Schemes page, click <span class="uicontrol bold">Create</span>.</span></li>
+                     <li class="stepexpand"><span>Select <span class="uicontrol bold">Based on a pre-configured scheme from the gallery</span> and click <span class="uicontrol bold">Next</span>.</span></li>
+                     <li class="stepexpand"><span>Under Name: </span><ol type="a">
+                           <li><span>Name - Enter the name used to reference the authentication scheme by other application developers.</span></li>
+                           <li><span>Scheme Type - Select <span class="uicontrol bold">LDAP Directory</span>.</span></li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under Settings:</span><ol type="a">
+                           <li class="substepexpand"><span>Host - Enter the hostname of your LDAP directory server.</span></li>
+                           <li class="substepexpand"><span>Port - Enter the port number of your LDAP directory host. The default is 389.</span></li>
+                           <li class="substepexpand"><span>Use SSL - Choose whether to use SSL to bind to the LDAP directory. If SSL with Authentication is chosen, a wallet must be configured for the <span>Oracle APEX</span> instance.</span></li>
+                           <li class="substepexpand"><span>Distinguished Name (DN) String - Enter the pattern used to construct the fully qualified distinguished name (DN) string to <code class="codeph">DBMS_LDAP.SIMPLE_BIND_S</code> if using exact DN or the search base if using non-exact DN. Use <code class="codeph">%LDAP_USER%</code> as a placeholder for the username. For example:</span><div>
+                                 <p><span class="uicontrol bold">Exact DN:</span></p><pre class="oac_no_warn" dir="ltr">cn=%LDAP_USER%,l=amer,dc=yourdomain,dc=com
+</pre><p><span class="uicontrol bold">Non-Exact DN (Search Base):</span></p><pre class="oac_no_warn" dir="ltr">Non-Exact DN (Search Base)
+</pre></div>
+                           </li>
+                           <li class="substepexpand"><span>Use Distinguished Name (DN) - Choose whether the LDAP Distinguished Name (DN) String is exact or non-exact. If non-exact, LDAP Distinguished Name (DN) is the search base and you must supply a Search Filter.</span></li>
+                           <li class="substepexpand"><span>LDAP Username Edit Function - You may provide additional code to be executed to transform the username into a format perfectly suited to the LDAP directory entry or LDAP username. The bind variable <code class="codeph">:USERNAME</code> contains the name the end user specified. For example, the following code calls a function which replaces all periods (<code class="codeph">.</code>) with underscores (_) in the DN string:</span><div><pre class="oac_no_warn" dir="ltr">return apex_custom_auth.ldap_dnprep(p_username =&gt; :USERNAME);
+</pre></div>
+                           </li>
+                           <li class="substepexpand"><span>Username Escaping - Choose how <span>Oracle APEX</span> escapes special characters in <code class="codeph">%LDAP_USER%</code>. The correct value for this attribute depends on the used LDAP server and whether a LDAP Username Edit Function already escapes special characters.</span></li>
+                        </ol>
+                        <div>
+                           <p>To learn more about a specific field, see field-level Help.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Create Authentication Scheme</span>.</span><div>
+                           <div class="infoboxnote" id="GUID-10CE9416-DC04-449A-A734-72C7E069264D__GUID-921FE5C1-4B12-4483-AD90-A0846C65A7DA">
+                              <p class="notep1">Note:</p>
+                              <p>If you choose SSL with Authentication as the SSL mode, a wallet must be set up using the <span>Oracle APEX</span> instance settings. Additionally, the root certification of the LDAP server must be imported into that wallet as a trusted certificate. 
+                              </p>
+                           </div>
+                        </div>
+                     </li>
+                  </ol>
+                  <div class="section"></div>
+               </div>
+               <div>
+                  <div class="infoboxnotealso" id="GUID-10CE9416-DC04-449A-A734-72C7E069264D__GUID-74DD7C77-0560-439D-A694-6456FBAF8CF1">
+                     <p class="notep1">See Also:</p>
+                     <ul style="list-style-type: disc;">
+                        <li><a href="../aeadm/configuring-authentication-schemes-for-instance.html#AEADM-GUID-A1EFFB66-8D37-437C-9183-A230213CBDCC" target="_blank">Configuring Authentication Schemes for an Instance</a></li>
+                        <li><a href="../aeadm/configuring-wallet-information.html#AEADM-GUID-BBE43F61-DA0B-4517-AC5E-D06C4C69D526" target="_blank">Configuring Wallet Information</a> in <span><cite>Oracle APEX
+                                        Administration Guide</cite></span></li>
+                        <li><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/apex/24.2/htmdb&id=DBIMI-GUID-D0AA8373-B0AC-4DD8-9FA9-403E345E5A71" target="_blank">Using Oracle Wallet
+                                                  Manager</a> in <span><cite>Oracle Database Enterprise
+                                        User Security Administrator's Guide</cite></span></li>
+                     </ul>
+                  </div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="ldap-directory.html#GUID-7EA9D101-971E-4FA4-8C4B-ED25554CABC7" title="Authenticate a user and password with an authentication request to a LDAP server.">LDAP Directory</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

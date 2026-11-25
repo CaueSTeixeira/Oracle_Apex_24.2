@@ -1,0 +1,572 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Calendar Attributes">
+      <meta name="abstract" content="Once you create a calendar, you can alter the display by editing attributes in the Property Editor.">
+      <meta name="description" content="Once you create a calendar, you can alter the display by editing attributes in the Property Editor.">
+      <meta name="DC.subject" content="calendar, editing attributes, calendar Attributes, accessing, accessing attributes, including add and edit functions, add initialization JavaScript code, enabling drag and drop">
+      <meta name="keywords" content="calendar, editing attributes, calendar Attributes, accessing, accessing attributes, including add and edit functions, add initialization JavaScript code, enabling drag and drop">
+      <meta name="DC.Relation" scheme="URI" content="creating-calendars.html#GUID-28A524DC-1CE0-4FCA-A9C6-1D3C3E3BDDA2">
+      <meta name="DC.Relation" scheme="URI" content="managing-calendar-attributes.html#GUID-8FB88A3C-49C2-46F6-A82C-F23D97BFC3DD">
+      <meta name="DC.Relation" scheme="URI" content="managing-calendar-attributes.html#GUID-B0CC5DE5-40EF-419D-8472-C7B22E998696">
+      <meta name="DC.Relation" scheme="URI" content="managing-calendar-attributes.html#GUID-69610A8B-7603-49FE-8EEC-1425430137A6">
+      <meta name="DC.Relation" scheme="URI" content="managing-calendar-attributes.html#GUID-F3FE968C-E2BD-4320-8F35-5E5A55E50080">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-3D818872-EAA7-41FA-9481-57C42C6171A3">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Once you create a calendar, you can alter the display by editing attributes in the Property Editor.">
+      <meta name="description" content="Once you create a calendar, you can alter the display by editing attributes in the Property Editor.">
+      <title>Managing Calendar Attributes</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Once you create a calendar, you can alter the display by editing attributes in the Property Editor.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="creating-calendar-in-page-designer.html" title="Previous" type="text/html">
+      <link rel="next" href="about-dynamic-action-support-for-calendar.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Managing Calendar Attributes","description":"Once you create a calendar, you can alter the display by editing attributes in the Property Editor.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="creating-calendar-in-page-designer.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="about-dynamic-action-support-for-calendar.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-3D818872-EAA7-41FA-9481-57C42C6171A3" name="GUID-3D818872-EAA7-41FA-9481-57C42C6171A3"></a><a id="HTMDB29761"></a>
+         
+         <h2 id="HTMDB-GUID-3D818872-EAA7-41FA-9481-57C42C6171A3" class="sect2"><span class="enumeration_section">10.2.6 </span>Managing Calendar Attributes
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Once you create a calendar, you can alter the display by editing attributes
+                in the Property Editor.</p>
+               <p>Each calendar has two sets of editable attributes: <strong class="term">Region
+                                attributes</strong> and <strong class="term">calendar
+                        Attributes</strong>.
+               </p>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="managing-calendar-attributes.html#GUID-8FB88A3C-49C2-46F6-A82C-F23D97BFC3DD">Editing Calendar Attributes in the Property Editor</a><br>Access calendar attributes in the Property Editor.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-calendar-attributes.html#GUID-B0CC5DE5-40EF-419D-8472-C7B22E998696">Editing an Existing Calendar to Include Add and Edit Functionality</a><br>Edit and existing calendar to include add and edit functionality.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-calendar-attributes.html#GUID-69610A8B-7603-49FE-8EEC-1425430137A6">Adding Calendar Initialization JavaScript Code</a><br>Add a JavaScript function to override the standard jQuery FullCalendar initialization         attributes by editing the Initialization JavaScript Code attribute. 
+                  </li>
+                  <li class="ulchildlink"><a href="managing-calendar-attributes.html#GUID-F3FE968C-E2BD-4320-8F35-5E5A55E50080">Enabling the Dragging and Dropping of Data in an Existing Calendar</a><br>The Calendar Region supports moving or changing calendar events with drag and drop. 
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="creating-calendars.html#GUID-28A524DC-1CE0-4FCA-A9C6-1D3C3E3BDDA2" title="App Builder includes support for creating a calendar with monthly, weekly, daily, and list views. Once you specify the table on which the calendar is based, you can create drill-down links to information stored in specific columns and enable drag and drop capability.">Creating Calendars</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB29762"></a><div class="props_rev_3"><a id="GUID-8FB88A3C-49C2-46F6-A82C-F23D97BFC3DD" name="GUID-8FB88A3C-49C2-46F6-A82C-F23D97BFC3DD"></a><h3 id="HTMDB-GUID-8FB88A3C-49C2-46F6-A82C-F23D97BFC3DD" class="sect3"><span class="enumeration_section">10.2.6.1 </span>Editing Calendar Attributes in the Property Editor
+               </h3>
+               <div>
+                  <p>Access calendar attributes in the Property Editor.</p>
+                  <div class="section">
+                     <strong class="term">Region attributes</strong> define the area of the page which functions as a
+            container for the calendar. <strong class="term">Calendar Attributes</strong> specify the template, date
+            columns, and general calendar formatting.
+                  </div>
+                  <p>To edit calendar Attributes:</p>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears. </div>
+                     </li>
+                     <li class="stepexpand"><span>In the Rendering tab, locate and select the calendar.</span><div>The Property Editor displays two tabs: <span class="uicontrol bold">Region</span> and
+                        <span class="uicontrol bold">Attributes</span>.
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>In the Property Editor, select the appropriate tab:</span><ul id="GUID-8FB88A3C-49C2-46F6-A82C-F23D97BFC3DD__CHOICES_TS5_RVT_4MB">
+                           <li><span class="uicontrol bold">Region</span> - <strong class="term">Region attributes</strong> define
+                        the area of the page which functions as a container for the
+                        calendar.
+                           </li>
+                           <li><span class="uicontrol bold">Attributes</span>  - <strong class="term">Calendar Attributes</strong>
+                        specify the template, date columns, and general calendar
+                        formatting.
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="stepexpand"><span>Edit the calendar attributes.</span><div>
+                           
+                           <p>To view help for an attribute, select the attribute in the Property Editor
+                        and click the Help tab in the central pane.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>To save your changes click <span class="uicontrol bold">Save</span>. To save and run the page, click <span class="uicontrol bold">Save and Run Page</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-calendar-attributes.html#GUID-3D818872-EAA7-41FA-9481-57C42C6171A3" title="Once you create a calendar, you can alter the display by editing attributes in the Property Editor.">Managing Calendar Attributes</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29768"></a><div class="props_rev_3"><a id="GUID-B0CC5DE5-40EF-419D-8472-C7B22E998696" name="GUID-B0CC5DE5-40EF-419D-8472-C7B22E998696"></a><h3 id="HTMDB-GUID-B0CC5DE5-40EF-419D-8472-C7B22E998696" class="sect3"><span class="enumeration_section">10.2.6.2 </span>Editing an Existing Calendar to Include Add and Edit Functionality
+               </h3>
+               <div>
+                  <p>Edit and existing calendar to include add and edit functionality.</p>
+                  <div class="section">
+                     <div class="infobox-tip" id="GUID-B0CC5DE5-40EF-419D-8472-C7B22E998696__GUID-46CE0CA7-96D5-46A2-B8FF-3FAEEC21B38A">
+                        <p class="notep1">Tip:</p>
+                        <p>When defining calendar create and edit links for Desktop applications, Oracle recommends defining two separate pages. To create an <span class="uicontrol bold">Edit Link</span>, select one of the table or SQL query columns as the Primary Key Column in the Calendar attributes. 
+                        </p>
+                     </div>
+                  </div>
+                  <p>To edit an existing calendar to include add and edit
+                functionality:</p>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears. </div>
+                     </li>
+                     <li class="stepexpand"><span>In the Rendering tab, locate and select the calendar.</span></li>
+                     <li class="stepexpand"><span>In the Property Editor, click the <span class="uicontrol bold">Attributes</span> tab. </span><div>The Property Editor displays the calendar Attributes.</div>
+                     </li>
+                     <li class="stepexpand"><span>Edit <span class="uicontrol bold">Settings</span>, <span class="uicontrol bold">Create Link</span> to
+                    specify a target page to call when the user clicks an empty cell or an existing
+                    calendar entry.</span><div>
+                           
+                           <ol type="a">
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Settings</span>, <span class="uicontrol bold">Create
+                                    Link</span> - Click <span class="uicontrol bold">No Link
+                                Defined</span>.
+                                 </p>
+                                 
+                                 <p>The Link Builder dialog appears.</p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Type</span> - Select the type of link
+                                target. The UI changes depending upon the Type you select.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Application</span> -  Only displays if
+                                    <span class="uicontrol bold">Type</span> is <span class="uicontrol bold">Page in a different
+                                    application</span>. Enter the application ID.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Page</span> - Specify the target page
+                                number.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Set Items</span> - Configure the values
+                                to be passed from the calendar to the target page. The
+                                    <span class="uicontrol bold">Create Link</span> is called after a date or
+                                date range has been selected in the calendar. Therefore, the
+                                selected start and end dates must be passed to the Create Page.
+                                 </p>
+                                 
+                                 <ul style="list-style-type: disc;">
+                                    <li>
+                                       
+                                       <p>To pass the selected date or the start date of a
+                                        selected date range:</p>
+                                       
+                                       <ul style="list-style-type: disc;">
+                                          <li>
+                                             
+                                             <p><span class="uicontrol bold">Name</span> - Specify
+                                                the name of the target page item containing the
+                                                start date of the event. If a form, this should be a
+                                                date picker element.
+                                             </p>
+                                             
+                                          </li>
+                                          <li>
+                                             
+                                             <p><span class="uicontrol bold">Value</span> -
+                                                  <code class="codeph">&amp;APEX$NEW_START_DATE.</code></p>
+                                             
+                                          </li>
+                                       </ul>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>When a date range has been selected, pass the
+                                        end date as follows:</p>
+                                       
+                                       <ul style="list-style-type: disc;">
+                                          <li>
+                                             
+                                             <p><span class="uicontrol bold">Name</span> - Specify the
+                                                name of the target page item containing the end date
+                                                of the event. For a form, this should be a date
+                                                picker element.
+                                             </p>
+                                             
+                                          </li>
+                                          <li>
+                                             
+                                             <p><span class="uicontrol bold">Value</span> -
+                                                  <code class="codeph">&amp;APEX$NEW_END_DATE.</code></p>
+                                             
+                                             <p>You can pass additional values in the
+                                                same way as any other link to an application
+                                                page.</p>
+                                             
+                                          </li>
+                                          <li>
+                                             
+                                             <p>Click <span class="uicontrol bold">OK</span>.
+                                             </p>
+                                             
+                                          </li>
+                                       </ul>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </li>
+                           </ol>
+                           
+                           <div class="infobox-tip" id="GUID-B0CC5DE5-40EF-419D-8472-C7B22E998696__GUID-958279AA-743E-48EE-817D-9E73CD8D7F7B">
+                              <p class="notep1">Tip:</p>
+                              
+                              <p>To learn more about an attribute, select the attribute in the
+                            Property Editor and click the <span class="uicontrol bold">Help</span> tab in the
+                            center pane.
+                              </p>
+                              
+                           </div>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Edit <span class="uicontrol bold">Settings</span>, <span class="uicontrol bold">View/Edit Link</span> to
+                    define a target page to be called when the user clicks an existing entry.</span><div>
+                           
+                           <div class="infobox-tip" id="GUID-B0CC5DE5-40EF-419D-8472-C7B22E998696__GUID-CEB64155-9CDA-4446-A155-A84D6A78C1B5">
+                              <p class="notep1">Tip:</p>
+                              
+                              <p>To create an Edit Link, you must pass a primary key value to
+                            the target page in order for the form to look up the table row.</p>
+                              
+                           </div>
+                           
+                           <ol type="a">
+                              <li>
+                                 
+                                 <p>Settings, Edit Link - Click <span class="uicontrol bold">No Link
+                                    Defined</span>.
+                                 </p>
+                                 
+                                 <p>The Link Builder dialog appears.</p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Type</span> - Select the type of link
+                                target. The UI changes depending upon the Type you select.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Application</span> -  Only displays if
+                                    <span class="uicontrol bold">Type</span> is <span class="uicontrol bold">Page in a different
+                                    application</span>. Enter the application ID.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>Page - Specify the target page number.</p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>Set Items - Configure the values to be passed from the
+                                calendar to the target page. The Create Link is called after a date
+                                or date range has been selected in the calendar. Therefore, the
+                                selected start and end dates must be passed to the Create Page.</p>
+                                 
+                                 <ul style="list-style-type: disc;">
+                                    <li>
+                                       
+                                       <p>Name - Specify the name of the target page item
+                                        containing the primary key value; typically a hidden item,
+                                        for example:</p>
+                                       
+                                       <p><code class="codeph">PX_ID</code>.
+                                       </p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Value - Specify the table or SQL query column
+                                        containing the primary key value, for example:</p>
+                                       
+                                       <p><code class="codeph">&amp;ID.</code></p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Click <span class="uicontrol bold">OK</span>.
+                                       </p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </li>
+                           </ol>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Save</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-calendar-attributes.html#GUID-3D818872-EAA7-41FA-9481-57C42C6171A3" title="Once you create a calendar, you can alter the display by editing attributes in the Property Editor.">Managing Calendar Attributes</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-69610A8B-7603-49FE-8EEC-1425430137A6" name="GUID-69610A8B-7603-49FE-8EEC-1425430137A6"></a><h3 id="HTMDB-GUID-69610A8B-7603-49FE-8EEC-1425430137A6" class="sect3"><span class="enumeration_section">10.2.6.3 </span>Adding Calendar Initialization JavaScript Code
+               </h3>
+               <div>
+                  <p>Add a JavaScript function to override the standard jQuery FullCalendar initialization
+        attributes by editing the Initialization JavaScript Code attribute. </p>
+                  <div class="section">
+                     <p>Note that the function must return a JavaScript Object containing the calendar
+                initialization attributes as parameters.</p>
+                  </div>
+                  <p>To add initialization JavaScript code:</p>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears. </div>
+                     </li>
+                     <li class="stepexpand"><span>In the Rendering tab, locate and select the calendar.</span><div>The Property Editor displays Region attributes.</div>
+                     </li>
+                     <li class="stepexpand"><span>In the Property Editor, click the <span class="uicontrol bold">Attributes</span> tab. </span><div>The Property Editor displays the calendar Attributes.</div>
+                     </li>
+                     <li class="stepexpand"><span>Find <span class="uicontrol bold">Advanced</span>.</span><div>
+                           <div class="infobox-tip" id="GUID-69610A8B-7603-49FE-8EEC-1425430137A6__GUID-72F10B9F-0D1B-44AF-9225-7D43C18B3853">
+                              <p class="notep1">Tip:</p>
+                              <p>To search for a group or an attribute, enter a keyword in the Filter Properties field. The groups and attributes containing the term appear.</p>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>In <span class="uicontrol bold">Advanced</span>, <span class="uicontrol bold">Initialization&nbsp;JavaScript
+                        Code</span>, enter a JavaScript function to override the standard
+                    jQuery FullCalendar initialization attributes.</span><div>
+                           
+                           <p>Example: Calendar based FullCalendar v5:</p>
+                           <pre class="pre codeblock"><code>function ( pOptions) {
+    pOptions.slotMinTime            = "07:00:00";                                               // hide slots before minTime
+    pOptions.slotMaxTime            = "21:00:00";                                               // hide slots after maxTime
+    pOptions.dayHeaderFormat        = { weekday: 'short', month: 'numeric', day: 'numeric' };   // week view column headings
+    pOptions.slotDuration           = "00:15:00";                                               // custom slot duration
+    pOptions.weekNumbers            = true;                                                     // show week numbers
+    pOptions.weekText               = "CW";                                                     // heading for week numbers
+    pOptions.weekNumberCalculation  = "ISO";                                                    // use "ISO" week numbers
+    pOptions.displayEventTime       = true;                                                     // show event time ...
+    pOptions.displayEventEnd        = false;                                                    // ... but not the end time
+    pOptions.disableKeyboardSupport = true;                                                     // disable builtin keyboard navigation
+    pOptions.windowResize           = null;                                                     // suppress automatic switch to list view on small screens
+    return pOptions;
+}</code></pre>
+                           <p>Example:  Calendar based FullCalendar v3 (Deprecated):</p>
+                           <pre class="pre codeblock"><code>function ( pOptions) {
+    pOptions.titleFormat      = "[Conference Schedule]";                  // custom title
+    pOptions.minTime          = "07:00:00";                               // hide slots before minTime
+    pOptions.maxTime          = "18:00:00";                               // hide slots after maxTime
+    pOptions.columnFormat     = {month: '', week: 'dddd', day: 'dddd'};   // week view column headings
+    pOptions.slotDuration     = "00:15:00";                               // custom slot duration
+    pOptions.weekNumbers      = true;                                     // show week numbers
+    pOptions.weekNumberTitle  = "CW";                                    
+    return pOptions;
+}</code></pre>
+                           <div class="infobox-tip" id="GUID-69610A8B-7603-49FE-8EEC-1425430137A6__GUID-E361AE6D-4A75-4AE5-A550-EB5F3C365548">
+                              <p class="notep1">Tip:</p>
+                              
+                              <p>Calendars based on FullCalendar v3 have been deprecated and will be
+                            desupported in a future release.</p>
+                              
+                           </div>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="bold">Save</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-calendar-attributes.html#GUID-3D818872-EAA7-41FA-9481-57C42C6171A3" title="Once you create a calendar, you can alter the display by editing attributes in the Property Editor.">Managing Calendar Attributes</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-F3FE968C-E2BD-4320-8F35-5E5A55E50080" name="GUID-F3FE968C-E2BD-4320-8F35-5E5A55E50080"></a><h3 id="HTMDB-GUID-F3FE968C-E2BD-4320-8F35-5E5A55E50080" class="sect3"><span class="enumeration_section">10.2.6.4 </span>Enabling the Dragging and Dropping of Data
+        in an Existing Calendar
+               </h3>
+               <div>
+                  <p>The Calendar Region supports moving or changing calendar events with drag and drop. </p>
+                  <p>To enable support for drag and drop for a calendar region:</p>
+                  <ol>
+                     <li class="stepexpand"><span>View the page in Page Designer:</span><ol type="a">
+                           <li><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                           <li><span>Select an application.</span></li>
+                           <li><span>Select a page.</span></li>
+                        </ol>
+                        <div>Page Designer appears. </div>
+                     </li>
+                     <li class="stepexpand"><span>In the Property Editor, click the <span class="uicontrol bold">Attributes</span> tab. </span><div>The Property Editor displays the calendar
+                    Attributes.</div>
+                     </li>
+                     <li class="stepexpand"><span>Find <span class="uicontrol bold">Settings</span> and edit the following attributes:</span><div>
+                           <ol type="a">
+                              <li>
+                                 <p><span class="uicontrol bold">Settings</span>, <span class="uicontrol bold">Primary Key Column</span> - Select a
+                                table or SQL Query column.
+                                 </p>
+                                 <p>The Drag and Drop field appears in the Property Editor, below Additional Calendar Views.</p>
+                              </li>
+                              <li>
+                                 <p><span class="uicontrol bold">Settings</span>, <span class="uicontrol bold">Drag and Drop</span> - Select
+                                    <span class="uicontrol bold">On</span>.
+                                 </p>
+                                 <p>Drag and Drop PL/SQL Code appears.</p>
+                              </li>
+                              <li>
+                                 <p><span class="uicontrol bold">Settings</span>, <span class="uicontrol bold">Drag and Drop PL/SQL Code</span> -
+                                Enter the PL/SQL code to execute when the end user finishes a drag
+                                and drop for an event.
+                                 </p>
+                                 <p>&nbsp;Within the PL/SQL code, you can reference the ID of the dragged event, the new start, and end end dates as:</p>
+                                 <p><code class="codeph">:APEX$PK_VALUE, :APEX$NEW_START_DATE amd :APEX$_NEW_END_DATE</code></p>
+                                 <p>For example, the following code changes the event row in the <code class="codeph">PROJECTS</code> table after the end user has dragged the event to a new date.
+                                 </p><pre class="pre codeblock"><code>begin
+ &nbsp;&nbsp;&nbsp;&nbsp;update projects
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set start_date = to_date(:APEX$NEW_START_DATE, 'YYYYMMDDHH24MISS'),
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end_date = to_date(:APEX$NEW_END_DATE, 'YYYYMMDDHH24MISS')
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where id = :APEX$PK_VALUE;
+ end;</code></pre><p>To learn more, click the <span class="uicontrol bold">Help</span> tab in the central pane.
+                                 </p>
+                              </li>
+                           </ol>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Click <span class="bold">Save</span>.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-calendar-attributes.html#GUID-3D818872-EAA7-41FA-9481-57C42C6171A3" title="Once you create a calendar, you can alter the display by editing attributes in the Property Editor.">Managing Calendar Attributes</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

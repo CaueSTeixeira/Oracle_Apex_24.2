@@ -1,0 +1,166 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="reference">
+      <meta name="DC.Title" content="GET_VALUE_AS_VARCHAR2 Function">
+      <meta name="DC.subject" content="GET_VALUE_AS_VARCHAR2 function, APEX_PLUGIN_UTIL">
+      <meta name="keywords" content="GET_VALUE_AS_VARCHAR2 function, APEX_PLUGIN_UTIL">
+      <meta name="DC.Relation" scheme="URI" content="APEX_PLUGIN_UTIL.html#GUID-E1FE05BA-E290-4446-82DC-5271B75FDD4C">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Sharon Kennedy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Anthony Rayner">
+      <meta name="DC.Creator" content="Marc Sewtz">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Ottmar Gobrecht">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Publisher" content="August2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-D5143DBC-7166-44AD-B0AB-D713405085D5">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>GET_VALUE_AS_VARCHAR2 Function</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="API Reference">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="API Reference">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-api-reference.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-08-25T14:56:35-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12909-04">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="GET_SEARCH_STRING-Function.html" title="Previous" type="text/html">
+      <link rel="next" href="GET_WEB_SOURCE_OPERATION-Function.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX API Reference">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEAPI">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"GET_VALUE_AS_VARCHAR2 Function","datePublished":"2025-08-25 CST","dateModified":"2025-08-25 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="GET_SEARCH_STRING-Function.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="GET_WEB_SOURCE_OPERATION-Function.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-D5143DBC-7166-44AD-B0AB-D713405085D5" name="GUID-D5143DBC-7166-44AD-B0AB-D713405085D5"></a>
+         
+         <h2 id="AEAPI-GUID-D5143DBC-7166-44AD-B0AB-D713405085D5" class="sect2"><span class="enumeration_section">45.32 </span>GET_VALUE_AS_VARCHAR2 Function
+         </h2>
+         <div class="ind">
+            <div>
+               <div class="section">
+                  <p>This function can be used if you use <code class="codeph">GET_DATA2</code> to read the column values along with their original data types. It will convert and return the passed in <code class="codeph">p_value</code> as <code class="codeph">VARCHAR2</code>.
+                  </p>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-D5143DBC-7166-44AD-B0AB-D713405085D5__GUID-FFB2BDF7-1536-4D05-B687-69AC5D5120BC">Syntax</p><pre class="pre codeblock"><code>APEX_PLUGIN_UTIL.GET_VALUE_AS_VARCHAR2 (
+    p_data_type     IN VARCHAR2,
+    p_value         IN T_VALUE,
+    p_format_mask   IN VARCHAR2 DEFAULT NULL )
+    RETURN VARCHAR2;</code></pre></div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-D5143DBC-7166-44AD-B0AB-D713405085D5__GUID-82C9C1EC-52FE-4A65-A2D5-53446D234EB8">Parameters</p>
+                  <div class="tblformal" id="GUID-D5143DBC-7166-44AD-B0AB-D713405085D5__GUID-2DCAB75E-FC67-493B-B1B4-155CCC629F59">
+                     <table cellpadding="4" cellspacing="0" class="Formal" title summary="Parameters for function." width="100%" frame="hsides" border="1" rules="rows">
+                        <thead>
+                           <tr align="left" valign="top">
+                              <th align="left" valign="bottom" id="d217951e78">Parameter</th>
+                              <th align="left" valign="bottom" id="d217951e80">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d217951e84" headers="d217951e78 "><code class="codeph">p_data_type</code></td>
+                              <td align="left" valign="top" headers="d217951e84 d217951e80 ">The data type of the value stored in <code class="codeph">p_value</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d217951e93" headers="d217951e78 "><code class="codeph">p_value</code></td>
+                              <td align="left" valign="top" headers="d217951e93 d217951e80 ">The value of type <code class="codeph">t_value</code> which contains the value to be converted and returned as <code class="codeph">VARCHAR2</code>.
+                              </td>
+                           </tr>
+                           <tr align="left" valign="top">
+                              <td align="left" valign="top" id="d217951e105" headers="d217951e78 "><code class="codeph">p_format_mask</code></td>
+                              <td align="left" valign="top" headers="d217951e105 d217951e80 ">The format mask used to convert the value into a <code class="codeph">VARCHAR2</code>.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-D5143DBC-7166-44AD-B0AB-D713405085D5__GUID-92150D18-5ED5-4999-8E40-275CB4EB4F5F">Example</p>
+                  <p>The following example emits all values stored in the data type aware <code class="codeph">l_column_value_list</code> array as <code class="codeph">VARCHAR2</code>.
+                  </p>
+               </div>
+               <div class="section"><pre class="pre codeblock"><code>declare
+  l_column_value_list apex_plugin_util.t_column_value_list2;
+begin
+&nbsp;&nbsp;&nbsp;&nbsp;-- Populate l_column_value_list by calling apex_plugin_util.get_data2
+&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;-- Emit returned data
+&nbsp;&nbsp;&nbsp;&nbsp;sys.htp.p( '&lt;table&gt;' );
+&nbsp;&nbsp;&nbsp;&nbsp;for l_row in 1 .. l_column_value_list( 1 ).value_list.count
+&nbsp;&nbsp;&nbsp;&nbsp;loop
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sys.htp.p( '&lt;tr&gt;' );
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for l_column in 1 .. l_column_value_list.count loop
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sys.htp.p (
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'&lt;td&gt;' ||
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apex_plugin_util.get_value_as_varchar2 (
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_data_type =&gt; l_column_value_list( l_column ).data_type,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_value =&gt; l_column_value_list( l_column ).value_list( l_row )
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;) ||
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'&lt;/td&gt;' );
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end loop;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sys.htp.p( '&lt;/tr&gt;' );
+&nbsp;&nbsp;&nbsp;&nbsp;end loop;
+&nbsp;&nbsp;&nbsp;&nbsp;sys.htp.p( '&lt;/table&gt;' );
+end;</code></pre></div>
+            </div>
+            <div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="APEX_PLUGIN_UTIL.html#GUID-E1FE05BA-E290-4446-82DC-5271B75FDD4C">APEX_PLUGIN_UTIL</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Configuring Security">
+      <meta name="abstract" content="Instance administrators can configure instance security, including service-level security, configuring support for Real Application Security, configuring session time out, preventing browser attacks by isolating workspaces, excluding domains from regions and Web services, configuring authentication controls, creating strong password policies, and managing authorized URLs.">
+      <meta name="description" content="Instance administrators can configure instance security, including service-level security, configuring support for Real Application Security, configuring session time out, preventing browser attacks by isolating workspaces, excluding domains from regions and Web services, configuring authentication controls, creating strong password policies, and managing authorized URLs.">
+      <meta name="DC.Relation" scheme="URI" content="oracle-apex-administration-services.html#GUID-3E40D63B-D9C4-42B9-87D7-88A015762392">
+      <meta name="DC.Relation" scheme="URI" content="configuring-service-level-security-settings.html#GUID-498FFCDE-9D65-40FD-923D-4707C927482C">
+      <meta name="DC.Relation" scheme="URI" content="configuring-http-attributes.html#GUID-DCC66FF6-200E-42D1-AFD1-EC0A058A0A2D">
+      <meta name="DC.Relation" scheme="URI" content="configuring-content-security-policy-csp.html#GUID-B82B66C4-84AF-40DF-ABF1-F0910F35E6E1">
+      <meta name="DC.Relation" scheme="URI" content="enabling-real-application-security.html#GUID-87495F74-7FC9-4076-AEFC-FE09DD75D212">
+      <meta name="DC.Relation" scheme="URI" content="configuiring-session-timeout.html#GUID-FCFC6DC3-FC8B-4053-BE69-033F7F51BFD0">
+      <meta name="DC.Relation" scheme="URI" content="isolating-workspaces-in-an-instance.html#GUID-B3BD09CF-D003-4837-A7D2-91A6E756D72E">
+      <meta name="DC.Relation" scheme="URI" content="defining-excluded-domains-for-regions-and-web-services.html#GUID-85DB8B2E-225E-4D37-B680-D5145E046AC1">
+      <meta name="DC.Relation" scheme="URI" content="configuring-authentication-controls-for-an-instance.html#GUID-E06E263E-F489-4F10-968B-9BA82F0D4894">
+      <meta name="DC.Relation" scheme="URI" content="creating-strong-password-policies.html#GUID-7379B6A1-F546-4DB3-9780-3CEB7F1D5E4C">
+      <meta name="DC.Relation" scheme="URI" content="managing-authorized-urls.html#GUID-2C9D2C8C-D045-480D-A027-5C8ABFD4D9BF">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="John Godfrey">
+      <meta name="DC.Creator" content="Daniel Hochleitner">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Vincent Morneau">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Jason Straub">
+      <meta name="DC.Creator" content="Vladislav Uvarov">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="February2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-5EC277A4-20BD-47CF-9448-46680C75593E">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Instance administrators can configure instance security, including service-level security, configuring support for Real Application Security, configuring session time out, preventing browser attacks by isolating workspaces, excluding domains from regions and Web services, configuring authentication controls, creating strong password policies, and managing authorized URLs.">
+      <meta name="description" content="Instance administrators can configure instance security, including service-level security, configuring support for Real Application Security, configuring session time out, preventing browser attacks by isolating workspaces, excluding domains from regions and Web services, configuring authentication controls, creating strong password policies, and managing authorized URLs.">
+      <title>Configuring Security</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="Administration Guide">
+      <meta property="og:description" content="Instance administrators can configure instance security, including service-level security, configuring support for Real Application Security, configuring session time out, preventing browser attacks by isolating workspaces, excluding domains from regions and Web services, configuring authentication controls, creating strong password policies, and managing authorized URLs.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="Administration Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-administration-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-02-02T16:27:20-08:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2026">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12912-08">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="configuring-features.html" title="Previous" type="text/html">
+      <link rel="next" href="configuring-service-level-security-settings.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX Administration Guide">
+    <meta name="dcterms.release" content="Release 24.2">
+    <meta name="dcterms.isVersionOf" content="AEADM">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Configuring Security","description":"Instance administrators can configure instance security, including service-level security, configuring support for Real Application Security, configuring session time out, preventing browser attacks by isolating workspaces, excluding domains from regions and Web services, configuring authentication controls, creating strong password policies, and managing authorized URLs.","datePublished":"2026-02-02 CST","dateModified":"2026-02-02 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="configuring-features.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="configuring-service-level-security-settings.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-5EC277A4-20BD-47CF-9448-46680C75593E" name="GUID-5EC277A4-20BD-47CF-9448-46680C75593E"></a><a id="AEADM200"></a><a id="4050:130"></a>
+         
+         <h2 id="AEADM-GUID-5EC277A4-20BD-47CF-9448-46680C75593E" class="sect2"><span class="enumeration_section">3.4 </span>Configuring Security
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Instance administrators can configure instance security, including
+                service-level security, configuring support for Real Application Security,
+                configuring session time out, preventing browser attacks by isolating workspaces,
+                excluding domains from regions and Web services, configuring authentication
+                controls, creating strong password policies, and managing authorized
+                        URLs.</p>
+               <div class="infoboxnote" id="GUID-5EC277A4-20BD-47CF-9448-46680C75593E__GUID-A36B92B0-C3D4-429D-9F15-6AF470960E6D">
+                  <p class="notep1">Note:</p>To ensure the security and performance
+                                of your development environment, some administration functionality
+                                is not available in Oracle APEX instances running in Oracle
+                                Cloud.
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="configuring-service-level-security-settings.html#GUID-498FFCDE-9D65-40FD-923D-4707C927482C">Configuring Service-level Security Settings</a><br>Instance administrators can configure service-level security in Manage Instance, Security, Security Settings, Security.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-http-attributes.html#GUID-DCC66FF6-200E-42D1-AFD1-EC0A058A0A2D">Configuring HTTP Protocol Attributes</a><br>Determine HTTPS requirements for an <span>Oracle APEX</span> instance and all related applications.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-content-security-policy-csp.html#GUID-B82B66C4-84AF-40DF-ABF1-F0910F35E6E1">Configuring Content Security Policy (CSP)</a><br>Learn about how Content Security Policy (CSP) can help prevent or minimize                 the risk of certain types of security threats.
+                  </li>
+                  <li class="ulchildlink"><a href="enabling-real-application-security.html#GUID-87495F74-7FC9-4076-AEFC-FE09DD75D212">Enabling Real Application Security</a><br>Enable Oracle Real Application Security.
+                  </li>
+                  <li class="ulchildlink"><a href="configuiring-session-timeout.html#GUID-FCFC6DC3-FC8B-4053-BE69-033F7F51BFD0">Configuring Session Timeout for an Instance</a><br>Use the Session Timeout attributes for an instance to reduce exposure at the         application-level for abandoned computers with an open web browser.
+                  </li>
+                  <li class="ulchildlink"><a href="isolating-workspaces-in-an-instance.html#GUID-B3BD09CF-D003-4837-A7D2-91A6E756D72E">Isolating All Workspaces in an Instance</a><br>Instance administrators can configure limits to isolate all workspaces and         prevent browser attacks. Workspace administrators can override these default values at the         workspace-level.
+                  </li>
+                  <li class="ulchildlink"><a href="defining-excluded-domains-for-regions-and-web-services.html#GUID-85DB8B2E-225E-4D37-B680-D5145E046AC1">Defining Excluded Domains for Regions and Web Services</a><br>Define a list of restricted domains for regions of type URL and Web services. If a Web service or region of type URL contains an excluded domain, an error displays informing the user that it is restricted.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-authentication-controls-for-an-instance.html#GUID-E06E263E-F489-4F10-968B-9BA82F0D4894">Configuring Authentication Controls for an Instance</a><br>Administrators can configure authentication controls for an entire         instance or for each individual workspace.
+                  </li>
+                  <li class="ulchildlink"><a href="creating-strong-password-policies.html#GUID-7379B6A1-F546-4DB3-9780-3CEB7F1D5E4C">Creating Strong Password Policies</a><br>Instance administrators can create strong password policies for an <span>Oracle APEX</span> instance.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-authorized-urls.html#GUID-2C9D2C8C-D045-480D-A027-5C8ABFD4D9BF">Managing Authorized URLs</a><br>Create and manage a list of authorized URLs.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="oracle-apex-administration-services.html#GUID-3E40D63B-D9C4-42B9-87D7-88A015762392" title="Instance administrators manage an entire APEX hosted instance using the Oracle APEX Administration Services (Administration Services) application.">Oracle APEX Administration Services</a></p>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </article>
+   </body>
+</html>

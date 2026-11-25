@@ -1,0 +1,430 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Managing Static Application Files in the Database">
+      <meta name="abstract" content="Manage static application files stored locally in the database in Shared Components.">
+      <meta name="description" content="Manage static application files stored locally in the database in Shared Components.">
+      <meta name="DC.subject" content="static application files, managing in database, creating, viewing in database, viewing Static Application Files report, Static Application Files page, viewing, downloading, downloading in Zip file, Zip file, downloading static application files, deleting, static application files, deleting multiple, deleting all">
+      <meta name="keywords" content="static application files, managing in database, creating, viewing in database, viewing Static Application Files report, Static Application Files page, viewing, downloading, downloading in Zip file, Zip file, downloading static application files, deleting, static application files, deleting multiple, deleting all">
+      <meta name="DC.Relation" scheme="URI" content="managing-static-application-files.html#GUID-A580AAF3-D89A-440F-B75D-5A68DCB6BBF5">
+      <meta name="DC.Relation" scheme="URI" content="managing-static-application-files-in-the-database.html#GUID-DBAAE42E-1890-4D09-85CE-F74061D33771">
+      <meta name="DC.Relation" scheme="URI" content="managing-static-application-files-in-the-database.html#GUID-D6B8597E-CAFE-4A28-ACAA-2632B5354BE6">
+      <meta name="DC.Relation" scheme="URI" content="managing-static-application-files-in-the-database.html#GUID-E988DF5F-8E54-4E48-90E8-873F20435EF6">
+      <meta name="DC.Relation" scheme="URI" content="managing-static-application-files-in-the-database.html#GUID-2C45AEF7-BCD0-4D7D-8754-0CFAC1C92EFF">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="template" content="Topic">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-AB48FE4C-49E3-45A7-A781-390E38EA34A6">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Manage static application files stored locally in the database in Shared Components.">
+      <meta name="description" content="Manage static application files stored locally in the database in Shared Components.">
+      <title>Managing Static Application Files in the Database</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Manage static application files stored locally in the database in Shared Components.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="referencing-static-application-files.html" title="Previous" type="text/html">
+      <link rel="next" href="managing-static-application-files-in-remote-storage.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Managing Static Application Files in the Database","description":"Manage static application files stored locally in the database in Shared Components.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="referencing-static-application-files.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="managing-static-application-files-in-remote-storage.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-AB48FE4C-49E3-45A7-A781-390E38EA34A6" name="GUID-AB48FE4C-49E3-45A7-A781-390E38EA34A6"></a>
+         
+         <h2 id="HTMDB-GUID-AB48FE4C-49E3-45A7-A781-390E38EA34A6" class="sect2"><span class="enumeration_section">16.13.3 </span>Managing Static Application Files in the
+        Database
+         </h2>
+         <div class="ind">
+            <p>Manage static application files stored locally in the database in Shared
+        Components.</p>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="managing-static-application-files-in-the-database.html#GUID-DBAAE42E-1890-4D09-85CE-F74061D33771">Adding Static Application Files to the Database</a><br>Add static application files to the Oracle Database from Shared         Components.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-static-application-files-in-the-database.html#GUID-D6B8597E-CAFE-4A28-ACAA-2632B5354BE6">Viewing Static Application Files</a><br>View static application files uploaded to the database on the Static         Application Files page.
+                  </li>
+                  <li class="ulchildlink"><a href="managing-static-application-files-in-the-database.html#GUID-E988DF5F-8E54-4E48-90E8-873F20435EF6">Downloading Static Application Files</a><br>Download individual static application files added to the database, or         download all static application files in a Zip. 
+                  </li>
+                  <li class="ulchildlink"><a href="managing-static-application-files-in-the-database.html#GUID-2C45AEF7-BCD0-4D7D-8754-0CFAC1C92EFF">Deleting Static Application Files</a><br>Delete static application files uploaded to the database.
+                  </li>
+               </ul>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-static-application-files.html#GUID-A580AAF3-D89A-440F-B75D-5A68DCB6BBF5" title="Manage static application files in the Oracle database on the Shared Components, Static Application Files page or in remote storage solution such as OCI Object Storage.">Managing Static Application Files</a></p>
+                  </div>
+               </div>
+            </div>
+            <a id="HTMDB29855"></a><div class="props_rev_3"><a id="GUID-DBAAE42E-1890-4D09-85CE-F74061D33771" name="GUID-DBAAE42E-1890-4D09-85CE-F74061D33771"></a><h3 id="HTMDB-GUID-DBAAE42E-1890-4D09-85CE-F74061D33771" class="sect3"><span class="enumeration_section">16.13.3.1 </span>Adding Static Application Files to the
+        Database
+               </h3>
+               <div>
+                  <p>Add static application files to the Oracle Database from Shared
+        Components.</p>
+                  <div class="section">To add static application files to the Oracle database, navigate to Shared
+            Components, Static Application Files, and click <span class="uicontrol bold">Create File</span>. 
+                  </div>
+                  <p>To create a static application file: </p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                 <p>The Shared Components page appears. </p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under <span class="uicontrol bold">Files and Reports</span>, select <span class="uicontrol bold">Static Application Files</span>.</span></li>
+                     <li class="stepexpand"><span>On Static Application Files page, click <span class="uicontrol bold">Create File</span>.</span><div>
+                           <p>The Create page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>On the Create page:</span><ol type="a" id="GUID-DBAAE42E-1890-4D09-85CE-F74061D33771__SUBSTEPS_IG4_4HR_ZQB">
+                           <li class="substepexpand"><span>Directory - Enter the name of the directory where the file should be
+                            stored. For example, <code class="codeph">css</code> or
+                            <code class="codeph">css/images</code>. </span><div>If no directory is specified, the file is stored in the root
+                            directory.</div>
+                           </li>
+                           <li class="substepexpand"><span>File Name - If creating a blank file (for example,
+                                <code class="codeph">script.js</code>), enter the name of the file.</span></li>
+                           <li class="substepexpand"><span>Content - If uploading a file, do one of the following:</span><div>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-DBAAE42E-1890-4D09-85CE-F74061D33771__UL_J2H_K3S_2RB">
+                                    <li>
+                                       
+                                       <p>Drag and drop the file to the Content region.</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Click the Content region and select the file.</p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </div>
+                           </li>
+                           <li class="substepexpand"><span>Click <span class="uicontrol bold">Create</span> or <span class="uicontrol bold">Create and Create
+                                Another</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-static-application-files-in-the-database.html#GUID-AB48FE4C-49E3-45A7-A781-390E38EA34A6" title="Manage static application files stored locally in the database in Shared Components.">Managing Static Application Files in the Database</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29856"></a><div class="props_rev_3"><a id="GUID-D6B8597E-CAFE-4A28-ACAA-2632B5354BE6" name="GUID-D6B8597E-CAFE-4A28-ACAA-2632B5354BE6"></a><h3 id="HTMDB-GUID-D6B8597E-CAFE-4A28-ACAA-2632B5354BE6" class="sect3"><span class="enumeration_section">16.13.3.2 </span>Viewing Static Application Files
+               </h3>
+               <div>
+                  <p>View static application files uploaded to the database on the Static
+        Application Files page.</p>
+                  <p>To view static application files added to the
+                database:</p>
+                  <ol>
+                     <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                           <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                           <li class="substepexpand"><span>Select an application. </span></li>
+                           <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                 <p>The Shared Components page appears.</p>
+                              </div>
+                           </li>
+                        </ol>
+                     </li>
+                     <li class="stepexpand"><span>Under <span class="uicontrol bold">Files and Reports</span>, select <span class="uicontrol bold">Static Application Files</span>. </span><div>
+                           <p>The Static Application Files page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>If not already selected, click <span class="uicontrol bold">View Report</span> icon.</span><div>
+                           <p>A report appears. To customize the report, use the Search bar at the top of the page.</p>
+                           <p>The Static Application Files report includes the following columns: Name, Mime Type, Size, Reference, File, Updated, and Updated By.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>To view or edit file details, click the file Name. On the Edit page:</span><ol type="a" id="GUID-D6B8597E-CAFE-4A28-ACAA-2632B5354BE6__SUBSTEPS_A1W_FBS_ZQB">
+                           <li class="substepexpand"><span>Directory - Enter the name of the directory where the file should be
+                            stored. For example, <code class="codeph">css</code> or
+                            <code class="codeph">css/images</code>. </span><div>If no directory is specified, the file is stored in
+                            the root directory.</div>
+                           </li>
+                           <li class="substepexpand"><span>File Name - Edit the name of the file.</span></li>
+                           <li class="substepexpand"><span>To save your changes, click <span class="uicontrol bold">Save Changes</span>.</span></li>
+                        </ol>
+                     </li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-static-application-files-in-the-database.html#GUID-AB48FE4C-49E3-45A7-A781-390E38EA34A6" title="Manage static application files stored locally in the database in Shared Components.">Managing Static Application Files in the Database</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div><a id="HTMDB29857"></a><div class="props_rev_3"><a id="GUID-E988DF5F-8E54-4E48-90E8-873F20435EF6" name="GUID-E988DF5F-8E54-4E48-90E8-873F20435EF6"></a><h3 id="HTMDB-GUID-E988DF5F-8E54-4E48-90E8-873F20435EF6" class="sect3"><span class="enumeration_section">16.13.3.3 </span>Downloading Static Application Files
+               </h3>
+               <p>Download individual static application files added to the database, or
+        download all static application files in a Zip. </p>
+               <div>
+                  <ul class="ullinks">
+                     <li class="ulchildlink"><a href="managing-static-application-files-in-the-database.html#GUID-AC90B394-EFA7-4CF7-A0B2-44C0E8442953">Downloading a Static Application File</a><br>Download an uploaded static application file.
+                     </li>
+                     <li class="ulchildlink"><a href="managing-static-application-files-in-the-database.html#GUID-6356C5E6-08EF-49AD-A90B-742E5E2351A2">Downloading All Static Application Files in a Zip</a><br>Learn how to download all static application files in a zip.
+                     </li>
+                  </ul>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-static-application-files-in-the-database.html#GUID-AB48FE4C-49E3-45A7-A781-390E38EA34A6" title="Manage static application files stored locally in the database in Shared Components.">Managing Static Application Files in the Database</a></p>
+                     </div>
+                  </div>
+               </div>
+               <a id="HTMDB29858"></a><div class="props_rev_3"><a id="GUID-AC90B394-EFA7-4CF7-A0B2-44C0E8442953" name="GUID-AC90B394-EFA7-4CF7-A0B2-44C0E8442953"></a><h4 id="HTMDB-GUID-AC90B394-EFA7-4CF7-A0B2-44C0E8442953" class="sect4"><span class="enumeration_section">16.13.3.3.1 </span>Downloading a Static Application File
+                  </h4>
+                  <div>
+                     <p>Download an uploaded static application file.</p>
+                     <p>To download an uploaded static application file: </p>
+                     <ol>
+                        <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                              <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span></span></li>
+                              <li class="substepexpand"><span>Select an application. </span></li>
+                              <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                    <p>The Shared Components page appears.</p>
+                                 </div>
+                              </li>
+                           </ol>
+                        </li>
+                        <li class="stepexpand"><span>Under <span class="uicontrol bold">Files and Reports</span>, select <span class="uicontrol bold">Static Application Files</span>. </span><div>
+                              <p>The Static Application Files page appears.</p>
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>If not already selected, click <span class="uicontrol bold">View Report</span> icon.</span><div>
+                              
+                              <p>A report appears. To customize the report, use the Search bar at
+                        the top of the page.</p>
+                              
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Locate the file to be downloaded and click the <span class="uicontrol bold">Download</span>
+                    link.</span></li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="managing-static-application-files-in-the-database.html#GUID-E988DF5F-8E54-4E48-90E8-873F20435EF6" title="Download individual static application files added to the database, or download all static application files in a Zip.">Downloading Static Application Files</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div><a id="HTMDB29859"></a><div class="props_rev_3"><a id="GUID-6356C5E6-08EF-49AD-A90B-742E5E2351A2" name="GUID-6356C5E6-08EF-49AD-A90B-742E5E2351A2"></a><h4 id="HTMDB-GUID-6356C5E6-08EF-49AD-A90B-742E5E2351A2" class="sect4"><span class="enumeration_section">16.13.3.3.2 </span>Downloading All Static Application Files in a Zip
+                  </h4>
+                  <div>
+                     <p>Learn how to download all static application files in a zip.</p>
+                     <p>To download all static application files in a Zip: </p>
+                     <ol>
+                        <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                              <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                              <li class="substepexpand"><span>Select an application. </span></li>
+                              <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                    <p>The Shared Components page appears. </p>
+                                 </div>
+                              </li>
+                           </ol>
+                        </li>
+                        <li class="stepexpand"><span>Under <span class="uicontrol bold">Files and Reports</span>, select <span class="uicontrol bold">Static Application Files</span>. </span><div>
+                              <p>The Static Application Files page appears.</p>
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>Click <span class="uicontrol bold">Download as Zip</span>.</span></li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="managing-static-application-files-in-the-database.html#GUID-E988DF5F-8E54-4E48-90E8-873F20435EF6" title="Download individual static application files added to the database, or download all static application files in a Zip.">Downloading Static Application Files</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div><a id="HTMDB29860"></a><div class="props_rev_3"><a id="GUID-2C45AEF7-BCD0-4D7D-8754-0CFAC1C92EFF" name="GUID-2C45AEF7-BCD0-4D7D-8754-0CFAC1C92EFF"></a><h3 id="HTMDB-GUID-2C45AEF7-BCD0-4D7D-8754-0CFAC1C92EFF" class="sect3"><span class="enumeration_section">16.13.3.4 </span>Deleting Static Application Files
+               </h3>
+               <p>Delete static application files uploaded to the database.</p>
+               <div>
+                  <ul class="ullinks">
+                     <li class="ulchildlink"><a href="managing-static-application-files-in-the-database.html#GUID-A1B99059-DCEF-424A-9EF3-883AEEADE6D8">Deleting a Static Application File</a><br>Delete an uploaded static application file on the Static Application         Files, Edit page.
+                     </li>
+                     <li class="ulchildlink"><a href="managing-static-application-files-in-the-database.html#GUID-2A9AB994-8465-4914-8174-409C60AB7747">Deleting Multiple or All Static Application Files</a><br>Delete multiple or all uploaded static application files.
+                     </li>
+                  </ul>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="managing-static-application-files-in-the-database.html#GUID-AB48FE4C-49E3-45A7-A781-390E38EA34A6" title="Manage static application files stored locally in the database in Shared Components.">Managing Static Application Files in the Database</a></p>
+                     </div>
+                  </div>
+               </div>
+               <a id="HTMDB29861"></a><div class="props_rev_3"><a id="GUID-A1B99059-DCEF-424A-9EF3-883AEEADE6D8" name="GUID-A1B99059-DCEF-424A-9EF3-883AEEADE6D8"></a><h4 id="HTMDB-GUID-A1B99059-DCEF-424A-9EF3-883AEEADE6D8" class="sect4"><span class="enumeration_section">16.13.3.4.1 </span>Deleting a Static Application File
+                  </h4>
+                  <div>
+                     <p>Delete an uploaded static application file on the Static Application
+        Files, Edit page.</p>
+                     <p>To delete an uploaded static application file: </p>
+                     <ol>
+                        <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                              <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                              <li class="substepexpand"><span>Select an application.</span></li>
+                              <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                    <p>The Shared Components page appears. </p>
+                                 </div>
+                              </li>
+                           </ol>
+                        </li>
+                        <li class="stepexpand"><span>Under <span class="uicontrol bold">Files and Reports</span>, select <span class="uicontrol bold">Static Application Files</span>.</span><div>
+                              <p>The Static Application Files page appears.</p>
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>If not already selected, click <span class="uicontrol bold">View Report</span> icon. To
+                    customize the report, use the Search bar at the top of the page.</span></li>
+                        <li class="stepexpand"><span>Select the file to be deleted and click <span class="uicontrol bold">Delete</span>.</span><div>
+                              
+                              <div class="infobox-tip" id="GUID-A1B99059-DCEF-424A-9EF3-883AEEADE6D8__GUID-9DBF306C-4810-4A9C-BA6A-D82FE8E9D933">
+                                 <p class="notep1">Tip:</p>You can also click the name of the file to be deleted. On the
+                        Edit page, click <span class="uicontrol bold">Delete</span>.
+                              </div>
+                              
+                           </div>
+                        </li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="managing-static-application-files-in-the-database.html#GUID-2C45AEF7-BCD0-4D7D-8754-0CFAC1C92EFF" title="Delete static application files uploaded to the database.">Deleting Static Application Files</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div><a id="HTMDB29862"></a><div class="props_rev_3"><a id="GUID-2A9AB994-8465-4914-8174-409C60AB7747" name="GUID-2A9AB994-8465-4914-8174-409C60AB7747"></a><h4 id="HTMDB-GUID-2A9AB994-8465-4914-8174-409C60AB7747" class="sect4"><span class="enumeration_section">16.13.3.4.2 </span>Deleting Multiple or All Static Application
+                        Files
+                  </h4>
+                  <div>
+                     <p>Delete multiple or all uploaded static application files.</p>
+                     <p>To delete multiple files or all static application files: </p>
+                     <ol>
+                        <li class="stepexpand"><span>Navigate to the Shared Components page:</span><ol type="a">
+                              <li class="substepexpand"><span>On the Workspace home page, click <span><span class="uicontrol bold">App
+                                        Builder</span></span>.</span></li>
+                              <li class="substepexpand"><span>Select an application. </span></li>
+                              <li class="substepexpand"><span>On the Application home page, click <span class="uicontrol bold">Shared Components</span>.</span><div>
+                                    <p>The Shared Components page appears.</p>
+                                 </div>
+                              </li>
+                           </ol>
+                        </li>
+                        <li class="stepexpand"><span>Under <span class="uicontrol bold">Files and Reports</span>, select <span class="uicontrol bold">Static Application Files</span>. </span><div>
+                              <p>The Static Application Files page appears.</p>
+                           </div>
+                        </li>
+                        <li class="stepexpand"><span>If not already selected, click <span class="uicontrol bold">View Report</span> icon. To customize
+          the report, use the Search bar at the top of the page.</span></li>
+                        <li class="stepexpand"><span>To delete multiple files at once, select the
+                                                  files to be deleted and click <span class="uicontrol bold">Delete
+                                                  Checked</span>.</span></li>
+                        <li class="stepexpand"><span>To delete all files, click <span class="uicontrol bold">Delete All</span>.</span></li>
+                     </ol>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="managing-static-application-files-in-the-database.html#GUID-2C45AEF7-BCD0-4D7D-8754-0CFAC1C92EFF" title="Delete static application files uploaded to the database.">Deleting Static Application Files</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Configuring Progressive Web App Attributes">
+      <meta name="abstract" content="Use the Progressive Web App page to configure attributes for both new and existing Progressive Web App applications.">
+      <meta name="description" content="Use the Progressive Web App page to configure attributes for both new and existing Progressive Web App applications.">
+      <meta name="DC.subject" content="Progressive Web App attributes, configuring, accessing, Progressive Web App, General, Installability, Push Notifications, Push Notifications attribute, Service Workers Configuration, Service Worker attribute">
+      <meta name="keywords" content="Progressive Web App attributes, configuring, accessing, Progressive Web App, General, Installability, Push Notifications, Push Notifications attribute, Service Workers Configuration, Service Worker attribute">
+      <meta name="DC.Relation" scheme="URI" content="managing-application-attributes.html#GUID-257F4773-0F0E-4E50-A00E-9D71D9319EAC">
+      <meta name="DC.Relation" scheme="URI" content="configuring-progressive-web-app-attributes.html#GUID-704859AD-C4B3-45C9-AE6E-D3BD45640557">
+      <meta name="DC.Relation" scheme="URI" content="configuring-progressive-web-app-attributes.html#GUID-320C2D9E-AF2D-4627-B301-3ED86C83A98A">
+      <meta name="DC.Creator" content="CM Dietrich">
+      <meta name="DC.Creator" content="Zaid Ali">
+      <meta name="DC.Creator" content="Zsolt Angyal">
+      <meta name="DC.Creator" content="Manal Berkane">
+      <meta name="DC.Creator" content="Ananya Chatterjee">
+      <meta name="DC.Creator" content="Christina Cho">
+      <meta name="DC.Creator" content="Carsten Czarski">
+      <meta name="DC.Creator" content="Stefan Dobre">
+      <meta name="DC.Creator" content="Hilary Farrell">
+      <meta name="DC.Creator" content="Alexis Galdamez">
+      <meta name="DC.Creator" content="Florian Grasshoff">
+      <meta name="DC.Creator" content="Paige Hanssen">
+      <meta name="DC.Creator" content="Menno Hoogendijk">
+      <meta name="DC.Creator" content="Edward Jones">
+      <meta name="DC.Creator" content="Christian Lara">
+      <meta name="DC.Creator" content="Carlos Maciel">
+      <meta name="DC.Creator" content="Steven Muench">
+      <meta name="DC.Creator" content="Ralf Muller">
+      <meta name="DC.Creator" content="Frantisek Nagy">
+      <meta name="DC.Creator" content="Christian Neumueller">
+      <meta name="DC.Creator" content="Matthew Nolan">
+      <meta name="DC.Creator" content="Jonathan Rhind">
+      <meta name="DC.Creator" content="Antonio Rivera">
+      <meta name="DC.Creator" content="Christian Rokitta">
+      <meta name="DC.Creator" content="Anton Scheffer">
+      <meta name="DC.Creator" content="Fanel Secara">
+      <meta name="DC.Creator" content="John Snyders">
+      <meta name="DC.Creator" content="Yassine Wahbi">
+      <meta name="DC.Creator" content="Ronny Weiss">
+      <meta name="DC.Creator" content="Patrick Wolf">
+      <meta name="DC.Creator" content="Terri Jennings">
+      <meta name="DC.Publisher" content="July2025">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-E6A46DA8-B7B3-4953-B391-56B12C03B6E9">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="Use the Progressive Web App page to configure attributes for both new and existing Progressive Web App applications.">
+      <meta name="description" content="Use the Progressive Web App page to configure attributes for both new and existing Progressive Web App applications.">
+      <title>Configuring Progressive Web App Attributes</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="App Builder User's Guide ">
+      <meta property="og:description" content="Use the Progressive Web App page to configure attributes for both new and existing Progressive Web App applications.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="App Builder User's Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="oracle-apex-app-builder-users-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2025-07-14T12:10:15-07:00">
+      
+      <meta name="dcterms.dateCopyrighted" content="2003, 2025">
+      <meta name="dcterms.category" content="database">
+      <meta name="dcterms.identifier" content="G12913-05">
+      
+      <meta name="dcterms.product" content="en/database/oracle/apex/24.2">
+      
+      <link rel="prev" href="editing-user-interface-attributes.html" title="Previous" type="text/html">
+      <link rel="next" href="configuring-generative-ai-attributes.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"database","element_name":"Database","display_in_url":true},"suite":{"short_name":"oracle","element_name":"Oracle","display_in_url":true},"product_group":{"short_name":"not-applicable","element_name":"Not applicable","display_in_url":false},"product":{"short_name":"apex","element_name":"APEX","display_in_url":true},"release":{"short_name":"24.2","element_name":"Release 24.2","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.title" content="Oracle APEX App Builder User's Guide">
+    <meta name="dcterms.isVersionOf" content="HTMDB">
+    <meta name="dcterms.release" content="Release 24.2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Configuring Progressive Web App Attributes","description":"Use the Progressive Web App page to configure attributes for both new and existing Progressive Web App applications.","datePublished":"2025-07-14 CST","dateModified":"2025-07-14 CST"}</script>
+    </head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="editing-user-interface-attributes.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="configuring-generative-ai-attributes.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-E6A46DA8-B7B3-4953-B391-56B12C03B6E9" name="GUID-E6A46DA8-B7B3-4953-B391-56B12C03B6E9"></a>
+         
+         <h2 id="HTMDB-GUID-E6A46DA8-B7B3-4953-B391-56B12C03B6E9" class="sect2"><span class="enumeration_section">5.12.5 </span>Configuring Progressive Web App Attributes
+         </h2>
+         <div class="ind">
+            <div>
+               <p>Use the Progressive Web App page to configure attributes for both new and
+    existing Progressive Web App applications.</p>
+               <div class="infobox-tip" id="GUID-E6A46DA8-B7B3-4953-B391-56B12C03B6E9__GUID-2F9160FA-F63A-4D50-BD8A-63F21B973113">
+                  <p class="notep1">Tip:</p>Progressive Web App attributes only display if the
+                                                Application Definition,
+                                                  <span class="uicontrol bold">Properties</span>,
+                                                  <span class="uicontrol bold">Friendly URLs</span> attribute is
+                                                  <span class="uicontrol bold">On</span>. 
+               </div>
+            </div>
+            <div>
+               <ul class="ullinks">
+                  <li class="ulchildlink"><a href="configuring-progressive-web-app-attributes.html#GUID-704859AD-C4B3-45C9-AE6E-D3BD45640557">Accessing the Progressive Web App Page</a><br>Access the Progressive Web App page from the Application home         page.
+                  </li>
+                  <li class="ulchildlink"><a href="configuring-progressive-web-app-attributes.html#GUID-320C2D9E-AF2D-4627-B301-3ED86C83A98A">Progressive Web App Page</a><br>The Progressive Web App page is divided into the following sections:         General, Installability, Push Notifications, and Service Worker Configuration.
+                  </li>
+               </ul>
+               <div class="infoboxnotealso" id="GUID-E6A46DA8-B7B3-4953-B391-56B12C03B6E9__GUID-134C2E26-7604-4060-9DF1-26F1DDCAD546">
+                  <p class="notep1">See Also:</p><a href="creating-a-progressive-web-app.html#GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" title="Learn about Progressive Web App (PWA) features and requirements.">Creating a Progressive Web App (PWA)</a></div>
+               <div class="familylinks">
+                  <div class="parentlink">
+                     <p><strong>Parent topic:</strong> <a href="managing-application-attributes.html#GUID-257F4773-0F0E-4E50-A00E-9D71D9319EAC" title="Application attributes control the behavior of an entire application and are divided into the categories: Definition, Security, Globalization, User Interface, Progressive Web App, and AI.">Managing Application Attributes</a></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="props_rev_3"><a id="GUID-704859AD-C4B3-45C9-AE6E-D3BD45640557" name="GUID-704859AD-C4B3-45C9-AE6E-D3BD45640557"></a><h3 id="HTMDB-GUID-704859AD-C4B3-45C9-AE6E-D3BD45640557" class="sect3"><span class="enumeration_section">5.12.5.1 </span>Accessing the Progressive Web App Page
+               </h3>
+               <div>
+                  <p>Access the Progressive Web App page from the Application home
+        page.</p>
+                  <p>To access the Progressive Web App page:</p>
+                  <ol>
+                     <li class="stepexpand"><span>On the Workspace home page, click the <span><span class="uicontrol bold">App
+                                        Builder</span></span> icon.</span></li>
+                     <li class="stepexpand"><span>Select an application. </span><div>
+                           <p>The Application home page appears.</p>
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>From the Application home page, you can access the Progressive Web App page in
+                    two ways:</span><ul>
+                           <li><span class="uicontrol bold">Edit Application Definition</span>
+                            button:
+                              <ol type="a" id="GUID-704859AD-C4B3-45C9-AE6E-D3BD45640557__OL_FW3_XRX_MSB">
+                                 <li>
+                                    
+                                    <p>Click <span class="uicontrol bold">Edit Application
+                                        Definition</span> to the right of the application
+                                    name.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Click the <span class="uicontrol bold">Progressive Web App</span>
+                                    tab.
+                                    </p>
+                                    
+                                 </li>
+                              </ol>
+                           </li>
+                           <li>From Shared Components:
+                              <ol type="a">
+                                 <li>
+                                    
+                                    <p>Click <span class="uicontrol bold">Shared Components</span>.
+                                    </p>
+                                    
+                                 </li>
+                                 <li>
+                                    
+                                    <p>Under User Interface, click <span class="uicontrol bold">Progressive
+                                        Web App</span>.
+                                    </p>
+                                    
+                                 </li>
+                              </ol>
+                           </li>
+                        </ul>
+                        <div>
+                           
+                           <p>The Progressive Web App page appears.</p>
+                           
+                        </div>
+                     </li>
+                     <li class="stepexpand"><span>Edit the appropriate attributes.</span></li>
+                     <li class="stepexpand"><span>Click <span class="uicontrol bold">Apply Changes</span> to save your changes.</span></li>
+                  </ol>
+               </div>
+               <div>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-progressive-web-app-attributes.html#GUID-E6A46DA8-B7B3-4953-B391-56B12C03B6E9" title="Use the Progressive Web App page to configure attributes for both new and existing Progressive Web App applications.">Configuring Progressive Web App Attributes</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="props_rev_3"><a id="GUID-320C2D9E-AF2D-4627-B301-3ED86C83A98A" name="GUID-320C2D9E-AF2D-4627-B301-3ED86C83A98A"></a><h3 id="HTMDB-GUID-320C2D9E-AF2D-4627-B301-3ED86C83A98A" class="sect3"><span class="enumeration_section">5.12.5.2 </span>Progressive Web App Page
+               </h3>
+               <div>
+                  <p>The Progressive Web App page is divided into the following sections:
+        General, Installability, Push Notifications, and Service Worker Configuration.</p>
+                  <div class="infobox-tip" id="GUID-320C2D9E-AF2D-4627-B301-3ED86C83A98A__GUID-A492E3FB-8E18-45CD-BE0A-D127F43A5EF1">
+                     <p class="notep1">Tip:</p>
+                     <p>To learn more about the attributes on this page, see field-level Help. </p>
+                  </div>
+               </div>
+               <div>
+                  <ul class="ullinks">
+                     <li class="ulchildlink"><a href="configuring-progressive-web-app-attributes.html#GUID-A82C09C2-AF7F-483E-BCAD-0622320DC309">General</a><br></li>
+                     <li class="ulchildlink"><a href="configuring-progressive-web-app-attributes.html#GUID-260BA5A2-801C-4F14-833B-CB256B03F426">Installability</a><br></li>
+                     <li class="ulchildlink"><a href="configuring-progressive-web-app-attributes.html#GUID-6ADDACA8-D190-4A01-AD38-1CEB16DCAE79">Push Notifications</a><br></li>
+                     <li class="ulchildlink"><a href="configuring-progressive-web-app-attributes.html#GUID-996CF8CC-13B3-4777-8E1E-4C13F8A01E1B">Service Worker Configuration</a><br></li>
+                  </ul>
+                  <div class="familylinks">
+                     <div class="parentlink">
+                        <p><strong>Parent topic:</strong> <a href="configuring-progressive-web-app-attributes.html#GUID-E6A46DA8-B7B3-4953-B391-56B12C03B6E9" title="Use the Progressive Web App page to configure attributes for both new and existing Progressive Web App applications.">Configuring Progressive Web App Attributes</a></p>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="props_rev_3"><a id="GUID-A82C09C2-AF7F-483E-BCAD-0622320DC309" name="GUID-A82C09C2-AF7F-483E-BCAD-0622320DC309"></a><h4 id="HTMDB-GUID-A82C09C2-AF7F-483E-BCAD-0622320DC309" class="sect4"><span class="enumeration_section">5.12.5.2.1 </span>General
+                  </h4>
+                  <div>
+                     <div class="section">
+                        
+                        <div class="infobox-tip" id="GUID-A82C09C2-AF7F-483E-BCAD-0622320DC309__GUID-248DD754-6CBF-4945-BEC1-C6B2B94AE9D0">
+                           <p class="notep1">Tip:</p>Progressive Web App attributes
+        only display if the Application Definition, <span class="uicontrol bold">Properties</span>,
+          <span class="uicontrol bold">Friendly URLs</span> attribute is <span class="uicontrol bold">On</span>. See <a href="editing-application-attributes.html#GUID-583B8D2A-D236-4A35-A510-F87BF3C694FA">Properties</a>, Friendly URLs.
+                        </div>
+                        
+                        <p>Use General attributes to enable and disable to configure Progressive Web App
+        applications.</p>
+                     </div>
+                     <div class="tblformal" id="GUID-A82C09C2-AF7F-483E-BCAD-0622320DC309__BABFGGAI">
+                        <table cellpadding="4" cellspacing="0" class="Formal" title summary="General attributes." width="100%" frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="17%" id="d72446e538">Attribute</th>
+                                 <th align="left" valign="bottom" width="41%" id="d72446e540">Description</th>
+                                 <th align="left" valign="bottom" width="41%" id="d72446e542">To Learn More</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d72446e546" headers="d72446e538 ">General<a id="d72446e548" class="indexterm-anchor"></a><a id="d72446e552" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e546 d72446e540 ">
+                                    
+                                    <p>Enable Progressive Web App functionality.</p>
+                                    <p>Enabling this option:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-A82C09C2-AF7F-483E-BCAD-0622320DC309__UL_H31_N1Y_WQB">
+                                       <li>
+                                          
+                                          <p>Serves static files more efficiently using advanced caching.</p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p>Enables the display of declarative Progressive Web App
+                    settings.</p>
+                                          
+                                       </li>
+                                    </ul>
+                                 </td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e546 d72446e542 ">See <a href="creating-a-progressive-web-app.html#GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" title="Learn about Progressive Web App (PWA) features and requirements.">Creating a Progressive Web App (PWA)</a></td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d72446e580" headers="d72446e538 ">Installable<a id="d72446e582" class="indexterm-anchor"></a><a id="d72446e586" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e580 d72446e540 ">
+                                    <p>Only displays if <span class="uicontrol bold">Enable Progressive Web App</span> is
+                  <span class="uicontrol bold">On</span>. 
+                                    </p>
+                                    
+                                    <p>A Progressive Web App can be installed on devices. Installing a
+                Progressive Web App, adds an icon to the device home screen to feel like a native
+                application. Enabling this option:</p>
+                                    <ul style="list-style-type: disc;">
+                                       <li>Add a new navigation bar entry: <code class="codeph">Install App</code>.
+                                       </li>
+                                       <li>Enables users to install the <span>APEX</span> app on devices.
+                                       </li>
+                                    </ul>
+                                 </td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e580 d72446e542 ">See <a href="creating-a-progressive-web-app.html#GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" title="Learn about Progressive Web App (PWA) features and requirements.">Creating a Progressive Web App (PWA)</a></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="configuring-progressive-web-app-attributes.html#GUID-320C2D9E-AF2D-4627-B301-3ED86C83A98A" title="The Progressive Web App page is divided into the following sections: General, Installability, Push Notifications, and Service Worker Configuration.">Progressive Web App Page</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="props_rev_3"><a id="GUID-260BA5A2-801C-4F14-833B-CB256B03F426" name="GUID-260BA5A2-801C-4F14-833B-CB256B03F426"></a><h4 id="HTMDB-GUID-260BA5A2-801C-4F14-833B-CB256B03F426" class="sect4"><span class="enumeration_section">5.12.5.2.2 </span>Installability
+                  </h4>
+                  <div>
+                     <div class="section">
+                        
+                        <div class="infobox-tip" id="GUID-260BA5A2-801C-4F14-833B-CB256B03F426__GUID-248DD754-6CBF-4945-BEC1-C6B2B94AE9D0">
+                           <p class="notep1">Tip:</p>Installability attributes only
+        display if the Progressive Web App, General attributes <span class="uicontrol bold">Enable Progressive Web
+          App</span> and <span class="uicontrol bold">Installable</span> attribute are
+          <span class="uicontrol bold">On</span>.
+                        </div>
+                        
+                        <p>Use Installability attributes to configure Progressive Web App (PWA) attributes
+        for display, screen orientation, theme color, background color, IOS status bar style, app
+        description, and custom manifest as well as upload screenshots and shortcuts.</p>
+                     </div>
+                     <div class="tblformal" id="GUID-260BA5A2-801C-4F14-833B-CB256B03F426__BABFGGAI">
+                        <table cellpadding="4" cellspacing="0" class="Formal" title summary="Installability attributes." width="100%" frame="hsides" border="1" rules="rows">
+                           <thead>
+                              <tr align="left" valign="top">
+                                 <th align="left" valign="bottom" width="17%" id="d72446e740">Attribute</th>
+                                 <th align="left" valign="bottom" width="41%" id="d72446e742">Description</th>
+                                 <th align="left" valign="bottom" width="41%" id="d72446e744">To Learn More</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d72446e748" headers="d72446e740 ">Display<a id="d72446e750" class="indexterm-anchor"></a><a id="d72446e754" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e748 d72446e742 ">
+                                    
+                                    <p>Select the preferred display mode for the application. This option
+                controls how much of the browser UI the user sees. Options include:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-260BA5A2-801C-4F14-833B-CB256B03F426__UL_MDN_1H5_4SB">
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Fullscreen</span> - Opens the PWA without any
+                    browser UI. This option takes the entirety of the screen or window.
+                                          </p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Standalone</span>- Opens the PWA to look like a
+                    standalone application. The app runs in a distinct window, separate from the
+                    browser. Standard browser UI components like the URL bar and buttons are not
+                    visible.
+                                          </p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Minimal UI</span> - Similar to standalone, except
+                    with browser controlling navigation buttons like back and refresh.
+                                          </p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Browser</span> - Opens the PWA is a regular
+                    browser UI.
+                                          </p>
+                                          
+                                       </li>
+                                    </ul>
+                                    
+                                    <p><span class="bold">Note</span>: Some devices and browsers ignore this attribute. <span>Oracle APEX</span> is only relaying this information to the device which handles the Progressive Web
+                App appropriately. For more information, see <a href="https://web.dev/add-manifest/" target="_blank">https://web.dev/add-manifest//</a></p>
+                                 </td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e748 d72446e744 ">See <a href="creating-a-progressive-web-app.html#GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" title="Learn about Progressive Web App (PWA) features and requirements.">Creating a Progressive Web App (PWA)</a></td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d72446e809" headers="d72446e740 ">Screen Orientation<a id="d72446e811" class="indexterm-anchor"></a><a id="d72446e815" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e809 d72446e742 ">
+                                    
+                                    <p>Select the preferred screen orientation when using this Progressive Web
+                App. This option applies mostly for mobile devices.</p>
+                                    
+                                    <p><span class="bold">Note</span>: Some devices and browsers ignore this attribute. <span>APEX</span> is only relaying this information to the device which handles the Progressive Web App appropriately.
+                                    </p>
+                                 </td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e809 d72446e744 ">See <a href="creating-a-progressive-web-app.html#GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" title="Learn about Progressive Web App (PWA) features and requirements.">Creating a Progressive Web App (PWA)</a></td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d72446e837" headers="d72446e740 ">Theme Color<a id="d72446e839" class="indexterm-anchor"></a><a id="d72446e843" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e837 d72446e742 ">
+                                    
+                                    <p>Defines the default theme color for the application.</p>
+                                    <p>This attribute affects how the operating system displays the application (for
+                example, for an Android's task switcher, the theme color surrounds the
+                application).</p>
+                                    
+                                    <p><span class="bold">Note</span>: Some devices and browsers ignore this attribute. <span>Oracle APEX</span> is only relaying this information to the device which handles the Progressive Web
+                App appropriately
+                                    </p>
+                                 </td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e837 d72446e744 ">See <a href="creating-a-progressive-web-app.html#GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" title="Learn about Progressive Web App (PWA) features and requirements.">Creating a Progressive Web App (PWA)</a></td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d72446e867" headers="d72446e740 ">Background Color<a id="d72446e869" class="indexterm-anchor"></a><a id="d72446e873" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e867 d72446e742 ">
+                                    
+                                    <p>Select the background color. </p>
+                                    <p>The background color defines a placeholder background color for the application to
+                display before its stylesheet is loaded. Therefore, the background color should
+                match the theme body background color for a smooth transition between launching the
+                web application and loading the application content.</p>
+                                    <p>This affects how the operating system displays the application (for example, for an
+                Android's task switcher, the theme color surrounds the application).</p>
+                                    
+                                    <p><span class="bold">Note</span>: Some devices and browsers ignore this attribute. <span>Oracle APEX</span> is only relaying this information to the device which handles the Progressive Web
+                App appropriately
+                                    </p>
+                                 </td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e867 d72446e744 ">See <a href="creating-a-progressive-web-app.html#GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" title="Learn about Progressive Web App (PWA) features and requirements.">Creating a Progressive Web App (PWA)</a></td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d72446e899" headers="d72446e740 ">iOS Status Bar Style<a id="d72446e901" class="indexterm-anchor"></a><a id="d72446e905" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e899 d72446e742 ">
+                                    
+                                    <p>The iOS Status Bar Style attribute is rendered as a meta tag on the
+                page to control the appearance of the status bar in a web application when it is
+                added to the home screen on an iOS device. Options include:</p>
+                                    
+                                    <ul style="list-style-type: disc;" id="GUID-260BA5A2-801C-4F14-833B-CB256B03F426__UL_CSC_TH5_4SB">
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Default</span> - This is the default value and it
+                    displays the status bar in the usual way.
+                                          </p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Black</span> - This value makes the status bar
+                    black.
+                                          </p>
+                                          
+                                       </li>
+                                       <li>
+                                          
+                                          <p><span class="uicontrol bold">Translucent</span> - This value makes the status
+                    bar translucent, enabling the content to be displayed behind it.
+                                          </p>
+                                          
+                                          <p><span class="uicontrol bold">Note</span>: Only iOS devices use this attribute. <span>Oracle APEX</span> is only relaying this information to the device which handles the Progressive
+                    Web App appropriately.
+                                          </p>
+                                          
+                                       </li>
+                                    </ul>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e899 d72446e744 ">See <a href="creating-a-progressive-web-app.html#GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" title="Learn about Progressive Web App (PWA) features and requirements.">Creating a Progressive Web App (PWA)</a></td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d72446e951" headers="d72446e740 ">App Description<a id="d72446e953" class="indexterm-anchor"></a><a id="d72446e957" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e951 d72446e742 ">
+                                    
+                                    <p>Explains what the application does. Use this attribute to provide more
+                information to users when they are prompted to install the application.</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e951 d72446e744 ">See <a href="creating-a-progressive-web-app.html#GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" title="Learn about Progressive Web App (PWA) features and requirements.">Creating a Progressive Web App (PWA)</a></td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d72446e972" headers="d72446e740 ">Custom Manifest<a id="d72446e974" class="indexterm-anchor"></a><a id="d72446e978" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e972 d72446e742 ">
+                                    
+                                    <p>Used to store additional JSON properties for the Web App Manifest file.
+                The properties found here will be used to extend the declarative options above, by
+                overriding existing properties or appending new properties.</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e972 d72446e744 ">
+                                    
+                                    <p>See <a href="creating-a-progressive-web-app.html#GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" title="Learn about Progressive Web App (PWA) features and requirements.">Creating a Progressive Web App (PWA)</a></p>
+                                    
+                                    <p>For more information on building a Custom Manifest, you can read the
+                Web App Manifest specifications: <a href="https://www.w3.org/TR/appmanifest/" target="_blank">https://www.w3.org/TR/appmanifest/</a>.
+                                    </p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d72446e1003" headers="d72446e740 ">Screenshots<a id="d72446e1005" class="indexterm-anchor"></a><a id="d72446e1009" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e1003 d72446e742 ">
+                                    
+                                    <p>Include screenshots for promotional purposes when users are prompted to
+                install the Progressive Web App. Click <span class="uicontrol bold">Add Screenshot</span> to
+                upload a promotional screenshot.
+                                    </p>
+                                    
+                                    <p> For best results, Oracle recommends all screenshots have the same
+                aspect ratio.</p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e1003 d72446e744 ">
+                                    
+                                    <p>See <a href="creating-a-progressive-web-app.html#GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" title="Learn about Progressive Web App (PWA) features and requirements.">Creating a Progressive Web App (PWA)</a></p>
+                                    
+                                 </td>
+                              </tr>
+                              <tr align="left" valign="top">
+                                 <td align="left" valign="top" width="17%" id="d72446e1033" headers="d72446e740 ">Shortcuts<a id="d72446e1035" class="indexterm-anchor"></a><a id="d72446e1039" class="indexterm-anchor"></a></td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e1033 d72446e742 ">
+                                    
+                                    <p><span class="uicontrol bold">Note</span>: An <span>APEX</span> application can only use PWA Shortcuts if Rejoin Sessions is enabled. Before
+                configuring shortcuts, click either <span class="uicontrol bold">Enable for Public
+                  Sessions</span> or <span class="uicontrol bold">Enable for All Sessions</span>. To learn
+                more, see <a href="configuring-security-attributes.html#GUID-33A67D5E-1128-4D23-9C5C-15FC9BE1B783">Session Management</a>.
+                                    </p>
+                                    
+                                    <p>Use shortcuts enable users of installed PWAs to quickly access a
+                specific page. For touch-enabled devices, shortcuts are accessible when doing a
+                long-press on the application icon on the home screen. For other devices, shortcuts
+                are accessible when doing a right click on the application icon on the task bar.</p>
+                                    
+                                    <p>Click <span class="uicontrol bold">Add Shortcut</span> to provide users with a
+                shortcut to quickly access a specific page.
+                                    </p>
+                                    
+                                 </td>
+                                 <td align="left" valign="top" width="41%" headers="d72446e1033 d72446e744 ">
+                                    
+                                    <p>See <a href="creating-a-progressive-web-app.html#GUID-0F0D45E3-DAB9-44FF-B782-FFF37C67B2EB" title="Learn about Progressive Web App (PWA) features and requirements.">Creating a Progressive Web App (PWA)</a></p>
+                                    
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="configuring-progressive-web-app-attributes.html#GUID-320C2D9E-AF2D-4627-B301-3ED86C83A98A" title="The Progressive Web App page is divided into the following sections: General, Installability, Push Notifications, and Service Worker Configuration.">Progressive Web App Page</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="props_rev_3"><a id="GUID-6ADDACA8-D190-4A01-AD38-1CEB16DCAE79" name="GUID-6ADDACA8-D190-4A01-AD38-1CEB16DCAE79"></a><h4 id="HTMDB-GUID-6ADDACA8-D190-4A01-AD38-1CEB16DCAE79" class="sect4"><span class="enumeration_section">5.12.5.2.3 </span>Push Notifications
+                  </h4>
+                  <div>
+                     <div class="section">
+                        
+                        <p>Web push notifications enable web apps to send notifications to a user's
+        device even when the user is not currently on the website. Notifications can be sent to a
+        user's desktop or mobile device and can be used to alert the user to new content or events
+        on the website, or to re-engage the user with the website.</p>
+                        
+                        <p>Enabling this option:</p>
+                        
+                        <ul style="list-style-type: disc;" id="GUID-6ADDACA8-D190-4A01-AD38-1CEB16DCAE79__UL_OSP_GZX_MWB">
+                           <li>Adds a new navigation bar entry: <span class="uicontrol bold">User Settings</span></li>
+                           <li>Enables users to subscribe and unsubscribe to push notifications. </li>
+                           <li>When subscribed, users can receive push notifications from the <span>APEX</span> app.
+                           </li>
+                        </ul>
+                        
+                        <p>If <span class="uicontrol bold">Enable Push Notifications</span> is enabled, the following attributes
+        appear:
+                        </p>
+                        
+                        <ul style="list-style-type: disc;" id="GUID-6ADDACA8-D190-4A01-AD38-1CEB16DCAE79__UL_WQZ_5YY_MWB">
+                           <li>Credentials - Select the credential to authenticate against. To edit the credential,
+          navigate to Shared Components, Credentials.
+                              <p>Credentials are required to setup push
+            notification securely. A public and private key pair are used respectively to allow
+            users to subscribe to push notifications on the client side, and for the server to send
+            the notifications to the subscribers.</p>
+                           </li>
+                           <li>Settings Page - If this application already has the push notification feature page, the
+          page number displays here. If the application does not have the push notification feature
+          page, it will show that the feature page is available to add.</li>
+                           <li>Contact Email - Enter the email address to contact in case the push notification service
+          provider (Google, Mozilla, Apple, etc.) wants to contact the owner of the application. We
+          recommend using a group email so it's not dependent on a single individual.</li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="configuring-progressive-web-app-attributes.html#GUID-320C2D9E-AF2D-4627-B301-3ED86C83A98A" title="The Progressive Web App page is divided into the following sections: General, Installability, Push Notifications, and Service Worker Configuration.">Progressive Web App Page</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="props_rev_3"><a id="GUID-996CF8CC-13B3-4777-8E1E-4C13F8A01E1B" name="GUID-996CF8CC-13B3-4777-8E1E-4C13F8A01E1B"></a><h4 id="HTMDB-GUID-996CF8CC-13B3-4777-8E1E-4C13F8A01E1B" class="sect4"><span class="enumeration_section">5.12.5.2.4 </span>Service Worker Configuration
+                  </h4>
+                  <div>
+                     <div class="section">
+                        
+                        <p>Use the Service Workers Configuration attributes to configure service workers. Service
+        workers are JavaScript files that can execute code even when the app is not in use.</p>
+                        
+                        <p>Service Workers can listen to events such as fetching resources or handling notifications.
+        You can modify a service worker through hooks, or by replacing events completely.</p>
+                        
+                        <div class="p">Service Worker options include:
+                           <ul style="list-style-type: disc;" id="GUID-996CF8CC-13B3-4777-8E1E-4C13F8A01E1B__UL_D24_3M5_4SB">
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Default</span> - The <span>APEX</span> engine generates it with the following strategy:
+                                 </p>
+                                 
+                                 <ul style="list-style-type: disc;" id="GUID-996CF8CC-13B3-4777-8E1E-4C13F8A01E1B__UL_FC5_GP1_4SB">
+                                    <li>
+                                       
+                                       <p>Install and activate the service worker</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Serve resources from cache if cache exists</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Otherwise serve from network, then put resource in cache</p>
+                                       
+                                    </li>
+                                    <li>
+                                       
+                                       <p>Serve an offline page if network fails</p>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">Configure Hooks</span> - Fill in the placeholders in the
+              service worker code to add your own. Hooks locations are provided by <span>Oracle APEX</span>. 
+                                 </p>
+                                 
+                                 <p>To learn more, see field-level Help.</p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p><span class="uicontrol bold">File URL</span> - Provide a URL reference to a file that
+              contains the service worker hooks interface. This is useful for sharing service worker
+              hooks across multiple applications. If using the file reference, make sure to follow
+              the interface architecture appropriately or else the service worker will fail at
+              runtime. 
+                                 </p>
+                                 
+                                 <p>Use <span class="uicontrol bold">File Reference URL</span> to provide a URL reference
+              to a file that contains the service worker hooks interface. This is useful for sharing
+              service worker hooks across multiple applications. If using the file reference, make
+              sure to follow the interface architecture appropriately or else the service worker
+              will fail at runtime. To view the interface structure, see field-level Help for this
+              attribute.
+                                 </p>
+                                 
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="familylinks">
+                        <div class="parentlink">
+                           <p><strong>Parent topic:</strong> <a href="configuring-progressive-web-app-attributes.html#GUID-320C2D9E-AF2D-4627-B301-3ED86C83A98A" title="The Progressive Web App page is divided into the following sections: General, Installability, Push Notifications, and Service Worker Configuration.">Progressive Web App Page</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+      </article>
+   </body>
+</html>
